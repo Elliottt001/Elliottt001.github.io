@@ -7,7 +7,7 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - 博客:
+  - Blog:
     - BLOG/index.md
     - Note:
       - Calculus:
@@ -16,7 +16,7 @@ nav:
       - Linear Algebra:
         - BLOG/Note/Linear Algebra/Knowledge Frame of LA.md
         - BLOG/Note/Linear Algebra/Summary of Linear Algebra.md
-  - 开发:
+  - Developement:
     - DEV/index.md
     - Programming:
       - C:

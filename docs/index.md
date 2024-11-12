@@ -1,10 +1,12 @@
-# 你好
+# Welcome to the Growing Cosmos!
 
-这里是张瑞喆的个人网站
+<span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙</span>
 
-- 通过主题和目录浏览文章。
-    - 电脑端：在上方标签栏选择主题，在左侧目录选择文章。
-    - 移动端：点击左上角图标选择主题和文章。
-- 搜索关键词查找文章。
+## Several functions
+- *Browse articles through topics and table of contents.*
+    - *Desktop version: Select the topic from the top tab, and choose the article from the left-hand table of contents.*
+    - *Mobile version: Tap the icon in the upper left corner to select topics and articles.*
+- *Search for articles using keywords.*
+- *Click the icon on the right bottom to go to my GitHub.*
 
 ---
