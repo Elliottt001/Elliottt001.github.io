@@ -78,10 +78,10 @@ repo_name: r-z-zhang-AI.github.io
 copyright: 张瑞喆 CC-BY-4.0
 # [bottom-right corner]
 extra:
-  # [添加社交网络图标和链接]
-  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
-  # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
-  # name 会在鼠标悬浮时提示
+# [添加社交网络图标和链接]
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+# 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
+# name 会在鼠标悬浮时提示
 
 # [Extensions]
 plugins:
