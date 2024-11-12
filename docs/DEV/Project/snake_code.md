@@ -1,3 +1,4 @@
+```python
 # 面向对象,用python写程序的思维
 
 import sys
@@ -156,3 +157,4 @@ def main():
         clock.tick(10)
 
 main()
+```
