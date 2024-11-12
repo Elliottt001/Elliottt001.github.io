@@ -16,8 +16,10 @@ nav:
   - 开发:
     - DEV/index.md
     - Programming:
-      - DEV/Programming/C.md
-      - DEV/Programming/Python.md
+      - C:
+        - DEV/Programming/C/C Note.md
+      - Python:
+        - DEV/Programming/Python/Python Note.md
 
 # [UI]
 # [top]
