@@ -13,6 +13,9 @@ nav:
       - Caculus:
         - BLOG/Note/Caculus/Knowledge Frame of Caculus.md
         - BLOG/Note/Caculus/Summary of Caculus.md
+      - Linear Algebra:
+        - BLOG/Note/Linear Algebra/Knowledge Frame of LA.md
+        - BLOG/Note/Linear Algebra/Summary of Linear Algebra.md
   - 开发:
     - DEV/index.md
     - Programming:
@@ -20,6 +23,8 @@ nav:
         - DEV/Programming/C/C Note.md
       - Python:
         - DEV/Programming/Python/Python Note.md
+    - Project:
+      - DEV/Project/snake.py
 
 # [UI]
 # [top]
