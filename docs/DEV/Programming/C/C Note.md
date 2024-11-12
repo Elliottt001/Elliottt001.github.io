@@ -1,4 +1,3 @@
-# WK引入
 TIOBE编程语言热度榜：[TIOBE Index - TIOBE](https://www.tiobe.com/tiobe-index/)
 ## 计算机基础
 程序的执行
