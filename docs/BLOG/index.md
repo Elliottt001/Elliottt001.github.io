@@ -1,3 +1,3 @@
-# 博客
+# Blog
 
-点击左侧目录打开文章
+Click the table of contents to start your trip towards the world of knowledge!
