@@ -7,12 +7,7 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - 博客:
-    - BLOG/index.md
-    - Note:
-      - Caculus:
-        - BLOG/Note/Caculus/Knowledge Frame of Caculus.md
-        - BLOG/Note/Caculus/Summary of Caculus.md
+
   - 开发:
     - DEV/index.md
     - Programming:
