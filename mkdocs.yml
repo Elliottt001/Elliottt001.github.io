@@ -10,9 +10,9 @@ nav:
   - 博客:
     - BLOG/index.md
     - Note:
-      - Caculus:
-        - BLOG/Note/Caculus/Knowledge Frame of Caculus.md
-        - BLOG/Note/Caculus/Summary of Caculus.md
+      - Calculus:
+        - BLOG/Note/Calculus/Knowledge Frame of Calculus.md
+        - BLOG/Note/Calculus/Summary of Calculus.md
       - Linear Algebra:
         - BLOG/Note/Linear Algebra/Knowledge Frame of LA.md
         - BLOG/Note/Linear Algebra/Summary of Linear Algebra.md
