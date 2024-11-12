@@ -7,11 +7,6 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - Knowledge:
-    - Computer Science:
-      - hi.md
-    - Linear Algebra:
-      - helloworld.md
 
 # [UI]
 # [top]
@@ -75,8 +70,8 @@ edit_uri: main/
 # [top-right corner]
 # [添加 GitHub 仓库]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
-repo_url: https://github.com/r-z-zhang-AI/Knowledge
-repo_name: Knowledge
+repo_url: https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
+repo_name: r-z-zhang-AI.github.io
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
