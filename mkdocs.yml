@@ -11,8 +11,8 @@ nav:
     - BLOG/index.md
     - Note:
       - Caculus:
-        - Knowledge Frame of Caculus.md
-        - Summary of Caculus.md
+        - BLOG/Note/Caculus/Knowledge Frame of Caculus.md
+        - BLOG/Note/Caculus/Summary of Caculus.md
 
 
 # [UI]
