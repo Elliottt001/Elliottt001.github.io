@@ -6,7 +6,7 @@
 - Browse articles through topics and table of contents.
     - Desktop version: Select the topic from the top tab, and choose the article from the left-hand table of contents.
     - Mobile version: Tap the icon in the upper left corner to select topics and articles.
--*Search for articles using keywords.
+- Search for articles using keywords.
 - Click the icon on the right bottom to go to my GitHub.
 
 ---
