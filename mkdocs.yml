@@ -37,7 +37,7 @@ theme:
     - scheme: default
       # 主颜色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-      primary: purple
+      primary: indigo
       # 链接等可交互元件的高亮色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
       accent: orange
