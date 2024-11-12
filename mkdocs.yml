@@ -7,15 +7,15 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - Blog:
-    - BLOG/index.md
+  - Knowledge:
+    - KNOWLEDGE/index.md
     - Note:
       - Calculus:
-        - BLOG/Note/Calculus/Knowledge Frame of Calculus.md
-        - BLOG/Note/Calculus/Summary of Calculus.md
+        - KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
+        - KNOWLEDGE/Note/Calculus/Summary of Calculus.md
       - Linear Algebra:
-        - BLOG/Note/Linear Algebra/Knowledge Frame of LA.md
-        - BLOG/Note/Linear Algebra/Summary of Linear Algebra.md
+        - KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
+        - KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
   - Developement:
     - DEV/index.md
     - Programming:
