@@ -7,7 +7,7 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - 博客:
+  - 博1客:
     - BLOG/index.md
     - Note:
       - Caculus:
