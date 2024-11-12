@@ -1,12 +1,11 @@
+# 面向对象 用python写程序的思维
 import sys
 import random
 import pygame
 
-# 全局定义
+# 定义全局变量
 SCREEN_X = 600
 SCREEN_Y = 600
-
-# 面向对象 # 用python写程序的思维
 
 # 蛇
 class Snake(object):
@@ -25,6 +24,7 @@ class Snake(object):
         # 2.死亡
         # 3.移动
         # 4.方向
+
     def addnode(self):
         left, top = (0, 0)
         if self.body:
