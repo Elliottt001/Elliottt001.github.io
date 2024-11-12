@@ -15,4 +15,4 @@
 - *Life philosophy*
 - *Learn in ZJU*
 - *Computer Science*
--* Serendipity*
+- *Serendipity*
