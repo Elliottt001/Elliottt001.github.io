@@ -13,7 +13,11 @@ nav:
       - Caculus:
         - BLOG/Note/Caculus/Knowledge Frame of Caculus.md
         - BLOG/Note/Caculus/Summary of Caculus.md
-
+  - 开发:
+    - DEV/index.md
+    - Programming:
+      - DEV/Programming/C.md
+      - DEV/Programming/Python.md
 
 # [UI]
 # [top]
