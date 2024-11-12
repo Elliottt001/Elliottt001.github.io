@@ -93,7 +93,7 @@ repo_name: r-z-zhang-AI.github.io
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
-copyright: 张瑞喆 CC-BY-4.0
+copyright: Copyright © 2024 张瑞喆 All rights reserved.
 # [bottom-right corner]
 extra:
   # [添加社交网络图标和链接]
