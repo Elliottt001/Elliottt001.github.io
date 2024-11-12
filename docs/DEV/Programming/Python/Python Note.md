@@ -309,3 +309,20 @@ my_list = list(set(my_list))
 		清空字典
 	len(dict_name)
 		元素个数
+	dict_name.keys()
+		获取所有的key
+		字典的遍历
+			方法一：for key in dict_name.keys()
+			方法二：for key in dict_name
+				print(dict_name[key]) : 打印出所有值，是个列表
+	dict_name.values()
+		获取所有value
+		返回为dict_values([……])：是dict_values类型（用print(dict_name.values())即可），可以print(list(dict_name.values()))直接类型转换
+			字典的遍历
+				方法三：for value in dicyt_name.values()
+	dict_name.items()
+		获取所有键值对
+		返回值将每个键值对存入一个元组
+		所以：优雅的遍历获取键值对方法：
+			for key, value in key_name.items()
+			这里同时完成了元祖的解包，可以打印：print(f"key:{key}, value:{value}")
