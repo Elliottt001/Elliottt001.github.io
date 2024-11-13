@@ -24,7 +24,12 @@ nav:
       - Python:
         - DEV/Programming/Python/Python Note.md
     - Project:
-      - DEV/Project/snake_code.md
+      - crawler:
+        - DEV/Project/crawler/law.md
+        - DEV/Project/crawler/note.md
+        - DEV/Project/crawler/DoubanTop250Code.md
+      - game:
+        - DEV/Project/game/SnakeCode.md
 
 # [UI]
 # [top]

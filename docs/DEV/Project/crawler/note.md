@@ -30,3 +30,4 @@ info = response.json()["data"]['goods_infos']
 for value in info.values():
     print(f"{value['name']}的价格是{value['steam_price_cny']}元")
 ```
+<!--2:20-->
