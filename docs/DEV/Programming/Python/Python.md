@@ -1,3 +1,4 @@
+Let's start!
 # 学习资料
 
 [Python_YL](https://www.yuque.com/u26596123/re4lmd?)
@@ -12,10 +13,9 @@
 
 # 规范
 命名
-
-	模块（文件）名：小驼峰
-	类名：大驼峰
-	函数&变量名：下划线命名法
+- 模块（文件）名：小驼峰
+- 类名：大驼峰
+- 函数&变量名：下划线命名法
 # 杂项
 
 - in 关键词：用于可迭代对象
@@ -29,6 +29,7 @@ if "hi" in word
 	函数return  <=> return None  <=> return 0  <=> ……
 
 # 函数
+## 变量的作用域
 全局变量可以在函数体内访问，但是内部不能修改！
 如果尝试修改，会报错
 
@@ -66,30 +67,24 @@ def func(pra):
 a, b = func_name(pra)
 ```
 ## 传参
-关键词传参
-	
-	形式：形参名 = 实参值
+- 关键词传参：形参名 = 实参值
 
-位置传参
-	
-	按位置
+- 位置传参：按位置
 
-混合使用
-	
-	可以，不建议，会被辞退
-	如果位置的出现在关键词的后面，会报错
+- 混合使用
+	- 可以，不建议，会被辞退
+	- 如果位置的出现在关键词的后面，会报错
 
-默认参数
-	
-	给默认参数的全放在不给默认参数的后面，否则会报错
+- 默认参数：给默认参数的全放在不给默认参数的后面，否则会报错
 
-函数作为参数传递
-	
-	形参那里写一个形参代表函数
-	实参写函数名字！不能带括号，因为带了括号的意思是调用那个函数，则会报错（少参数）
-	作用：
-		回调
-		可以通过改变传入的作为参数的函数（即：回调函数），灵活的改变我在这个函数中调用哪个函数（比函数的嵌套灵活）
+## 函数作为参数传递
+形参那里写一个形参代表函数
+
+实参写函数名字！不能带括号，因为带了括号的意思是调用那个函数，则会报错（少参数）
+
+作用：
+- 回调
+- 可以通过改变传入的作为参数的函数（即：回调函数），灵活的改变我在这个函数中调用哪个函数（比函数的嵌套灵活）
 ```python
 def add(x, y):
     return x + y
@@ -112,18 +107,16 @@ print(calculator(3, 5, mul))
 ![[63178ff0bddb8b3d19ff53ae8417e90.jpg]]
 ![[767def4f0bdfa79420e48fb7b1c3371.jpg]]
 ### .方法
-new_name = sorted(name, reverse)
-	
-	reverse: 不传默认False : 不倒序即正序
-	reverse = True : 倒序
-		对字典用sorted：对key进行排序，返回包含所有键的列表
-		对字符串用sorted：返回一个包含所有拆开了字符的列表
-max_item = max(name)
-
-min_item = min(name)
+	new_name = sorted(name, reverse)
+		reverse: 不传默认False : 不倒序即正序
+		reverse = True : 倒序
+			对字典用sorted：对key进行排序，返回包含所有键的列表
+			对字符串用sorted：返回一个包含所有拆开了字符的列表
+	max_item = max(name)
+	min_item = min(name)
 
 ### 比大小
-ASCII，UTF-8
+ASCII, UTF-8
 
 逻辑：一个一个比，到不一样的那个开始出大小，跟长度没关系
 ## 序列sequence
@@ -134,21 +127,20 @@ ASCII，UTF-8
 定义：取出一个子序列
 
 语法：sequence_name\[start: stop: step]
-	
-	start : 省略默认0
-	stop : 省略默认值为len(sequence_name)，前取后不取
-	step : 省略默认1；负数：正负决定取值顺序（输出和读取从前到后or从后到前）；跳过stop-1个去取
-	超限：不报错，到最后
-逻辑：读到start，看step（正负&大小），按他在序列里面找到stop
-
-应用：
+- 语法：
+	- start : 省略默认0
+	- stop : 省略默认值为len(sequence_name)，前取后不取
+	- step : 省略默认1；负数：正负决定取值顺序（输出和读取从前到后or从后到前）；跳过stop-1个去取
+- 超限：不报错，到最后
+- 逻辑：读到start，看step（正负&大小），按他在序列里面找到stop
+- 应用：
 	倒序输出：print(序列名\[ : : -1]) : 如果前面两个都没填，则默认第一个是-1，最后一个是0
 
 ### 列表list
 #### 定义
-方式1：list_name = \["任意类型的数据", 123, 4 + 5j, \["甚至可以放列表", 5.3], None, True]
+方法1. list_name = \["任意类型的数据", 123, 4 + 5j, \["甚至可以放列表", 5.3], None, True]
 
-方式2：list_name = list( "里面什么都能装")
+方法2. list_name = list( "里面什么都能装")
 #### 访问
 list_name\[index] : index从0开始
 超过限制：报错
@@ -212,12 +204,10 @@ index = 0
 for index in range(0, len(lit_name)):
 	# 代码块
 ```
-PS: range()
-
-	range(start, stop, step)
-	start : 省略默认0
-	stop : 前取后不取
-	step : 省略默认1
+PS: range(start, stop, step)
+- start : 省略默认0
+- stop : 前取后不取
+- step : 省略默认1
 
 ### 元组tuple
 #### 跟list：
@@ -286,36 +276,42 @@ print(my_tuple)
 可以修改！
 #### 定义：
 方法一：set_name = {item1, item2, item3, ......}
+
 方法二：set_name = set(item1, item2, item3, ......)
 #### .方法
-len(set_name)也适用
-set_name.add(added_item)
-	追加元素，当然，没有顺序随机放置，甚至每次打印那些个元素的顺序都不一样
-	如果多次add()同一个元素，则只加一次
-set_name.remove(added_item)
-	删除指定元素
-set_name.pop()
-	随机删除一个元素
-set_name.clear()
-	清空集合
+	len(set_name)也适用
+	set_name.add(added_item)
+		追加元素，当然，没有顺序随机放置，甚至每次打印那些个元素的顺序都不一样
+		如果多次add()同一个元素，则只加一次
+	set_name.remove(added_item)
+		删除指定元素
+	set_name.pop()
+		随机删除一个元素
+	set_name.clear()
+		清空集合
 
 #### 集合的运算(也是.方法)
 并集
+
 	方法一：new_set = set1 | set2
 	方法二：new_set = set1.union(set2)
 交集
+
 	方法一：new_set = set1 & set2
 	方法二：new_set = set1.intersection(set2)
 差集
+
 	方法一：new_set = set1 - set2
 	方法二：new_set = set1.difference(set2)
 
 #### 遍历
 只能用for：for item in set_name:
+
 while不行: 因为没有index
 
 #### 应用
 给列表去重
+
 	引用：爬去豆瓣排名前100的导演，去分析他们的合作关系之类的东西
 ```python
 my_list = [……]
@@ -325,13 +321,17 @@ my_list = list(set(my_list))
 ### 字典dict
 #### 定义
 方法1：dict_name = {key1: value1, key2: value2, key3: value3 ……} ：元素为键值对
+
 方法2：dict_name = dict()
 #### 规范
 数据类型：除键不能是字典外，对key和value其他随便啥数据类型都行
+
 key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 #### 访问
 查找：dict_name\[key_name]
+
 新增：dict_name\[new_key_name] = new_value
+
 修改：dict_name\[key_name] = new_value
 	<!--可以通过这种方式修改高考分数：各省考试院对数据库重视程度不一样，有些存在漏洞，故可以修改-->
 	<!--在ZJU，可以黑进教务网修改考试成绩，但是你的技术没达到那种超级tmd顶尖的水平，留痕是不可避免的，可溯源，抓到直接……-->
@@ -339,29 +339,29 @@ key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 	<!--by YL-->
 没有下标索引
 #### .方法
-dict_name.pop(key_name)
-	删除指定元素
-dict_name.clear()
-	清空字典
-len(dict_name)
-	元素个数
-dict_name.keys()
-	获取所有的key
-	字典的遍历
-		方法一：for key in dict_name.keys()
-		方法二：for key in dict_name
-			print(dict_name\[key]) : 打印出所有值，是个列表
-dict_name.values()
-	获取所有value
-	返回为dict_values(\[……])：是dict_value类型（用print(dict_name.values())即可），可以print(list(dict_name.values()))直接类型转换
+	dict_name.pop(key_name)
+		删除指定元素
+	dict_name.clear()
+		清空字典
+	len(dict_name)
+		元素个数
+	dict_name.keys()
+		获取所有的key
 		字典的遍历
-			方法三：for value in dicyt_name.values()
-dict_name.items()
-	获取所有键值对
-	返回值将每个键值对存入一个元组
-	所以：优雅的遍历获取键值对方法：
-		for key, value in key_name.items()
-		这里同时完成了元祖的解包，可以打印：print(f"key:{key}, value:{value}")
+			方法一：for key in dict_name.keys()
+			方法二：for key in dict_name
+				print(dict_name\[key]) : 打印出所有值，是个列表
+	dict_name.values()
+		获取所有value
+		返回为dict_values(\[……])：是dict_value类型（用print(dict_name.values())即可），可以print(list(dict_name.values()))直接类型转换
+			字典的遍历
+				方法三：for value in dicyt_name.values()
+	dict_name.items()
+		获取所有键值对
+		返回值将每个键值对存入一个元组
+		所以：优雅的遍历获取键值对方法：
+			for key, value in key_name.items()
+			这里同时完成了元祖的解包，可以打印：print(f"key:{key}, value:{value}")
 
 # 异常的捕获和处理
 
@@ -403,12 +403,14 @@ finally:
 # 后面要继续执行的代码
 ```
 
-其中：错误类型：
-	如果有需求说特定错误需要干特定的事情：看这张指定错误表，按方法三
-		![[ad2f337607ec191678ce5e5a1b21fdc.jpg]]
-	如果没有知道并打印具体错误类型的需求：按方法一
-	如果想打印错误类型，没有不同错误打印不同东西的需求：按方法二
-	也不一定是打印，就特定的需求吧
+其中错误类型：
+
+- 如果有需求说特定错误需要干特定的事情：看这张指定错误表，按方法三
+	![[ad2f337607ec191678ce5e5a1b21fdc.jpg]]
+- 如果没有知道并打印具体错误类型的需求：按方法一
+- 如果想打印错误类型，没有不同错误打印不同东西的需求：按方法二
+也不一定是打印，就特定的需求吧
+
 例子：
 ```python
 def div(a, b):
