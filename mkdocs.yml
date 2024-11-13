@@ -25,11 +25,11 @@ nav:
         - DEV/Programming/Python/Python Note.md
     - Project:
       - crawler:
-        - DEV/Project/crawler/law.md
-        - DEV/Project/crawler/note.md
-        - DEV/Project/crawler/DoubanTop250Code.md
+        - DEV/Project/Crawler/law.md
+        - DEV/Project/Crawler/note.md
+        - DEV/Project/Crawler/DoubanTop250Code.md
       - game:
-        - DEV/Project/game/SnakeCode.md
+        - DEV/Project/Game/SnakeCode.md
 
 # [UI]
 # [top]
