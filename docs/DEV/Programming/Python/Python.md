@@ -292,17 +292,16 @@ print(my_tuple)
 
 #### 集合的运算(也是.方法)
 并集
+- 方法一：new_set = set1 | set2
+- 方法二：new_set = set1.union(set2)
 
-	方法一：new_set = set1 | set2
-	方法二：new_set = set1.union(set2)
 交集
+- 方法一：new_set = set1 & set2
+- 方法二：new_set = set1.intersection(set2)
 
-	方法一：new_set = set1 & set2
-	方法二：new_set = set1.intersection(set2)
 差集
-
-	方法一：new_set = set1 - set2
-	方法二：new_set = set1.difference(set2)
+- 方法一：new_set = set1 - set2
+- 方法二：new_set = set1.difference(set2)
 
 #### 遍历
 只能用for：for item in set_name:
