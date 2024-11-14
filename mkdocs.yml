@@ -32,6 +32,7 @@ nav:
         - DEV/Project/Crawler/law.md
         - DEV/Project/Crawler/note.md
         - DEV/Project/Crawler/DoubanTop250Code.md
+        - DEV/Project/Crawler/DoubanHot.md
       - game:
         - DEV/Project/Game/SnakeCode.md
 
