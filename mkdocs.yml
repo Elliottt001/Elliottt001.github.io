@@ -7,7 +7,7 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - Me:
+  - ME:
     - ME/index.md
     - SDFZ:
       - ME/SDFZ/memoir.md
