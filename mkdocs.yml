@@ -7,6 +7,9 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
+  - Me:
+    - ME/resume.md
+    - ME/statement.md
   - Knowledge:
     - KNOWLEDGE/index.md
     - Note:

@@ -1,7 +1,6 @@
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 import pandas as pd
 from selenium.webdriver.edge.service import Service
 
