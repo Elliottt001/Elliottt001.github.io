@@ -33,10 +33,8 @@ nav:
         - DEV/Project/Crawler/law.md
         - DEV/Project/Crawler/note.md
         - DEV/Project/Crawler/DoubanTop250Code.md
-        - DEV/Project/Crawler/DoubanTop250Code.py
       - game:
         - DEV/Project/Game/SnakeCode.md
-        - DEV/Project/Game/SnakeCode.py
 
 # [UI]
 # [top]
