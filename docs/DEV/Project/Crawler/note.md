@@ -30,4 +30,11 @@ info = response.json()["data"]['goods_infos']
 for value in info.values():
     print(f"{value['name']}的价格是{value['steam_price_cny']}元")
 ```
-<!--2:20-->
+<!--自己研究研究，啥都能干！
+
+大麦网 按买票但不付款的那个界面那个包抓下来，开始的时候无限循环
+
+VIP：抓包，发请求带了参数，一个字典的一个key是is_vip，是false，我改成true，用request重放一遍，就可以了
+
+电视剧，最后一集不播，哥们抓包抓出来-->
+
