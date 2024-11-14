@@ -11,22 +11,24 @@ nav:
     - ME/index.md
     - SDFZ:
       - ME/SDFZ/memoir.md
+    - ZJU:
+    
   - Knowledge:
     - KNOWLEDGE/index.md
     - Note:
       - Calculus:
-        - KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
-        - KNOWLEDGE/Note/Calculus/Summary of Calculus.md
+        - Knowledge Frame: KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
+        - Summary: KNOWLEDGE/Note/Calculus/Summary of Calculus.md
       - Linear Algebra:
-        - KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
-        - KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
+        - Knowledge Frame: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
+        - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
   - Developement:
     - DEV/index.md
     - Programming:
       - C:
-        - DEV/Programming/C/C Note.md
+        - Note: DEV/Programming/C/C Note.md
       - Python:
-        - DEV/Programming/Python/Python Note.md
+        - Note: DEV/Programming/Python/Python Note.md
     - Project:
       - crawler:
         - DEV/Project/Crawler/law.md
