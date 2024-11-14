@@ -9,8 +9,9 @@ site_description: Zhang rz的个人网站
 nav:
   - Me:
     - ME/index.md
-    - ME/resume.md
-    - ME/statement.md
+    - SDFZ:
+      - ME/SDFZ/memoir.md
+    - ZJU:
   - Knowledge:
     - KNOWLEDGE/index.md
     - Note:
