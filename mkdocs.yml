@@ -38,7 +38,6 @@ nav:
 # [UI]
 # [top]
 theme:
-  logo: assets/logo.png
   name: material
   # [切换日间模式和夜间模式]
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
