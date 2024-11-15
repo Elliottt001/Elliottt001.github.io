@@ -11,6 +11,8 @@ nav:
     - ME/index.md
     - SDFZ:
       - ME/SDFZ/memoir.md
+    - ZJU:
+      - ME/ZJU/interviews.md
   - Knowledge:
     - KNOWLEDGE/index.md
     - Note:
@@ -20,21 +22,48 @@ nav:
       - Linear Algebra:
         - Knowledge Frame: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
         - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
-  - Developement:
-    - DEV/index.md
+  - Computer Science:
+    - CS/index.md
+    - Dalao:
+      - CS/Dalao/resource.md
     - Programming:
       - C:
-        - Note: DEV/Programming/C/C Note.md
+        - Note: CS/Programming/C/C Note.md
+        - Errors and Tips: CS/Programming/C/C Errors and Tips.md
       - Python:
-        - Note: DEV/Programming/Python/Python Note.md
+        - Note: CS/Programming/Python/Python Note.md
+      - Algorithm: CS/Programming/编程思想和算法.md
+    - Tools:
+      - CSS: CS/Tools/CSS.md
+      - HTML: CS/Tools/HTML.md
+      - Git&GitHub: CS/Tools/Git&GitHub.md
+      - Markdown: CS/Tools/Markdown(obsidian).md
+      - LaTeX: CS/Tools/LaTeX.md
+      - Linux: CS/Tools/Linux.md
+      - vim: CS/Tools/vim.md
+      - GDB: CS/Tools/GDB.md
+      - Obsidian: CS/Tools/Obsidian.md
+    - 拾遗:
+      - CS/拾遗/Front End.md
+      - CS/拾遗/Hardware.md
+    - AI:
+      - CS/AI/AI.md
+      - CS/AI/ANN.md
+      - CS/AI/DL.md
+      - CS/AI/ML.md
+      - CS/AI/Turing.md
+
+
     - Project:
       - crawler:
-        - DEV/Project/Crawler/law.md
-        - DEV/Project/Crawler/note.md
-        - DEV/Project/Crawler/DoubanTop250Code.md
-        - DEV/Project/Crawler/DoubanHotCode.md
+        - CS/Project/Crawler/law.md
+        - CS/Project/Crawler/note.md
+        - CS/Project/Crawler/DoubanTop250Code.md
+        - CS/Project/Crawler/DoubanHotCode.md
       - game:
-        - DEV/Project/Game/SnakeCode.md
+        - CS/Project/Game/SnakeCode.md
+
+
 
 # [UI]
 # [top]
