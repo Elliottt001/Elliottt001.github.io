@@ -31,7 +31,7 @@ for i in range(0, 10):
         driver.switch_to.window(driver.window_handles[1])
         driver.get(herf)
         
-        # 在这里，实际上要进行数据获取的操作
+        # 数据获取
         title = driver.find_element(By.TAG_NAME, 'h1').text
         data_dict['title'] = title
         short = driver.find_element(By.CLASS_NAME, 'short').text
