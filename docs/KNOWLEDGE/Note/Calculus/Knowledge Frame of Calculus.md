@@ -264,7 +264,8 @@ $$
 皮亚诺
 
 
-$$x —>0$$ ^c8f5ca
+$$x —>0$$ 
+^c8f5ca
 
 $$
 e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + o(x^n)= \sum_{n=0}^{\infty} \frac{x^n}{n!} + o(x^n)
