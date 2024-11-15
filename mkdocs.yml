@@ -165,6 +165,14 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
       generic: true
+      
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
   # [图片功能支持]
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   # 给 Markdown 图片语法后面添加 `{width="300"}` 设置大小
