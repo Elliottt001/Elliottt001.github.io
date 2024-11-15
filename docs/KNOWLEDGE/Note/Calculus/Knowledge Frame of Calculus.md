@@ -244,18 +244,23 @@ $$
 $$
 e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 $$
+
 $$
 \sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
 $$
+
 $$
 \cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
 $$
+
 $$
 \ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots
 $$
+
 $$
 \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots \quad \text{for} \quad |x| < 1
 $$
+
 $$
 (1+x)^a = \sum_{n=0}^{\infty} \binom{a}{n} x^n = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots
 $$
@@ -278,15 +283,19 @@ $$
 $$
 \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^n x^{2n}}{(2n)!}+ o(x^{2n})= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} + o(x^{2n})
 $$
+
 $$
 \ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots + \frac{(-1)^{n+1} x^n}{n}+ o(x^n)= \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} + o(x^n)
 $$
+
 $$
 \frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots + x^n+ o(x^n)= \sum_{n=0}^{\infty} x^n + o(x^n) \quad \text{for} \quad |x| < 1
 $$
+
 $$
 (1+x)^a = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots + \frac{a(a-1)(a-2)\cdots(a-n+1)}{n!}x^n + o(x^n)= \sum_{n=0}^{\infty} \binom{a}{n} x^n + o(x^n)
 $$
+
 注意！
 1. 
 	![[Pasted image 20241105154803.png]]
