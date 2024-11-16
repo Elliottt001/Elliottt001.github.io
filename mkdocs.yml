@@ -71,6 +71,8 @@ theme:
   name: material
   # [切换日间模式和夜间模式]
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
+  icon:
+    logo: material/library-outline
   palette:
     # 日间模式
     - scheme: default
@@ -134,7 +136,9 @@ repo_name: r-z-zhang-AI.github.io
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
-copyright: Copyright © 2024 张瑞喆 All rights reserved.
+copyright: >
+  Copyright © 2024 张瑞喆 All rights reserved.
+  <a href="#__consent">Change cookie settings</a>
 # [bottom-right corner]
 extra:
   # [添加社交网络图标和链接]
@@ -145,14 +149,22 @@ extra:
     - name: GitHub | r-z-zhang-AI
       icon: fontawesome/brands/github
       link: https://github.com/r-z-zhang-AI
-  alternate:
-    - name: English
-      link: /en/ 
-      lang: en
-    - name: 简体中文
-      link: /zh/
-      lang: zh
-
+  generator: false
+  
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: false
+    actions:
+      - accept
+      - manage    
 # [Extensions]
 plugins:
   # [搜索功能]
