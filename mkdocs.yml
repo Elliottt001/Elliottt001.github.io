@@ -92,7 +92,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    # 夜间模式1
+    # 夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
