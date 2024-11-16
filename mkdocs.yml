@@ -73,29 +73,36 @@ theme:
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
   icon:
     logo: material/library-outline
+    
   palette:
+    # [根据系统设置自动切换]
+    - media: "(prefers-color-scheme)"
+      toggle:
+      # 图标
+        icon: material/link
+        # 鼠标悬浮提示
+        name: Switch to light mode
     # 日间模式
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       # 主颜色
-      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
       primary: indigo
       # 链接等可交互元件的高亮色
-      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
       accent: indigo
       toggle:
-        # 图标
-        icon: material/weather-night
-        # 鼠标悬浮提示
+        icon: material/toggle-switch
         name: Switch to dark mode
     # 夜间模式
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
       accent: indigo
       toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  
-  
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
   
   features:
     # 使用 Tab 来进行分类
