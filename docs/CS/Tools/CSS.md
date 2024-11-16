@@ -4,13 +4,11 @@
 
 # Try
 !!! info
-234
 
-??? note
-123
+    234
 
-!!! success
-123
+!!! note
 
-!!! danger
-123
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.

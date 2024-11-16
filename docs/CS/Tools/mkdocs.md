@@ -1,3 +1,5 @@
-[mkdocs_official](https://github.com/squidfunk/mkdocs-material/)
+[mkdocs official](https://github.com/squidfunk/mkdocs-material/)
 
-[mkdocs.yml_official](https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml)
+[mkdocs.yml official](https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml)
+
+[Meterial for mkdocs web](https://squidfunk.github.io/mkdocs-material/)
