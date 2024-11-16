@@ -7,6 +7,7 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
+  - index.md
   - Me:
     - ME/index.md
     - SDFZ:
@@ -36,13 +37,14 @@ nav:
     - Tools:
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
-      - Git&GitHub: CS/Tools/Git&GitHub.md
+      - Git&GitHub: CS/Tools/Git & GitHub.md
       - Markdown: CS/Tools/Markdown(obsidian).md
       - LaTeX: CS/Tools/LaTeX.md
       - Linux: CS/Tools/Linux.md
       - vim: CS/Tools/vim.md
       - GDB: CS/Tools/GDB.md
       - Obsidian: CS/Tools/Obsidian.md
+      - Mkdocs: CS/Tools/mkdocs.md
     - 拾遗:
       - Front End: CS/拾遗/Front End.md
       - Hardware: CS/拾遗/Hardware.md
@@ -192,7 +194,6 @@ plugins:
       lang:
         - zh
         - en
-        - zh-Hant
         - es
   # [给单篇文章添加标签]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
