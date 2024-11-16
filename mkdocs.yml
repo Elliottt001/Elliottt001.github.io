@@ -86,14 +86,14 @@ theme:
         # 图标
         icon: material/weather-night
         # 鼠标悬浮提示
-        name: 切换至夜间模式
+        name: Switch to dark mode
     # 夜间模式
     - scheme: slate
       primary: blue
-      accent: orange
+      accent: green
       toggle:
         icon: material/weather-sunny
-        name: 切换至日间模式
+        name: Switch to light mode
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
@@ -119,6 +119,8 @@ theme:
     # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
     - content.action.edit
+    # 将公告标记为已读
+    - announce.dismiss
   icon:
     # [添加 GitHub 仓库]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
@@ -133,11 +135,14 @@ edit_uri: edit/main/docs/
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
 repo_url: https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
 repo_name: r-z-zhang-AI.github.io
+repo_url: https://github.com/r-z-zhang-AI/Project
+repo_name: Project
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
 copyright: >
   Copyright © 2024 张瑞喆 All rights reserved.
+  
   <a href="#__consent">Change cookie settings</a>
 # [bottom-right corner]
 extra:
