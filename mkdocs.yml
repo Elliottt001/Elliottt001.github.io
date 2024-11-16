@@ -145,6 +145,13 @@ extra:
     - name: GitHub | r-z-zhang-AI
       icon: fontawesome/brands/github
       link: https://github.com/r-z-zhang-AI
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: 简体中文
+      link: /zh/
+      lang: zh
 
 # [Extensions]
 plugins:
@@ -155,7 +162,8 @@ plugins:
       lang:
         - zh
         - en
-        - ja
+        - zh-Hant
+        - es
   # [给单篇文章添加标签]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
