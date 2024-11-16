@@ -135,8 +135,6 @@ edit_uri: edit/main/docs/
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
 repo_url: https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
 repo_name: r-z-zhang-AI.github.io
-repo_url: https://github.com/r-z-zhang-AI/Project
-repo_name: Project
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
@@ -190,11 +188,10 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
       generic: true
-      
+
 extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
