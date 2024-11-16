@@ -78,10 +78,10 @@ theme:
     - scheme: default
       # 主颜色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-      primary: blue
+      primary: indigo
       # 链接等可交互元件的高亮色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
-      accent: green
+      accent: indigo
       toggle:
         # 图标
         icon: material/weather-night
@@ -89,11 +89,14 @@ theme:
         name: Switch to dark mode
     # 夜间模式
     - scheme: slate
-      primary: blue
-      accent: green
+      primary: black
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  
+  
+  
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
@@ -127,9 +130,12 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil 
     view: material/eye
-    # 图标&语法: https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons-octicons
+    # 块: https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons-octicons
     admonition:
       <type>: <icon>
+    # 注释: https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-2
+    annotation: material/material/checkbox-marked-circle-auto-outline
+  
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
 edit_uri: edit/main/docs/
@@ -191,9 +197,23 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
       generic: true
-  # Admonitions插件
+  # Admonitions告诫 插件
   - admonition
   - pymdownx.details
+  - pymdownx.superfences
+  # Annotations注解 插件
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  # buttons按钮 插件
+  - attr_list
+  # Code block代码块高亮 插件
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
 extra_javascript:
   - javascripts/mathjax.js
