@@ -73,7 +73,7 @@ theme:
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
   icon:
     logo: material/library-outline
-    
+
   palette:
     # [根据系统设置自动切换]
     - media: "(prefers-color-scheme)"
@@ -92,7 +92,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    # 夜间模式
+    # 夜间模式1
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
