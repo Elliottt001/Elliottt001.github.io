@@ -9,3 +9,9 @@
 
 ??? note
   123
+
+!!! success
+  123
+
+!!! danger
+  123
