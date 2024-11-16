@@ -127,6 +127,9 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil 
     view: material/eye
+    # 图标&语法: https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons-octicons
+    admonition:
+      <type>: <icon>
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
 edit_uri: edit/main/docs/
@@ -188,7 +191,10 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
       generic: true
-
+  # Admonitions插件
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
