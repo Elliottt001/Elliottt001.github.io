@@ -165,7 +165,7 @@ theme:
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
     # 注释: https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-2
-    annotation: material/material/checkbox-marked-circle-auto-outline
+    annotation: material/checkbox-marked-circle-auto-outline
   
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
