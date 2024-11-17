@@ -1,43 +1,154 @@
-# Interviews
-Creating date: 2024-11-17 1:42
+# 面试
 
 ## 主修专业确认
 ### 第一轮 第一志愿计算机科学与技术
 
 ???问题整理
 
-    自我介绍
-    你未来的规划
-    C和python区别，C和python变量分别代表什么
+    1. 自我介绍
 
-怎么说吧，前期做了比较 ***？***充足的准备？
+    2. C和python区别，C和python变量分别代表什么
+    
+    3. 你在写C代码的时候遇到了哪些问题？
+    
+    4. 你未来的规划
+
+#### 关于面试
+真相：面试基本没人看，基本纯看机考。而我编程题一题1分、二题0分。
+>“你猜他为什么突然加一个机考？”
+
+结果可想而知了，
+![alt text](image-4.png)
+也还是说说吧，
+
+- 自我介绍背稿子的感觉太严重！语速极快，别人也听不清啊。也主要是怕到1min打断我，这样的话在准备稿子的时候可以压缩。
+- 穿西装是不是显得有些刻意？
+    >“我觉得就你们学校里的面试没必要吧？”
+- 有些问题回答得没有营养：就你回答问题是要展示你，不是闲聊，所以以后面试对每个问题都需要慎重。
+    
+    就人家问写C代码有什么困惑，我说忘加分号；；；
+
+- 不要被别人影响了，不要被别人的思路禁锢，别人怎样回答问题你不要管，尤其不能接着他说。
+
+#### 反思提升
+怎么说吧，前期做了比较 (**？**)充足的准备
 
 这就不得不提机考了，也反思一下你失败在哪里
 
-#### 假装努力/效率低下
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国庆没回家，整天在主图坐独坐学线代微积分。说实话学习效率挺低的一天坐那一上午学数学，下午晚上做一道洛谷。中间还经常看看短视频看看手机还看看一些与当下学习无关的东西。
+<strong>假装努力/效率低下</strong>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国庆那段时间，没回家，整天在主图坐独坐学线代微积分。说实话学习效率挺低的一天坐那一上午学数学，下午晚上做一道洛谷。中间还经常看看短视频看看手机还看看一些与当下学习无关的东西。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确实……
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学各种高端的东西也就效率挺低的哇。有时候也有点太过也注重形式，一个笔记记半天：打字太慢……
-#### 信息搜集
+
+<strong>信息搜集</strong>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学园9.30就发出专业确认的通知，我就没看到，也就没意识到应该往后学学C程；看的学长发的去年的方案，也没啥学习的动力
 
-#### 缺乏真正的内驱力
+<strong>缺乏真正的内驱力</strong>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果，你真的，对一件事特别渴望，你会去，全力以赴的，你会去，专心致志的
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;怎么说，明明知道有机考，很重要，还是没有好好学啊，就没有全力以赴啊，每天还经常看看短视频看看手机还看看一些与当下学习无关的东西（自己解释说长久的发展有好处，自我提升。但是提升你等之后也有时间啊）
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自己也在说啊专业分流关乎未来人生的发展，也还没当回事。
 
-#### 学知识一知半解不钻研
+<strong>学知识一知半解不钻研</strong>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在依然是这个问题，你问了ChatGPT, 问了Kimi啥的，看看他给的文字，专业术语太多，看不懂，于是直接copy代码or命令，没有任何思考直接paste。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这问题！改！
-#### 提前正确规划并执行
+<strong>提前正确规划并执行</strong>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规划挺好，太空泛，没有执行的内驱力。
 
+### 第一轮 第二志愿光电科学与工程
+面试结束，立马登上了去上海的火车……
 
+???问题整理
+
+    1. 自我介绍
+
+    2. 用英语，介绍一个光学现象
+
+    3. 说一个体现你抗挫能力的事情
+
+#### 关于面试
+- 自我介绍好多了，语速慢了很多，有强调重点。
+- 有些问题回答的很shit，还是被别人的回答把思路禁锢住了：还是上面那个问题。
+```
+Q：英语介绍一个光学现象
+A：色散……？
+
+Q：抗挫能力
+A：上大学事多……？
+```
+- 依然是正装，
+- 投其所好，搬出英才计划，挺好的。
+
+### 第二轮 软件工程
+*cheeeeeers！*
+![alt text](image-5.png)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸运与遗憾</title>
+    <style>
+        .centered-text {
+            font-size: 1.2em; /* 设置字体大小 */
+            font-weight: bold; /* 加粗 */
+            text-align: center; /* 文本居中 */
+        }
+        /* 如果需要将文字块在整个页面垂直居中，可以添加以下样式 */
+        html, body {
+            height: 100%; /* 设置页面高度为 100% */
+            margin: 0; /* 去掉默认边距 */
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-text">
+        幸运与遗憾
+    </div>
+</body>
+</html>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;既然成功了，就先说说幸运吧。
+
+！！！success
+
+    首先，隆重感谢gsgg指点！鞠躬！
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;听闻第二轮专业确认信息，及时询问gsgg该如何准备，便开始了紧锣密鼓的备战。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一轮的失败，确实影响很大，时常就有这些想法在我脑中回荡。写到这，不禁想起和wcy聊天过程中的思考，高中的那个学习机器是不会这样想的，他大概只会逆来顺受随波逐流精神胜利法，心理没有任何波澜。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有自我怀疑啊，我真的适合计算机吗？我的成绩我的水平真的配进高贵的计院吗？
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有焦虑啊，万一进不了怎么办？别人会怎么看你？
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有想过放弃啊，要不就在光电吧。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;也有精神胜利法啊，zju光电也很好啊全国第一，国家有需求将来很好就业啊，说不定我能爱呢？
+
+2024.11.11周一
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始报名，也开始了准备。大英课上，偷偷拿手机询问，gsgg说搞个项目、学点语言、学点工具。中午吃饭的路上就在搜他说的各种我听不懂的词汇，上b站搜教程。下午线代也翘了，在宿舍无情开码 :smlie:，一遍看教程一遍贪吃蛇
+
+
+附注：2024zju第一轮专业确认计院面试真题，供后人参考
 
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
+
+<div style="text-align: right;">
+    2024年11月17日 作于求是园
+</div>
