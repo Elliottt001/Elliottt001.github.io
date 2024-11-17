@@ -90,38 +90,14 @@ A：上大学事多……？
 ### 第二轮 软件工程
 *cheeeeeers！*
 ![alt text](image-5.png)
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>幸运与遗憾</title>
-    <style>
-        .centered-text {
-            font-size: 1.2em; /* 设置字体大小 */
-            font-weight: bold; /* 加粗 */
-            text-align: center; /* 文本居中 */
-        }
-        /* 如果需要将文字块在整个页面垂直居中，可以添加以下样式 */
-        html, body {
-            height: 100%; /* 设置页面高度为 100% */
-            margin: 0; /* 去掉默认边距 */
-            display: flex;
-            align-items: center; /* 垂直居中 */
-            justify-content: center; /* 水平居中 */
-        }
-    </style>
-</head>
-<body>
-    <div class="centered-text">
-        幸运与遗憾
-    </div>
-</body>
-</html>
+
+<div style="text-align: center; font-weight: bold; font-size: 1.2em;">
+  幸运与遗憾
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;既然成功了，就先说说幸运吧。
 
-！！！success
+!!!success
 
     首先，隆重感谢gsgg指点！鞠躬！
 
