@@ -85,7 +85,7 @@ ls --help
 ls -l # 列出文件的详细信息
 ```
 
-??? info 'detailed info by ChatGPT'
+??? info "detailed info by ChatGPT"
 
     执行 `ls -l` 命令后，会以**长格式**列出目录或文件的详细信息。每一行代表一个文件或目录，输出内容分为以下几个字段（从左到右）：  
 
