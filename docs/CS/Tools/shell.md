@@ -240,7 +240,7 @@ Ctrl + L == clear
 输入流：默认从键盘输入终端terminal的
 
 输出流：默认处输出到terminal
-### \<&\>
+### <&\>
 重定向输入流输出流：
 ```shell
 < full_path/file_name  # 将前面程序的输入重定向到这个文件
