@@ -36,7 +36,9 @@ which <程序名称>
 # 查看我输入这个程序名称后运行的是哪个程序
 ```
 
-## 路径
+## 简单文件操作
+首先解释一下路径的概念：
+
 win: 由“\”开始(win的根目录为\\)，且每个分区（驱动器）都有一个根目录("\\"), 例如C:\
 
 linux/macos: 由“/”开始(其根目录为/),且所有都在一个根目录下
@@ -107,6 +109,13 @@ ls -l # 列出文件的详细信息
     - **w**（write）：可写
     - **x**（execute）：可执行
     - 如果没有权限，用 `-` 表示。
+
+    对文件：r/w/x代表字面含义
+
+    对文件夹：
+        r代表：可以查看该目录下的文件列表（是否被允许列出该文件夹的所有文件列表；
+        w代表：可以在该目录中重命名、创建、删除文件。如果对一个文件有w而对其目录没有w则不能删除文件（因为删除文件得需要对目录有w）；
+        x代表：有cd入该目录的权限，如果想对该目录下的文件进行r、w、x，必须得拥有该目录及其所有父目录的x权限。
 
     **示例**：
     ```bash
@@ -201,6 +210,78 @@ ls -l # 列出文件的详细信息
     - **`-S`**：按文件大小排序。  
 
     综合使用这些选项可以更方便地查看文件信息。
+
+```shell
+mv full_path/old_file_name full_/new_file_name  # 重命名文件,这里可以是相对路径也可以是绝对路径,无法在一个目录下操作另一个目录下的文件所以要给出目录
+
+mv file_name directory  # 移动文件
+
+cp full_path/file_name full_path(new)/file_name(can_be_new) # 在full_path(new)中复制一份名为file_name(can_be_new)的文件，注意这里可以是相对路径也可以是绝对路径
+
+rm dir/file_name  # 也要提供文件路径（相对or绝对）
+
+rm -r  # 递归删除目录及其包含的所有文件
+
+rmdir  # 删除目录，但是只能删除空目录
+
+mkdir 
+
+cat
+```
+查看具体：
+```shell
+man <程序名>  # 手册页
+```
+```shell
+Ctrl + L == clear
+```
+
+## 流 —— shell真正的强大之处
+输入流：默认从键盘输入终端terminal的
+
+输出流：默认处输出到terminal
+### \<&\>
+重定向输入流输出流：
+```shell
+< full_path/file_name  # 将前面程序的输入重定向到这个文件
+> full_path/file_name  # 将前面程序的输出重定向到这个文件
+
+# for example，
+
+echo hello world > hello.txt  # 在当前目录下创建一个hello.txt并在其中写入hello world，如果原来有内容将会覆盖原来的。且这里可以两个单词之间用空格；
+
+echo hello world ohh >> hello.txt  # 继续写入，不会覆盖原有的
+
+cat  # 可以将输入输出连在一起：默认情况下将输入内容复制到输出端
+
+# example：
+cat < hello.txt  # shell会打开文件hello.txt，从其中读取输入，并将其设置为cat的命令，输出，默认道terminal
+
+cat < hello.txt > hello2.txt  # 其实是告诉shell使用hello.txt作为cat命令的输出，再将cat打印的内容写入hello2.txt
+
+```
+
+### | (管道符)
+作用：将左边程序的输出作为右边程序的输入
+
+```shell
+tail -nk  # 最后k行（其中n为标志，k为你输入的一个常数代表最后k行
+
+# 等价于：
+
+tail --line=k
+```
+
+for example，
+```shell
+ls -l | tail -n2  # 将ls -l的输出即文件详细列表作为tail -n2的输入，用tail命令处理输入得到最后两行，由于没有重定向，则输出内容打印到terminal
+
+ls -l | tail -n2 > ls.txt  # 加了一个重定向，则输出内容打印到ls.txt
+```
+作用：文本处理，图像处理，数据流传数
+
+# root
+
 
 
 
