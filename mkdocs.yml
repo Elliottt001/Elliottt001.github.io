@@ -36,6 +36,7 @@ nav:
         - Note: CS/Programming/Python/Python Note.md
       - Algorithm: CS/Programming/编程思想&算法.md
     - Tools:
+      - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
       - Git&GitHub: CS/Tools/Git & GitHub.md
