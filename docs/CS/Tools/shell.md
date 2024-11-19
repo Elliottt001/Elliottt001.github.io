@@ -1,5 +1,13 @@
 >from MIT Missing Semester of Your CS Education
 
+>Actually, there is one thing that I don't understand, it is why do you quit listening to missing semester and search for a domestic class which waste your whole afternoon and from which you learn NOTHING.
+
+>Ridiculous!!!
+
+>Absurd!!!
+
+>It make sence that you need to ask ChatGPT, but what can't be understood is that you turn to a domestic class!
+
 ??? info "shell的工作原理by ChatGPT"
 
     Shell 是操作系统的命令行界面（CLI）程序，它充当用户与操作系统内核之间的中介，接受用户输入的命令并将其传递给内核进行处理。Shell 不仅提供一个交互式的命令执行环境，还能执行脚本，进行自动化操作。它在系统中运行并处理输入输出，控制进程、文件以及程序流。理解 Shell 的工作原理有助于更好地使用它进行任务自动化、调试和系统管理。
@@ -31,7 +39,7 @@
 
     Shell 通过对用户输入的命令进行解析、执行，并返回输出结果的方式与操作系统进行交互。其主要工作原理包括命令解释、进程管理、文件操作、脚本执行等。
 
-    #### **命令解释与执行**
+    **命令解释与执行**
 
     当用户在 Shell 中输入命令时，Shell 执行以下步骤：
 
@@ -545,8 +553,33 @@ is_prime $number
 
 - `$?`: 可以在脚本行中直接写，作用是获取上一个命令的错误代码
 
-- `$_`: 获取上一个命令的最后一个参数
+    ```shell
+    true
+    echo $?  # stdout: 0
+    false
+    echo $?  # stdout: 1
+    ```
 
+- `$_`: 获取上一个命令的最后一个参数
+- `!!`: 被替换为上一次的命令
+    
+    用处：创建一个东西没有足够权限时
+    ```shell
+    mkdir /mnt/new
+    # stdout: permission denied
+    sudo !!
+    # !!会被替换为 mkdir /mnt/new，就行了
+    ```
+
+- 逻辑运算符
+
+    - || （逻辑或）： `命令1 || 命令2`，先执行命令1，若失败，则执行命令2；若命令1成功，则短路。
+        ```shell
+        false || echo "hello"  # stdout: hello
+        true || echo "wont't be printed"  # stdout:   
+    - && (逻辑与)： `命令1 && 命令2`，命令1没有错误才执行命令2
+        ![alt text](image-8.png)
+    
 **1. 控制流关键字**
 用于条件判断、分支控制和循环的关键字。
 
@@ -759,6 +792,7 @@ Shell 默认不支持直接的算术运算，可以使用 `(( ))` 或 `$(( ))` �
 | `$$`            | 当前脚本或命令的进程 ID（PID）。                                                              | `echo $$`（输出当前 Shell 的进程 ID）                          |
 | `$!`            | 最近一次后台命令的进程 ID。                                                                   | `sleep 10 & echo $!`（输出 `sleep` 命令的进程 ID）            |
 | `$?`            | 上一个命令的退出状态码。0 表示成功，非零表示失败。                                            | `./script.sh`（执行后 `echo $?` 输出脚本的退出状态）           |
+| `$_`            | 代表or可代替上一个命令的最后一个参数                                                                   | `cd ..` `cd $_`第二个命令即`cd ..`                       |
 | `$-`            | 当前 Shell 使用的选项。                                                                      | `echo $-`（输出当前 Shell 启动时的选项，如 `-i` 表示交互模式）  |
 | `$HOME`         | 当前用户的 home 目录。                                                                        | `echo $HOME`（输出当前用户的 home 目录）                      |
 | `$PATH`         | 系统环境变量，列出用于查找可执行命令的路径。                                                  | `echo $PATH`（输出系统命令查找路径）                          |
