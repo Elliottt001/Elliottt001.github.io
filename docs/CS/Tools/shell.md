@@ -1245,6 +1245,7 @@ Actually, you can simply use escape character like this.
         总之，脚本是用于自动化执行命令的文件，帮助简化系统操作、程序执行和任务调度等日常工作。
 
 - 有关脚本的解释器
+
     ??? info "解释器 by ChatGPT"
         `#!/usr/bin/` 中的 `#!` 是 **shebang**（也叫 **hashbang** 或 **bang line**）符号，它是用来告诉操作系统该脚本应该由哪个解释器来执行的特殊字符序列。`#!/usr/bin/` 后面的路径（如 `/usr/bin/python3`、`/bin/bash` 等）指定了该脚本应该使用的解释器。
 
