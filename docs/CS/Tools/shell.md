@@ -1049,6 +1049,7 @@ Actually, you can simply use escape character like this.
 ![alt text](image-4.png)
 
 - 文件x权限相关
+
     ??? info "linux执行文件的命令"
 
         在 Linux 中，执行文件的命令取决于文件的类型（可执行文件、脚本等）和文件的权限设置。以下是几种常见的执行文件的方法：
