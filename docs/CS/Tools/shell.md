@@ -540,7 +540,8 @@ is_prime $number
     echo "hi $name, welcome to $channel"
     ```
     strin: `zsh file_name zhangrz "Growing Cosmos"`
-    stdout: `hi zhangrz, welcome to v`
+
+    stdout: `hi zhangrz, welcome to Growing Cosmos`
 
 - `$?`: 可以在脚本行中直接写，作用是获取上一个命令的错误代码
 
