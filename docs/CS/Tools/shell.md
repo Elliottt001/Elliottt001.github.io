@@ -1,6 +1,6 @@
 >from MIT Missing Semester of Your CS Education
 
-??? info "shell的工作原理by ChatGPT
+??? info "shell的工作原理by ChatGPT"
 
     Shell 是操作系统的命令行界面（CLI）程序，它充当用户与操作系统内核之间的中介，接受用户输入的命令并将其传递给内核进行处理。Shell 不仅提供一个交互式的命令执行环境，还能执行脚本，进行自动化操作。它在系统中运行并处理输入输出，控制进程、文件以及程序流。理解 Shell 的工作原理有助于更好地使用它进行任务自动化、调试和系统管理。
 
