@@ -570,16 +570,25 @@ is_prime $number
     sudo !!
     # !!会被替换为 mkdir /mnt/new，就行了
     ```
-
+- `$(command)` 将command命令的输出作为**这个表达式的值**
+    ```shell
+    echo "we are in $(pwd)"  # stdout: we are in the_current_dir
+    # 注意只有双引号括住才能将$(pwd)替换，单引号不行
+    ```
+- `command <(command option) <(command option)`: 内部执行前面的，将输出放到一个临时文件，在将文件的标识符提供给最左边的命令
+    
+    作用：用于命令不是从strin输入的，而是从文件中获取的，可以连接文件
+### 运算符
 - 逻辑运算符
 
-    - || （逻辑或）： `命令1 || 命令2`，先执行命令1，若失败，则执行命令2；若命令1成功，则短路。
+    - || （逻辑或）： `命令1 || 命令2`，先执行命令1，若失败，则执行命令2；若命令1成功，则短路命令2。
         ```shell
         false || echo "hello"  # stdout: hello
         true || echo "wont't be printed"  # stdout:   
-    - && (逻辑与)： `命令1 && 命令2`，命令1没有错误才执行命令2
+    - && (逻辑与)： `命令1 && 命令2`，命令1错，不执行；命令1对，都会执行
         ![alt text](image-8.png)
-    
+        ![alt text](image-9.png)
+
 **1. 控制流关键字**
 用于条件判断、分支控制和循环的关键字。
 
@@ -1034,7 +1043,9 @@ for example
 
 注意：当想将一个命令的输出结果赋值给一个变量：需要命令替换语法，即反引号\` \`, 即\`the command` or \$+(), 即$(the command)。建议用\$+()。
 
+### 查找
 
+`
 
 
 
