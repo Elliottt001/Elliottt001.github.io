@@ -238,19 +238,6 @@ markdown_extensions:
   - md_in_html
   - pymdownx.superfences
   # buttons按钮 插件
-  # - attr_list
-  # Code block代码块高亮 插件
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -282,6 +269,7 @@ extra_css:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  
   # [Markdown 提示]
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition

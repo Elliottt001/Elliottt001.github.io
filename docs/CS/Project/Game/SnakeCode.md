@@ -1,4 +1,4 @@
-```python
+```{ .python .no-copy }
 # 面向对象,用python写程序的思维
 
 import sys

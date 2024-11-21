@@ -1,4 +1,4 @@
-```python
+```{ .python .no-copy }
 import requests
 
 cookies = {
