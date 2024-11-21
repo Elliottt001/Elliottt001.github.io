@@ -37,3 +37,5 @@ Search for emojis
   **Tip:** Enter some keywords to find icons and emojis and click on the
   shortcode to copy it to your clipboard.
 </small>
+
+:smile:
