@@ -1,4 +1,4 @@
-```python linenums = "1"
+``` py linenums="1"
 # 面向对象,用python写程序的思维
 
 import sys
