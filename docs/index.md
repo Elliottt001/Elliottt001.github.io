@@ -2,8 +2,7 @@
 
 <span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙</span> :star2: :star2: :star2:
 
-[Subscribe to my latest articles](#){ .md-button }
-:heart:
+:heart: [Subscribe to my latest articles](#){ .md-button } :heart:
 ## Things Inspired Me
 - *Life Philosophy*
 - *Learn in ZJU*
