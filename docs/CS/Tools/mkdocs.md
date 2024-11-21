@@ -40,3 +40,5 @@ Search for emojis
 
 :smile:
 :fontawesome-regular-face-laugh-wink:
+
+:octicons-heart-fill-24:{ .heart }

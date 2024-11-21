@@ -1,6 +1,6 @@
 # Welcome to Growing Cosmos!
 
-<span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙 :fontawesome-regular-face-laugh-wink: </span>
+<span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙</span> :star2: :star2: :star2:
 
 [Subscribe to my latest articles](#){ .md-button }
 :octicons-heart-fill-24:{ .heart }
