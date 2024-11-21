@@ -39,3 +39,4 @@ Search for emojis
 </small>
 
 :smile:
+:fontawesome-regular-face-laugh-wink:
