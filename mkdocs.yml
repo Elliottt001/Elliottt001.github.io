@@ -289,9 +289,12 @@ extra_css:
   # [Markdown footnote 语法支持]
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
+  # emoji
   - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji 
     emoji_generator: !!python/name:material.extensions.emoji.to_svg  
+  # add color to emojis
+  - stylesheets/extra.css
     # 允许使用任务清单即- []      
   - pymdownx.tasklist:
       custom_checkbox: true
