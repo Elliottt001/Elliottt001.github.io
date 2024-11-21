@@ -238,7 +238,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.superfences
   # buttons按钮 插件
-  - attr_list
+  # - attr_list
   # Code block代码块高亮 插件
   - pymdownx.highlight:
       anchor_linenums: true
