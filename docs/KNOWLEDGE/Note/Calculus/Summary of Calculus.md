@@ -16,9 +16,7 @@ Welcome to the world of Caculus!
 
 	=== "Gottfried Wilhelm Leibniz"
 
-		For it is unworthy of excellent men to lose hours like slaves in the labor of calculation which could safely be relegated to anyone else if machines were used.               
-		
-		                            <div style="text-align: right;"> —— Leibniz </div> 
+		For it is unworthy of excellent men to lose hours like slaves in the labor of calculation which could safely be relegated to anyone else if machines were used.              —— Gottfried Wilhelm Leibniz 
 
 	=== "Karl Heinrich Marx"
 
