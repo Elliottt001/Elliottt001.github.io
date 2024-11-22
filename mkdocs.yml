@@ -77,24 +77,19 @@ theme:
   icon:
     logo: material/library-outline
 
-  palette:
-    # [根据系统设置自动切换]
-    - media: "(prefers-color-scheme)"
       toggle:
-      # 图标
-        icon: material/link
+        # 图标
+        icon: material/weather-sunny
         # 鼠标悬浮提示
-        name: Switch to light mode
-    # 日间模式
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      # 主颜色
-      primary: indigo
-      # 链接等可交互元件的高亮色
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch
         name: Switch to dark mode
+    # 夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
     # 夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -103,9 +98,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
-  font:
-    text: Roboto
-    code: Roboto Mono
+  font: False
   
   features:
     # 使用 Tab 来进行分类
@@ -117,6 +110,8 @@ theme:
     # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages-with-section-index-pages
     - navigation.indexes
+    # 右侧目录随页面滑动
+    - toc.follow 
     # 打开 Tab 时左侧目录全部展开
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
     - navigation.expand
@@ -195,7 +190,7 @@ extra:
       icon: fontawesome/brands/github
       link: https://github.com/r-z-zhang-AI
   generator: false
-  
+
   consent:
     title: Cookie consent
     description: >- 
@@ -209,7 +204,8 @@ extra:
         checked: false
     actions:
       - accept
-      - manage    
+      - manage  
+  
 # [Extensions]
 plugins:
   # [搜索功能]
@@ -225,6 +221,9 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   - tags
 markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 5
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
@@ -279,6 +278,9 @@ extra_css:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - https://cdn.tonycrane.cc/utils/katex.min.css
 
   # add color to emojis
   - stylesheets/extra.css
