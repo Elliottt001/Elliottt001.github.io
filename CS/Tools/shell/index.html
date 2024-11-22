@@ -106,7 +106,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2808,7 +2817,7 @@
 <p>prompt: 命令提示符，就这个东西</p>
 </li>
 </ul>
-<p><img alt="alt text" src="../image.png" /></p>
+<p><a class="glightbox" href="../image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image.png" /></a></p>
 <p>在命令提示符后面，你输入的是：程序名称 + 参数</p>
 <p>And, use spaces to seprate the arguments, and if your need to include space in one argument, use \ before the space or "" or ''.</p>
 <div class="highlight"><pre><span></span><code>date
@@ -2816,6 +2825,9 @@
 mkdir<span class="w"> </span><span class="s2">&quot;my photes&quot;</span><span class="w"> </span><span class="c1"># the right way</span>
 mkdir<span class="w"> </span>my<span class="w"> </span>photos<span class="w"> </span><span class="c1"># you might create 2 directory(my and photos)</span>
 <span class="c1"># 其中：echo and date and mkdir 是程序名称，后面的是参数，即这里shell执行的就是带参数的程序</span>
+&lt;div<span class="w"> </span><span class="nv">markdown</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="nv">style</span><span class="o">=</span><span class="s2">&quot;margin-top: -30px; font-size: 0.75em; opacity: 0.7;&quot;</span>&gt;
+:material-circle-edit-outline:<span class="w"> </span>约<span class="w"> </span><span class="m">9421</span><span class="w"> </span>个字<span class="w"> </span>:fontawesome-solid-code:<span class="w"> </span><span class="m">336</span><span class="w"> </span>行代码<span class="w"> </span>:material-image-multiple-outline:<span class="w"> </span><span class="m">10</span><span class="w"> </span>张图片<span class="w"> </span>:material-clock-time-two-outline:<span class="w"> </span>预计阅读时间<span class="w"> </span><span class="m">36</span><span class="w"> </span>分钟
+&lt;/div&gt;
 </code></pre></div>
 <h2 id="enviroment-variable">enviroment variable<a class="headerlink" href="#enviroment-variable" title="Permanent link">&para;</a></h2>
 <p>How does the shell know what to do when you type the "echo" or somethong else?</p>
@@ -2836,7 +2848,7 @@ mkdir<span class="w"> </span>my<span class="w"> </span>photos<span class="w"> </
 <p>绝对路径：能完全确定文件位置的完整路径</p>
 <p>相对路径：相当于你当前处于的路径来说</p>
 <p>例如，用cd改变路径就可以相对 or 绝对路径
-<img alt="alt text" src="../image-1.png" />
+<a class="glightbox" href="../image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-1.png" /></a>
 <div class="highlight"><pre><span></span><code><span class="nb">pwd</span><span class="w"> </span><span class="c1"># 打印当前所处绝对路径</span>
 <span class="nb">cd</span><span class="w"> </span><span class="c1"># 改变路径</span>
 <span class="c1"># 几个特殊的目录：</span>
@@ -3062,7 +3074,7 @@ because 管道和重定向不是程序知道的，是shell知道的，而此时�
 </code></pre></div>
 <code>$</code>代表以用户ruizhe访问文件</p>
 <p><code>#</code>代表以root访问文件
-<img alt="alt text" src="../image-2.png" /></p>
+<a class="glightbox" href="../image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-2.png" /></a></p>
 <p>解决方案2：</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="m">1060</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>brightness
 <span class="c1"># 含义：我告诉终端运行sudo 1060，然后告诉他运行sudo tee brightness(即run tee as root)，并让他将echo的输出发送到sudo tee；</span>
@@ -3163,8 +3175,8 @@ sudo<span class="w"> </span>!!
     true || echo "wont't be printed"  # stdout:   </p>
 </li>
 <li>&amp;&amp; (逻辑与)： <code>命令1 &amp;&amp; 命令2</code>，命令1错，不执行；命令1对，都会执行
-    <img alt="alt text" src="../image-8.png" />
-    <img alt="alt text" src="../image-9.png" /></li>
+    <a class="glightbox" href="../image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-8.png" /></a>
+    <a class="glightbox" href="../image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-9.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -3729,12 +3741,12 @@ Shell 默认不支持直接的算术运算，可以使用 <code>(( ))</code> 或
 <li>
 <p>方法1：shell会话中定义（普通）</p>
 <p>注意！不能有空格！shell中空格是用来分隔参数的
-<img alt="alt text" src="../image-5.png" /></p>
+<a class="glightbox" href="../image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-5.png" /></a></p>
 </li>
 <li>
 <p>方法2：shell会话中定义再在脚本文件中引用
     示例：
-    <img alt="alt text" src="../image-7.png" />
+    <a class="glightbox" href="../image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-7.png" /></a>
     注意加上<code>export</code>：将变量转换为环境变量，且该环境变量只在当前会话中有效，<code>exit</code>命令退出后该shell会话即失效</p>
 <p>使环境变量永久有效的方法：放到~/.zshrc中：</p>
 <div class="highlight"><pre><span></span><code>code<span class="w"> </span>~/.zshrc
@@ -3948,7 +3960,7 @@ func<span class="w">          </span><span class="c1"># 调用函数，输出 &q
 <p>如果还有不清楚的地方，随时问我！ 😊</p>
 </details>
 <p>for example
-<img alt="alt text" src="../image-6.png" /></p>
+<a class="glightbox" href="../image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-6.png" /></a></p>
 <h2 id="_12">其他<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p><code>shuf -i m-n -n k</code>：在m-n中生成k个随机数</p>
 <p>注意：当想将一个命令的输出结果赋值给一个变量：需要命令替换语法，即反引号` `, 即`the command` or $+(), 即$(the command)。建议用$+()。</p>
@@ -4299,9 +4311,9 @@ sed<span class="w"> </span><span class="s1">&#39;s/hello/world/g&#39;</span><spa
 </li>
 <li>
 <p>Quoting
-<img alt="alt text" src="../image-3.png" />
+<a class="glightbox" href="../image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-3.png" /></a>
 Actually, you can simply use escape character like this.
-<img alt="alt text" src="../image-4.png" /></p>
+<a class="glightbox" href="../image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-4.png" /></a></p>
 </li>
 <li>
 <p>文件x权限相关</p>
@@ -4535,6 +4547,27 @@ prompt: 命令提示符
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
@@ -4669,5 +4702,7 @@ prompt: 命令提示符
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
