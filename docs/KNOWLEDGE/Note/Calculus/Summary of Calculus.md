@@ -73,17 +73,26 @@ $$\lim_{x \to 0} \left(1 - x\right)^{\frac{1}{x}} = e^{-1}$$
 
 1. 
 $$\lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1$$  
-**证明**：  
+
+**证明**： 
+
 $$\lim_{x \to 0} \ln(1 + x)^{\frac{1}{x}} = \ln e = 1$$  
 
 2. 
-$$\lim_{x \to 0} \frac{e^x - 1}{x} = 1$$  
+$$\lim_{x \to 0} \frac{e^x - 1}{x} = 1$$ 
+
 **证明**：  
-令 $t = x$, 则 $$\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{t} = 1$$
+
+令 $t = x$, 
+则
+
+ $$\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{t} = 1$$
 
 3. 
 $$\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a \quad (a > 0, a \neq 1)$$  
-**证明**：  
+
+**证明**： 
+
 $$
 \lim_{x \to 0} \frac{a^x - 1}{x} 
 = \lim_{x \to 0} \frac{e^{x \ln a} - 1}{x} 
@@ -96,10 +105,11 @@ $$
 $$\lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} = \alpha \quad (\alpha \in \mathbb{R})$$  
 
 $$等价于：(记这个别记上面那个) $$
+
 $$(1 + x)^α = 1 + αx$$ 
 
-
 **证明**：  
+
 $$
 \lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} 
 = \lim_{x \to 0} \frac{e^{\alpha \ln(1+x)} - 1}{x} 
@@ -131,20 +141,28 @@ $$
 
 #### 幂指函数极限
 核心：
+
 $$
 \lim u(x)^{v(x)} = \lim e^{v(x) \ln u(x)}
 $$ 
+
 **若**  
+
 $$\lim_{x \to x_0} u(x) = a, \quad \lim_{x \to x_0} v(x) = b$$  
+
 **则**  
+
 $$\lim_{x \to x_0} u(x)^{v(x)} = a^b$$  
 
 **证明**：  
+
 $$
 \lim_{x \to x_0} u(x)^{v(x)} = \lim_{x \to x_0} e^{v(x) \ln u(x)}  
 = e^{\lim_{x \to x_0} v(x) \ln u(x)}
 $$  
+
 又因 $\lim_{x \to x_0} v(x) \ln u(x) = b \ln a$，得  
+
 $$
 \lim_{x \to x_0} u(x)^{v(x)} = e^{b \ln a} = a^b
 $$  
@@ -154,6 +172,7 @@ $$
 ![$1^\infty$](image-11.png)
 
 等价无穷小：
+
 - <font color="#ff0000">只有要替换的内容是无穷小才可用：想用之前一定要检查一下是不是无穷小！！！</font>
 
 - <font color="#00b050">只有要替换的内容是无穷小才可用：想用之前一定要检查一下是不是无穷小！！！</font>
