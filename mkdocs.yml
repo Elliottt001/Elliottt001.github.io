@@ -77,26 +77,24 @@ theme:
   icon:
     logo: material/library-outline
 
-      toggle:
-        # 图标
-        icon: material/weather-sunny
-        # 鼠标悬浮提示
-        name: Switch to dark mode
-    # 夜间模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: blue
+  palette:
+    # 日间模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      # 主颜色
+      primary: indigo
+      # 链接等可交互元件的高亮色
+      accent: indigo
       toggle:
         icon: material/weather-night
-        name: Switch to light mode
+        name: Switch to dark mode
     # 夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off
+        icon: material/weather-sunny
         name: Switch to system preference
   font: False
   
