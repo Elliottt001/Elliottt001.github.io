@@ -42,3 +42,8 @@ Search for emojis
 :fontawesome-regular-face-laugh-wink:
 
 :octicons-heart-fill-24:{ .heart }
+
+|2024.11.11 |2024.11.22           |
+|-----------|---------------------|
+|hello      |world                |
+|`#!C int a`|`#! py import random`|

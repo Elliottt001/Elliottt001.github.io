@@ -34,7 +34,7 @@ Welcome to the world of Caculus!
 	- 内容：俩收敛数列极限小的那个n充分大时项也小
 	- 证明：
 		1. max  
-		2. [[Summary Of Calculus#^251156|基本全在领域内]]  
+		2. 基本全在邻域内
 		3. ε = 半差值（两极限值的半差值）
 
 ### 保号性
@@ -56,7 +56,11 @@ Welcome to the world of Caculus!
 		2. 有限项
 - 极限和很多运算可交换
 - 除法：分母为0不行
-- （函数：复合）
+- 函数：复合
+	- 作用：变量代替法
+	- 公式：
+$\lim_{x \to x_0} g(f(x)) = \lim_{u \to u_0} g(u) = A$: when $x \to x_0$, $u = f(x) \to u_0$
+
 ## 判别法则
 - 单调有界
 	- （函数+数列：海涅定理：规定特定的趋近方法）
