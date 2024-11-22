@@ -73,7 +73,7 @@ Search for emojis
 
     Change the colors, fonts, language, icons, logo and more with a few lines
 
-    [:octicons-arrow-right-24: Customization](#)
+    [:octicons-arrow-right-24: HTML](#)
 
 -   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
 
@@ -81,6 +81,6 @@ Search for emojis
 
     Material for MkDocs is licensed under MIT and available on [GitHub]
 
-    [:octicons-arrow-right-24: License](#)
+    [:octicons-arrow-right-24: CSS](#)
 
 </div>
