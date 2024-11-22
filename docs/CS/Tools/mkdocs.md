@@ -40,7 +40,7 @@ Search for emojis
 
 :smile:
 :fontawesome-regular-face-laugh-wink:
-
+[点击查看公式](CSS.md)
 :octicons-heart-fill-24:{ .heart }
 
 |2024.11.11 |2024.11.22           |
