@@ -244,8 +244,6 @@ markdown_extensions:
   - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji 
     emoji_generator: !!python/name:material.extensions.emoji.to_svg  
-  # add color to emojis
-  - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -277,6 +275,9 @@ extra_css:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+  # add color to emojis
+  - stylesheets/extra.css
   
   # [Markdown 提示]
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
