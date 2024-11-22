@@ -218,6 +218,13 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   - tags
+
+  - glightbox #图片放大
+  
+  - statistics: #统计页面字数、代 码行数、阅读时间
+    #https://github.com/TonyCrane/mkdocs-statistics-plugin  
+  - search
+  - git-revision-date-localized
 markdown_extensions:
   - toc:
       permalink: true
