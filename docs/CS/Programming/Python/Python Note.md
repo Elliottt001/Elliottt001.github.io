@@ -1,5 +1,5 @@
 Let's start!
-# 学习资料
+## 学习资料
 
 [Python_YL](https://www.yuque.com/u26596123/re4lmd?)
 
@@ -11,12 +11,12 @@ Let's start!
 
 [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
-# 规范
+## 规范
 命名
 - 模块（文件）名：小驼峰
 - 类名：大驼峰
 - 函数&变量名：下划线命名法
-# 杂项
+## 杂项
 
 - in 关键词：用于可迭代对象
   eg：
@@ -28,8 +28,8 @@ if "hi" in word
 	0, "", None, \[], (), {}   空字符串、空数列、空的……
 	函数return  <=> return None  <=> return 0  <=> ……
 
-# 函数
-## 变量的作用域
+## 函数
+### 变量的作用域
 全局变量可以在函数体内访问，但是内部不能修改！
 如果尝试修改，会报错
 
@@ -55,7 +55,7 @@ def func(y):
 y = func(y)
 ```
 
-## 函数的多返回值
+### 函数的多返回值
 ```python
 def func(pra):
 	# 代码块
@@ -66,7 +66,7 @@ def func(pra):
 	# 即：
 a, b = func_name(pra)
 ```
-## 传参
+### 传参
 - 关键词传参：形参名 = 实参值
 
 - 位置传参：按位置
@@ -77,7 +77,7 @@ a, b = func_name(pra)
 
 - 默认参数：给默认参数的全放在不给默认参数的后面，否则会报错
 
-## 函数作为参数传递
+### 函数作为参数传递
 形参那里写一个形参代表函数
 
 实参写函数名字！不能带括号，因为带了括号的意思是调用那个函数，则会报错（少参数）
@@ -99,14 +99,14 @@ print(calculator(3, 5, min))
 print(calculator(3, 5, mul))
 ```
 
-# 数据容器
+## 数据容器
 
 [Python进阶语法-数据容器](https://www.yuque.com/u26596123/re4lmd/lqgrxxcmboh41glw)
 
-## 数据容器总结
+### 数据容器总结
 ![[63178ff0bddb8b3d19ff53ae8417e90.jpg]]
 ![[767def4f0bdfa79420e48fb7b1c3371.jpg]]
-### .方法
+#### .方法
 	new_name = sorted(name, reverse)
 		reverse: 不传默认False : 不倒序即正序
 		reverse = True : 倒序
@@ -115,42 +115,50 @@ print(calculator(3, 5, mul))
 	max_item = max(name)
 	min_item = min(name)
 
-### 比大小
+#### 比大小
 ASCII, UTF-8
 
 逻辑：一个一个比，到不一样的那个开始出大小，跟长度没关系
-## 序列sequence
-### 序列总结
+### 序列sequence
+#### 序列总结
 ![[e3aa546b6378288f581c530b96df6b4.jpg]]
 
-#### 序列的切片
+##### 序列的切片
 定义：取出一个子序列
 
 语法：sequence_name\[start: stop: step]
+
 - 语法：
+
+
 	- start : 省略默认0
+
 	- stop : 省略默认值为len(sequence_name)，前取后不取
+
 	- step : 省略默认1；负数：正负决定取值顺序（输出和读取从前到后or从后到前）；跳过stop-1个去取
+
 - 超限：不报错，到最后
+
 - 逻辑：读到start，看step（正负&大小），按他在序列里面找到stop
+
 - 应用：
 	倒序输出：print(序列名\[ : : -1]) : 如果前面两个都没填，则默认第一个是-1，最后一个是0
 
-### 列表list
-#### 定义
+#### 列表list
+##### 定义
 方法1. list_name = \["任意类型的数据", 123, 4 + 5j, \["甚至可以放列表", 5.3], None, True]
 
 方法2. list_name = list( "里面什么都能装")
-#### 访问
+##### 访问
 list_name\[index] : index从0开始
 超过限制：报错
 
 index是负数：反向index：最后一个-1，倒数第二个-2，依此类推
 
 二维列表（列表·里面有列表）：list_name\[index1]\[index2]
-#### 修改
+##### 修改
 list_name\[index] = new_item_which_can_be_any_type
-#### 点操作
+##### 点操作
 访问对象的属性和方法
 
 每一种数据类型都是一个类，当用这种数据类型，就是引出一个对象，就可以用这个对象的属性和方法
@@ -188,7 +196,7 @@ list_name\[index] = new_item_which_can_be_any_type
 	list_name.sort()
 		排序
 
-#### 循环遍历
+##### 循环遍历
 ```python
 index = 0
 while(index < len(list_name)):
@@ -209,8 +217,8 @@ PS: range(start, stop, step)
 - stop : 前取后不取
 - step : 省略默认1
 
-### 元组tuple
-#### 跟list：
+#### 元组tuple
+##### 跟list：
 定义：把\[]变成()即可
 
 不同：不能修改！所以.方法没有添加删除那几个
@@ -220,33 +228,33 @@ PS: range(start, stop, step)
 	.index()
 	.count()
 	len()
-#### 元组的解包
+##### 元组的解包
 ```python
 tuple_name = (item1, item2, item3) #多个item，可以是任意数据类型
 a, b, c = tuple_name
 # 现在，a是item1， 依此类推
 ```
-#### 作用
+##### 作用
 保护数据，不可修改
 函数的多返回值是个元组
 
-#### tips
+##### tips
 ```python
 my_tuple = (124, 'hello', ["a", "b", 89])
 my_tuple[2][0] = 'A'
 print(my_tuple)
 # 被修改了
 ```
-### 字符串string
-#### 跟list相同点
+#### 字符串string
+##### 跟list相同点
 	.index()
 	.count()
 	len()
-#### 跟list不同
+##### 跟list不同
 不可直接修改！
 
 如果要修改，换新的字符串：见下，用.方法: new_str = ori_str.func(pra)
-#### .方法（修改必须新字符串+调用函数）
+##### .方法（修改必须新字符串+调用函数）
 
 原字符串永远不可能被修改
 
@@ -269,16 +277,16 @@ print(my_tuple)
 		不传参数：默认空格：想删除前后空格则new_str_name = ori_str_name.strip()
 			场景：用AI聊天式办公：前后的空格都占用AI的算力，故删除
 
-## 另外两个
-### 集合set
-#### 特点：
+### 另外两个
+#### 集合set
+##### 特点：
 不重复、无序、无索引index！
 可以修改！
-#### 定义：
+##### 定义：
 方法一：set_name = {item1, item2, item3, ......}
 
 方法二：set_name = set(item1, item2, item3, ......)
-#### .方法
+##### .方法
 	len(set_name)也适用
 	set_name.add(added_item)
 		追加元素，当然，没有顺序随机放置，甚至每次打印那些个元素的顺序都不一样
@@ -290,7 +298,7 @@ print(my_tuple)
 	set_name.clear()
 		清空集合
 
-#### 集合的运算(也是.方法)
+##### 集合的运算(也是.方法)
 并集
 - 方法一：new_set = set1 | set2
 - 方法二：new_set = set1.union(set2)
@@ -303,12 +311,12 @@ print(my_tuple)
 - 方法一：new_set = set1 - set2
 - 方法二：new_set = set1.difference(set2)
 
-#### 遍历
+##### 遍历
 只能用for：for item in set_name:
 
 while不行: 因为没有index
 
-#### 应用
+##### 应用
 给列表去重
 
 	引用：爬去豆瓣排名前100的导演，去分析他们的合作关系之类的东西
@@ -317,16 +325,16 @@ my_list = [……]
 my_list = list(set(my_list))
 ```
 
-### 字典dict
-#### 定义
+#### 字典dict
+##### 定义
 方法1：dict_name = {key1: value1, key2: value2, key3: value3 ……} ：元素为键值对
 
 方法2：dict_name = dict()
-#### 规范
+##### 规范
 数据类型：除键不能是字典外，对key和value其他随便啥数据类型都行
 
 key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
-#### 访问
+##### 访问
 查找：dict_name\[key_name]
 
 新增：dict_name\[new_key_name] = new_value
@@ -337,7 +345,7 @@ key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 	<!--“我干过别的……嘿嘿嘿……”看看人家大学四年的技术水平，本科毕业直接工作，报价3000的爬虫小项目-->
 	<!--by YL-->
 没有下标索引
-#### .方法
+##### .方法
 	dict_name.pop(key_name)
 		删除指定元素
 	dict_name.clear()
@@ -362,11 +370,11 @@ key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 			for key, value in key_name.items()
 			这里同时完成了元祖的解包，可以打印：print(f"key:{key}, value:{value}")
 
-# 异常的捕获和处理
+## 异常的捕获和处理
 
 [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
-## 定义语法
+### 定义语法
 ```python
 # 方法一
 try:
@@ -424,19 +432,19 @@ a = int(input())
 b = int(input())
 print(calculator(a, b, div))
 ```
-## 杂项
+### 杂项
 1. 异常捕获具有传递性
 	随着*程序执行的过程*（函数的参数传递和调用过程……）进行传递
 		看：YL 7.32 2:28:00
 2. except后面得有一个return
 	目的是*跳出函数*（结束这一段的执行），跳出之后可以继续执行下面的，如果没有，就跳不出，将会报错并在函数这里停下
 
-# 类和对象
+## 类和对象
 
 [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
-## 类的定义方法（不够简便）
-## 类的构造方法（最简便的）
+### 类的定义方法（不够简便）
+### 类的构造方法（最简便的）
 ```python
 class Animal():
     def __init__(self, name, age, sound, species = "动物", love_status = False):
@@ -508,7 +516,7 @@ print(tiger.__getlove_status()) # AttributeError: 'Animal' object has no attribu
 		my_list = list() : 用list类定义对象my_list
 		那么，可以：my_list.append(), my_list.remove(), etc.
 
-## 魔术方法
+### 魔术方法
 魔术方法的调用通常是隐式的，即由Python解释器在特定操作发生时自动调用，而不是直接由用户代码显式调用
 魔术方法的显式调用：可以但是不建议，会被辞退
 	另一个方法（可以是自定义也可以是另一个魔术方法）的返回值写例如：return self.\_\_str__()  
@@ -605,7 +613,7 @@ print(repr(p))  # 使用 repr() 函数调用 __repr__
 12. \_\_setitem__(self, index, value)
 	用方括号访问下标并赋值
 
-## 私有成员
+### 私有成员
 一般是通过公有成员进行访问来实现公有成员的功能，但是外部直接访问私有成员是不行的
 定义：
 	\_\_开头
@@ -614,7 +622,7 @@ print(repr(p))  # 使用 repr() 函数调用 __repr__
 	私有方法
 		直接定义就好
 
-## 类的单继承
+### 类的单继承
 定义：class ChildrenClass(ParentClass):
 特点：继承所有的公开成员（公开属性&公开方法）
 初始化
@@ -625,7 +633,7 @@ print(repr(p))  # 使用 repr() 函数调用 __repr__
 覆盖
 	子类重写某个方法or属性，则会覆盖父类的相应方法
 
-## 类的多继承
+### 类的多继承
 定义
 	class ChildrenClass(MainParentClass, ViceParentClass):
 初始化
@@ -641,8 +649,8 @@ print(repr(p))  # 使用 repr() 函数调用 __repr__
 		def call(self, number)
 			return ViceParentClass.call(number)
 
-# 模块与库
-## 安装
+## 模块与库
+### 安装
 [【pip 安装】国内 pip 镜像源换源方法以及 pip 基本操作_pip 源泉-CSDN博客](https://blog.csdn.net/weixin_57950978/article/details/142653359)
 暂时换源：
 ```zsh
@@ -657,7 +665,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 海龟编译器可以直接查看各种库……
 pip安装最好！
-## 语法
+### 语法
 ```python
 	from libraay_name import item_name as given_name_by_me
 ```
@@ -687,7 +695,7 @@ import math
 import os
 import sys
 
-## 模块module
+### 模块module
 模块：.py文件
 在同一文件夹下
 	直接import: 假设我现在有一个animal.py, 里面是[[Python#^f2109a|上面这个Animal类]]
@@ -707,10 +715,10 @@ PS:
 	如果那个模块中还有一个变量 a = 8
 	那么可以：print(animal.a)
 
-## 库or包package
+### 库or包package
 库（文件夹），里面有模块（文件）
-### 调用语法
-#### 前提
+#### 调用语法
+##### 前提
 
 python怎样知道这是一个包而不是一个普通文件夹：
 假设现在有一个库（文件夹）叫做myPackage, 里面有三个模块（文件）叫做myModule1.py、myModule2.py、myModule3.py
@@ -722,7 +730,7 @@ __all__ = ['myModule1', 'myModule2']
 代表：外部可以访问myModule1和myModule2，其他的模块如myModule3.py无法访问；如果没有__add__[...], 默认可以访问所有的模块
 
 还有其他配置，你自己写库的时候可以自己查
-#### 调用
+##### 调用
 假设现在有一个库（文件夹）叫做myPackage, 里面有一个模块（文件）叫做myModule.py, 里面有一个函数叫做my_func()
 ```python
 from myPackage import myModule
@@ -743,7 +751,7 @@ python很好学的
 
 
 
-# 想了解的东西
+## 想了解的东西
 服务器，端口,pip, anaconda， 换源
 
 函数注释规范 7.30 1:21:40
