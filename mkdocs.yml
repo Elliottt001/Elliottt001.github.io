@@ -240,11 +240,10 @@ markdown_extensions:
   # buttons按钮 插件
   # - attr_list
   # emoji
-  # - attr_list
+  - attr_list
   - pymdownx.emoji:
-    emoji_index: !!python/name:material.extensions.emoji.twemoji 
-    emoji_generator: !!python/name:material.extensions.emoji.to_svg  
-
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
