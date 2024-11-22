@@ -1,24 +1,28 @@
 Welcome to the world of Caculus!
 ![[Pasted image 20241029165639.png]]
 
-!!! success "Click here and start your trip of calculus"
+!!! success "Let's see"
 
-	Nature and nature's laws,
+	=== "Isaac Newton"
+		
+		Nature and nature's laws,
 
-	Lay hid in night,
+		Lay hid in night,
 
-	God said,
+		God said,
 
-	Let Newton be!
+		Let Newton be!
 
-	And all was light
+		And all was light
 
+	=== "Gottfried Wilhelm Leibniz"
 
-	For it is unworthy of excellent men to lose hours like slaves in the labor of calculation which could safely be relegated to anyone else if machines were used.                                                                                           —— Leibniz
+		For it is unworthy of excellent men to lose hours like slaves in the labor of calculation which could safely be relegated to anyone else if machines were used.                                                                                           —— Leibniz
 
+	=== "Karl Heinrich Marx"
 
-	马克思写过阅读微积分著作的笔记，从哲学的高度分析了微积分中的一些问题，
-	他把做微积分习题当作一种休息
+		马克思写过阅读微积分著作的笔记，从哲学的高度分析了微积分中的一些问题，
+		他把做微积分习题当作一种休息
 
 
 ## Limit
