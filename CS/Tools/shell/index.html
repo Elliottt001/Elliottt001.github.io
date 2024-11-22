@@ -1,0 +1,4673 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Zhang rz的个人网站">
+      
+      
+        <meta name="author" content="张瑞喆">
+      
+      
+        <link rel="canonical" href="https://r-z-zhang-AI.github.io/CS/Tools/shell/">
+      
+      
+        <link rel="prev" href="../../Programming/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%26%E7%AE%97%E6%B3%95/">
+      
+      
+        <link rel="next" href="../CSS/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>shell - Growing Cosmos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h224V368c0-26.5 21.5-48 48-48h112V96c0-35.3-28.7-64-64-64zm384 320H336c-8.8 0-16 7.2-16 16v112l32-32 64-64z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96m0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32m32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16m16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-40-176h24v-64h-24c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24m40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M480 32c0-12.9-7.8-24.6-19.8-29.6S434.5.2 425.3 9.3L381.7 53c-48 48-113.1 75-181 75H64c-35.3 0-64 28.7-64 64v96c0 35.3 28.7 64 64 64v128c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V352h8.7c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V300.3c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4zm-64 76.7v262.6C357.2 317.8 280.5 288 200.7 288H192v-96h8.7c79.8 0 156.5-29.8 215.3-83.3"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-86.2-346.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24v-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32m0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24m32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.1 52.4 442.6 6.5c-1.9-3.9-6.1-6.5-10.5-6.5s-8.5 2.6-10.4 6.5l-16.5 45.9-46 16.8c-4.3 1.6-7.3 5.9-7.2 10.4 0 4.5 3 8.7 7.2 10.2l45.7 16.8 16.8 45.8c1.5 4.4 5.8 7.5 10.4 7.5s8.9-3.1 10.4-7.5l16.5-45.8 45.7-16.8c4.2-1.5 7.2-5.7 7.2-10.2 0-4.6-3-8.9-7.2-10.4zm-132.4 53c-12.5-12.5-32.8-12.5-45.3 0l-2.9 2.9c-22-8-45.8-12.3-70.5-12.3C93.1 96 0 189.1 0 304s93.1 208 208 208 208-93.1 208-208c0-24.7-4.3-48.5-12.2-70.5l2.9-2.9c12.5-12.5 12.5-32.8 0-45.3l-80-80zM200 192c-57.4 0-104 46.6-104 104v8c0 8.8-7.2 16-16 16s-16-7.2-16-16v-8c0-75.1 60.9-136 136-136h8c8.8 0 16 7.2 16 16s-7.2 16-16 16z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 398.9c58.5-41.1 96-104.1 96-174.9C512 100.3 397.4 0 256 0S0 100.3 0 224c0 70.7 37.5 133.8 96 174.9V464c0 26.5 21.5 48 48 48h48v-48c0-8.8 7.2-16 16-16s16 7.2 16 16v48h64v-48c0-8.8 7.2-16 16-16s16 7.2 16 16v48h48c26.5 0 48-21.5 48-48v-65.1M96 256a64 64 0 1 1 128 0 64 64 0 1 1-128 0m256-64a64 64 0 1 1 0 128 64 64 0 1 1 0-128"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32M208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0m152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80M48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48m544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 0H128c-17.7 0-32 14.3-32 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6 0 480.9 31.1 512 69.4 512h309.2c38.3 0 69.4-31.1 69.4-69.4 0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32S337.7 0 320 0zm-96 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1l34.5 56.1h-171l34.5-56.1c12.4-20.2 19-43.4 19-67.1"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216m256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64h-64c-35.3 0-64-28.7-64-64V216"/></svg>');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22c.8 0 1.6-.1 2.3-.3-.4-.5-.8-1.1-1-1.8-.4.1-.9.1-1.3.1-4.4 0-8-3.6-8-8s3.6-8 8-8c.8 0 1.5.1 2.2.3l1.6-1.6C14.6 2.3 13.3 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10M6.5 11.5l1.4-1.4 3.1 3.1 8.6-8.6L21 6 11 16zM19 14l-1.26 2.75L15 18l2.74 1.26L19 22l1.25-2.74L23 18l-2.75-1.25z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enviroment-variable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Growing Cosmos" class="md-header__button md-logo" aria-label="Growing Cosmos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Growing Cosmos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              shell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    r-z-zhang-AI.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ME/" class="md-tabs__link">
+          
+  
+    
+  
+  Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../KNOWLEDGE/" class="md-tabs__link">
+          
+  
+    
+  
+  Knowledge
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Growing Cosmos" class="md-nav__button md-logo" aria-label="Growing Cosmos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Growing Cosmos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    r-z-zhang-AI.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ME/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Me
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Me
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SDFZ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            SDFZ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ME/SDFZ/memoir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memoir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ZJU
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ZJU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ME/ZJU/interviews/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ME/ZJU/%E4%B8%80%E4%BA%9B%E6%83%B3%E5%AD%A6%E7%9A%84%E4%B8%9C%E8%A5%BF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些想学的东西
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../KNOWLEDGE/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Knowledge
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Calculus
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Calculus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KNOWLEDGE/Note/Calculus/Knowledge%20Frame%20of%20Calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Frame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KNOWLEDGE/Note/Calculus/Summary%20of%20Calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linear Algebra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KNOWLEDGE/Note/Linear%20Algebra/Knowledge%20Frame%20of%20LA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Frame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KNOWLEDGE/Note/Linear%20Algebra/Summary%20of%20Linear%20Algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dalao
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dalao
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Dalao/resource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_1" id="__nav_4_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/C%20Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/C%20Errors%20and%20Tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errors and Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/Python/Python%20Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%26%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enviroment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      enviroment variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      真正有用的文件操作 —— 流
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真正有用的文件操作 —— 流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      重定向 &gt;, &lt;, &gt;&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      管道 |
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    <span class="md-ellipsis">
+      root
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具和脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具和脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      查找
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      杂项
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%20%26%20GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git&GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Markdown%28obsidian%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Obsidian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsidian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    拾遗
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            拾遗
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%BE%E9%81%97/Front%20End/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Front End
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%BE%E9%81%97/Hardware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/ANN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/DL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/ML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Turing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    crawler
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            crawler
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/Crawler/law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/Crawler/note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/Crawler/DoubanTop250Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoubanTop250
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/Crawler/DoubanHotCode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoubanHot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    game
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            game
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/Game/SnakeCode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SnakeCode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enviroment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      enviroment variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      真正有用的文件操作 —— 流
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真正有用的文件操作 —— 流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      重定向 &gt;, &lt;, &gt;&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      管道 |
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    <span class="md-ellipsis">
+      root
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具和脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具和脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      查找
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      杂项
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io/edit/main/docs/CS/Tools/shell.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<blockquote>
+<p>from MIT Missing Semester of Your CS Education</p>
+<p>Actually, there is one thing that I don't understand, it is why do you quit listening to missing semester and search for a domestic class which waste your whole afternoon and from which you learn NOTHING.</p>
+<p>Ridiculous!!!</p>
+<p>Absurd!!!</p>
+<p>It make sence that you need to ask ChatGPT, but what can't be understood is that you turn to a domestic class!</p>
+</blockquote>
+<details class="info">
+<summary>shell的工作原理by ChatGPT</summary>
+<p>Shell 是操作系统的命令行界面（CLI）程序，它充当用户与操作系统内核之间的中介，接受用户输入的命令并将其传递给内核进行处理。Shell 不仅提供一个交互式的命令执行环境，还能执行脚本，进行自动化操作。它在系统中运行并处理输入输出，控制进程、文件以及程序流。理解 Shell 的工作原理有助于更好地使用它进行任务自动化、调试和系统管理。</p>
+<p>下面详细讲解 Shell 的工作原理。</p>
+<hr />
+<p><strong>1. Shell 启动过程</strong></p>
+<p>当你打开一个终端或控制台时，Shell 程序会启动并等待你输入命令。Shell 启动的过程一般分为以下几步：</p>
+<ol>
+<li><strong>启动</strong>：</li>
+<li>
+<p>当你打开终端，或者在启动时启动某个 Shell 程序时，操作系统会根据默认配置（如 <code>/etc/passwd</code> 中的 <code>SHELL</code> 设置）启动一个特定的 Shell 程序，常见的是 <code>bash</code>（Bourne Again Shell）。</p>
+</li>
+<li>
+<p><strong>读取配置文件</strong>：</p>
+</li>
+<li>Shell 启动时，会加载一些配置文件，这些文件设置了环境变量、别名、函数等。</li>
+<li>
+<p>对于交互式 Shell，通常会读取以下文件：</p>
+<ul>
+<li><strong>全局配置</strong>：<code>/etc/profile</code>、<code>/etc/bash.bashrc</code>（系统范围内的配置）</li>
+<li><strong>用户配置</strong>：<code>~/.bash_profile</code>、<code>~/.bashrc</code>（用户自定义的配置）</li>
+</ul>
+</li>
+<li>
+<p><strong>初始化环境</strong>：</p>
+</li>
+<li>配置文件中的环境变量会被加载，定义如 <code>PATH</code>、<code>USER</code>、<code>HOME</code> 等环境变量。</li>
+<li>此时，Shell 为会话准备好输入输出流（标准输入 <code>stdin</code>、标准输出 <code>stdout</code>、标准错误 <code>stderr</code>）。</li>
+</ol>
+<hr />
+<p><strong>2. Shell 的工作原理</strong></p>
+<p>Shell 通过对用户输入的命令进行解析、执行，并返回输出结果的方式与操作系统进行交互。其主要工作原理包括命令解释、进程管理、文件操作、脚本执行等。</p>
+<p><strong>命令解释与执行</strong></p>
+<p>当用户在 Shell 中输入命令时，Shell 执行以下步骤：</p>
+<ol>
+<li><strong>命令输入</strong>：</li>
+<li>
+<p>用户在 Shell 中输入命令。例如，输入 <code>ls -l /home</code>。</p>
+</li>
+<li>
+<p><strong>命令解析</strong>：</p>
+</li>
+<li>
+<p>Shell 将输入的命令分解成各个部分。通过空格或其他分隔符，Shell 会把输入命令分解为命令名、参数、选项等。</p>
+<ul>
+<li>示例输入 <code>ls -l /home</code>，Shell 将其分解为：</li>
+<li><code>ls</code>：命令名（程序）</li>
+<li><code>-l</code>：选项</li>
+<li><code>/home</code>：参数</li>
+</ul>
+</li>
+<li>
+<p><strong>命令查找</strong>：</p>
+</li>
+<li>Shell 会检查命令是否是内建命令（如 <code>cd</code>, <code>echo</code>, <code>exit</code> 等）。如果是内建命令，Shell 会直接在自身中处理。</li>
+<li>
+<p>如果是外部命令（如 <code>ls</code>, <code>grep</code>, <code>python</code> 等），Shell 会根据 <code>$PATH</code> 环境变量搜索命令所在的路径。</p>
+</li>
+<li>
+<p><strong>创建进程</strong>：</p>
+</li>
+<li>
+<p>如果命令是外部命令，Shell 使用 <code>fork()</code> 系统调用创建一个新的进程，子进程会运行该命令。</p>
+<ul>
+<li><code>fork()</code>：创建一个子进程，子进程会从父进程复制一份自己的内存。</li>
+<li><code>exec()</code>：子进程调用 <code>exec()</code> 系列系统调用加载命令的可执行文件，执行命令。</li>
+</ul>
+</li>
+<li>
+<p><strong>命令执行</strong>：</p>
+</li>
+<li>
+<p>子进程执行命令，并向标准输出（<code>stdout</code>）输出结果。对于错误输出，系统会写入标准错误流（<code>stderr</code>）。</p>
+</li>
+<li>
+<p><strong>返回结果</strong>：</p>
+</li>
+<li>命令执行完毕后，子进程会将其退出状态返回给父进程（Shell）。如果命令成功执行，退出状态为 0；如果失败，退出状态为非零值。</li>
+<li>Shell 将命令的输出结果显示给用户，并将错误信息输出到标准错误。</li>
+</ol>
+<p><strong>进程管理</strong></p>
+<p>Shell 不仅能够执行命令，还能够管理和控制进程。它通过以下方式进行进程管理：</p>
+<ol>
+<li><strong>后台和前台进程</strong>：</li>
+<li>默认情况下，Shell 在前台执行命令。你可以使用 <code>&amp;</code> 将命令放到后台执行：
+    <div class="highlight"><pre><span></span><code><span class="nb">command</span><span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div></li>
+<li>
+<p>背景进程会在后台运行，Shell 会显示进程 ID（PID）。你可以通过 <code>jobs</code> 查看后台进程，并使用 <code>fg</code> 或 <code>bg</code> 将其带回前台或继续后台执行。</p>
+</li>
+<li>
+<p><strong>进程间通信（IPC）</strong>：</p>
+</li>
+<li>Shell 使用管道（<code>|</code>）和重定向（<code>&gt;</code>，<code>&lt;</code>）来实现进程间通信和数据流转。</li>
+<li>
+<p>管道将一个命令的输出作为下一个命令的输入，实质上是通过内存缓冲区进行数据传输。例如：
+    <div class="highlight"><pre><span></span><code>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;txt&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>信号管理</strong>：</p>
+</li>
+<li>
+<p>Shell 可以发送和接收信号，用于进程控制。例如，<code>Ctrl+C</code> 发送一个 <code>SIGINT</code> 信号，终止正在执行的进程；<code>Ctrl+Z</code> 发送 <code>SIGTSTP</code> 信号，暂停进程。</p>
+</li>
+<li>
+<p><strong>作业控制</strong>：</p>
+</li>
+<li>Shell 提供了作业控制功能，允许用户暂停、继续、停止进程，管理多个进程的运行。</li>
+<li>命令如 <code>jobs</code>、<code>fg</code>、<code>bg</code>、<code>kill</code> 用于管理进程。</li>
+</ol>
+<hr />
+<p><strong>3. Shell 脚本的工作原理</strong></p>
+<p>Shell 不仅能够执行单个命令，还可以执行由多个命令组成的脚本。脚本通常是包含多个命令的文本文件，Shell 会逐行读取并执行这些命令。</p>
+<p><strong>脚本执行流程</strong></p>
+<ol>
+<li><strong>脚本创建</strong>：</li>
+<li>
+<p>创建脚本文件并编辑，脚本的第一行通常会包含一个 shebang（<code>#!</code>）来指定解释器。例如：
+    <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>脚本权限</strong>：</p>
+</li>
+<li>
+<p>脚本需要具有执行权限。使用 <code>chmod</code> 为脚本赋予执行权限：
+    <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>script.sh
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>脚本执行</strong>：</p>
+</li>
+<li>
+<p>运行脚本时，Shell 会按顺序读取文件中的每一行，逐行执行命令。每个命令都会按照前述的流程解析、查找、执行。</p>
+</li>
+<li>
+<p><strong>变量与函数</strong>：</p>
+</li>
+<li>
+<p>脚本支持使用变量、控制结构（如 <code>if</code>, <code>for</code>, <code>while</code> 等）和函数，以实现更复杂的任务。</p>
+</li>
+<li>
+<p><strong>错误处理与调试</strong>：</p>
+</li>
+<li>在执行脚本时，Shell 会根据命令的退出状态来判断是否继续执行。使用 <code>set -e</code> 可让脚本在命令失败时停止执行。</li>
+<li>可以使用 <code>echo</code> 输出调试信息，或使用 <code>trap</code> 捕获错误信号。</li>
+</ol>
+<hr />
+<p><strong>4. 输入输出流与重定向</strong></p>
+<p>Shell 提供了强大的输入输出管理功能，允许用户将命令的输入输出进行重定向。</p>
+<ol>
+<li><strong>标准流</strong>：</li>
+<li>
+<p>标准输入（stdin）、标准输出（stdout）和标准错误（stderr）是 Shell 与外部交互的主要方式。</p>
+</li>
+<li>
+<p><strong>重定向</strong>：</p>
+</li>
+<li>输入重定向（<code>&lt;</code>）：将文件内容作为命令的输入。</li>
+<li>输出重定向（<code>&gt;</code> 或 <code>&gt;&gt;</code>）：将命令输出写入文件。</li>
+<li>
+<p>错误重定向（<code>2&gt;</code>）：将错误信息输出到文件。</p>
+</li>
+<li>
+<p><strong>管道</strong>：</p>
+</li>
+<li>管道（<code>|</code>）将一个命令的输出传递给下一个命令作为输入。</li>
+</ol>
+<hr />
+<p><strong>5. 内建命令与外部命令</strong></p>
+<p>Shell 有两类命令：内建命令和外部命令。</p>
+<ol>
+<li><strong>内建命令</strong>：</li>
+<li>
+<p>Shell 自带的命令，由 Shell 自身执行。常见的内建命令有 <code>cd</code>（切换目录）、<code>echo</code>（输出文本）、<code>exit</code>（退出 Shell）等。</p>
+</li>
+<li>
+<p><strong>外部命令</strong>：</p>
+</li>
+<li>外部命令是操作系统中的程序（如 <code>ls</code>、<code>grep</code>、<code>cat</code>）。Shell 查找这些命令的可执行文件，创建子进程执行。</li>
+</ol>
+<hr />
+<p><strong>总结</strong></p>
+<p>Shell 的工作原理可以分为多个阶段：用户输入命令、Shell 解析命令、查找和执行命令、进程管理、输出结果。它不仅是命令行工具，还可以通过脚本编程自动化任务，进行进程间通信，处理输入输出流，进行错误处理等。Shell 是与操作系统交互的重要桥梁，理解其工作原理能帮助我们更高效地操作系统、管理进程、自动化任务。</p>
+</details>
+<ul>
+<li>
+<p>terminal: 呈现shell的地方</p>
+</li>
+<li>
+<p>bash: the most widely used shell on linux</p>
+</li>
+<li>
+<p>prompt: 命令提示符，就这个东西</p>
+</li>
+</ul>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>在命令提示符后面，你输入的是：程序名称 + 参数</p>
+<p>And, use spaces to seprate the arguments, and if your need to include space in one argument, use \ before the space or "" or ''.</p>
+<div class="highlight"><pre><span></span><code>date
+<span class="nb">echo</span><span class="w"> </span>hello<span class="se">\ </span>world
+mkdir<span class="w"> </span><span class="s2">&quot;my photes&quot;</span><span class="w"> </span><span class="c1"># the right way</span>
+mkdir<span class="w"> </span>my<span class="w"> </span>photos<span class="w"> </span><span class="c1"># you might create 2 directory(my and photos)</span>
+<span class="c1"># 其中：echo and date and mkdir 是程序名称，后面的是参数，即这里shell执行的就是带参数的程序</span>
+</code></pre></div>
+<h2 id="enviroment-variable">enviroment variable<a class="headerlink" href="#enviroment-variable" title="Permanent link">&para;</a></h2>
+<p>How does the shell know what to do when you type the "echo" or somethong else?</p>
+<p>环境变量：设置好的，shell启动时就会自动设置的东西，bash下环境变量其实就是一个编程语言，So, in fact, we can run not only the program with arguments, but also things in programming language, like defining functions, while loops and so on, which is called shell scripting(编写shell脚本)</p>
+<p>有很多环境变量，查看环境变量：
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w">  </span><span class="c1"># show all the path, shell就是在这些里面搜索程序的；被冒号分隔；PATH储存系统的查找路径</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span><span class="w">  </span><span class="c1"># HOME储存home目录</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span><span class="w">  </span><span class="c1"># SHELL储存当前系统默认的shell</span>
+</code></pre></div>
+本质上，输入程序名称，shell会遍历这些path然后找到名称与我输入的命令相匹配的那个</p>
+<div class="highlight"><pre><span></span><code>which<span class="w"> </span>&lt;程序名称&gt;
+<span class="c1"># 查看我输入这个程序名称后运行的是哪个程序</span>
+</code></pre></div>
+<h2 id="_1">简单文件操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>首先解释一下路径的概念：</p>
+<p>win: 由“\”开始(win的根目录为\)，且每个分区（驱动器）都有一个根目录("\"), 例如C:\</p>
+<p>linux/macos: 由“/”开始(其根目录为/),且所有都在一个根目录下</p>
+<p>绝对路径：能完全确定文件位置的完整路径</p>
+<p>相对路径：相当于你当前处于的路径来说</p>
+<p>例如，用cd改变路径就可以相对 or 绝对路径
+<img alt="alt text" src="../image-1.png" />
+<div class="highlight"><pre><span></span><code><span class="nb">pwd</span><span class="w"> </span><span class="c1"># 打印当前所处绝对路径</span>
+<span class="nb">cd</span><span class="w"> </span><span class="c1"># 改变路径</span>
+<span class="c1"># 几个特殊的目录：</span>
+.<span class="w"> </span>当前的目录
+..<span class="w"> </span>父目录
+..<span class="w"> </span><span class="c1"># 可回到父目录</span>
+../../<span class="w"> </span>or<span class="w"> </span>../..<span class="w"> </span><span class="c1"># 回到上上级目录，etc.</span>
+~<span class="w"> </span>代表home/ruizhe
+<span class="nb">cd</span><span class="w"> </span>-<span class="w"> </span><span class="c1"># 切换回上一次所在的目录</span>
+</code></pre></div>
+想要在任何目录下运行程序例如echo, 要么只给出程序名，要么给出绝对路径（相对路径不行）</p>
+<p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>&lt;目录名&gt;<span class="w"> </span><span class="c1"># 可以列出ls后面的参数（目录）下的文件</span>
+<span class="c1"># 例如：</span>
+ls<span class="w"> </span>..
+</code></pre></div>
+其他标志和选项：</p>
+<table>
+<thead>
+<tr>
+<th><strong>区别点</strong></th>
+<th><strong>标志（Flags）</strong></th>
+<th><strong>选项（Options）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>格式</strong></td>
+<td>通常是 <code>-f</code> 或 <code>--flag</code></td>
+<td>通常是 <code>-o value</code> 或 <code>--option=value</code></td>
+</tr>
+<tr>
+<td><strong>参数</strong></td>
+<td>通常不需要额外的值</td>
+<td>通常需要指定一个值</td>
+</tr>
+<tr>
+<td><strong>功能</strong></td>
+<td>控制简单开关功能</td>
+<td>提供更详细的设置</td>
+</tr>
+<tr>
+<td><strong>组合性</strong></td>
+<td>可以组合，例如 <code>-abc</code></td>
+<td>不能组合，需单独指定</td>
+</tr>
+</tbody>
+</table>
+<p>查看详细用法：
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>--help
+</code></pre></div>
+常用
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="c1"># 列出文件的详细信息</span>
+</code></pre></div></p>
+<details class="info">
+<summary>detailed info by ChatGPT</summary>
+<p>执行 <code>ls -l</code> 命令后，会以<strong>长格式</strong>列出目录或文件的详细信息。每一行代表一个文件或目录，输出内容分为以下几个字段（从左到右）：  </p>
+<p><strong>1. 文件类型与权限</strong>
+<div class="highlight"><pre><span></span><code>-rw-r--r--
+</code></pre></div>
+- 第一位：文件类型：
+- <code>-</code>：普通文件（regular file）
+- <code>d</code>：目录（directory）
+- <code>l</code>：符号链接（symbolic link）
+- <code>b</code>：块设备文件（block device）
+- <code>c</code>：字符设备文件（character device）
+- <code>p</code>：命名管道（pipe）
+- <code>s</code>：套接字（socket）</p>
+<ul>
+<li>接下来的9位：文件权限，分为三组，每组三位，分别表示<strong>所有者</strong>、<strong>所在组</strong>、<strong>其他用户</strong>的权限：</li>
+<li><strong>r</strong>（read）：可读</li>
+<li><strong>w</strong>（write）：可写</li>
+<li><strong>x</strong>（execute）：可执行</li>
+<li>如果没有权限，用 <code>-</code> 表示。</li>
+</ul>
+<p>对文件：r/w/x代表字面含义</p>
+<p>对文件夹：
+    r代表：可以查看该目录下的文件列表（是否被允许列出该文件夹的所有文件列表；
+    w代表：可以在该目录中重命名、创建、删除文件。如果对一个文件有w而对其目录没有w则不能删除文件（因为删除文件得需要对目录有w）；
+    x代表：有cd入该目录的权限，如果想对该目录下的文件进行r、w、x，必须得拥有该目录及其所有父目录的x权限。</p>
+<p><strong>示例</strong>：
+<div class="highlight"><pre><span></span><code>-rw-r--r--<span class="w">  </span><span class="c1"># 表示：普通文件，所有者有读写权限，组和其他用户仅有读权限。</span>
+drwxr-xr-x<span class="w">  </span><span class="c1"># 表示：目录，所有者有读、写、执行权限，组和其他用户有读和执行权限。</span>
+</code></pre></div></p>
+<hr />
+<p><strong>2. 链接数</strong>
+<div class="highlight"><pre><span></span><code><span class="m">2</span>
+</code></pre></div>
+- 表示硬链接的数量，即有多少路径指向该文件。
+- 对于目录，表示该目录中包含的子目录（包括 <code>.</code> 和 <code>..</code>）。</p>
+<hr />
+<p><strong>3. 所有者（User）</strong>
+<div class="highlight"><pre><span></span><code>user
+</code></pre></div>
+- 文件的所有者名称，表示谁创建或拥有该文件。</p>
+<hr />
+<p><strong>4. 所属组（Group）</strong>
+<div class="highlight"><pre><span></span><code>group
+</code></pre></div>
+- 文件所属的用户组，组内成员共享该文件的组权限。</p>
+<hr />
+<p><strong>5. 文件大小</strong>
+<div class="highlight"><pre><span></span><code><span class="m">4096</span>
+</code></pre></div>
+- 文件的大小（以字节为单位）。<br />
+- 对于目录，显示的是目录元数据占用的大小，而非其内容大小。<br />
+- 如果需要更直观的显示大小，可以使用 <code>-h</code>（human-readable）选项：<br />
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-lh
+</code></pre></div></p>
+<hr />
+<p><strong>6. 修改时间</strong>
+<div class="highlight"><pre><span></span><code><span class="m">2024</span>-11-18<span class="w"> </span><span class="m">10</span>:30
+</code></pre></div>
+- 文件最近的<strong>修改时间</strong>，格式是 <code>年月日 时:分</code>。<br />
+- 如果文件的修改时间超过半年，则显示年份而不是时间。  </p>
+<hr />
+<p><strong>7. 文件名</strong>
+<div class="highlight"><pre><span></span><code>example.txt
+</code></pre></div>
+- 文件或目录的名称。
+- 如果是符号链接，会显示指向的目标路径，例如：
+<div class="highlight"><pre><span></span><code>mylink<span class="w"> </span>-&gt;<span class="w"> </span>/path/to/target
+</code></pre></div></p>
+<hr />
+<p><strong>完整示例</strong>
+执行 <code>ls -l</code> 输出如下：
+<div class="highlight"><pre><span></span><code>-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>user<span class="w"> </span>group<span class="w">  </span><span class="m">1024</span><span class="w"> </span><span class="m">2024</span>-11-18<span class="w"> </span><span class="m">10</span>:30<span class="w"> </span>example.txt
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>user<span class="w"> </span>group<span class="w">  </span><span class="m">4096</span><span class="w"> </span><span class="m">2024</span>-11-18<span class="w"> </span><span class="m">10</span>:00<span class="w"> </span>my_directory
+</code></pre></div></p>
+<p><strong>逐字段解释</strong>：
+1. <code>-rw-r--r--</code>：普通文件，所有者有读写权限，组和其他用户仅有读权限。
+2. <code>drwxr-xr-x</code>：目录，所有者有读、写、执行权限，组和其他用户有读和执行权限。
+3. <code>1</code> 和 <code>2</code>：硬链接数量。
+4. <code>user</code>：所有者名称。
+5. <code>group</code>：所属组名称。
+6. <code>1024</code> 和 <code>4096</code>：文件或目录大小（字节数）。
+7. 时间：最后修改时间。
+8. <code>example.txt</code> 和 <code>my_directory</code>：文件名或目录名。</p>
+<hr />
+<p>常见扩展选项
+- <strong><code>-h</code></strong>：以易读格式显示文件大小。
+- <strong><code>-a</code></strong>：显示所有文件，包括隐藏文件（以 <code>.</code> 开头）。
+- <strong><code>-t</code></strong>：按修改时间排序。
+- <strong><code>-S</code></strong>：按文件大小排序。  </p>
+<p>综合使用这些选项可以更方便地查看文件信息。</p>
+</details>
+<p><div class="highlight"><pre><span></span><code>mv<span class="w"> </span>full_path/old_file_name<span class="w"> </span>full_/new_file_name<span class="w">  </span><span class="c1"># 重命名文件,这里可以是相对路径也可以是绝对路径,无法在一个目录下操作另一个目录下的文件所以要给出目录</span>
+
+mv<span class="w"> </span>file_name<span class="w"> </span>directory<span class="w">  </span><span class="c1"># 移动文件</span>
+
+cp<span class="w"> </span>full_path/file_name<span class="w"> </span>full_path<span class="o">(</span>new<span class="o">)</span>/file_name<span class="o">(</span>can_be_new<span class="o">)</span><span class="w"> </span><span class="c1"># 在full_path(new)中复制一份名为file_name(can_be_new)的文件，注意这里可以是相对路径也可以是绝对路径</span>
+
+rm<span class="w"> </span>dir/file_name<span class="w">  </span><span class="c1"># 也要提供文件路径（相对or绝对）</span>
+
+rm<span class="w"> </span>-r<span class="w">  </span><span class="c1"># 递归删除目录及其包含的所有文件</span>
+
+rmdir<span class="w">  </span><span class="c1"># 删除目录，但是只能删除空目录</span>
+
+mkdir<span class="w"> </span>
+
+cat
+</code></pre></div>
+查看具体：
+<div class="highlight"><pre><span></span><code>man<span class="w"> </span>&lt;程序名&gt;<span class="w">  </span><span class="c1"># 手册页</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Ctrl<span class="w"> </span>+<span class="w"> </span><span class="nv">L</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>clear
+</code></pre></div></p>
+<h2 id="_2">真正有用的文件操作 —— 流<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>流 —— shell真正的强大之处
+输入流：默认从键盘输入终端terminal的</p>
+<p>输出流：默认处输出到terminal</p>
+<h3 id="_3">重定向 <code>&gt;</code>, <code>&lt;</code>, <code>&gt;&gt;</code><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>重定向输入流输出流：
+<div class="highlight"><pre><span></span><code>&lt;<span class="w"> </span>full_path/file_name<span class="w">  </span><span class="c1"># 将前面程序的输入重定向到这个文件</span>
+&gt;<span class="w"> </span>full_path/file_name<span class="w">  </span><span class="c1"># 将前面程序的输出重定向到这个文件</span>
+
+<span class="c1"># for example，</span>
+
+<span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>&gt;<span class="w"> </span>hello.txt<span class="w">  </span><span class="c1"># 在当前目录下创建一个hello.txt并在其中写入hello world，如果原来有内容将会覆盖原来的。且这里可以两个单词之间用空格；</span>
+
+<span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>ohh<span class="w"> </span>&gt;&gt;<span class="w"> </span>hello.txt<span class="w">  </span><span class="c1"># 继续写入，不会覆盖原有的</span>
+
+cat<span class="w">  </span><span class="c1"># 可以将输入输出连在一起：默认情况下将输入内容复制到输出端</span>
+
+<span class="c1"># example：</span>
+cat<span class="w"> </span>&lt;<span class="w"> </span>hello.txt<span class="w">  </span><span class="c1"># shell会打开文件hello.txt，从其中读取输入，并将其设置为cat的命令，输出，默认道terminal</span>
+
+cat<span class="w"> </span>&lt;<span class="w"> </span>hello.txt<span class="w"> </span>&gt;<span class="w"> </span>hello2.txt<span class="w">  </span><span class="c1"># 其实是告诉shell使用hello.txt作为cat命令的输出，再将cat打印的内容写入hello2.txt</span>
+</code></pre></div></p>
+<h3 id="_4">管道 <code>|</code><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>作用：将左边程序的输出作为右边程序的输入</p>
+<p>注意：左右两个程序互相不知道，只是<code>|</code>将其输入输出连接</p>
+<div class="highlight"><pre><span></span><code>tail<span class="w"> </span>-nk<span class="w">  </span><span class="c1"># 最后k行（其中n为标志，k为你输入的一个常数代表最后k行</span>
+
+<span class="c1"># 等价于：</span>
+
+tail<span class="w"> </span>--line<span class="o">=</span>k
+</code></pre></div>
+<p>for example，
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n2<span class="w">  </span><span class="c1"># 将ls -l的输出即文件详细列表作为tail -n2的输入，用tail命令处理输入得到最后两行，由于没有重定向，则输出内容打印到terminal</span>
+
+ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n2<span class="w"> </span>&gt;<span class="w"> </span>ls.txt<span class="w">  </span><span class="c1"># 加了一个重定向，则输出内容打印到ls.txt</span>
+</code></pre></div>
+作用：文本处理，图像处理，数据流传数</p>
+<h1 id="root">root<a class="headerlink" href="#root" title="Permanent link">&para;</a></h1>
+<p>超级用户（可以做任何事情，访问任何文件）
+，像win的管理员用户</p>
+<p>一般不用</p>
+<p>使用：
+sudo（即do as su）以超级用户的身份执行操作</p>
+<p>语法：
+sudo + 程序名 + ……</p>
+<p>场景：
+sys文件夹：其实不是你计算机上的文件，里面是计算机的内核参数，由于是文件，所以可以用文件操作命令来访问他们；一般没有权限访问，访问需要sudo</p>
+<p>例如brightness调节</p>
+<p>可能的方案：
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="m">500</span><span class="w"> </span>&gt;<span class="w"> </span>brightness<span class="w">  </span><span class="c1"># permission denied</span>
+</code></pre></div>
+because 管道和重定向不是程序知道的，是shell知道的，而此时仍是run as ruizhe. </p>
+<p>即：shell以ruizhe身份想要打开brightness并将echo的500写入其中，这是没有权限的</p>
+<p>再例，<code>ls -l | tail -n2</code>, ls不知道tail，tail不知道ls。而是我告诉shell，shell进行/处理pipe &amp; redirection。</p>
+<p>解决方案1：
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su<span class="w">  </span><span class="c1"># 改变成：shell以root身份运行，而不是ruizhe</span>
+</code></pre></div>
+<code>$</code>代表以用户ruizhe访问文件</p>
+<p><code>#</code>代表以root访问文件
+<img alt="alt text" src="../image-2.png" /></p>
+<p>解决方案2：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="m">1060</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>brightness
+<span class="c1"># 含义：我告诉终端运行sudo 1060，然后告诉他运行sudo tee brightness(即run tee as root)，并让他将echo的输出发送到sudo tee；</span>
+<span class="c1"># tee命令：读取输入，将其输入到文件中，同时将他就输出到标准输出。</span>
+<span class="c1"># echo &lt;num&gt; | sudo tee &lt;file_name&gt;  or  echo &lt;sum&gt; &gt; file_name</span>
+</code></pre></div>
+<p>打开文件
+<div class="highlight"><pre><span></span><code>xdg-open<span class="w"> </span>&lt;file_name&gt;<span class="w">  </span><span class="c1"># 用特定软件打开文件，只用于linux</span>
+</code></pre></div></p>
+<h1 id="_5">工具和脚本<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">语法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>文件顶部写：<code>#!/usr/bin/zsh</code>指定解释器</p>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/zsh</span>
+
+<span class="c1"># 判断是否是素数的函数</span>
+is_prime<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">num</span><span class="o">=</span><span class="nv">$1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span>num<span class="w"> </span>&lt;<span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$num</span><span class="s2"> is not a prime number.&quot;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="c1"># 循环检查是否有其他因数</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span>*<span class="w"> </span>i<span class="w"> </span>&lt;<span class="o">=</span><span class="w"> </span>num<span class="p">;</span><span class="w"> </span>i++<span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span>num<span class="w"> </span>%<span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$num</span><span class="s2"> is not a prime number.&quot;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
+
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$num</span><span class="s2"> is a prime number.&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># 主程序</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Enter a number to check if it is prime:&quot;</span>
+<span class="nb">read</span><span class="w"> </span>number
+
+<span class="c1"># 调用函数进行判断</span>
+is_prime<span class="w"> </span><span class="nv">$number</span>
+</code></pre></div></p>
+<h3 id="_7">关键字<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>$0</code>: 当前正在执行的脚本的名称</p>
+<p>在交互式 Shell 中： $0 显示当前的 Shell 名称，比如 zsh、bash。</p>
+<p>在脚本中： $0 显示脚本名称或调用脚本时的路径。</p>
+<p>被别的脚本调用时： $0 的值会显示调用脚本时的路径。</p>
+</li>
+<li>
+<p><code>$1</code> ~ <code>$9</code>: shell 脚本接收的1~9第个参数：
+    <div class="highlight"><pre><span></span><code><span class="nv">name</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">channel</span><span class="o">=</span><span class="nv">$2</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hi </span><span class="nv">$name</span><span class="s2">, welcome to </span><span class="nv">$channel</span><span class="s2">&quot;</span>
+</code></pre></div>
+    strin: <code>zsh file_name zhangrz "Growing Cosmos"</code></p>
+<p>stdout: <code>hi zhangrz, welcome to Growing Cosmos</code></p>
+</li>
+<li>
+<p><code>$?</code>: 可以在脚本行中直接写，作用是获取上一个命令的错误代码</p>
+<div class="highlight"><pre><span></span><code><span class="nb">true</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">  </span><span class="c1"># stdout: 0</span>
+<span class="nb">false</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">  </span><span class="c1"># stdout: 1</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>$_</code>: 获取上一个命令的最后一个参数</p>
+</li>
+<li>
+<p><code>!!</code>: 被替换为上一次的命令</p>
+<p>用处：创建一个东西没有足够权限时
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>/mnt/new
+<span class="c1"># stdout: permission denied</span>
+sudo<span class="w"> </span>!!
+<span class="c1"># !!会被替换为 mkdir /mnt/new，就行了</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>$(command)</code> 将command命令的输出作为<strong>这个表达式的值</strong>
+    <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;we are in </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># stdout: we are in the_current_dir</span>
+<span class="c1"># 注意只有双引号括住才能将$(pwd)替换，单引号不行</span>
+</code></pre></div>
+进程替换</p>
+</li>
+<li>
+<p><code>command &lt;(command option) &lt;(command option)</code>: 内部执行前面的，将输出放到一个临时文件，在将文件的标识符提供给最左边的命令</p>
+<p>作用：用于命令不是从strin输入的，而是从文件中获取的，可以连接文件</p>
+<h3 id="_8">运算符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>逻辑运算符</p>
+</li>
+<li>
+<p>|| （逻辑或）： <code>命令1 || 命令2</code>，先执行命令1，若失败，则执行命令2；若命令1成功，则短路命令2。
+    ```shell
+    false || echo "hello"  # stdout: hello
+    true || echo "wont't be printed"  # stdout:   </p>
+</li>
+<li>&amp;&amp; (逻辑与)： <code>命令1 &amp;&amp; 命令2</code>，命令1错，不执行；命令1对，都会执行
+    <img alt="alt text" src="../image-8.png" />
+    <img alt="alt text" src="../image-9.png" /></li>
+</ul>
+</li>
+</ul>
+<p><strong>1. 控制流关键字</strong>
+用于条件判断、分支控制和循环的关键字。</p>
+<ul>
+<li><strong>条件判断相关</strong>：</li>
+<li><code>if</code>：条件判断语句的开始。<ul>
+<li>语法：例：<code>if [ $num -lt 2 ]</code></li>
+<li>要求：中括号中间前后都有空格</li>
+</ul>
+</li>
+<li><code>then</code>：与 <code>if</code> 配合，表示条件为真时执行。</li>
+<li><code>else</code>：与 <code>if</code> 配合，表示条件为假时执行。</li>
+<li><code>elif</code>：多个条件分支。</li>
+<li>
+<p><code>fi</code>：结束 <code>if</code> 条件块。</p>
+</li>
+<li>
+<p><strong>循环相关</strong>：</p>
+</li>
+<li><code>for</code>：循环语句，用于遍历。<ul>
+<li>语法：例</li>
+</ul>
+</li>
+<li><code>in</code>：与 <code>for</code> 配合，指定循环的列表。</li>
+<li><code>while</code>：循环语句，用于条件为真时执行。</li>
+<li><code>until</code>：循环语句，用于条件为假时执行。</li>
+<li><code>do</code>：循环体开始标记。</li>
+<li>
+<p><code>done</code>：结束循环体。</p>
+</li>
+<li>
+<p><strong>条件测试</strong>：</p>
+</li>
+<li><code>case</code>：多分支选择语句。</li>
+<li><code>esac</code>：结束 <code>case</code> 语句。</li>
+</ul>
+<hr />
+<p><strong>2. 函数定义关键字</strong>
+- <code>function</code>：用于定义函数（在某些 Shell 中可以省略）。
+- <code>{</code> 和 <code>}</code>：函数体的开始和结束标记。</p>
+<hr />
+<p><strong>3. 变量和环境相关关键字</strong>
+- <code>export</code>：将变量导出为环境变量。
+- <code>readonly</code>：声明变量为只读。
+- <code>declare</code>：声明变量（仅 Bash 支持）。
+- <code>local</code>：在函数内部声明局部变量。
+- <code>unset</code>：删除变量或函数。</p>
+<hr />
+<p><strong>4. 输入输出和错误处理关键字</strong>
+- <code>read</code>：从标准输入读取用户输入。
+- <code>echo</code>：向标准输出打印信息。
+- <code>return</code>：从函数中返回。
+- <code>exit</code>：退出当前 Shell 或脚本，并返回退出码。</p>
+<hr />
+<p><strong>5. 作业控制关键字</strong>
+- <code>wait</code>：等待后台任务完成。
+- <code>break</code>：跳出循环。
+- <code>continue</code>：跳过当前循环的剩余部分，继续下一次循环。
+- <code>trap</code>：捕获信号并执行指定命令。</p>
+<hr />
+<p><strong>6. Shell 特定的保留字</strong>
+这些是 Shell 的保留字，专用于特定语法功能：
+- <code>[[</code> 和 <code>]]</code>：扩展条件测试的关键字（Bash 特有）。
+- <code>!</code>：逻辑非，用于条件取反。
+- <code>.</code>（点命令）：执行脚本文件的内容，相当于 <code>source</code>。
+- <code>:</code>：空操作，始终返回成功。
+- <code>set</code>：设置 Shell 的行为选项。
+- <code>shift</code>：操作脚本中的位置参数。
+- <code>eval</code>：将参数作为命令执行。
+- <code>exec</code>：替换当前 Shell 的执行内容。</p>
+<hr />
+<p><strong>7. 异常处理关键字</strong>
+- <code>try</code>/<code>catch</code>：在某些扩展中支持异常处理（例如 Zsh）。
+- <code>||</code> 和 <code>&amp;&amp;</code>：逻辑短路操作，用于执行条件命令链。</p>
+<hr />
+<p><strong>8. 其他关键字</strong>
+- <code>select</code>：用于生成菜单选项的关键字。
+- <code>time</code>：测量命令执行时间。</p>
+<hr />
+<p><strong>注意</strong>
+- <strong>Zsh 与 Bash 的差异</strong>：
+  Zsh 和 Bash 的关键字几乎一致，但 Zsh 支持一些额外的扩展（如异常处理相关的 <code>try</code>/<code>catch</code>）。
+- <strong>查看关键字的方法</strong>：
+  在 Bash 或 Zsh 中可以用以下命令列出所有保留关键字：
+  <div class="highlight"><pre><span></span><code><span class="nb">help</span>
+</code></pre></div>
+  或者：
+  <div class="highlight"><pre><span></span><code><span class="nb">compgen</span><span class="w"> </span>-k<span class="w">  </span><span class="c1"># 列出所有关键字</span>
+</code></pre></div></p>
+<p><strong>1. 算术运算符</strong>
+Shell 默认不支持直接的算术运算，可以使用 <code>(( ))</code> 或 <code>$(( ))</code> 进行整数运算。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>加法</td>
+<td><code>echo $((5 + 3))</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>减法</td>
+<td><code>echo $((5 - 3))</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>乘法</td>
+<td><code>echo $((5 * 3))</code></td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>除法（整数）</td>
+<td><code>echo $((5 / 3))</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>取余</td>
+<td><code>echo $((5 % 3))</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>幂运算</td>
+<td><code>echo $((2 ** 3))</code></td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>2. 关系运算符</strong>
+用于比较两个值，通常和条件判断语句（<code>if</code>、<code>[[</code> 等）一起使用。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-eq</code></td>
+<td>是否等于（equal）</td>
+<td><code>[ 5 -eq 5 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>-ne</code></td>
+<td>是否不等于（not equal）</td>
+<td><code>[ 5 -ne 3 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>-gt</code></td>
+<td>是否大于（greater）</td>
+<td><code>[ 5 -gt 3 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>-lt</code></td>
+<td>是否小于（less）</td>
+<td><code>[ 5 -lt 3 ]</code></td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>-ge</code></td>
+<td>是否大于等于</td>
+<td><code>[ 5 -ge 5 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>-le</code></td>
+<td>是否小于等于</td>
+<td><code>[ 5 -le 5 ]</code></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>3. 字符串运算符</strong>
+用于操作和比较字符串。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>字符串是否相等</td>
+<td><code>[ "abc" = "abc" ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>字符串是否不相等</td>
+<td><code>[ "abc" != "def" ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>字符串比较，按字典顺序小于</td>
+<td><code>[ "abc" \&lt; "def" ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>字符串比较，按字典顺序大于</td>
+<td><code>[ "abc" \&gt; "def" ]</code></td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td>字符串是否为空（长度为 0）</td>
+<td><code>[ -z "" ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>字符串是否非空（长度大于 0）</td>
+<td><code>[ -n "abc" ]</code></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：<code>&lt;</code> 和 <code>&gt;</code> 需要转义，避免被 Shell 解释为重定向符号。</p>
+</blockquote>
+<hr />
+<p><strong>4. 逻辑运算符</strong>
+用于连接多个条件。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>逻辑与（and）</td>
+<td><code>[ 5 -gt 3 ] &amp;&amp; [ 3 -gt 1 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>逻辑或（or）</td>
+<td><code>[ 5 -lt 3 ] || [ 3 -gt 1 ]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>逻辑非（not）</td>
+<td><code>[ ! 5 -lt 3 ]</code></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>5. 文件测试运算符</strong>
+用于判断文件类型和属性。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-e</code></td>
+<td>文件是否存在</td>
+<td><code>[ -e file.txt ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>是否为普通文件</td>
+<td><code>[ -f file.txt ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>是否为目录</td>
+<td><code>[ -d /path/to/dir ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>文件是否可读</td>
+<td><code>[ -r file.txt ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td>文件是否可写</td>
+<td><code>[ -w file.txt ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>文件是否可执行</td>
+<td><code>[ -x file.sh ]</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>文件是否非空</td>
+<td><code>[ -s file.txt ]</code></td>
+<td>true/false</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>6. 条件测试扩展（<code>[[</code> 和 <code>]]</code>）</strong>
+<code>[[</code> 是 Shell 的扩展条件测试工具，比 <code>[</code> 更强大。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-eq</code></td>
+<td>等于</td>
+<td><code>[[ 5 -eq 5 ]]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>逻辑与</td>
+<td><code>[[ 5 -gt 3 &amp;&amp; 3 -gt 1 ]]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>逻辑或</td>
+<td><code>[[ 5 -lt 3 || 3 -gt 1 ]]</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>=~</code></td>
+<td>正则匹配</td>
+<td><code>[[ "abc" =~ ^a.* ]]</code></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>7. 位运算符</strong>
+适用于整数位操作，使用 <code>$(( ))</code>。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>按位与</td>
+<td><code>echo $((5 &amp; 3))</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>按位或</td>
+<td><code>echo $((5 | 3))</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>按位异或</td>
+<td><code>echo $((5 ^ 3))</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>按位取反</td>
+<td><code>echo $((~5))</code></td>
+<td>-6</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>左移</td>
+<td><code>echo $((5 &lt;&lt; 1))</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>右移</td>
+<td><code>echo $((5 &gt;&gt; 1))</code></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>8. 赋值运算符</strong>
+| 运算符 | 描述           | 示例                        | 结果         |
+|--------|----------------|-----------------------------|--------------|
+| <code>=</code>    | 简单赋值       | <code>a=5</code>                      | 设置 <code>a=5</code>   |
+| <code>+=</code>   | 加法赋值       | <code>a=$((a + 5))</code>             | 累加          |
+| <code>-=</code>   | 减法赋值       | <code>a=$((a - 5))</code>             | 减少          |</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>变量</strong></th>
+<th><strong>说明</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$0</code></td>
+<td>当前脚本的名称或命令的名称。</td>
+<td><code>./script.sh</code>（执行脚本时输出脚本名称）</td>
+</tr>
+<tr>
+<td><code>$1</code>, <code>$2</code>, ...</td>
+<td>脚本的第 1、2、... 个位置参数（即传递给脚本的参数）。</td>
+<td><code>./script.sh arg1 arg2</code>  =&gt; <code>$1</code>=arg1, <code>$2</code>=arg2</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>脚本或函数传递的参数个数（不包括脚本名称）。</td>
+<td><code>./script.sh arg1 arg2</code>  =&gt; <code>$#</code>=2</td>
+</tr>
+<tr>
+<td><code>$@</code></td>
+<td>所有位置参数，作为一个整体处理。通常在需要将所有参数传递给其他命令时使用。</td>
+<td><code>./script.sh arg1 arg2</code>  =&gt; <code>$@</code>="arg1 arg2"</td>
+</tr>
+<tr>
+<td><code>$*</code></td>
+<td>所有位置参数，作为一个整体处理，与 <code>$@</code> 类似，但处理方式不同，特别是在带引号时。</td>
+<td><code>./script.sh arg1 arg2</code>  =&gt; <code>$*</code>="arg1 arg2"</td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>当前脚本或命令的进程 ID（PID）。</td>
+<td><code>echo $$</code>（输出当前 Shell 的进程 ID）</td>
+</tr>
+<tr>
+<td><code>$!</code></td>
+<td>最近一次后台命令的进程 ID。</td>
+<td><code>sleep 10 &amp; echo $!</code>（输出 <code>sleep</code> 命令的进程 ID）</td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td>上一个命令的退出状态码。0 表示成功，非零表示失败。</td>
+<td><code>./script.sh</code>（执行后 <code>echo $?</code> 输出脚本的退出状态）</td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>代表or可代替上一个命令的最后一个参数</td>
+<td><code>cd ..</code> <code>cd $_</code>第二个命令即<code>cd ..</code></td>
+</tr>
+<tr>
+<td><code>$-</code></td>
+<td>当前 Shell 使用的选项。</td>
+<td><code>echo $-</code>（输出当前 Shell 启动时的选项，如 <code>-i</code> 表示交互模式）</td>
+</tr>
+<tr>
+<td><code>$HOME</code></td>
+<td>当前用户的 home 目录。</td>
+<td><code>echo $HOME</code>（输出当前用户的 home 目录）</td>
+</tr>
+<tr>
+<td><code>$PATH</code></td>
+<td>系统环境变量，列出用于查找可执行命令的路径。</td>
+<td><code>echo $PATH</code>（输出系统命令查找路径）</td>
+</tr>
+<tr>
+<td><code>$USER</code></td>
+<td>当前用户的用户名。</td>
+<td><code>echo $USER</code>（输出当前用户的用户名）</td>
+</tr>
+<tr>
+<td><code>$PWD</code></td>
+<td>当前工作目录。</td>
+<td><code>echo $PWD</code>（输出当前工作目录）</td>
+</tr>
+<tr>
+<td><code>$OLDPWD</code></td>
+<td>上一次工作目录（通过 <code>cd</code> 命令切换的目录）。</td>
+<td><code>cd /tmp; cd /; echo $OLDPWD</code>（输出上一次的工作目录）</td>
+</tr>
+<tr>
+<td><code>$IFS</code></td>
+<td>输入字段分隔符（Internal Field Separator），用来分隔命令的输入。默认值为空格、制表符和换行符。</td>
+<td><code>echo $IFS</code>（输出当前输入字段分隔符的值）</td>
+</tr>
+<tr>
+<td><code>$RANDOM</code></td>
+<td>返回一个介于 0 和 32767 之间的随机数。</td>
+<td><code>echo $RANDOM</code>（输出一个随机数）</td>
+</tr>
+<tr>
+<td><code>$SECONDS</code></td>
+<td>从脚本开始执行以来的秒数。</td>
+<td><code>echo $SECONDS</code>（输出脚本运行的秒数）</td>
+</tr>
+<tr>
+<td><code>$LINENO</code></td>
+<td>当前执行的代码行号。</td>
+<td><code>echo $LINENO</code>（输出当前行号）</td>
+</tr>
+<tr>
+<td><code>$FUNCNAME</code></td>
+<td>当前执行的函数名称。</td>
+<td><code>echo $FUNCNAME</code>（输出当前函数名）</td>
+</tr>
+<tr>
+<td><code>$BASH_VERSION</code></td>
+<td>如果使用 <code>bash</code>，则输出当前 <code>bash</code> 的版本。</td>
+<td><code>echo $BASH_VERSION</code>（输出 bash 版本信息）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明</strong></p>
+<ul>
+<li><strong>位置参数（$1, $2, ...）</strong>：是传递给脚本或函数的命令行参数。你可以在运行脚本时提供这些参数，并在脚本中访问它们。</li>
+<li><strong><code>$@</code> 和 <code>$*</code></strong>：它们都表示所有的位置参数，<code>$@</code> 会将每个参数作为单独的项处理，而 <code>$*</code> 会将所有参数合并成一个单一的字符串。它们在处理包含空格的参数时行为有所不同。</li>
+<li><strong><code>$$</code> 和 <code>$!</code></strong>：<code>$$</code> 是当前脚本或命令的进程 ID，而 <code>$!</code> 是最后一个后台命令的进程 ID。</li>
+<li><strong><code>$?</code></strong>：用于获取上一个命令的退出状态码，通常用于错误处理或判断某个命令是否成功执行。</li>
+<li><strong>环境变量</strong>：如 <code>$HOME</code>, <code>$USER</code>, <code>$PATH</code> 等，提供了系统的一些有用信息。</li>
+</ul>
+<hr />
+<h3 id="_9">变量定义<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>方法1：shell会话中定义（普通）</p>
+<p>注意！不能有空格！shell中空格是用来分隔参数的
+<img alt="alt text" src="../image-5.png" /></p>
+</li>
+<li>
+<p>方法2：shell会话中定义再在脚本文件中引用
+    示例：
+    <img alt="alt text" src="../image-7.png" />
+    注意加上<code>export</code>：将变量转换为环境变量，且该环境变量只在当前会话中有效，<code>exit</code>命令退出后该shell会话即失效</p>
+<p>使环境变量永久有效的方法：放到~/.zshrc中：</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>~/.zshrc
+<span class="nb">export</span><span class="w"> </span><span class="nv">variable_name</span><span class="o">=</span>value
+<span class="c1"># 之后，用这两个命令重新加载.zhrc使环境变量生效</span>
+..zshrc
+<span class="c1"># or</span>
+<span class="nb">exit</span>
+</code></pre></div>
+</li>
+<li>
+<p>方法3：脚本文件中直接定义
+变量默认是全局变量，如果需要在函数内部定义局部变量，则需要加上<code>local</code>关键字
+??? info "$的用法by ChatGPT</p>
+<p>在 <strong>Zsh</strong> 或其他大多数 Unix Shell 中，<code>$</code> 是用来<strong>引用变量</strong>的符号。它的作用是让 Shell 解析变量的值，而不是直接输出变量名本身。</p>
+<hr />
+<p><strong><code>$</code> 的作用</strong></p>
+<ol>
+<li><strong>引用变量值</strong></li>
+<li>
+<p>当一个变量被定义后，使用 <code>$</code> 可以获取它的值。
+    <div class="highlight"><pre><span></span><code><span class="nv">a</span><span class="o">=</span><span class="m">4</span><span class="w">         </span><span class="c1"># 定义变量 a 并赋值为 4</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$a</span><span class="w">     </span><span class="c1"># 输出变量 a 的值，结果是 4</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>与普通字符串的区别</strong></p>
+</li>
+<li><code>echo a</code> 会直接输出字母 <code>a</code>，因为没有 <code>$</code>，Shell 会将 <code>a</code> 视为普通文本。</li>
+<li>
+<p><code>echo $a</code> 则会输出变量 <code>a</code> 的值。如果 <code>a</code> 未定义，输出会是空白。</p>
+</li>
+<li>
+<p><strong>引用环境变量</strong></p>
+</li>
+<li>
+<p>Shell 中的环境变量也可以通过 <code>$</code> 引用，例如：
+    <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w">    </span><span class="c1"># 输出 PATH 环境变量的值</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span><span class="w">    </span><span class="c1"># 输出当前用户的主目录路径</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>特殊变量引用</strong></p>
+</li>
+<li><code>$</code> 还可以引用一些特殊的 Shell 变量，比如：
+    <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="w">       </span><span class="c1"># 当前 Shell 的进程 ID</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">       </span><span class="c1"># 上一个命令的返回值</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$#</span><span class="w">       </span><span class="c1"># 脚本中传递的参数数量</span>
+</code></pre></div></li>
+</ol>
+<hr />
+<p><strong>总结：<code>$</code> 是用来引用变量值的关键符号</strong></p>
+<ul>
+<li>
+<p>定义变量时不用加 <code>$</code>：
+<div class="highlight"><pre><span></span><code><span class="nv">a</span><span class="o">=</span><span class="m">4</span><span class="w">      </span><span class="c1"># 这里不能写成 $a=4</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>使用变量值时必须加 <code>$</code>：
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$a</span><span class="w">  </span><span class="c1"># 输出 4</span>
+</code></pre></div></p>
+</li>
+</ul>
+<p>如果 <code>$</code> 后面引用的变量未定义或为空，Shell 不会报错，但会返回空字符串。例如：
+<div class="highlight"><pre><span></span><code><span class="nb">unset</span><span class="w"> </span>a<span class="w">     </span><span class="c1"># 删除变量 a</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$a</span><span class="w">     </span><span class="c1"># 输出空</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="_10">字符串<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>有空格，需要引号括住，单引号双引号大多数情况是等效的</p>
+<p>不等效的情况：
+<div class="highlight"><pre><span></span><code><span class="nv">foo</span><span class="o">=</span>bar
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;value is $foo.&#39;</span><span class="w">  </span><span class="c1"># stdout: value is $foo.  单引号不会替换</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;value is </span><span class="nv">$foo</span><span class="s2">.&quot;</span><span class="w">  </span><span class="c1"># stdout: value is bar.  双引号会替换</span>
+</code></pre></div>
+shell写很简单，类似于python</p>
+<h3 id="_11">定义函数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>写入：
+- 方法1：直接在shell中写入语句，即可自动执行
+- 方法2(better)：创建.sh文件在其中写，再用<code>source file_name.sh</code>执行该文件, 再<code>函数名 实参</code>执行函数
+- 方法3：<code>chmod +x file_name.sh</code>以添加x权限
+- 方法4：<code>zsh file_name.sh</code></p>
+<details class="info">
+<summary>脚本的执行</summary>
+<p><code>source</code> 命令和给脚本文件添加执行权限 (<code>chmod +x</code>) 是两种完全不同的方式来运行脚本，它们的行为、作用范围、以及适用场景各有不同。以下是两者的详细比较以及使用建议：</p>
+<hr />
+<p><strong>1. <code>source</code> 命令</strong>
+<code>source</code> 是 Shell 内置命令，用来在当前 Shell 会话中执行脚本文件的内容，而不创建新的子进程。</p>
+<p><strong>特性</strong>
+- <strong>运行方式</strong>：在当前 Shell 会话中执行脚本。
+- <strong>变量作用域</strong>：脚本中的变量会直接影响当前 Shell 环境，例如修改环境变量、定义函数等。
+- <strong>用途</strong>：适合需要加载配置或临时修改当前 Shell 环境的场景。</p>
+<p><strong>典型用法</strong>
+1. <strong>加载配置文件</strong>：
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div>
+用于重新加载 <code>.zshrc</code> 配置，而无需关闭并重启 Shell。</p>
+<ol>
+<li>
+<p><strong>脚本中定义的函数或变量保留在当前环境</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># test.sh</span>
+<span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;Hello, World!&quot;</span>
+func<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Inside function&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+运行：
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>test.sh
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$VAR</span><span class="w">     </span><span class="c1"># 输出 &quot;Hello, World!&quot;</span>
+func<span class="w">          </span><span class="c1"># 调用函数，输出 &quot;Inside function&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>不需要执行权限</strong>：
+<code>source</code> 只需要读取权限 (<code>r</code>)，不需要添加执行权限。</p>
+</li>
+</ol>
+<p><strong>适用场景</strong>
+- 修改或加载当前 Shell 环境（如设置环境变量、别名、函数）。
+- 需要共享脚本中定义的变量、函数到当前 Shell 会话。</p>
+<hr />
+<p><strong>2. 添加执行权限并运行脚本 (<code>chmod +x</code>)</strong>
+通过 <code>chmod +x</code> 给脚本赋予执行权限，然后以 <code>./script.sh</code> 的形式运行。</p>
+<p><strong>特性</strong>
+- <strong>运行方式</strong>：创建一个新的子 Shell，会话独立。
+- <strong>变量作用域</strong>：脚本中的变量和当前 Shell 会话的变量隔离，执行完毕后变量不会影响当前环境。
+- <strong>用途</strong>：适合执行独立任务或脚本。</p>
+<p><strong>典型用法</strong>
+1. 给脚本添加执行权限：
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>script.sh
+./script.sh
+</code></pre></div>
+- 以新的子 Shell 运行脚本，变量和函数定义只在脚本内有效。</p>
+<ol>
+<li>
+<p><strong>指定解释器</strong>：
+脚本的第一行通常包含 Shebang (<code>#!</code>) 指定解释器，例如：
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello from Bash!&quot;</span>
+</code></pre></div>
+<strong>运行方式</strong>：
+<div class="highlight"><pre><span></span><code>./script.sh
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>需要执行权限</strong>：
+<code>chmod +x</code> 必须被赋予执行权限后，才能直接运行。</p>
+</li>
+</ol>
+<p><strong>适用场景</strong>
+- 独立运行脚本，不需要影响当前 Shell 环境。
+- 长时间运行或作为后台任务。
+- 分发或共享脚本供其他用户使用。</p>
+<hr />
+<p><strong>两者的主要区别</strong></p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th><code>source</code></th>
+<th><code>chmod +x</code> 和执行脚本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>作用范围</strong></td>
+<td>当前 Shell</td>
+<td>新的子 Shell</td>
+</tr>
+<tr>
+<td><strong>对环境的影响</strong></td>
+<td>修改当前 Shell 环境变量</td>
+<td>不影响当前 Shell 环境</td>
+</tr>
+<tr>
+<td><strong>执行权限需求</strong></td>
+<td>不需要</td>
+<td>需要添加执行权限</td>
+</tr>
+<tr>
+<td><strong>用途</strong></td>
+<td>加载配置文件或修改当前环境</td>
+<td>执行独立任务或作为可执行程序运行</td>
+</tr>
+<tr>
+<td><strong>Shebang 支持</strong></td>
+<td>忽略脚本中的 Shebang</td>
+<td>使用 Shebang 指定的解释器运行</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>使用建议</strong></p>
+<ul>
+<li><strong>使用 <code>source</code> 的场景</strong>：</li>
+<li>加载配置文件（如 <code>.zshrc</code>、<code>.bashrc</code> 等）。</li>
+<li>
+<p>定义全局函数或变量，直接影响当前 Shell 环境。</p>
+</li>
+<li>
+<p><strong>使用 <code>chmod +x</code> 并运行的场景</strong>：</p>
+</li>
+<li>编写独立脚本以完成某些任务，且脚本不需要修改当前 Shell 环境。</li>
+<li>分发脚本给其他用户，作为一个完整的工具运行。</li>
+</ul>
+<p>简单总结：
+- <strong>需要共享变量/函数到当前 Shell 会话</strong>：用 <code>source</code>。
+- <strong>脚本独立执行，不影响当前 Shell 环境</strong>：用 <code>chmod +x</code>。</p>
+<p>如果还有不清楚的地方，随时问我！ 😊</p>
+</details>
+<p>for example
+<img alt="alt text" src="../image-6.png" /></p>
+<h2 id="_12">其他<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><code>shuf -i m-n -n k</code>：在m-n中生成k个随机数</p>
+<p>注意：当想将一个命令的输出结果赋值给一个变量：需要命令替换语法，即反引号` `, 即`the command` or $+(), 即$(the command)。建议用$+()。</p>
+<h3 id="_13">查找<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>查找文件：<code>find</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查找指定文件名</td>
+<td><code>find /path -name "filename"</code></td>
+<td>查找指定目录下文件名为 <code>filename</code> 的文件</td>
+</tr>
+<tr>
+<td>查找指定后缀文件</td>
+<td><code>find /path -name "*.txt"</code></td>
+<td>查找目录下所有 <code>.txt</code> 文件</td>
+</tr>
+<tr>
+<td>按文件大小查找</td>
+<td><code>find /path -size +1M</code></td>
+<td>查找大于 1MB 的文件</td>
+</tr>
+<tr>
+<td>按修改时间查找</td>
+<td><code>find /path -mtime -7</code></td>
+<td>查找 7 天内修改过的文件</td>
+</tr>
+<tr>
+<td>按文件类型查找</td>
+<td><code>find /path -type d</code></td>
+<td>查找目录 (<code>d</code>) 或普通文件 (<code>f</code>)</td>
+</tr>
+<tr>
+<td>查找后执行操作</td>
+<td><code>find /path -name "*.log" -exec rm {} \;</code></td>
+<td>找到 <code>.log</code> 文件后删除它</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 在当前目录及子目录中查找所有包含 &quot;example&quot; 的文件</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*example*&quot;</span>
+
+<span class="c1"># 查找最近 3 天内创建的 .txt 文件</span>
+find<span class="w"> </span>/home/user<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-ctime<span class="w"> </span>-3
+
+<span class="c1"># 查找大于 10MB 的日志文件并删除</span>
+find<span class="w"> </span>/var/log<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-size<span class="w"> </span>+10M<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>查找内容：<code>grep</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单内容查找</td>
+<td><code>grep "pattern" file</code></td>
+<td>在文件中查找包含 <code>pattern</code> 的行</td>
+</tr>
+<tr>
+<td>递归查找</td>
+<td><code>grep -r "pattern" /path</code></td>
+<td>在目录及子目录中递归查找包含 <code>pattern</code> 的文件内容</td>
+</tr>
+<tr>
+<td>忽略大小写</td>
+<td><code>grep -i "pattern" file</code></td>
+<td>查找时忽略大小写</td>
+</tr>
+<tr>
+<td>显示行号</td>
+<td><code>grep -n "pattern" file</code></td>
+<td>输出匹配内容所在的行号</td>
+</tr>
+<tr>
+<td>显示上下文</td>
+<td><code>grep -C 2 "pattern" file</code></td>
+<td>显示匹配行以及上下 2 行</td>
+</tr>
+<tr>
+<td>使用正则表达式</td>
+<td><code>grep -E "pattern" file</code></td>
+<td>支持扩展正则表达式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 查找文件 &quot;log.txt&quot; 中包含字符串 &quot;ERROR&quot; 的行</span>
+grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>log.txt
+
+<span class="c1"># 忽略大小写查找并显示行号</span>
+grep<span class="w"> </span>-ni<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>log.txt
+
+<span class="c1"># 在目录 /var/log 下递归查找包含 &quot;fail&quot; 的所有文件</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;fail&quot;</span><span class="w"> </span>/var/log
+
+<span class="c1"># 查找带数字的行（正则匹配）</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]+&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>查找命令路径：<code>which</code> 和 <code>whereis</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查找命令的可执行路径</td>
+<td><code>which command</code></td>
+<td>输出命令的绝对路径</td>
+</tr>
+<tr>
+<td>查找命令的文件及手册路径</td>
+<td><code>whereis command</code></td>
+<td>显示命令的二进制、源文件和手册路径</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 查找 ls 命令的路径</span>
+which<span class="w"> </span>ls
+<span class="c1"># 输出：/bin/ls</span>
+
+<span class="c1"># 查找 git 命令的相关文件</span>
+whereis<span class="w"> </span>git
+<span class="c1"># 输出：git: /usr/bin/git /usr/share/doc/git</span>
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>查找网络相关内容：<code>netstat</code>, <code>lsof</code>, <code>ss</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查找端口占用</td>
+<td><code>netstat -tuln | grep "80"</code></td>
+<td>查找当前监听的 TCP/UDP 端口</td>
+</tr>
+<tr>
+<td>查找进程使用的网络连接</td>
+<td><code>lsof -i :port</code></td>
+<td>查看指定端口被哪个进程占用</td>
+</tr>
+<tr>
+<td>查看所有网络连接</td>
+<td><code>ss -tuln</code></td>
+<td>显示所有网络连接状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 查找 80 端口占用</span>
+netstat<span class="w"> </span>-tuln<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;:80&quot;</span>
+
+<span class="c1"># 查看哪个程序占用了 443 端口</span>
+sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:443
+
+<span class="c1"># 使用 ss 查看当前所有监听的网络端口</span>
+ss<span class="w"> </span>-tuln
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>查找磁盘空间：<code>du</code> 和 <code>df</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看文件/目录大小</td>
+<td><code>du -sh /path</code></td>
+<td>查看目录或文件的总大小</td>
+</tr>
+<tr>
+<td>查看磁盘使用情况</td>
+<td><code>df -h</code></td>
+<td>查看分区磁盘使用情况</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 查看 /home 目录的大小</span>
+du<span class="w"> </span>-sh<span class="w"> </span>/home
+
+<span class="c1"># 查看挂载点的磁盘使用情况</span>
+df<span class="w"> </span>-h
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>查找历史命令：<code>history</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查找执行过的命令</td>
+<td><code>history</code></td>
+<td>显示所有历史命令</td>
+</tr>
+<tr>
+<td>搜索指定的历史命令</td>
+<td><code>history | grep "pattern"</code></td>
+<td>按关键字搜索历史命令</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 查找最近执行过的包含 &quot;ls&quot; 的命令</span>
+<span class="nb">history</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ls&quot;</span>
+
+<span class="c1"># 清空历史命令</span>
+<span class="nb">history</span><span class="w"> </span>-c
+</code></pre></div></p>
+<hr />
+<ol>
+<li><strong>替换文件内容：<code>sed</code></strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>操作</strong></th>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>替换文件中匹配的内容</td>
+<td><code>sed 's/pattern/replacement/' file</code></td>
+<td>替换文件中的第一处匹配</td>
+</tr>
+<tr>
+<td>全局替换</td>
+<td><code>sed 's/pattern/replacement/g' file</code></td>
+<td>替换文件中所有匹配</td>
+</tr>
+<tr>
+<td>替换后保存至新文件</td>
+<td><code>sed 's/pattern/replacement/g' file &gt; new_file</code></td>
+<td>替换结果输出到新文件</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实例</strong>：
+<div class="highlight"><pre><span></span><code><span class="c1"># 将 file.txt 中所有 &quot;hello&quot; 替换为 &quot;world&quot;</span>
+sed<span class="w"> </span><span class="s1">&#39;s/hello/world/g&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># 替换后保存至新文件 output.txt</span>
+sed<span class="w"> </span><span class="s1">&#39;s/hello/world/g&#39;</span><span class="w"> </span>file.txt<span class="w"> </span>&gt;<span class="w"> </span>output.txt
+</code></pre></div></p>
+<hr />
+<h1 id="_14">杂项<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>WSL: Windows Subsystem for Linux，即 Windows 下的 Linux 子系统。</p>
+<table>
+<thead>
+<tr>
+<th><strong>方面</strong></th>
+<th><strong>Linux</strong></th>
+<th><strong>WSL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>底层架构</strong></td>
+<td>运行在 Linux 内核上，是一个独立的操作系统。</td>
+<td>运行在 Windows 内核上，基于翻译或虚拟化实现。</td>
+</tr>
+<tr>
+<td><strong>内核支持</strong></td>
+<td>使用真正的 Linux 内核。</td>
+<td>- WSL 1：无 Linux 内核，仅模拟系统调用。<br>- WSL 2：使用完整的 Linux 内核。</td>
+</tr>
+<tr>
+<td><strong>文件系统</strong></td>
+<td>默认使用 Linux 文件系统（如 ext4）。</td>
+<td>默认通过虚拟磁盘支持 ext4，同时可以访问 NTFS 文件。</td>
+</tr>
+<tr>
+<td><strong>硬件访问</strong></td>
+<td>直接访问硬件资源（如设备、网络）。</td>
+<td>通过 Windows 层间接访问硬件，限制对设备的直接控制。</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>直接运行在裸机上，性能最佳。</td>
+<td>WSL 1：性能有限，尤其是文件 I/O。<br>WSL 2：性能接近 Linux，但仍稍逊色于原生。</td>
+</tr>
+<tr>
+<td><strong>软件兼容性</strong></td>
+<td>完全支持 Linux 应用程序和工具。</td>
+<td>- WSL 1：部分应用不兼容，特别是需要完整内核功能的应用。<br>- WSL 2：大部分应用兼容。</td>
+</tr>
+<tr>
+<td><strong>GUI 支持</strong></td>
+<td>原生支持 GUI 应用程序（如 GNOME、KDE）。</td>
+<td>通过 WSLg 支持部分 Linux GUI 应用程序（仅 WSL 2）。</td>
+</tr>
+<tr>
+<td><strong>使用场景</strong></td>
+<td>专为服务器、桌面和嵌入式设备设计。</td>
+<td>适合开发者在 Windows 环境下运行 Linux 工具链。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Quoting
+<img alt="alt text" src="../image-3.png" />
+Actually, you can simply use escape character like this.
+<img alt="alt text" src="../image-4.png" /></p>
+</li>
+<li>
+<p>文件x权限相关</p>
+<details class="info">
+<summary>linux执行文件的命令</summary>
+<p>在 Linux 中，执行文件的命令取决于文件的类型（可执行文件、脚本等）和文件的权限设置。以下是几种常见的执行文件的方法：</p>
+<p><strong>1. 执行可执行文件</strong>
+对于已经编译好的二进制可执行文件，可以直接在终端中执行。假设文件是 <code>./program</code>，你可以使用以下命令：</p>
+<div class="highlight"><pre><span></span><code>./program
+</code></pre></div>
+<p><strong>注意事项：</strong>
+- 使用 <code>./</code> 表示当前目录。如果文件不在 <code>PATH</code> 环境变量指定的目录中，必须使用 <code>./</code> 指定当前目录。
+- 如果文件没有执行权限，系统会提示 <code>Permission denied</code> 错误。可以使用 <code>chmod</code> 添加执行权限：
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>program
+</code></pre></div></p>
+<p><strong>2. 执行脚本文件</strong>
+对于脚本文件（如 Shell 脚本、Python 脚本等），你也可以通过以下命令执行它们：</p>
+<p><strong>a. 执行 Bash 脚本</strong>
+假设脚本文件是 <code>./script.sh</code>，你可以使用以下命令：</p>
+<div class="highlight"><pre><span></span><code>./script.sh
+</code></pre></div>
+<p>如果没有执行权限，你可以使用 <code>chmod +x</code> 来添加执行权限：
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>script.sh
+</code></pre></div></p>
+<p><strong>b. 执行 Python 脚本</strong>
+对于 Python 脚本文件，你可以使用 Python 解释器来执行。例如，假设脚本是 <code>./script.py</code>：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>script.py
+</code></pre></div>
+<p>或者，如果脚本有执行权限，并且在第一行包含正确的 shebang（<code>#!/usr/bin/python</code>），你也可以直接运行：
+<div class="highlight"><pre><span></span><code>./script.py
+</code></pre></div></p>
+<p><strong>注意：</strong> 在运行 Python 脚本时，你可能需要指定 Python 版本，尤其是 Python 2 和 Python 3 之间的区别。例如：
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>script.py
+</code></pre></div></p>
+<p><strong>c. 执行其他类型的脚本</strong>
+对于其他类型的脚本（例如 Perl、Ruby 等），你可以指定相应的解释器运行它们：</p>
+<ul>
+<li>
+<p><strong>Perl 脚本</strong>：
+<div class="highlight"><pre><span></span><code>perl<span class="w"> </span>script.pl
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ruby 脚本</strong>：
+<div class="highlight"><pre><span></span><code>ruby<span class="w"> </span>script.rb
+</code></pre></div></p>
+</li>
+</ul>
+<p><strong>3. 使用 <code>sh</code> 或 <code>bash</code> 执行脚本</strong>
+如果你不想直接运行脚本文件，也可以通过 <code>sh</code> 或 <code>bash</code> 来执行它。例如：</p>
+<div class="highlight"><pre><span></span><code>sh<span class="w"> </span>script.sh
+</code></pre></div>
+<p>或者：</p>
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>script.sh
+</code></pre></div>
+<p><strong>4. 执行已安装的程序（通过 PATH）</strong>
+如果文件已经安装并且位于环境变量 <code>$PATH</code> 中，你可以直接输入文件名来执行。例如，<code>ls</code>、<code>git</code> 等命令可以直接运行，因为它们在 <code>$PATH</code> 中。</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+ls<span class="w"> </span>-l
+</code></pre></div>
+<p><strong>总结</strong>
+- 对于可执行文件，使用 <code>./&lt;filename&gt;</code> 来执行（确保文件有执行权限）。
+- 对于脚本文件，确保文件有执行权限（<code>chmod +x &lt;script&gt;</code>），然后使用 <code>./script.sh</code> 或相关解释器（<code>python script.py</code>）来执行。
+- 如果文件在 <code>$PATH</code> 中，直接输入文件名即可执行。
+在 Linux 中，当你想要执行一个文件时，<code>./</code> 是用来指定当前目录的路径。通常，<code>./</code> 是必要的，因为当前目录（<code>.</code>）并不自动包含在环境变量 <code>$PATH</code> 中，<code>$PATH</code> 变量是告诉系统在哪些目录中查找可执行文件的。如果你直接输入文件名，Linux 会在 <code>$PATH</code> 中指定的目录中查找该命令，而不会自动查找当前目录。</p>
+<p><strong>1. <code>$PATH</code> 环境变量的作用</strong>
+<code>$PATH</code> 环境变量告诉 shell 在哪些目录中查找命令。通常，它包含一些系统目录（如 <code>/usr/bin</code>、<code>/bin</code>、<code>/usr/local/bin</code> 等），但是<strong>当前目录（<code>.</code>）并不包含在内</strong>。</p>
+<p>当你在终端中输入一个命令时，Shell 会按顺序在 <code>$PATH</code> 指定的目录中查找该命令。如果命令不在这些目录中，Shell 就不会执行它。</p>
+<p><strong>2. 为什么当前目录不在 <code>$PATH</code> 中</strong>
+将当前目录（<code>.</code>）加入到 <code>$PATH</code> 中存在一定的安全风险。假设当前目录在 <code>$PATH</code> 中，如果你在当前目录下无意中创建了一个与系统命令同名的文件（例如 <code>ls</code>），Shell 就可能会执行这个恶意文件，而不是系统中的 <code>ls</code> 命令。这可能导致系统安全问题。</p>
+<p><strong>3. 使用 <code>./</code> 明确指定当前目录</strong>
+为了防止误用，Linux 默认不将当前目录 (<code>.</code>) 包括在 <code>$PATH</code> 中。如果你希望执行当前目录下的文件，就需要通过 <code>./</code> 来明确指定当前目录。</p>
+<p>例如，如果当前目录中有一个名为 <code>program</code> 的可执行文件，运行时需要这样输入：</p>
+<div class="highlight"><pre><span></span><code>./program
+</code></pre></div>
+<p>这样，Shell 就知道你要执行的是当前目录下的 <code>program</code> 文件，而不是在 <code>$PATH</code> 中的任何其他程序。</p>
+<p><strong>4. 如果不加 <code>./</code> 会发生什么？</strong>
+如果你直接输入 <code>program</code>（没有加 <code>./</code>），Shell 会在 <code>$PATH</code> 中查找名为 <code>program</code> 的可执行文件。如果该文件不在 <code>$PATH</code> 中，Shell 会显示类似于以下的错误：</p>
+<div class="highlight"><pre><span></span><code>bash: program: command not found
+</code></pre></div>
+<p><strong>5. 安全性考虑</strong>
+如果允许直接执行当前目录下的文件（不加 <code>./</code>），可能会导致以下安全隐患：
+- 无意间执行恶意脚本或程序（例如，某些脚本或程序可能被误放入当前目录）。
+- 执行与系统命令同名的恶意文件（例如，如果某个文件叫 <code>ls</code>，你可能会执行错误的程序）。</p>
+<p><strong>6. 如何改变行为（不推荐）</strong>
+如果你非常确信自己不想经历 <code>./</code>，并且愿意承担风险，可以将当前目录添加到 <code>$PATH</code> 中。你可以在 <code>.bashrc</code> 或 <code>.zshrc</code> 等配置文件中添加以下行：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;.:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>这样，你的当前目录就会被包括在 <code>$PATH</code> 中，从而允许你直接执行当前目录下的文件。然而，这样做是不推荐的，尤其是在生产环境中，因为它会带来潜在的安全问题。</p>
+<hr />
+<p><strong>总结</strong>
+- <code>./</code> 是用来明确告诉 Shell 当前目录的路径，因为当前目录 (<code>.</code>) 默认不在 <code>$PATH</code> 中。
+- 这样做是出于安全考虑，防止你无意间执行当前目录下的恶意或不安全的文件。</p>
+</details>
+</li>
+<li>
+<p>.sh文件及其权限
+所有新创建的文件都默认只有rw权限，需要 <code>chmod +x file_name.sh</code>才可以<code>./file_name.h</code></p>
+</li>
+<li>
+<p>什么是脚本？</p>
+<details class="info">
+<summary>脚本script by ChatGPT</summary>
+<p><strong>脚本（Script）</strong> 是一种包含一系列命令的文件，这些命令按照一定的顺序执行。脚本通常是用来自动化任务的，通过运行脚本，可以省去手动输入一系列命令的麻烦。</p>
+<p>在 Linux 和类 Unix 系统中，脚本通常是用一些解释型语言编写的，比如 Shell（Bash）、Python、Perl 等。脚本文件通常是文本文件，包含了要执行的命令或指令。</p>
+<p>常见脚本类型：
+1. <strong>Shell 脚本（.sh）</strong>：
+- Shell 脚本是最常见的一种脚本，通常使用 Bash 或其他 shell（如 Zsh、Fish 等）来编写。Shell 脚本通常包含一系列 Shell 命令，可以自动化文件操作、系统管理、程序启动等任务。
+- 示例：
+    <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
+</code></pre></div></p>
+<ol>
+<li><strong>Python 脚本（.py）</strong>：</li>
+<li>Python 是一种广泛使用的编程语言，也可以编写脚本。Python 脚本通常用于更复杂的任务，比如处理数据、构建网络应用、操作文件等。</li>
+<li>
+<p>示例：
+    <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Perl 脚本（.pl）</strong>：</p>
+</li>
+<li>Perl 脚本常用于文本处理、报告生成、Web 开发等。</li>
+<li>
+<p>示例：
+    <div class="highlight"><pre><span></span><code><span class="k">print</span><span class="w"> </span><span class="s">&quot;Hello, World!\n&quot;</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ruby 脚本（.rb）</strong>：</p>
+</li>
+<li>Ruby 也是一种编程语言，可以用来编写脚本，通常用于 Web 开发和系统管理任务。</li>
+</ol>
+<p>脚本的用途：
+- <strong>自动化</strong>：你可以编写脚本来自动化重复的任务，如备份文件、系统监控、批量处理等。
+- <strong>简化操作</strong>：复杂的命令序列可以被写入脚本文件，通过一次执行来完成。
+- <strong>任务调度</strong>：脚本可以与任务调度工具（如 <code>cron</code>）结合使用，在预定的时间或周期性地执行某些任务。</p>
+<p>脚本的特点：
+1. <strong>可执行</strong>：脚本文件是可执行的，文件的执行通常需要先赋予执行权限（<code>chmod +x</code>）。
+2. <strong>解释执行</strong>：脚本是由解释器逐行执行的，而不是像编译程序那样先编译成机器码后执行。
+3. <strong>文本文件</strong>：脚本文件通常是纯文本文件，可以用文本编辑器（如 Vim、Nano、VSCode）进行编辑。</p>
+<p>如何运行脚本：
+- 在 Linux 上，你可以通过命令行运行 Shell 脚本：
+<div class="highlight"><pre><span></span><code>./script.sh
+</code></pre></div>
+或者：
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>script.sh
+</code></pre></div></p>
+<p>总之，脚本是用于自动化执行命令的文件，帮助简化系统操作、程序执行和任务调度等日常工作。</p>
+</details>
+</li>
+<li>
+<p>有关脚本的解释器</p>
+<details class="info">
+<summary>解释器 by ChatGPT</summary>
+<p><code>#!/usr/bin/</code> 中的 <code>#!</code> 是 <strong>shebang</strong>（也叫 <strong>hashbang</strong> 或 <strong>bang line</strong>）符号，它是用来告诉操作系统该脚本应该由哪个解释器来执行的特殊字符序列。<code>#!/usr/bin/</code> 后面的路径（如 <code>/usr/bin/python3</code>、<code>/bin/bash</code> 等）指定了该脚本应该使用的解释器。</p>
+<p><strong>详细解释：</strong></p>
+<ol>
+<li><strong><code>#!</code> 的含义：</strong></li>
+<li><code>#!</code> 是一种特殊的字符序列，它并不属于普通的注释语法，而是操作系统用来识别脚本类型的标记。</li>
+<li>在 Unix-like 系统（如 Linux 和 macOS）中，<code>#!</code> 是 <strong>shebang</strong>，表示该文件是一个脚本文件，后面跟着一个解释器的路径。</li>
+<li>
+<p>操作系统读取文件时，遇到 <code>#!</code> 会知道该文件应该用后面指定的程序（解释器）来执行，而不是依赖于当前的 shell 或其他默认设置。</p>
+</li>
+<li>
+<p><strong><code>/usr/bin/</code> 的含义：</strong></p>
+</li>
+<li><code>/usr/bin/</code> 是文件系统中的一个标准目录，通常包含了大多数用户可用的命令和可执行文件。它是 Linux 系统中存放系统二进制可执行文件的一个常见位置。</li>
+<li>
+<p>当你在 shebang 中看到 <code>/usr/bin/</code>，后面通常跟着解释器程序的名称，例如 <code>/usr/bin/python3</code> 或 <code>/usr/bin/bash</code>，表示该脚本应由 <code>/usr/bin/</code> 目录中的 Python 3 解释器或 Bash 解释器来执行。</p>
+</li>
+<li>
+<p><strong>完整的 shebang 示例：</strong></p>
+</li>
+<li>
+<p><strong>Python 脚本：</strong>
+    <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/python3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+    这个脚本告诉操作系统用 <code>/usr/bin/python3</code> 解释器来执行 Python 代码。当你运行脚本时，系统会自动调用 Python 3 解释器来执行脚本中的代码。</p>
+</li>
+<li>
+<p><strong>Bash 脚本：</strong>
+    <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
+</code></pre></div>
+    这个脚本告诉操作系统用 <code>/bin/bash</code> 解释器来执行 shell 脚本。</p>
+</li>
+<li>
+<p><strong>作用：</strong></p>
+</li>
+<li><strong>指定解释器：</strong> <code>#!</code> 后面的路径告诉操作系统使用哪个解释器来执行脚本。例如，<code>#!/usr/bin/python3</code> 会让系统使用 Python 3 来执行脚本；<code>#!/bin/bash</code> 会使用 Bash 解释器来执行 shell 脚本。</li>
+<li><strong>使脚本直接可执行：</strong> 当你在脚本的第一行使用 shebang 并给文件赋予执行权限后，你可以直接执行脚本，而不需要手动指定解释器。例如：
+    <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>myscript.py
+./myscript.py
+</code></pre></div>
+    如果没有 shebang 行，你就需要显式地使用解释器：
+    <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>myscript.py
+</code></pre></div></li>
+</ol>
+<p><strong>为什么使用 shebang？</strong>
+1. <strong>便捷性：</strong>
+使用 shebang 可以让你直接通过 <code>./script_name</code> 运行脚本，而无需指定解释器（例如 <code>python3 script.py</code> 或 <code>bash script.sh</code>）。</p>
+<ol>
+<li>
+<p><strong>兼容性：</strong>
+Shebang 允许脚本在不同的环境中正确运行，尤其是在不同系统上。例如，在某些系统中，<code>/usr/bin/python</code> 可能指向 Python 2，而 <code>/usr/bin/python3</code> 指向 Python 3。使用正确的 shebang 行确保脚本会使用正确的版本。</p>
+</li>
+<li>
+<p><strong>明确性：</strong>
+Shebang 使脚本文件变得自解释，即使不查看文件的内容，用户也可以知道该脚本需要哪个解释器。</p>
+</li>
+</ol>
+<p><strong>总结：</strong>
+- <strong><code>#!</code>（shebang）</strong>：这是一个特殊的标记，告诉操作系统用哪个解释器来执行脚本。
+- <strong><code>/usr/bin/</code></strong>：这是文件系统中常见的存放可执行文件的目录，通常是操作系统查找解释器的位置之一。
+- 在 shebang 后面指定的路径（如 <code>/usr/bin/python3</code> 或 <code>/bin/bash</code>）告诉操作系统该脚本由哪个解释器来运行，从而使得脚本更加灵活和自包含。</p>
+</details>
+</li>
+</ul>
+<p>words</p>
+<pre><code>argument: 参数
+variable: 变量
+prompt: 命令提示符
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 张瑞喆 All rights reserved.
+<a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/r-z-zhang-AI" target="_blank" rel="noopener" title="GitHub | r-z-zhang-AI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" >
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
