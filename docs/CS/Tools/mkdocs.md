@@ -84,3 +84,8 @@ Search for emojis
     [:octicons-arrow-right-24: CSS](#)
 
 </div>
+
+![Image title](https://dummyimage.com/600x400/){ width="300" }
+/// caption
+Image caption
+///

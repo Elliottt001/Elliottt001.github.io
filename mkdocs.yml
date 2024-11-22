@@ -241,7 +241,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences
-
+  # 图像处理
+  - pymdownx.blocks.caption
   # 内容选项卡
   - pymdownx.superfences
   - pymdownx.tabbed:
