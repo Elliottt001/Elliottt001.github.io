@@ -61,6 +61,7 @@ For it is unworthy of excellent men to lose hours like slaves in the labor of ca
 
 1. 
 $$\lim_{x \to 0} \frac{\sin x}{x} = 1$$ 
+
 （**说明**：仅当 $0/0$ 型时可用）
 
 2. 
@@ -76,30 +77,27 @@ $$\lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1$$
 
 **证明**： 
 
-$$\lim_{x \to 0} \ln(1 + x)^{\frac{1}{x}} = \ln e = 1$$  
+$\lim_{x \to 0} \ln(1 + x)^{\frac{1}{x}} = \ln e = 1$ 
 
 2. 
 $$\lim_{x \to 0} \frac{e^x - 1}{x} = 1$$ 
 
 **证明**：  
 
-令 $t = x$, 
-则
-
- $$\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{t} = 1$$
+令 $t = x$, 则 $\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{t} = 1$
 
 3. 
 $$\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a \quad (a > 0, a \neq 1)$$  
 
 **证明**： 
 
-$$
+$
 \lim_{x \to 0} \frac{a^x - 1}{x} 
 = \lim_{x \to 0} \frac{e^{x \ln a} - 1}{x} 
 = \ln a \cdot \lim_{x \to 0} \frac{e^{x \ln a} - 1}{x \ln a} 
 = \ln a \cdot 1 
 = \ln a
-$$
+$
 
 5. 
 $$\lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} = \alpha \quad (\alpha \in \mathbb{R})$$  
@@ -110,13 +108,13 @@ $$(1 + x)^α = 1 + αx$$
 
 **证明**：  
 
-$$
+$
 \lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} 
 = \lim_{x \to 0} \frac{e^{\alpha \ln(1+x)} - 1}{x} 
 = \alpha \cdot \lim_{x \to 0} \frac{\ln(1 + x)}{x} 
 = \alpha \cdot 1 
 = \alpha
-$$
+$
 
 ---
 
@@ -156,16 +154,16 @@ $$\lim_{x \to x_0} u(x)^{v(x)} = a^b$$
 
 **证明**：  
 
-$$
+$
 \lim_{x \to x_0} u(x)^{v(x)} = \lim_{x \to x_0} e^{v(x) \ln u(x)}  
 = e^{\lim_{x \to x_0} v(x) \ln u(x)}
-$$  
+$  
 
 又因 $\lim_{x \to x_0} v(x) \ln u(x) = b \ln a$，得  
 
-$$
+$
 \lim_{x \to x_0} u(x)^{v(x)} = e^{b \ln a} = a^b
-$$  
+$ 
 
 特别地：
 当 $u(x) \to 1, v(x) \to \infty$ 时，即$1^\infty$型
