@@ -227,6 +227,10 @@ $$
 
 ![导数公式](c57fcab62c01f1bfbfdce5de47785e4.jpg)
 
+<div style="text-align: center; font-size: 1.2em; color: red;">
+1 的导数是 0
+</div>
+
 ### 高阶导数
 
 

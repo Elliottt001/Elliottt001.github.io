@@ -236,6 +236,14 @@ A: 上大学事多……？
 总之，最后的最后，
 ![alt text](08ff952ec33633f5e43bb2b301923e6.jpg)
 
+2024.11.24 0:15
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[重拾旧文](我，落选了.md)，感慨颇多，犹有轻舟已过万重山之感。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 附注: 2024zju主修专业确认第一轮计院面试真题，供后人参考
