@@ -2849,7 +2849,7 @@ mkdir<span class="w"> </span><span class="s2">&quot;my photes&quot;</span><span 
 mkdir<span class="w"> </span>my<span class="w"> </span>photos<span class="w"> </span><span class="c1"># you might create 2 directory(my and photos)</span>
 <span class="c1"># 其中：echo and date and mkdir 是程序名称，后面的是参数，即这里shell执行的就是带参数的程序</span>
 &lt;div<span class="w"> </span><span class="nv">markdown</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="nv">style</span><span class="o">=</span><span class="s2">&quot;margin-top: -30px; font-size: 0.75em; opacity: 0.7;&quot;</span>&gt;
-:material-circle-edit-outline:<span class="w"> </span>约<span class="w"> </span><span class="m">9421</span><span class="w"> </span>个字<span class="w"> </span>:fontawesome-solid-code:<span class="w"> </span><span class="m">336</span><span class="w"> </span>行代码<span class="w"> </span>:material-image-multiple-outline:<span class="w"> </span><span class="m">10</span><span class="w"> </span>张图片<span class="w"> </span>:material-clock-time-two-outline:<span class="w"> </span>预计阅读时间<span class="w"> </span><span class="m">36</span><span class="w"> </span>分钟
+:material-circle-edit-outline:<span class="w"> </span>约<span class="w"> </span><span class="m">10025</span><span class="w"> </span>个字<span class="w"> </span>:fontawesome-solid-code:<span class="w"> </span><span class="m">346</span><span class="w"> </span>行代码<span class="w"> </span>:material-image-multiple-outline:<span class="w"> </span><span class="m">10</span><span class="w"> </span>张图片<span class="w"> </span>:material-clock-time-two-outline:<span class="w"> </span>预计阅读时间<span class="w"> </span><span class="m">38</span><span class="w"> </span>分钟
 &lt;/div&gt;
 </code></pre></div>
 <h2 id="enviroment-variable">enviroment variable<a class="headerlink" href="#enviroment-variable" title="Permanent link">&para;</a></h2>
@@ -3186,17 +3186,41 @@ sudo<span class="w"> </span>!!
 <li>
 <p><code>command &lt;(command option) &lt;(command option)</code>: 内部执行前面的，将输出放到一个临时文件，在将文件的标识符提供给最左边的命令</p>
 <p>作用：用于命令不是从strin输入的，而是从文件中获取的，可以连接文件</p>
+</li>
+</ul>
+<p>例如：</p>
+<p><code>diff &lt;(ls foo) &lt;(ls bar)</code>: 在两个ls的输出间比较
+- 类型转换convert
+<code>convert image.{png,jpg}</code>: 将png转换为jpg且保留更多图片参数</p>
+<ul>
+<li>扩展<code>{}</code>
+<code>touch project{1,2}/src/test/test{1,2,3}.py</code>: 创建了6个文件</li>
+</ul>
+<p><code>touch {foo,bar}/{a..j}</code>: 创建fooa到fooj和bara到barj</p>
+<ul>
+<li>
+<p>shebang: 告诉用什么解释器，如果不知道具体路径：<code>#!usr/bin/env python3</code> 调用env方法</p>
+</li>
+<li>
+<p>语法检查：<code>shellcheck file_name</code></p>
+</li>
+<li>
+<p>命令语法查询：</p>
+<ul>
+<li><code>man command_name</code>: 冗长</li>
+<li><code>tldr command_name</code>: 绝佳</li>
+</ul>
+</li>
+</ul>
 <h3 id="_8">运算符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>逻辑运算符</p>
-</li>
-<li>
-<p>|| （逻辑或）： <code>命令1 || 命令2</code>，先执行命令1，若失败，则执行命令2；若命令1成功，则短路命令2。
+<ul>
+<li>|| （逻辑或）： <code>命令1 || 命令2</code>，先执行命令1，若失败，则执行命令2；若命令1成功，则短路命令2。
     ```shell
     false || echo "hello"  # stdout: hello
-    true || echo "wont't be printed"  # stdout:   </p>
-</li>
+    true || echo "wont't be printed"  # stdout:   </li>
 <li>&amp;&amp; (逻辑与)： <code>命令1 &amp;&amp; 命令2</code>，命令1错，不执行；命令1对，都会执行
     <a class="glightbox" href="../image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-8.png" /></a>
     <a class="glightbox" href="../image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-9.png" /></a></li>
@@ -3988,9 +4012,11 @@ func<span class="w">          </span><span class="c1"># 调用函数，输出 &q
 <p><code>shuf -i m-n -n k</code>：在m-n中生成k个随机数</p>
 <p>注意：当想将一个命令的输出结果赋值给一个变量：需要命令替换语法，即反引号` `, 即`the command` or $+(), 即$(the command)。建议用$+()。</p>
 <h3 id="_13">查找<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<ol>
+<ul>
+<li>通配符* : 代替一段</li>
+<li>通配符? : 代替一个字符</li>
 <li><strong>查找文件：<code>find</code></strong></li>
-</ol>
+</ul>
 <table>
 <thead>
 <tr>
@@ -4041,6 +4067,10 @@ find<span class="w"> </span>/home/user<span class="w"> </span>-name<span class="
 
 <span class="c1"># 查找大于 10MB 的日志文件并删除</span>
 find<span class="w"> </span>/var/log<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-size<span class="w"> </span>+10M<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>AI<span class="w"> </span>-type<span class="w"> </span>d<span class="w">  </span><span class="c1"># 查找当前目录下名字是AI，类型是dir地文件夹：被查找对象可以不直接在.的子目录下，例如本次输出：./docs/CS/AI</span>
+
+<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s1">&#39;**/test/*.py&#39;</span><span class="w"> </span>-type<span class="w"> </span>f
 </code></pre></div></p>
 <hr />
 <ol>
@@ -4558,6 +4588,196 @@ Shebang 使脚本文件变得自解释，即使不查看文件的内容，用户
 </details>
 </li>
 </ul>
+<details class="info">
+<summary>正则表达式</summary>
+<p>正则表达式（Regular Expression）</p>
+<p><strong>正则表达式</strong>是一种文本模式匹配的工具，广泛用于字符串搜索、替换和验证操作。它由普通字符和特殊字符（称为元字符）组成，能够构建复杂的匹配规则。</p>
+<hr />
+<p>基础语法</p>
+<table>
+<thead>
+<tr>
+<th><strong>符号</strong></th>
+<th><strong>说明</strong></th>
+<th><strong>示例</strong></th>
+<th><strong>匹配结果</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>匹配任意单个字符（除换行符）</td>
+<td><code>a.b</code></td>
+<td>匹配 <code>a</code> 和 <code>b</code> 中间任意字符：<code>acb</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>匹配前一个字符 0 次或多次</td>
+<td><code>ab*</code></td>
+<td>匹配 <code>a</code>、<code>ab</code>、<code>abb</code> 等</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>匹配前一个字符 1 次或多次</td>
+<td><code>ab+</code></td>
+<td>匹配 <code>ab</code>、<code>abb</code> 等（不包括 <code>a</code>）</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>匹配前一个字符 0 次或 1 次</td>
+<td><code>ab?</code></td>
+<td>匹配 <code>a</code> 或 <code>ab</code></td>
+</tr>
+<tr>
+<td><code>{n}</code></td>
+<td>匹配前一个字符 n 次</td>
+<td><code>a{3}</code></td>
+<td>匹配 <code>aaa</code></td>
+</tr>
+<tr>
+<td><code>{n,}</code></td>
+<td>匹配前一个字符至少 n 次</td>
+<td><code>a{2,}</code></td>
+<td>匹配 <code>aa</code>、<code>aaa</code>、<code>aaaa</code> 等</td>
+</tr>
+<tr>
+<td><code>{n,m}</code></td>
+<td>匹配前一个字符 n 至 m 次</td>
+<td><code>a{2,4}</code></td>
+<td>匹配 <code>aa</code>、<code>aaa</code> 或 <code>aaaa</code></td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>逻辑“或”，匹配左右任意表达式</td>
+<td><code>a|b</code></td>
+<td>匹配 <code>a</code> 或 <code>b</code></td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>匹配方括号中任意字符</td>
+<td><code>[abc]</code></td>
+<td>匹配 <code>a</code>、<code>b</code> 或 <code>c</code></td>
+</tr>
+<tr>
+<td><code>[^]</code></td>
+<td>匹配不在方括号中的任意字符</td>
+<td><code>[^abc]</code></td>
+<td>匹配除 <code>a</code>、<code>b</code>、<code>c</code> 外的字符</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>分组，用于提取或组合子表达式</td>
+<td><code>(abc)+</code></td>
+<td>匹配 <code>abc</code>、<code>abcabc</code> 等</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>特殊字符</p>
+<table>
+<thead>
+<tr>
+<th><strong>字符</strong></th>
+<th><strong>含义</strong></th>
+<th><strong>示例</strong></th>
+<th><strong>匹配结果</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\d</code></td>
+<td>匹配任意数字（等价于 <code>[0-9]</code>）</td>
+<td><code>\d+</code></td>
+<td>匹配 <code>123</code>、<code>456</code> 等</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>匹配非数字字符（等价于 <code>[^0-9]</code>）</td>
+<td><code>\D+</code></td>
+<td>匹配 <code>abc</code>、<code>@#</code> 等</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>匹配任意单词字符（等价于 <code>[a-zA-Z0-9_]</code>）</td>
+<td><code>\w+</code></td>
+<td>匹配 <code>hello</code>、<code>123_abc</code> 等</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>匹配非单词字符（等价于 <code>[^a-zA-Z0-9_]</code>）</td>
+<td><code>\W+</code></td>
+<td>匹配 <code>#@!</code> 等</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>匹配空白字符（空格、制表符等）</td>
+<td><code>\s+</code></td>
+<td>匹配空格或换行</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>匹配非空白字符</td>
+<td><code>\S+</code></td>
+<td>匹配 <code>hello</code> 等</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>匹配行首</td>
+<td><code>^a</code></td>
+<td>匹配以 <code>a</code> 开头的字符串</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>匹配行尾</td>
+<td><code>b$</code></td>
+<td>匹配以 <code>b</code> 结尾的字符串</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>转义字符，用于转义特殊字符</td>
+<td><code>\.</code></td>
+<td>匹配 <code>.</code> 本身</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>常见示例</p>
+<ol>
+<li>
+<p><strong>匹配邮箱地址</strong>：
+<div class="highlight"><pre><span></span><code>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+</code></pre></div>
+匹配 <code>example@mail.com</code>。</p>
+</li>
+<li>
+<p><strong>匹配手机号码（以 1 开头的 11 位数字）</strong>：
+<div class="highlight"><pre><span></span><code>^1\d{10}$
+</code></pre></div>
+匹配 <code>13812345678</code>。</p>
+</li>
+<li>
+<p><strong>匹配 IP 地址</strong>：
+<div class="highlight"><pre><span></span><code>\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b
+</code></pre></div>
+匹配 <code>192.168.1.1</code>。</p>
+</li>
+<li>
+<p><strong>匹配日期（YYYY-MM-DD 格式）</strong>：
+<div class="highlight"><pre><span></span><code>\d{4}-\d{2}-\d{2}
+</code></pre></div>
+匹配 <code>2023-11-23</code>。</p>
+</li>
+</ol>
+<hr />
+<p>常用工具支持</p>
+<ul>
+<li><strong>命令行工具</strong>: <code>grep</code>, <code>sed</code>, <code>awk</code></li>
+<li><strong>编程语言</strong>: Python (<code>re</code> 模块), JavaScript (<code>RegExp</code> 对象), Java (<code>Pattern</code> 类)</li>
+<li><strong>在线测试工具</strong>: <a href="https://regex101.com">regex101</a></li>
+</ul>
+<hr />
+<p>正则表达式强大但复杂，可以从简单的规则开始尝试，逐步掌握更高级的用法！ 🚀</p>
+</details>
 <p>words</p>
 <pre><code>argument: 参数
 variable: 变量
@@ -4583,7 +4803,7 @@ prompt: 命令提示符
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2024</span>
   </span>
 
     
