@@ -14,11 +14,16 @@
 
 - 五人制足球场、乒乓球馆 & 球桌、篮球场……
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母校点点滴滴，均难以忘怀，遂作此文，聊以慰藉，也为五湖四海的附中er提供回忆的起点。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母校点滴，难以忘怀，遂作此文，聊以慰藉，也为五湖四海的附中人提供回忆的起点。
 
-## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 当时只道是寻常 </div>
+## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 当时只道是寻常 —— 391特辑</div>
 
----
+谨以此文，致同窗三年共同奋斗的391同胞们。
+
+重德博识，勤学向善，慎思审问，明辨笃行~
+
+三九一班，非同一般，一统江山，解放台湾！
+
 
 ### <div style="text-align: center; font-size: 1.2em; font-weight: bold;"> Chapter 1 &nbsp;&nbsp;那三天，那三年 </div>
 
@@ -289,7 +294,7 @@
 川普重返白宫，
 普京一统西欧，
 
-风景那边独好，
+风景哪边独好，
 还我中华神州。
 </div>
 
