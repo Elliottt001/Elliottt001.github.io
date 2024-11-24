@@ -240,12 +240,6 @@ A: 上大学事多……？
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[重拾旧文](我，落选了.md)，感慨颇多，犹有轻舟已过万重山之感。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
 附注: 2024zju主修专业确认第一轮计院面试真题，供后人参考
 
 ![alt text](image.png)
