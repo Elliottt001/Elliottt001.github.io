@@ -13,8 +13,9 @@ nav:
     - SDFZ:
       - 附中回忆录: ME/SDFZ/回首向来萧瑟处，归去，也无风雨也无晴.md
     - ZJU:
-      - Interviews: ME/ZJU/interviews.md
-      - Something: ME/ZJU/一些想学的东西.md
+      - 面试经历: 
+        - 专业确认: ME/ZJU/interview/interview for major.md
+        - 学生会: ME/ZJU/interview/interview for SU.md
   - 知识:
     - KNOWLEDGE/index.md
     - Note:
@@ -85,7 +86,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: 切换至深色模式
     # 夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -93,7 +94,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Switch to system preference
+        name: 切换至浅色模式
   font: False
   
   features:
