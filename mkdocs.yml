@@ -7,16 +7,15 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - Home: index.md
-  - Me:
+  - 主页: index.md
+  - 个人:
     - ME/index.md
     - SDFZ:
-      - 回忆录: ME/SDFZ/回忆录.md
       - 当时只道是寻常: ME/SDFZ/回首向来萧瑟处，归去，也无风雨也无晴.md
     - ZJU:
       - Interviews: ME/ZJU/interviews.md
       - Something: ME/ZJU/一些想学的东西.md
-  - Knowledge:
+  - 知识:
     - KNOWLEDGE/index.md
     - Note:
       - Calculus:
@@ -25,7 +24,7 @@ nav:
       - Linear Algebra:
         - Knowledge Frame: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
         - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
-  - Computer Science:
+  - 开发:
     - CS/index.md
     - Programming:
       - C:
