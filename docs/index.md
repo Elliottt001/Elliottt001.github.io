@@ -2,21 +2,29 @@
 
 <span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙</span> :star2: :star2: :star2:
 
-[Subscribe to my latest articles](#){ .md-button } &nbsp;:heart:
-## Things Inspired Me
-- *Life Philosophy*
-- *Learn in ZJU*
-- *Computer Science*
-- *Serendipity*
+你好！欢迎来到张瑞喆的个人网站(Growing Cosmos) https://r-z-zhang-ai.github.io/
+
+
+## 想分享的东西
+- 生活点滴
+- 个人笔记
+- 计算机科学
+- 日记随笔
+- 好文转载
 
 ---
 
-## Several Functions
-- Browse articles through topics and table of contents.
-    - Desktop version: Select the topic from the top tab, and choose the article from the left-hand table of contents.
-    - Mobile version: Tap the icon in the upper left corner to select topics and articles.
-- Search for articles using keywords.
-- Click the icon on the right bottom to go to my homepage in the corresponding software.
+## 如何使用该网站？
+- 通过主题和目录浏览文章。
+    - 电脑端：在上方标签栏选择主题，在左侧目录选择文章。
+    - 移动端：点击左上角图标选择主题和文章。
+- 通过上方搜索框搜索关键词查找文章及内容。
+- 点击文章内右侧目录查看相关内容。
+- 点击上方图标切换深色/浅色模式。
+- 点击右上角图标跳转至本网站的github仓库。
+- 点击右下角图标跳转至对应网站个人主页。
+
+
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
         data-repo-id="R_kgDONN6JTg"
