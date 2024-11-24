@@ -27,8 +27,6 @@ nav:
         - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
   - Computer Science:
     - CS/index.md
-    - Dalao:
-      - Resource: CS/Dalao/resource.md
     - Programming:
       - C:
         - Note: CS/Programming/C/C Note.md
