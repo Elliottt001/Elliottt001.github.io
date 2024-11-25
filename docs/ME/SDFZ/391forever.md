@@ -630,13 +630,14 @@ Then, it comes to the $3^{rd}$ group ~
 ## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 后记 </div>
 
 ### 编辑记录
-- 2024-11-23 凌晨4点~6点
-- 2024-11-23 晚上8点~9点
+- 2024-11-23 凌晨4点~早晨6点
+- 2024-11-23 晚上8点~晚上10点
 - 2024-11-26 晚上9点~凌晨3点
 
-- 其余就是随时对markdown源文件格式的修修补补，以调整出最佳的网页阅览效果。
+- 其余就是随时对markdown源文件格式的修修改改，以调整出最佳的网页阅览效果。
 
-天空不曾刘翔翅膀的痕迹，但我已飞过。
+### 我的青春，我的附中
+天空不曾留下翅膀的痕迹，但我已飞过。
 
 [附中回忆录](https://docs.qq.com/doc/DTFBnTlJHdEt5d01n?qqapp=docs&entry_scene=1007&adtag=s_wx_mini_docs_1089&applet_id=7772cca6-8eec-4367-8c89-06ccb6825584&utm_content=BcpM70WY%2Bwh9Tp3ZdE76BA%3D%3D&utm_source=cca48defc39a1f09)
 
