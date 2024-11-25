@@ -1,4 +1,4 @@
-## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 前言 </div>
+## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 前言 </div>
 
 >走进栋梁门，七彩喷泉七彩梦。
 登上展翅楼，科技文明伴征程~~~
@@ -16,7 +16,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母校点滴，难以忘怀，遂作此文，聊以慰藉，也为五湖四海的附中人提供回忆的起点。
 
-## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 当时只道是寻常 —— 391特辑</div>
+## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 当时只道是寻常 —— 391特辑</div>
 
 谨以此文，致同窗三年共同奋斗的391同胞们。
 
@@ -25,7 +25,7 @@
 三九一班，非同一般，一统江山，解放台湾！
 
 
-### <div style="text-align: center; font-size: 1.2em; font-weight: bold;"> Chapter 1 &nbsp;&nbsp;那三天，那三年 </div>
+### <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> Chapter 1 &nbsp;&nbsp;那三天，那三年 </div>
 
 ![alt text](image-8.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;众所周知，半夜是必须发疯的。
@@ -48,18 +48,18 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回去看看写的标题，insane，crazy，想想还是改成有关高中罢。还是图形化界面操作舒服不用看半天我的文章题目叫啥，不用`cd`半天（
 
-<div style=" font-size: 1.1em; font-weight: bold;">
+<div style=" font-size: 1.2em; font-weight: bold;">
 小记
 </div>
 
 - 不知为何，也许是出于某种仪式感，我刻意将所有数字都写成了汉字。
 - 想想，也应该闲一闲，也是时候回首我的附中，我的青春了。
 
-### <div style="text-align: center; font-size: 1.2em; font-weight: bold;"> Chapter 2 &nbsp;&nbsp;当时只道是寻常 </div>
+### <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> Chapter 2 &nbsp;&nbsp;当时只道是寻常 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;和$wxy$闲聊，发现我竟然还能背出生态位的概念……
 
-#### <div style=" font-size: 1.1em; font-weight: bold;"> 三组那些事 </div>
+#### <div style=" font-size: 1.2em; font-weight: bold;"> 三组那些事 </div>
 
 - 我们亲爱的考拉
     
@@ -214,7 +214,7 @@
 
 这如果是个论坛多好……
 
-#### <div style=" font-size: 1.1em; font-weight: bold;"> 亲爱的老师 </div>
+#### <div style=" font-size: 1.2em; font-weight: bold;"> 亲爱的老师 </div>
 
 - 杰森
     - 牛羊才成群结队，猛兽总是独行
@@ -273,9 +273,9 @@
     - 老师可是die将了啊
     - 高考she nie 
 
-#### <div style=" font-size: 1.1em; font-weight: bold;"> 零零碎碎 </div>
+#### <div style=" font-size: 1.2em; font-weight: bold;"> 零零碎碎 </div>
 
-##### 好好娱乐，天天娱乐
+##### <div style=" font-size: 1.1em; font-weight: bold;"> 好好娱乐，天天娱乐 </div>
 - 激战
     - 活动课前的自习课下课前永远有人出去上厕所
     - 和九一小学中间那个矮墙永远拦不住乒乓球们
@@ -303,7 +303,7 @@
     - 周(fen)末(bi)自(da)习(zhan)
     - 雨伞为盾，讲台为掩体
     - 以及，被门口的松鸡发现……
-#### <div style=" font-size: 1.1em; font-weight: bold;"> 一统江山的战士们 </div>
+#### <div style=" font-size: 1.2em; font-weight: bold;"> 一统江山的战士们 </div>
 
 - 伯曼
     - 入团第一介绍人
@@ -335,7 +335,7 @@
 
 ***未完待续~~~***
 
-#### <div style=" font-size: 1.1em; font-weight: bold;"> 同桌的你 </div>
+#### <div style=" font-size: 1.2em; font-weight: bold;"> 同桌的你 </div>
 
 就按时间顺序排了
 
@@ -386,7 +386,7 @@ Then, it comes to the $3^{rd}$ group ~
     2024年11月23日  作于求是园
 </div>
 
-## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 省府街1号的那些日子 </div>
+## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 省府街1号的那些日子 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附中三年，考试相伴。被写不完的作业围追堵截，被风雨无阻的大考小测折磨到麻木，被同窗耀眼的成绩压得抬不起头。
 
@@ -420,7 +420,7 @@ Then, it comes to the $3^{rd}$ group ~
 
 
 
-## <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> 后记 </div>
+## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 后记 </div>
 
 [附中回忆录](https://docs.qq.com/doc/DTFBnTlJHdEt5d01n?qqapp=docs&entry_scene=1007&adtag=s_wx_mini_docs_1089&applet_id=7772cca6-8eec-4367-8c89-06ccb6825584&utm_content=BcpM70WY%2Bwh9Tp3ZdE76BA%3D%3D&utm_source=cca48defc39a1f09)
 
