@@ -629,6 +629,11 @@ Then, it comes to the $3^{rd}$ group ~
 
 ## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 后记 </div>
 
+### 特别鸣谢
+- CC：提供杰森名言素材
+
+- 于博士：提供足球赛结束语文案
+
 ### 编辑记录
 - 2024-11-23 凌晨4点~早晨6点
 - 2024-11-23 晚上8点~晚上10点
