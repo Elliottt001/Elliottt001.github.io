@@ -824,6 +824,7 @@ $$
 	证明至多有多少个根
 		罗尔中值定理 + 反证法
 
+
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
         data-repo-id="R_kgDONN6JTg"

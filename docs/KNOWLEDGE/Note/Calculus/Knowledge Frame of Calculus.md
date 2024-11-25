@@ -231,6 +231,13 @@ $$
 1 的导数是 0
 </div>
 
+<div style="text-align: center; font-size: 1.2em; color: red;">
+
+$arctanx$  导数是 $\frac1{1+x^2}$ ，不是1 + $x^2$
+
+</div>
+
+
 ### 高阶导数
 
 
