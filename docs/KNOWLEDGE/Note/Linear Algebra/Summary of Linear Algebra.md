@@ -106,3 +106,19 @@ $AXB = C$ 求$X$
 	先用等价标准型证明对，再证一般情况（等价标准型的左P右Q）：利用其他矩阵知识（行列初等变换秩不变/乘可逆秩不变，）
 	例题
 		![[Pasted image 20241104083225.png]]
+
+<script src="https://giscus.app/client.js"
+        data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
+        data-repo-id="R_kgDONN6JTg"
+        data-category="General"
+        data-category-id="DIC_kwDONN6JTs4CkfL9"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

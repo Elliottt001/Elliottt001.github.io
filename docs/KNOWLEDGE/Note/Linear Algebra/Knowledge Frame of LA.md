@@ -172,3 +172,19 @@ Welcome to the world of Linear Algebra!
 	![[Pasted image 20241104174405.png]]![[Pasted image 20241104174923.png]]![[Pasted image 20241104175117.png]]
 	因为：原线性方程组的几个方程遗传到接长向量组中，原来的解出来0，则后来的方程组也得是0
 	逆否：原无关，截短无关
+
+<script src="https://giscus.app/client.js"
+        data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
+        data-repo-id="R_kgDONN6JTg"
+        data-category="General"
+        data-category-id="DIC_kwDONN6JTs4CkfL9"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
