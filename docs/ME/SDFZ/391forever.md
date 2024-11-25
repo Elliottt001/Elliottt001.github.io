@@ -183,6 +183,7 @@ lxx小朋友
     （但是好像拖了两周
 
 - “下周”
+    
     >“还有没有下周了”
 
 - 清澈
@@ -356,7 +357,7 @@ ball
 
 **第三幕**
 
-“这个B是最错的，我做的时候0dier1秒就把它排除了，卡是不敢选B啊。你看看，你meng在做，我也同时在做。这个A和C我纠结了1秒，最终还是选了A。明白mi？an？mi有？”
+“这个B是最错的，我做的时候0dier1秒就把它排除了，卡是不敢选B啊。你看看，你meng在做，我也同时在做。这个A和C我纠结了1秒，最终还是选了A。明白mi？an？mi有？高嘉伟，你明白mi有？Terry，你了？”
 
 “大张嘴，flongcy。你回去家哈，坐的ne马桶上也要大张嘴了。多维感官刺激，帮助你记忆。”
 
@@ -382,23 +383,24 @@ ball
 
 ##### <div style=" font-size: 1.3em; font-weight: bold;"> 考试似乎是避不开的主题…… </div>
 
-我怎么感觉杰森欠了很多次快板/口琴啊啊啊！
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我怎么感觉杰森欠了很多次快板/口琴啊啊啊！
 
-但是泡利欠了无数次跳舞是真的啊啊啊！
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是泡利欠了无数次跳舞是真的啊啊啊！
 
-为什么语文每次都是跌入谷底下次该触底反弹呢？
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么语文每次都是跌入谷底下次该触底反弹呢？
 
-为什么数学考试总会有无数被松鸡记在卷子上然后当堂被点起来分享粗心错误呢？
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么数学考试总会有无数被松鸡记在卷子上然后当堂被点起来分享粗心错误呢？
 
-为什么英语考试我冥思苦想无比纠结的题都只用“0dier1秒”呢？为什么我觉得无比正确的选项都是“最错的”呢？
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么英语考试我冥思苦想无比纠结的题都只用“0dier1秒”呢？为什么我觉得无比正确的选项都是“最错的”呢？
 
-为什么生物考试的长句表述总在小册子/书上我没看到的地方呢？
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么生物考试的长句表述总在小册子/书上我没看到的地方呢？
 
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 足球赛 </div>
 **第一幕**
 
 （球场外）（水泄不通）
+
 ——“来我喊391，你们喊加油”（琪姐体内永远蕴含无限的能量……
 
 ——“391！加油！391！加油”
@@ -407,7 +409,7 @@ ball
 
 ——“lmr最帅！”
 
-——“cyz黄金左脚！”
+——“cyz我男人！”
 
 ——“我爱xyh！”
 
@@ -421,13 +423,77 @@ ball
 
 （晚饭时间，比赛结束后）（教室中）
 
+黑板上，层层叠叠，填满文字……
 
+>欢迎我们的冠军
 
+>你们拼尽全力的样子真的很帅
+
+>我们的英雄
+
+>99&nbsp;&nbsp;10&nbsp;&nbsp;1&nbsp;&nbsp;4&nbsp;&nbsp;93&nbsp;&nbsp;8&nbsp;&nbsp;23
+
+>格局要大
+
+>Love you forever!
+
+>九一永远的神yyds
+
+>你们是391的骄傲
+
+>尽力一搏，无论胜负
+
+>绿茵草地上最帅的391
+
+……
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;紧锣密鼓，策划如何给我们的冠军接风洗尘。提前关灯，门口放风，准备歌曲。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当《平凡之路》响起，他们，已经泣不成声。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里，就借用于博士的puq文案做结
+
+>有时候就想，如果真的必须在赢球赛和满教室的歌声和满黑板的祝福中选一个，我宁愿选择后者。
 
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 艺术节 </div>
+!!! tip "艺术节"
 
+    === "《平凡之路》"
 
+        我曾经跨过山和大海
+
+        也穿过人山人海
+
+        我曾经拥有着的一切
+
+        转眼都飘散如烟
+
+        我曾经失落失望失掉所有方向
+
+        直到看见平凡才是唯一的答案
+
+    === "《大鱼》"
+
+        看海天一色 听风起雨落
+        
+        执子手吹散苍茫茫烟波
+        
+        大鱼的翅膀 已经太辽阔
+        
+        我松开时间的绳索
+        
+        怕你飞远去 怕你离我而去
+        
+        更怕你永远停留在这里
+        
+        每一滴泪水 都向你流淌去
+        
+        倒流进天空的海底
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大合唱、分声部训练、一对一教学，麦当劳化妆时仍在练声。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带到音乐教室但没来得及写的学案，自带幽默属性爱讲单口相声的老师，以及，与大佐的脑袋亲密接触的墙……
 
 #### <div style=" font-size: 1.2em; font-weight: bold;"> 一统江山的战士们 </div>
 
@@ -530,16 +596,17 @@ Then, it comes to the $3^{rd}$ group ~
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附中三年，考试相伴。被写不完的作业围追堵截，被风雨无阻的大考小测折磨到麻木，被同窗耀眼的成绩压得抬不起头。
 
-如我的一位初中&高中同学在《回忆录》中所写：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，正如一位同学在《附中回忆录》中所写：
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;苦中作乐的每一声大笑都是无比鲜活的。祝鲜活的我们都将获得曾经渴望的自由。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真正离开后，或许，我们的大脑自然而然地模糊了痛苦的感受，却让我深深记得那些短暂而美丽的瞬间。这些、抑或是，这些……
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真正离开后，或许，我们的大脑自然而然地模糊了痛苦的感受，却让我深深记得那些短暂而美丽的瞬间。这些，抑或是，这些……
 
 - 校服
 
     旧款秋季校服真是百搭！新款棉校服简直太帅！
 
-    穿校服混进学校谁没干过呢？
+    毕业以后穿校服混进学校谁没干过呢？
+
 - 考试
     
     210507…、
@@ -561,6 +628,15 @@ Then, it comes to the $3^{rd}$ group ~
 
 
 ## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 后记 </div>
+
+### 编辑记录
+- 2024-11-23 凌晨4点~6点
+- 2024-11-23 晚上8点~9点
+- 2024-11-26 晚上9点~凌晨3点
+
+- 其余就是随时对markdown源文件格式的修修补补，以调整出最佳的网页阅览效果。
+
+天空不曾刘翔翅膀的痕迹，但我已飞过。
 
 [附中回忆录](https://docs.qq.com/doc/DTFBnTlJHdEt5d01n?qqapp=docs&entry_scene=1007&adtag=s_wx_mini_docs_1089&applet_id=7772cca6-8eec-4367-8c89-06ccb6825584&utm_content=BcpM70WY%2Bwh9Tp3ZdE76BA%3D%3D&utm_source=cca48defc39a1f09)
 
