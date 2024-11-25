@@ -65,6 +65,8 @@ nav:
         - DoubanHot: CS/Project/Crawler/DoubanHotCode.md
       - game:
         - CS/Project/Game/SnakeCode.md
+  - 随笔:
+    - 202411: 202411.md
 
 
 # [UI]
