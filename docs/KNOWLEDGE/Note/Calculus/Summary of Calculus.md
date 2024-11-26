@@ -783,11 +783,20 @@ $$
 ![alt text](image-6.png)
 第一步是书上的例题
 
+![alt text](image-19.png)
+特殊点：a, b 一阶导已知：在a, b处展开；$\frac4{(a - b)^2}$, ：$\frac{(a - b)}2$: 中点处的函数值展
 开区间上连续函数不能推出有界，定理是闭区间上连续函数有界
 ![alt text](image-7.png)
 ![alt text](image-8.png)
 中点在端点处展开，端点在中点处展开
 ![alt text](image-9.png)
+![alt text](image-21.png)
+![alt text](image-20.png)
+
+![alt text](image-22.png)
+用〇阶、二阶讨论一阶，当然泰勒；问x，则x为特殊点，在这展开；展什么？端点；俩，消元
+
+
 ### 间接法求泰勒公式
 ![间接法求泰勒公式](image.png)
 ![间接法求泰勒公式](image-1.png)

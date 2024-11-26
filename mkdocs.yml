@@ -241,6 +241,8 @@ plugins:
   - changelog
   - minify:
       minify_html: true
+  # 双链
+  - mkdocs-backlinks
 
 markdown_extensions:
   - toc:
