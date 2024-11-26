@@ -517,11 +517,18 @@ ball
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 跑操 </div>
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;喊口号！先看杰森有没有跟着一起跑
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若有，喊前：反反复复说“喊一统江山啊”；喊时：老老实实1234；喊后：互相问“你咋不喊口号了”
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若无：“三九一班，非同一般，一统江山，解放台湾！”，继而是左右前后班级的掌声
+
 
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 晚饭 </div>
 
 **众生相**
+
 - 边走边吃（教室空地or教室门口）
 - 边对理综答案边吃
 - 倚在后排窗边，边思考人生边吃
