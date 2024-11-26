@@ -228,6 +228,19 @@ plugins:
   - search
   - git-revision-date-localized
 
+  - rss
+  - search
+  - git-revision-date-localized:
+        type: datetime
+        timezone: Asia/Shanghai
+        locale: zh
+        enable_creation_date: true
+        exclude:
+            - index.md
+            - writeups/AAA.md
+  - changelog
+  - minify:
+      minify_html: true
 
 markdown_extensions:
   - toc:
