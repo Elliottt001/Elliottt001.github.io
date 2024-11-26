@@ -23,6 +23,7 @@ nav:
       - Calculus:
         - Knowledge Frame: KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
         - Summary: KNOWLEDGE/Note/Calculus/Summary of Calculus.md
+        - Thought: KNOWLEDGE/Note/Calculus/thought for calculus.md
       - Linear Algebra:
         - Knowledge Frame: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
         - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
@@ -241,8 +242,8 @@ plugins:
   - changelog
   - minify:
       minify_html: true
-  # 双链
-  - mkdocs-backlinks
+  # # 双链
+  # - mkdocs-backlinks
 
 markdown_extensions:
   - toc:
