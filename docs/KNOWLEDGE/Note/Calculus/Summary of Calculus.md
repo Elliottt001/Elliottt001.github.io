@@ -818,7 +818,7 @@ $$
 
 <figure markdown="span">
 
-  ![alt text](image-29.png) { width="300" }
+  ![alt text](image-29.png)
 
   <figcaption>泰勒定理近似计算原理</figcaption>
 
