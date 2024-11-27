@@ -316,9 +316,13 @@ $
 ###### 条件
 3个
 1. $lim_{x \to x_0}f(x)$ = 0 or $\infty$, $lim_{x \to x_0}g(x)$ = 0 or $\infty$
+
 2. $x$属于$x_0$ 的某去心邻域内，f'(x), g'(x)都存在，g'(x) != 0
+
 3. $lim_{x \to {x_0}} \frac {f(x)} {g(x)}$ = A or $\infty$ 
+
 **三个条件逐一检查**，*都满足才可以用*
+
 ###### 证明
 
 ###### （一）数列
@@ -401,7 +405,7 @@ $lim_{x \to 0^+}{(\frac{1-cosx}{x^2})}^\frac1x$
 	因为用ln之后指数部分来到分母，极限不存在，不能用四则运算，则这里不能单独算
 
 	因此，都用e为底！
-	
+
 ![alt text](image-33.png)
 ![alt text](image-34.png)
 ![alt text](image-35.png)
@@ -531,7 +535,8 @@ t = 1/x 较常见
 	[[Summary Of Calculus#^e6c631|提出相同结构]]
 	
 #### 其他
-1. lim=a<b —> ε=(a-b)/2 ：取中点
+
+1. $lim=a<b$  $=>$ $ε=\frac{(a-b)}2$ ：取中点
 2. 善用max min函数取最大or最小
 3. 趋向无穷大：指数函数 > 幂函数 > 对数函数
 
