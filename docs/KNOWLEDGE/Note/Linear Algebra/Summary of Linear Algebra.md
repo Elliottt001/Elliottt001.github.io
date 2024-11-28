@@ -107,6 +107,23 @@ $AXB = C$ 求$X$
 	例题
 		![[Pasted image 20241104083225.png]]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
         data-repo-id="R_kgDONN6JTg"
