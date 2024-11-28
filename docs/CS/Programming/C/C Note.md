@@ -1737,24 +1737,24 @@ int*p, q;
 可以++，--，+=，-=：注意对应的表达式值&变量值
 
 !!! info
+   
+    ++i（表达式值+1） 大于 *，i++（表达式值不变） 等于 * 但从右向左结合：意味着俩都先于\*，那么\*其实是对表达式的值取\*
 
-   ++i（表达式值+1） 大于 *，i++（表达式值不变） 等于 * 但从右向左结合：意味着俩都先于\*，那么\*其实是对表达式的值取\*
+    例如
 
-   例如
-
-   ```c
-   int main()
-   {
-      int arr[5] = {1, 2, 3, 4, 5};
-      int* p = arr;
-      int* q = arr;
-      printf("*p++ : %d\n", *p++); //输出*p++ : 1
-      printf("p : %p\n", p); //输出p : 0x7ffd12243564
-      printf("*++q : %d\n", *++q); //输出*++q : 2
-      printf("q : %p\n", q); //输出q : 0x7ffd12243564
-      return 0;
-   }
-   ```
+    ```c
+    int main()
+    {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int* p = arr;
+    int* q = arr;
+    printf("*p++ : %d\n", *p++); //输出*p++ : 1
+    printf("p : %p\n", p); //输出p : 0x7ffd12243564
+    printf("*++q : %d\n", *++q); //输出*++q : 2
+    printf("q : %p\n", q); //输出q : 0x7ffd12243564
+    return 0;
+    }
+    ```
 
 
 
@@ -1773,53 +1773,52 @@ int*p, q;
 
 !!! info "经典交换"
 
-   === "1"
-
-      ```c
-      void swap1 (int x, int y)
-      {   
-         int t;
-         t = x; 
-         x = y; 
-         y = t;
-      }
-      ```
-
-   === "2"
-
-      ```c
-      void swap2 (int *px, int *py)
-      {    
-         int t;
-         t = *px; 
-         *px = *py; 
-         *py = t;
-      }
-      ```
-
-   === "3"
-
-      ```c
-      void swap3 (int *px, int *py)
-      {    
-         int *pt;
-         pt = px; 
-         px = py; 
-         py = pt;
-      }
-
-      ```
-
+    === "1"
+ 
+        ```c
+        void swap1 (int x, int y)
+        {   
+        int t;
+        t = x; 
+        x = y; 
+        y = t;
+        } 
+        ```
+ 
+    === "2"
+ 
+        ```c
+        void swap2 (int *px, int *py)
+        {    
+        int t;
+        t = *px; 
+        *px = *py; 
+        *py = t;
+        } 
+        ```
+ 
+    === "3"
+ 
+        ```c
+        void swap3 (int *px, int *py)
+        {    
+        int *pt;
+        pt = px; 
+        px = py; 
+        py = pt;
+        } 
+        ```
+ 
 不理解就记住只有第二个能成功
 
 
 ??? info "试图理解"
 
-   函数：仍然是参数的传递
+    函数：仍然是参数的传递
 
-   变量作参数：将那个变量的值给到函数的形参，而函数结束后，形参消失，原来的变量仍然是原来的值
+    变量作参数：将那个变量的值给到函数的形参，而函数结束后，形参消失，原来的变量仍然是原来的值
 
-   指针做参数：将那个变量的值给到函数的形参，这里，值是地址值，通过地址，可以在函数内部访问外面那个值
+    指针做参数：将那个变量的值给到函数的形参，这里，值是地址值，通过地址，可以在函数内部访问外面那个值
 
 
 ##### 函数多返回值 
@@ -1875,9 +1874,9 @@ int main()
 
 !!! success "牢记几句话"
 
-   “数组名是指向数组首元素的指针”
+    “数组名是指向数组首元素的指针”
 
-   “同类型指针直接加减是加一个sizeof，实现移位的功能”
+    “同类型指针直接加减是加一个sizeof，实现移位的功能”
 
 ##### 几组等价表示
 ```c
@@ -1968,11 +1967,11 @@ C89中：malloc函数：`#include<stdlib.h>`
 
 !!! info "malloc() & free()"
 	
-   函数原型：
+    函数原型：
 		
-   `void* malloc(size_t size);`
+    `void* malloc(size_t size);`
 		
-   `void free(void *ptr);`
+    `void free(void *ptr);`
 
 
 free() and malloc() is 绑定使用的
