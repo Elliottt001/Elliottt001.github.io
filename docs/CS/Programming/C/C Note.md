@@ -431,6 +431,148 @@ int main()
 	![[6db4cca54a511dbf742bdd7cf61ed65.jpg]]![[54e7a2f196162244e757db8e4419be3.jpg]]
 
 
+### 其他数据类型
+
+#### 枚举
+
+##### 定义&规则：
+
+```c
+enum 枚举名 {
+    枚举常量1,
+    枚举常量2,
+    ...
+};
+//带上分号
+```
+
+- C内部`enum`其实就是`int`，可以当作`int`做运算
+- **枚举名**：是枚举类型的名字（可选，因为一般不用）。
+- **枚举常量**：是一组合法的标识符，（必要，需要用）类型是`int`常量，默认从 `0` 开始依次递增。
+- 枚举中的常量必须唯一
+
+- **不能直接输入枚举常量的名字：**
+  枚举常量不能通过输入输出函数直接读写。例如，不能用 `scanf` 读取枚举类型，必须通过整数变量赋值。
+
+- **类型安全性：**
+  枚举变量的值可以超出定义的范围（尽管不推荐），因为底层实现是整数。例如：
+  ```c
+  enum Color { RED, GREEN, BLUE };
+
+  int main() {
+      enum Color myColor = 5; // 合法，但不推荐
+      printf("%d\n", myColor); // 输出 5
+      return 0;
+  }
+  ```
+
+
+##### 意义：
+
+命名的一组需要排列的整数常量，用于固定类别、状态和选项的表示。可读性，易于维护。
+
+
+##### 使用
+
+```c
+enum Color {
+    RED,    // 默认值为 0
+    GREEN,  // 默认值为 1
+    BLUE    // 默认值为 2
+};
+```
+
+这里定义了一个枚举类型 `Color`，它包含了三个枚举常量：`RED`、`GREEN` 和 `BLUE`。这些常量的默认值分别是 `0`、`1` 和 `2`。
+
+
+**为枚举常量指定值**
+
+可以显式为枚举常量指定值。如果未指定值，则该常量的值为前一个常量值加 `1`。
+
+```c
+enum Day {
+    MON = 1,  // MON 的值是 1
+    TUE,      // TUE 的值是 2
+    WED = 5,  // WED 的值是 5
+    THU,      // THU 的值是 6
+    FRI = 10, // FRI 的值是 10
+    SAT,      // SAT 的值是 11
+    SUN       // SUN 的值是 12
+};
+```
+
+###### 定义枚举变量
+
+
+```c
+enum Color { RED, GREEN, BLUE };
+
+int main() {
+    enum Color myColor; // 定义一个枚举变量
+    myColor = GREEN;    // 为变量初始化枚举常量
+    printf("myColor = %d\n", myColor); // 输出 1
+    scanf("%d", &myColor);  // 输入 5
+    printf("%d", myColor);  // 输出 5
+    printf("%d", GREEN); // 输出 1
+    return 0;
+}
+//GREEN的值不会变成5啊，因为枚举常量的值是固定的，且在编译时已经确定。赋值给枚举变量（如 myColor）时，只是改变了变量的值，不会修改枚举常量的值。
+```
+
+---
+
+###### 匿名枚举
+
+如果不需要多次引用枚举类型名称，可以省略枚举类型的名字，直接使用枚举常量。
+
+```c
+enum { MON, TUE, WED, THU, FRI, SAT, SUN };
+
+int main() {
+    int today = WED; // 直接使用枚举常量
+    printf("Today is day number: %d\n", today); // 输出 2
+    return 0;
+}
+```
+
+###### 计数
+
+
+
+##### 具体使用场景
+
+在底层，枚举类型的常量其实是整数（`int` 类型）。因此，枚举常量可以用于任何需要整数值的地方。
+
+```c
+enum Status { OFF, ON };
+
+int main() {
+    enum Status light = OFF;
+
+    if (light == OFF) {
+        printf("Light is off\n");
+    }
+    return 0;
+}
+```
+
+
+```c
+//状态开关机
+enum State { INIT, RUNNING, STOPPED };
+
+void checkState(enum State s) {
+    switch (s) {
+        case INIT:    printf("Initializing...\n"); break;
+        case RUNNING: printf("Running...\n"); break;
+        case STOPPED: printf("Stopped.\n"); break;
+        default:      printf("Unknown state!\n");
+    }
+}
+```
+
+
+
 ## 运算符和表达式
 定义：运算符 + 运算对象
 	运算符：具有运算功能的符号
@@ -1536,9 +1678,9 @@ stdlib.h 里面min max 为函数名，所以别用它当变量名
 
 # 指针
 ## 概念与定义
-- Whether %p and %l %x have the same size and form, it depend on the IDE(64bit or 32bit)
-- 取址符右边只能是变量`&(++i)`,`&(i + j)`均不合法
-- 数组
+
+**数组**
+
 ```c
 printf("%p", arr);
 printf("%p", &arr);
@@ -1560,6 +1702,14 @@ int*p, q;
 ```
 易错
 	其中，q只是普通int变量
+
+## 规则
+
+- 输出：得用%p，不能转换成整数再%x（16进制），因为这俩值一不一样取决于编译器、64or32位架构
+
+- 取址符右边只能是变量；`&(++i)`,`&(i + j)`均不合法
+
+
 
 ## 应用
 ### 指针与函数

@@ -202,6 +202,10 @@ Welcome to the world of Linear Algebra!
 
 **定义**：
 
+表示：$(\alpha_1\ \alpha_2\ \alpha_3\ \dots\alpha_s\ ) = (\beta_1\ \beta_2\ \beta_3\ \dots\beta_s\ ) M$
+
+等价：互相表示
+
 
 *线性表示核心逻辑：*
 
