@@ -31,12 +31,12 @@
 
 | 类别   | 名称             | 类型名                | 数据长度 | 取值范围                              | 格式说明符 |
 |--------|------------------|-----------------------|----------|---------------------------------------|------------|
-| 整型   | [有符号] 整型    | int                   | 32 位     | $-2^{31}$ ~ $2^{31}-1$               | %d         |
-|        | [有符号] 短整型  | short [int]          | 16 位     | $-2^{15}$ ~ $2^{15}-1$               | %hd        |
-|        | [有符号] 长整型  | long [int]           | 32 位     | $-2^{31}$ ~ $2^{31}-1$               | %ld        |
-|        | 无符号整型       | unsigned [int]       | 32 位     | $0$ ~ $2^{32}-1$                     | %u         |
-|        | 无符号短整型     | unsigned short [int] | 16 位     | $0$ ~ $2^{16}-1$                     | %hu        |
-|        | 无符号长整型     | unsigned long [int]  | 32 位     | $0$ ~ $2^{32}-1$                     | %lu        |
+| 整型   | \[有符号] 整型    | int                   | 32 位     | $-2^{31}$ ~ $2^{31}-1$               | %d         |
+|        | \[有符号] 短整型  | short \[int]          | 16 位     | $-2^{15}$ ~ $2^{15}-1$               | %hd        |
+|        | \[有符号] 长整型  | long \[int]           | 32 位     | $-2^{31}$ ~ $2^{31}-1$               | %ld        |
+|        | 无符号整型       | unsigned \[int]       | 32 位     | $0$ ~ $2^{32}-1$                     | %u         |
+|        | 无符号短整型     | unsigned short \[int] | 16 位     | $0$ ~ $2^{16}-1$                     | %hu        |
+|        | 无符号长整型     | unsigned long \[int]  | 32 位     | $0$ ~ $2^{32}-1$                     | %lu        |
 | 字符型 | 字符型           | char                 | 8 位      | $0$ ~ $255$                          | %c         |
 | 浮点型 | 单精度浮点型     | float                | 32 位     | 约 $10^{-38}$ ~ $10^{38}$            | %f         |
 |        | 双精度浮点型     | double               | 64 位     | 约 $10^{-308}$ ~ $10^{308}$          | %lf        |
@@ -248,7 +248,7 @@ fabs(f1 - f2) < 1e-12  //其实1e-8就够了
     printf("%c\n", '\x41'); //使用转义序列`\x`后跟十六进制的ASCII码值打印`A`（在支持C99标准或更高版本的编译器中）
     ```
     ```c
-    printf("%c\n", '\101'); //八进制的ASCII码
+    printf("%c\n", '\101'); //八进制的ASCII码, 注意有''单引号
     ```
 
 
@@ -710,61 +710,89 @@ void checkState(enum State s) {
 
 
 ## 循环和分支
+循环：
 
-循环：for while 
+- for 
+- while 
+- do while
+### 语法
+
+**`do while` 的语法**
+```c
+int main()
+{
+    do
+    {
+        /* code */
+    } while (/* condition */);
+}
+```
+很好用，意义是不管任何条件先做一次，适用于条件判断处有特殊情况时,。例如输入的数字是0，条件判断是 `>0` 
+
+
+**灵活：**
+
+- for内部：`(起始条件; 条件判断; 结束条件)`
+
+    - 内部三处均可按需省略，保留两个分号即可
+    - 不一定只能有一个变量
+    - 几个条件不一定必须是只含 `i` 的逻辑表达式
+
+
+### 示例
+
 写无限循环遇到某条件跳出：
 ```c
 for(i = 0; ; i++){
-if(/*条件*/) break;
-else /*代码块例如cnt++*/;
+    if(/*条件*/) break;
+    else /*代码块例如cnt++*/;
 }
 ```
 ```c
 while(1){
-/*代码块例如cnt++*/;
-if(/*条件*/) break;
+    /*代码块例如cnt++*/;
+    if(/*条件*/) break;
 }
 ```
-<details>
-<summary> hide </summary>
-1. **字符串拷贝**：`strcpy(s1, s2)` 将字符串 `s2` 拷贝到 `s1` 中。
-```c
-   char s1[20], s2[] = "Hello";
-   strcpy(s1, s2);
-```
 
 
-</details>
-# Chap 5_Function
+
+## 函数
 
 ### 定义、声明与调用
 #### 声明
 编译器一行一行编译，故调用之前应该让编译器知道函数的返回类型、参数、名称
-所以：定义放前面or定义放后面 + 前面声明
-最好用声明：一上来先看明白main函数干什么
-位置
-	书上：写在main里面
-	现在：写在main前面
-规范
-	定义声明一致
-		实际上，声明中可以只写变量类型，也可以变量名称和函数定义头部不一样。因为编译器检查只检查定义和声明变量类型是否一样
-#### 参数和值
-函数的参数
-	**核心：要在函数内部对主函数的变量进行操作，则必须得把主函数中的那个变量or其地址传入函数**
-形参实参
-	函数定义时头部的：形参
-	调用函数时传进来的参数：实参
-	PS：wk说就记住参数和值的关系：实参——参数；形参——值（参数的值）：就是传值
-定义与调用
-	定义时/调用时：函数名后面的( )必须有，不管有没有参数
 
-数组作为函数的参数
-	void func(int arr\[]) { }
-	void func(int arr\[a_certain_number]) { }
-	void func(int arr\[], int size) { }
-	void func(int \*arr) { }
-	void func(int \*arr, int size) { }
-	void func(void \*arr) {int \*intArr = (int \*)arr; //函数体内部进行类型转换 }
+**建议**：用声明：先读main函数干什么
+
+**位置**
+	
+- C89：写在main里面
+- C99：写在main前面
+
+**规则：** 定义声明一致
+
+实际上，声明中可以只写变量类型，变量名称也可以和函数定义头部不一样。因为编译器检查只检查定义和声明变量类型是否一样
+
+#### 参数和值
+
+**核心：**
+
+要在函数内部对主函数的变量进行操作，则必须得把主函数中的那个变量or其地址传入函数。
+
+**形参实参**
+
+- 参数 & 值：实参 —— 参数；形参 —— 值（参数的值）：就是传值
+
+**规则**
+
+- 调用时函数名称前面不用加返回值类型
+- 后面括号一定要有
+
+**数组作为函数的参数**
+```
+Ctrl F 指针与函数
+```
 
 #### 变量空间：
 每个函数都有他自己的变量空间；
@@ -1323,15 +1351,9 @@ int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
    ```
 
 5. **数组作为函数参数**：
-   在C99中，数组作为函数参数时，可以省略数组的大小，编译器会将其视为指针。例如：
-   ```c
-   void printArray(int arr[], int size) {
-       for (int i = 0; i < size; i++) {
-           printf("%d ", arr[i]);
-       }
-       printf("\n");
-   }
-   ```
+    ```
+    Ctrl F 指针与函数
+    ```
 
 6. **数组的内存对齐**：
    C99标准规定了数组元素的内存对齐规则，以提高内存访问的效率。
@@ -1844,9 +1866,121 @@ int*p, q;
 
 **数组作参数**
 
-函数定义：指针 例如 `*arr` or `arr[]`
+函数定义：
 
-函数调用：数组名 `arr` 
+- 常用：指针 例如 `*arr` or `arr[]`
+
+- !!! info "其他"
+
+    ```c
+    // 1. 不指定大小，单独传递数组名（等价于指针）
+    void func(int arr[]);
+
+    // 2. 带有形参大小的语义化声明（仅作提示，与1等价）
+    void func(int arr[length]);
+
+    // 3. 传递数组和大小（常用方式）
+    void func(int arr[], int size);
+
+    // 4. 使用指针的方式（与1等价）
+    void func(int *arr);
+
+    // 5. 传递指针和大小（常用方式，等价于3）
+    void func(int *arr, int size);
+
+    // 6. 使用通用指针（适合泛型处理）
+    void func(void *arr) {
+        int *intArr = (int *)arr; // 需要显式转换
+    }
+
+    // 7. 多维数组，必须指定列数（编译器需要推导数组布局）
+    void func(int arr[][N]);  // 适用于静态二维数组
+    void func(int arr[M][N]); // 如果固定行数，也可显式指定
+
+    // 8. 多维数组同时传递行数（灵活处理，但需要列数固定）
+    void func(int arr[][N], int rows);
+
+    // 9. 动态分配的二维数组（需传递指针数组）
+    void func(int **arr, int rows, int cols);
+
+    // 10. const修饰符，保护数组内容（适合只读操作）
+    void func(const int arr[], int size);
+    void func(const int *arr, int size);
+
+    // 11. restrict关键字（优化提示，避免指针别名）
+    void func(int *restrict arr, int size);
+
+    // 12. 使用stddef.h的size_t定义大小（推荐规范写法）
+    #include <stddef.h>
+    void func(int arr[], size_t size);
+    void func(int *arr, size_t size);
+
+    // 13. 使用指针加偏移处理子数组
+    void func(int *arr, int startIndex, int length);
+
+    // 14. 同时传递数组和数据类型信息（处理泛型或多类型场景）
+    void func(void *arr, size_t elementSize, size_t length);
+    ```
+
+
+函数调用：
+
+- 常用：数组名 `arr` 
+- !!! info "其他"
+
+    ```c
+    // 1. 直接传递数组名
+    int arr[10] = {0};
+    func(arr);  // 对应 void func(int arr[]); 或 void func(int *arr);
+
+    // 2. 带有大小参数
+    int arr[10] = {0};
+    func(arr, 10);  // 对应 void func(int arr[], int size); 或 void func(int *arr, int size);
+
+    // 3. 传递多维数组
+    int arr[3][4] = {{0}};
+    func(arr);          // 对应 void func(int arr[][4]); 或 void func(int arr[M][4]);
+    func(arr, 3);       // 对应 void func(int arr[][4], int rows);
+
+    // 4. 动态分配的一维数组
+    int *arr = malloc(10 * sizeof(int));
+    func(arr);          // 对应 void func(int *arr);
+    func(arr, 10);      // 对应 void func(int *arr, int size);
+
+    // 5. 动态分配的二维数组（指针数组）
+    int **arr = malloc(3 * sizeof(int *));
+    for (int i = 0; i < 3; i++) arr[i] = malloc(4 * sizeof(int));
+    func(arr, 3, 4);    // 对应 void func(int **arr, int rows, int cols);
+
+    // 6. 传递通用指针
+    void *arr = malloc(10 * sizeof(int));
+    func(arr);          // 对应 void func(void *arr);
+
+    // 7. 传递子数组（指针偏移）
+    int arr[10] = {0};
+    func(arr + 5, 5);   // 对应 void func(int *arr, int size); 或子数组操作
+
+    // 8. 常量数组传递
+    const int arr[10] = {0};
+    func(arr, 10);      // 对应 void func(const int arr[], int size);
+
+    // 9. 使用 restrict 修饰的数组
+    int arr[10] = {0};
+    func(arr, 10);      // 对应 void func(int *restrict arr, int size);
+
+    // 10. 传递多类型数据
+    double darr[10] = {0};
+    func((void *)darr, sizeof(double), 10);  // 对应 void func(void *arr, size_t elementSize, size_t length);
+
+    // 11. 多维数组的动态分配模拟
+    int *arr = malloc(3 * 4 * sizeof(int));
+    func(arr, 3, 4);    // 对应 void func(int *arr, int rows, int cols);
+
+    // 12. 直接传递字符数组（字符串）
+    char str[] = "hello";
+    func(str);          // 对应 void func(char arr[]); 或 void func(char *arr);
+
+    ```
 
 
 !!! info "经典交换"
