@@ -1872,55 +1872,63 @@ int*p, q;
 
 - !!! info "其他"
 
-    ```c
-    // 1. 不指定大小，单独传递数组名（等价于指针）
-    void func(int arr[]);
+      ```c
+      // 1. 不指定大小，单独传递数组名（等价于指针）
+      void func(int arr[]);
 
-    // 2. 带有形参大小的语义化声明（仅作提示，与1等价）
-    void func(int arr[length]);
+      // 2. 带有形参大小的语义化声明（仅作提示，与1等价）
+      void func(int arr[length]);
 
-    // 3. 传递数组和大小（常用方式）
-    void func(int arr[], int size);
+      // 3. 传递数组和大小（常用方式）
+      void func(int arr[], int size);
 
-    // 4. 使用指针的方式（与1等价）
-    void func(int *arr);
+      // 4. 使用指针的方式（与1等价）
+      void func(int *arr);
 
-    // 5. 传递指针和大小（常用方式，等价于3）
-    void func(int *arr, int size);
+      // 5. 传递指针和大小（常用方式，等价于3）
+      void func(int *arr, int size);
 
-    // 6. 使用通用指针（适合泛型处理）
-    void func(void *arr) {
-        int *intArr = (int *)arr; // 需要显式转换
-    }
+      // 6. 使用通用指针（适合泛型处理）
+      void func(void *arr) {
+          int *intArr = (int *)arr; // 需要显式转换
+      }
+      /*
+      1. 参数 void *arr 的含义
+      void * 是一种通用指针类型，表示它可以指向任意类型的数据（int、float、char 等）。
+      它不能直接用于解引用或进行算术运算，因为编译器不知道它指向的具体数据类型。
+      2. 显式类型转换 (int *)arr
+      int *intArr = (int *)arr; 将 void * 指针显式转换为 int * 指针。
+      这样，编译器就知道 intArr 指向的是一个 int 类型数据，允许后续进行解引用和算术运算。
+      */
 
-    // 7. 多维数组，必须指定列数（编译器需要推导数组布局）
-    void func(int arr[][N]);  // 适用于静态二维数组
-    void func(int arr[M][N]); // 如果固定行数，也可显式指定
+      // 7. 多维数组，必须指定列数（编译器需要推导数组布局）
+      void func(int arr[][N]);  // 适用于静态二维数组
+      void func(int arr[M][N]); // 如果固定行数，也可显式指定
 
-    // 8. 多维数组同时传递行数（灵活处理，但需要列数固定）
-    void func(int arr[][N], int rows);
+      // 8. 多维数组同时传递行数（灵活处理，但需要列数固定）
+      void func(int arr[][N], int rows);
 
-    // 9. 动态分配的二维数组（需传递指针数组）
-    void func(int **arr, int rows, int cols);
+      // 9. 动态分配的二维数组（需传递指针数组）
+      void func(int **arr, int rows, int cols);
 
-    // 10. const修饰符，保护数组内容（适合只读操作）
-    void func(const int arr[], int size);
-    void func(const int *arr, int size);
+      // 10. const修饰符，保护数组内容（适合只读操作）
+      void func(const int arr[], int size);
+      void func(const int *arr, int size);
 
-    // 11. restrict关键字（优化提示，避免指针别名）
-    void func(int *restrict arr, int size);
+      // 11. restrict关键字（优化提示，避免指针别名）
+      void func(int *restrict arr, int size);
 
-    // 12. 使用stddef.h的size_t定义大小（推荐规范写法）
-    #include <stddef.h>
-    void func(int arr[], size_t size);
-    void func(int *arr, size_t size);
+      // 12. 使用stddef.h的size_t定义大小（推荐规范写法）
+      #include <stddef.h>
+      void func(int arr[], size_t size);
+      void func(int *arr, size_t size);
 
-    // 13. 使用指针加偏移处理子数组
-    void func(int *arr, int startIndex, int length);
+      // 13. 使用指针加偏移处理子数组
+      void func(int *arr, int startIndex, int length);
 
-    // 14. 同时传递数组和数据类型信息（处理泛型或多类型场景）
-    void func(void *arr, size_t elementSize, size_t length);
-    ```
+      // 14. 同时传递数组和数据类型信息（处理泛型或多类型场景）
+      void func(void *arr, size_t elementSize, size_t length);
+      ```
 
 
 函数调用：
