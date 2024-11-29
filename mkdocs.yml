@@ -33,6 +33,7 @@ nav:
       - C:
         - Note: CS/Programming/C/C Note.md
         - Errors and Tips: CS/Programming/C/C Errors and Tips.md
+        - Questions: CS/Programming/C/C questions.md
       - Python:
         - Note: CS/Programming/Python/Python Note.md
       - Algorithm: CS/Programming/编程思想&算法.md
