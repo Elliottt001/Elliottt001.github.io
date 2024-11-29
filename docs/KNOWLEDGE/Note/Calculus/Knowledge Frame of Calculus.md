@@ -14,9 +14,11 @@ $$
 $$
 \sin^2\theta + \cos^2\theta = 1
 $$
+
 $$
 \sec^2\theta - \tan^2\theta = 1
 $$
+
 $$
 \csc^2\theta - \cot^2\theta = 1
 $$
@@ -495,7 +497,6 @@ $$
 $$
 \int \cos x \, dx = \sin x + C
 $$
- 
 $$
 \int \sin x \, dx = -\cos x + C
 $$
@@ -517,12 +518,9 @@ $$
 $$
 \int \sinh x \, dx = \cosh x + C
 $$
-
- 
 $$
 \int \cosh x \, dx = \sinh x + C
 $$
-
 $$
 \int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
 $$
