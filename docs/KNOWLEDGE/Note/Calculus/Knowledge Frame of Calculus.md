@@ -1,4 +1,29 @@
 Welcome to the world of Caculus!
+
+## 前置知识
+
+### 三角/反三角函数
+
+
+
+$$
+\sec\theta = \frac{1}{\cos\theta}, \quad \csc\theta = \frac{1}{\sin\theta},  \quad \cot\theta = \frac{1}{\tan\theta} 
+$$
+
+
+$$
+\sin^2\theta + \cos^2\theta = 1
+$$
+$$
+\sec^2\theta - \tan^2\theta = 1
+$$
+$$
+\csc^2\theta - \cot^2\theta = 1
+$$
+
+
+
+
 ## 极限
 <font color="#00b050">动态的，动态的语言刻画</font>
 
@@ -434,6 +459,104 @@ $$
 	![[Pasted image 20241105155156.png]]
 3. 
 	![[Pasted image 20241105155302.png]]
+
+
+## 不定积分
+
+### 基本积分表
+
+1. 常数函数积分  
+$$
+\int c \, dx = c x + C
+$$
+
+2. 幂函数积分  
+$$
+\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
+$$
+
+3. 指数函数积分  
+$$
+\int e^x \, dx = e^x + C
+$$
+$$
+\int a^x \, dx = \frac{a^x}{\ln a} + C \quad (a > 0, a \neq 1)
+$$
+
+4. 对数函数积分  
+$$
+\int \ln x \, dx = x \ln x - x + C
+$$
+
+5. 三角函数积分  
+$$
+\int \sin x \, dx = -\cos x + C
+$$
+$$
+\int \cos x \, dx = \sin x + C
+$$
+ 
+$$
+\int \sin x \, dx = -\cos x + C
+$$
+$$
+\int \cos x \, dx = \sin x + C
+$$
+$$
+\int \sec^2 x \, dx = \tan x + C
+$$
+$$
+\int \csc^2 x \, dx = -\cot x + C
+$$
+$$
+\int \sec x \tan x \, dx = \sec x + C
+$$
+$$
+\int \csc x \cot x \, dx = -\csc x + C
+$$
+$$
+\int \sinh x \, dx = \cosh x + C
+$$
+
+ 
+$$
+\int \cosh x \, dx = \sinh x + C
+$$
+
+$$
+\int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \cot x \, dx = \ln |\sin x| + C \quad (\sin x \neq 0)
+$$
+$$
+\int \sec x \, dx = \ln |\sec x + \tan x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \csc x \, dx = -\ln |\csc x + \cot x| + C \quad (\sin x \neq 0)
+$$
+
+6. 反三角函数积分  
+$$
+\int \frac{1}{\sqrt{1-x^2}} \, dx = \arcsin x + C     = -\arccos x + C \quad (|x| \leq 1)
+$$
+$$
+\int \frac{-1}{\sqrt{1-x^2}} \, dx = \arccos x + C \quad (|x| \leq 1)
+$$
+$$
+\int \frac{1}{1+x^2} \, dx = \arctan x + C= -arccot x + C
+$$
+$$
+\int \frac{-1}{1+x^2} \, dx = -\arctan x + C
+$$
+$$
+\int \frac{1}{x\sqrt{x^2-1}} \, dx = \text{arcsec } x + C \quad (|x| \geq 1)
+$$
+$$
+\int \frac{-1}{x\sqrt{x^2-1}} \, dx = -\text{arcsec } x + C \quad (|x| \geq 1)
+$$
+
+
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
