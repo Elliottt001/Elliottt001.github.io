@@ -784,11 +784,6 @@ while(1){
 
 - 参数 & 值：实参 —— 参数；形参 —— 值（参数的值）：就是传值
 
-**规则**
-
-- 调用时函数名称前面不用加返回值类型
-- 后面括号一定要有
-
 **数组作为函数的参数**
 ```
 Ctrl F 指针与函数
@@ -798,499 +793,994 @@ Ctrl F 指针与函数
 每个函数都有他自己的变量空间；
 离开一个函数f到另一个函数g里面，则会跳出f的变量空间，来到g的变量空间；
 在一个函数g里面对变量操作，不会影响f里面的变量，因为不在一个变量空间；
-见下视频
+
 #### 局部变量
-前置
-	生存期：变量多会出现，多会消亡
-	作用域：在代码的什么范围内可以访问这个变量（这个变量起作用）
+
+**前置**
+
+- 生存期：变量多会出现，多会消亡
+- 作用域：在代码的什么范围内可以访问这个变量（这个变量起作用）
+
+**定义**
+
 局部变量(\==本地变量、自动变量)
-	概念：每次函数运行，都产生一个独立的变量空间，这个空间中的变量是函数这次运行独有的
-	分类：定义在函数内部 + 参数
-	规则
-		定义在块内
-			函数的块内
-			语句的块内
-			甚至以单拉一个大括号定义变量
-		进入块，变量存在；离开块，变量消失（即生存期作用域都在大括号内，即“块”内）
-		内部的变量外部不可以访问，外部的变量内部可以访问
-		同名变量：
-			内外同名：内部掩盖外部的
-			内部同名：编译错误redefination
-		本地变量不会默认初始化，但是参数进入函数时已经被初始化（参数的传递）
-		![[55a7b8c90efe878d4ecf269b11cb28c.png]]
-		![[1ae63b1b822794349f18894e4a76d7fe.mp4]]
-	![[dba5e536d2c30866c045c8752b9a64a3.mp4]]![[c729e7b6dfd19a77f9625d1be1098c4a 1.mp4]]
+
+概念：
+
+每次函数运行，都产生一个独立的变量空间，这个空间中的变量是函数这次运行独有的
+
+分类：定义在函数内部的 & 参数
+
+规则：
+
+定义在块内，即一个大括号{ }，进入块，变量存在；离开块，变量消失
+- 函数的块内
+- 语句的块内
+- 甚至以单拉一个大括号定义变量
+
+内部的变量外部不可以访问，外部的变量内部可以访问
+
+同名变量：
+- 内外同名：内部掩盖外部的
+- 内部同名：编译错误redefination
+
+本地变量不会默认初始化，但是参数进入函数时已经被初始化（参数的传递）
+
 #### 调用函数
-传递的值（实参）：常量、变量、表达式（的值）
+
+传递的值（实参）：常量、变量、*表达式（的值）*
+
 类型不匹配：
-	会发生自动类型转换：即将传入的参数类型转换为定义中说的那个类型
-		PS:[[C Programming Note#^a5d957|复习一下类型转换]]
-	Java C++会严格检查类型的匹配
-传值
-	C语言调用函数，永远是传值给函数，跟变量名啥的没关系
-	即参数传递的单向性：实参的值传给形参，形参的值改变了，也不会影响实参
-	其实还是变量空间的问题
-	![[4e527204c0c01a9ff4e504ef279b0fa.jpg]]
+
+C：会发生自动类型转换：即将传入的参数类型转换为定义中说的那个类型。Java、C++会严格检查类型的匹配。
+
+传值：
+
+永远是传值给函数，即参数传递的单向性：实参的值传给形参，形参的值改变了，也不会影响实参。还是变量空间的问题，swap的例子。
+
 #### 返回值
-return的作用：
-	1. 结束执行函数，
-	2. 返回一个值，将这个值给到调用它的地方：*调用它的地方那里写的函数调用就是代表该函数的返回值*
-写法：
-	1. `return;`, 
-	2. `return 表达式;` ps：写法2就是表达式，单个变量也是表达式，就是将表达式的值传出去
-多出口与单一出口
-	函数里面可以多个return，也可以不在函数最后。
-	*单一出口理念*：最好函数只有一个出口即只有一个return。
-结果：
-	可以丢弃，要函数执行过程中的其他东西，丢弃返回值
-void无返回值
-	不能用带值的return，调用时不能做返回值的赋值
-	可以没有return
+
+**return作用：**
+
+1. 结束执行函数
+2. 返回一个值，将这个值给到调用它的地方：*调用它的地方那里写的函数调用就是代表该函数的返回值*。
+
+**规则：**
+
+1. `return;`, 
+2. `return 表达式;` 将表达式的值传出去
+3. 函数里面可以多个return，也可以不在函数最后。
+4. *单一出口理念*：最好函数只有一个出口即只有一个return。
+
+
 
 #### 杂项
 - 没有参数
-	f(void) : 不传参数
-	f( ) : 声明时别这样写
+	
+    `f(void)` : 不传参数，声明时写上void，别不写
+
 - 逗号运算符
-	f(a, b) : 逗号是标点符号不是运算符，这是传了俩参数
-	f((a, b)) : (a, b)是一个表达式，值是b，则这句代表传的是这个表达式的值：b（一个值）
+	
+    `f(a, b)` : 逗号是标点符号不是运算符，这是传了俩参数
+	
+    `f((a, b))` : `(a, b)`是一个表达式，值是b，则这句代表传的是这个表达式的值：b
 - 函数中不能定义函数，可以声明
 - 函数声明可以放在自己的定义里面
 - main函数
-	return 0; 有意义: 返回0：正确；返回非0：异常
-		win：P处理文件（执行程序 + `if errorlevel 1 ...`，BAT文件，
-		Unix bash : `echo $?`: 可查看main的返回值（return -1 ：看到的是255）
-<!-- 
+	
+    return 0；返回0：正确；返回非0：异常
+	
+    bash : `echo $?`: 可查看main运行结束的返回值（return -1 则 stdout：255）
+
 ## 标准库
 
+### stdio.h
 
-<details>
-<summary> 点击查看常见标准库中的常见函数</summary>
-C语言的标准库（Standard Library）是一组预定义的函数，它们提供了基本的输入输出、数学计算、字符串处理、内存分配、文件操作等功能。这些库函数使得程序员能够高效地实现常见的编程任务，而不需要从头开始编写代码。以下是一些主要的C语言标准库及其功能：
-
-1. **标准输入输出库（stdio.h）**：
-   - 提供了基本的输入输出功能，如 `printf()`、`scanf()`、`getchar()`、`putchar()`、`fgets()`、`fputs()` 等。
-
-2. **标准数学库（math.h）**：
-   - 提供了各种数学函数，如三角函数、指数函数、对数函数、幂函数等，例如 `sin()`、`cos()`、`log()`、`pow()`。
-
-3. **字符串处理库（string.h）**：
-   - 提供了字符串操作函数，如 `strcpy()`、`strcat()`、`strlen()`、`strcmp()`、`strchr()`、`strstr()` 等。
-
-4. **动态内存分配库（stdlib.h）**：
-   - 提供了动态内存分配和释放的函数，如 `malloc()`、`calloc()`、`realloc()`、`free()`，以及类型转换函数 `atoi()`、`atof()`、`atol()` 等。
-
-5. **字符处理库（ctype.h）**：
-   - 提供了字符分类和转换函数，如 `isalpha()`、`isdigit()`、`tolower()`、`toupper()` 等。
-
-6. **时间处理库（time.h）**：
-   - 提供了时间相关的函数，如 `time()`、`localtime()`、`gmtime()`、`strftime()` 等。
-
-7. **浮点数处理库（float.h）**：
-   - 定义了浮点数处理相关的常量和限制，如 `FLT_MAX`、`DBL_MAX`、`FLT_EPSILON` 等。
-
-8. **断言库（assert.h）**：
-   - 提供了 `assert()` 宏，用于调试时检查程序中的条件是否满足。
-
-9. **复杂数学库（complex.h）**：
-   - 提供了复数相关的数学函数。
-
-10. **信号处理库（signal.h）**：
-    - 提供了信号处理相关的函数，如 `signal()`、`raise()` 等。
-
-11. **本地化库（locale.h）**：
-    - 提供了本地化相关的函数，如 `setlocale()` 等。
-
-12. **宽字符库（wchar.h）**：
-    - 提供了宽字符和多字节字符之间的转换函数，如 `mbtowc()`、`wctomb()` 等。
-
-13. **错误处理库（errno.h）**：
-    - 定义了错误码，用于处理函数调用失败时的错误信息。
-
-14. **目录操作库（dirent.h）**：
-    - 提供了目录操作相关的函数，如 `opendir()`、`readdir()`、`closedir()` 等。
-
-15. **正则表达式库（regex.h）**：
-    - 提供了正则表达式相关的函数，如 `regcomp()`、`regexec()`、`regerror()`、`regfree()` 等。
-
-这些库函数是C语言编程的基础，它们帮助程序员处理各种常见的编程问题，提高编程效率。在使用这些库函数时，通常需要在程序的开头包含相应的头文件。
-</details>
-
-### include<stdio.h>
-
-<details>
-<summary>点击查看scanf( )函数的定义及用法 </summary>
-`scanf` 是 C 语言标准库中的一个函数，用于从标准输入（通常是键盘）读取格式化输入。它的原型定义在 `stdio.h` 头文件中，如下所示：
-
+**1. `printf`**  
+**功能**：格式化输出到标准输出（屏幕）。  
+**函数原型**：`int printf(const char *format, ...);`  
+**示例**：  
 ```c
-int scanf(const char *format, ...);
+printf("Hello, %s! You are %d years old.\n", "Alice", 25);
 ```
 
-`scanf` 函数的返回值是成功匹配并赋值的变量数量，如果遇到错误或读到文件末尾（EOF），则返回 EOF。
+---
 
-基本用法
-
-`scanf` 的第一个参数是一个格式字符串，它指定了输入的预期格式，后续参数是指向变量的指针，用于存储输入的值。
-
-1. 基本数据类型
-
-- `%d`：读取一个十进制整数，并将其存储在 `int` 类型的变量中。
-- `%ld`：读取一个十进制整数，并将其存储在 `long` 类型的变量中。
-- `%c`：读取一个字符，并将其存储在 `char` 类型的变量中。
-- `%s`：读取一个字符串，并将其存储在 `char` 类型的数组（字符串）中。
-- `%f`：读取一个浮点数，并将其存储在 `float` 类型的变量中。
-- `%lf`：读取一个浮点数，并将其存储在 `double` 类型的变量中。
-
-2. 空格和匹配
-
-- `scanf` 会跳过任何空白字符（空格、制表符、换行符）。
-- `%*d`：匹配一个整数，但不存储它。
-- `%*s`：匹配一个字符串，但不存储它。
-
-3. 字面量匹配
-
-- `%[abc]`：匹配任意字符集合中的字符。
-- `%[^abc]`：匹配不在字符集合中的字符。
-- `%[a-z]`：匹配任意小写字母。
-
-4. 精度指定
-
-- `%.2f`：读取浮点数时，只读取两位小数。
-
-5. 宽度指定
-
-- `%3d`：读取最多3位数的整数。
-- `%3s`：读取最多3个字符的字符串。
-
-注意事项
-
-1. **地址操作符**：`scanf` 需要变量的地址作为参数，因此使用 `&` 操作符。
-2. **字符串终止**：当使用 `%s` 读取字符串时，`scanf` 会在遇到空白字符时停止读取，并在字符串末尾自动添加 `\0`。
-3. **错误处理**：`scanf` 不会检查变量的大小，如果输入的数据超出变量的存储能力，可能会导致缓冲区溢出。
-4. **返回值**：`scanf` 返回成功赋值的变量数量，因此可以检查返回值以确认输入是否成功。
-5. **安全性**：由于 `scanf` 可能导致缓冲区溢出，建议使用 `fgets` 和 `sscanf` 等更安全的函数来处理输入。
-
-`scanf` 是一个强大的函数，但使用时需要小心，以避免常见的安全问题。
-
-</details>
-
-
-
-
-<details>
-<summary> 点击查看getchar( )函数的定义及用法 </summary>
-  `getchar()` 是 C 语言标准库中的一个函数，它定义在 stdio.h头文件中。这个函数用于从标准输入流（通常是键盘）读取下一个可用的字符，并返回这个字符。如果到达输入流的末尾，它会返回一个特殊的值 `EOF`（End Of File），在 C 语言中通常定义为 `-1`。
-
-函数原型
+**2. `scanf`**  
+**功能**：从标准输入读取格式化数据。  
+**函数原型**：`int scanf(const char *format, ...);`  
+**示例**：  
 ```c
-int getchar(void);
+int age;
+scanf("%d", &age);
 ```
 
-功能
-- `getchar()` 函数每次调用时，会从标准输入读取一个字符。
-- 如果成功读取字符，它返回该字符（以 `int` 类型）。
-- 如果遇到文件结束符（EOF），则返回 `EOF`。
+---
 
-注意事项
-- `getchar()` 函数会读取并返回第一个可用的字符，包括空格、制表符和换行符。
-- 如果你需要读取一行文本，可能需要使用循环来连续调用 `getchar()`，直到遇到换行符 `\n` 或 EOF。
-- 在使用 `getchar()` 时，需要注意它不会自动忽略空白字符，这与 `scanf()` 函数的行为不同。
-1. 读取单个字符
-
+**3. `fprintf`**  
+**功能**：格式化输出到指定文件流。  
+**函数原型**：`int fprintf(FILE *stream, const char *format, ...);`  
+**示例**：  
 ```c
-    char ch;
-    printf("Enter a single character: ");
-    ch = getchar();  // 读取单个字符
-    printf("You entered: %c\n", ch);
-
+FILE *fp = fopen("output.txt", "w");
+fprintf(fp, "Score: %d\n", 100);
+fclose(fp);
 ```
 
-这个程序会读取用户输入的单个字符，并将其打印出来。
+---
 
-2. 读取一行输入直到遇到换行符
-
+**4. `fscanf`**  
+**功能**：从指定文件流读取格式化数据。  
+**函数原型**：`int fscanf(FILE *stream, const char *format, ...);`  
+**示例**：  
 ```c
-#include stdio.h
-#include string.h
-int main() {
-    char line[100];
-    int i = 0;
+FILE *fp = fopen("data.txt", "r");
+int score;
+fscanf(fp, "%d", &score);
+fclose(fp);
+```
 
-    printf("Enter a line of text (end with Enter): ");
-    while ((line[i] = getchar()) != '\n' && line[i] != EOF) {
-        i++;
-    }
-    line[i] = '\0';  // 确保字符串以空字符结尾
+---
 
-    printf("You entered: %s\n", line);
-    return 0;
+**5. `fopen`**  
+**功能**：打开文件。  
+**函数原型**：`FILE *fopen(const char *filename, const char *mode);`  
+**示例**：  
+```c
+FILE *fp = fopen("file.txt", "r");
+```
+
+---
+
+**6. `fclose`**  
+**功能**：关闭文件流。  
+**函数原型**：`int fclose(FILE *stream);`  
+**示例**：  
+```c
+fclose(fp);
+```
+
+---
+
+**7. `fgetc`**  
+**功能**：从文件流中读取单个字符。  
+**函数原型**：`int fgetc(FILE *stream);`  
+**示例**：  
+```c
+char ch = fgetc(fp);
+```
+
+---
+
+**8. `fputc`**  
+**功能**：将单个字符写入文件流。  
+**函数原型**：`int fputc(int c, FILE *stream);`  
+**示例**：  
+```c
+fputc('A', fp);
+```
+
+---
+
+**9. `fgets`**  
+**功能**：从文件流读取一行。  
+**函数原型**：`char *fgets(char *str, int n, FILE *stream);`  
+**示例**：  
+```c
+char buffer[100];
+fgets(buffer, 100, fp);
+```
+
+---
+
+**10. `fputs`**  
+**功能**：将字符串写入文件流。  
+**函数原型**：`int fputs(const char *str, FILE *stream);`  
+**示例**：  
+```c
+fputs("Hello, World!\n", fp);
+```
+
+---
+
+**11. `getchar`**  
+**功能**：从标准输入读取单个字符。  
+**函数原型**：`int getchar(void);`  
+**示例**：  
+```c
+char ch = getchar();
+```
+
+---
+
+**12. `putchar`**  
+**功能**：输出单个字符到标准输出。  
+**函数原型**：`int putchar(int c);`  
+**示例**：  
+```c
+putchar('A');
+```
+
+---
+
+**13. `gets`** *(已不推荐使用，存在安全隐患)*  
+**功能**：从标准输入读取字符串。  
+**函数原型**：`char *gets(char *str);`  
+**示例**：  
+```c
+char buffer[100];
+gets(buffer);
+```
+
+---
+
+**14. `puts`**  
+**功能**：输出字符串到标准输出。  
+**函数原型**：`int puts(const char *str);`  
+**示例**：  
+```c
+puts("Hello, World!");
+```
+
+---
+
+**15. `feof`**  
+**功能**：检查文件流是否到达末尾。  
+**函数原型**：`int feof(FILE *stream);`  
+**示例**：  
+```c
+if (feof(fp)) {
+    printf("End of file reached.\n");
 }
 ```
 
-这个程序会读取用户输入的一行文本，直到用户按下回车键（换行符）。
+---
 
-3. 读取字符直到遇到特定的字符
-
+**16. `ferror`**  
+**功能**：检查文件流是否有错误。  
+**函数原型**：`int ferror(FILE *stream);`  
+**示例**：  
 ```c
-    char ch, delimiter = '$';
-
-    printf("Enter characters until you reach '%c': ", delimiter);
-    while ((ch = getchar()) != delimiter && ch != EOF) {
-        printf("You entered: %c\n", ch);
-    }
-```
-
-这个程序会持续读取字符，直到用户输入特定的分隔符（在这个例子中是 `$`）。
-
-4. 简单的字符回显
-
-```c
-    char ch;
-
-    printf("Enter characters to echo them back: ");
-    while ((ch = getchar()) != '\n' && ch != EOF) {
-        putchar(ch);  // 使用 putchar 函数回显字符
-    }
-```
-
-这个程序会回显用户输入的每个字符，直到遇到换行符。
-</details>
-
-<details>
-<summary>点击查看putchat( )函数的定义及用法</summary>
-
-`putchar` 是 C 语言标准库中的一个函数，用于向标准输出（通常是屏幕）输出一个字符。其定义如下：
-
-```c
-int putchar(int c);
-```
-
-这个函数接受一个 `int` 类型的参数 `c`，这个参数代表要输出的字符的 ASCII 值。`putchar` 函数返回输出的字符，如果发生错误，则返回 `EOF`（一个负数，通常定义为 -1）。
-
-场景示例
-
-1. **输出单个字符**
-
-```c
-int main() {
-    putchar('A'); // 输出大写字母 A
-    return 0;
+if (ferror(fp)) {
+    printf("File error occurred.\n");
 }
 ```
 
-在这个例子中，`putchar` 被用来输出单个字符 'A'。
+---
 
-2. **输出字符串**
-
+**17. `rewind`**  
+**功能**：将文件流位置指针重置到文件开头。  
+**函数原型**：`void rewind(FILE *stream);`  
+**示例**：  
 ```c
-int main() {
-    char str[] = "Hello, World!";
-    for (int i = 0; str[i] != '\0'; ++i) {
-        putchar(str[i]);
-    }
-    return 0;
+rewind(fp);
+```
+
+---
+
+**18. `ftell`**  
+**功能**：获取文件流当前位置。  
+**函数原型**：`long ftell(FILE *stream);`  
+**示例**：  
+```c
+long pos = ftell(fp);
+```
+
+---
+
+**19. `fseek`**  
+**功能**：设置文件流位置指针。  
+**函数原型**：`int fseek(FILE *stream, long offset, int whence);`  
+**示例**：  
+```c
+fseek(fp, 0, SEEK_END);
+```
+
+---
+
+**20. `clearerr`**  
+**功能**：清除文件流的错误标志和 EOF 标志。  
+**函数原型**：`void clearerr(FILE *stream);`  
+**示例**：  
+```c
+clearerr(fp);
+```
+
+
+### string.h
+
+**1. `strlen`**  
+**功能**：返回字符串的长度（不包括终止符 `\0`）。  
+**函数原型**：`size_t strlen(const char *str);`  
+**示例**：  
+```c
+printf("%zu\n", strlen("Hello")); // 输出 5
+```
+
+---
+
+**2. `strcpy`**  
+**功能**：将字符串复制到另一个字符串。  
+**函数原型**：`char *strcpy(char *dest, const char *src);`  
+**示例**：  
+```c
+char dest[20];
+strcpy(dest, "Hello");
+printf("%s\n", dest); // 输出 "Hello"
+```
+
+---
+
+**3. `strncpy`**  
+**功能**：复制指定长度的字符串到另一个字符串。  
+**函数原型**：`char *strncpy(char *dest, const char *src, size_t n);`  
+**示例**：  
+```c
+char dest[10];
+strncpy(dest, "HelloWorld", 5);
+dest[5] = '\0';
+printf("%s\n", dest); // 输出 "Hello"
+```
+
+---
+
+**4. `strcat`**  
+**功能**：将字符串追加到另一个字符串的末尾。  
+**函数原型**：`char *strcat(char *dest, const char *src);`  
+**示例**：  
+```c
+char str[20] = "Hello";
+strcat(str, " World");
+printf("%s\n", str); // 输出 "Hello World"
+```
+
+---
+
+**5. `strncat`**  
+**功能**：将指定长度的字符串追加到另一个字符串的末尾。  
+**函数原型**：`char *strncat(char *dest, const char *src, size_t n);`  
+**示例**：  
+```c
+char str[20] = "Hello";
+strncat(str, "World", 3);
+printf("%s\n", str); // 输出 "HelloWor"
+```
+
+---
+
+**6. `strcmp`**  
+**功能**：比较两个字符串（区分大小写）。  
+**函数原型**：`int strcmp(const char *str1, const char *str2);`  
+**示例**：  
+```c
+if (strcmp("abc", "abc") == 0) {
+    printf("Equal\n");
 }
 ```
 
-在这个例子中，`putchar` 被用来逐个输出字符串中的字符。循环直到遇到字符串的结束符 `\0`。
+---
 
-3. **输出数字字符**
-
+**7. `strncmp`**  
+**功能**：比较指定长度的两个字符串。  
+**函数原型**：`int strncmp(const char *str1, const char *str2, size_t n);`  
+**示例**：  
 ```c
-int main() {
-    int num = 123;
-    while (num > 0) {
-        putchar(num % 10 + '0'); // 将数字转换为字符
-        num /= 10;
-    }
-    return 0;
+if (strncmp("abcdef", "abcxyz", 3) == 0) {
+    printf("Equal\n");
 }
 ```
 
-在这个例子中，`putchar` 被用来输出一个整数的每一位数字。通过取模操作 `%` 得到最低位的数字，并将其转换为字符。
+---
 
-4. **错误处理**
-
+**8. `strchr`**  
+**功能**：查找字符串中首次出现的指定字符。  
+**函数原型**：`char *strchr(const char *str, int c);`  
+**示例**：  
 ```c
-int main() {
-    int result = putchar('B');
-    if (result == EOF) {
-        perror("putchar failed");
-    }
-    return 0;
+char *pos = strchr("Hello", 'e');
+if (pos) {
+    printf("Found at index %ld\n", pos - "Hello");
 }
 ```
 
-在这个例子中，我们检查了 `putchar` 的返回值。如果返回 `EOF`，则表示输出失败，我们使用 `perror` 函数打印错误信息。
+---
 
-5. **输出换行符**
-
+**9. `strrchr`**  
+**功能**：查找字符串中最后一次出现的指定字符。  
+**函数原型**：`char *strrchr(const char *str, int c);`  
+**示例**：  
 ```c
-int main() {
-    putchar('\n'); // 输出一个换行符
-    return 0;
+char *pos = strrchr("Hello", 'l');
+if (pos) {
+    printf("Found at index %ld\n", pos - "Hello");
 }
 ```
 
-在这个例子中，`putchar` 被用来输出一个换行符，这会导致光标移动到下一行的开头。
+---
 
-6. **输出多个字符**
-
+**10. `strstr`**  
+**功能**：查找字符串中首次出现的子串。  
+**函数原型**：`char *strstr(const char *haystack, const char *needle);`  
+**示例**：  
 ```c
-int main() {
-    putchar('H'); // 输出 H
-    putchar('i'); // 输出 i
-    putchar('!'); // 输出 !
-    return 0;
+char *pos = strstr("Hello World", "World");
+if (pos) {
+    printf("Substring found: %s\n", pos);
 }
 ```
 
-在这个例子中，`putchar` 被连续调用三次，每次输出一个字符，组合起来就是 "Hi!"。
+---
 
-`putchar` 是一个简单但非常有用的函数，它允许程序直接向标准输出流发送单个字符。在实际编程中，`putchar` 常用于字符的逐个输出，尤其是在需要精确控制输出格式时。
-</details>
-
-	putchar() : 一次接受一个字符，把它变成int，作用：向标准输出写一个字符
-	返回值：写了几个字符
-		正常：return 1
-		异常：EOF(-1) EOF为宏，其值为-1
-
-
-	getchar() : 返回值是int， 返回读到的那个字符
-	返回EOF：输入结束
-		结束输入的方法：win : Ctrl + Z; linux : Ctrl + D ; 而输入Ctrl + C:强制结束程序
-			按Ctrl + D，shell看到之后填一个EOF or -1 orothers， 给到程序，程序检测到EOF，结束；而输入Ctrl + C，shell直接关闭程序
-	输入回车才 ： 原因是shell（行编辑：按shell前东西都在shell里面，在按enter后东西才从shell送到程序那里）
-### include<string.h>
-
-1. **字符串拷贝**：`strcpy(s1, s2)` 将字符串 `s2` 拷贝到 `s1` 中。
-   ```c
-   char s1[20], s2[] = "Hello";
-   strcpy(s1, s2);
-   ```
-
-2. **字符串连接**：`strcat(s1, s2)` 将字符串 `s2` 连接到 `s1` 的末尾。
-   ```c
-   char s1[20] = "Hello, ";
-   char s2[] = "World!";
-   strcat(s1, s2);
-   ```
-
-3. **字符串比较**：`strcmp(s1, s2)` 比较两个字符串，如果 `s1` 和 `s2` 相同返回0，否则返回非0值。
-   ```c
-   char s1[] = "Hello";
-   char s2[] = "Hello";
-   if (strcmp(s1, s2) == 0) {
-       printf("The strings are identical.\n");
-   }
-   ```
-
-4. **字符串长度**：`strlen(s)` 返回字符串 `s` 的长度，不包括结尾'\0'
-	函数原型：`size_t strlen(const char *s)`
-	内部const指针的意义：保证该函数不会修改那个字符串
-   ```c
-   char s[] = "Hello";
-   printf("The length of the string is: %lu\n", strlen(s)); // output:5 
-   printf("The sizeof the string is: %lu\n", sizeof(s));  //output:6 
-   ```
-
-5. **字符串搜索**：`strchr(s, c)` 在字符串 `s` 中查找字符 `c` 的第一次出现。
-   ```c
-   char s[] = "Hello";
-   char *c = strchr(s, 'l');
-   if (c) {
-       printf("The character 'l' is found in the string.\n");
-   }
-   ```
-
-6. **字符串分割**：`strtok(s1, s2)` 将字符串 `s1` 根据 `s2` 中的分隔符分割成多个子串。
-   ```c
-   char s[] = "Hello, World!";
-   char *token;
-   // 使用strtok之前需要先调用一次，传入字符串
-   token = strtok(s, " ");
-   while (token != NULL) {
-       printf("%s\n", token);
-       token = strtok(NULL, " ");
-   }
-   ```
-
-7. **字符串复制**：`strncpy(s1, s2, n)` 将字符串 `s2` 的前 `n` 个字符拷贝到 `s1` 中。
-   ```c
-   char s1[20], s2[] = "Hello";
-   strncpy(s1, s2, 3);
-   ```
-
-8. **字符串比较（限定长度）**：`strncmp(s1, s2, n)` 比较两个字符串的前 `n` 个字符。
-   ```c
-   char s1[] = "Hello";
-   char s2[] = "Hello, World!";
-   if (strncmp(s1, s2, 5) == 0) {
-       printf("The strings are identical up to 5 characters.\n");
-   }
-   ```
-
-9. **字符串格式化**：`sprintf(s, format, ...)` 将格式化的数据写入字符串 `s` 中。
-   ```c
-   char s[100];
-   sprintf(s, "The value is: %d", 10);
-   ```
-
-10. **字符串反转**：虽然标准库中没有直接的函数，但可以通过循环实现。
-    ```c
-    void reverse(char s[]) {
-        int i, j;
-        char c;
-        for (i = 0, j = strlen(s) - 1; i 》 j; i++, j--) {
-            c = s[i];
-            s[i] = s[j];
-            s[j] = c;
-        }
-    }
-    ```
-
-
-函数多返回值
-案例：复数加、乘
-python：i用的是j；C：未给出i
-1. 返回指针
-	返回结构体
-2. 全局变量
-	定义：不涉及数据传递，而是数据共享
-	初始化：不初始化则默认是0
-	局部变量：定义内部，形参；出了定义他的语句块就没了
-	全局变量：不在大括号里面的，不在函数内部定义的
-	易错：内部重复定义局部变量
-	同名？
-	同名的话内部调用的先后顺序？
-	使用：将值传给全局变量
-	两次赋值：调用乘积以后和的结果被冲掉了
-	范围：从定义到源文件结束（其实不对，但是考试认为对）
-	多文件：1.c 最后定义的全局变量在2.c也能用
-	慎重使用：形成了函数的<font color="#ff0000">多入口</font>，不知道哪个函数改变了它
-	静态存储
-	动态存储
-	
-函数声明：变量就带上含义，能看懂
-函数设计：写之前把所有东西都规定好
-
-静态局部变量
-	== 全局变量
-	调用之后，变量存的是这一次调用的返回值
+**11. `strtok`**  
+**功能**：分割字符串（以指定分隔符为界）。  
+**函数原型**：`char *strtok(char *str, const char *delim);`  
+**示例**：  
 ```c
-......
-{
-	static int a = 1;
-	
+char str[] = "Hello,World";
+char *token = strtok(str, ",");
+while (token) {
+    printf("%s\n", token);
+    token = strtok(NULL, ",");
 }
 ```
-<font color="#ff0000">再看书！！！没会</font>
-int == auto int
 
-全局变量、静态变量：不初始化都是0
+---
 
- -->
+**12. `memset`**  
+**功能**：将内存的某一部分设置为指定值。  
+**函数原型**：`void *memset(void *s, int c, size_t n);`  
+**示例**：  
+```c
+char buffer[10];
+memset(buffer, 'A', 10);
+buffer[9] = '\0';
+printf("%s\n", buffer); // 输出 "AAAAAAAAA"
+```
 
+---
+
+**13. `memcpy`**  
+**功能**：复制内存区域。  
+**函数原型**：`void *memcpy(void *dest, const void *src, size_t n);`  
+**示例**：  
+```c
+char src[] = "Hello";
+char dest[10];
+memcpy(dest, src, 6);
+printf("%s\n", dest); // 输出 "Hello"
+```
+
+---
+
+**14. `memmove`**  
+**功能**：在内存区域重叠时安全地复制内存。  
+**函数原型**：`void *memmove(void *dest, const void *src, size_t n);`  
+**示例**：  
+```c
+char str[] = "HelloWorld";
+memmove(str + 5, str, 5);
+printf("%s\n", str); // 输出 "HelloHello"
+```
+
+---
+
+**15. `memcmp`**  
+**功能**：比较两个内存区域。  
+**函数原型**：`int memcmp(const void *s1, const void *s2, size_t n);`  
+**示例**：  
+```c
+if (memcmp("abc", "abc", 3) == 0) {
+    printf("Memory is equal\n");
+}
+```
+
+---
+
+**16. `strdup`** *(POSIX标准，部分实现中提供)*  
+**功能**：复制字符串并返回新分配的副本。  
+**函数原型**：`char *strdup(const char *str);`  
+**示例**：  
+```c
+char *copy = strdup("Hello");
+printf("%s\n", copy);
+free(copy);
+```
+
+---
+
+**17. `strcspn`**  
+**功能**：返回在字符串中找到的第一个不属于指定字符集的字符位置。  
+**函数原型**：`size_t strcspn(const char *str1, const char *str2);`  
+**示例**：  
+```c
+size_t pos = strcspn("Hello, World", " ,");
+printf("%zu\n", pos); // 输出 5
+```
+
+---
+
+**18. `strspn`**  
+**功能**：返回字符串中连续包含指定字符集的字符数。  
+**函数原型**：`size_t strspn(const char *str1, const char *str2);`  
+**示例**：  
+```c
+size_t len = strspn("abcdef", "abc");
+printf("%zu\n", len); // 输出 3
+```
+
+---
+
+**19. `strpbrk`**  
+**功能**：查找字符串中第一个包含在指定字符集中的字符。  
+**函数原型**：`char *strpbrk(const char *str1, const char *str2);`  
+**示例**：  
+```c
+char *pos = strpbrk("Hello, World", ",!");
+if (pos) {
+    printf("Found: %c\n", *pos); // 输出 ','
+}
+```
+
+---
+
+**20. `strrev`** *(非标准函数，部分实现中提供)*  
+**功能**：反转字符串。  
+**函数原型**：`char *strrev(char *str);`  
+**示例**：  
+```c
+char str[] = "Hello";
+strrev(str);
+printf("%s\n", str); // 输出 "olleH"
+```
+
+以上列出了 `<string.h>` 中的大量常用函数及其简要讲解，适用于字符串操作和内存管理。
+
+
+### ctype.h
+
+**1. `isalnum`**  
+**功能**：检查字符是否为字母或数字。  
+**函数原型**：`int isalnum(int c);`  
+**示例**：  
+```c
+if (isalnum('A')) {
+    printf("Alphanumeric\n");
+}
+```
+
+---
+
+**2. `isalpha`**  
+**功能**：检查字符是否为字母。  
+**函数原型**：`int isalpha(int c);`  
+**示例**：  
+```c
+if (isalpha('b')) {
+    printf("Alphabet\n");
+}
+```
+
+---
+
+**3. `isdigit`**  
+**功能**：检查字符是否为数字（0-9）。  
+**函数原型**：`int isdigit(int c);`  
+**示例**：  
+```c
+if (isdigit('5')) {
+    printf("Digit\n");
+}
+```
+
+---
+
+**4. `islower`**  
+**功能**：检查字符是否为小写字母。  
+**函数原型**：`int islower(int c);`  
+**示例**：  
+```c
+if (islower('a')) {
+    printf("Lowercase\n");
+}
+```
+
+---
+
+**5. `isupper`**  
+**功能**：检查字符是否为大写字母。  
+**函数原型**：`int isupper(int c);`  
+**示例**：  
+```c
+if (isupper('Z')) {
+    printf("Uppercase\n");
+}
+```
+
+---
+
+**6. `isspace`**  
+**功能**：检查字符是否为空白字符（如空格、换行、制表符）。  
+**函数原型**：`int isspace(int c);`  
+**示例**：  
+```c
+if (isspace(' ')) {
+    printf("Whitespace\n");
+}
+```
+
+---
+
+**7. `iscntrl`**  
+**功能**：检查字符是否为控制字符（如回车、删除等）。  
+**函数原型**：`int iscntrl(int c);`  
+**示例**：  
+```c
+if (iscntrl('\n')) {
+    printf("Control character\n");
+}
+```
+
+---
+
+**8. `isprint`**  
+**功能**：检查字符是否为可打印字符（包括空格）。  
+**函数原型**：`int isprint(int c);`  
+**示例**：  
+```c
+if (isprint('A')) {
+    printf("Printable\n");
+}
+```
+
+---
+
+**9. `isgraph`**  
+**功能**：检查字符是否为可打印字符（不包括空格）。  
+**函数原型**：`int isgraph(int c);`  
+**示例**：  
+```c
+if (isgraph('!')) {
+    printf("Graphical character\n");
+}
+```
+
+---
+
+**10. `ispunct`**  
+**功能**：检查字符是否为标点符号。  
+**函数原型**：`int ispunct(int c);`  
+**示例**：  
+```c
+if (ispunct('?')) {
+    printf("Punctuation\n");
+}
+```
+
+---
+
+**11. `tolower`**  
+**功能**：将字符转换为小写（若可能）。  
+**函数原型**：`int tolower(int c);`  
+**示例**：  
+```c
+char ch = tolower('A');
+printf("%c\n", ch); // 输出 'a'
+```
+
+---
+
+**12. `toupper`**  
+**功能**：将字符转换为大写（若可能）。  
+**函数原型**：`int toupper(int c);`  
+**示例**：  
+```c
+char ch = toupper('a');
+printf("%c\n", ch); // 输出 'A'
+```
+
+---
+
+**13. `isxdigit`**  
+**功能**：检查字符是否为十六进制数字（0-9, A-F, a-f）。  
+**函数原型**：`int isxdigit(int c);`  
+**示例**：  
+```c
+if (isxdigit('F')) {
+    printf("Hexadecimal digit\n");
+}
+```
+
+---
+
+**14. `isblank`** *(C99标准新增)*  
+**功能**：检查字符是否为空格或制表符。  
+**函数原型**：`int isblank(int c);`  
+**示例**：  
+```c
+if (isblank('\t')) {
+    printf("Blank character\n");
+}
+```
+
+---
+
+**15. `isascii`** *(非标准函数，部分实现中提供)*  
+**功能**：检查字符是否为ASCII字符（0-127）。  
+**函数原型**：`int isascii(int c);`  
+**示例**：  
+```c
+if (isascii(65)) {
+    printf("ASCII character\n");
+}
+```
+
+---
+
+**16. `toascii`** *(非标准函数，部分实现中提供)*  
+**功能**：将字符转换为ASCII值。  
+**函数原型**：`int toascii(int c);`  
+**示例**：  
+```c
+int ascii = toascii('A');
+printf("%d\n", ascii); // 输出 65
+```
+
+
+### math.h
+
+以下是C语言标准库 `<math.h>` 中的常用函数及其简要讲解，包括函数原型和简单例子：
+
+---
+
+**1. `sqrt`**  
+**功能**：计算平方根。  
+**函数原型**：`double sqrt(double x);`  
+**示例**：  
+```c
+printf("%f\n", sqrt(16.0)); // 输出 4.000000
+```
+
+---
+
+**2. `pow`**  
+**功能**：计算 x 的 y 次幂。  
+**函数原型**：`double pow(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", pow(2.0, 3.0)); // 输出 8.000000
+```
+
+---
+
+**3. `fabs`**  
+**功能**：计算绝对值（浮点数）。  
+**函数原型**：`double fabs(double x);`  
+**示例**：  
+```c
+printf("%f\n", fabs(-5.5)); // 输出 5.500000
+```
+
+---
+
+**4. `ceil`**  
+**功能**：向上取整。  
+**函数原型**：`double ceil(double x);`  
+**示例**：  
+```c
+printf("%f\n", ceil(2.3)); // 输出 3.000000
+```
+
+---
+
+**5. `floor`**  
+**功能**：向下取整。  
+**函数原型**：`double floor(double x);`  
+**示例**：  
+```c
+printf("%f\n", floor(2.7)); // 输出 2.000000
+```
+
+---
+
+**6. `round`**  
+**功能**：四舍五入到最近的整数值。  
+**函数原型**：`double round(double x);`  
+**示例**：  
+```c
+printf("%f\n", round(2.5)); // 输出 3.000000
+```
+
+---
+
+**7. `fmod`**  
+**功能**：计算浮点数的余数。  
+**函数原型**：`double fmod(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", fmod(7.5, 2.0)); // 输出 1.500000
+```
+
+---
+
+**8. `exp`**  
+**功能**：计算 e 的 x 次幂。  
+**函数原型**：`double exp(double x);`  
+**示例**：  
+```c
+printf("%f\n", exp(1.0)); // 输出 2.718282
+```
+
+---
+
+**9. `log`**  
+**功能**：计算自然对数（以 e 为底）。  
+**函数原型**：`double log(double x);`  
+**示例**：  
+```c
+printf("%f\n", log(2.718282)); // 输出 1.000000
+```
+
+---
+
+**10. `log10`**  
+**功能**：计算常用对数（以 10 为底）。  
+**函数原型**：`double log10(double x);`  
+**示例**：  
+```c
+printf("%f\n", log10(100.0)); // 输出 2.000000
+```
+
+---
+
+**11. `sin`**  
+**功能**：计算弧度值的正弦值。  
+**函数原型**：`double sin(double x);`  
+**示例**：  
+```c
+printf("%f\n", sin(3.141592 / 2)); // 输出 1.000000
+```
+
+---
+
+**12. `cos`**  
+**功能**：计算弧度值的余弦值。  
+**函数原型**：`double cos(double x);`  
+**示例**：  
+```c
+printf("%f\n", cos(3.141592)); // 输出 -1.000000
+```
+
+---
+
+**13. `tan`**  
+**功能**：计算弧度值的正切值。  
+**函数原型**：`double tan(double x);`  
+**示例**：  
+```c
+printf("%f\n", tan(3.141592 / 4)); // 输出 1.000000
+```
+
+---
+
+**14. `asin`**  
+**功能**：计算反正弦（弧度值）。  
+**函数原型**：`double asin(double x);`  
+**示例**：  
+```c
+printf("%f\n", asin(1.0)); // 输出 1.570796
+```
+
+---
+
+**15. `acos`**  
+**功能**：计算反余弦（弧度值）。  
+**函数原型**：`double acos(double x);`  
+**示例**：  
+```c
+printf("%f\n", acos(0.0)); // 输出 1.570796
+```
+
+---
+
+**16. `atan`**  
+**功能**：计算反正切（弧度值）。  
+**函数原型**：`double atan(double x);`  
+**示例**：  
+```c
+printf("%f\n", atan(1.0)); // 输出 0.785398
+```
+
+---
+
+**17. `atan2`**  
+**功能**：计算 y/x 的反正切值（弧度值，考虑象限）。  
+**函数原型**：`double atan2(double y, double x);`  
+**示例**：  
+```c
+printf("%f\n", atan2(1.0, 1.0)); // 输出 0.785398
+```
+
+---
+
+**18. `hypot`**  
+**功能**：计算欧几里得距离（`sqrt(x^2 + y^2)`）。  
+**函数原型**：`double hypot(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", hypot(3.0, 4.0)); // 输出 5.000000
+```
+
+---
+
+**19. `cbrt`** *(C99标准新增)*  
+**功能**：计算立方根。  
+**函数原型**：`double cbrt(double x);`  
+**示例**：  
+```c
+printf("%f\n", cbrt(27.0)); // 输出 3.000000
+```
+
+---
+
+**20. `round`**  
+**功能**：返回最接近的整数（四舍五入）。  
+**函数原型**：`double round(double x);`  
+**示例**：  
+```c
+printf("%f\n", round(3.5)); // 输出 4.000000
+```
+
+---
+
+**21. `trunc`**  
+**功能**：截断小数部分，保留整数部分。  
+**函数原型**：`double trunc(double x);`  
+**示例**：  
+```c
+printf("%f\n", trunc(3.9)); // 输出 3.000000
+```
+
+---
+
+**22. `modf`**  
+**功能**：将浮点数分解为整数和小数部分。  
+**函数原型**：`double modf(double x, double *iptr);`  
+**示例**：  
+```c
+double intpart, fracpart;
+fracpart = modf(3.14, &intpart);
+printf("Integer: %f, Fraction: %f\n", intpart, fracpart); // 输出 "Integer: 3.000000, Fraction: 0.140000"
+```
+
+---
+
+**23. `fmax`** *(C99标准新增)*  
+**功能**：返回两个浮点数中的较大值。  
+**函数原型**：`double fmax(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", fmax(3.0, 4.5)); // 输出 4.500000
+```
+
+---
+
+**24. `fmin`** *(C99标准新增)*  
+**功能**：返回两个浮点数中的较小值。  
+**函数原型**：`double fmin(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", fmin(3.0, 4.5)); // 输出 3.000000
+```
+
+---
+
+**25. `copysign`** *(C99标准新增)*  
+**功能**：将 y 的符号赋值给 x。  
+**函数原型**：`double copysign(double x, double y);`  
+**示例**：  
+```c
+printf("%f\n", copysign(3.0, -4.0)); // 输出 -3.000000
+```
 
 
 ## Chap7_Array
