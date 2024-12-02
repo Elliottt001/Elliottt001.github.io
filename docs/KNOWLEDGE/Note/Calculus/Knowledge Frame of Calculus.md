@@ -491,12 +491,7 @@ $$
 $$
 
 5. 三角函数积分  
-$$
-\int \sin x \, dx = -\cos x + C
-$$
-$$
-\int \cos x \, dx = \sin x + C
-$$
+
 $$
 \int \sin x \, dx = -\cos x + C
 $$
@@ -543,9 +538,6 @@ $$
 $$
 $$
 \int \frac{1}{1+x^2} \, dx = \arctan x + C= -arccot x + C
-$$
-$$
-\int \frac{-1}{1+x^2} \, dx = -\arctan x + C
 $$
 $$
 \int \frac{1}{x\sqrt{x^2-1}} \, dx = \text{arcsec } x + C \quad (|x| \geq 1)
