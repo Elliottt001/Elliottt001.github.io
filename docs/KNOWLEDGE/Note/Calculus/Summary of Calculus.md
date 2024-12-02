@@ -1054,6 +1054,95 @@ $$
 + C
 </div>
 
+### 基本积分表
+
+1. 常数函数积分  
+$$
+\int c \, dx = c x + C
+$$
+
+2. 幂函数积分  
+$$
+\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
+$$
+
+3. 指数函数积分  
+$$
+\int e^x \, dx = e^x + C
+$$
+$$
+\int a^x \, dx = \frac{a^x}{\ln a} + C \quad (a > 0, a \neq 1)
+$$
+
+4. 对数函数积分  
+$$
+\int \ln x \, dx = x \ln x - x + C
+$$
+
+5. 三角函数积分  
+$$
+\int \sin x \, dx = -\cos x + C
+$$
+$$
+\int \cos x \, dx = \sin x + C
+$$
+$$
+\int \sec^2 x \, dx = \tan x + C
+$$
+$$
+\int \csc^2 x \, dx = -\cot x + C
+$$
+$$
+\int \sec x \tan x \, dx = \sec x + C
+$$
+$$
+\int \csc x \cot x \, dx = -\csc x + C
+$$
+$$
+\int \sinh x \, dx = \cosh x + C
+$$
+$$
+\int \cosh x \, dx = \sinh x + C
+$$
+$$
+\int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \cot x \, dx = \ln |\sin x| + C \quad (\sin x \neq 0)
+$$
+$$
+\int \sec x \, dx = \ln |\sec x + \tan x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \csc x \, dx = -\ln |\csc x + \cot x| + C \quad (\sin x \neq 0)
+$$
+
+6. 反三角函数积分  
+$$
+\int \frac{1}{\sqrt{1-x^2}} \, dx = \arcsin x + C     = -\arccos x + C \quad (|x| \leq 1)
+$$
+$$
+\int \frac{-1}{\sqrt{1-x^2}} \, dx = \arccos x + C \quad (|x| \leq 1)
+$$
+$$
+\int \frac{1}{1+x^2} \, dx = \arctan x + C= -arccot x + C
+$$
+$$
+\int \frac{1}{x\sqrt{x^2-1}} \, dx = \text{arcsec } x + C \quad (|x| \geq 1)
+$$
+$$
+\int \frac{-1}{x\sqrt{x^2-1}} \, dx = -\text{arcsec } x + C \quad (|x| \geq 1)
+$$
+
+7. 常考
+$$
+$$
+
+**用处：**分母是二次多项式，配方
+
+
+
+
 ### 易错
 
 - 开根号带绝对值，其实不定积分默认正，定积分必须加
@@ -1101,7 +1190,7 @@ $$
 2. （实际为1的应用）
 
 	一次多项式和二次多项式函数的乘积，例如 $\int (x + 1) \sqrt{x^2 + 2x} \, dx$ ，$\int \frac{x}{\sqrt{1 - x^2}} \, dx$将一次与 $dx$ 凑微分
-
+	![alt text](image-73.png)
 
 
 #### 例题
@@ -1127,12 +1216,18 @@ $\int \frac {\, dx}{a^2 - x^2}$
 谁讨厌就另谁 = $t$
 
 - 被积函数中含有二次根号，二次根号内是一次多项式，则另$t = \sqrt\ $
+
+	>其实根号并不讨厌，讨厌的是根号与其他常数相加减，故若没有相加减，另根号内部分 = t 亦可
+
 - 被积函数中含有二次根号，二次根号内是二次多项式，则另$t = asinx$ 之类
 	- 回代：不允许使用 $sin(arcsin())$ 之类，要画直角三角形具体求出是什么：结果是多项式 / 根式；如果有 $sin(k arcsin())$ 用倍角公式
 
 ![alt text](image-38.png)
 
 这里一般（一定）要将 $df(x)$ （变量代换后得到） 换成 $f'(x)dx$，再用其他方法操作；不要将这个与凑微分法中凑 $df(x)$ 混了。
+
+![alt text](image-62.png)
+![alt text](image-63.png)
 
 
 **零碎方法**
@@ -1148,6 +1243,7 @@ $\int \frac {\, dx}{a^2 - x^2}$
 
 	形如 $\int {复杂多项式}^{复杂次数} {简单多项式}^{简单次数}$ ：令 $t = 复杂多项式$
 
+	![alt text](image-64.png)
 ### 分步积分法
 
 $$ \int u \, dv = uv - \int v \, du $$
@@ -1185,20 +1281,30 @@ $$ \int u \, dv = uv - \int v \, du $$
 **零碎方法**
 
 - 单一函数积分可以看作 $1 * 它$，再
-
-
-
-
-
-
-
-
+- 有 $arcsin$ 一定要用分步；单一 $arcsin$ 则用上面一个：$1 * arcsin$
 
 
 $\int \sec^3x \, dx$
+
 ![alt text](image-40.png)
+![alt text](image-65.png)
 
+$\int \sec^1 x \, dx$ 公式
 
+$\int \sec^2 x \, dx$ 公式
+
+$\int \sec^3 x \, dx$ 分步
+
+$\int \sec^4 x \, dx$ ${(1 + \tan^2)}^2$
+
+$\int \sec^5 x \, dx$
+
+![alt text](image-66.png)
+![alt text](image-68.png)
+![将(1 + x)^2dx凑微分](image-69.png)
+![先化简x = (x + 1) - 1](image-70.png)
+![换元和分步同时使用](image-71.png)
+![alt text](image-72.png)
 
 
 ### 特殊类型函数的积分
@@ -1213,14 +1319,27 @@ $\int \sec^3x \, dx$
 
 任意一个次数 >= 3 的多项式均可因式分解；检查是否分解到不能分解
 
+- 配方等方法因式分解
+
+	例：$x^4 - 1$
+
 分解方法：
 
-待定系数法：对应项系数相等
+- 观察法（首选）
 
-赋值法（对每个x都成立所以可）：通分，看分子
+- 待定系数法：对应项系数相等
+
+- 赋值法（对每个x都成立所以可）：通分，看分子
 
 ![alt text](image-43.png)
 ![alt text](image-44.png)
+![alt text](image-78.png)
+
+$\int \frac1{1 + x^4}\, dx$
+
+![alt text](image-79.png)
+
+$e^x$ 的有理函数：上下同乘 $e^x$ ，上面的 $e^x$ 和 $dx$ 凑微分，再换元
 
 2次 —— 配方
 
@@ -1231,8 +1350,31 @@ $\int \frac {x^2 + x - 3}{{(x - 1)}^{10}} \, dx$
 ![alt text](image-45.png)
 ![从n - 1 次入手](image-46.png)
 
-三角函数积分
+
+
+![alt text](image-74.png)
+![alt text](image-64.png)
+![alt text](image-77.png)
+
+方法1是上下同*x^9
+
+
+#### 三角函数积分
+
 ![alt text](image-47.png)
+![alt text](image-57.png)
+![alt text](image-58.png)
+![alt text](image-59.png)
+![alt text](image-60.png)
+![alt text](image-61.png)
+
+$\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
+
+![alt text](image-80.png)
+
+化为单因式！
+
+
 
 特殊类型的三角函数积分
 
@@ -1244,7 +1386,7 @@ $\int \frac {x^2 + x - 3}{{(x - 1)}^{10}} \, dx$
 ![alt text](image-53.png)
 ![alt text](image-52.png)
 
-某些无理函数
+#### 某些无理函数
 
 n次根号，根号内是1次多项式的商；内部是1词多项式的乘积：提出来，化商
 ![alt text](image-54.png)
@@ -1252,6 +1394,17 @@ n次根号，根号内是1次多项式的商；内部是1词多项式的乘积�
 有些初等函数的原函数不一定是初等函数
 ![alt text](image-55.png)
 
+#### 分段函数积分
+
+- 分区间求，每个区间上的C均不一样，$C_1, C_2, C_3$
+- 分界点：可导必连续，左右极限存在且相等，用1个C表示其他的
+
+#### 抽象函数积分
+
+直接用f抽形函数表达式求
+
+![alt text](image-56.png)
+![alt text](image-67.png)
 
 
 
@@ -1261,13 +1414,7 @@ n次根号，根号内是1次多项式的商；内部是1词多项式的乘积�
 
 
 
-
-
-
-
-
-
-
+应该按照函数类型
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
