@@ -261,6 +261,18 @@ $
     : 反复用递推不等式放缩直到不能用为止
 	3. 极限 = a < b
     
+
+##### 六、定积分定义
+
+![alt text](image-91.png)
+
+五、六 都用于n项和极限
+
+n项乘积极限：取对数化为n项和
+
+![alt text](image-92.png)
+
+
 #####  八、等价无穷小
 
 - 注意：
@@ -1087,6 +1099,18 @@ $$
 \int \cos x \, dx = \sin x + C
 $$
 $$
+\int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \cot x \, dx = \ln |\sin x| + C \quad (\sin x \neq 0)
+$$
+$$
+\int \sec x \, dx = \ln |\sec x + \tan x| + C \quad (\cos x \neq 0)
+$$
+$$
+\int \csc x \, dx = -\ln |\csc x + \cot x| + C \quad (\sin x \neq 0)
+$$
+$$
 \int \sec^2 x \, dx = \tan x + C
 $$
 $$
@@ -1104,18 +1128,7 @@ $$
 $$
 \int \cosh x \, dx = \sinh x + C
 $$
-$$
-\int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
-$$
-$$
-\int \cot x \, dx = \ln |\sin x| + C \quad (\sin x \neq 0)
-$$
-$$
-\int \sec x \, dx = \ln |\sec x + \tan x| + C \quad (\cos x \neq 0)
-$$
-$$
-\int \csc x \, dx = -\ln |\csc x + \cot x| + C \quad (\sin x \neq 0)
-$$
+
 
 6. 反三角函数积分  
 $$
@@ -1374,7 +1387,18 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 化为单因式！
 
+![1/sinx型：上下同乘](image-81.png)
+![分母和差，化乘积](image-82.png)
+![遗失部分：bsinx](image-83.png)
+![alt text](image-84.png)
 
+法三：t = tanx
+
+![alt text](image-87.png)
+
+利用：导数
+
+![alt text](image-88.png)
 
 特殊类型的三角函数积分
 
@@ -1388,11 +1412,14 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 #### 某些无理函数
 
-n次根号，根号内是1次多项式的商；内部是1词多项式的乘积：提出来，化商
+被积函数含有n次根号，根号内是两个1次多项式的商；内部是1词多项式的乘积：提出来，化商
 ![alt text](image-54.png)
 
 有些初等函数的原函数不一定是初等函数
 ![alt text](image-55.png)
+
+![alt text](image-85.png)
+![alt text](image-86.png)
 
 #### 分段函数积分
 
@@ -1406,15 +1433,118 @@ n次根号，根号内是1次多项式的商；内部是1词多项式的乘积�
 ![alt text](image-56.png)
 ![alt text](image-67.png)
 
-
-
-
-
-
-
-
-
 应该按照函数类型
+
+## 定积分
+
+### 方法
+
+**零碎方法**
+
+- 不会积分：先求导；在题目中创造导数
+
+- 有些函数的原函数不可求，则一定可以和别的部分抵消，代数变换、换元……
+
+	- $\frac{\sin x}{x}$
+
+	- $e^{- x^2}$
+
+
+**简化计算的方法**
+
+- 先看积分区间关于原点对称，再看被积函数是否具有奇偶性，看被积函数的一部分有没有奇偶性
+
+	公式：$\int_{-a}^{a} f(x) \,{\rm d}x = \int_{0}^{a}[f(x) + f(-x)] \,{\rm d}x$ 
+
+	偶函数：区间减半，值*2；奇函数：0
+
+	证明：用换元法统一积分区间 $t = -x$
+
+- ？40min……
+
+	- 从区间中点将积分区间分段
+	- 换元法统一积分区间，换元法看题目，原则是换完之后用起来已知条件
+
+		- 周期函数：平移
+		- 奇偶函数：对称
+
+	- 利用线性性质，消为0
+
+
+### 常见函数/结构
+
+- $\frac1{1 + e^{-x}}$：$g(x) + g(-x) = g(x)g(-x) = 1$
+
+	![alt text](image-99.png)
+
+- 三角函数
+
+	- 统一三角函数名：$\cos^2 x = 1 - \sin^2 x$ 
+	- 重要公式：
+$$
+\int_0^{\fracπ2}\sin^{n}x\, {\rm d}x = \int_0^{\fracπ2}\cos^{n}x\, {\rm d}x = 
+\left\{
+\begin{aligned}
+&\frac{n - 1}{n} \frac{n - 3}{n - 2} \cdots \frac23 1 ，n为奇数\\
+&\frac{n - 1}{n} \frac{n - 3}{n - 2} \cdots \frac12 \fracπ2 ，n为偶数\\
+\end{aligned}
+\right.
+$$
+$$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
+
+![alt text](image-100.png)
+
+**方法：** 换元法 $t = π - x$
+
+**辨识：** 积分区间 $(0, π)$ ，被积函数是 $x 和 \sin x$ 的乘积。如果不满足：分步积分
+
+- 一奇一偶函数之和，积分区间关于原点对称
+
+
+![alt text](image-102.png)
+
+
+- $\   \to 三角换元$
+
+	- 挑角度：象限：一  一四  一二  一二三四
+
+
+	![alt text](image-98.png)
+
+
+![alt text](image-101.png)
+
+变上/下限积分
+
+微积分基本定理
+
+![alt text](image-93.png)
+
+的极限：洛必达
+
+![alt text](image-94.png)
+
+注意条件！：在那个上下中
+
+![alt text](image-95.png)
+![alt text](image-96.png)
+
+![alt text](image-97.png)
+
+
+
+应用
+
+微元法
+
+![alt text](image-103.png)
+
+
+
+
+
+
+
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
