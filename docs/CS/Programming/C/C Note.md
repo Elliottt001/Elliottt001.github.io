@@ -2372,20 +2372,47 @@ static char str[6] = "happy"
 
 **输入输出**
 
-用`getchar()`
+用 `getchar()`
 
-```c
-int str[100];
-int k;
-printf("Enter your string:"); //输入提示
-k = 0;
-while((str[k] = getchar()) != '\n'){ //用getchar逐个获取字符，不到'\n'不停
-	k++;  //统计字符数量
-}
-str[k] = '\0'; //输入结束符'\0'
-```
+特定字符控制
+
+- 直接读一个字符串
+
+    ```c
+    int str[100];
+    int k;
+    printf("Enter your string:"); //输入提示
+    k = 0;
+    while((str[k] = getchar()) != '\n'){ //用getchar逐个获取字符，不到'\n'不停
+        k++;  //统计字符数量
+    }
+    str[k] = '\0'; //输入结束符'\0'
+    ```
+
+- 先读一个在读一个字符串
+
+    ```C
+    scanf("%c", &ch);
+    getchar(); // 再getchar消耗掉第一个'\n', 清理缓冲区
+    while((str[k] = getchar()) != '\n'){
+        k++;
+    }
+    str[k] = '\0';
+    ```
+
 
 用`scanf()`
+
+1. 读取（可能）含有空格的字符串：目的是通过含有空格字符串的测试点
+
+    这种方法不可以用于读取单个字符
+
+    ```C
+    scanf("%c", ch);
+    getchar(); //何时都要有
+    /*如果前面需要先读一个则加上面这部分*/
+    scanf("%[^\n]", str);
+    ```
 
 1. scanf读一个单词：到空格/tab/回车 为止，即见到那三个就停止读入了
 
@@ -2396,20 +2423,19 @@ str[k] = '\0'; //输入结束符'\0'
     ```
 2. %ns  (n为一个整数)：这次输入最多输入那么多个值，其他的内容停在输入流中，等待下一个scanf，这些scanf依然遵循上一条
 
-示例：
-```c
-char str1[8];
-char str2[8];
-scanf("%3s", str1);
-scanf("%s", str2);
-printf("%s##%s", str1, str2);
-/*
-input 1234 56 --> output 123##4
-input 12 345 --> output 12##345
-input 12 34567789835374 --> *** stack smashing detected ***: terminated \ [1]    25177 IOT instruction (core dumped)  ./wk
-input 123456 --> output 123##456
-```
-用特定字符控制，并将其再赋值为'\0'
+    ```c
+    char str1[8];
+    char str2[8];
+    scanf("%3s", str1);
+    scanf("%s", str2);
+    printf("%s##%s", str1, str2);
+    /*
+    input 1234 56 --> output 123##4
+    input 12 345 --> output 12##345
+    input 12 34567789835374 --> *** stack smashing detected ***: terminated \ [1]    25177 IOT instruction (core dumped)  ./wk
+    input 123456 --> output 123##456
+    ```
+
 
 
 **杂项**
