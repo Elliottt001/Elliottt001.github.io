@@ -87,7 +87,15 @@ core：消出0！！！
 
 - 必用$A × A^*=|A| × E$：可以两边同乘创造出来它
 
+#### 矩阵求逆
 
+**证明矩阵可逆：**
+
+思路1：设其逆矩阵，想办法求出来他，在求解过程中一些取逆操作会用到题目条件
+
+例题：
+
+![alt text](image-14.png)
 
 #### 矩阵的分块
 
@@ -219,7 +227,13 @@ $P^n$ 空间：矩阵，化阶梯看秩 $\Leftrightarrow$ 行列式 $\ne 0$ $\Le
 
 **证明是欧式空间**：[4条]()
 
-(补一下)
+- $(\alpha, \alpha) > 0 ，\alpha = \theta \Leftrightarrow (\alpha, \alpha) = 0$
+
+- $(\alpha, \beta) = (\beta, \alpha)$
+
+- $(c\alpha, \beta) = c(\alpha, \beta)$
+
+- $(\alpha + \beta, γ) = (\alpha, γ) + (\beta, γ)$ 
 
 Schmidt（施密特）正交化
 

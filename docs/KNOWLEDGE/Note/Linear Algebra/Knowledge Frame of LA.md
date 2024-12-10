@@ -148,7 +148,6 @@ $$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
 ![alt text](image-13.png)
 
 
-
 ## 线性空间
 
 ### 定义&基本性质
