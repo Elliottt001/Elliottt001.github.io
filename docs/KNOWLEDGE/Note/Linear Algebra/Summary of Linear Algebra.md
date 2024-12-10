@@ -118,8 +118,9 @@ $AXB = C$ 求$X$
 
 ### 定义
 
-**证明是线性空间 / 判断是否是线性空间**：**[8条]()**
+**证明是线性空间 / 判断是否是线性空间**：加法数乘封闭 + [8条]()
 
+（补一下）
 
 
 ### 相关&无关&表示
@@ -206,13 +207,29 @@ $P^n$ 空间：矩阵，化阶梯看秩 $\Leftrightarrow$ 行列式 $\ne 0$ $\Le
 
 ## 欧式空间
 
-**证明是欧式空间**：**4条**
+**证明是欧式空间**：[4条]()
 
+(补一下)
 
+Schmidt（施密特）正交化
 
+$\alpha_1, \alpha_2, \cdots, \alpha_s 线性无关$
 
-
-
+$$
+\beta_1 = \alpha_1
+$$
+$$
+\beta_2 = \alpha_2 - \frac{(\alpha_2, \beta_1)}{(\beta_1, \beta_1)}\beta_1
+$$
+$$
+\beta_3 = \alpha_3 - \frac{(\alpha_3, \beta_1)}{(\beta_1, \beta_1)}\beta_1 - \frac{(\alpha_3, \beta_2)}{(\beta_2, \beta_2)}\beta_2
+$$
+$$
+\cdots\ \cdots
+$$
+$$
+\beta_k = \alpha_k - \frac{(\alpha_k, \beta_1)}{(\beta_1, \beta_1)}\beta_1 - \frac{(\alpha_k, \beta_2)}{(\beta_2, \beta_2)}\beta_2 - \cdots - \frac{(\alpha_k, \beta_{k - 1})}{(\beta_{k - 1}, \beta_{k - 1})}\beta_{k - 1} \quad, 2 \le k \le s 
+$$
 
 
 <script src="https://giscus.app/client.js"
