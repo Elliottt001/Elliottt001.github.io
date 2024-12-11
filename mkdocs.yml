@@ -69,6 +69,8 @@ nav:
         - DoubanHot: CS/Project/Crawler/DoubanHotCode.md
       - game:
         - CS/Project/Game/SnakeCode.md
+  - 阅读:
+    - 原则: BOOK/principles.md
   - 随笔:
     - 2024-11: ESSAY/2024-11.md
     - 2024-12: ESSAY/2024-12.md

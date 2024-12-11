@@ -1245,31 +1245,33 @@ while (token) {
     printf("%s\n", token);
     token = strtok(NULL, ",");
 }
+/*
+char *strtok(char *__restrict__ __s, const char *__restrict__ __delim)
+
+Divide S into tokens separated by characters in DELIM.
+*/
 
 /*
-这段代码展示了如何使用 C 标准库中的 `strtok` 函数将一个字符串分割为多个子字符串（token）。以下是详细解析：
 
-### 代码解析
-
-#### 1. **`char str[] = "Hello,World";`**
+ 1. **`char str[] = "Hello,World";`**
    - 定义了一个字符串数组 `str`，其中包含内容 `"Hello,World"`。
    - 字符串 `str` 可被修改（不同于字符串常量）。
 
-#### 2. **`char *token = strtok(str, ",");`**
+ 2. **`char *token = strtok(str, ",");`**
    - `strtok` 函数用于将字符串 `str` 按分隔符 `","`（逗号）进行分割。
    - 第一次调用时，`strtok` 将会：
      1. 查找第一个分隔符 `','`。
      2. 将分隔符替换为 `'\0'`（字符串结束符）。
      3. 返回指向第一个子字符串（即 `Hello`）的指针。
 
-#### 3. **`while (token) {`**
+ 3. **`while (token) {`**
    - 只要 `token` 不为 `NULL`，就继续循环。
    - `strtok` 会返回每个子字符串的指针，直到字符串末尾时返回 `NULL`。
 
-#### 4. **`printf("%s\n", token);`**
+ 4. **`printf("%s\n", token);`**
    - 打印当前的子字符串（token）。
 
-#### 5. **`token = strtok(NULL, ",");`**
+ 5. **`token = strtok(NULL, ",");`**
    - 继续查找下一个子字符串：
      - 第二次及之后的调用中，传入的第一个参数必须为 `NULL`，表示继续处理上一次的字符串。
      - 查找到下一个分隔符，返回对应的子字符串指针。
