@@ -19,7 +19,7 @@
     - 接口
     - IP
     - mkdocs研究明白
-    - github
+    - Github
     - 算法复杂度
 
 - [ ] Cpp
