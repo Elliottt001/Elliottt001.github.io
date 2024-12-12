@@ -18,8 +18,8 @@
     - 网络传输协议
     - 接口
     - IP
-
-- [ ] mkdocs研究明白
+    - mkdocs研究明白
+    - github
 
 - [ ] Cpp
     
