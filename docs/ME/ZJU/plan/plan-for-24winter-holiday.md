@@ -18,7 +18,7 @@
 </head>
 <body>
     <h3>今日份计划：</h3>
-    <textarea placeholder="今日计划..." rows="5"></textarea>
+    <textarea placeholder="请输入您的计划..." rows="5"></textarea>
     <u></u>
 </body>
 </html>
