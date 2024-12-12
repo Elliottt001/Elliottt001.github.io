@@ -8,11 +8,13 @@
     <style>
         input[type="text"] {
             width: 100%;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
         }
         textarea {
             width: 100%;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
