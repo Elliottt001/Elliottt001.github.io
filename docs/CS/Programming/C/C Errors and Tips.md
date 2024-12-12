@@ -1,5 +1,5 @@
 
-# Content & Details
+## Content & Details
 
 - ***Array***
 ——The definition and call of array
@@ -26,7 +26,7 @@
 
 
 
-## 理论
+### 理论
 
 - 循环 if 条件内部将 == 写成 = ：
 	变量被重新赋值，返回新的值给括号内判断真假：0则假， 非0则真；<font color="#00b0f0">其实就是看括号内表达式的真假</font>
@@ -83,7 +83,7 @@
 
 4-4问一下
 
-## 实验
+### 实验
 
 - 循环与分支
 	循环：while和for，两种
@@ -114,11 +114,33 @@
 
 - 数字比较大（例如阶乘、斐波那契……），要用 `double` 用 `int` 会超限，得负数
 
+#### string.h中的函数
 
+- `strcpy` & `strncpy`
 
-# Thought & Summary
+	```c
+    if (len % 2 == 1) {
+        // 长度为奇数：删除中间字符
+        int mid = len / 2;
+        strncpy(dest2, dest1, mid);                  // 拷贝前半部分
+        strcpy(dest2 + mid, dest1 + mid + 1);        // copy后半部分
+        dest2[len - 1] = '\0'; // 新长度
+	}
+	/* 代码解析
+	将 dest1 的中间字符之后的部分（从 mid + 1 开始）复制到 dest2 的中间字符位置。
+	dest2 + mid 表示从 dest2 的 mid 索引位置开始放置数据。
+	dest1 + mid + 1 表示从 dest1 的 mid + 1 索引位置开始读取数据。
+	例如：
 
-## 存在的问题：
+	若 dest1 = "abcde"，mid = 2：
+	dest1 + mid + 1 是 "de"（从索引 3 开始）。
+	dest2 在完成此操作后为 "abde"。
+	*/
+	```
+
+## Thought & Summary
+
+### 存在的问题：
 version1.0
 程序填空题想不到
 基础理论知识完全空白
@@ -130,7 +152,7 @@ version1.5
 <font color="#ff0000">没有一步一步仔细读程序，没有耐心去静下来读程序，而是据自己的感觉推理：上一步是啥下一步就照着他来</font>
 # Methods
 
-## Exams：
+### Exams：
 
 //计科机考：
 //上来先看编程题
