@@ -1,3 +1,6 @@
+今日份计划：<input type="text" value="" style="width:100%;"><u></u></input>
+
+
 ## CS plan
 
 [编程指北](https://csguide.cn/)
@@ -58,6 +61,8 @@
 
 - [ ] 弄明白这个学校运行的规则
 
-- [] 下学期的学习状态、生活状态
+- [ ] 下学期的学习状态、生活状态
 
-- [] obsidian用起来
+- [ ] obsidian用起来
+
+- [x] 

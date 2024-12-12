@@ -283,9 +283,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+    # 允许使用任务清单即- []      
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
@@ -328,17 +329,6 @@ extra_css:
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
 
-    # 允许使用任务清单即- []      
-  - pymdownx.tasklist:
-      custom_checkbox: true
-
-
-extra_javascript:
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-extra_css:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
@@ -347,3 +337,11 @@ extra_css:
   - mkdocs/css/no-footer.css
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
+
+
+extra_javascript:
+  # [数学公式支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
