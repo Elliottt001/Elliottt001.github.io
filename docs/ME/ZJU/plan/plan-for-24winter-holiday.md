@@ -1,4 +1,27 @@
-今日份计划：<input type="text" value="" style="width:100%;"><u></u></input>
+<!-- HTML Snippet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Input</title>
+    <style>
+        input[type="text"] {
+            width: 100%;
+            font-size: 16px;
+        }
+        textarea {
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>今日份计划：</h3>
+    <textarea placeholder="输入您的计划..." rows="5"></textarea>
+    <u></u>
+</body>
+</html>
 
 
 ## CS plan
@@ -19,6 +42,7 @@
     - 接口
     - IP
     - mkdocs研究明白
+        - 12.12改mkdocs.yml改了半天改错了，研究之后搞明白是哪错了！
     - Github
     - 算法复杂度
     - git
