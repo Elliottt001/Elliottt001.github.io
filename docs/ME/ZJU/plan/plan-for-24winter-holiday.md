@@ -8,19 +8,17 @@
     <style>
         input[type="text"] {
             width: 100%;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 17px;
         }
         textarea {
             width: 100%;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 17px;
         }
     </style>
 </head>
 <body>
     <h3>今日份计划：</h3>
-    <textarea placeholder="输入您的计划..." rows="5"></textarea>
+    <textarea placeholder="今日计划..." rows="5"></textarea>
     <u></u>
 </body>
 </html>
@@ -67,7 +65,7 @@
 
 ### Books
 
-- [ ]《原则》
+- [ ] 《原则》
 
 - [ ] 《自律》
 
@@ -94,5 +92,3 @@
 - [ ] 下学期的学习状态、生活状态
 
 - [ ] obsidian用起来
-
-- [x] 
