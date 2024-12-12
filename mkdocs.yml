@@ -237,7 +237,6 @@ plugins:
     #https://github.com/TonyCrane/mkdocs-statistics-plugin  
 
   - rss
-  - search
   - git-revision-date-localized:
         type: datetime
         timezone: Asia/Shanghai
