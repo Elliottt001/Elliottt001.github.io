@@ -281,9 +281,9 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
     # 允许使用任务清单即- []      
+  - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
-
 
 extra_javascript:
   # [数学公式支持]

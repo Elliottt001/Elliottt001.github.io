@@ -1,4 +1,4 @@
-<!-- 今日份计划：<input type="text" value="" style="width:100%;"><u></u></input> -->
+今日份计划：<input type="text" value="" style="width:100%;"><u></u></input>
 
 
 ## CS plan
@@ -20,6 +20,7 @@
     - IP
     - mkdocs研究明白
     - github
+    - 算法复杂度
 
 - [ ] Cpp
     
