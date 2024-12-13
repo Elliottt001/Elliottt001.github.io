@@ -528,9 +528,9 @@ int main() {
 
 ```c
 typedef enum { false, true } bool;
-
 bool palindrome(char *s) { /*代码块*/}
 ```
+
 ---
 
 **4. 定义自定义数据类型**
