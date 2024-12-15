@@ -10,6 +10,8 @@ nav:
   - 主页: index.md
   - 个人:
     - ME/index.md
+    - 思考: 
+      - 大学教育与人生发展: ME/THOUGHT/colledge-education-and-my-future.md
     - SDFZ:
       - 永远的391: ME/SDFZ/391forever.md
       - 附中回忆录: ME/SDFZ/sdfz_memorior.md
