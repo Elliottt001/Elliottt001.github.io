@@ -3208,8 +3208,164 @@ free() and malloc() is 绑定使用的
 
 ## 结构
 
+结构是一种数据类型，它与python中的字典、类都有相似之处。
 
+示例：
 
+```c
+
+#include <stdio.h>
+#include <string.h>
+
+struct student {
+    char name[50];  
+    int age;
+    long int id;
+    char gender[10]; 
+    double height;
+    char bloodtype;
+};  //这是一条C语言定义变量的语句，别忘了最后的分号；另外这段代码的作用是“声明结构类型”
+
+int main() {
+    struct student students[3];  //这是在定义一个结构变量
+    // 设置第一个学生的属性
+    strcpy(students[0].name, "Alice");
+    students[0].age = 20;
+    students[0].id = 123456789;
+    strcpy(students[0].gender, "female");
+    students[0].height = 1.65;
+    students[0].bloodtype = 'A';
+
+    // 设置第二个学生的属性
+    strcpy(students[1].name, "Bob");
+    students[1].age = 22;
+    students[1].id = 987654321;
+    strcpy(students[1].gender, "male");
+    students[1].height = 1.80;
+    students[1].bloodtype = 'B';
+
+    // 设置第三个学生的属性
+    strcpy(students[2].name, "Charlie");
+    students[2].age = 19;
+    students[2].id = 555555555;
+    strcpy(students[2].gender, "male");
+    students[2].height = 1.75;
+    students[2].bloodtype = 'O';
+
+    // 输出每个学生的信息
+    for (int i = 0; i < 3; i++) {
+        const char *pronoun;
+        if (strcmp(students[i].gender, "male") == 0) {
+            pronoun = "his";
+        } else {
+            pronoun = "her";
+        }
+        printf("%s, a %d-year-old student, %s ID is %ld.\n", students[i].name, students[i].age, pronoun, students[i].id);
+    }
+
+    return 0;
+}
+```
+
+### 语法
+
+- 一般情况将结构放在函数外面（全局变量的位置）
+- 别的写法：
+
+    ![alt text](image-10.png)
+
+**1. 初始化**：
+
+- 对于结构体数组，不可`students[0] = {"Alice", 20, 12345, female, 1.65, 'A'};`类似这样初始化。，只能像上面范例程序一样一个一个初始化。如果想这样，只能在定义时就这样初始化，而非定义后再赋值，像这样:
+```c
+struct Student students[10] = {
+    {"Alice", 20, 12345, female, 1.65, 'A'}, // 初始化第一个元素
+    // 其他元素将自动初始化为0（对于数值类型）或空字符串（对于字符数组），但是请注意，上面的语法是在数组声明时对整个数组（或部分数组）进行初始化，而不是在数组已经声明之后对单个元素进行初始化。
+};
+```
+
+示例：
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// 定义结构体
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+// 通过函数初始化结构体
+void initializePerson(struct Person* p, const char* name, int age, float height) {
+    strcpy(p->name, name);
+    p->age = age;
+    p->height = height;
+}
+
+int main() {
+    // 直接赋值初始化
+    struct Person person1;
+    person1.age = 25;
+    strcpy(person1.name, "Alice");
+    person1.height = 5.7;
+
+    // 使用初始化列表初始化（C99标准及以上支持）
+    struct Person person2 = {"Bob", 30, 6.0};
+
+    // 使用初始化列表初始化，并使用类似“关键词传参”的方式
+    struct Person person3 = {"zrz", .age = 18, .height = 8.0}
+
+    // 列表初始化，若不给某int变量传值，默认0
+
+    // 通过函数初始化
+    struct Person person4;
+    initializePerson(&person4, "Charlie", 22, 5.9);
+
+    return 0;
+}
+```
+
+**2. 访问结构成员**
+
+语法：```结构变量.结构成员```
+
+!!! warning "概念"
+
+    结构类型：虚的，一开始定义的那个是结构类型，例如上面的Person
+    结构变量：基于结构类型定义了许多结构变量，例如上面的person1, person2 ……
+
+**3. 结构运算**
+
+重点注意其与数组的区别
+
+- 可以用结构变量的名字访问整个结构
+- 对于整个结构，可以整体赋值，
+    ```c
+    person1 = (struct Person){"Bob", 30, 6.0};
+    //做一个类型转换，相当于上面初始化的操作
+    ```
+    ```c
+    person2 = person1
+    //这是合法的，相当于每个元素都相等，注意这俩结构变量还是不一样的，只不过其中的成员的值是一样的
+    ```
+
+- 整个结构，可以取地址
+
+    注意，结构变量名不是他的地址，取地址必须得用`&`
+
+    ```c
+    struct Person *p_person1 = &person1;
+    ```
+
+- 整个结构，可以作为参数传递给函数
+
+### 结构与函数
+
+整个结构可以作为参数传入函数，这时是在函数内新建一个结构变量，并赋值传入的那个结构的值
+
+结构可以作为函数的返回值
 
 
 ## 编译预处理和宏
@@ -3371,6 +3527,8 @@ return 0;
     ```zsh
     tail try.i
     ```
+
+![alt text](image-11.png)
 
 ??? info ".c，.i， .o，.s 分别是什么"
 
@@ -3562,6 +3720,124 @@ func.h： `extern int VARIBLENAME`
 func.c：`int VARIBLENAME = 12` (在全局变量的位置，最外面)
 
 
+## MISC
+
+### 标签与goto
+
+**label（标签）** 是一种标识符，用于标记一个特定的代码位置，通常与 `goto` 语句配合使用。标签是定义在函数内部的局部标识符，作用范围仅限于所在的函数。
+
+---
+
+**标签的定义语法**
+
+```c
+label_name:
+    statement;
+```
+
+- **`label_name`** 是标签的名字，必须是一个合法的标识符。
+- 冒号 `:` 表示这是一个标签。
+
+**标签的作用**：标签通常与 `goto` 语句一起使用，实现程序流程的无条件跳转。
+
+---
+
+**示例**
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 1;
+
+start: // 标签 start
+    printf("x = %d\n", x);
+    x++;
+    if (x <= 5) {
+        goto start; // 跳转到标签 start
+    }
+
+    return 0;
+}
+```
+
+**运行结果：**
+```
+x = 1
+x = 2
+x = 3
+x = 4
+x = 5
+```
+
+在上面的代码中，`goto start` 语句使程序跳转回 `start` 标签所在的位置，形成了一个循环结构。
+
+---
+
+**标签的特性**
+
+1. **局部性：** 标签只能在定义它的函数内使用。
+2. **唯一性：** 在一个函数内，标签名必须唯一。
+3. **与`goto`配合：** 通常通过 `goto` 来跳转到标签，但仅仅定义标签并不会改变程序的执行顺序。
+
+---
+
+**使用场景**
+
+虽然标签和 `goto` 提供了无条件跳转功能，但它们的使用会影响程序的可读性，容易导致“spaghetti code（意大利面条代码）”，因此应尽量避免使用。  
+
+标签和 `goto` 通常在以下特殊场景中有用：
+
+1. **错误处理：**
+   当函数中出现复杂的嵌套逻辑时，可以使用标签和 `goto` 实现统一的错误处理。
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   int main() {
+       FILE *file = fopen("test.txt", "r");
+       if (!file) {
+           goto error; // 文件打开失败
+       }
+
+       // 正常处理文件
+       fclose(file);
+       return 0;
+
+   error: // 错误处理
+       printf("Error: Unable to open file.\n");
+       return 1;
+   }
+   ```
+
+2. **跳出多重嵌套：**
+   标签可以直接跳出多层嵌套，而不需要复杂的条件判断。
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       for (int i = 0; i < 3; i++) {
+           for (int j = 0; j < 3; j++) {
+               if (i == 1 && j == 1) {
+                   goto end; // 跳出多重循环
+               }
+               printf("i = %d, j = %d\n", i, j);
+           }
+       }
+   end:
+       printf("Loop exited.\n");
+       return 0;
+   }
+   ```
+
+---
+
+注意事项
+1. **尽量避免滥用 `goto` 和标签**，尤其是可以通过结构化控制语句（如 `for`、`while`、`break`、`continue` 等）实现的逻辑，不要用 `goto`。
+2. 标签和 `goto` 的过度使用会使代码难以阅读、难以维护，因此应谨慎使用。
+
+替代方案
+大多数情况下，可以通过函数调用、循环、条件语句（如 `if`）和异常处理机制代替标签和 `goto`。
 
 
 

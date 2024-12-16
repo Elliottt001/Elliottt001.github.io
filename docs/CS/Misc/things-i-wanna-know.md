@@ -12,8 +12,22 @@
 
 - 各种报错信息
 
+- [搜：gcc gnu g++ ……](https://blog.csdn.net/weixin_41973774/article/details/120219649)
+
+- [意面代码、圈复杂度](https://blog.csdn.net/msc1211/article/details/120446642)
+
+- [gcc](https://blog.csdn.net/qq_42965223/article/details/122739839), [gcc-better](https://blog.csdn.net/b_ingram/article/details/118946166)
+
+- [python多线程](https://blog.csdn.net/qq_42475711/article/details/106956460)
+
+- C++模块化开发
+
 ## 知识
 
 - [cmake](https://blog.csdn.net/Torres_10/article/details/80371425)
 
 - [makefile](https://blog.csdn.net/ruglcc/article/details/7814546/)
+
+- [用vscode编写大project-2](https://docs.pingcode.com/ask/272978.html)，[1](https://www.cnblogs.com/Roboduster/p/15315817.html)
+
+- 寒假学学快捷键
