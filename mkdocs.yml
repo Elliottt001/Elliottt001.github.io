@@ -27,26 +27,27 @@ nav:
   - 知识:
     - KNOWLEDGE/index.md
     - Note:
-      - Calculus:
-        - Knowledge Frame: KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
-        - Summary: KNOWLEDGE/Note/Calculus/Summary of Calculus.md
+      - 微积分:
+        - 知识体系: KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
+        - 方法总结: KNOWLEDGE/Note/Calculus/Summary of Calculus.md
         - Thought: KNOWLEDGE/Note/Calculus/thought for calculus.md
-      - Linear Algebra:
-        - Knowledge Frame: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
-        - Summary: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
+      - 线性代数:
+        - 知识体系: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
+        - 方法总结: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
   - 开发:
     - CS/index.md
-    - Programming:
-      - C:
-        - Note: CS/Programming/C/C Note.md
-        - Errors and Tips: CS/Programming/C/C Errors and Tips.md
-        - Questions: CS/Programming/C/C questions.md
+    - 编程语言:
+      - C/C++:
+        - C语言: 
+          - 学习笔记: CS/pl/C_Cpp/C/C Note.md
+          - 错题整理: CS/pl/C_Cpp/C/C Errors and Tips.md
+        - C++:
       - Python:
-        - Note: CS/Programming/Python/Python Note.md
-    - Algorithm: 
+        - 学习笔记: CS/pl/Python/Python Note.md 
+    - 算法相关: 
       - Misc: CS/Algorithm/misc.md
       - Sort: CS/Algorithm/sort.md
-    - Tools:
+    - 实用工具:
       - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
@@ -58,23 +59,13 @@ nav:
       - GDB: CS/Tools/GDB.md
       - Obsidian: CS/Tools/Obsidian.md
       - Mkdocs: CS/Tools/mkdocs.md
-    - 拾遗:
-      - Front End: CS/拾遗/Front End.md
-      - Hardware: CS/拾遗/Hardware.md
-    - AI:
+    - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
       - DL: CS/AI/DL.md
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
-    - Project:
-      - crawler:
-        - Law: CS/Project/Crawler/law.md
-        - Note: CS/Project/Crawler/note.md
-        - DoubanTop250: CS/Project/Crawler/DoubanTop250Code.md
-        - DoubanHot: CS/Project/Crawler/DoubanHotCode.md
-      - game:
-        - CS/Project/Game/SnakeCode.md
+
   - 阅读:
     - 原则: BOOK/principles.md
   - 随笔:

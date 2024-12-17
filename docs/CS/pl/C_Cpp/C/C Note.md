@@ -1,11 +1,7 @@
-# Note
+## 数据类型
 
-## 数据类型、运算符、表达式
-
-### 数据类型
-
-#### 变量和常量
-- 变量
+### 变量和常量
+#### 变量
    - 作用：开一块内存放数据
    - 定义：
       - C89：变量必须在程序一开始全部定义
@@ -16,7 +12,111 @@
 
    - 赋值：若不赋值则随机值
 
-- 常量
+##### 全局变量
+
+生存期和作用域独立于函数，都在全局。
+
+**初始化**：
+
+- 可以初始化，但要求是只能用编译时刻已知的值来初始化它，这里，全局变量的初始化在main函数之前。
+- 不初始化：数字得到0；指针得到NULL
+
+示例：
+
+```c
+int gAll = 12;  // 编译通过
+
+int gAll = f();  // 编译错误
+
+int gAll = 12;
+int g2 = gAll;  // 编译错误
+
+const int gAll;
+int g2 = gAll;  // 编译通过，但是不建议这样，尤其在大程序中。
+
+int g2 = gAll; 
+const int gAll;  // 编译错误
+```
+
+**（全局）变量的隐藏**
+
+在更小的地方定义的变量，会将更大的地方定义的同名变量掩盖
+
+- 函数内部本地变量会掩盖全局变量
+
+- 函数内部再开一个块（｛｝），在里面定义一个变量，他会覆盖这个块外面的同名变量。
+
+##### 静态本地变量
+
+**语法：** 变量定义前面加上 `static` 修饰符。
+
+**特点：** 
+
+- 函数离开时，保留其值
+
+- 和全局变量在相同的内存区域（很小的地址），而动态本地变量的地址很大
+
+- 生存期：全局；作用域：函数内部（只有函数内部可以访问，这也是 `static` 的意思：局部作用域。
+
+**使用**
+
+- 函数返回本地变量的地址 / 的值 会有warning：这个变量在函数结束后就没了，不要这样干
+
+- 不要使用全局变量在函数之间传递参数和结果
+
+- 尽量避免使用全局变量
+
+- 使用全局变量和静态本地变量的函数是线程不安全的。
+
+**其他**
+
+- C语言有很多区放变量：常量区、静态区、栈区、堆区
+- 动态变量 auto
+    - 特点：调用一次分配一次内存，调用结束就释放了，重来
+    - 定义：在C语言中，`auto` 关键字用于声明自动存储期的局部变量。它告诉编译器，该变量应该在栈上分配，并且其生命周期仅限于声明它的函数或代码块。然而，`auto` 关键字实际上是可选的，因为在函数内部声明的变量默认就是自动存储期的。
+    - 在C99标准之前，`auto` 关键字是必需的，但在C99及以后的标准中，它变得可选。
+- 静态变量 static
+    - 特点：整个程序运行期间存在，等程序结束后释放
+- 全局静态变量
+    - 作用：只可以使其在声明的文件中可见，避免与其他文件中同名变量冲突
+- 静态函数 ```static int function_name(parameter_type parameter)```
+    - 作用：只能在所声明的文件中调用，其他文件不可使用：辅助函数、实用函数限制在特定文件中
+- 局部静态变量
+    - 定义：函数内部定义的静态变量
+    - 作用：类似全局变量，函数调用结束后，其值不会被销毁，而是保持存在
+    - 用处：重复使用，这一次的接着上一次的值用
+
+```c
+#include<stdio.h>
+//三个变量都赋初始值0
+int global = 0;  //global为全局变量
+void stc()
+{
+    int n = 0;  //n 为局部变量
+    static int sta = 0;  //sta为静态局部变量
+    n++; sta++; global++;  //函数每次执行都对三个变量+1
+    printf("%d ", n); printf("%d ", sta); printf("%d ", global);
+}
+int main()
+{
+    int i;
+    for(i = 1; i <= 5; i++){
+        stc(); printf("\n");  //三次调用函数
+    }
+    return 0; 
+}
+/* 输出：
+1 1 1 
+1 2 2 
+1 3 3 
+1 4 4 
+1 5 5 
+全局变量和静态局部变量都延续了上次调用的结果继续+，局部变量从初始值开始
+*/
+```
+
+
+#### 常量
 
    - 定义
 	   -  `const`只读变量
@@ -26,8 +126,16 @@
       不加逗号
       eg：`#define PI 3.1415`
 
+**字符串常量**
 
-#### 基本数据类型
+`__func__` ：表示当前函数的名称。
+
+- 它在函数的任何地方都可以使用，不需要传递或定义额外的变量。
+- __func__的值是编译器在编译时自动填充的，
+且是一个预定义标识符，故不能被重新定义。
+
+
+**基本数据类型总表:**
 
 | 类别   | 名称             | 类型名                | 数据长度 | 取值范围                              | 格式说明符 |
 |--------|------------------|-----------------------|----------|---------------------------------------|------------|
@@ -54,7 +162,7 @@
 
 - scanf：以行为单位，按下回车前不会读到任何东西
 
-##### 整型
+### 整型
 
 **定义**
 
@@ -99,7 +207,7 @@
 
 溢出：会有进位，溢出最高位舍
 
-###### 示例
+**示例**
 
 ```c
 int a = -1;
@@ -115,7 +223,7 @@ printf("%d, %o, %x", 10, 10, 10);
 printf("%d, %d, %d", 10, 010, 0x10);
 ```
 
-##### 实型/浮点型
+### 实型/浮点型
 	
 **定义**
 
@@ -170,7 +278,7 @@ if(f1 == f2){}
 fabs(f1 - f2) < 1e-12  //其实1e-8就够了
 ```
 
-##### 字符型
+### 字符型
 
 **定义**
 	
@@ -252,10 +360,10 @@ fabs(f1 - f2) < 1e-12  //其实1e-8就够了
     ```
 
 
-##### 关系
+**关系**:
 整型和字符型可以按ASCII随便交换
 
-##### 类型转换
+### 类型转换
 
 **零、情况**
 
@@ -317,9 +425,7 @@ warning: overflow in conversion from ‘long int’ to ‘short int’ changes v
     // Output: x mod 3 = 0
 ```
 
-#### 其他数据类型
-
-##### 枚举
+### 枚举
 
 **定义&规则：**
 
@@ -457,7 +563,546 @@ void checkState(enum State s) {
 }
 ```
 
-##### typedef自定义类型
+
+### 结构
+
+结构是一种数据类型，它在语法上与python中的字典、类都有相似之处。
+
+想不清楚时，将其当作int类型。因为本质上其都是一种数据类型。
+
+示例：
+
+```c
+
+#include <stdio.h>
+#include <string.h>
+
+struct student {
+    char name[50];  
+    int age;
+    long int id;
+    char gender[10]; 
+    double height;
+    char bloodtype;
+};  //这是一条C语言定义变量的语句，别忘了最后的分号；另外这段代码的作用是“声明结构类型”
+
+int main() {
+    struct student students[3];  //这是在定义一个结构变量
+    // 设置第一个学生的属性
+    strcpy(students[0].name, "Alice");
+    students[0].age = 20;
+    students[0].id = 123456789;
+    strcpy(students[0].gender, "female");
+    students[0].height = 1.65;
+    students[0].bloodtype = 'A';
+
+    // 设置第二个学生的属性
+    strcpy(students[1].name, "Bob");
+    students[1].age = 22;
+    students[1].id = 987654321;
+    strcpy(students[1].gender, "male");
+    students[1].height = 1.80;
+    students[1].bloodtype = 'B';
+
+    // 设置第三个学生的属性
+    strcpy(students[2].name, "Charlie");
+    students[2].age = 19;
+    students[2].id = 555555555;
+    strcpy(students[2].gender, "male");
+    students[2].height = 1.75;
+    students[2].bloodtype = 'O';
+
+    // 输出每个学生的信息
+    for (int i = 0; i < 3; i++) {
+        const char *pronoun;
+        if (strcmp(students[i].gender, "male") == 0) {
+            pronoun = "his";
+        } else {
+            pronoun = "her";
+        }
+        printf("%s, a %d-year-old student, %s ID is %ld.\n", students[i].name, students[i].age, pronoun, students[i].id);
+    }
+
+    return 0;
+}
+```
+
+#### 语法
+
+- 一般情况将结构放在函数外面（全局变量的位置）
+- 别的写法：
+
+    ![alt text](image-10.png)
+
+**1. 初始化**：
+
+- 对于结构体数组，不可`students[0] = {"Alice", 20, 12345, female, 1.65, 'A'};`类似这样初始化。，只能像上面范例程序一样一个一个初始化。如果想这样，只能在定义时就这样初始化，而非定义后再赋值，像这样:
+```c
+struct Student students[10] = {
+    {"Alice", 20, 12345, female, 1.65, 'A'}, // 初始化第一个元素
+    // 其他元素将自动初始化为0（对于数值类型）或空字符串（对于字符数组），但是请注意，上面的语法是在数组声明时对整个数组（或部分数组）进行初始化，而不是在数组已经声明之后对单个元素进行初始化。
+};
+```
+
+示例：
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// 定义结构体
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+// 通过函数初始化结构体
+void initializePerson(struct Person* p, const char* name, int age, float height) {
+    strcpy(p->name, name);
+    p->age = age;
+    p->height = height;
+}
+
+int main() {
+    // 直接赋值初始化
+    struct Person person1;
+    person1.age = 25;
+    strcpy(person1.name, "Alice");
+    person1.height = 5.7;
+
+    // 使用初始化列表初始化（C99标准及以上支持）
+    struct Person person2 = {"Bob", 30, 6.0};
+
+    // 使用初始化列表初始化，并使用类似“关键词传参”的方式
+    struct Person person3 = {"zrz", .age = 18, .height = 8.0}
+
+    // 列表初始化，若不给某int变量传值，默认0
+
+    // 通过函数初始化
+    struct Person person4;
+    initializePerson(&person4, "Charlie", 22, 5.9);
+
+    return 0;
+}
+```
+
+**2. 访问结构成员**
+
+语法：```结构变量.结构成员```
+
+!!! warning "概念"
+
+    结构类型：虚的，一开始定义的那个是结构类型，例如上面的Person
+    结构变量：基于结构类型定义了许多结构变量，例如上面的person1, person2 ……
+
+**3. 结构运算**
+
+重点注意其与数组的区别
+
+- 可以用结构变量的名字访问整个结构
+- 对于整个结构，可以整体赋值，
+    ```c
+    person1 = (struct Person){"Bob", 30, 6.0};
+    //做一个类型转换，相当于上面初始化的操作
+    ```
+    ```c
+    person2 = person1
+    //这是合法的，相当于每个元素都相等，注意这俩结构变量还是不一样的，只不过其中的成员的值是一样的
+    ```
+
+- 整个结构，可以取地址
+
+    注意，结构变量名不是他的地址，取地址必须得用`&`
+
+    ```c
+    struct Person *p_person1 = &person1;
+    ```
+
+- 整个结构，可以作为参数传递给函数
+
+#### 结构与函数
+
+整个结构可以作为参数传入函数，这时是在函数内新建一个结构变量，并赋值传入的那个结构的值
+
+结构可以作为函数的返回值
+
+**输入结构：**
+
+结构与数组的区别：
+
+- 在传入函数时，结构与普通的int变量类似，要在函数内部更改它，得传地址。因为传入函数，函数接收到的实际是结构的值，不是这个变量，与原结构无关。
+
+- 数组在传入函数时，传入的是这个数组变量。
+
+解决方案1：在函数内部copy一个一样的临时的结构变量，讲这个结构返回
+
+```c
+struct point inputStruct(void)
+{
+    struct point p{/*代码块，要求与main函数里面的一样*/};
+    /*代码块*/
+    return p;
+}
+
+int main()
+{
+    struct point dest{/*代码块*/};
+    dest = inputStruct();
+    printf(/*语句*/)
+}
+```
+该方法不好
+
+解决方案2：
+
+!!! quote "K&R"
+
+    “lf a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure”
+
+
+**指向结构的指针**
+
+!!! success "指针与函数"
+
+    常用：一个函数的参数是指针，返回值也是指针；目的是将这个值的指针输入，在函数内部更改完之后再返回出去，好处是返回的指针可以再用于其他代码，例如作为其他函数的参数，反复调用。
+
+语法：`pointer -> member`，代表 “这个指针所指的那个结构变量里的那个成员”。
+
+示例：
+```c
+/*定义一个结构变量today，里面有一个成员是month*/
+struct date today;
+struct date* ptoday = &today;
+(*p).month = 12;
+p -> month = 12;
+```
+
+**使用示例：**
+
+```c
+#include<stdio.h>
+struct date {
+    int month;
+    int day;
+};
+
+struct date* getStruct(struct date *p);
+void printSturct(const struct date* p);
+
+int main()
+{
+    struct date today;
+    printSturct(getStruct(&today));
+    
+    *getStruct(&today) = (struct date){12, 18};
+    printSturct(&today);
+
+    getStruct(&today) -> day = 19;
+    printSturct(&today);
+    return 0;
+}
+
+struct date* getStruct(struct date *p)
+{
+    scanf("%d %d", &(p -> month), &(p -> day));
+    return p;
+}
+
+void printSturct(const struct date* p)
+{
+    printf("%d-%d\n", p -> month, p -> day);
+}
+```
+
+#### 结构数组
+
+*结构数组的本质是**数组**，只不过该数组的元素是结构体类型的数据*
+
+
+**语法**
+
+```c
+struct class {
+    char* name;
+    int age;
+    long int id;
+};
+
+int main()
+{
+    struct class student[26] = {{"zrz", 18, 3240105996}, {"hhh", 18, 3240100000}};
+}
+```
+
+#### 结构中的结构
+
+**语法：**还是按照普通变量来理解
+
+**示例：**
+```c
+struct point {
+    int x;
+    int y;
+};
+
+struct rectangle {
+    struct point pt1;
+    struct point pt2;
+};
+
+int main()
+{
+    struct rectangle rt1;
+    struct rectangle *prt1 = &rt1;
+    scanf("%d %d", &(rt1.pt1.x), &(rt1.pt1.y));
+    scanf("%d %d", &(prt1 -> pt2.x), &(prt1 -> pt2.y));
+}
+```
+
+
+
+另外，结构和数组等可以无限组合嵌套，例如结构中的结构的数组
+
+### 联合
+
+**定义语法**：与结构很像
+
+```c
+union Person{
+    char* name;
+    int age;
+};
+```
+```c
+typedef union person{
+    char* name;
+    int age;
+}Person;
+//使用typedef
+```
+
+**存储**：
+
+- 所有成员共享一个内存空间
+
+- 同一时间只有一个成员是有效的
+
+    即填入另一个成员的值即将前面的冲掉
+
+- 联合的大小`sizeof(union)`是其最大的成员
+
+**初始化**：对第一个成员初始化
+
+**应用场景**
+
+
+1. **节省内存**：
+   联合最常见的用途之一是节省内存。例如，在处理需要多种数据类型但只会使用其中一种的场景下，使用联合可以避免每种数据类型都占用单独的内存区域。
+   ```c
+   union Data {
+       int i;
+       float f;
+       char str[20];
+   };
+   ```
+   在这个例子中，`Data`联合只需要足够存储最大的成员（`char str[20]`）的内存，而不需要分别为`int`、`float`和`char[]`分配内存空间。
+
+2. **简化存储不同格式的数据**：
+   联合可以存储不同类型的数据，在需要存储多种不同数据格式但只需存储一个格式的情况下特别有用。例如，读取网络数据时，我们可能会在同一位置存储整数、浮点数或字符串等不同数据类型。
+   ```c
+   union Packet {
+       int data_int;
+       float data_float;
+       char data_string[50];
+   };
+   ```
+
+3. **实现类型安全的多态（polymorphism）**：
+   在没有面向对象支持的语言（如C语言）中，可以使用联合类型模拟多态。联合类型允许函数根据需要选择合适的数据类型来操作。
+   ```c
+   union Value {
+       int intVal;
+       float floatVal;
+   };
+
+   void printValue(union Value v, int isInt) {
+       if (isInt) {
+           printf("Integer: %d\n", v.intVal);
+       } else {
+           printf("Float: %.2f\n", v.floatVal);
+       }
+   }
+   ```
+   通过使用`isInt`标识符，函数`printValue`可以根据需要处理不同类型的数据。
+
+4. **嵌入式系统中的硬件寄存器操作**：
+   在嵌入式开发中，联合可以方便地访问硬件寄存器的不同部分。例如，一个32位的硬件寄存器可以被分解为多个8位字段。
+   ```c
+   union Register {
+       unsigned int regVal;  // 32位的寄存器值
+       struct {
+           unsigned char lowByte;
+           unsigned char highByte;
+           unsigned char midByte1;
+           unsigned char midByte2;
+       };
+   };
+   ```
+   通过使用联合，程序可以以不同的方式访问寄存器的内容（如整个32位寄存器或分解后的各个字节）。
+
+5. **类型转换（Type casting）**：
+   联合在C语言中也常用于类型转换，尤其是在需要通过不同类型的视图来查看同一块内存数据时。例如，在实现某些特定算法时，可能需要通过联合来在整数和浮点数之间进行转换。
+   ```c
+   union Convert {
+       int i;
+       float f;
+   };
+
+   union Convert c;
+   c.i = 10;
+   printf("As float: %.2f\n", c.f);  // 输出解释：通过联合将整数以浮动数显示
+   ```
+
+6. **实现简易的自定义数据结构**：
+   联合可以用于实现自定义的数据结构。例如，当数据结构中有多个可能的数据类型时，可以使用联合来减少内存占用。
+   ```c
+   struct Shape {
+       int type;
+       union {
+           int radius;     // 圆形
+           struct {        // 矩形
+               int width;
+               int height;
+           };
+       };
+   };
+   ```
+   在这个例子中，`Shape`结构体根据`type`字段的不同值来区分它是圆形还是矩形，并通过联合在同一内存位置存储不同的数据类型。
+
+
+
+1. **解析复杂的数据格式**：
+   联合类型非常适合用来解析复杂的二进制数据格式。不同的数据字段可以用不同的方式解读。使用联合可以更方便地从一个字节流中提取不同类型的数据，常见于文件解析或网络数据包的处理。
+   ```c
+   union DataPacket {
+       uint32_t integerData;
+       float floatData;
+       char stringData[16];
+   };
+
+   union DataPacket packet;
+   packet.integerData = 0x12345678;  // 作为整数处理
+   printf("Integer: %u\n", packet.integerData);
+   packet.floatData = 3.14159f;       // 作为浮点数处理
+   printf("Float: %.4f\n", packet.floatData);
+   packet.stringData[0] = 'H';       // 作为字符串处理
+   packet.stringData[1] = 'i';
+   packet.stringData[2] = '\0';
+   printf("String: %s\n", packet.stringData);
+   ```
+
+2. **用于操作不同数据结构**：
+   联合可以用来处理包含多种不同数据结构的数据，例如，某个函数可能需要在不同情况下处理不同的数据结构。通过联合，你可以在同一个内存空间内实现这些数据结构的共享。
+   ```c
+   union Data {
+       struct {
+           int x;
+           int y;
+       } point;  // 用于存储坐标
+       struct {
+           int width;
+           int height;
+       } rectangle;  // 用于存储矩形尺寸
+   };
+   ```
+   在这个例子中，`Data`联合可以存储一个坐标点或一个矩形的尺寸，但不能同时存储两者。
+
+3. **优化内存池管理**：
+   在内存池管理中，联合可用于构建高效的内存分配方案。例如，在一个内存池中管理不同类型的对象时，使用联合类型可以为每个对象节省内存。
+   ```c
+   union Object {
+       int intValue;
+       float floatValue;
+       char strValue[50];
+   };
+
+   struct MemoryPool {
+       union Object objects[100];
+   };
+   ```
+   这里的内存池`MemoryPool`可以用来管理100个对象，每个对象可能是一个整数、浮点数或字符串，而不必为每种类型分配不同的内存块。
+
+4. **简化图像处理中的像素表示**：
+   在图像处理或图形编程中，像素的数据表示可以使用联合来简化处理。例如，一个像素可能包含RGB（红、绿、蓝）三个颜色通道，可以将其表示为一个整数，也可以将每个通道分开存储。
+   ```c
+   union Pixel {
+       uint32_t rgba;  // 32位整数表示一个像素
+       struct {
+           unsigned char r;
+           unsigned char g;
+           unsigned char b;
+           unsigned char a;  // alpha透明度
+       };
+   };
+   ```
+
+5. **模拟操作系统中的进程状态**：
+   在操作系统中，可以使用联合来模拟进程的不同状态。一个进程的状态可能包含不同类型的数据结构（如寄存器值、程序计数器、堆栈指针等）。通过联合，可以根据需要访问不同的状态信息。
+   ```c
+   union ProcessState {
+       uint32_t registers[8];  // 存储8个通用寄存器
+       struct {
+           uint32_t pc;  // 程序计数器
+           uint32_t sp;  // 堆栈指针
+       };
+   };
+   ```
+   通过使用联合，操作系统内核可以方便地访问进程的寄存器内容或程序计数器与堆栈指针。
+
+6. **模拟设备控制寄存器**：
+   在硬件编程中，联合类型常用于模拟设备的控制寄存器，其中不同的控制位可能对应不同的控制功能。通过联合，可以以不同的视角来访问同一寄存器。
+   ```c
+   union ControlRegister {
+       uint32_t regValue;  // 32位寄存器值
+       struct {
+           unsigned bit0 : 1;  // 控制位0
+           unsigned bit1 : 1;  // 控制位1
+           unsigned bit2 : 1;  // 控制位2
+           unsigned bit3 : 1;  // 控制位3
+           unsigned bit4 : 1;  // 控制位4
+           unsigned reserved : 27;  // 其他保留位
+       };
+   };
+   ```
+   在这个例子中，`ControlRegister`联合让你可以直接访问控制寄存器的32位值，也可以单独操作每个控制位。
+
+??? info "总结"
+
+    C语言中的联合类型是一种有效的节省内存的工具，特别适合在程序中存储和操作多种类型的数据。它能够用于实现多态、硬件寄存器的高效操作、类型转换、数据结构优化等多种实际应用。通过共享内存空间，联合可以极大地减少内存消耗，尤其是在内存资源有限的嵌入式系统和其他高效计算场景中。
+
+### 自定义数据类型（typedef）
+
+**语法：**
+
+```c
+typedef 原类型名 自定义新类型名;
+```
+例如，`typedef int Length;` ：这样，`Length` 成为 `int` 的别名，可以代替 `int` 。
+
+再如；
+
+```c
+typedef struct adate{
+    int month;
+    int day;
+    int year;
+} Date;
+Date d = {12, 17, 2024};
+```
+`Date` 代表 `typedef` 和 `Date` 中间所有东西，`Date` $\Leftrightarrow$ `struct adate`
+
+
 
 `typedef` 用于给现有类型定义新的别名或创建易于使用的自定义类型。
 
@@ -675,51 +1320,6 @@ int main() {
     在不同的场景中，根据需求使用 `typedef` 可以使代码更加清晰简洁。
 
 ### 杂项
-- static & auto
-	- C语言有很多区放变量：常量区、静态区、栈区、堆区
-	- 动态变量 auto
-		- 特点：调用一次分配一次内存，调用结束就释放了，重来
-		- 定义：在C语言中，`auto` 关键字用于声明自动存储期的局部变量。它告诉编译器，该变量应该在栈上分配，并且其生命周期仅限于声明它的函数或代码块。然而，`auto` 关键字实际上是可选的，因为在函数内部声明的变量默认就是自动存储期的。
-		- 在C99标准之前，`auto` 关键字是必需的，但在C99及以后的标准中，它变得可选。
-	- 静态变量 static
-		- 特点：整个程序运行期间存在，等程序结束后释放
-	- 全局静态变量
-		- 作用：只可以使其在声明的文件中可见，避免与其他文件中同名变量冲突
-	- 静态函数 ```static int function_name(parameter_type parameter)```
-		- 作用：只能在所声明的文件中调用，其他文件不可使用：辅助函数、实用函数限制在特定文件中
-    - 局部静态变量
-		- 定义：函数内部定义的静态变量
-		- 作用：类似全局变量，函数调用结束后，其值不会被销毁，而是保持存在
-		- 用处：重复使用，这一次的接着上一次的值用
-
-```c
-#include<stdio.h>
-//三个变量都赋初始值0
-int global = 0;  //global为全局变量
-void stc()
-{
-    int n = 0;  //n 为局部变量
-    static int sta = 0;  //sta为静态局部变量
-    n++; sta++; global++;  //函数每次执行都对三个变量+1
-    printf("%d ", n); printf("%d ", sta); printf("%d ", global);
-}
-int main()
-{
-    int i;
-    for(i = 1; i <= 5; i++){
-        stc(); printf("\n");  //三次调用函数
-    }
-    return 0; 
-}
-/* 输出：
-1 1 1 
-1 2 2 
-1 3 3 
-1 4 4 
-1 5 5 
-全局变量和静态局部变量都延续了上次调用的结果继续+，局部变量从初始值开始
-*/
-```
 
 ??? info "ASCII"
         
@@ -842,7 +1442,7 @@ int main()
     单个数字0(0)（ASCII的0位）就是'\0'；带引号的字符0('0') 是ASCII的48位
 	
 
-### 运算符和表达式
+## 运算符和表达式
 
 !!! success "牢记几句话"
 
@@ -861,7 +1461,7 @@ int main()
 算术表达式、赋值表达式、关系表达式、逻辑表达式、条件表达式和逗号表达式 
 
 
-#### 优先级
+### 优先级
 
 最好都加上逗号
 
@@ -891,7 +1491,7 @@ int main()
     - &&：前面假后面不算
 
 
-#### 位运算
+### 位运算
 结果是表达式的值
 
 !!! warning "重点"
@@ -3206,308 +3806,6 @@ free() and malloc() is 绑定使用的
     因此，除非完全清楚这样做的后果，否则应避免将 `int` 和 `char` 类型的指针相互赋值。在实际编程中，最好使用相同类型的指针来操作相同类型的数据。
 
 
-## 结构
-
-结构是一种数据类型，它在语法上与python中的字典、类都有相似之处。
-
-想不清楚时，将其当作int类型。因为本质上其都是一种数据类型。
-
-示例：
-
-```c
-
-#include <stdio.h>
-#include <string.h>
-
-struct student {
-    char name[50];  
-    int age;
-    long int id;
-    char gender[10]; 
-    double height;
-    char bloodtype;
-};  //这是一条C语言定义变量的语句，别忘了最后的分号；另外这段代码的作用是“声明结构类型”
-
-int main() {
-    struct student students[3];  //这是在定义一个结构变量
-    // 设置第一个学生的属性
-    strcpy(students[0].name, "Alice");
-    students[0].age = 20;
-    students[0].id = 123456789;
-    strcpy(students[0].gender, "female");
-    students[0].height = 1.65;
-    students[0].bloodtype = 'A';
-
-    // 设置第二个学生的属性
-    strcpy(students[1].name, "Bob");
-    students[1].age = 22;
-    students[1].id = 987654321;
-    strcpy(students[1].gender, "male");
-    students[1].height = 1.80;
-    students[1].bloodtype = 'B';
-
-    // 设置第三个学生的属性
-    strcpy(students[2].name, "Charlie");
-    students[2].age = 19;
-    students[2].id = 555555555;
-    strcpy(students[2].gender, "male");
-    students[2].height = 1.75;
-    students[2].bloodtype = 'O';
-
-    // 输出每个学生的信息
-    for (int i = 0; i < 3; i++) {
-        const char *pronoun;
-        if (strcmp(students[i].gender, "male") == 0) {
-            pronoun = "his";
-        } else {
-            pronoun = "her";
-        }
-        printf("%s, a %d-year-old student, %s ID is %ld.\n", students[i].name, students[i].age, pronoun, students[i].id);
-    }
-
-    return 0;
-}
-```
-
-### 语法
-
-- 一般情况将结构放在函数外面（全局变量的位置）
-- 别的写法：
-
-    ![alt text](image-10.png)
-
-**1. 初始化**：
-
-- 对于结构体数组，不可`students[0] = {"Alice", 20, 12345, female, 1.65, 'A'};`类似这样初始化。，只能像上面范例程序一样一个一个初始化。如果想这样，只能在定义时就这样初始化，而非定义后再赋值，像这样:
-```c
-struct Student students[10] = {
-    {"Alice", 20, 12345, female, 1.65, 'A'}, // 初始化第一个元素
-    // 其他元素将自动初始化为0（对于数值类型）或空字符串（对于字符数组），但是请注意，上面的语法是在数组声明时对整个数组（或部分数组）进行初始化，而不是在数组已经声明之后对单个元素进行初始化。
-};
-```
-
-示例：
-
-```c
-#include <stdio.h>
-#include <string.h>
-
-// 定义结构体
-struct Person {
-    char name[50];
-    int age;
-    float height;
-};
-
-// 通过函数初始化结构体
-void initializePerson(struct Person* p, const char* name, int age, float height) {
-    strcpy(p->name, name);
-    p->age = age;
-    p->height = height;
-}
-
-int main() {
-    // 直接赋值初始化
-    struct Person person1;
-    person1.age = 25;
-    strcpy(person1.name, "Alice");
-    person1.height = 5.7;
-
-    // 使用初始化列表初始化（C99标准及以上支持）
-    struct Person person2 = {"Bob", 30, 6.0};
-
-    // 使用初始化列表初始化，并使用类似“关键词传参”的方式
-    struct Person person3 = {"zrz", .age = 18, .height = 8.0}
-
-    // 列表初始化，若不给某int变量传值，默认0
-
-    // 通过函数初始化
-    struct Person person4;
-    initializePerson(&person4, "Charlie", 22, 5.9);
-
-    return 0;
-}
-```
-
-**2. 访问结构成员**
-
-语法：```结构变量.结构成员```
-
-!!! warning "概念"
-
-    结构类型：虚的，一开始定义的那个是结构类型，例如上面的Person
-    结构变量：基于结构类型定义了许多结构变量，例如上面的person1, person2 ……
-
-**3. 结构运算**
-
-重点注意其与数组的区别
-
-- 可以用结构变量的名字访问整个结构
-- 对于整个结构，可以整体赋值，
-    ```c
-    person1 = (struct Person){"Bob", 30, 6.0};
-    //做一个类型转换，相当于上面初始化的操作
-    ```
-    ```c
-    person2 = person1
-    //这是合法的，相当于每个元素都相等，注意这俩结构变量还是不一样的，只不过其中的成员的值是一样的
-    ```
-
-- 整个结构，可以取地址
-
-    注意，结构变量名不是他的地址，取地址必须得用`&`
-
-    ```c
-    struct Person *p_person1 = &person1;
-    ```
-
-- 整个结构，可以作为参数传递给函数
-
-### 结构与函数
-
-整个结构可以作为参数传入函数，这时是在函数内新建一个结构变量，并赋值传入的那个结构的值
-
-结构可以作为函数的返回值
-
-**输入结构：**
-
-结构与数组的区别：
-
-- 在传入函数时，结构与普通的int变量类似，要在函数内部更改它，得传地址。因为传入函数，函数接收到的实际是结构的值，不是这个变量，与原结构无关。
-
-- 数组在传入函数时，传入的是这个数组变量。
-
-解决方案1：在函数内部copy一个一样的临时的结构变量，讲这个结构返回
-
-```c
-struct point inputStruct(void)
-{
-    struct point p{/*代码块，要求与main函数里面的一样*/};
-    /*代码块*/
-    return p;
-}
-
-int main()
-{
-    struct point dest{/*代码块*/};
-    dest = inputStruct();
-    printf(/*语句*/)
-}
-```
-该方法不好
-
-解决方案2：
-
-!!! quote "K&R"
-
-    “lf a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure”
-
-
-**指向结构的指针**
-
-!!! success "指针与函数"
-
-    常用：一个函数的参数是指针，返回值也是指针；目的是将这个值的指针输入，在函数内部更改完之后再返回出去，好处是返回的指针可以再用于其他代码，例如作为其他函数的参数，反复调用。
-
-语法：`pointer -> member`，代表 “这个指针所指的那个结构变量里的那个成员”。
-
-示例：
-```c
-/*定义一个结构变量today，里面有一个成员是month*/
-struct date today;
-struct date* ptoday = &today;
-(*p).month = 12;
-p -> month = 12;
-```
-
-**使用示例：**
-
-```c
-#include<stdio.h>
-struct date {
-    int month;
-    int day;
-};
-
-struct date* getStruct(struct date *p);
-void printSturct(const struct date* p);
-
-int main()
-{
-    struct date today;
-    printSturct(getStruct(&today));
-    
-    *getStruct(&today) = (struct date){12, 18};
-    printSturct(&today);
-
-    getStruct(&today) -> day = 19;
-    printSturct(&today);
-    return 0;
-}
-
-struct date* getStruct(struct date *p)
-{
-    scanf("%d %d", &(p -> month), &(p -> day));
-    return p;
-}
-
-void printSturct(const struct date* p)
-{
-    printf("%d-%d\n", p -> month, p -> day);
-}
-```
-
-### 结构数组
-
-*结构数组的本质是**数组**，只不过该数组的元素是结构体类型的数据*
-
-
-**语法**
-
-```c
-struct class {
-    char* name;
-    int age;
-    long int id;
-};
-
-int main()
-{
-    struct class student[26] = {{"zrz", 18, 3240105996}, {"hhh", 18, 3240100000}};
-}
-```
-
-### 结构中的结构
-
-**语法：**还是按照普通变量来理解
-
-**示例：**
-```c
-struct point {
-    int x;
-    int y;
-};
-
-struct rectangle {
-    struct point pt1;
-    struct point pt2;
-};
-
-int main()
-{
-    struct rectangle rt1;
-    struct rectangle *prt1 = &rt1;
-    scanf("%d %d", &(rt1.pt1.x), &(rt1.pt1.y));
-    scanf("%d %d", &(prt1 -> pt2.x), &(prt1 -> pt2.y));
-}
-```
-
-
-
-另外，结构和数组等可以无限组合嵌套，例如结构中的结构的数组
-
-
-
 
 ## 编译预处理和宏
 ### 编译预处理
@@ -3859,6 +4157,628 @@ int main(){
 func.h： `extern int VARIBLENAME` 
 
 func.c：`int VARIBLENAME = 12` (在全局变量的位置，最外面)
+
+
+## 文件
+
+### 格式化输入输出
+
+`printf : %[flags][width][.prec][hlL]type`
+
+| **部分**             | **说明**                                                                                   | **示例代码**                                                                                             | **输出**              |
+|-----------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------------------|
+| **`%`**              | 格式说明符的起始标志。                                                                    | `printf("Value: %d\n", 42);`                                                                              | `Value: 42`          |
+| **`[flags]`**         | 可选标志，用于修改输出格式：                                                              |                                                                                                          |                       |
+| - `-`                | 左对齐输出（默认右对齐）。                                                                | `printf("\|%-10d\|\n", 42);`                                                                               | `\|42        \|`        |
+| - `+`                | 输出符号（正数带`+`，负数带`-`）。                                                        | `printf("%+d\n", 42); printf("%+d\n", -42);`                                                             | `+42` `-42`          |
+| - `空格`             | 正数前加空格，负数前加`-`。                                                               | `printf("\|% d\|\n", 42); printf("\|% d\|\n", -42);`                                                         | `\| 42\|` `\|-42\|`       |
+| - `0`                | 用`0`填充宽度（在数字前有效）。                                                           | `printf("%05d\n", 42);`                                                                                | `00042`            |
+| - `#`                | 启用格式依赖的功能（例如八进制/十六进制前缀）。                                           | `printf("%#x\n", 42); printf("%#o\n", 42);`                                                              | `0x2a` `052`         |
+| **`[width]`**         | 最小输出宽度（整数）。输出不足时用空格填充，超过时无影响。                               | `printf("\|%10d\|\n", 42); printf("\|%3d\|\n", 12345);`                                                      | `\|        42\|` `\|12345\|` |
+| - `*`                | 下一个参数是字符占位数（那个参数替换`*`）                                                          | `printf("%0*d\n", 7, 42);`                                                                                | `0000042`            |
+| **`[.prec]`**         | 精度控制：                                                                                 |                                                                                                          |                       |
+| - `.`                | 指定浮点数的小数位数或字符串最大字符数。                                                  | `printf("%.2f\n", 3.14159); printf("%.3s\n", "Hello");`                                                  | `3.14` `Hel`         |
+| - 整数部分           | 对整数无影响（不推荐使用）。                                                              | `printf("%.5d\n", 42);`                                                                                  | `00042`              |
+| - `.*`                | 下一个参数是小数点后的位数                                                           | `printf("%*lf\n", 5, 0.5);`                                                                                | `0.50000`            |
+| **`[hIL]`**           | 长度修饰符：控制输入数据的大小。                                                          |                                                                                                          |                       |
+| - `h`                | 短整数类型（`short`）。                                                                  | `short s = 42; printf("%hd\n", s);`                                                                      | `42`                 |
+| - `l`                | 长整数类型（`long`）。                                                                   | `long l = 123456789; printf("%ld\n", l);`                                                                | `123456789`          |
+| - `ll`               | 长长整数类型（`long long`）。                                                            | `long long ll = 123456789012345; printf("%lld\n", ll);`                                                  | `123456789012345`    |
+| - `L`                | 长浮点类型（`long double`）。                                                            | `long double ld = 3.141592653589; printf("%Lf\n", ld);`                                                  | `3.141593`           |
+| **`type`**            | 数据类型，定义如何解释数据并输出：                                                        |                                                                                                          |                       |
+| - `d`/`i`            | 带符号整数（十进制）。                                                                   | `printf("%d\n", 42); printf("%d\n", -42);`                                                               | `42` `-42`           |
+| - `u`                | 无符号整数（十进制）。                                                                   | `printf("%u\n", 42);`                                                                                    | `42`                 |
+| - `f`                | 浮点数（小数形式）。                                                                     | `printf("%.2f\n", 3.14159);`                                                                             | `3.14`               |
+| - `x`/`X`            | 无符号整数（十六进制）。                                                                 | `printf("%x\n", 42); printf("%X\n", 42);`                                                                | `2a` `2A`            |
+| - `o`                | 无符号整数（八进制）。                                                                   | `printf("%o\n", 42);`                                                                                    | `52`                 |
+| - `c`                | 单个字符。                                                                               | `printf("%c\n", 'A');
+| - `s`                | 字符串。                                                                                 | `printf("%s\n", "Hello");`                                                                               | `Hello`              |
+| - `p`                | 指针地址。                                                                               | `printf("%p\n", (void*)&main);`                                                                          | 类似于 `0x7ffc...`   |
+| - `%`                | 输出百分号本身。                                                                         | `printf("100%% Complete\n");`                                                                            | `100% Complete`      |
+| - `e`                | 科学计数法表示的浮点数（小写）。                                                          | `printf("%e\n", 12345.6789);`                                                                             | `1.234568e+04`       |
+| - `E`                | 科学计数法表示的浮点数（大写）。                                                          | `printf("%E\n", 12345.6789);`                                                                             | `1.234568E+04`       |
+| - `n`                | 将到目前为止读入/写出的字符数存储到指定的变量中。                                              | `int n; printf("Hello%n\n", &n); printf("Chars: %d\n", n);`                                               | `Hello` 和 `Chars: 5` |
+| - `a`                | 十六进制表示的浮点数（小写），符合 C99 标准。                                              | `printf("%a\n", 123.45);`                                                                                 | `0x1.edp+06`         |
+| - `A`                | 十六进制表示的浮点数（大写），符合 C99 标准。                                              | `printf("%A\n", 123.45);`                                                                                 | `0X1.EDP+06`         |
+| - `G`                | 根据值自动选择`%E`或`%f`格式（大写）。                                                    | `printf("%G\n", 12345.6789);`                                                                             | `12345.7`            |
+| - `g`                | 根据值自动选择`%e`或`%f`格式（小写）。                                                    | `printf("%g\n", 12345.6789);`                                                                             | `12345.7`            |
+
+```c
+printf("%9.3f\n", 123.0)
+//连带小数点前后总共占9位
+```
+
+`scanf : %[flag]type`
+
+| **部分**             | **说明**                                                                                  | **示例代码**                                                                 | **输入示例**       | **结果**               |
+|-----------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------|------------------------|
+| **`%`**              | 格式说明符的起始标志。                                                                    | `scanf("%d", &x);`                                                          | `42`               | `x = 42`              |
+| **`[flags]`**         | 可选标志，用于修改输入格式：                                                              |                                                                             |                    |                        |
+| - `*`                | 忽略当前输入项，不将其存储到变量中。                                                      | `scanf("%*d %d", &x);`                                                      | `42 24`            | `x = 24`              |
+| - `数字`             | 限定最大读取字符数（仅对字符串和字符数组有效）。                                          | `scanf("%5s", str);`                                                        | `HelloWorld`       | `str = "Hello"`       |
+| **`type`**            | 数据类型，定义如何读取输入并存储到变量：                                                  |                                                                             |                    |                        |
+| - `d`                | 读取十进制整数。                                                                          | `scanf("%d", &x);`                                                          | `42`               | `x = 42`              |
+| - `i`                | 读取整数，支持十进制、八进制（以`0`开头）和十六进制（以`0x`开头）。                       | `scanf("%i", &x);`                                                          | `042` 或 `0x2A`    | `x = 34` 或 `x = 42` |
+| - `u`                | 读取无符号整数。                                                                          | `scanf("%u", &x);`                                                          | `42`               | `x = 42`              |
+| - `f`                | 读取浮点数。                                                                              | `scanf("%f", &x);`                                                          | `3.14`             | `x = 3.14`           |
+| - `lf`               | 读取双精度浮点数。                                                                        | `scanf("%lf", &x);`                                                         | `3.14159`          | `x = 3.14159`        |
+| - `c`                | 读取单个字符（包括空格和控制字符）。                                                      | `scanf("%c", &c);`                                                          | `A`                | `c = 'A'`            |
+| - `s`                | 读取字符串（以空格、换行或制表符为分隔符）。                                              | `scanf("%s", str);`                                                         | `Hello`            | `str = "Hello"`       |
+| - `[set]`            | 读取指定字符集中的字符，直到遇到不匹配的字符或输入结束。                                   | `scanf("%[A-Za-z]", str);`                                                  | `Hello123`         | `str = "Hello"`       |
+| - `[^set]`           | 读取非指定字符集中的字符，直到遇到匹配的字符或输入结束。                                   | `scanf("%[^0-9]", str);`                                                    | `Hello123`         | `str = "Hello"`       |
+| - `p`                | 读取指针地址。                                                                            | `scanf("%p", &ptr);`                                                        | 类似 `0x7ffc...`   | `ptr = 地址值`        |
+| - `%`                | 匹配并读取输入中的百分号字符（`%`）。                                                     | `scanf("%%");`                                                              | `%`                | 无变量存储            |
+| - `o`                | 读取无符号八进制整数。                                                                    | `scanf("%o", &x);`                                                          | `52`               | `x = 42`              |
+| - `x`/`X`            | 读取无符号十六进制整数。                                                                  | `scanf("%x", &x);`                                                          | `2A` 或 `2a`       | `x = 42`              |
+| - `u`                | 读取无符号整数（十进制）。                                                                | `scanf("%u", &x);`                                                          | `42`               | `x = 42`              |
+| - `a`                | 读取浮点数并自动选择最合适的表示（符合 C99 标准）。                                       | `scanf("%a", &x);`                                                          | `0x1.5p3`          | `x = 10.5`           |
+| - `e`                | 读取科学计数法格式的浮点数（小写）。                                                      | `scanf("%e", &x);`                                                          | `1.23e4`           | `x = 12300.0`        |
+| - `f`                | 读取浮点数（小数形式）。                                                                  | `scanf("%f", &x);`                                                          | `3.14`             | `x = 3.14`           |
+| - `g`                | 读取浮点数，自动选择科学计数法或小数形式（小写）。                                        | `scanf("%g", &x);`                                                          | `1.23e4` 或 `123.4` | `x = 12300.0` 或 `123.4` |
+| - `G`                | 读取浮点数，自动选择科学计数法或小数形式（大写）。                                        | `scanf("%G", &x);`                                                          | `1.23E4` 或 `123.4` | `x = 12300.0` 或 `123.4` |
+
+![alt text](image-12.png)
+
+**printf scanf的返回值**
+
+- scanf：读入的字符数
+- printf：输出的字符数
+
+大型程序中，应该判断每次调用scanf和printf的返回值，从而了解程序运行中是否存在问题。
+
+
+### 基本概念
+
+在C语言中，文件操作是一种将程序数据持久化到存储设备（如硬盘）中的方式，可以读取和写入数据到文件中。文件操作的核心思想是通过**文件指针**来访问文件，文件指针是一个连接程序和文件的桥梁。
+
+---
+
+#### 文件与流
+- **文件（File）**  
+  文件是存储在存储设备上的数据集合，可以是文本文件（如 `.txt`）或二进制文件（如 `.bin`）。C语言通过文件操作函数访问文件内容。
+
+- **流（Stream）**  
+  流是文件与程序之间数据传输的抽象。通过流，数据可以从程序写入文件，或从文件读取到程序。
+
+---
+
+#### 文件指针
+- 类型为 `FILE*` 的指针，定义在 `stdio.h` 中，用于标识程序与文件之间的连接。
+
+使用：
+
+1. 使用 `fopen` 打开文件并获取指针。
+2. 操作文件（读/写/定位）。
+3. 使用 `fclose` 关闭文件并释放资源。
+
+---
+### 常用函数
+
+#### 1. 文件的打开与关闭
+
+**文件打开：`fopen`**
+
+- **函数原型**：
+    ```c
+    FILE *fopen(const char *filename, const char *mode);
+    ```
+- **功能**：打开一个文件并返回一个指向该文件的指针。
+- **参数**：
+    - `filename`：要打开的文件名。
+    - `mode`：文件打开模式。常用模式有：
+        | 模式  | 作用                                      | 文件存在 | 文件不存在 |
+        |-------|-------------------------------------------|----------|------------|
+        | `"r"` | 以只读模式打开文件                        | 成功打开 | 返回 NULL  |
+        | `"w"` | 以写模式打开文件，清空文件内容             | 成功打开 | 创建新文件 |
+        | `"a"` | 以追加模式打开文件，文件指针位于末尾       | 成功打开 | 创建新文件 |
+        | `"r+"`| 以读写模式打开文件，不清空文件内容         | 成功打开 | 返回 NULL  |
+        | `"w+"`| 以读写模式打开文件，清空文件内容           | 成功打开 | 创建新文件 |
+        | `"a+"`| 以读写模式打开文件，文件指针位于末尾       | 成功打开 | 创建新文件 |
+
+- **返回值**：成功时返回文件指针，失败时返回 `NULL`。
+
+---
+
+**文件关闭：`fclose`**
+
+- **函数原型**：
+    ```c
+    int fclose(FILE *stream);
+    ```
+- **功能**：关闭文件，释放相关资源。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：成功时返回 `0`，失败时返回 `EOF`。
+
+---
+
+#### 2. 文件读取操作
+
+##### 文本文件读取
+
+**`fgetc`**
+
+- **函数原型**：
+    ```c
+    int fgetc(FILE *stream);
+    ```
+- **功能**：从文件中读取一个字符。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：返回读取的字符，如果到达文件末尾，返回 `EOF`。
+
+**`fgets`**
+
+- **函数原型**：
+    ```c
+    char *fgets(char *str, int n, FILE *stream);
+    ```
+- **功能**：从文件中读取一行字符（包括空格）并存入 `str` 中，最多读取 `n-1` 个字符。
+- **参数**：
+    - `str`：存储读取内容的缓冲区。
+    - `n`：缓冲区的大小。
+    - `stream`：文件指针。
+- **返回值**：返回 `str`，如果读取到文件末尾返回 `NULL`。
+
+##### 二进制文件读取
+
+**`fread`**
+
+- **函数原型**：
+    ```c
+    size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
+    ```
+- **功能**：从文件中读取二进制数据，存入内存中。
+- **参数**：
+    - `ptr`：数据存储缓冲区。
+    - `size`：每个元素的大小（字节）。
+    - `count`：要读取的元素个数。
+    - `stream`：文件指针。
+- **返回值**：成功读取的元素个数。
+
+---
+
+#### 3. 文件写入操作
+
+##### 文本文件写入
+
+**`fputc`**
+
+- **函数原型**：
+    ```c
+    int fputc(int c, FILE *stream);
+    ```
+- **功能**：向文件写入一个字符。
+- **参数**：
+    - `c`：要写入的字符。
+    - `stream`：文件指针。
+- **返回值**：成功返回写入的字符，失败返回 `EOF`。
+
+**`fputs`**
+
+- **函数原型**：
+    ```c
+    int fputs(const char *str, FILE *stream);
+    ```
+- **功能**：向文件写入一个字符串（不包含 `\0` 结束符）。
+- **参数**：
+    - `str`：要写入的字符串。
+    - `stream`：文件指针。
+- **返回值**：成功返回非负值，失败返回 `EOF`。
+
+##### 二进制文件写入
+
+**`fwrite`**
+
+- **函数原型**：
+    ```c
+    size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);
+    ```
+- **功能**：向文件写入二进制数据。
+- **参数**：
+    - `ptr`：数据源（内存中的数据）。
+    - `size`：每个元素的大小（字节）。
+    - `count`：要写入的元素个数。
+    - `stream`：文件指针。
+- **返回值**：成功写入的元素个数。
+
+---
+
+#### 4. 文件定位
+
+**`fseek`**
+
+- **函数原型**：
+    ```c
+    int fseek(FILE *stream, long offset, int whence);
+    ```
+- **功能**：将文件指针移动到指定位置。
+- **参数**：
+    - `stream`：文件指针。
+    - `offset`：偏移量，单位为字节。可以是正值、负值或零。
+    - `whence`：偏移基准位置。常用值有：
+        - `SEEK_SET`：文件开头。
+        - `SEEK_CUR`：当前位置。
+        - `SEEK_END`：文件末尾。
+- **返回值**：成功时返回 `0`，失败时返回非零值。
+
+**`ftell`**
+
+- **函数原型**：
+    ```c
+    long ftell(FILE *stream);
+    ```
+- **功能**：返回当前文件指针的偏移量（从文件开头开始计）。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：返回当前文件指针的位置（以字节为单位），失败时返回 `-1L`。
+
+**`rewind`**
+
+- **函数原型**：
+    ```c
+    void rewind(FILE *stream);
+    ```
+- **功能**：将文件指针重置到文件开头。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：无返回值。
+
+---
+
+#### 5. 错误处理
+
+**`feof`**
+
+- **函数原型**：
+    ```c
+    int feof(FILE *stream);
+    ```
+- **功能**：判断是否到达文件末尾。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：非零值表示文件结束，返回 `0` 表示未到达文件末尾。
+
+**`ferror`**
+
+- **函数原型**：
+    ```c
+    int ferror(FILE *stream);
+    ```
+- **功能**：检查文件是否发生错误。
+- **参数**：
+    - `stream`：文件指针。
+- **返回值**：非零值表示发生错误，返回 `0` 表示没有错误。
+
+---
+
+#### 6. 文件清空与创建
+
+**`freopen`**
+
+- **函数原型**：
+    ```c
+    FILE *freopen(const char *filename, const char *mode, FILE *stream);
+    ```
+- **功能**：关闭当前文件并重新打开文件。
+- **参数**：
+    - `filename`：文件名。
+    - `mode`：打开模式（如 `"r"`, `"w"`, `"a"` 等）。
+    - `stream`：当前打开的文件指针。
+- **返回值**：成功返回新的文件指针，失败返回 `NULL`。
+
+---
+
+#### 7. 文件缓冲与同步
+
+**`setbuf`**
+
+- **函数原型**：
+    ```c
+    void setbuf(FILE *stream, char *buffer);
+    ```
+- **功能**：为文件流设置缓冲区。
+- **参数**：
+    - `stream`：文件指针。
+    - `buffer`：缓冲区指针。若为 `NULL`，则禁用缓冲。
+- **返回值**：无返回值。
+
+**`setvbuf`**
+
+- **函数原型**：
+    ```c
+    int setvbuf(FILE *stream, char *buffer, int mode, size_t size);
+    ```
+- **功能**：为文件流设置缓冲区，支持不同的缓冲模式。
+- **参数**：
+    - `stream`：文件指针。
+    - `buffer`：缓冲区指针。
+    - `mode`：缓冲模式，通常为 `_IOFBF`（全缓冲）、`_IONBF`（无缓冲）或 `_IOLBF`（行缓冲）。
+    - `size`：缓冲区大小。
+- **返回值**：成功返回 `0`，失败返回非零值。
+
+**`fflush`**
+
+- **函数原型**：
+    ```c
+    int fflush(FILE *stream);
+    ```
+- **功能**：强制刷新文件缓冲区，将缓冲区中的内容写入文件。
+- **参数**：
+    - `stream`：文件指针。如果为 `NULL`，则刷新所有打开的输出流。
+- **返回值**：成功返回 `0`，失败返回 `EOF`。
+
+---
+
+#### 8. 临时文件处理
+
+**`tmpfile`**
+- **函数原型**：
+    ```c
+    FILE *tmpfile(void);
+    ```
+- **功能**：创建一个临时文件并返回文件指针。该文件在程序结束时自动删除。
+- **返回值**：成功返回临时文件指针，失败返回 `NULL`。
+
+---
+
+### 缓冲区
+
+**C 语言文件的缓冲区**
+
+在 C 语言中，**文件缓冲区（Buffer）**是用来临时存储数据的一块内存区域，用于优化文件的输入和输出操作。缓冲区的引入可以减少实际文件操作的次数，从而提高程序的效率。
+
+---
+
+**缓冲区的基本概念**
+1. **缓冲的作用**：
+   - 文件操作（如读写）通常涉及磁盘 I/O，这是一种相对慢的操作。
+   - 为了减少磁盘 I/O 的频率，C 标准库在内存中分配了一块缓冲区。
+   - 程序在读取或写入文件时，先将数据存储到缓冲区，达到一定量后再进行磁盘 I/O 操作。
+
+2. **缓冲区的分类**：
+   - **全缓冲（Fully Buffered）**：当缓冲区填满时才进行实际的 I/O 操作。适用于文件。
+   - **行缓冲（Line Buffered）**：每次遇到换行符或缓冲区满时，进行一次 I/O 操作。适用于标准输入输出（如 `stdin`、`stdout`）。
+   - **无缓冲（Unbuffered）**：不使用缓冲区，每次 I/O 操作都直接访问设备或文件。适用于 `stderr`。
+
+---
+
+**缓冲区在文件中的应用**
+- 文件操作函数如 `fopen()`、`fwrite()`、`fread()`、`fprintf()`、`fgets()` 等都会使用缓冲区。
+- 在写入时：
+  - 数据先写入缓冲区。
+  - 当缓冲区满、手动刷新缓冲区（`fflush()`）、或文件关闭时，数据被写入磁盘。
+- 在读取时：
+  - 文件数据被读取到缓冲区，程序再从缓冲区中获取数据。
+
+---
+
+**常用函数与缓冲区相关操作**
+
+1. **`fflush()`**
+`fflush()` 用于清空缓冲区，将缓冲区中的数据立即写入文件或设备。
+```c
+int fflush(FILE *stream);
+```
+- 参数：
+  - `stream`：文件流指针，表示需要刷新的文件。如果传递 `NULL`，则刷新所有输出流。
+- 典型应用：
+  - 在程序中强制写入文件。
+  - 确保日志或调试信息及时输出。
+
+示例：
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("example.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    fprintf(file, "Hello, world!");
+    fflush(file);  // 立即将缓冲区内容写入文件
+
+    fclose(file);
+    return 0;
+}
+```
+
+2. **`setvbuf()`**
+`setvbuf()` 用于设置文件的缓冲区模式及大小。
+```c
+int setvbuf(FILE *stream, char *buffer, int mode, size_t size);
+```
+- 参数：
+  - `stream`：文件流指针。
+  - `buffer`：自定义缓冲区（传递 `NULL` 表示使用默认缓冲区）。
+  - `mode`：缓冲区模式，可选值：
+    - `_IOFBF`：全缓冲模式。
+    - `_IOLBF`：行缓冲模式。
+    - `_IONBF`：无缓冲模式。
+  - `size`：缓冲区大小（以字节为单位）。
+- 返回值：
+  - 成功返回 0，失败返回非零值。
+
+示例：设置自定义缓冲区
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("example.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    char buffer[1024];  // 自定义缓冲区
+    setvbuf(file, buffer, _IOFBF, sizeof(buffer));  // 设置全缓冲模式
+
+    fprintf(file, "Buffered data.");
+    fclose(file);  // 文件关闭时，缓冲区中的数据会写入文件
+
+    return 0;
+}
+```
+
+3. **`setbuf()`**
+`setbuf()` 是 `setvbuf()` 的简单版本，用于设置文件流为全缓冲或无缓冲。
+```c
+void setbuf(FILE *stream, char *buffer);
+```
+- 参数：
+  - `stream`：文件流指针。
+  - `buffer`：缓冲区指针。如果为 `NULL`，文件流设置为无缓冲模式。
+
+示例：设置无缓冲模式
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("example.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    setbuf(file, NULL);  // 设置文件流为无缓冲模式
+
+    fprintf(file, "This will be written immediately.");
+    fclose(file);
+
+    return 0;
+}
+```
+
+---
+
+**缓冲区的默认行为**
+1. **标准流的默认缓冲模式**：
+   - `stdout`：行缓冲模式。
+   - `stdin`：行缓冲模式。
+   - `stderr`：无缓冲模式。
+2. **文件流的默认缓冲模式**：
+   - 通常是全缓冲模式，缓冲区大小一般由操作系统决定（通常为 4KB 或 8KB）。
+
+---
+
+**缓冲区可能引发的问题**
+1. **未及时刷新缓冲区**：
+   - 如果程序异常退出，缓冲区中的数据可能未被写入文件，导致数据丢失。
+2. **并发操作冲突**：
+   - 多线程或多进程同时操作同一文件时，缓冲区可能引发数据竞争，需要特别注意同步操作。
+
+---
+
+**总结**
+- **缓冲区的作用**：提高文件 I/O 的效率，通过减少磁盘读写次数来优化性能。
+- **关键操作**：
+  - 使用 `fflush()` 手动刷新缓冲区。
+  - 使用 `setvbuf()` 或 `setbuf()` 自定义缓冲区行为。
+- **文件默认缓冲模式**：文件通常是全缓冲，标准流根据类型可能是行缓冲或无缓冲。
+  
+
+
+
+
+
+### 文件的输入输出
+
+方法一：shell的重定向 
+
+- `>` 将输出定向值后面的文件
+- `<` 从后面的文件中读取输入
+
+方法二：FILE
+
+```c
+int main()
+{
+    FILE* fp = fopen("try.c", "r");
+    if(fp){
+        fscanf(fp, "%d", &num);
+        printf("%d\n", num);
+        fclose(fp);
+    }
+    else{
+        printf("文件打开失败");
+    }
+}
+```
+
+`fopen` : `FILE *fopen(const char *__restrict__ __filename, const char *__restrict__ __modes)`
+
+- Open a file and create a new stream for it.
+- 参数是两个字符串，第二个如下：
+
+    ![alt text](image-13.png)
+
+
+`fclose`: `int fclose(FILE *__stream)`
+
+- Close STREAM.
+
+对文本文件的读和写：
+
+1. `fscanf` : `int fscanf(FILE *__restrict__ __stream, const char *__restrict__ __format, ...)`
+
+ - Read formatted input from STREAM.
+- 只是在`scanf`前面加一个FILE*的指针，其他都一样。
+
+2. `fprintf` : `int fprintf(FILE *__restrict__ __stream, const char *__restrict__ __format, ...)`
+
+- Write formatted output to STREAM.
+
+对二进制文件的读和写
+
+1. `fread` : `size_t fread(void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__ __stream)`
+
+    - Read chunks of generic data from STREAM.
+
+2. `fwrite` : `size_t fwrite(const void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__ __s)`
+
+    - Write chunks of generic data to STREAM.
+
+- FILE指针是最后一个参数
+
+- 返回值是成功读写的字节数
+
+- 对二进制文本的读写一般是通过对一个结构变量的操作进行的，因此，`__size` 代表一个结构的大小；`__n` 代表读写几个结构变量
+
+### 在文件中定位
+
+`ftell` : `long ftell(FILE *__stream)`
+- Return the current position of STREAM.
+
+`fseek` : `int fseek(FILE *__stream, long __off, int __whence)`
+- Seek to a certain position on STREAM.
+- 用来调整文件指针的位置。它适用于文本文件和二进制文件。通过 fseek，可以在文件中快速定位到某个特定的位置，以便后续读取或写入。
+- 第三个参数：基准量：从哪里开始的第一步确定初始位置
+    - `SEEK_SET` ：从头开始
+    - `SEEK_CUR` ：从当前位置开始
+    - `SEEK_END` ：从尾开始（倒过来）
+- 第二个参数：偏移量：在第三个参数的基础上移动几个字节作为开始的seek的地方
 
 
 ## MISC
