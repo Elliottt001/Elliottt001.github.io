@@ -3208,7 +3208,9 @@ free() and malloc() is 绑定使用的
 
 ## 结构
 
-结构是一种数据类型，它与python中的字典、类都有相似之处。
+结构是一种数据类型，它在语法上与python中的字典、类都有相似之处。
+
+想不清楚时，将其当作int类型。因为本质上其都是一种数据类型。
 
 示例：
 
@@ -3367,10 +3369,149 @@ int main() {
 
 结构可以作为函数的返回值
 
+**输入结构：**
+
+结构与数组的区别：
+
+- 在传入函数时，结构与普通的int变量类似，要在函数内部更改它，得传地址。因为传入函数，函数接收到的实际是结构的值，不是这个变量，与原结构无关。
+
+- 数组在传入函数时，传入的是这个数组变量。
+
+解决方案1：在函数内部copy一个一样的临时的结构变量，讲这个结构返回
+
+```c
+struct point inputStruct(void)
+{
+    struct point p{/*代码块，要求与main函数里面的一样*/};
+    /*代码块*/
+    return p;
+}
+
+int main()
+{
+    struct point dest{/*代码块*/};
+    dest = inputStruct();
+    printf(/*语句*/)
+}
+```
+该方法不好
+
+解决方案2：
+
+!!! quote "K&R"
+
+    “lf a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure”
+
+
+**指向结构的指针**
+
+!!! success "指针与函数"
+
+    常用：一个函数的参数是指针，返回值也是指针；目的是将这个值的指针输入，在函数内部更改完之后再返回出去，好处是返回的指针可以再用于其他代码，例如作为其他函数的参数，反复调用。
+
+语法：`pointer -> member`，代表 “这个指针所指的那个结构变量里的那个成员”。
+
+示例：
+```c
+/*定义一个结构变量today，里面有一个成员是month*/
+struct date today;
+struct date* ptoday = &today;
+(*p).month = 12;
+p -> month = 12;
+```
+
+**使用示例：**
+
+```c
+#include<stdio.h>
+struct date {
+    int month;
+    int day;
+};
+
+struct date* getStruct(struct date *p);
+void printSturct(const struct date* p);
+
+int main()
+{
+    struct date today;
+    printSturct(getStruct(&today));
+    
+    *getStruct(&today) = (struct date){12, 18};
+    printSturct(&today);
+
+    getStruct(&today) -> day = 19;
+    printSturct(&today);
+    return 0;
+}
+
+struct date* getStruct(struct date *p)
+{
+    scanf("%d %d", &(p -> month), &(p -> day));
+    return p;
+}
+
+void printSturct(const struct date* p)
+{
+    printf("%d-%d\n", p -> month, p -> day);
+}
+```
+
+### 结构数组
+
+*结构数组的本质是**数组**，只不过该数组的元素是结构体类型的数据*
+
+
+**语法**
+
+```c
+struct class {
+    char* name;
+    int age;
+    long int id;
+};
+
+int main()
+{
+    struct class student[26] = {{"zrz", 18, 3240105996}, {"hhh", 18, 3240100000}};
+}
+```
+
+### 结构中的结构
+
+**语法：**还是按照普通变量来理解
+
+**示例：**
+```c
+struct point {
+    int x;
+    int y;
+};
+
+struct rectangle {
+    struct point pt1;
+    struct point pt2;
+};
+
+int main()
+{
+    struct rectangle rt1;
+    struct rectangle *prt1 = &rt1;
+    scanf("%d %d", &(rt1.pt1.x), &(rt1.pt1.y));
+    scanf("%d %d", &(prt1 -> pt2.x), &(prt1 -> pt2.y));
+}
+```
+
+
+
+另外，结构和数组等可以无限组合嵌套，例如结构中的结构的数组
+
+
+
 
 ## 编译预处理和宏
 ### 编译预处理
-”\#“：编译预处理指令，这不是C语言，其他语言都有！所以后面不加分号！
+"\#"：编译预处理指令，这不是C语言，其他语言都有！所以后面不加分号！
 例子：`#include<stdio.h>`，`#define PI 3.14`
 ### 宏
 `#define PI 3.14`：定义一个宏（是一个符号），PI为名称，3.14是值
