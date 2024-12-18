@@ -33,3 +33,5 @@
 - [用vscode编写大project-2](https://docs.pingcode.com/ask/272978.html)，[1](https://www.cnblogs.com/Roboduster/p/15315817.html)
 
 - 寒假学学快捷键
+
+- **学嵌入式开发**
