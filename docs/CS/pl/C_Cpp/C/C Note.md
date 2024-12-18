@@ -4268,9 +4268,10 @@ typedef struct _node {
 
     ---
 
-    ### **单向链表实现**
+    **单向链表实现**
 
     **定义单向链表：**
+
     ```python
     class Node:
         def __init__(self, data):
@@ -4325,6 +4326,7 @@ typedef struct _node {
     ```
 
     **使用示例：**
+
     ```python
     # 创建链表
     ll = LinkedList()
@@ -4342,9 +4344,10 @@ typedef struct _node {
 
     ---
 
-    ### **双向链表实现**
+    **双向链表实现**
 
     **定义双向链表：**
+
     ```python
     class Node:
         def __init__(self, data):
@@ -4415,6 +4418,7 @@ typedef struct _node {
     ```
 
     **使用示例：**
+
     ```python
     # 创建双向链表
     dll = DoublyLinkedList()
@@ -4435,7 +4439,7 @@ typedef struct _node {
 
     ---
 
-    ### **链表操作总结**
+    **链表操作总结**
 
     - **插入操作：** 可以在头部、尾部或中间插入节点。
     - **删除操作：** 需要更新相邻节点的指针。
@@ -4449,9 +4453,10 @@ typedef struct _node {
 
     ---
 
-    ### **单向链表**
+    **单向链表**
 
-    #### **定义单向链表节点**
+    **定义单向链表节点**
+
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -4471,8 +4476,10 @@ typedef struct _node {
     }
     ```
 
-    #### **单向链表操作**
+    **单向链表操作**
+
     1. **插入节点到链表末尾**
+
     ```c
     void append(struct Node** head, int data) {
         struct Node* newNode = createNode(data);
@@ -4488,7 +4495,157 @@ typedef struct _node {
     }
     ```
 
+    !!! success "append函数超详解"
+
+        **函数原型**
+
+        ```c
+        void append(List* plist, int num);
+        ```
+
+        **参数说明**：
+
+        1. **`plist`**：指向链表结构的指针，用于表示要操作的链表。
+        - `List` 是一个结构体，包含指向链表头节点的指针 `head`。
+        - 通过传入 `List*`，函数能够直接操作链表的内容（比如添加节点）。
+        2. **`num`**：要添加到链表的新节点的值。
+
+        ---
+
+        **函数实现**
+
+        ```c
+        void append(List* plist, int num)
+        {
+            // 1. 创建一个新的节点并初始化
+            Node* p = (Node*)malloc(sizeof(Node)); // 为新节点分配内存
+            p->value = num; // 设置新节点的值
+            p->next = NULL; // 新节点的 next 指针初始化为 NULL
+
+            // 2. 找到链表的最后一个节点
+            Node* last = plist->head; // 从链表头开始遍历
+            if (last) {
+                // 如果链表不为空，找到最后一个节点
+                while (last->next) {
+                    last = last->next; // 循环向下，直到最后一个节点
+                }
+                // 3. 将新节点连接到最后一个节点
+                last->next = p;
+            } else {
+                // 如果链表为空，将新节点作为头节点
+                plist->head = p;
+            }
+        }
+        ```
+
+        ---
+
+        **详细分步解析**
+
+        **1. 创建新节点**
+
+        ```c
+        Node* p = (Node*)malloc(sizeof(Node));
+        p->value = num;
+        p->next = NULL;
+        ```
+
+        - **动态内存分配**：
+        - 使用 `malloc` 分配一段内存，用于存储新节点。
+        - 返回值是 `void*`，需要强制类型转换为 `Node*`。
+        - **初始化新节点**：
+        - `p->value = num`：将新节点的 `value` 字段设置为传入的值 `num`。
+        - `p->next = NULL`：将新节点的 `next` 指针设置为 `NULL`，表示它暂时是链表的最后一个节点。
+
+        ---
+
+        **2. 查找链表的最后一个节点**
+
+        ```c
+        Node* last = plist->head;
+        if (last) {
+            while (last->next) {
+                last = last->next;
+            }
+        }
+        ```
+
+        - **指针 `last` 的作用**：
+        - `last` 是一个临时指针，用于遍历链表，找到当前链表的最后一个节点。
+        - 初始时，`last` 指向链表的头节点（`plist->head`）。
+        - **判断链表是否为空**：
+        - 如果 `plist->head` 为 `NULL`，说明链表为空，直接跳到 `else` 部分。
+        - 如果 `plist->head` 不为 `NULL`，说明链表中至少有一个节点，进入 `while` 循环。
+        - **`while` 循环**：
+        - `last->next` 表示当前节点的下一节点是否存在。
+        - 循环条件 `last->next` 为真时，将指针 `last` 移动到下一个节点。
+
+        ---
+
+        **3. 连接新节点**
+
+        ```c
+        last->next = p;
+        ```
+
+        - 当找到链表的最后一个节点时，将其 `next` 指针指向新创建的节点 `p`，这样 `p` 成为新的最后一个节点。
+
+        ---
+
+        **4. 处理空链表**
+
+        ```c
+        else {
+            plist->head = p;
+        }
+        ```
+
+        - 如果链表为空（`plist->head == NULL`），新节点 `p` 直接成为链表的头节点。
+
+        ---
+
+        **函数工作原理举例**
+
+        假设链表初始状态为空，依次调用 `append` 函数，插入 3 个值：`10`、`20`、`30`。
+
+        **初始状态**
+
+        - 链表为空：`plist->head = NULL`
+
+        **第一步**：添加 `10`
+        
+        1. 创建新节点 `p`，值为 `10`，`p->next = NULL`。
+        2. 因为链表为空（`plist->head == NULL`），将 `plist->head` 指向 `p`。
+        - 链表状态：`10 -> NULL`
+
+        **第二步**：添加 `20`
+        
+        1. 创建新节点 `p`，值为 `20`，`p->next = NULL`。
+        2. 遍历链表，找到最后一个节点（`10`）。
+        3. 将最后一个节点（`10`）的 `next` 指针指向新节点 `p`。
+        - 链表状态：`10 -> 20 -> NULL`
+
+        **第三步**：添加 `30`
+        
+        1. 创建新节点 `p`，值为 `30`，`p->next = NULL`。
+        2. 遍历链表，找到最后一个节点（`20`）。
+        3. 将最后一个节点（`20`）的 `next` 指针指向新节点 `p`。
+        - 链表状态：`10 -> 20 -> 30 -> NULL`
+
+        ---
+
+        **总结**
+        
+        `append` 函数的核心功能是向链表末尾添加一个新节点。主要步骤：
+        
+        1. 创建新节点，动态分配内存并初始化。
+        2. 判断链表是否为空：
+        - 如果为空，将新节点设为头节点。
+        - 如果不为空，遍历链表找到最后一个节点，并将新节点连接到最后。
+
+
     2. **打印链表**
+
     ```c
     void printList(struct Node* head) {
         struct Node* temp = head;
@@ -4501,6 +4658,7 @@ typedef struct _node {
     ```
 
     3. **删除节点**
+
     ```c
     void deleteNode(struct Node** head, int key) {
         struct Node* temp = *head;
@@ -4530,7 +4688,8 @@ typedef struct _node {
     }
     ```
 
-    #### **单向链表完整示例**
+    **单向链表完整示例**
+
     ```c
     int main() {
         struct Node* head = NULL;
@@ -4555,9 +4714,10 @@ typedef struct _node {
 
     ---
 
-    ### **双向链表**
+    **双向链表**
 
-    #### **定义双向链表节点**
+    **定义双向链表节点**
+
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -4579,8 +4739,10 @@ typedef struct _node {
     }
     ```
 
-    #### **双向链表操作**
+    **双向链表操作**
+
     1. **插入节点到链表末尾**
+
     ```c
     void append(struct Node** head, int data) {
         struct Node* newNode = createNode(data);
@@ -4598,6 +4760,7 @@ typedef struct _node {
     ```
 
     2. **从头部打印链表**
+
     ```c
     void printList(struct Node* head) {
         struct Node* temp = head;
@@ -4610,6 +4773,7 @@ typedef struct _node {
     ```
 
     3. **从尾部打印链表**
+
     ```c
     void printReverse(struct Node* head) {
         struct Node* temp = head;
@@ -4630,6 +4794,7 @@ typedef struct _node {
     ```
 
     4. **删除节点**
+
     ```c
     void deleteNode(struct Node** head, int key) {
         struct Node* temp = *head;
@@ -4658,7 +4823,8 @@ typedef struct _node {
     }
     ```
 
-    #### **双向链表完整示例**
+    **双向链表完整示例**
+
     ```c
     int main() {
         struct Node* head = NULL;
@@ -4687,7 +4853,8 @@ typedef struct _node {
 
     ---
 
-    ### **总结**
+    **总结**
+
     - 单向链表适合基本操作，结构简单。
     - 双向链表可以在两个方向上遍历，适合需要频繁前后移动的操作。
     - 操作中要特别注意指针的正确操作，避免内存泄漏或段错误 (`segmentation fault`)。
@@ -4699,9 +4866,10 @@ typedef struct _node {
 
     ---
 
-    ### **单向链表**
+    **单向链表**
 
-    #### **定义单向链表节点**
+    **定义单向链表节点**
+
     ```cpp
     #include <iostream>
     using namespace std;
@@ -4716,7 +4884,8 @@ typedef struct _node {
     };
     ```
 
-    #### **定义单向链表类**
+    **定义单向链表类**
+
     ```cpp
     class LinkedList {
     private:
@@ -4790,7 +4959,8 @@ typedef struct _node {
     };
     ```
 
-    #### **单向链表完整示例**
+    **单向链表完整示例**
+
     ```cpp
     int main() {
         LinkedList list;
@@ -4815,9 +4985,10 @@ typedef struct _node {
 
     ---
 
-    ### **双向链表**
+    **双向链表**
 
-    #### **定义双向链表节点**
+    **定义双向链表节点**
+
     ```cpp
     class Node {
     public:
@@ -4829,7 +5000,8 @@ typedef struct _node {
     };
     ```
 
-    #### **定义双向链表类**
+    **定义双向链表类**
+
     ```cpp
     class DoublyLinkedList {
     private:
@@ -4922,7 +5094,8 @@ typedef struct _node {
     };
     ```
 
-    #### **双向链表完整示例**
+    **双向链表完整示例**
+
     ```cpp
     int main() {
         DoublyLinkedList list;
@@ -4951,13 +5124,15 @@ typedef struct _node {
 
     ---
 
-    ### **总结**
+    **总结**
 
-    #### 单向链表优点
+    单向链表优点
+
     - 结构简单，占用内存少。
     - 适合只需要从头到尾遍历的场景。
 
-    #### 双向链表优点
+    双向链表优点
+
     - 支持从头部和尾部两个方向遍历，操作更加灵活。
     - 适合需要频繁插入、删除以及双向遍历的场景。
 
