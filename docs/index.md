@@ -1,29 +1,28 @@
-# Welcome to Growing Cosmos!
-
-<span style="color: darkblue; font-weight: bold; font-size: 1.2em;">我们是产生了自我意识的局部宇宙</span> :star2: :star2: :star2:
-
-你好！欢迎来到张瑞喆的个人网站(Growing Cosmos) [https://r-z-zhang-ai.github.io/](https://r-z-zhang-ai.github.io/)
+# (づ￣ ³￣)づ Welcome !
 
 
-## 想分享的东西
-- 生活点滴
-- 学习笔记
-- 日记随笔
-- 好文转载
+Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.github.io/)
+
+
+!!! note "" 
+    <br><br>
+    <div align="center" style="font-size:32px;font-weight:bold">
+        ~『toda mi ambición es ser libre toda mi vida』~
+    </div>
+    <div align="center" style="font-size:12px">
+        轻舟已过万重山，前路漫漫亦灿灿
+    </div>
+    <br><br>
+
+??? Warning "施工中！" 
+
+    惊喜多多，速来围观 ~
+
+
 
 ---
 
-## 使用指南
-- 通过主题和目录浏览文章。
-    - 电脑端：在上方标签栏选择主题，在左侧目录选择文章。
-    - 移动端：点击左上角图标选择主题和文章。
-- 通过上方搜索框搜索关键词查找文章及内容。
-- 使用GitHub登陆后在文末发表你的看法。
-- 点击文章内右侧目录查看相关内容。
-- 点击上方图标切换深色/浅色模式。
-- 点击右上角图标跳转至本网站的GitHub仓库。
-- 点击右下角图标跳转至对应网站个人主页。
-- 正在开发更多功能，敬请期待~
+快来聊天！
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

@@ -1,9 +1,19 @@
-# Computer Science
+!!! note "" 
+    <br><br>
+    <div align="center" style="font-size:32px;font-weight:bold">
+        ~『Hala Madrid』~
+    </div>
+    <div align="center" style="font-size:12px">
+        心之所向，虽崇山峻岭，一往无前；
+    </div>
+        <div align="center" style="font-size:12px">
+        剑锋所指，虽万人为敌，所向披靡。
+    </div>
+    <br><br>
 
-<font style="font-style:italic; font-size:1.1em; color:#00008B">Click the table of contents to start your trip towards the world of computer science!</font> (1)
-{ .annotate }
+!!! info "Abstract"
 
-1.  I Love CS! What about you?
+    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

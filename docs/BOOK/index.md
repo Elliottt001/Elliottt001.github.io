@@ -1,16 +1,19 @@
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~『Looking at the star :star:』~
+        ~『Per aspera ad astra』~
     </div>
     <div align="center" style="font-size:12px">
-        放他三千裘马去，不寄俗生，唯贪我三枕黄粱梦。
+        于高山之巅，方见大河奔涌；
+    </div>
+        <div align="center" style="font-size:12px">
+        于群峰之上，便觉长风浩荡。
     </div>
     <br><br>
 
 !!! info "Abstract"
 
-    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
+    记录一些[读书笔记](https://r-z-zhang-ai.github.io/BOOK)
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

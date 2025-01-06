@@ -1,16 +1,15 @@
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~『Looking at the star :star:』~
+        ~『Miracles happen every day』~
     </div>
     <div align="center" style="font-size:12px">
-        放他三千裘马去，不寄俗生，唯贪我三枕黄粱梦。
-    </div>
+        偶尔堕落一下很开心。 ——《山茶文具店》
     <br><br>
 
 !!! info "Abstract"
 
-    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
+    日常发疯，欢迎围观 ~
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

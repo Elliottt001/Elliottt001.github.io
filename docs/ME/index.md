@@ -1,6 +1,16 @@
-# About Me
-<font style="font-style:italic; font-size:1.2em; color:#00008B">A reed with thought</font><br>
-<font style="font-style:italic; font-size:1.2em; color:#00008B">A cosmos with consciousness</font>
+!!! note "" 
+    <br><br>
+    <div align="center" style="font-size:32px;font-weight:bold">
+        ~『Un clou chasse l'autre』~
+    </div>
+    <div align="center" style="font-size:12px">
+        少年何妨梦摘星，敢挽桑弓射玉衡。
+    </div>
+    <br><br>
+
+!!! info "Abstract"
+
+    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
