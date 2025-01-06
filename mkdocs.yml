@@ -82,8 +82,6 @@ nav:
 # [top]
 theme:
   name: material
-  # [切换日间模式和夜间模式]
-  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
   icon:
     logo: material/library-outline
 
@@ -254,21 +252,53 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 5
-  - pymdownx.arithmatex:
-      generic: true
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
+  - admonition #应用admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite #添加了对内联代码块的语法突出显示的支持
+  - pymdownx.snippets #使用简单语法将任意文件的内容嵌入到文档
+  - pymdownx.superfences: #允许代码和内容块任意嵌套，包括警告、选项卡、列表和所有其他元素
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details #admonition可以折叠
+
+  - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
   - md_in_html
-  - pymdownx.blocks.caption
+  - pymdownx.keys #添加了一个简单的语法来允许呈现键盘按键和组合 
+
+  # Caret 、 Mark和Tilde扩展添加了使用简单语法突出显示文本并定义下标和上标的功能。
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - pymdownx.critic #允许使用Critic 标记来突出显示文档中添加、删除或更新的部分，即跟踪 Markdown 语法的更改。
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg  
+  # 相关内容或者代码块可以分组展示
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  # 允许使用任务清单即- []      
   - pymdownx.tasklist:
       custom_checkbox: true
+  
+  # 允许渲染公式，还需要添加mathjax配置和JavaScript      
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+  - pymdownx.arithmatex:
+      generic: true
+
+  - def_list #使用各类表格
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
+  - sane_lists
+  - pymdownx.magiclink
 
 
 extra_css:
@@ -277,16 +307,7 @@ extra_css:
   - mkdocs/css/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
-  - https://unpkg.com/katex@0/dist/katex.min.css
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink: true
-  - pymdownx.highlight:
-      linenums: true
-      auto_title: true
-      line_spans: __span
-      pygments_lang_class: true
+
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
