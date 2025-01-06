@@ -14,7 +14,7 @@
 
 - 五人制足球场、乒乓球馆 & 球桌、篮球场……
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母校点滴，难以忘怀，遂作此文，聊以慰藉，也为五湖四海的附中人提供回忆的起点。
+&emsp;&emsp;母校点滴，难以忘怀，遂作此文，聊以慰藉，也为五湖四海的附中人提供回忆的起点。
 
 ## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 当时只道是寻常 —— 391特辑</div>
 
@@ -28,25 +28,25 @@
 ### <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> Chapter 1 &nbsp;&nbsp;那三天，那三年 </div>
 
 ![alt text](image-8.png)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;众所周知，半夜是必须发疯的。
+&emsp;&emsp;众所周知，半夜是必须发疯的。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主图，沙发。灯光明亮，十许读者。
+&emsp;&emsp;主图，沙发。灯光明亮，十许读者。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昨天夜里四个小时，今天晚上彻夜未眠，至少，就目前的局势，是这样的。目前，两天睡四个小时，忽然想起，也快赶上高考那三天睡十个小时了罢。
+&emsp;&emsp;昨天夜里四个小时，今天晚上彻夜未眠，至少，就目前的局势，是这样的。目前，两天睡四个小时，忽然想起，也快赶上高考那三天睡十个小时了罢。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高考，竟然是今年下半年发生的事。转眼，现在已经来到了十一月的尽头，马上迎接十二月和一月了。激动？迷茫？
+&emsp;&emsp;高考，竟然是今年下半年发生的事。转眼，现在已经来到了十一月的尽头，马上迎接十二月和一月了。激动？迷茫？
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天和wlgg闲谈，他先道，转眼，三个月了，都三个月了，我附和道，也感觉自己挺失败的。他遂调侃，你想干嘛？现在就发Nature？
+&emsp;&emsp;今天和wlgg闲谈，他先道，转眼，三个月了，都三个月了，我附和道，也感觉自己挺失败的。他遂调侃，你想干嘛？现在就发Nature？
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高考前也就是六月六日晚，破天荒的失眠了。曾经无数次肯定地玩笑说心态那么好，如左所言，高考都参加过了，什么大风大浪没见过呢？那晚，确实，失眠了。第一次听到墙上时钟指针移动的声音，嫌吵，遂叫父亲拿出去。换过无数种睡姿，也在想平时哪种睡姿容易入睡，让自己心中什么也不想，也确实没啥好想的，但是那种刻意控制的感觉，让我时刻意识到我正处于清醒状态。也试图让自己的意识变模糊，但是还是能感受到那个逐渐变化的过程，到一半时，清楚自己不能这样骗自己，遂换睡姿，重复上述过程。意识到时间的流逝，但不敢看表，怕影响自己入眠。终确定了无法入睡，遂看表，一点？两点？忘却了。能看到门缝透过的客厅的光亮，遂出，“妈我睡不着”。回屋，仍不眠。终还是累了，睡着了。
+&emsp;&emsp;高考前也就是六月六日晚，破天荒的失眠了。曾经无数次肯定地玩笑说心态那么好，如左所言，高考都参加过了，什么大风大浪没见过呢？那晚，确实，失眠了。第一次听到墙上时钟指针移动的声音，嫌吵，遂叫父亲拿出去。换过无数种睡姿，也在想平时哪种睡姿容易入睡，让自己心中什么也不想，也确实没啥好想的，但是那种刻意控制的感觉，让我时刻意识到我正处于清醒状态。也试图让自己的意识变模糊，但是还是能感受到那个逐渐变化的过程，到一半时，清楚自己不能这样骗自己，遂换睡姿，重复上述过程。意识到时间的流逝，但不敢看表，怕影响自己入眠。终确定了无法入睡，遂看表，一点？两点？忘却了。能看到门缝透过的客厅的光亮，遂出，“妈我睡不着”。回屋，仍不眠。终还是累了，睡着了。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来到了六月七日晚。依然是这样，依然是同样的过程。只是那几首古诗词在脑海中不停回荡。《离骚》、《雁门太守行》……也坠入了迷幻中，反复思考是不是已经考完了语文，反复思考第二天考什么，想着能不能脑子里背一背生物，竟不能想起一句。大脑被古诗词霸占。自忖，睡不着有这时间复习复习罢，外出拿出我的绿本，躺床上翻看，看的是化学笔记，草草过一遍，就把本放枕边了。手压在本上，幻想着知识进入脑海，也终究是累了困了，没有东鹏特饮，睡了。
+&emsp;&emsp;来到了六月七日晚。依然是这样，依然是同样的过程。只是那几首古诗词在脑海中不停回荡。《离骚》、《雁门太守行》……也坠入了迷幻中，反复思考是不是已经考完了语文，反复思考第二天考什么，想着能不能脑子里背一背生物，竟不能想起一句。大脑被古诗词霸占。自忖，睡不着有这时间复习复习罢，外出拿出我的绿本，躺床上翻看，看的是化学笔记，草草过一遍，就把本放枕边了。手压在本上，幻想着知识进入脑海，也终究是累了困了，没有东鹏特饮，睡了。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写到这里，发现本文的归档不正确，为什么本来想写写在zju发疯的日常，但是思绪总会停留在那个夏日呢？为什么脑中闪过的悉数是和好友的不能再小的琐事，和那两天的经历，呢？
+&emsp;&emsp;写到这里，发现本文的归档不正确，为什么本来想写写在zju发疯的日常，但是思绪总会停留在那个夏日呢？为什么脑中闪过的悉数是和好友的不能再小的琐事，和那两天的经历，呢？
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遂 `mv Crazzzzzy.md docs/ME/SDFZ`，究竟写了几个z！眼花！copy下去，mv: cannot stat 'Crazzzzzy.md': No such file or directory. eee 最初还以为是z的个数数错了，但是，`cd docs/ME/ZJU `, `mv Crazzzzzy.md /home/ruizhe/Github/mkdocs-site/docs/ME/SDFZ`, 看到路径下方生成横线才放心。谁懂啊简直不要太真实。
+&emsp;&emsp;遂 `mv Crazzzzzy.md docs/ME/SDFZ`，究竟写了几个z！眼花！copy下去，mv: cannot stat 'Crazzzzzy.md': No such file or directory. eee 最初还以为是z的个数数错了，但是，`cd docs/ME/ZJU `, `mv Crazzzzzy.md /home/ruizhe/Github/mkdocs-site/docs/ME/SDFZ`, 看到路径下方生成横线才放心。谁懂啊简直不要太真实。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回去看看写的标题，insane，crazy，想想还是改成有关高中罢。还是图形化界面操作舒服不用看半天我的文章题目叫啥，不用`cd`半天（
+&emsp;&emsp;回去看看写的标题，insane，crazy，想想还是改成有关高中罢。还是图形化界面操作舒服不用看半天我的文章题目叫啥，不用`cd`半天（
 
 <div style=" font-size: 1.2em; font-weight: bold;">
 小记
@@ -57,7 +57,7 @@
 
 ### <div style="text-align: center; font-size: 1.3em; font-weight: bold;"> Chapter 2 &nbsp;&nbsp;当时只道是寻常 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;和$wxy$闲聊，发现我竟然还能背出生态位的概念……
+&emsp;&emsp;和$wxy$闲聊，发现我竟然还能背出生态位的概念……
 
 #### <div style=" font-size: 1.2em; font-weight: bold;"> 三组那些事 </div>
 
@@ -478,11 +478,11 @@ ball
 
 ……
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;紧锣密鼓，策划如何给我们的冠军接风洗尘。提前关灯，门口放风，准备歌曲。
+&emsp;&emsp;紧锣密鼓，策划如何给我们的冠军接风洗尘。提前关灯，门口放风，准备歌曲。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当《平凡之路》响起，他们，已经泣不成声。
+&emsp;&emsp;当《平凡之路》响起，他们，已经泣不成声。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里，就借用于博士的puq文案做结
+&emsp;&emsp;这里，就借用于博士的puq文案做结
 
 >有时候就想，如果真的必须在赢球赛和满教室的歌声和满黑板的祝福中选一个，我宁愿选择后者。
 
@@ -522,19 +522,19 @@ ball
         
         倒流进天空的海底
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;免责声明：原谅五音不全不通乐理不会写文案的我 :face_holding_back_tears:
+&emsp;&emsp;免责声明：原谅五音不全不通乐理不会写文案的我 :face_holding_back_tears:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合唱、分声部练习、一对一教学，麦当劳排队化妆时仍在练声。
+&emsp;&emsp;合唱、分声部练习、一对一教学，麦当劳排队化妆时仍在练声。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;带到音乐教室但没来得及写的学案、自带幽默属性爱讲单口相声的老师、排练结束后教室中飘出的泡面香味，以及，与大佐的脑袋亲密接触的墙……
+&emsp;&emsp;带到音乐教室但没来得及写的学案、自带幽默属性爱讲单口相声的老师、排练结束后教室中飘出的泡面香味，以及，与大佐的脑袋亲密接触的墙……
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 跑操 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;喊口号！先看杰森有没有跟着一起跑
+&emsp;&emsp;喊口号！先看杰森有没有跟着一起跑
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若有，喊前：反反复复说“喊一统江山啊”；喊时：老老实实1234；喊后：互相问“你咋不喊口号了”
+&emsp;&emsp;若有，喊前：反反复复说“喊一统江山啊”；喊时：老老实实1234；喊后：互相问“你咋不喊口号了”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若无：“三九一班，非同一般，一统江山，解放台湾！”，继而是左右前后班级的掌声
+&emsp;&emsp;若无：“三九一班，非同一般，一统江山，解放台湾！”，继而是左右前后班级的掌声
 
 
 #####  <div style=" font-size: 1.3em; font-weight: bold;"> 晚饭 </div>
@@ -700,12 +700,12 @@ Then, it comes to the $3^{rd}$ group ~
 
 ## <div style="text-align: center; font-size: 1.4em; font-weight: bold;"> 省府街1号的那些日子 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附中三年，考试相伴。被写不完的作业围追堵截，被风雨无阻的大考小测折磨到麻木，被同窗耀眼的成绩压得抬不起头。
+&emsp;&emsp;附中三年，考试相伴。被写不完的作业围追堵截，被风雨无阻的大考小测折磨到麻木，被同窗耀眼的成绩压得抬不起头。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，正如一位同学在《附中回忆录》中所写：
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;苦中作乐的每一声大笑都是无比鲜活的。祝鲜活的我们都将获得曾经渴望的自由。
+&emsp;&emsp;但是，正如一位同学在《附中回忆录》中所写：
+>&emsp;&emsp;苦中作乐的每一声大笑都是无比鲜活的。祝鲜活的我们都将获得曾经渴望的自由。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真正离开后，或许，我们的大脑自然而然地模糊了痛苦的感受，却让我深深记得那些短暂而美丽的瞬间。这些，抑或是，这些……
+&emsp;&emsp;真正离开后，或许，我们的大脑自然而然地模糊了痛苦的感受，却让我深深记得那些短暂而美丽的瞬间。这些，抑或是，这些……
 
 - 校服
 

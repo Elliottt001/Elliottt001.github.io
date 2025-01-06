@@ -1,6 +1,6 @@
 转载：[读书的Harry-这些思维正在断送你的大学4年](https://www.bilibili.com/video/BV12cqbYxE3G/?spm_id_from=333.337.search-card.all.click)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正如我在《原则》的阅读笔记中所写，时刻质疑。对于质疑我的要求见文末。
+&emsp;&emsp;正如我在《原则》的阅读笔记中所写，时刻质疑。对于质疑我的要求见文末。
 
 !!! note "我的质疑与思考"
 
