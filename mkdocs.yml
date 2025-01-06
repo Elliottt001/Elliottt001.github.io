@@ -25,6 +25,10 @@ nav:
         - 24寒假: ME/ZJU/plan/plan-for-24winter-holiday.md
       - 学习:
         - 资源: ME/ZJU/learn/resoure.md
+    - 随笔:
+      - 2024-11: ME/ESSAY/2024-11.md
+      - 2024-12: ME/ESSAY/2024-12.md
+      - 2024年终总结: ME/ESSAY/2024-to-2025.md
 
   - 知识:
     - KNOWLEDGE/index.md
@@ -50,6 +54,8 @@ nav:
     - 算法相关: 
       - Misc: CS/Algorithm/misc.md
       - Sort: CS/Algorithm/sort.md
+    - 网络安全:
+      - 基础: CS/IS/basic.md
     - 实用工具:
       - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
@@ -62,19 +68,20 @@ nav:
       - GDB: CS/Tools/GDB.md
       - Obsidian: CS/Tools/Obsidian.md
       - Mkdocs: CS/Tools/mkdocs.md
+      - Makefile: CS/Tools/makefile.md
     - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
       - DL: CS/AI/DL.md
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
+    - 杂七杂八:
+      - 想了解的东西: CS/Misc/things-i-wanna-know.md
 
   - 阅读:
-    - 原则: BOOK/principles.md
+    - BOOK/index.md
+    - 原则: BOOK/enhancements/principles.md
 
-  - 随笔:
-    - 2024-11: ESSAY/2024-11.md
-    - 2024-12: ESSAY/2024-12.md
 
 
 # [UI]

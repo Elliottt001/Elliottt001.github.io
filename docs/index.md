@@ -7,7 +7,7 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~『toda mi ambición es ser libre toda mi vida』~
+        ~『Miracles happen every day』~
     </div>
     <div align="center" style="font-size:12px">
         轻舟已过万重山，前路漫漫亦灿灿

@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Markdown 文件路径
-markdown_file = "/home/ruizhe/Github/mkdocs-site/docs/ESSAY/2024-12.md"
+markdown_file = "/home/ruizhe/github/mkdocs-site/docs/ME/ESSAY/2024-11.md"
 # 图片目标路径
 target_image_dir = "../res/images"
 

@@ -10,7 +10,7 @@
 
 !!! info "Abstract"
 
-    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
+    一些[ZJU学习笔记](https://r-z-zhang-ai.github.io/CS)，包括微积分、线性代数。
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
