@@ -303,15 +303,15 @@ markdown_extensions:
 
 
 extra_css:
+  # [自定义 css]
+  - mkdocs/css/custom.css  
+  # 字体
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
+
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-  # [自定义 css]
-  # 不使用底部的翻页
-  - mkdocs/css/no-footer.css
-  # 无序列表符号自定义
-  - mkdocs/css/unordered-list-symbols.css
-
   - https://unpkg.com/katex@0/dist/katex.min.css
   # [图片功能支持]
   # https://squidfunk.github.io/mkdocs-material/reference/images/
