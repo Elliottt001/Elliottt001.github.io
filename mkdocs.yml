@@ -80,8 +80,10 @@ nav:
 
   - 阅读:
     - BOOK/index.md
-    - 原则: BOOK/enhancements/principles.md
-
+    - 个人提升:
+      - 原则: BOOK/enhancements/principles.md
+    - 文学名著:
+      - 山茶文具店: 
 
 
 # [UI]

@@ -14,7 +14,18 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
     </div>
     <br><br>
 
-!!! inline Warning "施工中！" 
+!!! danger "正在努力更新中"
+
+    - [ ] 《山茶文具店》
+    - [ ] 2024年终总结
+    - [ ] Something about the career
+
+!!! info "正在学习的内容"
+
+    - [ ] Python：[Python-100-days](https://github.com/jackfrued/Python-100-Days/tree/master)，[Python-50-days](https://github.com/jackfrued/Python-Core-50-Courses/)
+
+
+!!! inline warning "施工中！" 
 
     惊喜多多，速来围观 ~
 
