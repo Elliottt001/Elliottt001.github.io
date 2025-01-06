@@ -84,7 +84,8 @@ theme:
   name: material
   icon:
     logo: material/library-outline
-
+  palette:
+    - scheme: default
   # palette:
   #   # 日间模式
   #   - media: "(prefers-color-scheme: light)"
@@ -100,10 +101,7 @@ theme:
   #     toggle:
   #       icon: material/weather-sunny
   #       name: 切换至浅色模式
-  # font: False
-
-  palette:
-    scheme: default
+  font: False
 
 
   features:
@@ -313,11 +311,11 @@ extra_css:
   # - md_in_html
   # - toc:
   #     permalink: true
-  - pymdownx.highlight:
-      linenums: true
-      auto_title: true
-      line_spans: __span
-      pygments_lang_class: true
+  # - pymdownx.highlight:
+  #     linenums: true
+  #     auto_title: true
+  #     line_spans: __span
+  #     pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
