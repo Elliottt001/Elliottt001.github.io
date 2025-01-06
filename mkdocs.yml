@@ -83,7 +83,7 @@ theme:
   name: material
   icon:
     logo: material/library-outline
-    
+
   palette:
 
     # Palette toggle for automatic mode
@@ -96,14 +96,14 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to system preference
   font: False
 
