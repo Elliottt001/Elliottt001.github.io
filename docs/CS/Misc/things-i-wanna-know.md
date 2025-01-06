@@ -46,3 +46,5 @@
 - 寒假学学快捷键
 
 - **学嵌入式开发**
+
+- [chat with deekseek](https://chat.deepseek.com/a/chat/s/156b1d31-b891-4384-9c6c-f8dcf4872e06)

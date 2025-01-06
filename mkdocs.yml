@@ -38,7 +38,7 @@ nav:
       - 思想方法: KNOWLEDGE/calculus/thought-for-calculus.md
     - 线性代数:
       - 知识体系: KNOWLEDGE/linear-algebra/knowledge-frame-of-LA.md
-      - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md
+      - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md 
 
   - 开发:
     - CS/index.md
