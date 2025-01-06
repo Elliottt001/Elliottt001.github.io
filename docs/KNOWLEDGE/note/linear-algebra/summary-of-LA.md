@@ -7,7 +7,7 @@
 
 ### 行列式的求解方法
 
-![alt text](image.png)
+![alt text](res/images/image_1_1.png)
 
 #### 1. 定义
 
@@ -18,12 +18,12 @@ core：消出0！！！
 - 注意-1的逆序数次方
 - 三阶：捺-撇
 
-![打洞降阶法](image-1.png)
+![打洞降阶法](res/images/image-1_1_1.png)
 ##### 1.1化为上三角
 	右上or左下：主对乘积
 	右下or左上：
 
-![三角形行列式](image-2.png)
+![三角形行列式](res/images/image-2_1_1.png)
 ——>简化消0过程，找平衡
 
 #### 2. Laplace 定理
@@ -37,19 +37,19 @@ core：消出0！！！
 
 #### 3.  爪形
 
-![爪型行列式](image-3.png)
+![爪型行列式](res/images/image-3_1_1.png)
 
 #### 4. 镶边法
 
-![行和相等](image-4.png)
+![行和相等](res/images/image-4_1_1.png)
 
-![么型](image-5.png)
+![么型](res/images/image-5_1_1.png)
 
-![川型](image-6.png)
+![川型](res/images/image-6_1_1.png)
 
-![范德蒙德](image-7.png)
+![范德蒙德](res/images/image-7_1_1.png)
 
-![矩阵方块行列式](image-8.png)
+![矩阵方块行列式](res/images/image-8_1_1.png)
 
 
 ### 矩阵与行列式的关联
@@ -95,7 +95,7 @@ core：消出0！！！
 
 例题：
 
-![alt text](image-14.png)
+![alt text](res/images/image-14_1_1.png)
 
 #### 矩阵的分块
 
@@ -128,7 +128,7 @@ $AXB = C$ 求$X$
 先用等价标准型证明对，再证一般情况（等价标准型的左P右Q）：利用其他矩阵知识（行列初等变换秩不变/乘可逆秩不变，）
 	
 例题：
-	![alt text](image-9.png)
+	![alt text](res/images/image-9_1_1.png)
 
 
 
@@ -254,6 +254,39 @@ $$
 $$
 \beta_k = \alpha_k - \frac{(\alpha_k, \beta_1)}{(\beta_1, \beta_1)}\beta_1 - \frac{(\alpha_k, \beta_2)}{(\beta_2, \beta_2)}\beta_2 - \cdots - \frac{(\alpha_k, \beta_{k - 1})}{(\beta_{k - 1}, \beta_{k - 1})}\beta_{k - 1} \quad, 2 \le k \le s 
 $$
+
+何时能相似对角化以及 $P$ 的样子
+![alt text](res/images/image-15_1_1.png)
+
+例题：
+
+![alt text](res/images/image-16_1_1.png)
+![alt text](res/images/image-17_1_1.png)
+![alt text](res/images/image-18_1_1.png)
+
+
+正定
+
+![alt text](res/images/image-19_1_1.png)
+![alt text](res/images/image-20_1_1.png)
+
+证明正定：
+1. 实对称：人为取出转置，证明它等于自己
+2. 用等价条件
+
+
+
+
+![alt text](res/images/image-21_1_1.png)
+![alt text](res/images/image-22_1_1.png)
+
+
+
+
+![alt text](res/images/1d65f3d1ea56e7a139c026ac371d9e6_1.png)
+![alt text](res/images/fdda65ea87d5acb84b9163e2d687831.png)
+![alt text](res/images/954646bb15c9d6327df3938d6f4a4e2.png)
+![alt text](res/images/0c6a3ac011c424e5db0a520aea43244.png)
 
 
 <script src="https://giscus.app/client.js"

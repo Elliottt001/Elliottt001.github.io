@@ -8,6 +8,7 @@ site_description: Zhang rz的个人网站
 # [Navigtion]
 nav:
   - 主页: index.md
+
   - 个人:
     - ME/index.md
     - 思考: 
@@ -24,23 +25,25 @@ nav:
         - 24寒假: ME/ZJU/plan/plan-for-24winter-holiday.md
       - 学习:
         - 资源: ME/ZJU/learn/resoure.md
+
   - 知识:
     - KNOWLEDGE/index.md
     - Note:
       - 微积分:
-        - 知识体系: KNOWLEDGE/Note/Calculus/Knowledge Frame of Calculus.md
-        - 方法总结: KNOWLEDGE/Note/Calculus/Summary of Calculus.md
-        - Thought: KNOWLEDGE/Note/Calculus/thought for calculus.md
+        - 知识体系: KNOWLEDGE/note/calculus/knowledge-frame-of-calculus.md
+        - 方法总结: KNOWLEDGE/note/calculus/summary-of-calculus.md
+        - 思想方法: KNOWLEDGE/note/calculus/thought-for-calculus.md
       - 线性代数:
-        - 知识体系: KNOWLEDGE/Note/Linear Algebra/Knowledge Frame of LA.md
-        - 方法总结: KNOWLEDGE/Note/Linear Algebra/Summary of Linear Algebra.md
+        - 知识体系: KNOWLEDGE/note/linear-algebra/knowledge-frame-of-LA.md
+        - 方法总结: KNOWLEDGE/note/linear-algebra/summary-of-LA.md
+
   - 开发:
     - CS/index.md
     - 编程语言:
       - C/C++:
         - C语言: 
-          - 学习笔记: CS/pl/C_Cpp/C/C Note.md
-          - 错题整理: CS/pl/C_Cpp/C/C Errors and Tips.md
+          - 学习笔记: CS/pl/C_Cpp/C/c-note.md
+          - 错题整理: CS/pl/C_Cpp/C/c-errors-and-tips.md
         - C++:
           - 学习笔记: none.md
       - Python:
@@ -66,8 +69,10 @@ nav:
       - DL: CS/AI/DL.md
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
+
   - 阅读:
     - 原则: BOOK/principles.md
+
   - 随笔:
     - 2024-11: ESSAY/2024-11.md
     - 2024-12: ESSAY/2024-12.md
@@ -251,6 +256,21 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 5
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:

@@ -182,7 +182,7 @@ $
 
 特别地：
 当 $u(x) \to 1, v(x) \to \infty$ 时，即$1^\infty$型
-![$1^\infty$](image-11.png)
+![$1^\infty$](res/images/image-11_1.png)
 
 等价无穷小：
 
@@ -264,13 +264,13 @@ $
 
 ##### 六、定积分定义
 
-![alt text](image-91.png)
+![alt text](res/images/image-91_1.png)
 
 五、六 都用于n项和极限
 
 n项乘积极限：取对数化为n项和
 
-![alt text](image-92.png)
+![alt text](res/images/image-92_1.png)
 
 
 #####  八、等价无穷小
@@ -357,7 +357,7 @@ n项乘积极限：取对数化为n项和
 - 原理：海涅定理
 - 注意：满足1～3条件
 - 格式：最后一行
-![alt text](image-31.png)
+![alt text](res/images/image-31_1.png)
 
 ###### （二）函数
 
@@ -412,13 +412,13 @@ $\lim_{x \to \infty} \left ( x - x^2 \ln\left(1 + \frac{1}{x}\right) \right)$
 
 统一化成以$e$为底
 
-![alt text](image-32.png)
+![alt text](res/images/image-32_1.png)
 
 $lim_{x \to 0} \frac{a^x - a^{sinx}}{x^3}$
 
 $lin_{x \to 0^+}{\frac1{x^2} - \frac1{tan^2x}}$
 
-![alt text](image-36.png)
+![alt text](res/images/image-36_1.png)
 
 $lim_{x \to 0^+}{(\frac{1-cosx}{x^2})}^\frac1x$
 
@@ -432,9 +432,9 @@ $lim_{x \to 0^+}{(\frac{1-cosx}{x^2})}^\frac1x$
 
 	因此，都用e为底！
 
-![alt text](image-33.png)
-![alt text](image-34.png)
-![alt text](image-35.png)
+![alt text](res/images/image-33_1.png)
+![alt text](res/images/image-34_1.png)
+![alt text](res/images/image-35_1.png)
 
 - **总结**
 
@@ -497,7 +497,7 @@ t = 1/x 较常见
 	- 有限次：有理化
 
 		例题：上册P54-8（13）
-	![根式有理化](image-10.png)
+	![根式有理化](res/images/image-10_1.png)
 	- n次根式：因式分解
 
 		相对性：1次~n次 <=> $\frac1n$次~1次
@@ -685,12 +685,12 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 
 别忘了定义：极值是局部最小值
 
-![alt text](image-24.png)
+![alt text](res/images/image-24_1.png)
 
 思想：证明不是……：举反例
-![alt text](image-27.png)
-![alt text](image-26.png)
-![alt text](image-25.png)
+![alt text](res/images/image-27_1.png)
+![alt text](res/images/image-26_1.png)
+![alt text](res/images/image-25_1.png)
 
 ###### 隐函数
 
@@ -742,7 +742,7 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 
 **例题**
 
-![alt text](image-37.png)
+![alt text](res/images/image-37_1.png)
 
 ##### 题型二：方程根的个数
 **类型一**：证明至多有多少个实根
@@ -888,7 +888,7 @@ $$
 		该方法也适用于上面的情况，反正就是出首项
 		- 例题：
 		求$lim_{x \to 0} \frac{x^2e^{2x} + ln(1 - x^2)}{xcosx - sinx}$  
-		![alt text](image-28.png)
+		![alt text](res/images/image-28_1.png)
 		
 注意事项：
 
@@ -913,7 +913,7 @@ $$
 
 <figure markdown="span">
 
-  ![alt text](image-29.png)
+  ![alt text](res/images/image-29_1.png)
 
   <figcaption>泰勒定理近似计算原理</figcaption>
 
@@ -999,23 +999,23 @@ $$
 
 
 例题：
-![alt text](image-6.png)
-![alt text](image-30.png)
+![alt text](res/images/image-6_1.png)
+![alt text](res/images/image-30_1.png)
 
 <figure markdown="span">
 
-  ![alt text](image-19.png)
+  ![alt text](res/images/image-19_1.png)
 
   <figcaption>tips：闭区间上连续函数有界</figcaption>
 
 </figure>
 
-![alt text](image-8.png)
-![alt text](image-9.png)
-![alt text](image-21.png)
-![alt text](image-20.png)
+![alt text](res/images/image-8_1.png)
+![alt text](res/images/image-9_1.png)
+![alt text](res/images/image-21_1.png)
+![alt text](res/images/image-20_1.png)
 
-![alt text](image-22.png)
+![alt text](res/images/image-22_1.png)
 用〇阶、二阶讨论一阶，当然泰勒；问x，则x为特殊点，在这展开；展什么？端点；俩，消元
 
 
@@ -1034,13 +1034,13 @@ $$
 1. 新元在0处的泰勒
 2. 符合几个常见的背过的结构
 
-![间接法求泰勒公式](image.png)
-![间接法求泰勒公式](image-1.png)
+![间接法求泰勒公式](res/images/image_1.png)
+![间接法求泰勒公式](res/images/image-1_1.png)
 
 ### 求高阶导数
 #### 法一、泰勒公式法
 **原理**
-![求高阶导数值原理](image-5.png)
+![求高阶导数值原理](res/images/image-5_1.png)
 
 **方法**
 
@@ -1049,15 +1049,15 @@ $$
 2. 用上述原理($a_k = \frac{f^{(n)}(x_0)}{k!}$)找到对应项即得。
 
 例题：
-![求高阶导数法一](image-2.png)
+![求高阶导数法一](res/images/image-2_1.png)
 错误原因：分子分母同除了x，将所得式子展开：
 - 一、不知道可以分开展。
 - 二、看 x or x 的函数趋于多少：出现$\frac1x$, 他是$+\infty$啊怎么能。
 #### 法二、常微分方程法
 方法：
 
-![求高阶导数法二1](image-3.png)
-![求高阶导数法二2](image-4.png)
+![求高阶导数法二1](res/images/image-3_1.png)
+![求高阶导数法二2](res/images/image-4_1.png)
 
 
 ## 不定积分
@@ -1194,7 +1194,7 @@ $$
 #### 多项式类函数
 
 - $纯二次幂 * 二次多项式的函数$ ：取一个一次出来凑微分，再用分部积分法
-	![alt text](image-68.png)
+	![alt text](res/images/image-68_1.png)
 
 ##### 高次广义幂函数
 
@@ -1211,7 +1211,7 @@ $$
 
 **例题**
 
-![alt text](image-64.png)
+![alt text](res/images/image-64_1.png)
 
 ##### 多项式函数
 
@@ -1221,7 +1221,7 @@ $$
 
 **例题：**
 
-![alt text](image-73.png)
+![alt text](res/images/image-73_1.png)
 
 
 
@@ -1251,9 +1251,13 @@ $$
 	精髓在分母根号外面的 $x^n$，与 $\frac1{t^2}$ 抵消
 
 
+**类型三**
+
+凑微分法：分母有根号，且其中 $x$ 的表达式和 $d$ 里面的相近or次数相同可以讲该根号凑微分
+
 **例题：**
 
-![alt text](image-62.png)
+![alt text](res/images/image-62_1.png)
 
 ### 凑微分法（第一类换元法）
 
@@ -1282,6 +1286,8 @@ $$
 
 	一次多项式和二次多项式函数的乘积，例如 $\int (x + 1) \sqrt{x^2 + 2x} \, dx$ ，$\int \frac{x}{\sqrt{1 - x^2}} \, dx$将一次与 $dx$ 凑微分
 
+	这里其实“一次多项式”是个奇数次就行，原理就是分出来一个一次可以凑微分成二次，-1次也行, $\frac1{x(x^2 + 1)}$
+
 3. $\int 某结构^{高次} \&某结构^{低次} \, {\rm d}x$
 
 	将高次中拿出一部分凑微分
@@ -1299,7 +1305,7 @@ $\int \frac {\, dx}{a^2 - x^2}$
 
 求 $\int \csc x$ 的5种方法
 
-![alt text](image-63.png)
+![alt text](res/images/image-63_1.png)
 
 
 ### 换元法（第二类换元法）
@@ -1316,7 +1322,12 @@ $\int \frac {\, dx}{a^2 - x^2}$
 
 ### 分部积分法
 
-口算方法by汪国军
+表格积分法，[对应的知乎文](https://zhuanlan.zhihu.com/p/237626870)，以及[对应的论文](http://ramanujan.math.trinity.edu/rdaileda/teach/s18/m3357/parts.pdf)，个人感觉论文比知乎文更好。
+
+**核心公式：**
+
+![alt text](res/images/image-1.png)
+![alt text](res/images/image-2.png)
 
 !!! info "箴言"
 
@@ -1367,7 +1378,7 @@ $$ \int u \, dv = uv - \int v \, du $$
 </div>
 
 
-![alt text](image-39.png)
+![alt text](res/images/image-39_1.png)
 
 **场景：** 被积函数为两种不同类型函数乘积
 
@@ -1397,8 +1408,8 @@ $$ \int u \, dv = uv - \int v \, du $$
 
 **例题：**
 
-![alt text](image-104.png)
-![alt text](image-65.png)
+![alt text](res/images/image-104_1.png)
+![alt text](res/images/image-65_1.png)
 
 $\int \sec^1 x \, dx$ 公式
 
@@ -1424,12 +1435,12 @@ $\int \sec^5 x \, dx$
 
 
 
-![alt text](image-66.png)
+![alt text](res/images/image-66_1.png)
 
-![将(1 + x)^2dx凑微分](image-69.png)
-![先化简x = (x + 1) - 1](image-70.png)
-![换元和分步同时使用](image-71.png)
-![alt text](image-72.png)
+![将(1 + x)^2dx凑微分](res/images/image-69_1.png)
+![先化简x = (x + 1) - 1](res/images/image-70_1.png)
+![换元和分步同时使用](res/images/image-71_1.png)
+![alt text](res/images/image-72_1.png)
 
 
 ### 特殊类型函数的积分
@@ -1439,8 +1450,8 @@ $\int \sec^5 x \, dx$
 假分式 =  真分式 + 幂函数
 
 真分式的因式分解：代数学基本定理
-![alt text](image-41.png)
-![alt text](image-42.png)
+![alt text](res/images/image-41_1.png)
+![alt text](res/images/image-42_1.png)
 
 任意一个次数 >= 3 的多项式均可因式分解；检查是否分解到不能分解
 
@@ -1456,13 +1467,13 @@ $\int \sec^5 x \, dx$
 
 - 赋值法（对每个x都成立所以可）：通分，看分子
 
-![alt text](image-43.png)
-![alt text](image-44.png)
-![alt text](image-78.png)
+![alt text](res/images/image-43_1.png)
+![alt text](res/images/image-44_1.png)
+![alt text](res/images/image-78_1.png)
 
 $\int \frac1{1 + x^4}\, dx$
 
-![alt text](image-79.png)
+![alt text](res/images/image-79_1.png)
 
 $e^x$ 的有理函数：上下同乘 $e^x$ ，上面的 $e^x$ 和 $dx$ 凑微分，再换元
 
@@ -1472,66 +1483,66 @@ $e^x$ 的有理函数：上下同乘 $e^x$ ，上面的 $e^x$ 和 $dx$ 凑微分
 
 $\int \frac {x^2 + x - 3}{{(x - 1)}^{10}} \, dx$
 
-![alt text](image-45.png)
-![从n - 1 次入手](image-46.png)
+![alt text](res/images/image-45_1.png)
+![从n - 1 次入手](res/images/image-46_1.png)
 
 
 
-![alt text](image-74.png)
-![alt text](image-64.png)
-![alt text](image-77.png)
+![alt text](res/images/image-74_1.png)
+![alt text](res/images/image-64_1.png)
+![alt text](res/images/image-77_1.png)
 
 方法1是上下同*x^9
 
 
 #### 三角函数积分
 
-![alt text](image-47.png)
-![alt text](image-57.png)
-![alt text](image-58.png)
-![alt text](image-59.png)
-![alt text](image-60.png)
-![alt text](image-61.png)
+![alt text](res/images/image-47_1.png)
+![alt text](res/images/image-57_1.png)
+![alt text](res/images/image-58_1.png)
+![alt text](res/images/image-59_1.png)
+![alt text](res/images/image-60_1.png)
+![alt text](res/images/image-61_1.png)
 
 $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
-![alt text](image-80.png)
+![alt text](res/images/image-80_1.png)
 
 化为单因式！
 
-![1/sinx型：上下同乘](image-81.png)
-![分母和差，化乘积](image-82.png)
-![遗失部分：bsinx](image-83.png)
-![alt text](image-84.png)
+![1/sinx型：上下同乘](res/images/image-81_1.png)
+![分母和差，化乘积](res/images/image-82_1.png)
+![遗失部分：bsinx](res/images/image-83_1.png)
+![alt text](res/images/image-84_1.png)
 
 法三：t = tanx
 
-![alt text](image-87.png)
+![alt text](res/images/image-87_1.png)
 
 利用：导数
 
-![alt text](image-88.png)
+![alt text](res/images/image-88_1.png)
 
 特殊类型的三角函数积分
 
-![alt text](image-48.png)
-![alt text](image-49.png)
-![alt text](image-50.png)
+![alt text](res/images/image-48_1.png)
+![alt text](res/images/image-49_1.png)
+![alt text](res/images/image-50_1.png)
 
-![alt text](image-51.png)
-![alt text](image-53.png)
-![alt text](image-52.png)
+![alt text](res/images/image-51_1.png)
+![alt text](res/images/image-53_1.png)
+![alt text](res/images/image-52_1.png)
 
 #### 某些无理函数
 
 被积函数含有n次根号，根号内是两个1次多项式的商；内部是1词多项式的乘积：提出来，化商
-![alt text](image-54.png)
+![alt text](res/images/image-54_1.png)
 
 有些初等函数的原函数不一定是初等函数
-![alt text](image-55.png)
+![alt text](res/images/image-55_1.png)
 
-![alt text](image-85.png)
-![alt text](image-86.png)
+![alt text](res/images/image-85_1.png)
+![alt text](res/images/image-86_1.png)
 
 #### 分段函数积分
 
@@ -1540,16 +1551,22 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 #### 抽象函数积分
 
-直接用f抽形函数表达式求
+带着抽象函数符号 $f$ 用分部积分法。千万不能想着用特别基础的知识直接求出来结果。
 
-![alt text](image-56.png)
-![alt text](image-67.png)
+![alt text](res/images/image-56_1.png)
+![alt text](res/images/image-67_1.png)
 
 应该按照函数类型
+
+不能求不定积分的函数：$\frac{\sin x}x$，$e^{x^2}$
+
+不能积的函数：对它求导：可以通过分部积分法达到该目的。
 
 ## 定积分
 
 ### 方法
+
+![alt text](res/images/image-6.png)
 
 **零碎方法**
 
@@ -1587,7 +1604,7 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 - $\frac1{1 + e^{-x}}$：$g(x) + g(-x) = g(x)g(-x) = 1$
 
-	![alt text](image-99.png)
+	![alt text](res/images/image-99_1.png)
 
 - 三角函数
 
@@ -1604,7 +1621,11 @@ $$
 $$
 $$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
 
-![alt text](image-100.png)
+![alt text](res/images/image-4.png)
+
+![alt text](res/images/image-5.png)
+
+![alt text](res/images/image-100_1.png)
 
 **方法：** 换元法 $t = π - x$
 
@@ -1613,7 +1634,7 @@ $$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
 - 一奇一偶函数之和，积分区间关于原点对称
 
 
-![alt text](image-102.png)
+![alt text](res/images/image-102_1.png)
 
 
 - $\   \to 三角换元$
@@ -1621,27 +1642,34 @@ $$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
 	- 挑角度：象限：一  一四  一二  一二三四
 
 
-	![alt text](image-98.png)
+	![alt text](res/images/image-98_1.png)
 
 
-![alt text](image-101.png)
+![alt text](res/images/image-101_1.png)
+
+
+![alt text](res/images/image-8.png)
+
+两种不同类型函数，且必须得是sin的函数，cos不行
 
 变上/下限积分
 
 微积分基本定理
 
-![alt text](image-93.png)
+![alt text](res/images/image-93_1.png)
 
 的极限：洛必达
 
-![alt text](image-94.png)
+![alt text](res/images/image-94_1.png)
 
 注意条件！：在那个上下中
 
-![alt text](image-95.png)
-![alt text](image-96.png)
+![alt text](res/images/image-95_1.png)
+![alt text](res/images/image-96_1.png)
 
-![alt text](image-97.png)
+![alt text](res/images/image-97_1.png)
+
+![alt text](res/images/image-3.png)
 
 
 
@@ -1649,7 +1677,7 @@ $$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
 
 微元法
 
-![alt text](image-103.png)
+![alt text](res/images/image-103_1.png)
 
 
 

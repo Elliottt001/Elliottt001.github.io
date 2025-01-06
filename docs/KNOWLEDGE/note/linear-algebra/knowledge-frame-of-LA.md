@@ -63,7 +63,7 @@ $A^{-1} = \frac{A^*}{|A|}$
 - 转置：可换顺序 ${(A^{-1})}^{T} = {(A^{T})}^{-1}$
 - 行列式：可换顺序 $|A^{-1}| = |A|^{-1}$
  
-![alt text](image-10.png)
+![alt text](res/images/image-10_1.png)
 
 ### 分块
 
@@ -125,13 +125,13 @@ $$r(AB) \le min\{r(A), r(B)\}$$
 $$C = \begin{pmatrix} A&O\\O&B \end{pmatrix} or \begin{pmatrix} O&A\\B&O \end{pmatrix},则r(C) = r(A) + r(B)$$
 
 	
-证明：![alt text](image-11.png)
+证明：![alt text](res/images/image-11_1.png)
 
 **4. 和的秩小于等于秩的和**
 
 $$r(A + B) \le r(A) + r(B)$$
 	
-证明：![alt text](image-12.png)
+证明：![alt text](res/images/image-12_1.png)
 	
 <!--构造，增加行or列：秩增加or不变，乘可逆 == 初等变换：秩不变-->
 
@@ -145,7 +145,7 @@ $$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
 
 **7. 补充**
 
-![alt text](image-13.png)
+![alt text](res/images/image-13_1.png)
 
 
 ## 线性空间

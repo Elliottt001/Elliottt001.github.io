@@ -469,13 +469,13 @@ $$
 
 有界函数在有限闭区间上
 
-![alt text](image-89.png)：定积分是和式的极限
+![alt text](res/images/image-89_1.png)：定积分是和式的极限
 
 注意：
 
 - $λ \to 0$ 不能用 $n \to \infty$ 代替，若分点全取在 $x_0$ 一侧，则不行
 
-![alt text](image-90.png)
+![alt text](res/images/image-90_1.png)
 
 
 <script src="https://giscus.app/client.js"

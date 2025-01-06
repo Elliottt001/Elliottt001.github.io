@@ -1,36 +1,37 @@
-Let's start!
-## 学习资料
+## 资源
 
-[Python_YL](https://www.yuque.com/u26596123/re4lmd?)
+[YL](https://www.yuque.com/u26596123/re4lmd?)
 
-[Python基础语法](https://www.yuque.com/u26596123/re4lmd/glsgkqzrtygbmugy)
+- [Python基础语法](https://www.yuque.com/u26596123/re4lmd/glsgkqzrtygbmugy)
 
-[Python进阶语法-判断, 循环与函数](https://www.yuque.com/u26596123/re4lmd/zcvm1zlsdnagtbd2)
+- [Python进阶语法-判断, 循环与函数](https://www.yuque.com/u26596123/re4lmd/zcvm1zlsdnagtbd2)
 
-[Python进阶语法-数据容器](https://www.yuque.com/u26596123/re4lmd/lqgrxxcmboh41glw)
+- [Python进阶语法-数据容器](https://www.yuque.com/u26596123/re4lmd/lqgrxxcmboh41glw)
 
-[Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
+- [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
-## 规范
+[骆昊](https://github.com/jackfrued/)
+
+- [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+
+- [Python-Core-50-Courses](https://github.com/jackfrued/Python-Core-50-Courses/)
+
+[官方文档](https://docs.python.org/zh-cn/3.13/)
+
+[极客教程](https://geek-docs.com/)
+- [python](https://geek-docs.com/python/python-top-tutorials/)
+
+## 编程风格
 命名
 - 模块（文件）名：小驼峰
 - 类名：大驼峰
 - 函数&变量名：下划线命名法
-## 杂项
-
-- in 关键词：用于可迭代对象
-  eg：
-```python
-for i in range(1, 100)
-if "hi" in word
-```
-- 假：
-	0, "", None, \[], (), {}   空字符串、空数列、空的……
-	函数return  <=> return None  <=> return 0  <=> ……
 
 ## 函数
 ### 变量的作用域
+
 全局变量可以在函数体内访问，但是内部不能修改！
+
 如果尝试修改，会报错
 
 如果想要修改：
@@ -100,8 +101,6 @@ print(calculator(3, 5, mul))
 ```
 
 ## 数据容器
-
-[Python进阶语法-数据容器](https://www.yuque.com/u26596123/re4lmd/lqgrxxcmboh41glw)
 
 ### 数据容器总结
 ![[63178ff0bddb8b3d19ff53ae8417e90.jpg]]
@@ -245,6 +244,7 @@ my_tuple[2][0] = 'A'
 print(my_tuple)
 # 被修改了
 ```
+
 #### 字符串string
 ##### 跟list相同点
 	.index()
@@ -749,6 +749,11 @@ my_func()
 
 python很好学的
 
+## 杂项
+
+- 假：
+	0, "", None, \[], (), {}   空字符串、空数列、空的……
+	函数return  <=> return None  <=> return 0  <=> ……
 
 
 ## 想了解的东西
