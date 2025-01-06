@@ -28,14 +28,13 @@ nav:
 
   - 知识:
     - KNOWLEDGE/index.md
-    - Note:
-      - 微积分:
-        - 知识体系: KNOWLEDGE/note/calculus/knowledge-frame-of-calculus.md
-        - 方法总结: KNOWLEDGE/note/calculus/summary-of-calculus.md
-        - 思想方法: KNOWLEDGE/note/calculus/thought-for-calculus.md
-      - 线性代数:
-        - 知识体系: KNOWLEDGE/note/linear-algebra/knowledge-frame-of-LA.md
-        - 方法总结: KNOWLEDGE/note/linear-algebra/summary-of-LA.md
+    - 微积分:
+      - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
+      - 方法总结: KNOWLEDGE/calculus/summary-of-calculus.md
+      - 思想方法: KNOWLEDGE/calculus/thought-for-calculus.md
+    - 线性代数:
+      - 知识体系: KNOWLEDGE/linear-algebra/knowledge-frame-of-LA.md
+      - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md
 
   - 开发:
     - CS/index.md
