@@ -14,11 +14,13 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
     </div>
     <br><br>
 
-!!! Warning "施工中！" 
+!!! inline Warning "施工中！" 
 
     惊喜多多，速来围观 ~
 
+!!! success "推荐阅读"
 
+    目前还没有……
 
 ---
 
