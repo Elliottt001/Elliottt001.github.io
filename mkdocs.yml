@@ -249,88 +249,49 @@ plugins:
   - changelog
   - minify:
       minify_html: true
-  # # 双链
-  # - mkdocs-backlinks
 
 markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 5
-
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
       generic: true
-  # Admonitions告诫 插件
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  # Annotations注解 插件
   - attr_list
   - md_in_html
-  - pymdownx.superfences
-  # 图像处理
   - pymdownx.blocks.caption
-  # 内容选项卡
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  # buttons按钮 插件
-  # - attr_list
-  # emoji
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-    # 允许使用任务清单即- []      
   - pymdownx.tasklist:
       custom_checkbox: true
 
 
 extra_css:
-  # [自定义 css]
+
   - mkdocs/css/custom.css
   - mkdocs/css/extra.css
-  # 字体
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
-
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - https://unpkg.com/katex@0/dist/katex.min.css
-  # [图片功能支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/images/
-  # 给 Markdown 图片语法后面添加 `{width="300"}` 设置大小
   - attr_list
   - md_in_html
-  # [给标题添加链接]
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  # [代码语法高亮]
-  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-blocks
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+      permalink: true
   - pymdownx.highlight:
-      # 显示行号
       linenums: true
-      # 显示编程语言名称
       auto_title: true
-      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.line_spans
       line_spans: __span
-      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.pygments_lang_class
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
- 
-  # [Markdown 提示]
-  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
   - pymdownx.details
-  # [Markdown footnote 语法支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
 
 extra_javascript:
