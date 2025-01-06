@@ -85,27 +85,27 @@ theme:
   icon:
     logo: material/library-outline
 
+  # palette:
+  #   # 日间模式
+  #   - media: "(prefers-color-scheme: light)"
+  #     scheme: default
+  #     accent: indigo # 链接等可交互元件的高亮色
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: 切换至深色模式
+  #   # 夜间模式
+  #   - media: "(prefers-color-scheme: dark)"
+  #     scheme: slate
+  #     accent: indigo
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: 切换至浅色模式
+  # font: False
+
   palette:
-    # 日间模式
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      # 主颜色
-      primary: indigo
-      # 链接等可交互元件的高亮色
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: 切换至深色模式
-    # 夜间模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: 切换至浅色模式
-  font: False
-  
+    scheme: default
+
+
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
@@ -304,7 +304,7 @@ markdown_extensions:
 extra_css:
 
   - mkdocs/css/custom.css
-  - mkdocs/css/extra.css
+  - mkdocs/css/emoji.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
   - https://unpkg.com/katex@0/dist/katex.min.css
