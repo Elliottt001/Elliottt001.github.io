@@ -256,21 +256,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 5
-  - meta
-  - def_list
-  - attr_list
-  - md_in_html
-  - sane_lists
-  - admonition
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.snippets
-  - pymdownx.magiclink
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
+
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
