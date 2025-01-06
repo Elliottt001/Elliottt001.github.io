@@ -307,7 +307,16 @@ extra_css:
   - mkdocs/css/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
-
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  # - attr_list
+  # - md_in_html
+  # - toc:
+  #     permalink: true
+  # - pymdownx.highlight:
+  #     linenums: true
+  #     auto_title: true
+  #     line_spans: __span
+  #     pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
