@@ -118,9 +118,9 @@ theme:
     - navigation.indexes
     # 右侧目录随页面滑动
     - toc.follow 
-    # 打开 Tab 时左侧目录全部展开
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
-    - navigation.expand
+    # # 打开 Tab 时左侧目录全部展开
+    # # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    # - navigation.expand
     # 搜索输入一些字母时推荐补全整个单词
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
     - search.suggest
@@ -307,16 +307,16 @@ extra_css:
   - mkdocs/css/emoji.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
-  - https://unpkg.com/katex@0/dist/katex.min.css
+  # - https://unpkg.com/katex@0/dist/katex.min.css
   # - attr_list
   # - md_in_html
   # - toc:
   #     permalink: true
-  # - pymdownx.highlight:
-  #     linenums: true
-  #     auto_title: true
-  #     line_spans: __span
-  #     pygments_lang_class: true
+  - pymdownx.highlight:
+      linenums: true
+      auto_title: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
