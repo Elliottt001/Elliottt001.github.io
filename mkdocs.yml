@@ -363,11 +363,3 @@ extra_css:
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
 
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-  # [自定义 css]
-  # 不使用底部的翻页
-  - mkdocs/css/no-footer.css
-  # 无序列表符号自定义
-  - mkdocs/css/unordered-list-symbols.css
