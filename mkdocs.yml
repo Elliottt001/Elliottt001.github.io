@@ -302,13 +302,6 @@ markdown_extensions:
       custom_checkbox: true
 
 
-
-extra_javascript:
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
 extra_css:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
@@ -359,3 +352,8 @@ extra_css:
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
 
+extra_javascript:
+  # [数学公式支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
