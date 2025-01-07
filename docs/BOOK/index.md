@@ -15,7 +15,7 @@
 
 !!! info "Abstract"
 
-    记录一些[读书笔记](https://r-z-zhang-ai.github.io/BOOK)
+    一些[读书笔记](https://r-z-zhang-ai.github.io/BOOK)
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

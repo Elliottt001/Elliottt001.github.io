@@ -3,7 +3,7 @@
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~『Hala Madrid』~
+        ~『 Hala Madrid 』~
     </div>
     <div align="center" style="font-size:12px">
         心之所向，虽崇山峻岭，一往无前；

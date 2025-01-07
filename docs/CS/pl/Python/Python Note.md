@@ -21,6 +21,34 @@
 [极客教程](https://geek-docs.com/)
 - [python](https://geek-docs.com/python/python-top-tutorials/)
 
+## 工具
+
+### IPython
+
+启动
+```shell
+python3 -m IPython
+```
+退出
+```shell
+exit  # or: exit()
+```
+
+查看帮助
+
+```shell
+help()
+# follow the guidence: 
+'''
+To get a list of available modules, keywords, symbols, or topics, type "modules", "keywords", "symbols", or "topics".  Each module also comes with a one-line summary of what it does; to list the modules whose name or summary contain a given string such as "spam", type "modules spam".
+'''
+q  # to quit one spesific item
+quit  # to quit the help file 
+```
+
+编程：按正常的一行一行输进去即可。
+
+
 ## 编程风格
 命名
 - 模块（文件）名：小驼峰
