@@ -1,1 +1,1 @@
-![alt text](image-10.png)
+![alt text](res/images/image-10.png)

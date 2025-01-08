@@ -166,7 +166,7 @@
 
 - prompt: 命令提示符，就这个东西
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
 在命令提示符后面，你输入的是：程序名称 + 参数
 
@@ -210,7 +210,7 @@ linux/macos: 由“/”开始(其根目录为/),且所有都在一个根目录�
 相对路径：相当于你当前处于的路径来说
 
 例如，用cd改变路径就可以相对 or 绝对路径
-![alt text](image-1.png)
+![alt text](res/images/image-1.png)
 ```shell
 pwd # 打印当前所处绝对路径
 cd # 改变路径
@@ -480,7 +480,7 @@ sudo su  # 改变成：shell以root身份运行，而不是ruizhe
 `$`代表以用户ruizhe访问文件
 
 `#`代表以root访问文件
-![alt text](image-2.png)
+![alt text](res/images/image-2.png)
 
 解决方案2：
 
@@ -608,8 +608,8 @@ is_prime $number
         false || echo "hello"  # stdout: hello
         true || echo "wont't be printed"  # stdout:   
     - && (逻辑与)： `命令1 && 命令2`，命令1错，不执行；命令1对，都会执行
-        ![alt text](image-8.png)
-        ![alt text](image-9.png)
+        ![alt text](res/images/image-8.png)
+        ![alt text](res/images/image-9.png)
 
 **1. 控制流关键字**
 用于条件判断、分支控制和循环的关键字。
@@ -855,11 +855,11 @@ Shell 默认不支持直接的算术运算，可以使用 `(( ))` 或 `$(( ))` �
 - 方法1：shell会话中定义（普通）
 
     注意！不能有空格！shell中空格是用来分隔参数的
-    ![alt text](image-5.png)
+    ![alt text](res/images/image-5.png)
 
 - 方法2：shell会话中定义再在脚本文件中引用
     示例：
-    ![alt text](image-7.png)
+    ![alt text](res/images/image-7.png)
     注意加上`export`：将变量转换为环境变量，且该环境变量只在当前会话中有效，`exit`命令退出后该shell会话即失效
 
     使环境变量永久有效的方法：放到~/.zshrc中：
@@ -1058,7 +1058,7 @@ shell写很简单，类似于python
 
     如果还有不清楚的地方，随时问我！ 😊
 for example
-![alt text](image-6.png)
+![alt text](res/images/image-6.png)
 
 ## 其他
 `shuf -i m-n -n k`：在m-n中生成k个随机数
@@ -1125,9 +1125,63 @@ grep -r "fail" /var/log
 grep -E "[0-9]+" file.txt
 ```
 
+
+3. **查找内容**：使用 `find` 结合 `grep`
+`find` 用于查找文件，`grep` 用于搜索内容。
+
+**基本语法：**
+```bash
+find 目录 -type f -exec grep -l "搜索内容" {} +
+```
+
+**示例：**
+在 `/home/user` 目录下查找包含 "hello" 的文件：
+```bash
+find /home/user -type f -exec grep -l "hello" {} +
+```
+
+4.**查找内容**： 使用 `ack` 或 `ag`
+`ack` 和 `ag` 是更高效的文件内容搜索工具。
+
+**安装 `ack`：**
+```bash
+sudo apt-get install ack  # Ubuntu/Debian
+sudo yum install ack      # CentOS/RHEL
+```
+
+**安装 `ag`：**
+```bash
+sudo apt-get install silversearcher-ag  # Ubuntu/Debian
+sudo yum install the_silver_searcher    # CentOS/RHEL
+```
+
+**使用 `ack` 示例：**
+```bash
+ack "hello"
+```
+
+**使用 `ag` 示例：**
+```bash
+ag "hello"
+```
+
+5. **查找内容**：使用 `ripgrep` (`rg`)
+`ripgrep` 是另一个高效的搜索工具。
+
+**安装 `ripgrep`：**
+```bash
+sudo apt-get install ripgrep  # Ubuntu/Debian
+sudo yum install ripgrep      # CentOS/RHEL
+```
+
+**使用 `ripgrep` 示例：**
+```bash
+rg "hello"
+```
+
 ---
 
-3. **查找命令路径：`which` 和 `whereis`**
+6. **查找命令路径：`which` 和 `whereis`**
 
 | **操作**               | **命令**            | **说明**                               |
 |------------------------|---------------------|---------------------------------------|
@@ -1147,7 +1201,7 @@ whereis git
 
 ---
 
-4. **查找网络相关内容：`netstat`, `lsof`, `ss`**
+7. **查找网络相关内容：`netstat`, `lsof`, `ss`**
 
 | **操作**                          | **命令**                             | **说明**                                                      |
 |-----------------------------------|--------------------------------------|-------------------------------------------------------------|
@@ -1267,9 +1321,9 @@ sed 's/hello/world/g' file.txt > output.txt
     | **使用场景**          | 专为服务器、桌面和嵌入式设备设计。                   | 适合开发者在 Windows 环境下运行 Linux 工具链。   |
 
 - Quoting
-![alt text](image-3.png)
+![alt text](res/images/image-3.png)
 Actually, you can simply use escape character like this.
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 - 文件x权限相关
 
