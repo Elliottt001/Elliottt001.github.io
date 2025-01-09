@@ -402,129 +402,223 @@ print('flag0 =', flag0)    # flag0 = True
 
 ## 分支结构
 
-### 应用场景
+关键字：`if` `else` `elif`
 
-迄今为止，我们写的Python代码都是一条一条语句顺序执行，这种代码结构通常称之为顺序结构。然而仅有顺序结构并不能解决所有的问题，比如我们设计一个游戏，游戏第一关的通关条件是玩家获得1000分，那么在完成本局游戏后，我们要根据玩家得到分数来决定究竟是进入第二关，还是告诉玩家“Game Over”，这里就会产生两个分支，而且这两个分支只有一个会被执行。类似的场景还有很多，我们将这种结构称之为“分支结构”或“选择结构”。给大家一分钟的时间，你应该可以想到至少5个以上这样的例子，赶紧试一试。
+Tips：
 
-### if语句的使用
+- 注意缩进：连续的代码如果又保持了相同的缩进那么它们属于同一个代码块。
 
-在Python中，要构造分支结构可以使用`if`、`elif`和`else`关键字。所谓**关键字**就是有特殊含义的单词，像`if`和`else`就是专门用于构造分支结构的关键字，很显然你不能够使用它作为变量名（事实上，用作其他的标识符也是不可以）。下面的例子中演示了如何构造一个分支结构。
+- 建议使用4个空格，不要使用Tab 
 
-```Python
-"""
-用户身份验证
-
-Version: 0.1
-Author: 骆昊
-"""
-username = input('请输入用户名: ')
-password = input('请输入口令: ')
-# 用户名是admin且密码是123456则身份验证成功否则身份验证失败
-if username == 'admin' and password == '123456':
-    print('身份验证成功!')
-else:
-    print('身份验证失败!')
-```
-
-需要说明的是和C/C++、Java等语言不同，Python中没有用花括号来构造代码块而是**使用了缩进的方式来表示代码的层次结构**，如果`if`条件成立的情况下需要执行多条语句，只要保持多条语句具有相同的缩进就可以了。换句话说**连续的代码如果又保持了相同的缩进那么它们属于同一个代码块**，相当于是一个执行的整体。**缩进**可以使用任意数量的空格，但**通常使用4个空格**，建议大家**不要使用制表键**或者**设置你的代码编辑工具自动将制表键变成4个空格**。
-
-当然如果要构造出更多的分支，可以使用`if...elif...else...`结构或者嵌套的`if...else...`结构，下面的代码演示了如何利用多分支结构实现分段函数求值。
-
-![$$f(x)=\begin{cases} 3x-5&\text{(x>1)}\\x+2&\text{(-1}\leq\text{x}\leq\text{1)}\\5x+3&\text {(x<-1)}\end{cases}$$](./res/formula_1.png)
-
-```Python
-"""
-分段函数求值
-
-        3x - 5  (x > 1)
-f(x) =  x + 2   (-1 <= x <= 1)
-        5x + 3  (x < -1)
-
-Version: 0.1
-Author: 骆昊
-"""
-
-x = float(input('x = '))
-if x > 1:
-    y = 3 * x - 5
-elif x >= -1:
-    y = x + 2
-else:
-    y = 5 * x + 3
-print('f(%.2f) = %.2f' % (x, y))
-```
-
-当然根据实际开发的需要，分支结构是可以嵌套的，例如判断是否通关以后还要根据你获得的宝物或者道具的数量对你的表现给出等级（比如点亮两颗或三颗星星），那么我们就需要在`if`的内部构造出一个新的分支结构，同理`elif`和`else`中也可以再构造新的分支，我们称之为嵌套的分支结构，也就是说上面的代码也可以写成下面的样子。
-
-```Python
-"""
-分段函数求值
-		3x - 5	(x > 1)
-f(x) =	x + 2	(-1 <= x <= 1)
-		5x + 3	(x < -1)
-
-Version: 0.1
-Author: 骆昊
-"""
-
-x = float(input('x = '))
-if x > 1:
-    y = 3 * x - 5
-else:
-    if x >= -1:
-        y = x + 2
-    else:
-        y = 5 * x + 3
-print('f(%.2f) = %.2f' % (x, y))
-```
-
-> **说明：** 大家可以自己感受一下这两种写法到底是哪一种更好。在之前我们提到的Python之禅中有这么一句话“Flat is better than nested.”，之所以提倡代码“扁平化”是因为嵌套结构的嵌套层次多了之后会严重的影响代码的可读性，所以能使用扁平化的结构时就不要使用嵌套。
+- 能使用扁平化的结构时就不要使用嵌套。
 
 
+## 循环结构
 
+### for-in循环
 
+**场景：** 明确知道循环执行的次数或者要对一个容器进行迭代
+
+range函数：`range(start, stop, step)`：
+- start 不写默认1
+- stop 必写
+- step 不写默认0，step 是负数则要求 start > stop
+
+### while循环
+
+不知道具体循环次数，原理：通过一个能够产生或转换出`bool`值的表达式来控制循环
+
+`break` `continue`
 
 ## 函数
-### 变量的作用域
 
-全局变量可以在函数体内访问，但是内部不能修改！
+### 定义函数
 
-如果尝试修改，会报错
+`def`关键字
 
-如果想要修改：
-	用global关键字 : 不建议！！！
-```python
-y = 10
-def func():
-	global y
-	y = 20
-	return
-func()
-print("y = ", y)
+### 函数的参数
+
+函数的参数可以有默认值，也支持使用可变参数，所以Python并不需要像其他语言一样支持[函数的重载](https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD)，因为我们在定义一个函数的时候可以让它有多种不同的使用方式。
+
+例如：
+
+```Python
+from random import randint
+
+
+def roll_dice(n=2):
+    """摇色子"""
+    total = 0
+    for _ in range(n):
+        total += randint(1, 6)
+    return total
+
+
+def add(a=0, b=0, c=0):
+    """三个数相加"""
+    return a + b + c
+
+
+# 如果没有指定参数那么使用默认值摇两颗色子
+print(roll_dice())
+# 摇三颗色子
+print(roll_dice(3))
+print(add())
+print(add(1))
+print(add(1, 2))
+print(add(1, 2, 3))
+# 传递参数时可以不按照设定的顺序进行传递
+print(add(c=50, a=100, b=200))
 ```
 
-修改：用调用函数，返回值赋给要修改的那个变量
-eg：
-```python
-y = 10
-def func(y):
-	#对y一番操作
-	return y
-y = func(y)
+在不确定参数个数的时候，我们可以使用可变参数，代码如下。
+
+```Python
+# 在参数名前面的*表示args是一个可变参数
+def add(*args):
+    total = 0
+    for val in args:
+        total += val
+    return total
+
+
+# 在调用add函数时可以传入0个或多个参数
+print(add())
+print(add(1))
+print(add(1, 2))
+print(add(1, 2, 3))
+print(add(1, 3, 5, 7, 9))
 ```
 
-### 函数的多返回值
+**`*args` 和 `**kwargs`**
+
+| 特性            | `*args`                          | `**kwargs`                      |
+|-----------------|----------------------------------|---------------------------------|
+| 参数类型        | 位置参数（无键值对）             | 关键字参数（键值对）            |
+| 打包形式        | 打包成元组（tuple）              | 打包成字典（dict）              |
+| 使用场景        | 处理可变数量的位置参数           | 处理可变数量的关键字参数         |
+| 示例            | `func(1, 2, 3)`                  | `func(a=1, b=2, c=3)`           |
+
+
+
+??? info "关于 `*args` 和 `**kwargs`"
+
+	1. 什么是 `*args`？
+	- `*args` 允许函数接受**任意数量的位置参数**。
+	- 这些参数会被打包成一个**元组（tuple）**，传递给函数。
+	- 可以通过遍历 `args` 来处理这些参数。
+
+	3. 上述代码示例调用
+	```python
+	print(add(10, 20, 30, 40))   # 输出: 100
+	print(add(5))                # 输出: 5
+	print(add())                 # 输出: 0
+	```
+
+	5. 与其他参数结合使用
+	`*args` 可以与其他参数一起使用，必须放在它们之后。例如：
+	```python
+	def greet(name, *args):
+		print(f"Hello, {name}!")
+		print("Additional arguments:", args)
+
+	greet("Alice", 1, 2, 3)
+	```
+	在 `*args` 之后定义的参数必须通过关键字传递。
+
+	示例
+	```python
+	def func(a, b, *args, c, d):
+		print(a, b, args, c, d)
+
+	func(1, 2, 3, 4, c=5, d=6)  # c 和 d 必须通过关键字传递
+	```
+
+
+	什么是 `**kwargs`？
+
+	- `**kwargs` 允许函数接受任意数量的**关键字参数（关键词传参）**（即键值对）。
+	- 这些参数会被打包成一个**字典（dict）**，传递给函数。
+	- `kwargs` 是约定俗成的名称，你可以使用其他名称，但 `**` 是必须的。
+
+	示例代码
+	```python
+	def print_info(**kwargs):
+		for key, value in kwargs.items():
+			print(f"{key}: {value}")
+
+	print_info(name="Alice", age=30, city="New York")
+	```
+	输出：
+	```
+	name: Alice
+	age: 30
+	city: New York
+	```
+
+	特点
+
+	- `**kwargs` 将传入的关键字参数打包成一个字典。
+	- 如果没有传递关键字参数，`kwargs` 是一个空字典。
+
+	---
+
+
+	3. `*args` 和 `**kwargs` 的结合使用：必须遵循以下顺序：
+		1. 标准参数（固定参数）。
+		2. `*args`（可变位置参数）。
+		3. `**kwargs`（可变关键字参数）。
+
+
+**解包参数`*` 和 `**`**
+
+
+| **符号** | **用途**                          | **示例**                                      |
+|----------|----------------------------------|-----------------------------------------------|
+| `*`      | **函数定义**：接收可变位置参数    | `def func(*args):` → `args` 是元组            |
+|          | **函数调用**：解包可迭代对象      | `func(*[1, 2, 3])` → 相当于 `func(1, 2, 3)`   |
+|          | **赋值**：扩展解包                | `a, *b = [1, 2, 3]` → `a=1`, `b=[2, 3]`       |
+| `**`     | **函数定义**：接收可变关键字参数  | `def func(**kwargs):` → `kwargs` 是字典       |
+|          | **函数调用**：解包字典            | `func(**{"a": 1, "b": 2})` → 相当于 `func(a=1, b=2)` |
+|          | **字典合并**：合并多个字典        | `{**dict1, **dict2}` → 合并两个字典           |
+| `*` 和 `**` 结合 | **函数定义**：同时接收可变位置和关键字参数 | `def func(a, *args, **kwargs):` |
+|          | **函数调用**：同时解包可迭代对象和字典 | `func(*[1, 2], **{"c": 3})` → 相当于 `func(1, 2, c=3)` |
+
+> 与指针有异曲同工之妙：定义时代表变量身份，调用时代表对变量操作
+
+??? info "`*` 和 `**`"
+
+	- `*` 可以用于解包**可迭代对象**（如列表、元组）为位置参数。
+	- `**` 可以用于解包**字典**为关键字参数。
+
+	示例
+	```python
+	def func(a, b, c):
+		print(a, b, c)
+
+	# 解包列表
+	args = [1, 2, 3]
+	func(*args)  # 相当于 func(1, 2, 3)
+
+	# 解包字典
+	kwargs = {"a": 1, "b": 2, "c": 3}
+	func(**kwargs)  # 相当于 func(a=1, b=2, c=3)
+	```
+
+
+**仅位置参数**
+
+`/` 就是放在参数表中的一个符号，代表**它之前的**参数必须通过位置传递，他不是形参。
+
+示例
 ```python
-def func(pra):
-	# 代码块
-	return ret1, ret2
-# 返回的是一个元组，当然可以多个
-	# 如果直接print函数调用的那个，输出一个带括号的数对，即元组
-	# 也可以用几个变量去接收函数的返回值：a1, a2 = func(pram) : 实际是元组的解包
-	# 即：
-a, b = func_name(pra)
+def func(a, b, /, c, d):
+    print(a, b, c, d)
+
+func(1, 2, c=3, d=4)  # a 和 b 必须通过位置传递
 ```
-### 传参
+
+
 - 关键词传参：形参名 = 实参值
 
 - 位置传参：按位置
@@ -535,7 +629,193 @@ a, b = func_name(pra)
 
 - 默认参数：给默认参数的全放在不给默认参数的后面，否则会报错
 
+
+### 用模块管理函数
+
+在同一个.py文件中定义了两个同名函数，由于Python没有函数重载的概念，那么后面的定义会覆盖之前的定义。
+
+解决方案：Python中每个文件就代表了一个模块（module），在不同的模块中可以有同名的函数，在使用函数的时候我们通过`import`关键字导入指定的模块就可以区分。代码如下所示。
+
+
+```Python
+# module1.py
+def foo():
+    print('hello, world!')
+```
+
+```Python
+# module2.py
+def foo():
+    print('goodbye, world!')
+```
+
+```Python
+# test.py
+from module1 import foo
+
+# 输出hello, world!
+foo()
+
+from module2 import foo
+
+# 输出goodbye, world!
+foo()
+```
+
+```Python
+# test.py
+import module1 as m1
+import module2 as m2
+
+m1.foo()
+m2.foo()
+```
+
+但是，这样会导致覆盖
+
+
+```Python
+# test.py
+from module1 import foo
+from module2 import foo
+
+# 输出goodbye, world!
+foo()
+```
+
+使用 `if __name__ == '__main__'`
+
+> 如果我们导入的模块除了定义函数之外还有可以执行代码，那么Python解释器在导入这个模块时就会执行这些代码，事实上我们可能并不希望如此，因此如果我们在模块中编写了执行代码，最好是将这些执行代码放入如下所示的条件中，这样的话除非直接运行该模块，if条件下的这些代码是不会执行的，因为只有直接执行的模块的名字才是 &quot;\_\_main\_\_&quot;。
+
+
+```Python
+# module3.py
+def foo():
+    pass
+
+
+def bar():
+    pass
+
+
+# __name__是Python中一个隐含的变量它代表了模块的名字
+# 只有被Python解释器直接执行的模块的名字才是__main__
+if __name__ == '__main__':
+    print('call foo()')
+    foo()
+    print('call bar()')
+    bar()
+```
+
+
+
+```Python
+# test.py
+import module3
+
+# 导入module3时 不会执行模块中if条件成立时的代码 因为模块的名字是module3而不是__main__
+```
+
+
+例题：实现判断一个数是不是回文数的函数。
+
+```Python
+def is_palindrome(num):
+    """判断一个数是不是回文数"""
+    temp = num
+    total = 0
+    while temp > 0:
+        total = total * 10 + temp % 10
+        temp //= 10
+    return total == num
+```
+
+
+### 变量的作用域
+
+```Python
+def foo():
+    b = 'hello'
+    # 可以在函数内部再定义函数
+    def bar():
+        c = True
+        print(a)
+        print(b)
+        print(c)
+    bar()
+    # print(c)  # NameError: name 'c' is not defined
+
+if __name__ == '__main__':
+    a = 100
+    # print(b)  # NameError: name 'b' is not defined
+    foo()
+```
+
+对于`foo`函数内部的`bar`函数来说，变量`b`属于嵌套作用域，在`bar`函数中我们是可以访问到它的。
+
+查找一个变量时会按照 LEGB规则，即 **“局部作用域”、“嵌套作用域”、“全局作用域”和“内置作用域”** 的顺序进行搜索，
+
+- 内置作用域：关键字，不要覆盖
+- 嵌套作用域：函数内部定义的函数（即嵌套函数）可以访问其外层函数（非全局作用域）的作用域中的变量。
+
+再看看下面这段代码，我们希望通过函数调用修改全局变量`a`的值，但实际上下面的代码是做不到的。
+
+```Python
+def foo():
+    a = 200
+    print(a)  # 200
+
+
+if __name__ == '__main__':
+    a = 100
+    foo()
+    print(a)  # 100
+```
+
+在调用`foo`函数后，我们发现`a`的值仍然是100，这是因为当我们在函数`foo`中写`a = 200`的时候，是重新定义了一个名字为`a`的局部变量，它跟全局作用域的`a`并不是同一个变量，因为局部作用域中有了自己的变量`a`，因此`foo`函数不再搜索全局作用域中的`a`。如果我们希望在`foo`函数中修改全局作用域中的`a`，代码如下所示。
+
+```Python
+def foo():
+    global a  # 用global关键字声明他是全局变量并在后面修改
+    a = 200
+    print(a)  # 200
+
+if __name__ == '__main__':
+    a = 100
+    foo()
+    print(a)  # 200
+```
+如果全局作用域中没有 `a`，那么下面一行的代码就会定义变量 `a` 并将其置于全局作用域。
+```python
+def outer():
+    x = 10  # 外层函数的局部变量
+
+    def inner():
+        nonlocal x  # 声明 x 是外层作用域的变量
+        x = 20      # 修改外层作用域的变量
+        print("Inner:", x)
+
+    inner()
+    print("Outer:", x)
+outer()
+
+```
+
+### 函数的多返回值
+
+```python
+def func(pra):
+	# 代码块
+	return ret1, ret2
+# 返回的是一个元组，当然可以多个
+	# 如果直接print函数调用的那个，输出一个带括号的数对，即元组
+	# 也可以用几个变量去接收函数的返回值：a1, a2 = func(pram) : 实际是元组的解包
+	# 即：
+a, b = func_name(pra)
+```
+
 ### 函数作为参数传递
+
 形参那里写一个形参代表函数
 
 实参写函数名字！不能带括号，因为带了括号的意思是调用那个函数，则会报错（少参数）
@@ -556,6 +836,866 @@ print(f"{calculator(3, 5, add)}\n")
 print(calculator(3, 5, min))
 print(calculator(3, 5, mul))
 ```
+
+
+### 匿名函数
+
+**匿名函数（Anonymous Function）** 是一种没有名字的函数，通常用于简化代码，尤其是在需要传递简单函数作为参数的场景。在 Python 中，匿名函数通过 `lambda` 关键字定义，因此也被称为 **lambda 函数**。
+
+
+语法
+
+```python
+lambda 参数1, 参数2, ... : 表达式
+```
+- **参数**：匿名函数可以接受任意数量的参数。
+- **表达式**：匿名函数的返回值是表达式的结果，不需要 `return` 语句。
+
+---
+
+匿名函数的示例
+
+示例 1：基本用法
+```python
+# 普通函数
+def add(x, y):
+    return x + y
+
+# 匿名函数
+add_lambda = lambda x, y: x + y
+
+print(add(2, 3))        # 输出: 5
+print(add_lambda(2, 3)) # 输出: 5
+```
+
+---
+
+示例 2：结合内置函数使用
+
+匿名函数常用于 `map()`、`filter()`、`sorted()` 等需要函数作为参数的场景。
+
+1. **`map()`**：对可迭代对象的每个元素应用函数。
+   ```python
+   numbers = [1, 2, 3, 4]
+   squared = map(lambda x: x ** 2, numbers)
+   print(list(squared))  # 输出: [1, 4, 9, 16]
+   ```
+
+2. **`filter()`**：过滤可迭代对象中满足条件的元素。
+   ```python
+   numbers = [1, 2, 3, 4, 5, 6]
+   evens = filter(lambda x: x % 2 == 0, numbers)
+   print(list(evens))  # 输出: [2, 4, 6]
+   ```
+
+3. **`sorted()`**：根据指定规则排序。
+   ```python
+   points = [(1, 2), (3, 1), (5, 0)]
+   sorted_points = sorted(points, key=lambda p: p[1])  # 按第二个元素排序
+   print(sorted_points)  # 输出: [(5, 0), (3, 1), (1, 2)]
+   ```
+
+---
+
+示例 3：作为函数返回值，用于创建动态行为。
+```python
+def create_multiplier(n):
+    return lambda x: x * n
+
+double = create_multiplier(2)
+triple = create_multiplier(3)
+
+print(double(5))  # 输出: 10
+print(triple(5))  # 输出: 15
+```
+
+---
+
+示例 4：简化条件逻辑
+匿名函数可以用于简化简单的条件逻辑。
+```python
+# 普通函数
+def check_even(x):
+    return "Even" if x % 2 == 0 else "Odd"
+
+# 匿名函数
+check_even_lambda = lambda x: "Even" if x % 2 == 0 else "Odd"
+
+print(check_even(4))        # 输出: Even
+print(check_even_lambda(4)) # 输出: Even
+```
+
+---
+
+优点
+
+1. **代码简洁**：适合定义简单的逻辑，避免定义完整的函数。
+2. **临时使用**：适合一次性使用的场景，减少代码量。
+3. **灵活性**：可以作为参数传递给高阶函数（如 `map()`、`filter()` 等）。
+
+---
+
+局限性
+
+1. **功能受限**：匿名函数只能包含一个表达式，不能包含复杂的逻辑或多行代码。
+2. **可读性差**：过度使用匿名函数可能降低代码的可读性。
+3. **调试困难**：匿名函数没有函数名，调试时可能不如普通函数方便。
+
+
+全局变量可以在函数体内访问，但是内部不能修改！
+
+如果尝试修改，会报错
+
+如果想要修改：
+	用global关键字，但不建议
+```python
+y = 10
+def func():
+	global y
+	y = 20
+	return
+func()
+print("y = ", y)
+```
+
+修改：用调用函数，返回值赋给要修改的那个变量
+eg：
+```python
+y = 10
+def func(y):
+	#对y一番操作
+	return y
+y = func(y)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 字符串和常用数据结构
+
+### 使用字符串
+
+第二次世界大战促使了现代电子计算机的诞生，最初计算机被应用于导弹弹道的计算，而在计算机诞生后的很多年时间里，计算机处理的信息基本上都是数值型的信息。世界上的第一台电子计算机叫ENIAC（电子数值积分计算机），诞生于美国的宾夕法尼亚大学，每秒钟能够完成约5000次浮点运算。随着时间的推移，虽然数值运算仍然是计算机日常工作中最为重要的事情之一，但是今天的计算机处理得更多的数据可能都是以文本的方式存在的，如果我们希望通过Python程序操作这些文本信息，就必须要先了解字符串类型以及与它相关的知识。
+
+所谓**字符串**，就是由零个或多个字符组成的有限序列，一般记为![$${\displaystyle s=a_{1}a_{2}\dots a_{n}(0\leq n \leq \infty)}$$](./res/formula_5.png)。在Python程序中，如果我们把单个或多个字符用单引号或者双引号包围起来，就可以表示一个字符串。
+
+```Python
+s1 = 'hello, world!'
+s2 = "hello, world!"
+# 以三个双引号或单引号开头的字符串可以折行
+s3 = """
+hello, 
+world!
+"""
+print(s1, s2, s3, end='')
+```
+
+可以在字符串中使用`\`（反斜杠）来表示转义，也就是说`\`后面的字符不再是它原来的意义，例如：`\n`不是代表反斜杠和字符n，而是表示换行；而`\t`也不是代表反斜杠和字符t，而是表示制表符。所以如果想在字符串中表示`'`要写成`\'`，同理想表示`\`要写成`\\`。可以运行下面的代码看看会输出什么。
+
+```Python
+s1 = '\'hello, world!\''
+s2 = '\n\\hello, world!\\\n'
+print(s1, s2, end='')
+```
+
+在`\`后面还可以跟一个八进制或者十六进制数来表示字符，例如`\141`和`\x61`都代表小写字母`a`，前者是八进制的表示法，后者是十六进制的表示法。也可以在`\`后面跟Unicode字符编码来表示字符，例如`\u9a86\u660a`代表的是中文“骆昊”。运行下面的代码，看看输出了什么。
+
+```Python
+s1 = '\141\142\143\x61\x62\x63'
+s2 = '\u9a86\u660a'
+print(s1, s2)
+```
+
+如果不希望字符串中的`\`表示转义，我们可以通过在字符串的最前面加上字母`r`来加以说明，再看看下面的代码又会输出什么。
+
+```Python
+s1 = r'\'hello, world!\''
+s2 = r'\n\\hello, world!\\\n'
+print(s1, s2, end='')
+```
+
+Python为字符串类型提供了非常丰富的运算符，我们可以使用`+`运算符来实现字符串的拼接，可以使用`*`运算符来重复一个字符串的内容，可以使用`in`和`not in`来判断一个字符串是否包含另外一个字符串（成员运算），我们也可以用`[]`和`[:]`运算符从字符串取出某个字符或某些字符（切片运算），代码如下所示。
+
+```Python
+s1 = 'hello ' * 3
+print(s1) # hello hello hello 
+s2 = 'world'
+s1 += s2
+print(s1) # hello hello hello world
+print('ll' in s1) # True
+print('good' in s1) # False
+str2 = 'abc123456'
+# 从字符串中取出指定位置的字符(下标运算)
+print(str2[2]) # c
+# 字符串切片(从指定的开始索引到指定的结束索引)
+print(str2[2:5]) # c12
+print(str2[2:]) # c123456
+print(str2[2::2]) # c246
+print(str2[::2]) # ac246
+print(str2[::-1]) # 654321cba
+print(str2[-3:-1]) # 45
+```
+
+在Python中，我们还可以通过一系列的方法来完成对字符串的处理，代码如下所示。
+
+```Python
+str1 = 'hello, world!'
+# 通过内置函数len计算字符串的长度
+print(len(str1)) # 13
+# 获得字符串首字母大写的拷贝
+print(str1.capitalize()) # Hello, world!
+# 获得字符串每个单词首字母大写的拷贝
+print(str1.title()) # Hello, World!
+# 获得字符串变大写后的拷贝
+print(str1.upper()) # HELLO, WORLD!
+# 从字符串中查找子串所在位置
+print(str1.find('or')) # 8
+print(str1.find('shit')) # -1
+# 与find类似但找不到子串时会引发异常
+# print(str1.index('or'))
+# print(str1.index('shit'))
+# 检查字符串是否以指定的字符串开头
+print(str1.startswith('He')) # False
+print(str1.startswith('hel')) # True
+# 检查字符串是否以指定的字符串结尾
+print(str1.endswith('!')) # True
+# 将字符串以指定的宽度居中并在两侧填充指定的字符
+print(str1.center(50, '*'))
+# 将字符串以指定的宽度靠右放置左侧填充指定的字符
+print(str1.rjust(50, ' '))
+str2 = 'abc123456'
+# 检查字符串是否由数字构成
+print(str2.isdigit())  # False
+# 检查字符串是否以字母构成
+print(str2.isalpha())  # False
+# 检查字符串是否以数字和字母构成
+print(str2.isalnum())  # True
+str3 = '  jackfrued@126.com '
+print(str3)
+# 获得字符串修剪左右两侧空格之后的拷贝
+print(str3.strip())
+```
+
+我们之前讲过，可以用下面的方式来格式化输出字符串。
+
+```Python
+a, b = 5, 10
+print('%d * %d = %d' % (a, b, a * b))
+```
+
+当然，我们也可以用字符串提供的方法来完成字符串的格式，代码如下所示。
+
+```Python
+a, b = 5, 10
+print('{0} * {1} = {2}'.format(a, b, a * b))
+```
+
+Python 3.6以后，格式化字符串还有更为简洁的书写方式，就是在字符串前加上字母`f`，我们可以使用下面的语法糖来简化上面的代码。
+
+```Python
+a, b = 5, 10
+print(f'{a} * {b} = {a * b}')
+```
+
+除了字符串，Python还内置了多种类型的数据结构，如果要在程序中保存和操作数据，绝大多数时候可以利用现有的数据结构来实现，最常用的包括列表、元组、集合和字典。
+
+### 使用列表
+
+不知道大家是否注意到，刚才我们讲到的字符串类型（`str`）和之前我们讲到的数值类型（`int`和`float`）有一些区别。数值类型是标量类型，也就是说这种类型的对象没有可以访问的内部结构；而字符串类型是一种结构化的、非标量类型，所以才会有一系列的属性和方法。接下来我们要介绍的列表（`list`），也是一种结构化的、非标量类型，它是值的有序序列，每个值都可以通过索引进行标识，定义列表可以将列表的元素放在`[]`中，多个元素用`,`进行分隔，可以使用`for`循环对列表元素进行遍历，也可以使用`[]`或`[:]`运算符取出列表中的一个或多个元素。
+
+下面的代码演示了如何定义列表、如何遍历列表以及列表的下标运算。
+
+```Python
+list1 = [1, 3, 5, 7, 100]
+print(list1) # [1, 3, 5, 7, 100]
+# 乘号表示列表元素的重复
+list2 = ['hello'] * 3
+print(list2) # ['hello', 'hello', 'hello']
+# 计算列表长度(元素个数)
+print(len(list1)) # 5
+# 下标(索引)运算
+print(list1[0]) # 1
+print(list1[4]) # 100
+# print(list1[5])  # IndexError: list index out of range
+print(list1[-1]) # 100
+print(list1[-3]) # 5
+list1[2] = 300
+print(list1) # [1, 3, 300, 7, 100]
+# 通过循环用下标遍历列表元素
+for index in range(len(list1)):
+    print(list1[index])
+# 通过for循环遍历列表元素
+for elem in list1:
+    print(elem)
+# 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
+for index, elem in enumerate(list1):
+    print(index, elem)
+```
+
+下面的代码演示了如何向列表中添加元素以及如何从列表中移除元素。
+
+```Python
+list1 = [1, 3, 5, 7, 100]
+# 添加元素
+list1.append(200)
+list1.insert(1, 400)
+# 合并两个列表
+# list1.extend([1000, 2000])
+list1 += [1000, 2000]
+print(list1) # [1, 400, 3, 5, 7, 100, 200, 1000, 2000]
+print(len(list1)) # 9
+# 先通过成员运算判断元素是否在列表中，如果存在就删除该元素
+if 3 in list1:
+	list1.remove(3)
+if 1234 in list1:
+    list1.remove(1234)
+print(list1) # [1, 400, 5, 7, 100, 200, 1000, 2000]
+# 从指定的位置删除元素
+list1.pop(0)
+list1.pop(len(list1) - 1)
+print(list1) # [400, 5, 7, 100, 200, 1000]
+# 清空列表元素
+list1.clear()
+print(list1) # []
+```
+
+和字符串一样，列表也可以做切片操作，通过切片操作我们可以实现对列表的复制或者将列表中的一部分取出来创建出新的列表，代码如下所示。
+
+```Python
+fruits = ['grape', 'apple', 'strawberry', 'waxberry']
+fruits += ['pitaya', 'pear', 'mango']
+# 列表切片
+fruits2 = fruits[1:4]
+print(fruits2) # apple strawberry waxberry
+# 可以通过完整切片操作来复制列表
+fruits3 = fruits[:]
+print(fruits3) # ['grape', 'apple', 'strawberry', 'waxberry', 'pitaya', 'pear', 'mango']
+fruits4 = fruits[-3:-1]
+print(fruits4) # ['pitaya', 'pear']
+# 可以通过反向切片操作来获得倒转后的列表的拷贝
+fruits5 = fruits[::-1]
+print(fruits5) # ['mango', 'pear', 'pitaya', 'waxberry', 'strawberry', 'apple', 'grape']
+```
+
+下面的代码实现了对列表的排序操作。
+
+```Python
+list1 = ['orange', 'apple', 'zoo', 'internationalization', 'blueberry']
+list2 = sorted(list1)
+# sorted函数返回列表排序后的拷贝不会修改传入的列表
+# 函数的设计就应该像sorted函数一样尽可能不产生副作用
+list3 = sorted(list1, reverse=True)
+# 通过key关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序
+list4 = sorted(list1, key=len)
+print(list1)
+print(list2)
+print(list3)
+print(list4)
+# 给列表对象发出排序消息直接在列表对象上进行排序
+list1.sort(reverse=True)
+print(list1)
+```
+
+### 生成式和生成器
+
+我们还可以使用列表的生成式语法来创建列表，代码如下所示。
+
+```Python
+f = [x for x in range(1, 10)]
+print(f)
+f = [x + y for x in 'ABCDE' for y in '1234567']
+print(f)
+# 用列表的生成表达式语法创建列表容器
+# 用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间
+f = [x ** 2 for x in range(1, 1000)]
+print(sys.getsizeof(f))  # 查看对象占用内存的字节数
+print(f)
+# 请注意下面的代码创建的不是一个列表而是一个生成器对象
+# 通过生成器可以获取到数据但它不占用额外的空间存储数据
+# 每次需要数据的时候就通过内部的运算得到数据(需要花费额外的时间)
+f = (x ** 2 for x in range(1, 1000))
+print(sys.getsizeof(f))  # 相比生成式生成器不占用存储数据的空间
+print(f)
+for val in f:
+    print(val)
+```
+
+除了上面提到的生成器语法，Python中还有另外一种定义生成器的方式，就是通过`yield`关键字将一个普通函数改造成生成器函数。下面的代码演示了如何实现一个生成[斐波拉切数列](https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)的生成器。所谓斐波拉切数列可以通过下面[递归](https://zh.wikipedia.org/wiki/%E9%80%92%E5%BD%92)的方法来进行定义：
+
+![$${\displaystyle F_{0}=0}$$](./res/formula_6.png)
+
+![$${\displaystyle F_{1}=1}$$](./res/formula_7.png)
+
+![$${\displaystyle F_{n}=F_{n-1}+F_{n-2}}({n}\geq{2})$$](./res/formula_8.png)
+
+![](./res/fibonacci-blocks.png)
+
+```Python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+        yield a
+
+
+def main():
+    for val in fib(20):
+        print(val)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+### 使用元组
+
+Python中的元组与列表类似也是一种容器数据类型，可以用一个变量（对象）来存储多个数据，不同之处在于元组的元素不能修改，在前面的代码中我们已经不止一次使用过元组了。顾名思义，我们把多个元素组合到一起就形成了一个元组，所以它和列表一样可以保存多条数据。下面的代码演示了如何定义和使用元组。
+
+```Python
+# 定义元组
+t = ('骆昊', 38, True, '四川成都')
+print(t)
+# 获取元组中的元素
+print(t[0])
+print(t[3])
+# 遍历元组中的值
+for member in t:
+    print(member)
+# 重新给元组赋值
+# t[0] = '王大锤'  # TypeError
+# 变量t重新引用了新的元组原来的元组将被垃圾回收
+t = ('王大锤', 20, True, '云南昆明')
+print(t)
+# 将元组转换成列表
+person = list(t)
+print(person)
+# 列表是可以修改它的元素的
+person[0] = '李小龙'
+person[1] = 25
+print(person)
+# 将列表转换成元组
+fruits_list = ['apple', 'banana', 'orange']
+fruits_tuple = tuple(fruits_list)
+print(fruits_tuple)
+```
+
+这里有一个非常值得探讨的问题，我们已经有了列表这种数据结构，为什么还需要元组这样的类型呢？
+
+1. 元组中的元素是无法修改的，事实上我们在项目中尤其是[多线程](https://zh.wikipedia.org/zh-hans/%E5%A4%9A%E7%BA%BF%E7%A8%8B)环境（后面会讲到）中可能更喜欢使用的是那些不变对象（一方面因为对象状态不能修改，所以可以避免由此引起的不必要的程序错误，简单的说就是一个不变的对象要比可变的对象更加容易维护；另一方面因为没有任何一个线程能够修改不变对象的内部状态，一个不变对象自动就是线程安全的，这样就可以省掉处理同步化的开销。一个不变对象可以方便的被共享访问）。所以结论就是：如果不需要对元素进行添加、删除、修改的时候，可以考虑使用元组，当然如果一个方法要返回多个值，使用元组也是不错的选择。
+2. 元组在创建时间和占用的空间上面都优于列表。我们可以使用sys模块的getsizeof函数来检查存储同样的元素的元组和列表各自占用了多少内存空间，这个很容易做到。我们也可以在ipython中使用魔法指令%timeit来分析创建同样内容的元组和列表所花费的时间，下图是我的macOS系统上测试的结果。
+
+![](./res/ipython-timeit.png)
+
+### 使用集合
+
+Python中的集合跟数学上的集合是一致的，不允许有重复元素，而且可以进行交集、并集、差集等运算。
+
+![](./res/python-set.png)
+
+可以按照下面代码所示的方式来创建和使用集合。
+
+```Python
+# 创建集合的字面量语法
+set1 = {1, 2, 3, 3, 3, 2}
+print(set1)
+print('Length =', len(set1))
+# 创建集合的构造器语法(面向对象部分会进行详细讲解)
+set2 = set(range(1, 10))
+set3 = set((1, 2, 3, 3, 2, 1))
+print(set2, set3)
+# 创建集合的推导式语法(推导式也可以用于推导集合)
+set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+print(set4)
+```
+
+向集合添加元素和从集合删除元素。
+
+```Python
+set1.add(4)
+set1.add(5)
+set2.update([11, 12])
+set2.discard(5)
+if 4 in set2:
+    set2.remove(4)
+print(set1, set2)
+print(set3.pop())
+print(set3)
+```
+
+集合的成员、交集、并集、差集等运算。
+
+```Python
+# 集合的交集、并集、差集、对称差运算
+print(set1 & set2)
+# print(set1.intersection(set2))
+print(set1 | set2)
+# print(set1.union(set2))
+print(set1 - set2)
+# print(set1.difference(set2))
+print(set1 ^ set2)
+# print(set1.symmetric_difference(set2))
+# 判断子集和超集
+print(set2 <= set1)
+# print(set2.issubset(set1))
+print(set3 <= set1)
+# print(set3.issubset(set1))
+print(set1 >= set2)
+# print(set1.issuperset(set2))
+print(set1 >= set3)
+# print(set1.issuperset(set3))
+```
+
+> **说明：** Python中允许通过一些特殊的方法来为某种类型或数据结构自定义运算符（后面的章节中会讲到），上面的代码中我们对集合进行运算的时候可以调用集合对象的方法，也可以直接使用对应的运算符，例如`&`运算符跟intersection方法的作用就是一样的，但是使用运算符让代码更加直观。
+
+### 使用字典
+
+字典是另一种可变容器模型，Python中的字典跟我们生活中使用的字典是一样一样的，它可以存储任意类型对象，与列表、集合不同的是，字典的每个元素都是由一个键和一个值组成的“键值对”，键和值通过冒号分开。下面的代码演示了如何定义和使用字典。
+
+```Python
+# 创建字典的字面量语法
+scores = {'骆昊': 95, '白元芳': 78, '狄仁杰': 82}
+print(scores)
+# 创建字典的构造器语法
+items1 = dict(one=1, two=2, three=3, four=4)
+# 通过zip函数将两个序列压成字典
+items2 = dict(zip(['a', 'b', 'c'], '123'))
+# 创建字典的推导式语法
+items3 = {num: num ** 2 for num in range(1, 10)}
+print(items1, items2, items3)
+# 通过键可以获取字典中对应的值
+print(scores['骆昊'])
+print(scores['狄仁杰'])
+# 对字典中所有键值对进行遍历
+for key in scores:
+    print(f'{key}: {scores[key]}')
+# 更新字典中的元素
+scores['白元芳'] = 65
+scores['诸葛王朗'] = 71
+scores.update(冷面=67, 方启鹤=85)
+print(scores)
+if '武则天' in scores:
+    print(scores['武则天'])
+print(scores.get('武则天'))
+# get方法也是通过键获取对应的值但是可以设置默认值
+print(scores.get('武则天', 60))
+# 删除字典中的元素
+print(scores.popitem())
+print(scores.popitem())
+print(scores.pop('骆昊', 100))
+# 清空字典
+scores.clear()
+print(scores)
+```
+
+### 练习
+
+#### 练习1：在屏幕上显示跑马灯文字。
+
+参考答案：
+
+```Python
+import os
+import time
+
+
+def main():
+    content = '北京欢迎你为你开天辟地…………'
+    while True:
+        # 清理屏幕上的输出
+        os.system('cls')  # os.system('clear')
+        print(content)
+        # 休眠200毫秒
+        time.sleep(0.2)
+        content = content[1:] + content[0]
+
+
+if __name__ == '__main__':
+    main()
+```
+
+#### 练习2：设计一个函数产生指定长度的验证码，验证码由大小写字母和数字构成。
+
+参考答案：
+
+```Python
+import random
+
+
+def generate_code(code_len=4):
+    """
+    生成指定长度的验证码
+
+    :param code_len: 验证码的长度(默认4个字符)
+
+    :return: 由大小写英文字母和数字构成的随机验证码
+    """
+    all_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    last_pos = len(all_chars) - 1
+    code = ''
+    for _ in range(code_len):
+        index = random.randint(0, last_pos)
+        code += all_chars[index]
+    return code
+```
+
+#### 练习3：设计一个函数返回给定文件名的后缀名。
+
+参考答案：
+
+```Python
+def get_suffix(filename, has_dot=False):
+    """
+    获取文件名的后缀名
+
+    :param filename: 文件名
+    :param has_dot: 返回的后缀名是否需要带点
+    :return: 文件的后缀名
+    """
+    pos = filename.rfind('.')
+    if 0 < pos < len(filename) - 1:
+        index = pos if has_dot else pos + 1
+        return filename[index:]
+    else:
+        return ''
+```
+
+#### 练习4：设计一个函数返回传入的列表中最大和第二大的元素的值。
+
+参考答案：
+
+```Python
+def max2(x):
+    m1, m2 = (x[0], x[1]) if x[0] > x[1] else (x[1], x[0])
+    for index in range(2, len(x)):
+        if x[index] > m1:
+            m2 = m1
+            m1 = x[index]
+        elif x[index] > m2:
+            m2 = x[index]
+    return m1, m2
+```
+
+#### 练习5：计算指定的年月日是这一年的第几天。
+
+参考答案：
+
+```Python
+def is_leap_year(year):
+    """
+    判断指定的年份是不是闰年
+
+    :param year: 年份
+    :return: 闰年返回True平年返回False
+    """
+    return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+
+
+def which_day(year, month, date):
+    """
+    计算传入的日期是这一年的第几天
+
+    :param year: 年
+    :param month: 月
+    :param date: 日
+    :return: 第几天
+    """
+    days_of_month = [
+        [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    ][is_leap_year(year)]
+    total = 0
+    for index in range(month - 1):
+        total += days_of_month[index]
+    return total + date
+
+
+def main():
+    print(which_day(1980, 11, 28))
+    print(which_day(1981, 12, 31))
+    print(which_day(2018, 1, 1))
+    print(which_day(2016, 3, 1))
+
+
+if __name__ == '__main__':
+    main()
+```
+
+#### 练习6：打印[杨辉三角](https://zh.wikipedia.org/wiki/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%E5%BD%A2)。
+
+参考答案：
+
+```Python
+def main():
+    num = int(input('Number of rows: '))
+    yh = [[]] * num
+    for row in range(len(yh)):
+        yh[row] = [None] * (row + 1)
+        for col in range(len(yh[row])):
+            if col == 0 or col == row:
+                yh[row][col] = 1
+            else:
+                yh[row][col] = yh[row - 1][col] + yh[row - 1][col - 1]
+            print(yh[row][col], end='\t')
+        print()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+### 综合案例
+
+#### 案例1：双色球选号。
+
+```Python
+from random import randrange, randint, sample
+
+
+def display(balls):
+    """
+    输出列表中的双色球号码
+    """
+    for index, ball in enumerate(balls):
+        if index == len(balls) - 1:
+            print('|', end=' ')
+        print('%02d' % ball, end=' ')
+    print()
+
+
+def random_select():
+    """
+    随机选择一组号码
+    """
+    red_balls = [x for x in range(1, 34)]
+    selected_balls = []
+    selected_balls = sample(red_balls, 6)
+    selected_balls.sort()
+    selected_balls.append(randint(1, 16))
+    return selected_balls
+
+
+def main():
+    n = int(input('机选几注: '))
+    for _ in range(n):
+        display(random_select())
+
+
+if __name__ == '__main__':
+    main()
+```
+
+> **说明：** 上面使用random模块的sample函数来实现从列表中选择不重复的n个元素。
+
+#### 综合案例2：[约瑟夫环问题](https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%91%9F%E5%A4%AB%E6%96%AF%E9%97%AE%E9%A2%98)。
+
+```Python
+"""
+《幸运的基督徒》
+有15个基督徒和15个非基督徒在海上遇险，为了能让一部分人活下来不得不将其中15个人扔到海里面去，有个人想了个办法就是大家围成一个圈，由某个人开始从1报数，报到9的人就扔到海里面，他后面的人接着从1开始报数，报到9的人继续扔到海里面，直到扔掉15个人。由于上帝的保佑，15个基督徒都幸免于难，问这些人最开始是怎么站的，哪些位置是基督徒哪些位置是非基督徒。
+"""
+
+
+def main():
+    persons = [True] * 30
+    counter, index, number = 0, 0, 0
+    while counter < 15:
+        if persons[index]:
+            number += 1
+            if number == 9:
+                persons[index] = False
+                counter += 1
+                number = 0
+        index += 1
+        index %= 30
+    for person in persons:
+        print('基' if person else '非', end='')
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
+#### 综合案例3：[井字棋](https://zh.wikipedia.org/wiki/%E4%BA%95%E5%AD%97%E6%A3%8B)游戏。
+
+```Python
+import os
+
+
+def print_board(board):
+    print(board['TL'] + '|' + board['TM'] + '|' + board['TR'])
+    print('-+-+-')
+    print(board['ML'] + '|' + board['MM'] + '|' + board['MR'])
+    print('-+-+-')
+    print(board['BL'] + '|' + board['BM'] + '|' + board['BR'])
+
+
+def main():
+    init_board = {
+        'TL': ' ', 'TM': ' ', 'TR': ' ',
+        'ML': ' ', 'MM': ' ', 'MR': ' ',
+        'BL': ' ', 'BM': ' ', 'BR': ' '
+    }
+    begin = True
+    while begin:
+        curr_board = init_board.copy()
+        begin = False
+        turn = 'x'
+        counter = 0
+        os.system('clear')
+        print_board(curr_board)
+        while counter < 9:
+            move = input('轮到%s走棋, 请输入位置: ' % turn)
+            if curr_board[move] == ' ':
+                counter += 1
+                curr_board[move] = turn
+                if turn == 'x':
+                    turn = 'o'
+                else:
+                    turn = 'x'
+            os.system('clear')
+            print_board(curr_board)
+        choice = input('再玩一局?(yes|no)')
+        begin = choice == 'yes'
+
+
+if __name__ == '__main__':
+    main()
+```
+
+>**说明：** 最后这个案例来自[《Python编程快速上手:让繁琐工作自动化》](https://item.jd.com/11943853.html)一书（这本书对有编程基础想迅速使用Python将日常工作自动化的人来说还是不错的选择），对代码做了一点点的调整。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 数据容器
 

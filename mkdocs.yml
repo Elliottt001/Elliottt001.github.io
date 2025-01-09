@@ -28,6 +28,7 @@ nav:
     - 随笔:
       - 2024-11: ME/ESSAY/2024-11.md
       - 2024-12: ME/ESSAY/2024-12.md
+      - 2025-01: ME/ESSAY/2025-01.md
 
   - 知识:
     - KNOWLEDGE/index.md
@@ -50,6 +51,8 @@ nav:
           - 学习笔记: none.md
       - Python:
         - 学习笔记: CS/pl/Python/Python Note.md 
+        - 项目开发: CS/pl/Python/development-in-py.md
+        - 百日打卡: CS/pl/Python/clock-in.md
     - 算法相关: 
       - Misc: CS/Algorithm/misc.md
       - Sort: CS/Algorithm/sort.md
