@@ -1,3 +1,5 @@
+ROS
+
 ## 资源
 
 [YL](https://www.yuque.com/u26596123/re4lmd?)
@@ -47,6 +49,16 @@ quit  # to quit the help file
 ```
 
 编程：按正常的一行一行输进去即可。
+
+
+夏博士：喂，小夏啊，
+**小夏：诶，是夏博士啊。**
+夏博士：我最近在研究神经元的起源和发展，希望通过更深入地了解神经元的运行原理来解释清醒梦现象。
+**小夏：奥对，你之前说过，那最近有啥进展吗？**
+夏博士：进展？唉，还不是那样，一眼看不到头啊，研究资金也越来越有限了。你那边呢？
+**小夏：我每天不就一行一行敲代码，一点一点debug，让人头秃！当年从浙大软工毕业，专业对口，轻轻松松就进了华为，年薪百万，过个小资生活。**
+夏博士：看来也不错嘛。不过既然是我喜欢的领域，我也还是愿意坚持的。
+
 
 ## 编程风格
 
@@ -984,50 +996,32 @@ y = func(y)
 
 
 
-## 字符串和常用数据结构
+## 数据结构
 
-### 使用字符串
+### 字符串
 
-第二次世界大战促使了现代电子计算机的诞生，最初计算机被应用于导弹弹道的计算，而在计算机诞生后的很多年时间里，计算机处理的信息基本上都是数值型的信息。世界上的第一台电子计算机叫ENIAC（电子数值积分计算机），诞生于美国的宾夕法尼亚大学，每秒钟能够完成约5000次浮点运算。随着时间的推移，虽然数值运算仍然是计算机日常工作中最为重要的事情之一，但是今天的计算机处理得更多的数据可能都是以文本的方式存在的，如果我们希望通过Python程序操作这些文本信息，就必须要先了解字符串类型以及与它相关的知识。
+#### 表示
 
-所谓**字符串**，就是由零个或多个字符组成的有限序列，一般记为![$${\displaystyle s=a_{1}a_{2}\dots a_{n}(0\leq n \leq \infty)}$$](./res/formula_5.png)。在Python程序中，如果我们把单个或多个字符用单引号或者双引号包围起来，就可以表示一个字符串。
+**单个**或多个字符用单引号 **或者** 双引号 或者 三个单引号或双引号（这样可以换行）包围起来
 
-```Python
-s1 = 'hello, world!'
-s2 = "hello, world!"
-# 以三个双引号或单引号开头的字符串可以折行
-s3 = """
-hello, 
-world!
-"""
-print(s1, s2, s3, end='')
-```
+`\`：
 
-可以在字符串中使用`\`（反斜杠）来表示转义，也就是说`\`后面的字符不再是它原来的意义，例如：`\n`不是代表反斜杠和字符n，而是表示换行；而`\t`也不是代表反斜杠和字符t，而是表示制表符。所以如果想在字符串中表示`'`要写成`\'`，同理想表示`\`要写成`\\`。可以运行下面的代码看看会输出什么。
+- 转义
+- 后面跟八进制或者十六进制数来表示字符（例如`\141`和`\x61`都代表小写字母`a`）
+- 后面跟Unicode字符编码来表示字符（例如b'\xe5\xbc\xa0\xe7\x91\x9e\xe5\x96\x86'代表'张瑞喆'）
+- 不希望字符串中的`\`表示转义：在字符串的最前面加上字母`r`
 
-```Python
-s1 = '\'hello, world!\''
-s2 = '\n\\hello, world!\\\n'
-print(s1, s2, end='')
-```
+#### 运算
 
-在`\`后面还可以跟一个八进制或者十六进制数来表示字符，例如`\141`和`\x61`都代表小写字母`a`，前者是八进制的表示法，后者是十六进制的表示法。也可以在`\`后面跟Unicode字符编码来表示字符，例如`\u9a86\u660a`代表的是中文“骆昊”。运行下面的代码，看看输出了什么。
+**运算符**
 
-```Python
-s1 = '\141\142\143\x61\x62\x63'
-s2 = '\u9a86\u660a'
-print(s1, s2)
-```
+- `+` ：字符串的拼接，
 
-如果不希望字符串中的`\`表示转义，我们可以通过在字符串的最前面加上字母`r`来加以说明，再看看下面的代码又会输出什么。
+- `*`：重复一个字符串的内容
 
-```Python
-s1 = r'\'hello, world!\''
-s2 = r'\n\\hello, world!\\\n'
-print(s1, s2, end='')
-```
+- `in` 和 `not in`：判断一个字符串是否包含另外一个字符串（成员运算）
 
-Python为字符串类型提供了非常丰富的运算符，我们可以使用`+`运算符来实现字符串的拼接，可以使用`*`运算符来重复一个字符串的内容，可以使用`in`和`not in`来判断一个字符串是否包含另外一个字符串（成员运算），我们也可以用`[]`和`[:]`运算符从字符串取出某个字符或某些字符（切片运算），代码如下所示。
+- `[]` 和 `[:]`：从字符串取出某个字符或某些字符（切片运算）
 
 ```Python
 s1 = 'hello ' * 3
@@ -1036,7 +1030,7 @@ s2 = 'world'
 s1 += s2
 print(s1) # hello hello hello world
 print('ll' in s1) # True
-print('good' in s1) # False
+print('good' not in s1) # True
 str2 = 'abc123456'
 # 从字符串中取出指定位置的字符(下标运算)
 print(str2[2]) # c
@@ -1049,105 +1043,451 @@ print(str2[::-1]) # 654321cba
 print(str2[-3:-1]) # 45
 ```
 
-在Python中，我们还可以通过一系列的方法来完成对字符串的处理，代码如下所示。
+**点方法**
 
-```Python
-str1 = 'hello, world!'
-# 通过内置函数len计算字符串的长度
-print(len(str1)) # 13
-# 获得字符串首字母大写的拷贝
-print(str1.capitalize()) # Hello, world!
-# 获得字符串每个单词首字母大写的拷贝
-print(str1.title()) # Hello, World!
-# 获得字符串变大写后的拷贝
-print(str1.upper()) # HELLO, WORLD!
-# 从字符串中查找子串所在位置
-print(str1.find('or')) # 8
-print(str1.find('shit')) # -1
-# 与find类似但找不到子串时会引发异常
-# print(str1.index('or'))
-# print(str1.index('shit'))
-# 检查字符串是否以指定的字符串开头
-print(str1.startswith('He')) # False
-print(str1.startswith('hel')) # True
-# 检查字符串是否以指定的字符串结尾
-print(str1.endswith('!')) # True
-# 将字符串以指定的宽度居中并在两侧填充指定的字符
-print(str1.center(50, '*'))
-# 将字符串以指定的宽度靠右放置左侧填充指定的字符
-print(str1.rjust(50, ' '))
-str2 = 'abc123456'
-# 检查字符串是否由数字构成
-print(str2.isdigit())  # False
-# 检查字符串是否以字母构成
-print(str2.isalpha())  # False
-# 检查字符串是否以数字和字母构成
-print(str2.isalnum())  # True
-str3 = '  jackfrued@126.com '
-print(str3)
-# 获得字符串修剪左右两侧空格之后的拷贝
-print(str3.strip())
+核心技能：查看并现场学会
+
+方法1：输入 `str.` 看vscode后面的提示
+
+方法2：
+```python
+print(dir(str))  # 内置dir函数：查看某对象的所有可用方法和属性。
+
+help(str.title)  # 查看“帮助”文档
 ```
 
-我们之前讲过，可以用下面的方式来格式化输出字符串。
+列出魔术方法：
+```python
+print([method for method in dir(str) if method.startswith('__') and method.endswith('__')])
+```
+
+| 函数       | 作用                                   | 示例                                   |
+|------------|----------------------------------------|----------------------------------------|
+| `dir()`    | 列出对象的属性和方法                   | `dir(str)`                             |
+| `help()`   | 查看对象或函数的文档信息               | `help(str.split)`                      |
+
+包含 魔术方法 和 普通方法
+
+| 特性             | 魔术方法                          | 普通方法                        |
+|------------------|-----------------------------------|---------------------------------|
+| **命名规则**      | 双下划线开头和结尾（`__xxx__`）   | 普通命名（`xxx`）               |
+| **调用方式**      | 隐式调用（由 Python 解释器触发）  | 显式调用（由开发者调用）        |
+| **设计目的**      | 实现对象的底层行为                | 实现对象的具体功能              |
+| **使用场景**      | 运算符重载、对象生命周期管理等    | 字符串处理、列表操作等          |
+| **示例**          | `__init__`、`__add__`、`__len__`  | `lower()`、`split()`、`append()` |
+| **调用示例**      | `obj1 + obj2`（隐式调用 `__add__`）| `obj.method()`（显式调用）      |
+| **实现功能**      | 使对象支持 Python 内置操作        | 提供对象的具体功能              |
+| **开发者调用频率**| 较少直接调用                      | 频繁调用                        |
+| **典型用途**      | 初始化、运算符重载、类型转换等    | 数据处理、逻辑实现等            |
+
+
+##### **双下划线方法（魔术方法）**
+这些是 Python 的特殊方法，用于实现对象的特定行为（如运算符重载、字符串表示等）：
+在 Python 中，字符串类型（`str`）的魔术方法（也称为双下划线方法或特殊方法）是用于实现对象特定行为的内置方法。以下是 `str` 类型的全部魔术方法：
+
+(1) **对象创建与初始化**
+- `__new__(cls, *args, **kwargs)`: 创建字符串对象（通常由 Python 解释器调用）。
+- `__init__(self, value)`: 初始化字符串对象。
+
+(2) **字符串表示**
+- `__repr__(self)`: 返回对象的官方字符串表示（通常用于调试）。
+- `__str__(self)`: 返回对象的用户友好字符串表示（通常用于打印）。
+- `__format__(self, format_spec)`: 实现格式化字符串（用于 `format()` 函数和 f-string）。
+
+(3) **比较操作**
+- `__eq__(self, other)`: 实现相等比较（`==`）。
+- `__ne__(self, other)`: 实现不等比较（`!=`）。
+- `__lt__(self, other)`: 实现小于比较（`<`）。
+- `__le__(self, other)`: 实现小于等于比较（`<=`）。
+- `__gt__(self, other)`: 实现大于比较（`>`）。
+- `__ge__(self, other)`: 实现大于等于比较（`>=`）。
+
+(4) **哈希与唯一性**
+- `__hash__(self)`: 返回对象的哈希值（用于字典键和集合成员）。
+
+(5) **属性访问**
+- `__getattribute__(self, name)`: 获取对象的属性值。
+- `__setattr__(self, name, value)`: 设置对象的属性值。
+- `__delattr__(self, name)`: 删除对象的属性。
+
+(6) **容器行为**
+- `__len__(self)`: 返回字符串的长度（`len(s)`）。
+- `__getitem__(self, key)`: 实现索引访问（如 `s[0]`）。
+- `__iter__(self)`: 返回字符串的迭代器（用于 `for` 循环）。
+- `__contains__(self, item)`: 实现成员检查（`in` 操作符）。
+
+(7) **算术操作**
+- `__add__(self, other)`: 实现字符串的加法操作（`+`）。
+- `__mul__(self, other)`: 实现字符串的乘法操作（`*`）。
+- `__rmul__(self, other)`: 实现字符串的右乘法操作（`*`）。
+- `__mod__(self, other)`: 实现字符串的格式化操作（`%`）。
+- `__rmod__(self, other)`: 实现字符串的右格式化操作（`%`）。
+
+(8) **类型检查与继承**
+- `__class__`: 返回对象的类。
+- `__init_subclass__(cls)`: 在子类初始化时调用。
+- `__subclasshook__(cls, subclass)`: 用于自定义 `issubclass()` 行为。
+
+(9) **其他**
+- `__dir__(self)`: 返回对象的属性和方法列表（用于 `dir()` 函数）。
+- `__sizeof__(self)`: 返回对象占用的内存大小（以字节为单位）。
+- `__reduce__(self)`: 用于序列化对象（`pickle` 模块）。
+- `__reduce_ex__(self, protocol)`: 用于序列化对象（支持协议版本）。
+- `__getnewargs__(self)`: 返回用于对象重建的参数（`pickle` 模块）。
+
+
+
+#### **常用方法**
+> 中括号 `[]` 用于表示函数参数中参数是“可选参数”，即有默认值
+
+- **`capitalize()`**: 将字符串首字母大写。
+- **`casefold()`**: 将字符串转换为小写（适用于 Unicode 大小写折叠）。
+- **`center(width[, fillchar])`**: 将字符串居中，并用指定字符填充。
+- **`count(sub[, start[, end]])`**: 返回子串在字符串中出现的次数。
+- **`encode(encoding='utf-8', errors='strict')`**: 将字符串编码为字节对象。
+- **`endswith(suffix[, start[, end]])`**: 检查字符串是否以指定后缀结尾。
+- **`expandtabs(tabsize=8)`**: 将制表符（`\t`）替换为空格。
+- **`find(sub[, start[, end]])`**: 返回子串的索引，未找到返回 `-1`。
+- **`format(*args, **kwargs)`**: 格式化字符串。
+
+	??? info "format方法的用法"
+
+		1. **基本语法**
+		```python
+		str.format(*args, **kwargs)
+		```
+		- **`*args`**：位置参数，按顺序替换字符串中的占位符。
+		- **`**kwargs`**：关键字参数，通过名称替换字符串中的占位符。
+
+		---
+
+		2. **占位符格式**
+		在字符串中，占位符用 `{}` 表示。`format()` 方法会将 `{}` 替换为传入的参数。
+
+		(1) **位置参数**
+		- 使用 `{}` 作为占位符，按顺序替换。
+		- 示例：
+		```python
+		text = "My name is {} and I am {} years old."
+		result = text.format("Alice", 25)
+		print(result)  # 输出: My name is Alice and I am 25 years old.
+		```
+
+		(2) **索引参数**
+		- 在 `{}` 中使用索引（从 `0` 开始）指定替换顺序。
+		- 示例：
+		```python
+		text = "My name is {0} and I am {1} years old. {0} is my first name."
+		result = text.format("Alice", 25)
+		print(result)  # 输出: My name is Alice and I am 25 years old. Alice is my first name.
+		```
+
+		(3) **关键字参数**
+		- 在 `{}` 中使用名称指定替换值。
+		- 示例：
+		```python
+		text = "My name is {name} and I am {age} years old."
+		result = text.format(name="Alice", age=25)
+		print(result)  # 输出: My name is Alice and I am 25 years old.
+		```
+
+		---
+
+		3. **格式化选项**
+		`format()` 方法支持丰富的格式化选项，可以在 `{}` 中使用 `:` 指定格式。
+
+		(1) **数字格式化**
+		- 保留小数位数：
+		```python
+		text = "The value of pi is {:.2f}."
+		result = text.format(3.14159)
+		print(result)  # 输出: The value of pi is 3.14.
+		```
+		- 千位分隔符：
+		```python
+		text = "The population is {:,}."
+		result = text.format(1000000)
+		print(result)  # 输出: The population is 1,000,000.
+		```
+
+		(2) **对齐与填充**
+		- 左对齐：
+		```python
+		text = "{:<10}".format("left")
+		print(text)  # 输出: left      (右填充空格)
+		```
+		- 右对齐：
+		```python
+		text = "{:>10}".format("right")
+		print(text)  # 输出:      right (左填充空格)
+		```
+		- 居中对齐：
+		```python
+		text = "{:^10}".format("center")
+		print(text)  # 输出:   center   (两侧填充空格)
+		```
+		- 自定义填充字符：
+		```python
+		text = "{:*^10}".format("center")
+		print(text)  # 输出: **center** (两侧填充 *)
+		```
+
+		(3) **进制转换**
+		- 二进制：
+		```python
+		text = "Binary: {:b}".format(10)
+		print(text)  # 输出: Binary: 1010
+		```
+		- 十六进制：
+		```python
+		text = "Hex: {:x}".format(255)
+		print(text)  # 输出: Hex: ff
+		```
+
+		---
+
+		4. **混合使用**
+		可以混合使用位置参数、关键字参数和格式化选项。
+
+		示例
+		```python
+		text = "Name: {0}, Age: {1}, Salary: ${2:.2f}, Hex: {3:x}"
+		result = text.format("Alice", 25, 5000.50, 255)
+		print(result)
+		# 输出: Name: Alice, Age: 25, Salary: $5000.50, Hex: ff
+		```
+
+		---
+
+		5. **`**kwargs` 的高级用法**
+		可以将字典作为关键字参数传入。
+
+		示例
+		```python
+		data = {"name": "Alice", "age": 25}
+		text = "My name is {name} and I am {age} years old."
+		result = text.format(**data)
+		print(result)  # 输出: My name is Alice and I am 25 years old.
+		```
+
+- **`format_map(mapping)`**: 使用字典格式化字符串。
+- **`index(sub[, start[, end]])`**: 返回子串的索引，未找到抛出 `ValueError`。
+- **`isalnum()`**: 检查字符串是否只包含字母和数字。
+- **`isalpha()`**: 检查字符串是否只包含字母。
+- **`isascii()`**: 检查字符串是否只包含 ASCII 字符。
+- **`isdecimal()`**: 检查字符串是否只包含十进制数字。
+- **`isdigit()`**: 检查字符串是否只包含数字。
+- **`isidentifier()`**: 检查字符串是否是有效的 Python 标识符。
+- **`islower()`**: 检查字符串是否全部为小写。
+- **`isnumeric()`**: 检查字符串是否只包含数字字符。
+- **`isprintable()`**: 检查字符串是否可打印。
+- **`isspace()`**: 检查字符串是否只包含空白字符。
+- **`istitle()`**: 检查字符串是否每个单词首字母大写。
+- **`isupper()`**: 检查字符串是否全部为大写。
+- **`join(iterable)`**: 将可迭代对象中的元素连接成一个字符串。
+- **`ljust(width[, fillchar])`**: 将字符串左对齐，并用指定字符填充。
+- **`lower()`**: 将字符串转换为小写。
+- **`lstrip([chars])`**: 去除字符串左侧的空白或指定字符。
+- **`maketrans(x[, y[, z]])`**: 创建字符映射表，用于 `translate()`。
+- **`partition(sep)`**: 根据分隔符将字符串分为三部分。
+- **`removeprefix(prefix)`**: 移除字符串的指定前缀（Python 3.9+）。
+- **`removesuffix(suffix)`**: 移除字符串的指定后缀（Python 3.9+）。
+- **`replace(old, new[, count])`**: 替换字符串中的子串。
+- **`rfind(sub[, start[, end]])`**: 从右侧查找子串的索引。
+- **`rindex(sub[, start[, end]])`**: 从右侧查找子串的索引，未找到抛出 `ValueError`。
+- **`rjust(width[, fillchar])`**: 将字符串右对齐，并用指定字符填充。
+- **`rpartition(sep)`**: 从右侧根据分隔符将字符串分为三部分。
+- **`rsplit(sep=None, maxsplit=-1)`**: 从右侧拆分字符串。
+- **`rstrip([chars])`**: 去除字符串右侧的空白或指定字符。
+- **`split(sep=None, maxsplit=-1)`**: 拆分字符串。
+- **`splitlines([keepends])`**: 按行拆分字符串。
+- **`startswith(prefix[, start[, end]])`**: 检查字符串是否以指定前缀开头。
+- **`strip([chars])`**: 去除字符串两端的空白或指定字符。
+- **`swapcase()`**: 交换字符串中的大小写。
+- **`title()`**: 将字符串中每个单词的首字母大写。
+- **`translate(table)`**: 根据映射表转换字符串。
+- **`upper()`**: 将字符串转换为大写。
+- **`zfill(width)`**: 用零填充字符串左侧，使其达到指定长度。
+
+??? info "常用的一些字符串处理方法"
+
+	```Python
+	str1 = 'hello, world!'
+	# 通过内置函数len计算字符串的长度
+	print(len(str1)) # 13
+	# 获得字符串首字母大写的拷贝
+	print(str1.capitalize()) # Hello, world!
+	# 获得字符串每个单词首字母大写的拷贝
+	print(str1.title()) # Hello, World!
+	# 获得字符串变大写后的拷贝
+	print(str1.upper()) # HELLO, WORLD!
+	# 从字符串中查找子串所在位置
+	print(str1.find('or')) # 8
+	print(str1.find('shit')) # -1
+	# 与find类似但找不到子串时会引发异常
+	print(str1.index('or'))
+	print(str1.index('shit'))
+	# 检查字符串是否以指定的字符串开头
+	print(str1.startswith('He')) # False
+	print(str1.startswith('hel')) # True
+	# 检查字符串是否以指定的字符串结尾
+	print(str1.endswith('!')) # True
+	# 将字符串以指定的宽度居中并在两侧填充指定的字符
+	print(str1.center(50, '*'))
+	# 将字符串以指定的宽度靠右放置左侧填充指定的字符
+	print(str1.rjust(50, ' '))
+	str2 = 'abc123456'
+	# 检查字符串是否由数字构成
+	print(str2.isdigit())  # False
+	# 检查字符串是否以字母构成
+	print(str2.isalpha())  # False
+	# 检查字符串是否以数字和字母构成
+	print(str2.isalnum())  # True
+	str3 = '  jackfrued@126.com '
+	print(str3)
+	# 获得字符串修剪左右两侧空格之后的拷贝
+	print(str3.strip())
+	```
+
+#### 输出
+
+**格式化输出字符串**
 
 ```Python
 a, b = 5, 10
-print('%d * %d = %d' % (a, b, a * b))
+print('%d * %d = %d' % (a, b, a * b))  # 方法1
+print('{0} * {1} = {2}'.format(a, b, a * b))  # 方法2
+print(f'{a} * {b} = {a * b}')  # 方法3
 ```
 
-当然，我们也可以用字符串提供的方法来完成字符串的格式，代码如下所示。
+### 列表list
 
-```Python
-a, b = 5, 10
-print('{0} * {1} = {2}'.format(a, b, a * b))
-```
+定义：元素放在`[]`中，多个元素用`,`进行分隔
 
-Python 3.6以后，格式化字符串还有更为简洁的书写方式，就是在字符串前加上字母`f`，我们可以使用下面的语法糖来简化上面的代码。
+#### 运算
 
-```Python
-a, b = 5, 10
-print(f'{a} * {b} = {a * b}')
-```
+**运算**
 
-除了字符串，Python还内置了多种类型的数据结构，如果要在程序中保存和操作数据，绝大多数时候可以利用现有的数据结构来实现，最常用的包括列表、元组、集合和字典。
+- `*`： 列表元素的重复
+- `[]`：下标操作，负数代表从后往前数
+- `in` 和 `not in`
+- 可修改：`[1, 3, 5, 7, 100][2] = 300`
+- 遍历：元素遍历、下标遍历、enumerate函数处理之后遍历
 
-### 使用列表
+	```Python
+	# 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
+	for index, elem in enumerate(list1):
+		print(index, elem)
+	```
 
-不知道大家是否注意到，刚才我们讲到的字符串类型（`str`）和之前我们讲到的数值类型（`int`和`float`）有一些区别。数值类型是标量类型，也就是说这种类型的对象没有可以访问的内部结构；而字符串类型是一种结构化的、非标量类型，所以才会有一系列的属性和方法。接下来我们要介绍的列表（`list`），也是一种结构化的、非标量类型，它是值的有序序列，每个值都可以通过索引进行标识，定义列表可以将列表的元素放在`[]`中，多个元素用`,`进行分隔，可以使用`for`循环对列表元素进行遍历，也可以使用`[]`或`[:]`运算符取出列表中的一个或多个元素。
+| **操作符类型**   | **操作符**       | **描述**                                                                 | **示例**                                                                 |
+|------------------|------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| **算术操作符**   | `+`              | 列表拼接，返回一个新列表                                                 | `[1, 2] + [3, 4]` → `[1, 2, 3, 4]`                                       |
+|                  | `*`              | 列表重复，返回一个新列表                                                 | `[1, 2] * 3` → `[1, 2, 1, 2, 1, 2]`                                      |
+| **比较操作符**   | `==`             | 检查两个列表是否相等（逐元素比较）                                       | `[1, 2] == [1, 2]` → `True`                                              |
+|                  | `!=`             | 检查两个列表是否不相等                                                   | `[1, 2] != [3, 4]` → `True`                                              |
+|                  | `<`              | 检查列表是否小于另一个列表（字典顺序）                                   | `[1, 2] < [1, 3]` → `True`                                               |
+|                  | `>`              | 检查列表是否大于另一个列表（字典顺序）                                   | `[1, 4] > [1, 3]` → `True`                                               |
+|                  | `<=`             | 检查列表是否小于或等于另一个列表                                         | `[1, 2] <= [1, 2]` → `True`                                              |
+|                  | `>=`             | 检查列表是否大于或等于另一个列表                                         | `[1, 4] >= [1, 3]` → `True`                                              |
+| **成员操作符**   | `in`             | 检查元素是否在列表中                                                     | `3 in [1, 2, 3]` → `True`                                                |
+|                  | `not in`         | 检查元素是否不在列表中                                                   | `4 not in [1, 2, 3]` → `True`                                            |
+| **索引操作符**   | `[]`             | 访问列表中的元素                                                         | `[10, 20, 30][1]` → `20`                                                 |
+|                  | `[start:stop:step]` | 切片操作，获取子列表                                                     | `[10, 20, 30, 40][1:3]` → `[20, 30]`                                     |
+| **赋值操作符**   | `=`              | 列表赋值                                                                 | `list1 = [1, 2, 3]`                                                      |
+|                  | `+=`             | 列表拼接并赋值                                                           | `list1 = [1, 2]; list1 += [3, 4]` → `[1, 2, 3, 4]`                       |
+|                  | `*=`             | 列表重复并赋值                                                           | `list1 = [1, 2]; list1 *= 2` → `[1, 2, 1, 2]`                            |
+| **身份操作符**   | `is`             | 检查两个列表是否是同一个对象                                             | `list1 = [1, 2]; list2 = list1; list1 is list2` → `True`                 |
+|                  | `is not`         | 检查两个列表是否不是同一个对象                                           | `list1 = [1, 2]; list2 = [1, 2]; list1 is not list2` → `True`            |
+| **逻辑操作符**   | `and`, `or`, `not` | 列表本身不支持逻辑操作符，但可以在布尔上下文中使用                       | `if [1, 2]: print("非空")` → 输出 `非空`                                 |
 
-下面的代码演示了如何定义列表、如何遍历列表以及列表的下标运算。
 
-```Python
-list1 = [1, 3, 5, 7, 100]
-print(list1) # [1, 3, 5, 7, 100]
-# 乘号表示列表元素的重复
-list2 = ['hello'] * 3
-print(list2) # ['hello', 'hello', 'hello']
-# 计算列表长度(元素个数)
-print(len(list1)) # 5
-# 下标(索引)运算
-print(list1[0]) # 1
-print(list1[4]) # 100
-# print(list1[5])  # IndexError: list index out of range
-print(list1[-1]) # 100
-print(list1[-3]) # 5
-list1[2] = 300
-print(list1) # [1, 3, 300, 7, 100]
-# 通过循环用下标遍历列表元素
-for index in range(len(list1)):
-    print(list1[index])
-# 通过for循环遍历列表元素
-for elem in list1:
-    print(elem)
-# 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
-for index, elem in enumerate(list1):
-    print(index, elem)
-```
 
-下面的代码演示了如何向列表中添加元素以及如何从列表中移除元素。
+**点方法**
 
-```Python
+在 Python 中，列表（`list`）是一种内置的可变序列类型，具有许多属性和方法。以下是 Python 列表的所有属性和方法的概述：
+
+属性：
+
+1. **`__doc__`**: 列表的文档字符串。
+2. **`__class__`**: 列表的类类型（即 `list`）。
+3. **`__dict__`**: 列表的命名空间（通常为空，因为列表是内置类型）。
+4. **`__module__`**: 列表所属的模块（通常是 `builtins`）。
+
+方法：
+
+1. **`append(x)`**: 在列表末尾添加元素 `x`。
+2. **`extend(iterable)`**: 将可迭代对象 `iterable` 中的所有元素添加到列表末尾。
+3. **`insert(i, x)`**: 在索引 `i` 处插入元素 `x`。
+4. **`remove(x)`**: 移除列表中第一个值为 `x` 的元素。
+5. **`pop([i])`**: 移除并返回索引 `i` 处的元素（默认为最后一个元素）。
+6. **`clear()`**: 移除列表中的所有元素。
+7. **`index(x[, start[, end]])`**: 返回第一个值为 `x` 的元素的索引（可选地在 `start` 和 `end` 之间搜索）。
+8. **`count(x)`**: 返回列表中值为 `x` 的元素的个数。
+9. **`sort(key=None, reverse=False)`**: 对列表进行排序（可选地使用 `key` 函数和 `reverse` 参数）。：会修改原对象，故只有列表有，其他序列类型（如元组、字符串）没有
+	
+	注意区分：`sorted(iterable, key=None, reverse=False)` 函数：*不会修改原对象* ，而是生成一个新的对象。故序列类型都有。
+
+	??? sorted "sorted用法"
+
+		key（可选）：指定一个函数，用于从每个元素中提取比较键。默认值为 None，表示直接比较元素本身。
+
+		示例：
+		```python
+		# 先按年龄，年龄相同再按名字，再反转
+		students = [
+			{"name": "Alice", "age": 25},
+			{"name": "Bob", "age": 22},
+			{"name": "Charlie", "age": 25},
+		]
+		sorted_students = sorted(students, key=lambda x: (x["age"], x["name"]), reverse=True)
+		print(sorted_students)
+		# 排序键是一个元组 `(x["age"], x["name"])`，表示先按 `age` 排序，如果 `age` 相同，则按 `name` 排序。
+		# 输出: [{'name': 'Charlie', 'age': 25}, {'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 22}]
+		```
+		```python
+		# 先按年龄升序，再按名字降序
+		students.sort(key=lambda x: (-x["age"], x["name"]))
+		print(students)
+		# 输出: [{'name': 'Alice', 'age': 25}, {'name': 'Charlie', 'age': 25}, {'name': 'Bob', 'age': 22}]
+		```
+		
+10. **`reverse()`**: 反转列表中的元素顺序。
+11. **`copy()`**: 返回列表的浅拷贝。
+12. **`__len__()`**: 返回列表的长度（即元素个数）。
+13. **`__getitem__(i)`**: 获取索引 `i` 处的元素。
+14. **`__setitem__(i, x)`**: 设置索引 `i` 处的元素为 `x`。
+15. **`__delitem__(i)`**: 删除索引 `i` 处的元素。
+16. **`__iter__()`**: 返回列表的迭代器。
+17. **`__contains__(x)`**: 检查列表是否包含元素 `x`。
+18. **`__add__(other)`**: 返回两个列表的拼接结果。
+19. **`__mul__(n)`**: 返回列表重复 `n` 次的结果。
+20. **`__rmul__(n)`**: 同 `__mul__`，用于反向乘法操作。
+21. **`__repr__()`**: 返回列表的字符串表示形式。
+22. **`__str__()`**: 返回列表的字符串表示形式（与 `__repr__` 相同）。
+23. **`__eq__(other)`**: 比较两个列表是否相等。
+24. **`__ne__(other)`**: 比较两个列表是否不相等。
+25. **`__lt__(other)`**: 比较列表是否小于另一个列表。
+26. **`__le__(other)`**: 比较列表是否小于或等于另一个列表。
+27. **`__gt__(other)`**: 比较列表是否大于另一个列表。
+28. **`__ge__(other)`**: 比较列表是否大于或等于另一个列表。
+29. **`__hash__()`**: 列表是不可哈希的，因此此方法会引发 `TypeError`。
+30. **`__sizeof__()`**: 返回列表的内存大小（以字节为单位）。
+
+
+```python
+my_list = [1, 2, 3]
+my_list.extend([5, 6])  # [1, 2, 3, 4, 5, 6]
+
+my_list.remove(0)  # [1, 2, 3, 4, 5, 6]
+my_list.pop()  # 返回 6，列表变为 [1, 2, 3, 4, 5]
+my_list.clear()  # []
+my_list = [1, 2, 3, 4, 5]
+index = my_list.index(3)  # 2
+count = my_list.count(3)  # 1
+my_list.sort(reverse=True)  # [5, 4, 3, 2, 1]
+my_list.reverse()  # [1, 2, 3, 4, 5]
+new_list = my_list.copy()  # [1, 2, 3, 4, 5]
 list1 = [1, 3, 5, 7, 100]
 # 添加元素
 list1.append(200)
@@ -1172,77 +1512,186 @@ list1.clear()
 print(list1) # []
 ```
 
-和字符串一样，列表也可以做切片操作，通过切片操作我们可以实现对列表的复制或者将列表中的一部分取出来创建出新的列表，代码如下所示。
+也可以切片。
 
-```Python
-fruits = ['grape', 'apple', 'strawberry', 'waxberry']
-fruits += ['pitaya', 'pear', 'mango']
-# 列表切片
-fruits2 = fruits[1:4]
-print(fruits2) # apple strawberry waxberry
-# 可以通过完整切片操作来复制列表
-fruits3 = fruits[:]
-print(fruits3) # ['grape', 'apple', 'strawberry', 'waxberry', 'pitaya', 'pear', 'mango']
-fruits4 = fruits[-3:-1]
-print(fruits4) # ['pitaya', 'pear']
-# 可以通过反向切片操作来获得倒转后的列表的拷贝
-fruits5 = fruits[::-1]
-print(fruits5) # ['mango', 'pear', 'pitaya', 'waxberry', 'strawberry', 'apple', 'grape']
+也可以排序。
+- sorted函数返回列表排序后的拷贝不会修改传入的列表。
+
+
+
+#### **列表生成式**
+
+用于快速创建列表。它通过对一个可迭代对象进行遍历和条件筛选，生成一个新的列表。
+
+**语法**
+
+```python
+[expression for item in iterable if condition]
+```
+- **`expression`**：生成列表元素的表达式。
+- **`item`**：从可迭代对象中提取的元素。
+- **`iterable`**：可迭代对象（如列表、字符串、range 等）。
+- **`if condition`**（可选）：筛选条件，只有满足条件的元素才会被处理。
+
+
+**示例 1：生成平方数列表**
+```python
+squares = [x**2 for x in range(10)]
+print(squares)
+# 输出: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
-下面的代码实现了对列表的排序操作。
-
-```Python
-list1 = ['orange', 'apple', 'zoo', 'internationalization', 'blueberry']
-list2 = sorted(list1)
-# sorted函数返回列表排序后的拷贝不会修改传入的列表
-# 函数的设计就应该像sorted函数一样尽可能不产生副作用
-list3 = sorted(list1, reverse=True)
-# 通过key关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序
-list4 = sorted(list1, key=len)
-print(list1)
-print(list2)
-print(list3)
-print(list4)
-# 给列表对象发出排序消息直接在列表对象上进行排序
-list1.sort(reverse=True)
-print(list1)
+**示例 2：筛选偶数**
+```python
+evens = [x for x in range(10) if x % 2 == 0]
+print(evens)
+# 输出: [0, 2, 4, 6, 8]
 ```
 
-### 生成式和生成器
-
-我们还可以使用列表的生成式语法来创建列表，代码如下所示。
-
-```Python
-f = [x for x in range(1, 10)]
-print(f)
-f = [x + y for x in 'ABCDE' for y in '1234567']
-print(f)
-# 用列表的生成表达式语法创建列表容器
-# 用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间
-f = [x ** 2 for x in range(1, 1000)]
-print(sys.getsizeof(f))  # 查看对象占用内存的字节数
-print(f)
-# 请注意下面的代码创建的不是一个列表而是一个生成器对象
-# 通过生成器可以获取到数据但它不占用额外的空间存储数据
-# 每次需要数据的时候就通过内部的运算得到数据(需要花费额外的时间)
-f = (x ** 2 for x in range(1, 1000))
-print(sys.getsizeof(f))  # 相比生成式生成器不占用存储数据的空间
-print(f)
-for val in f:
-    print(val)
+**示例 3：嵌套列表生成式**
+```python
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)
+# 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-除了上面提到的生成器语法，Python中还有另外一种定义生成器的方式，就是通过`yield`关键字将一个普通函数改造成生成器函数。下面的代码演示了如何实现一个生成[斐波拉切数列](https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)的生成器。所谓斐波拉切数列可以通过下面[递归](https://zh.wikipedia.org/wiki/%E9%80%92%E5%BD%92)的方法来进行定义：
+---
 
-![$${\displaystyle F_{0}=0}$$](./res/formula_6.png)
+#### **生成器**
 
-![$${\displaystyle F_{1}=1}$$](./res/formula_7.png)
 
-![$${\displaystyle F_{n}=F_{n-1}+F_{n-2}}({n}\geq{2})$$](./res/formula_8.png)
+<!-- 8min 2000字 20页PPT
+6min 1500字（快
+1页PPT：停留时间适中
 
-![](./res/fibonacci-blocks.png)
+PPT要规范
+提前练习5~10遍
 
+
+看事物看长远 看本质：优秀的人，看穿20年以后自己的样子，再脚踏实地奋斗
+- 做对的事情，把事情做对，人一生坚持很难
+- 胸无大志，不能急功近利，要脚踏实地
+- 做一个正直的人，是非、正直 -->
+
+一种迭代器，用于按需生成值，而不是一次性生成所有数据。它通过生成器函数（使用 `yield` 关键字）或生成器表达式创建。生成器的核心特点是**惰性计算**，即只有在需要时才生成值，从而节省内存。
+
+!!! warning "区别"
+
+	生成器只能遍历一次，不可重复便利，生成式可以。
+
+
+**1. 生成器函数**
+生成器函数是一种使用 `yield` 关键字的函数。调用生成器函数时，它不会立即执行，而是返回一个生成器对象。每次调用生成器的 `next()` 方法时，函数会从上次暂停的地方继续执行，直到遇到下一个 `yield`。
+
+**语法**
+```python
+def generator_function():
+	yield value
+```
+
+**示例**
+```python
+def simple_generator():
+	yield 1
+	yield 2
+	yield 3
+
+# 创建生成器对象
+gen = simple_generator()
+
+# 使用 next() 获取值
+print(next(gen))  # 输出: 1
+print(next(gen))  # 输出: 2
+print(next(gen))  # 输出: 3
+```
+
+- 每次调用 `next(gen)`，生成器函数会从上次暂停的地方继续执行，直到遇到下一个 `yield`。
+- 当生成器函数执行完毕时，会抛出 `StopIteration` 异常。
+
+---
+
+**2. 生成器表达式**
+生成器表达式是一种简洁的生成器语法，类似于列表生成式，但使用圆括号 `()`。它按需生成值，适合处理大数据。
+
+**语法**
+```python
+(expression for item in iterable if condition)
+```
+
+**示例**
+```python
+gen = (x**2 for x in range(5))
+for num in gen:
+	print(num)  # 输出: 0 1 4 9 16
+```
+
+---
+
+**3. 生成器的方法**
+生成器对象支持以下方法：
+
+**`next()`**
+- 获取生成器的下一个值。
+- 如果生成器已经结束，会抛出 `StopIteration` 异常。
+
+**`send(value)`**
+- 向生成器发送一个值，并返回生成器生成的下一个值。
+- 生成器需要通过 `yield` 接收发送的值。
+- 第一次调用生成器时，必须使用 `next()` 或 `send(None)` 启动生成器。
+
+**`throw(exception)`**
+- 在生成器中抛出指定的异常。
+- 如果生成器处理了异常，则继续执行；否则，异常会传播到调用方。
+
+**`close()`**
+- 关闭生成器。
+- 在生成器的当前 `yield` 语句处抛出 `GeneratorExit` 异常。
+
+**示例**
+```python
+def generator_with_methods():
+	print("Start")
+	try:
+		value = yield 1
+		print(f"Received: {value}")
+		yield 2
+	except ValueError as e:
+		print(f"Caught exception: {e}")
+		yield 3
+	finally:
+		print("Generator closed")
+
+gen = generator_with_methods()
+print(next(gen))       # 输出: Start, 然后返回 1
+print(gen.send(10))    # 输出: Received: 10, 然后返回 2
+print(gen.throw(ValueError("Test")))  # 输出: Caught exception: Test, 然后返回 3
+gen.close()            # 输出: Generator closed
+```
+
+---
+
+**5. 生成器的应用场景**
+
+**处理大数据**
+- 当数据量较大时，生成器可以按需生成数据，避免一次性加载到内存中。
+
+**示例**
+```python
+def read_large_file(file_path):
+	with open(file_path, "r") as file:
+		for line in file:
+			yield line
+
+# 逐行读取大文件
+for line in read_large_file("large_file.txt"):
+	print(line)
+```
+
+**无限序列**
+- 生成器可以表示无限序列（如斐波那契数列）。
+
+**示例**
 ```Python
 def fib(n):
     a, b = 0, 1
@@ -1260,50 +1709,159 @@ if __name__ == '__main__':
     main()
 ```
 
-### 使用元组
+**管道操作**
+- 生成器可以用于构建数据处理管道，逐步处理数据。
 
-Python中的元组与列表类似也是一种容器数据类型，可以用一个变量（对象）来存储多个数据，不同之处在于元组的元素不能修改，在前面的代码中我们已经不止一次使用过元组了。顾名思义，我们把多个元素组合到一起就形成了一个元组，所以它和列表一样可以保存多条数据。下面的代码演示了如何定义和使用元组。
+**示例**
+```python
+def producer():
+	for i in range(5):
+		yield i
 
-```Python
-# 定义元组
-t = ('骆昊', 38, True, '四川成都')
-print(t)
-# 获取元组中的元素
-print(t[0])
-print(t[3])
-# 遍历元组中的值
-for member in t:
-    print(member)
-# 重新给元组赋值
-# t[0] = '王大锤'  # TypeError
-# 变量t重新引用了新的元组原来的元组将被垃圾回收
-t = ('王大锤', 20, True, '云南昆明')
-print(t)
-# 将元组转换成列表
-person = list(t)
-print(person)
-# 列表是可以修改它的元素的
-person[0] = '李小龙'
-person[1] = 25
-print(person)
-# 将列表转换成元组
-fruits_list = ['apple', 'banana', 'orange']
-fruits_tuple = tuple(fruits_list)
-print(fruits_tuple)
+def consumer(gen):
+	for value in gen:
+		yield value * 2
+
+# 构建管道
+pipe = consumer(producer())
+for result in pipe:
+	print(result)
 ```
 
-这里有一个非常值得探讨的问题，我们已经有了列表这种数据结构，为什么还需要元组这样的类型呢？
 
-1. 元组中的元素是无法修改的，事实上我们在项目中尤其是[多线程](https://zh.wikipedia.org/zh-hans/%E5%A4%9A%E7%BA%BF%E7%A8%8B)环境（后面会讲到）中可能更喜欢使用的是那些不变对象（一方面因为对象状态不能修改，所以可以避免由此引起的不必要的程序错误，简单的说就是一个不变的对象要比可变的对象更加容易维护；另一方面因为没有任何一个线程能够修改不变对象的内部状态，一个不变对象自动就是线程安全的，这样就可以省掉处理同步化的开销。一个不变对象可以方便的被共享访问）。所以结论就是：如果不需要对元素进行添加、删除、修改的时候，可以考虑使用元组，当然如果一个方法要返回多个值，使用元组也是不错的选择。
-2. 元组在创建时间和占用的空间上面都优于列表。我们可以使用sys模块的getsizeof函数来检查存储同样的元素的元组和列表各自占用了多少内存空间，这个很容易做到。我们也可以在ipython中使用魔法指令%timeit来分析创建同样内容的元组和列表所花费的时间，下图是我的macOS系统上测试的结果。
+??? info "为什么上面代码中用for循环但是没有显示调用next函数但是能yield"
 
-![](./res/ipython-timeit.png)
+	因为 `for` 循环内部自动调用了生成器的方法。
 
-### 使用集合
+	**1. `for` 循环的工作原理**
+	在 Python 中，`for` 循环的本质是对一个可迭代对象（如列表、生成器等）进行迭代。它的工作流程如下：
+	1. 调用可迭代对象的 `__iter__()` 方法，获取一个迭代器。
+	2. 重复调用迭代器的 `__next__()` 方法，获取下一个值。
+	3. 当迭代器抛出 `StopIteration` 异常时，循环结束。
 
-Python中的集合跟数学上的集合是一致的，不允许有重复元素，而且可以进行交集、并集、差集等运算。
+	对于生成器对象，`for` 循环会自动调用生成器的 `__next__()` 方法，按需生成值。
 
-![](./res/python-set.png)
+	---
+
+	**2. 代码解析**
+
+	**生成器函数 `producer`**
+	```python
+	def producer():
+		for i in range(5):
+			yield i
+	```
+	- `producer` 是一个生成器函数，调用它会返回一个生成器对象。
+	- 每次调用生成器的 `__next__()` 方法时，它会执行到 `yield i`，并返回当前的 `i` 值。
+
+	**生成器函数 `consumer`**
+	```python
+	def consumer(gen):
+		for value in gen:
+			yield value * 2
+	```
+	- `consumer` 也是一个生成器函数，它接受一个生成器对象 `gen` 作为参数。
+	- 在 `for value in gen` 中，`for` 循环会调用 `gen` 的 `__next__()` 方法，获取 `gen` 生成的值。
+	- 每次获取到 `value` 后，`consumer` 会执行 `yield value * 2`，返回 `value * 2`。
+
+	**管道构建**
+	```python
+	pipe = consumer(producer())
+	```
+	- `producer()` 返回一个生成器对象，传递给 `consumer`。
+	- `consumer(producer())` 返回一个新的生成器对象 `pipe`。
+
+	**遍历生成器**
+	```python
+	for result in pipe:
+		print(result)
+	```
+	- `for` 循环会调用 `pipe` 的 `__next__()` 方法，按需生成值。
+	- 每次调用 `pipe.__next__()` 时：
+	1. `consumer` 会从 `gen`（即 `producer()` 的生成器）中获取一个值。
+	2. `consumer` 对该值进行处理（`value * 2`），并通过 `yield` 返回。
+	3. `for` 循环将 `yield` 的值赋给 `result`，并执行循环体（`print(result)`）。
+
+	---
+
+	**3. 代码执行流程**
+
+	1. **创建生成器**：
+	- `producer()` 返回一个生成器对象，生成的值是 `0, 1, 2, 3, 4`。
+	- `consumer(producer())` 返回一个新的生成器对象 `pipe`。
+
+	2. **第一次迭代**：
+	- `for` 循环调用 `pipe.__next__()`。
+	- `consumer` 从 `producer()` 中获取第一个值 `0`。
+	- `consumer` 计算 `0 * 2`，并通过 `yield` 返回 `0`。
+	- `for` 循环将 `0` 赋给 `result`，并执行 `print(result)`，输出 `0`。
+
+	3. **第二次迭代**：
+	- `for` 循环调用 `pipe.__next__()`。
+	- `consumer` 从 `producer()` 中获取第二个值 `1`。
+	- `consumer` 计算 `1 * 2`，并通过 `yield` 返回 `2`。
+	- `for` 循环将 `2` 赋给 `result`，并执行 `print(result)`，输出 `2`。
+
+---
+
+**6. `yield from`**
+`yield from` 用于从另一个生成器或可迭代对象中生成值，简化生成器的嵌套。
+
+**示例**
+```python
+def sub_generator():
+	yield 1
+	yield 2
+
+def main_generator():
+	yield from sub_generator()
+	yield 3
+
+for num in main_generator():
+	print(num)  # 输出: 1 2 3
+```
+
+### 元组tuple
+
+与列表不同之处在于元组的元素不能修改
+
+1. 元组线程安全：因为不可被修改
+
+2. 元组在创建时间和占用的空间上面都优于列表。
+	- getsizeof函数检查内存空间
+	- 在ipython中使用魔法指令%timeit分析对象创建所花时间
+
+??? info "sys.getsizeof()"
+
+	```python
+	import sys
+
+	size = sys.getsizeof(object)
+	```
+	- `object`：需要计算内存大小的对象。
+	- 返回值：对象占用的内存大小（以字节为单位）。
+
+	注意：仅计算对象本身：
+	- `sys.getsizeof()` 只计算对象本身占用的内存，不包括对象引用的其他对象。例如，列表的内存大小不包括列表中元素的内存大小，字典不包括其中键值对的大小。
+	- 对象本身的包括：
+		- 对象的类型信息。
+		- 对象的引用计数。
+    	- 对象的基本属性（如列表的长度、字典的键值对数量等）
+
+	计算对象及其引用的所有对象的内存大小，可以使用第三方库（如 pympler 或 objgraph）。
+
+	```python
+	from pympler import asizeof
+	my_list = [1, 2, 3]
+	print(asizeof.asizeof(my_list))  # 输出: 248 (列表对象本身 + 元素的内存大小)
+	```
+
+
+![alt text](image.png)
+
+### 集合set
+
+#### 定义和创建
 
 可以按照下面代码所示的方式来创建和使用集合。
 
@@ -1312,14 +1870,17 @@ Python中的集合跟数学上的集合是一致的，不允许有重复元素�
 set1 = {1, 2, 3, 3, 3, 2}
 print(set1)
 print('Length =', len(set1))
-# 创建集合的构造器语法(面向对象部分会进行详细讲解)
+# 创建集合的构造器语法
 set2 = set(range(1, 10))
 set3 = set((1, 2, 3, 3, 2, 1))
 print(set2, set3)
-# 创建集合的推导式语法(推导式也可以用于推导集合)
+# 创建集合的推导式语法
+my_set = {expression for item in iterable if condition}  # 标准语法
 set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
 print(set4)
 ```
+
+#### 运算
 
 向集合添加元素和从集合删除元素。
 
@@ -1360,7 +1921,7 @@ print(set1 >= set3)
 
 > **说明：** Python中允许通过一些特殊的方法来为某种类型或数据结构自定义运算符（后面的章节中会讲到），上面的代码中我们对集合进行运算的时候可以调用集合对象的方法，也可以直接使用对应的运算符，例如`&`运算符跟intersection方法的作用就是一样的，但是使用运算符让代码更加直观。
 
-### 使用字典
+### 字典dict
 
 字典是另一种可变容器模型，Python中的字典跟我们生活中使用的字典是一样一样的，它可以存储任意类型对象，与列表、集合不同的是，字典的每个元素都是由一个键和一个值组成的“键值对”，键和值通过冒号分开。下面的代码演示了如何定义和使用字典。
 
