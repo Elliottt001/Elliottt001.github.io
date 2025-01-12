@@ -78,7 +78,11 @@ nav:
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
     - 杂七杂八:
+      - 配环境:
+        - 更换电脑之后……: CS/Misc/environment/start.md
+        - Linux: CS/Misc/environment/linux.md
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
+      - 正则表达式: CS/Misc/regex.md
 
   - 阅读:
     - BOOK/index.md

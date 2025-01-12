@@ -1086,15 +1086,18 @@ print([method for method in dir(str) if method.startswith('__') and method.endsw
 在 Python 中，字符串类型（`str`）的魔术方法（也称为双下划线方法或特殊方法）是用于实现对象特定行为的内置方法。以下是 `str` 类型的全部魔术方法：
 
 (1) **对象创建与初始化**
+
 - `__new__(cls, *args, **kwargs)`: 创建字符串对象（通常由 Python 解释器调用）。
 - `__init__(self, value)`: 初始化字符串对象。
 
 (2) **字符串表示**
+
 - `__repr__(self)`: 返回对象的官方字符串表示（通常用于调试）。
 - `__str__(self)`: 返回对象的用户友好字符串表示（通常用于打印）。
 - `__format__(self, format_spec)`: 实现格式化字符串（用于 `format()` 函数和 f-string）。
 
 (3) **比较操作**
+
 - `__eq__(self, other)`: 实现相等比较（`==`）。
 - `__ne__(self, other)`: 实现不等比较（`!=`）。
 - `__lt__(self, other)`: 实现小于比较（`<`）。
@@ -1103,20 +1106,24 @@ print([method for method in dir(str) if method.startswith('__') and method.endsw
 - `__ge__(self, other)`: 实现大于等于比较（`>=`）。
 
 (4) **哈希与唯一性**
+
 - `__hash__(self)`: 返回对象的哈希值（用于字典键和集合成员）。
 
 (5) **属性访问**
+
 - `__getattribute__(self, name)`: 获取对象的属性值。
 - `__setattr__(self, name, value)`: 设置对象的属性值。
 - `__delattr__(self, name)`: 删除对象的属性。
 
 (6) **容器行为**
+
 - `__len__(self)`: 返回字符串的长度（`len(s)`）。
 - `__getitem__(self, key)`: 实现索引访问（如 `s[0]`）。
 - `__iter__(self)`: 返回字符串的迭代器（用于 `for` 循环）。
 - `__contains__(self, item)`: 实现成员检查（`in` 操作符）。
 
 (7) **算术操作**
+
 - `__add__(self, other)`: 实现字符串的加法操作（`+`）。
 - `__mul__(self, other)`: 实现字符串的乘法操作（`*`）。
 - `__rmul__(self, other)`: 实现字符串的右乘法操作（`*`）。
@@ -1124,11 +1131,13 @@ print([method for method in dir(str) if method.startswith('__') and method.endsw
 - `__rmod__(self, other)`: 实现字符串的右格式化操作（`%`）。
 
 (8) **类型检查与继承**
+
 - `__class__`: 返回对象的类。
 - `__init_subclass__(cls)`: 在子类初始化时调用。
 - `__subclasshook__(cls, subclass)`: 用于自定义 `issubclass()` 行为。
 
 (9) **其他**
+
 - `__dir__(self)`: 返回对象的属性和方法列表（用于 `dir()` 函数）。
 - `__sizeof__(self)`: 返回对象占用的内存大小（以字节为单位）。
 - `__reduce__(self)`: 用于序列化对象（`pickle` 模块）。
@@ -1138,6 +1147,7 @@ print([method for method in dir(str) if method.startswith('__') and method.endsw
 
 
 #### **常用方法**
+
 > 中括号 `[]` 用于表示函数参数中参数是“可选参数”，即有默认值
 
 - **`capitalize()`**: 将字符串首字母大写。
@@ -1919,11 +1929,141 @@ print(set1 >= set3)
 # print(set1.issuperset(set3))
 ```
 
-> **说明：** Python中允许通过一些特殊的方法来为某种类型或数据结构自定义运算符（后面的章节中会讲到），上面的代码中我们对集合进行运算的时候可以调用集合对象的方法，也可以直接使用对应的运算符，例如`&`运算符跟intersection方法的作用就是一样的，但是使用运算符让代码更加直观。
-
 ### 字典dict
+元素都是“键值对”
 
-字典是另一种可变容器模型，Python中的字典跟我们生活中使用的字典是一样一样的，它可以存储任意类型对象，与列表、集合不同的是，字典的每个元素都是由一个键和一个值组成的“键值对”，键和值通过冒号分开。下面的代码演示了如何定义和使用字典。
+#### 运算符
+
+1. **`==`**  
+检查两个字典是否相等（键和值都相同）。
+
+2. **`!=`**  
+检查两个字典是否不相等。
+
+3. **`in`**  
+检查键是否存在于字典中。
+
+4. **`not in`**  
+检查键是否不存在于字典中。
+
+5. **`[]`**  
+访问字典中指定键的值。如果键不存在，会引发 `KeyError`。
+
+6. **`[]=`**  
+为字典中的键赋值。如果键不存在，则会添加新的键值对。
+
+7. **`del dict[key]`**  
+删除字典中指定的键值对。如果键不存在，会引发 `KeyError`。
+
+8. **`|`**  
+合并两个字典，返回一个新字典（Python 3.9+）。
+
+9. **`|=`**  
+更新字典，将另一个字典的键值对合并到当前字典中（Python 3.9+）。
+
+10. **`len()`**  
+获取字典中键值对的数量。
+
+#### 点方法
+
+1. **`clear()`**
+   - 函数使用：`dict.clear()`
+   - 解释：删除字典内所有元素。
+
+2. **`copy()`**
+   - 函数使用：`dict.copy()`
+   - 解释：返回一个字典的浅拷贝。
+
+3. **`fromkeys(seq[, value])`**
+   - 函数使用：`dict.fromkeys(seq[, value])`
+   - 解释：创建一个新字典，以序列 `seq` 中元素做字典的键，`value` 为字典所有键对应的初始值。
+
+4. **`get(key[, default])`**
+   - 函数使用：`dict.get(key[, default])`
+   - 解释：返回指定键的值，如果键不在字典中返回默认值 `default`。
+
+5. **`items()`**
+   - 函数使用：`dict.items()`
+   - 解释：返回一个视图对象，显示字典的键值对元组列表。
+
+6. **`keys()`**
+   - 函数使用：`dict.keys()`
+   - 解释：返回一个视图对象，显示字典的键列表。
+
+7. **`pop(key[, default])`**
+   - 函数使用：`dict.pop(key[, default])`
+   - 解释：删除字典给定键 `key` 所对应的值，返回值为被删除的值。如果 `key` 不存在，返回 `default` 值。
+
+8. **`popitem()`**
+   - 函数使用：`dict.popitem()`
+   - 解释：随机返回并删除字典中的一对键值（一般删除末尾对）。
+
+9. **`setdefault(key[, default])`**
+   - 函数使用：`dict.setdefault(key[, default])`
+   - 解释：如果键 `key` 存在于字典中，返回对应的值。如果不在字典中，则插入 `key` 及设置的默认值 `default`，并返回 `default`。
+
+10. **`update([other])`**
+    - 函数使用：`dict.update([other])`
+    - 解释：把字典 `other` 中的键值对更新到字典中。
+
+11. **`values()`**
+    - 函数使用：`dict.values()`
+    - 解释：返回一个视图对象，显示字典的值列表。
+
+
+```python
+# 创建一个字典
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+# 1. clear()
+my_dict.clear()
+print("After clear():", my_dict)  # 输出: {}
+
+# 2. copy()
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+dict_copy = my_dict.copy()
+print("Copy of dictionary:", dict_copy)  # 输出: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+# 3. fromkeys()
+keys = ['name', 'age', 'city']
+new_dict = dict.fromkeys(keys, 'unknown')
+print("Dictionary from keys:", new_dict)  # 输出: {'name': 'unknown', 'age': 'unknown', 'city': 'unknown'}
+
+# 4. get()
+age = my_dict.get('age')
+print("Age:", age)  # 输出: 25
+
+# 5. items()
+items = my_dict.items()
+print("Items:", items)  # 输出: dict_items([('name', 'Alice'), ('age', 25), ('city', 'New York')])
+
+# 6. keys()
+keys = my_dict.keys()
+print("Keys:", keys)  # 输出: dict_keys(['name', 'age', 'city'])
+
+# 7. pop()
+removed_value = my_dict.pop('age')
+print("Removed value:", removed_value)  # 输出: 25
+print("Dictionary after pop:", my_dict)  # 输出: {'name': 'Alice', 'city': 'New York'}
+
+# 8. popitem()
+key, value = my_dict.popitem()
+print("Popped item:", key, value)  # 输出: city New York
+print("Dictionary after popitem:", my_dict)  # 输出: {'name': 'Alice'}
+
+# 9. setdefault()
+my_dict.setdefault('country', 'USA')
+print("Dictionary after setdefault:", my_dict)  # 输出: {'name': 'Alice', 'country': 'USA'}
+
+# 10. update()
+my_dict.update({'age': 30, 'city': 'Los Angeles'})
+print("Dictionary after update:", my_dict)  # 输出: {'name': 'Alice', 'country': 'USA', 'age': 30, 'city': 'Los Angeles'}
+
+# 11. values()
+values = my_dict.values()
+print("Values:", values)  # 输出: dict_values(['Alice', 'USA', 30, 'Los Angeles'])
+```
+
 
 ```Python
 # 创建字典的字面量语法
@@ -1932,7 +2072,7 @@ print(scores)
 # 创建字典的构造器语法
 items1 = dict(one=1, two=2, three=3, four=4)
 # 通过zip函数将两个序列压成字典
-items2 = dict(zip(['a', 'b', 'c'], '123'))
+items2 = dict(zip(['a', 'b', 'c'], '123'))  # dict2 = {'a': '1', 'b': '2', 'c': '3'}
 # 创建字典的推导式语法
 items3 = {num: num ** 2 for num in range(1, 10)}
 print(items1, items2, items3)
@@ -1940,7 +2080,7 @@ print(items1, items2, items3)
 print(scores['骆昊'])
 print(scores['狄仁杰'])
 # 对字典中所有键值对进行遍历
-for key in scores:
+for key in scores:  # 等价于 for key in scores.keys():
     print(f'{key}: {scores[key]}')
 # 更新字典中的元素
 scores['白元芳'] = 65
