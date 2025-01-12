@@ -80,7 +80,9 @@ nav:
     - 杂七杂八:
       - 配环境:
         - 更换电脑之后……: CS/Misc/environment/start.md
-        - Linux: CS/Misc/environment/linux.md
+        - Zsh: CS/Misc/environment/zsh.md
+        - SSH: CS/Misc/environment/ssh.md
+        - 语言环境: CS/Misc/environment/pl.md
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md
 
