@@ -334,7 +334,6 @@ extra_css:
 
   - mkdocs/css/custom.css
   - mkdocs/css/emoji.css
-  - mkdocs/css/counter.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css
   # - https://unpkg.com/katex@0/dist/katex.min.css
