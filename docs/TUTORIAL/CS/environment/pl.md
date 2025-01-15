@@ -63,12 +63,8 @@
         - 搜索 `Python`，安装 Microsoft 提供的官方扩展。
 
 
-7. 安装 Python 库
+8. 安装 anaconda
 
-    ```bash
-    pip install numpy pandas
-    ```
-
-8. anaconda
+    详见[我的另一篇笔记中anaconda部分](https://r-z-zhang-ai.github.io/TUTORIAL/CS/environment/zsh/)
 
 ## latex
