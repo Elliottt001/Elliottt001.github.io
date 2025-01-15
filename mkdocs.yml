@@ -85,12 +85,13 @@ nav:
       - 正则表达式: CS/Misc/regex.md
 
   - 教程:
+    - TUTORIAL/index.md
     - 电脑相关: 
       - 配环境:
-        - 更换电脑之后……: CS/Misc/environment/start.md
-        - Zsh: CS/Misc/environment/zsh.md
-        - SSH: CS/Misc/environment/ssh.md
-        - 语言环境: CS/Misc/environment/pl.md
+        - 更换电脑之后……: TUTORIAL/CS/environment/start.md
+        - Zsh: TUTORIAL/CS/environment/zsh.md
+        - SSH: TUTORIAL/CS/environment/ssh.md
+        - 语言环境: TUTORIAL/CS/environment/pl.md
 
   - 阅读:
     - BOOK/index.md
