@@ -1,12 +1,13 @@
-# Computer Science
+# Tutorial
 
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~「生きろ。そなたは美しい。」~
+        ~「生きろ，そなたは美しい」~
     </div>
     <div align="center" style="font-size:12px">
         且敬你踏过千山悟得悲欢
+    </div>
     <br><br>
 
 !!! info "Abstract"

@@ -3,7 +3,7 @@
 !!! note "" 
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
-        ~『Per aspera ad astra』~
+        ~「Per aspera ad astra」~
     </div>
     <div align="center" style="font-size:12px">
         于高山之巅，方见大河奔涌；
