@@ -50,7 +50,9 @@ nav:
         - C++:
           - 学习笔记: none.md
       - Python:
-        - 学习笔记: CS/pl/Python/Python Note.md 
+        - 基础语法: CS/pl/Python/py-basic-grammar.md
+        - 数据容器: CS/pl/Python/py-sequence.md
+        - 面向对象: CS/pl/Python/py-oop.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
     - 算法相关: 
@@ -71,6 +73,7 @@ nav:
       - Obsidian: CS/Tools/Obsidian.md
       - Mkdocs: CS/Tools/mkdocs.md
       - Makefile: CS/Tools/makefile.md
+      - Anaconda: docs/CS/Tools/anaconda.md
     - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
@@ -78,13 +81,16 @@ nav:
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
     - 杂七杂八:
+      - 想了解的东西: CS/Misc/things-i-wanna-know.md
+      - 正则表达式: CS/Misc/regex.md
+
+  - 教程:
+    - 电脑相关: 
       - 配环境:
         - 更换电脑之后……: CS/Misc/environment/start.md
         - Zsh: CS/Misc/environment/zsh.md
         - SSH: CS/Misc/environment/ssh.md
         - 语言环境: CS/Misc/environment/pl.md
-      - 想了解的东西: CS/Misc/things-i-wanna-know.md
-      - 正则表达式: CS/Misc/regex.md
 
   - 阅读:
     - BOOK/index.md
