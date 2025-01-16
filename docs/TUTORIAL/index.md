@@ -12,7 +12,7 @@
 
 !!! info "Abstract"
 
-    一些[希望分享的教程](https://r-z-zhang-ai.github.io/TUTORIAL)，目前包含计算机。
+    一些[希望分享的教程](https://r-z-zhang-ai.github.io/TUTORIAL)。
 
 <script src="https://giscus.app/client.js"
         data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"

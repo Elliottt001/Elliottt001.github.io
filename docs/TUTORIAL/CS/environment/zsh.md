@@ -166,7 +166,7 @@ conda --version
 ```
 
 
-#### 安装 chromium
+### 安装 chromium
 
 缘起：运行我的烟花代码以展示之。
 
@@ -195,7 +195,11 @@ chromium-browser
 chromedriver --version
 ```
 
-> 或者使用snap，我没有这样因为 snap 和 apt 是平行的，有 apt 何必再下载 snap 占内存？
+由于Ubuntu默认使用snap下载chromium，所以即使用该方法也会自动调用snap，如果没有则会下载它。
+
+> 默认使用 Snap 是因为维护成本低、自动更新方便、跨平台支持好、依赖管理简单且安全性高。
+
+最终，chromium被安装在 ~/snap/chromium 目录下。
 
 第三步：在虚拟环境中安装相关python包，`pip3 install <package-name>` 即可
 

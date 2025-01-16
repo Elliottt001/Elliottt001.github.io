@@ -162,6 +162,47 @@ stu1.study('Python程序设计')    # 骆昊正在学习Python程序设计.
 stu2.play()                    # 王大锤正在玩游戏.
 ```
 
+
+### 属性和方法
+
+
+| 类型         | 定义位置       | 访问方式       | 参数        | 用途                             |
+|--------------|----------------|----------------|-------------|----------------------------------|
+| **实例属性** | `__init__` 或其他实例方法 | 通过实例访问   | 无          | 描述对象的状态 / 属性                   |
+| **类属性**   | 类中直接定义   | 通过类或实例访问 | 无，这就是一个普通的变量（有点类似全局变量）          | 属于类本身的属性，所有实例共享同一个类属性                 |
+| **实例方法** | 类中定义       | 通过实例访问   | `self`（表示当前对象）      | 属于对象的方法，操作实例属性                     |
+| **类方法**   | 类中定义，使用 `@classmethod` | 通过类或实例访问 | `cls` （表示当前类）      | 操作类属性或执行与类相关的操作   |
+| **静态方法** | 类中定义，使用 `@staticmethod` | 通过类或实例访问 | 无，外界传入          | 与类和实例无关，实现与类相关的工具函数           |
+
+---
+
+```python
+class Dog:
+    species = "Canis familiaris"  # 类属性
+
+    def __init__(self, name, age):
+        self.name = name  # 实例属性
+        self.age = age    # 实例属性
+
+    def bark(self):  # 实例方法
+        print(f"{self.name} is barking!")
+
+    @classmethod
+    def get_species(cls):  # 类方法
+        return cls.species
+
+    @staticmethod
+    def is_valid_age(age):  # 静态方法
+        return age > 0
+
+# 测试
+dog = Dog("Buddy", 3)
+dog.bark()  # 输出: Buddy is barking!
+print(Dog.get_species())  # 输出: Canis familiaris
+print(Dog.is_valid_age(3))  # 输出: True
+```
+
+
 ### 打印对象
 
 上面我们通过`__init__`方法在创建对象时为对象绑定了属性并赋予了初始值。在Python中，以两个下划线`__`（读作“dunder”）开头和结尾的方法通常都是有特殊用途和意义的方法，我们一般称之为**魔术方法**或**魔法方法**。如果我们在打印对象的时候不希望看到对象的地址而是看到我们自定义的信息，可以通过在类中放置`__repr__`魔术方法来做到，**该方法返回的字符串就是用`print`函数打印对象的时候会显示的内容**，代码如下所示。
@@ -371,6 +412,11 @@ if __name__ == '__main__':
 
 ### @property装饰器
 
+!!! warning "warning"
+
+    1. 变量 / 函数命名：@property 修饰的方法直接命名为相应变量的名字，将 `__init__` 中相应变量改为私有属性（名字前面加一个下划线），@<name>.setter 中 “name” 是与 @property 修饰的方法同名。
+
+
 > 之前我们讨论过Python中属性和方法访问权限的问题，虽然我们不建议将属性设置为私有的，但是如果直接将属性暴露给外界也是有问题的，比如我们没有办法检查赋给属性的值是否有效。我们之前的建议是将属性命名以单下划线开头，通过这种方式来暗示属性是受保护的，不建议外界直接访问，那么如果想访问属性可以通过属性的getter（访问器）和setter（修改器）方法进行对应的操作。如果要做到这点，就可以考虑使用@property包装器来包装getter和setter方法，使得对属性的访问既安全又方便，代码如下所示。
 
 !!! success "理解"
@@ -520,6 +566,62 @@ print(r.area)  # 输出: 20
 - **性能**：如果 `@property` 方法的计算量很大，频繁访问可能会导致性能问题。在这种情况下，可以考虑缓存结果。
 - **只读属性**：如果没有定义 setter，那么属性是只读的，尝试赋值会抛出 `AttributeError`。
 
+??? info "my try"
+    ```python
+    class Article():
+        language = "Chinese"
+        def __init__(self, reads, likes, form, theme, platform):
+            self._reads = reads
+            self._likes = likes
+            self.form = form
+            self.theme = theme
+            self.platform = platform
+
+        @property
+        def proportion_of_likes(self):
+            return self._likes / self._reads
+        
+        @property
+        def judge_form(self):
+            forms = ["video", "character", "film"]
+            if self.form in forms:
+                index = forms.index(self.form)
+            else:
+                forms.append(self.form)
+                index = forms.index(self.form)
+            return index
+        
+        @property
+        def likes(self):
+            return self._likes
+        
+        @likes.setter
+        def likes(self, cnt):
+            if cnt < 0:
+                raise ValueError
+            else:
+                self._likes = cnt
+
+
+    class xhs(Article):
+        def __init__(self, reads, likes, form, theme, platform = "xhs"):
+            super().__init__(reads, likes, form, theme, platform)
+
+    class gzh(Article):
+        def __init__(self, reads, likes, form, theme, platform = "wechat"):
+            super().__init__(reads, likes, form, theme, platform)
+
+
+    art1 = xhs(5, 3, "video", "fun", "xhs")
+    art2 = gzh(10, 3, "character", "cs", "wechat")
+    art3 = gzh(14, 5, "hhh", "hhh", "wechat")
+
+    print(art3.judge_form)
+    print(art2.proportion_of_likes)
+    print(art1.proportion_of_likes)
+    art1.likes = 2
+    print(art1.proportion_of_likes)
+    ```
 
 
 ```Python
@@ -700,6 +802,11 @@ if __name__ == '__main__':
     main()
 ```
 
+
+使用staticmethod装饰器声明某方法是某类的静态方法，如果要声明类方法，可以使用classmethod装饰器。可以直接使用 `类名.方法名` 的方式来调用静态方法和类方法，二者的区别在于，类方法的第一个参数是类对象本身 `cls`，而静态方法则没有这个参数。
+
+简单的总结一下，对象方法、类方法、静态方法都可以通过类名.方法名的方式来调用，区别在于方法的第一个参数到底是普通对象还是类对象，还是没有接受消息的对象。静态方法通常也可以直接写成一个独立的函数，因为它并没有跟特定的对象绑定。
+
 ### 类之间的关系
 
 简单的说，类和类之间的关系有三种：is-a、has-a和use-a关系。
@@ -718,7 +825,17 @@ if __name__ == '__main__':
 
 ### 继承和多态
 
-刚才我们提到了，可以在已有类的基础上创建新类，这其中的一种做法就是让一个类从另一个类那里将属性和方法直接继承下来，从而减少重复代码的编写。提供继承信息的我们称之为父类，也叫超类或基类；得到继承信息的我们称之为子类，也叫派生类或衍生类。子类除了继承父类提供的属性和方法，还可以定义自己特有的属性和方法，所以子类比父类拥有的更多的能力，在实际开发中，我们经常会用子类对象去替换掉一个父类对象，这是面向对象编程中一个常见的行为，对应的原则称之为[里氏替换原则](https://zh.wikipedia.org/wiki/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99)。下面我们先看一个继承的例子。
+继承的语法是在定义类的时候，在类名后的圆括号中指定当前类的父类。如果定义一个类的时候没有指定它的父类是谁，那么默认的父类是 `object` 类。`object` 类是Python中的顶级类，这也就意味着所有的类都是它的子类，要么直接继承它，要么间接继承它。Python语言允许多重继承，也就是说一个类可以有一个或多个父类。
+
+在子类的初始化方法中，我们可以通过 `super().__init__()` 来调用父类初始化方法，`super` 函数是Python内置函数中专门为获取当前对象的父类对象而设计的。从上面的代码可以看出，子类除了可以通过继承得到父类提供的属性和方法外，还可以定义自己特有的属性和方法，所以子类比父类拥有的更多的能力。
+
+在实际开发中，我们经常会用子类对象去替换掉一个父类对象，这是面向对象编程中一个常见的行为，也叫做“里氏替换原则”（Liskov Substitution Principle）。
+
+!!! warning "warning"
+
+    1. 子类的 `super().__init__()` 的参数顺序和数量一定要与父类的 `__init__()` 方法完全一致（除self）
+    
+    2. 带不带self：，每一个（子类 & 父类） `__init__()` 都带，子类的 `super().__init__()` 不带
 
 ```Python
 class Person(object):
@@ -845,9 +962,11 @@ if __name__ == '__main__':
 
 在上面的代码中，我们将`Pet`类处理成了一个抽象类，所谓抽象类就是不能够创建对象的类，这种类的存在就是专门为了让其他类去继承它。Python从语法层面并没有像Java或C#那样提供对抽象类的支持，但是我们可以通过`abc`模块的`ABCMeta`元类和`abstractmethod`包装器来达到抽象类的效果，如果一个类中存在抽象方法那么这个类就不能够实例化（创建对象）。上面的代码中，`Dog`和`Cat`两个子类分别对`Pet`类中的`make_voice`抽象方法进行了重写并给出了不同的实现版本，当我们在`main`函数中调用该方法时，这个方法就表现出了多态行为（同样的方法做了不同的事情）。
 
-### 综合案例
+子类继承父类的方法后，还可以对方法进行重写（重新实现该方法），不同的子类可以对父类的同一个方法给出不同的实现版本，这样的方法在程序运行时就会表现出多态行为（调用相同的方法，做了不同的事情）。多态是面向对象编程中最精髓的部分，当然也是对初学者来说最难以理解和灵活运用的部分，我们会在下一节课中用专门的例子来讲解多态这个知识点。
 
-#### 案例1：奥特曼打小怪兽。
+### 示例
+
+示例1：奥特曼打小怪兽。
 
 ```Python
 from abc import ABCMeta, abstractmethod
@@ -1036,162 +1155,187 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+案例2：扑克游戏。
 
-#### 案例2：扑克游戏。
+> **说明**：简单起见，我们的扑克只有52张牌（没有大小王），游戏需要将52张牌发到4个玩家的手上，每个玩家手上有13张牌，按照黑桃、红心、草花、方块的顺序和点数从小到大排列，暂时不实现其他的功能。
+
+使用面向对象编程方法，首先需要从问题的需求中找到对象并抽象出对应的类，此外还要找到对象的属性和行为。当然，这件事情并不是特别困难，我们可以从需求的描述中找出名词和动词，名词通常就是对象或者是对象的属性，而动词通常是对象的行为。扑克游戏中至少应该有三类对象，分别是牌、扑克和玩家，牌、扑克、玩家三个类也并不是孤立的。类和类之间的关系可以粗略的分为**is-a关系（继承）**、**has-a关系（关联）**和**use-a关系（依赖）**。很显然扑克和牌是has-a关系，因为一副扑克有（has-a）52张牌；玩家和牌之间不仅有关联关系还有依赖关系，因为玩家手上有（has-a）牌而且玩家使用了（use-a）牌。
+
+牌的属性显而易见，有花色和点数。我们可以用0到3的四个数字来代表四种不同的花色，但是这样的代码可读性会非常糟糕，因为我们并不知道黑桃、红心、草花、方块跟0到3的数字的对应关系。如果一个变量的取值只有有限多个选项，我们可以使用枚举。与C、Java等语言不同的是，Python中没有声明枚举类型的关键字，但是可以通过继承`enum`模块的`Enum`类来创建枚举类型，代码如下所示。
+
+```Python
+from enum import Enum
+
+
+class Suite(Enum):
+    """花色(枚举)"""
+    SPADE, HEART, CLUB, DIAMOND = range(4)
+```
+
+通过上面的代码可以看出，定义枚举类型其实就是定义符号常量，如`SPADE`、`HEART`等。每个符号常量都有与之对应的值，这样表示黑桃就可以不用数字`0`，而是用`Suite.SPADE`；同理，表示方块可以不用数字`3`， 而是用`Suite.DIAMOND`。注意，使用符号常量肯定是优于使用字面常量的，因为能够读懂英文就能理解符号常量的含义，代码的可读性会提升很多。Python中的枚举类型是可迭代类型，简单的说就是可以将枚举类型放到`for-in`循环中，依次取出每一个符号常量及其对应的值，如下所示。
+
+```Python
+for suite in Suite:
+    print(f'{suite}: {suite.value}')
+```
+
+接下来我们可以定义牌类。
+
+```Python
+class Card:
+    """牌"""
+
+    def __init__(self, suite, face):
+        self.suite = suite
+        self.face = face
+
+    def __repr__(self):
+        suites = '♠♥♣♦'
+        faces = ['', 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+        # 根据牌的花色和点数取到对应的字符
+        return f'{suites[self.suite.value]}{faces[self.face]}'
+```
+
+可以通过下面的代码来测试下`Card`类。
+
+```Python
+card1 = Card(Suite.SPADE, 5)
+card2 = Card(Suite.HEART, 13)
+print(card1, card2)    # ♠5 ♥K
+```
+
+接下来我们定义扑克类。
 
 ```Python
 import random
 
 
-class Card(object):
-    """一张牌"""
-
-    def __init__(self, suite, face):
-        self._suite = suite
-        self._face = face
-
-    @property
-    def face(self):
-        return self._face
-
-    @property
-    def suite(self):
-        return self._suite
-
-    def __str__(self):
-        if self._face == 1:
-            face_str = 'A'
-        elif self._face == 11:
-            face_str = 'J'
-        elif self._face == 12:
-            face_str = 'Q'
-        elif self._face == 13:
-            face_str = 'K'
-        else:
-            face_str = str(self._face)
-        return '%s%s' % (self._suite, face_str)
-    
-    def __repr__(self):
-        return self.__str__()
-
-
-class Poker(object):
-    """一副牌"""
+class Poker:
+    """扑克"""
 
     def __init__(self):
-        self._cards = [Card(suite, face) 
-                       for suite in '♠♥♣♦'
-                       for face in range(1, 14)]
-        self._current = 0
-
-    @property
-    def cards(self):
-        return self._cards
+        # 通过列表的生成式语法创建一个装52张牌的列表
+        self.cards = [Card(suite, face) for suite in Suite
+                      for face in range(1, 14)]
+        # current属性表示发牌的位置
+        self.current = 0
 
     def shuffle(self):
-        """洗牌(随机乱序)"""
-        self._current = 0
-        random.shuffle(self._cards)
+        """洗牌"""
+        self.current = 0
+        # 通过random模块的shuffle函数实现列表的随机乱序
+        random.shuffle(self.cards)
 
-    @property
-    def next(self):
+    def deal(self):
         """发牌"""
-        card = self._cards[self._current]
-        self._current += 1
+        card = self.cards[self.current]
+        self.current += 1
         return card
 
     @property
     def has_next(self):
-        """还有没有牌"""
-        return self._current < len(self._cards)
+        """还有没有牌可以发"""
+        return self.current < len(self.cards)
+```
 
+可以通过下面的代码来测试下`Poker`类。
 
-class Player(object):
+```Python
+poker = Poker()
+poker.shuffle()
+print(poker.cards)
+```
+
+定义玩家类。
+
+```Python
+class Player:
     """玩家"""
 
     def __init__(self, name):
-        self._name = name
-        self._cards_on_hand = []
+        self.name = name
+        self.cards = []
 
-    @property
-    def name(self):
-        return self._name
-
-    @property
-    def cards_on_hand(self):
-        return self._cards_on_hand
-
-    def get(self, card):
+    def get_one(self, card):
         """摸牌"""
-        self._cards_on_hand.append(card)
+        self.cards.append(card)
 
-    def arrange(self, card_key):
-        """玩家整理手上的牌"""
-        self._cards_on_hand.sort(key=card_key)
-
-
-# 排序规则-先根据花色再根据点数排序
-def get_key(card):
-    return (card.suite, card.face)
-
-
-def main():
-    p = Poker()
-    p.shuffle()
-    players = [Player('东邪'), Player('西毒'), Player('南帝'), Player('北丐')]
-    for _ in range(13):
-        for player in players:
-            player.get(p.next)
-    for player in players:
-        print(player.name + ':', end=' ')
-        player.arrange(get_key)
-        print(player.cards_on_hand)
-
-
-if __name__ == '__main__':
-    main()
+    def arrange(self):
+        self.cards.sort()
 ```
 
->**说明：** 大家可以自己尝试在上面代码的基础上写一个简单的扑克游戏，例如21点(Black Jack)，游戏的规则可以自己在网上找一找。
-
-#### 案例3：工资结算系统。
+创建四个玩家并将牌发到玩家的手上。
 
 ```Python
-"""
-某公司有三种类型的员工 分别是部门经理、程序员和销售员
-需要设计一个工资结算系统 根据提供的员工信息来计算月薪
-部门经理的月薪是每月固定15000元
-程序员的月薪按本月工作时间计算 每小时150元
-销售员的月薪是1200元的底薪加上销售额5%的提成
-"""
+poker = Poker()
+poker.shuffle()
+players = [Player('东邪'), Player('西毒'), Player('南帝'), Player('北丐')]
+for _ in range(13):
+    for player in players:
+        player.get_one(poker.deal())
+for player in players:
+    player.arrange()
+    print(f'{player.name}: ', end='')
+    print(player.cards)
+```
+
+执行上面的代码会在`player.arrange()`那里出现异常，因为`Player`的`arrange`方法使用了列表的`sort`对玩家手上的牌进行排序，排序需要比较两个`Card`对象的大小，而`<`运算符又不能直接作用于`Card`类型，所以就出现了`TypeError`异常，异常消息为：`'<' not supported between instances of 'Card' and 'Card'`。
+
+为了解决这个问题，我们可以对`Card`类的代码稍作修改，使得两个`Card`对象可以直接用`<`进行大小的比较。这里用到技术叫**运算符重载**，Python中要实现对`<`运算符的重载，需要在类中添加一个名为`__lt__`的魔术方法。很显然，魔术方法`__lt__`中的`lt`是英文单词“less than”的缩写，以此类推，魔术方法`__gt__`对应`>`运算符，魔术方法`__le__`对应`<=`运算符，`__ge__`对应`>=`运算符，`__eq__`对应`==`运算符，`__ne__`对应`!=`运算符。
+
+修改后的`Card`类代码如下所示。
+
+```Python
+class Card:
+    """牌"""
+
+    def __init__(self, suite, face):
+        self.suite = suite
+        self.face = face
+
+    def __repr__(self):
+        suites = '♠♥♣♦'
+        faces = ['', 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+        # 根据牌的花色和点数取到对应的字符
+        return f'{suites[self.suite.value]}{faces[self.face]}'
+    
+    def __lt__(self, other):
+        # 花色相同比较点数的大小
+        if self.suite == other.suite:
+            return self.face < other.face
+        # 花色不同比较花色对应的值
+        return self.suite.value < other.suite.value
+```
+
+>**说明：** 大家可以尝试在上面代码的基础上写一个简单的扑克游戏，如21点游戏（Black Jack），游戏的规则可以自己在网上找一找。
+
+
+
+案例3：工资结算系统。
+
+> **要求**：某公司有三种类型的员工，分别是部门经理、程序员和销售员。需要设计一个工资结算系统，根据提供的员工信息来计算员工的月薪。其中，部门经理的月薪是固定15000元；程序员按工作时间（以小时为单位）支付月薪，每小时200元；销售员的月薪由1800元底薪加上销售额5%的提成两部分构成。
+
+通过对上述需求的分析，可以看出部门经理、程序员、销售员都是员工，有相同的属性和行为，那么我们可以先设计一个名为`Employee`的父类，再通过继承的方式从这个父类派生出部门经理、程序员和销售员三个子类。很显然，后续的代码不会创建`Employee` 类的对象，因为我们需要的是具体的员工对象，所以这个类可以设计成专门用于继承的抽象类。Python中没有定义抽象类的关键字，但是可以通过`abc`模块中名为`ABCMeta` 的元类来定义抽象类。关于元类的知识，后面的课程中会有专门的讲解，这里不用太纠结这个概念，记住用法即可。
+
+```Python
 from abc import ABCMeta, abstractmethod
 
 
-class Employee(object, metaclass=ABCMeta):
+class Employee(metaclass=ABCMeta):
     """员工"""
 
     def __init__(self, name):
-        """
-        初始化方法
-
-        :param name: 姓名
-        """
-        self._name = name
-
-    @property
-    def name(self):
-        return self._name
+        self.name = name
 
     @abstractmethod
     def get_salary(self):
-        """
-        获得月薪
-
-        :return: 月薪
-        """
+        """结算月薪"""
         pass
+```
 
+在上面的员工类中，有一个名为`get_salary`的方法用于结算月薪，但是由于还没有确定是哪一类员工，所以结算月薪虽然是员工的公共行为但这里却没有办法实现。对于暂时无法实现的方法，我们可以使用`abstractmethod`装饰器将其声明为抽象方法，所谓**抽象方法就是只有声明没有实现的方法**，**声明这个方法是为了让子类去重写这个方法**。接下来的代码展示了如何从员工类派生出部门经理、程序员、销售员这三个子类以及子类如何重写父类的抽象方法。
 
+```Python
 class Manager(Employee):
     """部门经理"""
 
@@ -1204,18 +1348,10 @@ class Programmer(Employee):
 
     def __init__(self, name, working_hour=0):
         super().__init__(name)
-        self._working_hour = working_hour
-
-    @property
-    def working_hour(self):
-        return self._working_hour
-
-    @working_hour.setter
-    def working_hour(self, working_hour):
-        self._working_hour = working_hour if working_hour > 0 else 0
+        self.working_hour = working_hour
 
     def get_salary(self):
-        return 150.0 * self._working_hour
+        return 200 * self.working_hour
 
 
 class Salesman(Employee):
@@ -1223,39 +1359,29 @@ class Salesman(Employee):
 
     def __init__(self, name, sales=0):
         super().__init__(name)
-        self._sales = sales
-
-    @property
-    def sales(self):
-        return self._sales
-
-    @sales.setter
-    def sales(self, sales):
-        self._sales = sales if sales > 0 else 0
+        self.sales = sales
 
     def get_salary(self):
-        return 1200.0 + self._sales * 0.05
-
-
-def main():
-    emps = [
-        Manager('刘备'), Programmer('诸葛亮'),
-        Manager('曹操'), Salesman('荀彧'),
-        Salesman('吕布'), Programmer('张辽'),
-        Programmer('赵云')
-    ]
-    for emp in emps:
-        if isinstance(emp, Programmer):
-            emp.working_hour = int(input('请输入%s本月工作时间: ' % emp.name))
-        elif isinstance(emp, Salesman):
-            emp.sales = float(input('请输入%s本月销售额: ' % emp.name))
-        # 同样是接收get_salary这个消息但是不同的员工表现出了不同的行为(多态)
-        print('%s本月工资为: ￥%s元' %
-              (emp.name, emp.get_salary()))
-
-
-if __name__ == '__main__':
-    main()
+        return 1800 + self.sales * 0.05
 ```
 
+上面的`Manager`、`Programmer`、`Salesman`三个类都继承自`Employee`，三个类都分别重写了`get_salary`方法。**重写就是子类对父类已有的方法重新做出实现**。相信大家已经注意到了，三个子类中的`get_salary`各不相同，所以这个方法在程序运行时会产生**多态行为**，多态简单的说就是**调用相同的方法**，**不同的子类对象做不同的事情**。
 
+我们通过下面的代码来完成这个工资结算系统，由于程序员和销售员需要分别录入本月的工作时间和销售额，所以在下面的代码中我们使用了Python内置的`isinstance`函数来判断员工对象的类型。我们之前讲过的`type`函数也能识别对象的类型，但是`isinstance`函数更加强大，因为它可以判断出一个对象是不是某个继承结构下的子类型，你可以简答的理解为`type`函数是对对象类型的精准匹配，而`isinstance`函数是对对象类型的模糊匹配。
+
+```Python
+emps = [
+    Manager('刘备'), Programmer('诸葛亮'), Manager('曹操'), 
+    Programmer('荀彧'), Salesman('吕布'), Programmer('张辽'),
+]
+for emp in emps:
+    if isinstance(emp, Programmer):
+        emp.working_hour = int(input(f'请输入{emp.name}本月工作时间: '))
+    elif isinstance(emp, Salesman):
+        emp.sales = float(input(f'请输入{emp.name}本月销售额: '))
+    print(f'{emp.name}本月工资为: ￥{emp.get_salary():.2f}元')
+```
+
+### 简单的总结
+
+面向对象的编程思想非常的好，也符合人类的正常思维习惯，但是要想灵活运用面向对象编程中的抽象、封装、继承、多态需要长时间的积累和沉淀，这件事情无法一蹴而就，属于“路漫漫其修远兮，吾将上下而求索”的东西。

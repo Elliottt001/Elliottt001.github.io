@@ -10,11 +10,36 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
         ~「Miracles happen every day」~
     </div>
     <div align="center" style="font-size:12px">
-        轻舟已过万重山，前路漫漫亦灿灿
+        只有疯狂到相信自己能改变世界的人才能改变世界 ——— Steven Paul Jobs
     </div>
     <br><br>
 
-!!! danger "正在努力更新中"
+<!-- HTML Snippet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Input</title>
+    <style>
+        input[type="text"] {
+            width: 100%;
+            font-size: 17px;
+        }
+        textarea {
+            width: 100%;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h3>今日份计划：</h3>
+    <textarea placeholder="请输入您的计划..." rows="5"></textarea>
+    <u></u>
+</body>
+</html>
+
+!!! danger "努力更新中"
 
     - [ ] 《山茶文具店》
     - [ ] 2024年终总结

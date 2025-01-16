@@ -65,6 +65,6 @@
 
 8. 安装 anaconda
 
-    详见[我的另一篇笔记中anaconda部分](https://r-z-zhang-ai.github.io/TUTORIAL/CS/environment/zsh/)
+    详见[我的另一篇笔记中anaconda部分](https://r-z-zhang-ai.github.io/TUTORIAL/CS/environment/zsh/#anaconda)
 
 ## latex
