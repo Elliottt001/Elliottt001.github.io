@@ -52,6 +52,7 @@ nav:
       - Python:
         - 基础语法: CS/pl/Python/py-basic-grammar.md
         - 数据容器: CS/pl/Python/py-sequence.md
+        - 文件和异常: CS/pl/Python/file.md
         - 面向对象: CS/pl/Python/py-oop.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
