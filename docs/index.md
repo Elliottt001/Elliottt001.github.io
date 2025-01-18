@@ -10,7 +10,7 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
         ~「Miracles happen every day」~
     </div>
     <div align="center" style="font-size:12px">
-        只有疯狂到相信自己能改变世界的人才能改变世界 ——— Steven Paul Jobs
+        只有疯狂到相信自己能改变世界的人才能改变世界。  ———— Steven Paul Jobs
     </div>
     <br><br>
 
