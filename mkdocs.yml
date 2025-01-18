@@ -111,9 +111,10 @@ theme:
   name: material
   icon:
     logo: material/library-outline
+  favicon: images/favicon.png
+  custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
   palette:
-
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
@@ -123,6 +124,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
+      primary: red
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -130,6 +132,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: red
       toggle:
         icon: material/weather-night
         name: Switch to system preference
