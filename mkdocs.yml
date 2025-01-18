@@ -111,7 +111,7 @@ theme:
   name: material
   icon:
     logo: material/library-outline
-  favicon: images/favicon.png
+  favicon: images/favicon_circle.png
   custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
   palette:
