@@ -58,6 +58,3 @@ Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.git
     目前还没有……
 
 ---
-
-快来聊天！
-

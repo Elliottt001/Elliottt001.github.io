@@ -288,19 +288,3 @@ $$
 ![alt text](res/images/954646bb15c9d6327df3938d6f4a4e2.png)
 ![alt text](res/images/0c6a3ac011c424e5db0a520aea43244.png)
 
-
-<script src="https://giscus.app/client.js"
-        data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
-        data-repo-id="R_kgDONN6JTg"
-        data-category="General"
-        data-category-id="DIC_kwDONN6JTs4CkfL9"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

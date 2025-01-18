@@ -476,20 +476,3 @@ $$
 - $λ \to 0$ 不能用 $n \to \infty$ 代替，若分点全取在 $x_0$ 一侧，则不行
 
 ![alt text](res/images/image-90_1.png)
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="r-z-zhang-AI/r-z-zhang-AI.github.io"
-        data-repo-id="R_kgDONN6JTg"
-        data-category="General"
-        data-category-id="DIC_kwDONN6JTs4CkfL9"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
