@@ -1,7 +1,7 @@
 # (づ￣ ³￣)づ Welcome !
 
 
-Hi！这里是张瑞喆的个人网站 [Growing Cosmos](https://r-z-zhang-ai.github.io/)
+Hi！这里是 张瑞喆的个人网站 [MyCosmos](https://r-z-zhang-ai.github.io/)
 
 
 !!! note "" 

@@ -1,5 +1,4 @@
-
-### base64 - Base64编解码模块
+## base64 - Base64编解码模块
 
 **Base64**是一种基于64个可打印字符来表示二进制数据的方法。由于$log _{2}64=6$，所以Base64以6个比特（二进制位，可以表示0或1）为一个单元，每个单元对应一个可打印字符。对于3字节（24比特）的二进制数据，我们可以将其处理成对应于4个Base64单元，即3个字节可由4个可打印字符来表示。Base64编码可用来作为电子邮件的传输编码，也可以用于其他需要将二进制数据转成文本字符的场景，这使得在XML、JSON、YAML这些文本数据格式中传输二进制内容成为可能。在Base64中的可打印字符包括`A-Z`、`a-z`、`0-9`，这里一共是62个字符，另外两个可打印符号通常是`+`和`/`，`=`用于在Base64编码最后进行补位。
 
@@ -16,7 +15,7 @@ b'TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIH
 'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.'
 ```
 
-### collections - 容器数据类型模块
+## collections - 容器数据类型模块
 
 `collections`模块提供了诸多非常好用的数据结构，主要包括：
 
@@ -61,7 +60,7 @@ for elem, count in counter.most_common(3):
     print(elem, count)
 ```
 
-### hashlib - 哈希函数模块
+## hashlib - 哈希函数模块
 
 哈希函数又称哈希算法或散列函数，是一种为已有的数据创建“数字指纹”（哈希摘要）的方法。哈希函数把数据压缩成摘要，对于相同的输入，哈希函数可以生成相同的摘要（数字指纹），需要注意的是这个过程并不可逆（不能通过摘要计算出输入的内容）。一个优质的哈希函数能够为不同的输入生成不同的摘要，出现哈希冲突（不同的输入产生相同的摘要）的概率极低，[MD5](https://zh.wikipedia.org/wiki/MD5)、[SHA家族]([https://zh.wikipedia.org/wiki/SHA%E5%AE%B6%E6%97%8F](https://zh.wikipedia.org/wiki/SHA家族))就是这类好的哈希函数。
 
@@ -87,7 +86,7 @@ print(hasher.hexdigest())
 
 > **说明**：很多网站在下载链接的旁边都提供了哈希摘要，完成文件下载后，我们可以计算该文件的哈希摘要并检查它与网站上提供的哈希摘要是否一致（指纹比对）。如果计算出的哈希摘要与网站提供的并不一致，很有可能是下载出错或该文件在传输过程中已经被篡改，这时候就不应该直接使用这个文件。
 
-### heapq - 堆排序模块
+## heapq - 堆排序模块
 
 `heapq`模块实现了堆排序算法，如果希望使用堆排序，尤其是要解决**TopK问题**（从序列中找到K个最大或最小元素），直接使用该模块即可，代码如下所示。
 
@@ -114,7 +113,7 @@ print(heapq.nlargest(3, list2, key=lambda x: x['price']))
 print(heapq.nlargest(3, list2, key=lambda x: x['shares']))
 ```
 
-### itertools - 迭代工具模块
+## itertools - 迭代工具模块
 
 `itertools`可以帮助我们生成各种各样的迭代器，大家可以看看下面的例子。
 
@@ -141,7 +140,7 @@ print(next(it))
 print(next(it))
 ```
 
-### random - 随机数和随机抽样模块
+## random - 随机数和随机抽样模块
 
 这个模块我们之前已经用过很多次了，生成随机数、实现随机乱序和随机抽样，下面是常用函数的列表。
 
@@ -159,7 +158,7 @@ print(next(it))
 - `paretovariate(alpha)`：帕累托分布。 
 - `weibullvariate(alpha, beta)`：威布尔分布。
 
-### os.path - 路径操作相关模块
+## os.path - 路径操作相关模块
 
 `os.path`模块封装了操作路径的工具函数，如果程序中需要对文件路径做拼接、拆分、获取以及获取文件的存在性和其他属性，这个模块将会非常有帮助，下面为大家罗列一些常用的函数。
 
@@ -172,7 +171,7 @@ print(next(it))
 - `join(path, *paths)`：合理地拼接一个或多个路径部分。返回值是`path`和`paths`所有值的连接，每个非空部分后面都紧跟一个目录分隔符 (`os.sep`)，除了最后一部分。这意味着如果最后一部分为空，则结果将以分隔符结尾。如果参数中某个部分是绝对路径，则绝对路径前的路径都将被丢弃，并从绝对路径部分开始连接。
 - `splitext(path)`：将路径`path`拆分为一对，即`(root, ext)`，使得`root + ext == path`，其中`ext`为空或以英文句点开头，且最多包含一个句点。
 
-### uuid - UUID生成模块
+## uuid - UUID生成模块
 
 `uuid`模块可以帮助我们生成全局唯一标识符（Universal Unique IDentity）。该模块提供了四个用于生成UUID的函数，分别是：
 
@@ -193,6 +192,154 @@ print(next(it))
 '642c0db0baab11eaaa9c60f81da8d840'
 ```
 
+## json
+
+
+### 1. `json.dumps()`
+`json.dumps()` 函数用于将 Python 对象转换为 JSON 格式的字符串。
+
+**语法：**
+```python
+json.dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)
+```
+
+**参数说明：**
+- `obj`: 要序列化的 Python 对象。
+- `skipkeys`: 如果为 `True`，则字典的键不是基本类型（`str`, `int`, `float`, `bool`, `None`）时会被跳过，而不是引发 `TypeError`。
+- `ensure_ascii`: 如果为 `True`（默认），则输出中的所有非 ASCII 字符都会被转义。如果为 `False`，则这些字符将原样输出。
+- `check_circular`: 如果为 `True`（默认），则会检查循环引用。
+- `allow_nan`: 如果为 `True`（默认），则允许序列化 `NaN`, `Infinity`, 和 `-Infinity`。
+- `indent`: 用于美化输出的缩进空格数。如果为 `None`（默认），则输出紧凑的 JSON。
+- `separators`: 用于指定分隔符的元组，通常为 `(',', ': ')`。
+- `sort_keys`: 如果为 `True`，则字典的输出会按照键的字母顺序排序。
+
+**示例：**
+```python
+import json
+
+data = {
+    "name": "Alice",
+    "age": 30,
+    "is_student": False,
+    "courses": ["Math", "Science"]
+}
+
+json_string = json.dumps(data, indent=4)
+print(json_string)
+```
+
+!!! info 
+
+    `indent = 4`：格式化输出，一般就用 `4`
+
+**输出：**
+```json
+{
+    "name": "Alice",
+    "age": 30,
+    "is_student": false,
+    "courses": [
+        "Math",
+        "Science"
+    ]
+}
+```
+
+### 2. `json.dump()`
+`json.dump()` 函数用于将 Python 对象转换为 JSON 格式并写入文件。
+
+**语法：**
+```python
+json.dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)
+```
+
+**参数说明：**
+- `obj`: 要序列化的 Python 对象。
+- `fp`: 文件对象，用于写入 JSON 数据。
+
+**示例：**
+```python
+import json
+
+data = {
+    "name": "Alice",
+    "age": 30,
+    "is_student": False,
+    "courses": ["Math", "Science"]
+}
+
+with open('data.json', 'w') as f:
+    json.dump(data, f, indent=4)
+```
+
+**文件内容：**
+```json
+{
+    "name": "Alice",
+    "age": 30,
+    "is_student": false,
+    "courses": [
+        "Math",
+        "Science"
+    ]
+}
+```
+
+### 3. `json.loads()`
+`json.loads()` 函数用于将 JSON 格式的字符串转换为 Python 对象。
+
+**语法：**
+```python
+json.loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)
+```
+
+**参数说明：**
+- `s`: 要反序列化的 JSON 字符串。
+- `object_hook`: 可选函数，用于将解码后的字典转换为其他类型的对象。
+- `parse_float`: 可选函数，用于解析 JSON 中的浮点数。
+- `parse_int`: 可选函数，用于解析 JSON 中的整数。
+- `parse_constant`: 可选函数，用于解析 JSON 中的常量（如 `NaN`, `Infinity`, `-Infinity`）。
+
+**示例：**
+```python
+import json
+
+json_string = '{"name": "Alice", "age": 30, "is_student": false, "courses": ["Math", "Science"]}'
+data = json.loads(json_string)
+
+print(data)
+```
+
+**输出：**
+```python
+{'name': 'Alice', 'age': 30, 'is_student': False, 'courses': ['Math', 'Science']}
+```
+
+### 4. `json.load()`
+`json.load()` 函数用于从文件中读取 JSON 数据并将其转换为 Python 对象。
+
+**语法：**
+```python
+json.load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)
+```
+
+**参数说明：**
+- `fp`: 文件对象，用于读取 JSON 数据。
+
+**示例：**
+```python
+import json
+
+with open('data.json', 'r') as f:
+    data = json.load(f)
+
+print(data)
+```
+
+**输出：**
+```python
+{'name': 'Alice', 'age': 30, 'is_student': False, 'courses': ['Math', 'Science']}
+```
 
 
 

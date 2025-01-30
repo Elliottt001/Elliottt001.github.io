@@ -1,6 +1,6 @@
 # [Info]
 # 左上角标题
-site_name: Growing Cosmos
+site_name: MyCosmos
 site_url: https://r-z-zhang-AI.github.io
 site_author: 张瑞喆
 site_description: Zhang rz的个人网站
@@ -74,7 +74,7 @@ nav:
       - Obsidian: CS/Tools/Obsidian.md
       - Mkdocs: CS/Tools/mkdocs.md
       - Makefile: CS/Tools/makefile.md
-      - Anaconda: docs/CS/Tools/anaconda.md
+      - Anaconda: CS/Tools/anaconda.md
     - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
@@ -84,15 +84,22 @@ nav:
     - 杂七杂八:
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md
-
-  - 教程:
-    - TUTORIAL/index.md
-    - 电脑相关: 
-      - 配环境:
-        - 更换电脑之后……: TUTORIAL/CS/environment/start.md
-        - Zsh: TUTORIAL/CS/environment/zsh.md
-        - SSH: TUTORIAL/CS/environment/ssh.md
-        - 语言环境: TUTORIAL/CS/environment/pl.md
+    - 关于Linux: 
+      - Linux备忘录: CS/linux/linux-note.md
+    - 关于Windows:
+      - Windows备忘录: CS/windows/win-note.md
+  # - 教程:
+  #   - TUTORIAL/index.md
+  #   - 电脑相关: 
+  #     - 配环境:
+  #       - 更换电脑之后……: TUTORIAL/CS/environment/start.md
+  #       - Zsh: TUTORIAL/CS/environment/zsh.md
+  #       - SSH: TUTORIAL/CS/environment/ssh.md
+  #       - 语言环境: TUTORIAL/CS/environment/pl.md
+  #       - LaTex环境配置: TUTORIAL/CS/environment/latex.md
+  #       - wsl迁移: TUTORIAL/CS/environment/wsl-c2d.md
+  #     - VPN:
+  #       - VPN: TUTORIAL/CS/vpn/v2raya-linux.md
 
   - 阅读:
     - BOOK/index.md

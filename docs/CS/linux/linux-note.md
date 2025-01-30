@@ -10,15 +10,14 @@
 
 Let's start !
 
-<div style="text-align: center; font-weight: bold; font-size: 1.6em;">
-    Linux虚拟机安装
-</div>
+## Linux虚拟机安装
 
-##### 第一步：打开powershell管理员模式
+
+#### 第一步：打开powershell管理员模式
 
 方法：按 `win + X`，选择带有“管理员”字样的那个
 
-##### 第二步：安装 Ubuntu
+#### 第二步：安装 Ubuntu
 
 前提：科学上网
 
@@ -26,13 +25,12 @@ Let's start !
   ```shell
   wsl --install -d Ubuntu
   ```
-##### 第三步：按照提示操作即可
+#### 第三步：按照提示操作即可
 
 ---
 
-<div style="text-align: center; font-weight: bold; font-size: 1.6em;">
-    Zsh安装
-</div>
+## Zsh安装及基础配置
+
 
 #### 第一步：安装zsh
 
@@ -142,54 +140,55 @@ vim ~./zshrc
 
 ---
 
-<div style="text-align: center; font-weight: bold; font-size: 1.6em;">
-    Zsh食用小记
-</div>
+## Zsh食用小记
 
-### 安装 anaconda
+### 配置C/python环境
 
-#### 第一步：下载安装脚本
-以下命令选一个即可：
+记录在另一篇文章[《语言环境》](https://r-z-zhang-ai.github.io/CS/linux/pl/)中。
 
-```bash
-# 使用 wget
-wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh
-```
-```shell
-# 使用 curl
-curl -O https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh
-```
+后来也安上了anaconda，也在上文中。
 
-#### 第二步：运行安装脚本
+### 安装ssh
 
-```bash
-bash Anaconda3-2023.07-1-Linux-x86_64.sh
+记录在另一篇文章[《SSH》](https://r-z-zhang-ai.github.io/CS/linux/ssh)中。
+
+#### BUG！
+
+但是之后出现极大问题，每次 `gp` 都是
+
+```plaintext
+connection reset by peer
 ```
 
-Tips：这里一定要用 `bash` 命令而不能用 `zsh`，因为 `zsh` 对语法的检查比 `bash` 严格，导致安装脚本中 `Anaconda3-2023.07-1-Linux-x86_64.sh:377: no matches found: /home/rzzhang/download/anaconda3/pkgs/envs/*/` 文件无法夹正确下载，应该就是通配符检查的问题。
+也就是服务器重置了连接，即无法将本地仓库的更改推送到远程仓库。
 
-#### 第三步：按照提示操作
+#### DEBUGGING！
 
-确认权限处一直输入 yes ，安装路径处我选择输入新安装路径 : `/home/<user-name>/download/anaconda3`，或者选择默认路径亦可（直接按 `Enter` 确认。
+几乎成了我的梦魇，尝试了无数种方法，包括：
 
-安装完成后，安装程序会提示你是否将 Anaconda 添加到环境变量中：
-```
-Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]
-```
-输入 `yes`
+- 问deepseek&豆包：
+
+    - `ping github.com` 测试能否ping通
+    - DNS解析没敢改动
+    - 防火墙没敢动，因为没法动，少相关命令
+    - `ssh -T git@github.com` 检查连接
+    - 启动SSH服务并设置成开机自启：`sudo service ssh start` `sudo systemctl enable ssh`
+    - 把代理关了：`unset http_proxy` `unset https_proxy`
 
 
-#### 第四步：重新加载 .zshrc 文件
-```bash
-source ~/.zshrc
-```
+- 以上方法均不行，于是自己想办法
+    - 换了无数种网络组合：局域网/热点 & 主机开梯子/不开梯子 & 虚拟机开梯子/虚拟机不开梯子，几乎尝试了所有排列组合
+    - 重配了密钥对
+    - 把github上面原有的密钥对全删了在重建
+    - 怀疑是加密算法的问题：rsa和ed25519，两种算法下的密钥对都试过
 
-#### 第五步：验证安装
+拼尽全力无法战胜。
 
-```bash
-conda --version
-```
+![alt text](28d593a8d29088f8eceb02791a5a402.png)
 
+![alt text](827f286af9a34d1542a29b5446de9a0.png)
+
+询问：
 
 ### 安装 chromium
 
@@ -246,6 +245,137 @@ pip3 install webdriver-manager
 ```shell
 pip3 install selenium
 ```
+
+### 安装xdg-utils
+
+**1. `xdg-utils` 包含的工具**
+`xdg-utils` 提供了以下常用工具：
+- **`xdg-open`**：根据文件类型或 URL 调用默认应用程序打开文件或链接。
+- **`xdg-mime`**：查询或设置 MIME 类型与默认应用程序的关联。
+- **`xdg-icon-resource`**：安装或卸载图标资源。
+- **`xdg-desktop-menu`**：安装或卸载桌面菜单项。
+- **`xdg-desktop-icon`**：安装或卸载桌面图标。
+- **`xdg-email`**：调用默认邮件客户端发送邮件。
+- **`xdg-screensaver`**：控制屏幕保护程序。
+- **`xdg-settings`**：获取或设置默认应用程序配置。
+
+---
+
+**2. 安装 `xdg-utils`**
+
+```bash
+sudo apt update
+sudo apt install xdg-utils
+```
+**3. 常用工具的使用方法**
+
+**`xdg-open`**
+用于根据文件类型或 URL 调用默认应用程序打开文件或链接。
+
+- 打开图片：
+  ```bash
+  xdg-open image.jpg
+  ```
+- 打开网页：
+  ```bash
+  xdg-open https://www.example.com
+  ```
+- 打开目录：
+  ```bash
+  xdg-open /path/to/directory
+  ```
+
+**`xdg-mime`**
+用于查询或设置 MIME 类型与默认应用程序的关联。
+
+- 查询文件的 MIME 类型：
+  ```bash
+  xdg-mime query filetype image.jpg
+  ```
+- 查询默认应用程序：
+  ```bash
+  xdg-mime query default image/jpeg
+  ```
+- 设置默认应用程序：
+  ```bash
+  xdg-mime default eog.desktop image/jpeg
+  ```
+
+**`xdg-icon-resource`**
+用于安装或卸载图标资源。
+
+- 安装图标：
+  ```bash
+  xdg-icon-resource install --context apps --size 64 icon.png application-icon
+  ```
+- 卸载图标：
+  ```bash
+  xdg-icon-resource uninstall --context apps --size 64 application-icon
+  ```
+
+**`xdg-desktop-menu`**
+用于安装或卸载桌面菜单项。
+
+- 安装桌面菜单项：
+  ```bash
+  xdg-desktop-menu install application.desktop
+  ```
+- 卸载桌面菜单项：
+  ```bash
+  xdg-desktop-menu uninstall application.desktop
+  ```
+
+**`xdg-settings`**
+用于获取或设置默认应用程序配置。
+
+- 获取默认浏览器：
+  ```bash
+  xdg-settings get default-web-browser
+  ```
+- 设置默认浏览器：
+  ```bash
+  xdg-settings set default-web-browser chromium.desktop
+  ```
+
+
+
+### 安装v2rayA
+
+参考：[官方教程](https://v2raya.org/docs/prologue/introduction/)（打开这篇教程需要梯子）
+
+应该是成功了，一开始以为不成功，因为看到IP在广东，过了两天发现主机的IP也在广东，这时是挂到了香港，据此推断，应该是成功的。
+
+开机自启应该是后来关掉了
+
+
+### 配置LaTex环境
+
+参考：[hwgg的教程](https://www.philfan.cn/Tools/latex/)以及[b站良心视频](https://www.bilibili.com/video/BV1y8411P7qs/?spm_id_from=333.337.search-card.all.click&vd_source=b14909f255fe42946743657320d2f59a)
+
+下载tex live，之后再在vscode下载插件，再在setting.json里面添加教程里面给出的东西。
+
+#### BUG！
+
+- vscode在 `\documentclass{article}` 处有黄色波浪线报错，不过可以渲染出来。
+- 文献引用总是 `[?]` 
+
+#### DEBUGGING！
+
+文献引用：
+
+- 两个setting.json来回切换，failed
+- 问了豆包，了解了bibtex，自己建了一个main.tex 和referencd.bib 试了试，没用，说实话这并没有朝着正确的方向努力，failed
+- 引入了文献引用的库 `\usepackage{cite}` 和结尾引用`\bibliography{references}`，failed
+
+
+
+### 将wsl从C盘迁移至D盘
+
+参考：[知乎良心教程](https://zhuanlan.zhihu.com/p/621873601)
+
+并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面
+
+很好成功
 
 
 
