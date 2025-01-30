@@ -88,18 +88,16 @@ nav:
       - Linux备忘录: CS/linux/linux-note.md
     - 关于Windows:
       - Windows备忘录: CS/windows/win-note.md
-  - 其他文章:
+  - 其他:
     - 秀米: PUBLIC/xiumi.md
 
   - 阅读:
     - BOOK/index.md
-    - 个人提升:
-      - 原则: BOOK/enhancements/principles.md
     - 文学名著:
       - 山茶文具店: BOOK/fictions/山茶文具店.md
+      - 暮光之城: BOOK/fictions/twilight.md
     - 专业书籍:
-      - 金融相关:
-        - 富爸爸穷爸爸: BOOK/professionals/finance/rich-dad-poor-dad.md
+      - 1.md
 
 
 # [UI]
