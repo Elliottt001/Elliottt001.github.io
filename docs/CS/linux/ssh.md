@@ -1,3 +1,4 @@
+# SSH
 !!! info "一些东西"
 
     vscode只是一个工具，核心的东西跟他无关。
@@ -14,6 +15,13 @@
 
 ```shell
 ssh-keygen
+```
+
+如果需要指定加密算法：
+```shell
+ssh-keygen -t rsa
+# or
+ssh-keygen -t ed25519
 ```
 
 之后按提示操作即可，文件路径和文件名不要改动，密码可设置可不设置

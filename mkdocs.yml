@@ -88,18 +88,8 @@ nav:
       - Linux备忘录: CS/linux/linux-note.md
     - 关于Windows:
       - Windows备忘录: CS/windows/win-note.md
-  # - 教程:
-  #   - TUTORIAL/index.md
-  #   - 电脑相关: 
-  #     - 配环境:
-  #       - 更换电脑之后……: TUTORIAL/CS/environment/start.md
-  #       - Zsh: TUTORIAL/CS/environment/zsh.md
-  #       - SSH: TUTORIAL/CS/environment/ssh.md
-  #       - 语言环境: TUTORIAL/CS/environment/pl.md
-  #       - LaTex环境配置: TUTORIAL/CS/environment/latex.md
-  #       - wsl迁移: TUTORIAL/CS/environment/wsl-c2d.md
-  #     - VPN:
-  #       - VPN: TUTORIAL/CS/vpn/v2raya-linux.md
+  - 其他文章:
+    - 秀米: PUBLIC/xiumi.md
 
   - 阅读:
     - BOOK/index.md

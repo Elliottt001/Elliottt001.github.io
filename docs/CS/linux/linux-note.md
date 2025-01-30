@@ -184,11 +184,67 @@ connection reset by peer
 
 拼尽全力无法战胜。
 
-![alt text](28d593a8d29088f8eceb02791a5a402.png)
+![alt text](res/images/28d593a8d29088f8eceb02791a5a402_1_1.png)
 
-![alt text](827f286af9a34d1542a29b5446de9a0.png)
+![alt text](res/images/827f286af9a34d1542a29b5446de9a0_1_1.png)
 
-询问：
+呃呃呃呃呃呃
+
+名牌了，我就是智障
+
+问毛蛋，给出了gpt解答
+
+问hwgg，告诉我删.git，再init，照做了，不行
+
+<!-- 
+咱也不好说效果哈，总之以后千万别给我删.git了！还是那句话，没有研究明白的东西别给人家乱改！
+
+.git文件夹下很多东西你都不知道是干啥的~比如说删了之后和另一个电脑上的对比发现少很多文件，就连最基础的gh-pages分支都没有
+
+还有一点，专业的事问专业的人，问问cs专业的学长~
+ -->
+
+问gsgg，热心地clone我的仓库帮我看问题！
+
+试了试关掉 WiFi 单独开流量，在连热点，done！`gp` 出现输密码框了
+
+如果开着WiFi再连热点，是共享WiFi的！你竟然不知道？
+
+之后呢，
+
+尝试直接修改之后直接提交，有报错
+
+![alt text](res/images/image_1.png)
+![alt text](res/images/image-1.png)
+![alt text](res/images/image-2.png)
+
+应该就是改了.git的缘故，之后研究研究.git是什么
+
+接下来，尝试我的想法：先备份文件，再删除整个本地仓库，再`git clone`，再删除里面的备份过的文件，再把备份文件移过来，再提交
+
+```shell
+cp -r <path-to-origin-dir> <path-to-backuped-fir>
+# -r是递归复制，如果copy单一文件不用
+# 把~github/mkdocs-site下所有文件备份到~/github/backup下
+```
+```shell
+git clone git@github.com:r-z-zhang-AI/r-z-zhang-AI.github.io.git
+```
+```shell
+rm -r
+```
+```shell
+mv path path
+```
+```shell
+ga .
+```
+```shell
+g commit -m ""
+```
+```shell
+gp origin main
+```
 
 ### 安装 chromium
 
@@ -354,6 +410,8 @@ sudo apt install xdg-utils
 
 下载tex live，之后再在vscode下载插件，再在setting.json里面添加教程里面给出的东西。
 
+[](res/images/image_1.png)
+
 #### BUG！
 
 - vscode在 `\documentclass{article}` 处有黄色波浪线报错，不过可以渲染出来。
@@ -373,7 +431,7 @@ sudo apt install xdg-utils
 
 参考：[知乎良心教程](https://zhuanlan.zhihu.com/p/621873601)
 
-并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面
+并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面，原文链接：[《WSL迁移》](https://r-z-zhang-ai.github.io/CS/linux/wsl-c2d.md)
 
 很好成功
 
