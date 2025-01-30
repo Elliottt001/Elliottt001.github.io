@@ -246,6 +246,8 @@ g commit -m ""
 gp origin main
 ```
 
+![alt text](image.png)
+
 ### 安装 chromium
 
 缘起：Colin提出希望做烟花🎇样式的美甲，我这里恰好写过一个模拟烟花的代码，为圆**他**的美甲💅梦，需要运行并展示，然而新电脑并没有安装chromium……
