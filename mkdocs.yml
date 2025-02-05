@@ -84,13 +84,14 @@ nav:
     - 杂七杂八:
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md
-    - 关于Linux: 
+    - 关于Linux:
       - Linux备忘录: CS/linux/linux-note.md
     - 关于Windows:
       - Windows备忘录: CS/windows/win-note.md
-  - 其他:
-    - 秀米: PUBLIC/xiumi.md
-
+  - 金融:
+    - FINANCE/index.md
+    - 零碎自学:
+      - 金本位: FINANCE/DIY/gold-standard.md
   - 阅读:
     - BOOK/index.md
     - 文学名著:
@@ -98,6 +99,9 @@ nav:
       - 暮光之城: BOOK/fictions/twilight.md
     - 专业书籍:
       - 1.md
+  - 公众:
+    - 秀米: PUBLIC/xiumi.md
+    - 哪吒: PUBLIC/nezha.md
 
 
 # [UI]
