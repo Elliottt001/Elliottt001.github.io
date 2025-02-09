@@ -100,6 +100,7 @@ nav:
     - 专业书籍:
       - 1.md
   - 公众:
+    - PUBLIC/index.md
     - 秀米: PUBLIC/xiumi.md
     - 哪吒: PUBLIC/nezha.md
 
