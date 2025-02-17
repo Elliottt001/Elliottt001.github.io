@@ -66,6 +66,7 @@ nav:
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
       - Git&GitHub: CS/Tools/Git & GitHub.md
+      - Docker: CS/Tools/docker.md
       - Markdown: CS/Tools/Markdown(obsidian).md
       - LaTeX: CS/Tools/LaTeX.md
       - Linux: CS/Tools/Linux.md
@@ -104,6 +105,7 @@ nav:
     - 秀米: PUBLIC/xiumi.md
     - 哪吒: PUBLIC/nezha.md
     - 工作汇报: PUBLIC/work-report.md
+    - 报销工作注意事项: PUBLIC/reimbursement.md
 
 
 # [UI]

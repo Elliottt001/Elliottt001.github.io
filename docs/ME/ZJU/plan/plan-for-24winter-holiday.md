@@ -77,6 +77,8 @@
 
 - [ ] Docker
 
+- [ ] makefile
+
 - [ ] CS50x
 
 - [ ] missing semester
