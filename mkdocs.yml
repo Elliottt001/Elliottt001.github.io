@@ -39,6 +39,8 @@ nav:
     - 线性代数:
       - 知识体系: KNOWLEDGE/linear-algebra/knowledge-frame-of-LA.md
       - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md 
+    - 离散数学:
+      - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
 
   - 开发:
     - CS/index.md
@@ -106,6 +108,7 @@ nav:
     - 哪吒: PUBLIC/nezha.md
     - 工作汇报: PUBLIC/work-report.md
     - 报销工作注意事项: PUBLIC/reimbursement.md
+    - ZJU-vlog: PUBLIC/zju-vlog.md
 
 
 # [UI]
