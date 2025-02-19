@@ -15,7 +15,7 @@
 连接词
 
 - $\neg$ : negation否定
-- $\wedge$ : conjunction合取，且, 
+- $\wedge$ : conjunction = and 合取，且, 
     - 类似集合交集, 同时成立
     - 同时真才真
 - $\vee$ : disjunction析取，或, 
@@ -66,3 +66,8 @@ equivalent prop等价命题
 $$ f(p_1, p_2, \dots, p_r) = g(p_1, p_2, \dots, p_r)$$ 
 
 > f和g两个复合命题, 对于其中原子命题的所有真值情况组合 $p_i$ 其值都相同
+
+with n propositional variables, we can construct 22n     distinct (i.e., not equivalent) propositions. 
+
+连接词优先级（Precedence of Logical Operators）
+![alt text](image.png)

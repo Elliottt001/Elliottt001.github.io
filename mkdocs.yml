@@ -58,6 +58,9 @@ nav:
         - 面向对象: CS/pl/Python/py-oop.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
+    - 计算机系统:
+      - 数字逻辑设计: 
+        - Chapter 1: CS/system/digital-design/chap1.md
     - 算法相关: 
       - Misc: CS/Algorithm/misc.md
       - Sort: CS/Algorithm/sort.md
