@@ -34,6 +34,7 @@ nav:
     - KNOWLEDGE/index.md
     - 微积分:
       - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
+      - 级数: KNOWLEDGE/calculus/series.md
       - 方法总结: KNOWLEDGE/calculus/summary-of-calculus.md
       - 思想方法: KNOWLEDGE/calculus/thought-for-calculus.md
     - 线性代数:
