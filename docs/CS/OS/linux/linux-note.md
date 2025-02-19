@@ -535,7 +535,11 @@ sudo systemctl disable v2raya
 
 很好成功
 
+### 文件大小超出限制
 
+![alt text](image-3.png)
+
+![alt text](image-4.png)
 
 
 ## 后记
