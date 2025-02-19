@@ -142,7 +142,7 @@ vim ~./zshrc
 
 ## Zsh食用小记
 
-### 配置C/python环境
+### 配置C/python/Go环境
 
 记录在另一篇文章[《语言环境》](https://r-z-zhang-ai.github.io/CS/linux/pl/)中。
 
@@ -405,6 +405,104 @@ sudo apt install xdg-utils
 
 开机自启应该是后来关掉了
 
+#### v2rayA 的使用
+（之后把标题什么的改一改！）
+##### 1. 启动 `v2rayA` 服务
+安装完成后，启动 `v2rayA` 服务：
+
+```bash
+sudo systemctl start v2raya
+```
+
+设置 `v2rayA` 开机自启：
+
+```bash
+sudo systemctl enable v2raya
+```
+
+---
+
+##### 2. 访问 `v2rayA` 管理界面
+`v2rayA` 提供了一个 Web 管理界面，默认监听在 `http://127.0.0.1:2017`。
+
+在 WSL 中，你可以通过以下方式访问：
+1. 在 WSL 中运行：
+```bash
+curl http://127.0.0.1:2017
+```
+如果返回页面内容，说明服务已启动。
+
+2. 在 Windows 浏览器中访问：
+- 打开浏览器，输入 `http://localhost:2017`。
+- 如果无法访问，可能是因为 WSL 和 Windows 的网络隔离问题。
+
+---
+
+??? info "如果无法在 Windows 浏览器中访问 `v2rayA` 管理界面，解决方案"
+
+    方法 1：使用 WSL 的 IP 地址
+    1. 在 WSL 中运行以下命令获取 WSL 的 IP 地址：
+    ```bash
+    ip addr show eth0 | grep inet
+    ```
+    你会看到类似 `inet 172.x.x.x` 的 IP 地址。
+
+    2. 在 Windows 浏览器中访问 `http://<WSL的IP>:2017`，例如：
+    ```
+    http://172.x.x.x:2017
+    ```
+
+    方法 2：配置端口转发
+    在 Windows 中配置端口转发，将 WSL 的端口映射到 Windows 的本地端口：
+        1. 在 WSL 中运行以下命令获取 WSL 的 IP 地址：
+        ```bash
+        ip addr show eth0 | grep inet
+        ```
+
+        2. 在 Windows 中打开 PowerShell，运行以下命令：
+        ```powershell
+        netsh interface portproxy add v4tov4 listenport=2017 listenaddress=0.0.0.0 connectport=2017 connectaddress=<WSL的IP>
+        ```
+        例如：
+        ```powershell
+        netsh interface portproxy add v4tov4 listenport=2017 listenaddress=0.0.0.0 connectport=2017 connectaddress=172.x.x.x
+        ```
+
+        3. 在 Windows 浏览器中访问 `http://localhost:2017`。
+
+---
+
+##### 3. 配置代理
+    1. 打开 `v2rayA` 管理界面（`http://localhost:2017` 或 `http://<WSL的IP>:2017`）。
+    2. 添加你的 V2Ray 订阅链接或手动配置节点。
+    3. 启用代理。
+
+---
+
+##### 4. 设置 WSL 使用代理
+在 WSL 中设置环境变量，使 WSL 使用 `v2rayA` 的代理：
+
+    1. 获取 `v2rayA` 的代理地址（默认是 `http://127.0.0.1:20171`）。
+    2. 在 WSL 中运行以下命令：
+    ```bash
+    export http_proxy=http://127.0.0.1:20171
+    export https_proxy=http://127.0.0.1:20171
+    ```
+
+##### 5. 测试代理是否生效：
+   ```bash
+   curl -I https://www.google.com
+   ```
+   如果返回 HTTP 200，说明代理配置成功。
+
+---
+
+##### 6. 最后用完关掉
+
+```shell
+sudo systemctl disable v2raya
+```
+再在网页那里关掉
 
 ### 配置LaTex环境
 

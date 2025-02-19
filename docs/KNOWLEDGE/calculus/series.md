@@ -128,11 +128,9 @@ $(-1)^n$ 可以考虑加绝对值，绝对值可以考虑左右界放缩，用�
 
 ![alt text](image-4.png)
 
-$\sin$ 可以考虑等价无穷量将其搞掉
+$\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 ![alt text](image-8.png)
-
-
 
 ![alt text](image-7.png)
 ![alt text](image-6.png)

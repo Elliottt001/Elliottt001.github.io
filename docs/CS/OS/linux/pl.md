@@ -109,3 +109,119 @@ conda --version
 ```
 
 ## latex
+
+
+## Go
+
+!!! warning "log"
+
+    详见 log/go.log 和 log/go1.log
+
+实际上差一点点，但是该睡觉了就没继续：差在 vscode 里面的扩展之类的东西没安完
+
+![alt text](image-1.png)
+
+<video controls src="20250219-1549-29.8014751.mp4" title="Title"></video>
+
+![alt text](image-2.png)
+
+但确实能跑，但是好慢！
+
+### 安装方法
+
+1. 更新系统包
+首先，确保你的WSL系统是最新的：
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+2. 下载Go
+访问 [Go官方下载页面](https://golang.org/dl/) 获取最新版本的Go。选择适合你系统的Linux版本（通常是`linux-amd64.tar.gz`）。
+
+使用`wget`下载：
+
+```bash
+wget https://golang.org/dl/go1.xx.x.linux-amd64.tar.gz
+```
+
+将`1.xx.x`替换为实际的版本号（是1.24.0）。
+
+3. 解压安装包
+将下载的压缩包解压到`/usr/local`目录：
+
+```bash
+sudo tar -C /usr/local -xzf go1.xx.x.linux-amd64.tar.gz
+```
+
+4. 设置环境变量
+编辑`~/.profile`或`~/.bashrc`文件，添加以下内容：
+
+```bash
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
+
+保存后，执行以下命令使配置生效：
+
+```bash
+source ~/.profile
+```
+
+5. 验证安装
+检查Go是否安装成功：
+
+```bash
+go version
+```
+
+如果显示版本号，说明安装成功。
+
+6. 测试Go环境
+创建一个简单的Go程序测试：
+
+```bash
+mkdir -p ~/go/src/hello
+cd ~/go/src/hello
+touch hello.go
+```
+
+编辑`hello.go`文件，内容如下：
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+运行程序：
+
+```bash
+go run hello.go
+```
+
+如果输出`Hello, World!`，说明Go环境配置正确。
+
+7. 安装Go工具（可选）
+安装常用的Go工具：
+
+```bash
+go get golang.org/x/tools/cmd/...
+```
+
+### 出现的问题
+
+!!! warning "log"
+
+    详见 log/go1.log
+
+
+`wget` 步骤连不上网，代理没开的问题
+
+解决方案详见[《Linux备忘录》](https://r-z-zhang-ai.github.io/CS/OS/linux/linux-note/)
