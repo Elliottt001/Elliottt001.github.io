@@ -111,3 +111,18 @@ $$\Sigma^\infty_{n = 1} \frac1{n^p} = 1 + \frac 1{2^p} + \frac 1{3^p} + \dots , 
     !!! warning 
 
         递推公式: 单调有界 + 定义
+
+!!! warning "绝对值的应用"
+
+    数列绝对值的极限 $\ne$ 0则数列极限 $\ne$ 0
+    
+#### 例题
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+![alt text](image-8.png)
+![alt text](image-7.png)
+![alt text](image-6.png)
+![alt text](image-5.png)

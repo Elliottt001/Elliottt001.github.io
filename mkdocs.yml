@@ -30,7 +30,7 @@ nav:
       - 2024-12: ME/ESSAY/2024-12.md
       - 2025-01: ME/ESSAY/2025-01.md
 
-  - 知识:
+  - 数学:
     - KNOWLEDGE/index.md
     - 微积分:
       - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
@@ -62,10 +62,24 @@ nav:
       - 数字逻辑设计: 
         - Chapter 1: CS/system/digital-design/chap1.md
     - 算法相关: 
-      - Misc: CS/Algorithm/misc.md
-      - Sort: CS/Algorithm/sort.md
+      - 数据结构基础:
+        - 基础知识: CS/algorithm/fds/basic.md
+      - Misc: CS/algorithm/misc.md
+      - Sort: CS/algorithm/sort.md
+    - 操作系统:
+      - Linux备忘录: CS/OS/linux/linux-note.md
+    - 关于Windows:
+      - Windows备忘录: CS/OS/windows/win-note.md
     - 网络安全:
       - 基础: CS/IS/basic.md
+    - 区块链:
+      - 基础引入: CS/blockchain/background.md
+    - 人工智能:
+      - AI: CS/AI/AI.md
+      - ANN: CS/AI/ANN.md
+      - DL: CS/AI/DL.md
+      - ML: CS/AI/ML.md
+      - Turing: CS/AI/Turing.md
     - 实用工具:
       - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
@@ -81,19 +95,10 @@ nav:
       - Mkdocs: CS/Tools/mkdocs.md
       - Makefile: CS/Tools/makefile.md
       - Anaconda: CS/Tools/anaconda.md
-    - 人工智能:
-      - AI: CS/AI/AI.md
-      - ANN: CS/AI/ANN.md
-      - DL: CS/AI/DL.md
-      - ML: CS/AI/ML.md
-      - Turing: CS/AI/Turing.md
     - 杂七杂八:
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md
-    - 关于Linux:
-      - Linux备忘录: CS/linux/linux-note.md
-    - 关于Windows:
-      - Windows备忘录: CS/windows/win-note.md
+
   # - 金融:
   #   - FINANCE/index.md
   #   - 零碎自学:
