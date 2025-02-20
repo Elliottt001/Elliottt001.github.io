@@ -124,7 +124,6 @@ conda --version
 
 <video controls src="20250219-1549-29.8014751.mp4" title="Title"></video>
 
-<video controls src="20250219-1549-29.8014751.mp4" title="Title"></video>
 
 （这是一个大小超出限制的视频……）
 ![alt text](image-2.png)
