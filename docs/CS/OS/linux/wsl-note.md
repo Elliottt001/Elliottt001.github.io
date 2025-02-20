@@ -406,8 +406,9 @@ sudo apt install xdg-utils
 开机自启应该是后来关掉了
 
 #### v2rayA 的使用
-（之后把标题什么的改一改！）
-##### 1. 启动 `v2rayA` 服务
+
+步骤一: 启动 `v2rayA` 服务
+
 安装完成后，启动 `v2rayA` 服务：
 
 ```bash
@@ -422,19 +423,19 @@ sudo systemctl enable v2raya
 
 ---
 
-##### 2. 访问 `v2rayA` 管理界面
+步骤二: 访问 `v2rayA` 管理界面    
+
 `v2rayA` 提供了一个 Web 管理界面，默认监听在 `http://127.0.0.1:2017`。
 
 在 WSL 中，你可以通过以下方式访问：
 1. 在 WSL 中运行：
-```bash
-curl http://127.0.0.1:2017
-```
-如果返回页面内容，说明服务已启动。
+	```bash
+	curl http://127.0.0.1:2017
+	```
 
 2. 在 Windows 浏览器中访问：
-- 打开浏览器，输入 `http://localhost:2017`。
-- 如果无法访问，可能是因为 WSL 和 Windows 的网络隔离问题。
+	- 打开浏览器，输入 `http://localhost:2017`。
+	- 如果无法访问，可能是因为 WSL 和 Windows 的网络隔离问题。
 
 ---
 
@@ -472,14 +473,14 @@ curl http://127.0.0.1:2017
 
 ---
 
-##### 3. 配置代理
+步骤三: 配置代理
     1. 打开 `v2rayA` 管理界面（`http://localhost:2017` 或 `http://<WSL的IP>:2017`）。
     2. 添加你的 V2Ray 订阅链接或手动配置节点。
     3. 启用代理。
 
 ---
 
-##### 4. 设置 WSL 使用代理
+步骤四: 设置 WSL 使用代理
 在 WSL 中设置环境变量，使 WSL 使用 `v2rayA` 的代理：
 
     1. 获取 `v2rayA` 的代理地址（默认是 `http://127.0.0.1:20171`）。
@@ -489,7 +490,7 @@ curl http://127.0.0.1:2017
     export https_proxy=http://127.0.0.1:20171
     ```
 
-##### 5. 测试代理是否生效：
+步骤五: 测试代理是否生效
    ```bash
    curl -I https://www.google.com
    ```
@@ -497,7 +498,7 @@ curl http://127.0.0.1:2017
 
 ---
 
-##### 6. 最后用完关掉
+步骤六: 最后用完关掉
 
 ```shell
 sudo systemctl disable v2raya
@@ -541,6 +542,9 @@ sudo systemctl disable v2raya
 
 ![alt text](image-4.png)
 
+### docker的安装配置与使用
+
+专门写了一篇[docker的文档](https://r-z-zhang-ai.github.io/CS/Tools/docker/)
 
 ## 后记
 俗话说，一杯茶一根烟 一个环境配一天。

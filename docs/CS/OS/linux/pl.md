@@ -121,7 +121,7 @@ conda --version
 
 ![alt text](image-1.png)
 
-<video controls src="20250219-1549-29.8014751.mp4" title="Title"></video>
+<video controls src="" title="Title"></video>
 
 （这是一个大小超出限制的视频……）
 ![alt text](image-2.png)
@@ -133,54 +133,46 @@ conda --version
 ### 安装方法
 
 1. 更新系统包
-首先，确保你的WSL系统是最新的：
 
-```bash
-sudo apt update
-sudo apt upgrade
-```
+    ```bash
+    sudo apt update
+    sudo apt upgrade
+    ```
 
-2. 下载Go
-访问 [Go官方下载页面](https://golang.org/dl/) 获取最新版本的Go。选择适合你系统的Linux版本（通常是`linux-amd64.tar.gz`）。
+2. 下载Go(版本通常是`linux-amd64.tar.gz`)。
 
-使用`wget`下载：
-
-```bash
-wget https://golang.org/dl/go1.xx.x.linux-amd64.tar.gz
-```
-
-将`1.xx.x`替换为实际的版本号（是1.24.0）。
+    ```bash
+    wget https://golang.org/dl/go1.xx.x.linux-amd64.tar.gz
+    # 将`1.xx.x`替换为实际的版本号（是1.24.0）。
+    ```
 
 3. 解压安装包
-将下载的压缩包解压到`/usr/local`目录：
 
-```bash
-sudo tar -C /usr/local -xzf go1.xx.x.linux-amd64.tar.gz
-```
+    ```bash
+    sudo tar -C /usr/local -xzf go1.xx.x.linux-amd64.tar.gz
+    # 将下载的压缩包解压到`/usr/local`目录：
+    ```
 
 4. 设置环境变量
-编辑`~/.profile`或`~/.bashrc`文件，添加以下内容：
 
-```bash
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-```
+    ```bash
+    # 在`~/.zshrc`文件添加以下内容
+    export PATH=$PATH:/usr/local/go/bin
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin
+    ```
 
-保存后，执行以下命令使配置生效：
-
-```bash
-source ~/.profile
-```
+    ```bash
+    source ~/.zshrc
+    ```
 
 5. 验证安装
-检查Go是否安装成功：
 
-```bash
-go version
-```
+    ```bash
+    go version
+    # 如果显示版本号，说明安装成功。
 
-如果显示版本号，说明安装成功。
+    ```
 
 6. 测试Go环境
 创建一个简单的Go程序测试：

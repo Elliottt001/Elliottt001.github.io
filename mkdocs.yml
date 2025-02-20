@@ -42,6 +42,8 @@ nav:
       - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md 
     - 离散数学:
       - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
+    - 大学物理:
+      - 力与运动: KNOWLEDGE/physics/dynamics-motion.md
 
   - 开发:
     - CS/index.md
@@ -68,7 +70,7 @@ nav:
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
-      - Linux备忘录: CS/OS/linux/linux-note.md
+      - WSL备忘录: CS/OS/linux/linux-note.md
       - Windows备忘录: CS/OS/windows/win-note.md
     - 网络安全:
       - 基础: CS/IS/basic.md
