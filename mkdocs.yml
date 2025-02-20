@@ -70,7 +70,7 @@ nav:
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
-      - WSL备忘录: CS/OS/linux/linux-note.md
+      - WSL备忘录: CS/OS/linux/wsl-note.md
       - Windows备忘录: CS/OS/windows/win-note.md
     - 网络安全:
       - 基础: CS/IS/basic.md

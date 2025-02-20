@@ -536,11 +536,32 @@ sudo systemctl disable v2raya
 
 很好成功
 
-### 文件大小超出限制
+### git文件大小超出限制
 
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
+我认为解决该问题有些大费周章了
+
+首先根据git输出的提示安装了 LFS , 安装之后并没有任何用处, 依然提交不了, 密码还得输好多次, 于是删掉了.
+
+之后`sudo apt-get install`安装了 git-filter-repo, 先备份了一份, 再
+
+```shell
+git filter-repo --path docs/CS/OS/linux/20250219-1549-29.8014751.mp4 --invert-paths --force
+```
+强制删除提交历史中所有关于该视频的内容, 但是发现把origin远程仓库也删掉了, 也就是删除了本地与远程仓库的关联
+
+![alt text](image-6.png)
+
+于是, 重新添加远程仓库:
+
+```shell
+git remote add origin https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
+```
+
+从此GitHub仓库作者变成了 rzzhang 和 rzzhang
 
 ### docker的安装配置与使用
 
