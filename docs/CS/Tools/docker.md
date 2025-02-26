@@ -105,7 +105,9 @@ docker 与 虚拟机的关系是：docker 直接使用主机的内核，而虚�
 
 就是照片~
 
-### 
+!!! info "实际操作步骤"
+
+    我写了一个dockerfile，发给别人（通过直接发送文件/在docker hub上面找，别人运行 `docker build -t <name> .`，就在本地根据这个镜像构建出一个容器，再 `docker run hello-docker` 即可运行本地的相应语言的文件
 
 ## docker 的下载与使用
 
@@ -186,7 +188,7 @@ Environment="HTTPS_PROXY=http://127.0.0.1:20171"
 
 !!! warning "token权限"
 
-    ![alt text](image-9.png)
+    ![alt text](res/images/image-9_1_1.png)
 
     这个是一个read&write的
 
@@ -238,4 +240,4 @@ docker pull <需要的镜像>
 ```
 
 
-![alt text](image-8.png)
+![alt text](res/images/image-8_1_1.png)

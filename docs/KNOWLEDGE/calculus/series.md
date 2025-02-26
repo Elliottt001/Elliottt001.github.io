@@ -32,8 +32,8 @@ $$\Sigma^\infty_{n = 1} \frac1{n^p} = 1 + \frac 1{2^p} + \frac 1{3^p} + \dots , 
 
 $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](res/images/image.png)
+![alt text](res/images/image-1_2.png)
 思想: 
 
 - 构造积分, 统一被积分函数(形式相同, 变 $x$)
@@ -100,7 +100,8 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 2. 比较判别法: 再找一个级数, 一般项比收敛的小则收敛, 一般项比发散的大则发散
 
-    ![alt text](IMG_20250220_080918.jpg)
+    ![alt text](res/images/IMG_20250220_080918.jpg)
+    
     - 证明: 定义
     - 应用: 先猜敛散性, 再根据目标构造"另一个"(**n很大时他跟啥差不多**): 大胆放缩, 有时也用p-级数
 
@@ -132,12 +133,12 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 4. 比值判别法: 
 
-    ![alt text](image-9.png)
+    ![alt text](res/images/image-9.png)
     
     - 应用: 一般项是复杂分式, 很多因子相乘
 
 5. 根值判别法
-    ![alt text](image-10.png)
+    ![alt text](res/images/image-10.png)
     - 应用: 一般项的指数有 n
     - 关系: 根值不好用那么比值也不行
 !!! success "使用顺序" 
@@ -146,7 +147,7 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 6. 积分判别法
 
-    ![alt text](image-15.png)
+    ![alt text](res/images/image-15.png)
 
 !!! warning "绝对值的应用"
 
@@ -154,31 +155,31 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
     
 ### 例题
 
-![alt text](image-2.png)
+![alt text](res/images/image-2_2.png)
 
 随便放缩：大的直接拆出一部分将小的消掉，将 $n$ 看成无穷大之后再放缩
 
-![alt text](image-3.png)
+![alt text](res/images/image-3_2.png)
 
 $(-1)^n$ 可以考虑加绝对值，绝对值可以考虑左右界放缩，用夹逼，这个与取整函数很类似
 
-![alt text](image-4.png)
+![alt text](res/images/image-4_2.png)
 
 $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
-![alt text](image-8.png)
+![alt text](res/images/image-8_2.png)
 
-![alt text](image-7.png)
+![alt text](res/images/image-7.png)
 
 !!! success "方法"
     
     首先猜想其敛散性: 一般项趋于0不代表收敛, 当然, 如果猜错了, 朝着目标继续
-![alt text](image-6.png)
-![alt text](image-5.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](res/images/image-6_2.png)
+![alt text](res/images/image-5_2.png)
+![alt text](res/images/image-11.png)
+![alt text](res/images/image-12.png)
+![alt text](res/images/image-13.png)
+![alt text](res/images/image-14.png)
 第一步: 实际得分开 p 的范围算
 
 ## 一般项级数敛散性判别
@@ -187,4 +188,86 @@ $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 从敛散性来看, 从后面有限项开始交错即成为交错级数
 
-![alt text](image-16.png)
+莱布尼茨判别法
+
+![alt text](image.png)
+
+- 除符号外单调递减
+- 趋向0
+
+**关键点：首先是交错级数，再证明两个条件**
+
+- 单调递减：
+    - 单调性，导数
+
+交错p-级数：
+
+## 绝对收敛/条件收敛
+
+定义：一般项加绝对值之后（**变成正项级数**）收敛则称绝对收敛；收敛但不绝对收敛称条件收敛
+
+- 正项级数没有绝对收敛
+
+定理：绝对收敛的级数必收敛
+
+- 证明：![alt text](image-1.png)
+
+- 应用：判断一般项级数的敛散性：若其绝对收敛（正项级数的判别法很多）则其收敛
+
+比值判别法&根值判别法
+
+- 证明：
+    ![alt text](image-2.png)
+
+    - $\gt 1$: 一般项不趋于0，极限定义证明
+    ![alt text](image-4.png)
+
+![alt text](image-3.png) 
+
+!!! info
+
+    一般项级数只没有比较判别法
+
+![alt text](image-5.png)
+![alt text](image-6.png)
+
+
+![alt text](image-7.png)
+
+证明（不）绝对收敛
+
+- 直接是正项级数判别即可
+
+![alt text](image-8.png)
+
+***后面几个题做一下***
+
+一般出题：交错级数，条件收敛
+
+一般思路：判断不是绝对收敛，再用莱布尼茨判别法
+
+## 函数级数
+
+
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+### 幂级数
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+收敛区间 $\ne$ 收敛域，二者差两个端点，其敛散性得单独考虑
+
+- 收敛区间完全由收敛半径决定，一定是一个开区间
+- 求收敛域还得验证端点值代入是否收敛
+
+![alt text](image-15.png)
+

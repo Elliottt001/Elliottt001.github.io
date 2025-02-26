@@ -64,9 +64,11 @@ nav:
     - 计算机系统:
       - 数字逻辑设计: 
         - Chapter 1: CS/system/digital-design/chap1.md
+        - Chapter 2 布尔代数: CS/system/digital-design/chap2.md
     - 算法相关: 
       - 数据结构基础:
         - 基础知识: CS/algorithm/fds/basic.md
+        - Chapter 3: CS/algorithm/fds/chap3.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
@@ -76,6 +78,7 @@ nav:
       - 基础: CS/IS/basic.md
     - 区块链:
       - 基础引入: CS/blockchain/background.md
+      - 技术原理: CS/blockchain/theory.md
     - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md

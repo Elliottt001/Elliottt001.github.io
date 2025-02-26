@@ -154,8 +154,24 @@ $|$ 与非, $\downarrow$ 或非
 
 ![alt text](image-10.png)
 
-DNF
+DNF：析取范式：主要连接词是or
 
-CNF
+CNF：合取范式：主要连接词是and，连接合取项，项内什么均可
 
-literal
+二者不是相互排斥
+
+![alt text](image-11.png)
+
+复杂式子的判断方法：
+
+- 消除其他连接词
+- not 直接作用于变元（一个原子命题的literal即p or not p）
+- 化标
+
+![alt text](image-12.png)
+![alt text](image-13.png)
+
+### full conjunctive normal form
+
+从真值表获取公式，首先定义minterm
+
