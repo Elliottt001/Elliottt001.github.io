@@ -52,6 +52,7 @@ nav:
         - C语言: 
           - 学习笔记: CS/pl/C_Cpp/C/c-note.md
           - 错题整理: CS/pl/C_Cpp/C/c-errors-and-tips.md
+          - 链表: CS/pl/C_Cpp/C/linkedList.md
         - C++:
           - 学习笔记: none.md
       - Python:
@@ -79,6 +80,7 @@ nav:
     - 区块链:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
+      - 实际应用: CS/blockchain/usage.md
     - 人工智能:
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
@@ -100,6 +102,7 @@ nav:
       - Mkdocs: CS/Tools/mkdocs.md
       - Makefile: CS/Tools/makefile.md
       - Anaconda: CS/Tools/anaconda.md
+      - VMware: CS/Tools/vmware-linux.md
     - 杂七杂八:
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md

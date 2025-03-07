@@ -32,8 +32,8 @@ $$\Sigma^\infty_{n = 1} \frac1{n^p} = 1 + \frac 1{2^p} + \frac 1{3^p} + \dots , 
 
 $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
-![alt text](res/images/image.png)
-![alt text](res/images/image-1_2.png)
+![alt text](res/images/image_2.png)
+![alt text](res/images/image-1_2_1.png)
 思想: 
 
 - 构造积分, 统一被积分函数(形式相同, 变 $x$)
@@ -76,6 +76,9 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
     无穷多相加和有限项不一样
 
+    绝对收敛则可调整顺序
+
+
 5. :star:必要条件: 如果级数收敛, 则$lim_{n \to \infty}a_n = 0$ 
 
     - 推论: 一般项不是0(**没有极限 or 有极限但不是0**), 则发散
@@ -100,7 +103,7 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 2. 比较判别法: 再找一个级数, 一般项比收敛的小则收敛, 一般项比发散的大则发散
 
-    ![alt text](res/images/IMG_20250220_080918.jpg)
+    ![alt text](res/images/IMG_20250220_080918_1.jpg)
     
     - 证明: 定义
     - 应用: 先猜敛散性, 再根据目标构造"另一个"(**n很大时他跟啥差不多**): 大胆放缩, 有时也用p-级数
@@ -133,53 +136,74 @@ $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 4. 比值判别法: 
 
-    ![alt text](res/images/image-9.png)
+    ![alt text](res/images/image-9_2.png)
     
     - 应用: 一般项是复杂分式, 很多因子相乘
 
 5. 根值判别法
-    ![alt text](res/images/image-10.png)
+    ![alt text](res/images/image-10_2.png)
     - 应用: 一般项的指数有 n
     - 关系: 根值不好用那么比值也不行
 !!! success "使用顺序" 
 
     一般项是否为0 --> 比值/根值判别法 --> 比较判别法的极限形式 --> 比较判别法 --> 一般项是否有上界 --> 定义法
 
+
+补充公式：
+
+$$n充分大，n! = \sqrt{2 \pi n}(\frac ne)^n$$
+
+$$\frac{(2n)!!}{(2n - 1)!!} = c \sqrt n$$
+
+> 双阶乘：两个叹号，表示隔一个乘
+
+$$\prod_{n = 1}^\infty(1 - \frac1{(2n)^2}) = \frac2 \pi$$
+
+$$1 + \frac12 + \frac13 + \dots + \frac1n = \ln n + \gamma + o(1)$$
+
+> $\gamma$ 为欧拉常数
+
 6. 积分判别法
 
-    ![alt text](res/images/image-15.png)
+    ![alt text](res/images/image-15_2.png)
 
 !!! warning "绝对值的应用"
 
     数列绝对值的极限 $\ne$ 0则数列极限 $\ne$ 0
     
+
+!!! success "方法"
+
+    涉及极限，首先应该写出属于领域的不等式
+
 ### 例题
 
-![alt text](res/images/image-2_2.png)
+![alt text](res/images/image-2_2_1.png)
 
 随便放缩：大的直接拆出一部分将小的消掉，将 $n$ 看成无穷大之后再放缩
 
-![alt text](res/images/image-3_2.png)
+![alt text](res/images/image-3_2_1.png)
 
 $(-1)^n$ 可以考虑加绝对值，绝对值可以考虑左右界放缩，用夹逼，这个与取整函数很类似
 
-![alt text](res/images/image-4_2.png)
+![alt text](res/images/image-4_2_1.png)
 
 $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
-![alt text](res/images/image-8_2.png)
+![alt text](res/images/image-8_2_1.png)
 
-![alt text](res/images/image-7.png)
+![alt text](res/images/image-7_1.png)
 
 !!! success "方法"
     
     首先猜想其敛散性: 一般项趋于0不代表收敛, 当然, 如果猜错了, 朝着目标继续
-![alt text](res/images/image-6_2.png)
-![alt text](res/images/image-5_2.png)
-![alt text](res/images/image-11.png)
-![alt text](res/images/image-12.png)
-![alt text](res/images/image-13.png)
-![alt text](res/images/image-14.png)
+
+![alt text](res/images/image-6_2_1.png)
+![alt text](res/images/image-5_2_1.png)
+![alt text](res/images/image-11_2.png)
+![alt text](res/images/image-12_1.png)
+![alt text](res/images/image-13_2.png)
+![alt text](res/images/image-14_2.png)
 第一步: 实际得分开 p 的范围算
 
 ## 一般项级数敛散性判别
@@ -190,7 +214,7 @@ $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 莱布尼茨判别法
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
 - 除符号外单调递减
 - 趋向0
@@ -210,35 +234,35 @@ $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 定理：绝对收敛的级数必收敛
 
-- 证明：![alt text](image-1.png)
+- 证明：![alt text](res/images/image-1_2.png)
 
 - 应用：判断一般项级数的敛散性：若其绝对收敛（正项级数的判别法很多）则其收敛
 
 比值判别法&根值判别法
 
 - 证明：
-    ![alt text](image-2.png)
+    ![alt text](res/images/image-2_2.png)
 
     - $\gt 1$: 一般项不趋于0，极限定义证明
-    ![alt text](image-4.png)
+    ![alt text](res/images/image-4_2.png)
 
-![alt text](image-3.png) 
+![alt text](res/images/image-3_2.png) 
 
 !!! info
 
     一般项级数只没有比较判别法
 
-![alt text](image-5.png)
-![alt text](image-6.png)
+![alt text](res/images/image-5_2.png)
+![alt text](res/images/image-6_2.png)
 
 
-![alt text](image-7.png)
+![alt text](res/images/image-7.png)
 
 证明（不）绝对收敛
 
 - 直接是正项级数判别即可
 
-![alt text](image-8.png)
+![alt text](res/images/image-8_2.png)
 
 ***后面几个题做一下***
 
@@ -250,24 +274,85 @@ $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 
 
-![alt text](image-9.png)
+![alt text](res/images/image-9.png)
 
-![alt text](image-10.png)
+![alt text](res/images/image-10.png)
 
-![alt text](image-11.png)
+![alt text](res/images/image-11.png)
 
 ### 幂级数
 
-![alt text](image-12.png)
+![alt text](res/images/image-12.png)
 
-![alt text](image-13.png)
+![alt text](res/images/image-13.png)
 
-![alt text](image-14.png)
+![alt text](res/images/image-14.png)
 
 收敛区间 $\ne$ 收敛域，二者差两个端点，其敛散性得单独考虑
 
 - 收敛区间完全由收敛半径决定，一定是一个开区间
 - 求收敛域还得验证端点值代入是否收敛
 
-![alt text](image-15.png)
+![alt text](res/images/image-15.png)
+
+步骤:
+
+- 比值/根值求出
+- 其 $＞1$ $＜1$ 列式求出 $x$ 范围
+
+#### 幂级数的导数/求和
+
+
+幂级数导数仍然是幂级数
+
+导数的收敛半径与原函数一样, 收敛域可能变: 看端点
+
+![alt text](res/images/image-16_2.png)
+
+!!! success "方法"
+
+    - 里面(分子上/分母上)的一个含 $n$ 因子不好处理, 写成积分(分母上)/导数(分子上)的样子, 平分项: 先处理一个再另一个, 按需求补 $x$
+        - 补x: 目的是可以求导 / 积分
+    - 利用在收敛半径之内, 幂级数求和和积分可以互换, 先求里面的和, **里面变成一个可求和的函数**, 例如等比级数, 再求积分/导数
+        - 积分区间: $x_0$ 到 $x$
+        - 
+    - 通过连续性补出端点值(直接带入)
+    - 限定区间: 保证落在区间中才可以用导数/积分与求和的互换
+    - $(x - x_0)$ 的幂级数: 可以换元
+
+
+![alt text](res/images/image-18.png)
+![alt text](res/images/image-17.png)
+![alt text](res/images/image-19.png)
+![alt text](res/images/image-20.png)
+
+常数项级数求和: 将某些指标换成 $x$ 求出幂级数的和, 最后代入 $x = 啥啥啥$
+
+![alt text](res/images/image-21.png)
+
+#### 函数展开成幂级数
+
+利用泰勒展开
+
+![alt text](res/images/image-22.png)
+
+幂级数 = 泰勒级数, 就是去掉余项, 让 $n \to \infty$
+
+关键是余项什么时候能 $ \to 0$ : 
+
+- 转化为证明级数收敛 $\Leftrightarrow$ 一般项 $ \to 0$
+- 夹逼定理
+
+![alt text](res/images/image-23.png)
+
+间接展开: 用一个展开通过两边同时求导/积分/换元得到另一个函数的展开
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+### 傅里叶级数
+
+![alt text](image-2.png)
+
+定义一个欧氏空间：积分空间
 
