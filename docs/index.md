@@ -54,68 +54,6 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
 </body>
 </html>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Plan Input</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-        }
-        textarea, #preview {
-            width: 48%;
-            height: 300px;
-            font-size: 16px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        #preview {
-            background-color: #f9f9f9;
-            overflow-y: auto;
-        }
-    </style>
-</head>
-<body>
-    <h3>今日份计划（支持 Markdown）：</h3>
-    <div class="container">
-        <!-- Markdown 输入框 -->
-        <textarea id="planInput" placeholder="请输入您的计划（支持 Markdown 语法）..." rows="10"></textarea>
-        <!-- Markdown 预览 -->
-        <div id="preview"></div>
-    </div>
-    <!-- 引入 marked.js 库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        // 获取元素
-        const planInput = document.getElementById('planInput');
-        const preview = document.getElementById('preview');
-        // 页面加载时，从 localStorage 中读取之前保存的计划
-        window.addEventListener('load', () => {
-            const savedPlan = localStorage.getItem('savedPlan');
-            if (savedPlan) {
-                planInput.value = savedPlan;
-                preview.innerHTML = marked.parse(savedPlan); // 渲染 Markdown
-            }
-        });
-        // 当用户输入时，实时保存到 localStorage 并渲染 Markdown
-        planInput.addEventListener('input', () => {
-            const markdownText = planInput.value;
-            localStorage.setItem('savedPlan', markdownText); // 保存到 localStorage
-            preview.innerHTML = marked.parse(markdownText); // 渲染 Markdown
-        });
-    </script>
-</body>
-</html>
-
 我的计划是……
 
 !!! success ""
