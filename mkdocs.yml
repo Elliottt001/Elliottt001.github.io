@@ -66,10 +66,11 @@ nav:
       - 数字逻辑设计: 
         - Chapter 1: CS/system/digital-design/chap1.md
         - Chapter 2 布尔代数: CS/system/digital-design/chap2.md
+        - Chapter 3: CS/system/digital-design/chap3.md
     - 算法相关: 
       - 数据结构基础:
-        - CS/algorithm/fds/index.md
-        - 基础知识: CS/algorithm/fds/basic.md
+        - 基本信息: CS/algorithm/fds/index.md
+        - 基础知识: CS/algorithm/fds/chap1.md
         - Chapter 3: CS/algorithm/fds/chap3.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
@@ -82,7 +83,10 @@ nav:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
       - 实际应用: CS/blockchain/usage.md
+      - 比特币: CS/blockchain/bitcoin.md
     - 人工智能:
+      - 机器学习:
+        - RUC讲稿: CS/AI/ML/机器学习讲稿.ipynb
       - AI: CS/AI/AI.md
       - ANN: CS/AI/ANN.md
       - DL: CS/AI/DL.md
