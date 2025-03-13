@@ -16,7 +16,7 @@ In boolean algebra, $1 + 1 = 1$, In algebra, $1 + 1 = 2$, 做题中要区分
 
 机械开关relay —— 真空电磁管vacuum tube —— 三极管transistor
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
 门，就是数学的函数
 
@@ -28,7 +28,7 @@ In boolean algebra, $1 + 1 = 1$, In algebra, $1 + 1 = 2$, 做题中要区分
 
 其他复合门
 
-![alt text](image-1.png)
+![alt text](res/images/image-1.png)
 
 - 与非门：先与后bubble
 - 或非门
@@ -41,9 +41,9 @@ In boolean algebra, $1 + 1 = 1$, In algebra, $1 + 1 = 2$, 做题中要区分
 
 !!! info "即全功能连接词"
 
-    ![alt text](image-5.png)
+    ![alt text](res/images/image-5.png)
 
-![alt text](image-2.png)
+![alt text](res/images/image-2.png)
 
 与非的代数特性不好，故无法做优化
 
@@ -53,15 +53,15 @@ In boolean algebra, $1 + 1 = 1$, In algebra, $1 + 1 = 2$, 做题中要区分
 
 门延时会造成开关错误，成为“冒险”，可复现性差
 
-![alt text](image-3.png)
+![alt text](res/images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 在四种表示方法中，真值表和波形图不变，因其只看结果；表达式可以进行变换，相应的，电路也可变，因其表示内部实现过程
 
 ## 布尔代数
 
-![alt text](image-6.png)
+![alt text](res/images/image-6.png)
 
 $$X + YZ = (X + Y)(X + Z)很重要$$
 
@@ -75,11 +75,11 @@ $$X + YZ = (X + Y)(X + Z)很重要$$
 
 自对偶，i.e.，dual = origin
 
-![alt text](image-7.png)
+![alt text](res/images/image-7.png)
 
 吸收率
 
-![alt text](image-8.png)
+![alt text](res/images/image-8.png)
 
 应用：一个等式推出另一个等式
 
@@ -89,7 +89,7 @@ $$X + YZ = (X + Y)(X + Z)很重要$$
 
 ### 互补定理
 
-![alt text](image-9.png)
+![alt text](res/images/image-9.png)
 
 应用：用互补定理逆定理证明德摩根，即欲证 $\overline{A + B} = \overline{A}×\overline{B}$ ，即证$A + B$ 和 $\overline{A}×\overline{B}$ 互反
 
@@ -122,17 +122,17 @@ $$\overline{AB} = \overline{A}+\overline{B}$$
 
 记忆：有一对取反的变量，分别与不同的两个
 
-![alt text](image-10.png)
+![alt text](res/images/image-10.png)
 
 $AB和\overline{A}C各吸收一半BC$
 
 应用：反向用，先补一个冗余项，用它干别的事
 
-![alt text](image-11.png)
+![alt text](res/images/image-11.png)
 
 化简例题
 
-![alt text](image-12.png)
+![alt text](res/images/image-12.png)
 
 法二：第一步反用consensus，补一项 $A\overline{B}$
 
@@ -143,7 +143,7 @@ Canonical form 规范形式
 
 退到规范型（与真值表对应），用最小化定理实现优化
 
-![alt text](image-13.png)
+![alt text](res/images/image-13.png)
 
 从真值表推表达式：看着表达式真值，**把1的情况或在一起（最小项之和）/把0的情况与在一起（最大项之积）**
 
@@ -169,7 +169,7 @@ Canonical form 规范形式
 - 字母升序
 - 
 
-![alt text](image-14.png)
+![alt text](res/images/image-14.png)
 
 输入/对应的索引（下标） 和 对应的最大项/最小项（双向转换）：见上面1/0与原/反变量对应关系 + 十进制/二进制转换
 
@@ -179,14 +179,14 @@ Canonical form 规范形式
 
 $$M_i \quad is \quad the \quad complement \quad of \quad m_i$$
 
-![alt text](image-15.png)
+![alt text](res/images/image-15.png)
 
 #### 用最小项/最大项表示真值表
 
 - 找到所有1的，最小项之和
 - 找到所有0的，最大项之积
 
-![alt text](image-16.png)
+![alt text](res/images/image-16.png)
 
 最小项之和理解："isAvailable"
 
@@ -200,15 +200,15 @@ victorywang712 noughq
 - 缺啥补啥：相对于包含所有变量，缺什么；补的东西，是乘缺的东西的互补定理（原和反的或）
 - 乘开，全都是最小项，重复的消去
 
-![alt text](image-17.png)
-![alt text](image-18.png)
+![alt text](res/images/image-17.png)
+![alt text](res/images/image-18.png)
 
 补成最大项
 
 - 用分配律变积
 - 补缺项：用 $0 = z × \~z$
 
-![alt text](image-19.png)
+![alt text](res/images/image-19.png)
 
 **求反函数**
 
@@ -218,8 +218,8 @@ victorywang712 noughq
 
 - 缺的式子，用另一个
 
-![alt text](image-21.png)
-![alt text](image-20.png)
+![alt text](res/images/image-21.png)
+![alt text](res/images/image-20.png)
 
 两个表示的关系：不是对偶不是取反，没有关系
 
@@ -227,7 +227,7 @@ victorywang712 noughq
 
 两层输入结构：最小项之和先与后或，最大项之积先或后与
 
-![alt text](image-22.png)
+![alt text](res/images/image-22.png)
 
 标准型 Standard form
 
@@ -245,5 +245,5 @@ victorywang712 noughq
 
 - 方法：找两个仅差一个项不同的两个项，两个合起来；再用一些结合律
 
-![alt text](image-23.png)
+![alt text](res/images/image-23.png)
 

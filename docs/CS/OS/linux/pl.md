@@ -119,16 +119,16 @@ conda --version
 
 实际上差一点点，但是该睡觉了就没继续：差在 vscode 里面的扩展之类的东西没安完
 
-![alt text](image-1.png)
+![alt text](res/images/image-1.png)
 
 
 <!-- <video controls src="20250219-1549-29.8014751.mp4" title="Title"></video> -->
 
 
 （这是一个大小超出限制的视频……）
-![alt text](image-2.png)
+![alt text](res/images/image-2.png)
 
-![alt text](image-5.png)
+![alt text](res/images/image-5.png)
 
 但确实能跑，但是好慢！
 

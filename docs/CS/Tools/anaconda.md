@@ -1,6 +1,6 @@
 ## Part 1 什么是Anaconda？
 
-![alt text](image-1.png)
+![alt text](res/images/image-1_1.png)
 
 > Anacondas（水蟒）或boas（水蚺）是 水蚺属的一类大型蟒蛇。它们是一种半水生的蛇类，主要分布在南美洲的热带地区。目前被认可的现存物种有三到五种，另有一种已灭绝的物种，其中包括世界上最大的蛇之一——绿森蚺（Eunectes murinus）。
 
@@ -12,7 +12,7 @@
 
 > Anaconda is an open source data science and artificial intelligence distribution platform for Python and R programming languages. 
 
-![alt text](image.png)
+![alt text](res/images/image_1.png)
 
 简单来说，Anaconda 是一个开源的 Python 和 R 数据科学平台，它集成了强大的包管理工具 `conda`，支持创建虚拟环境，简化了库的安装和依赖管理。Anaconda 预装了数百个数据科学和机器学习库（如 NumPy、Pandas、Scikit-learn 等），适合数据分析、机器学习和科学计算。它支持跨平台操作，是数据科学家和研究人员的首选工具之一。
 
@@ -40,20 +40,20 @@
 
 提供邮箱：在写有“Email Address:”的输入框写下你的邮箱
 
-![alt text](image-3.png)
+![alt text](res/images/image-3_1.png)
 
 查收邮件：点击“Download Now”，进入下载网页，网站会自动识别你的操作系统，点击“Download”即可。对于mac用户，需要根据实际情况选择M1/M2/M3 或者是 intel 处理器。
 
-![alt text](image-2.png)
+![alt text](res/images/image-2_1.png)
 
-![alt text](image-4.png)
+![alt text](res/images/image-4_1.png)
 
 继续安装：像所有PC上的软件一样，一直点击下一步或者确认即可安装完成
 
 - 中间建议将安装地址从默认的C盘改为D盘，原因自不必说
 - 在“Advanced Options”中，建议勾选“Add Anaconda to my PATH environment variable”
 
-![alt text](image-6.png)
+![alt text](res/images/image-6_1.png)
 
 另外，博主计划出一期关于C盘清理的文章，朋友们可以稍稍期待一下。
 

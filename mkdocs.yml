@@ -68,6 +68,7 @@ nav:
         - Chapter 2 布尔代数: CS/system/digital-design/chap2.md
     - 算法相关: 
       - 数据结构基础:
+        - CS/algorithm/fds/index.md
         - 基础知识: CS/algorithm/fds/basic.md
         - Chapter 3: CS/algorithm/fds/chap3.md
       - Misc: CS/algorithm/misc.md

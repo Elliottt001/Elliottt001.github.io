@@ -130,7 +130,7 @@ eg：$62/ \Leftrightarrow 6/2$, 结果替换原来的式子
 
 #### 函数调用
 
-是system stack
+是 system stack
 
 首先要有 return address（需要回来） —— stack frame —— local variable —— pop
 
@@ -159,4 +159,78 @@ recursion：编译器自动转换成带标号的
 #### 数组
 
 取余操作！：逻辑上实现环形queue，但物理上还是线性的，最后一个不能占用：否则full和empty是同样状态（用front和rear的相对位置判断size
+
+长度：头减尾/定义长度变量
+
+## tree
+
+作用主要的searching
+
+递归定义的：基本都是recursive
+
+与学校管理一样的（
+
+organization tree / decision tree
+
+组成：是一系列节点node
+
+- root 根节点
+- 其他 subtree（单独拿一个节点和子节点都是tree）
+
+特点
+
+- 是graph的一种：subtree是 must not connect each other
+- N node 的 tree 有 N - 1 条边：edge 
+
+定义
+
+- degree of node 节点的度 degree(node)：有几个孩子（孩子的集合的模）
+- parent / children：一条边产生的关系，是不对称关系
+- siblings：互为姊妹，是对称的关系
+- leaf / terminal node 叶节点：degree = 0
+- path from $n_1$ to $n_k$ : 
+- length of path : number of **edges** on the path
+- depth of $n_i$ : length of the unique path from the root to $n_i$
+- height of $n_i$ : longest path from $n_i$ to a leaf
+- height/depth of tree = height(root) = depth()
+
+特点：向上走唯一，向下走很多
+
+### 实现
+
+数组（复杂）：用括号
+
+链表：
+
+方法一：直接实现
+
+方法二：FirstChild NextSibling —— 旋转45度——> binary tree
+
+0/1/2 个孩子，左为FirstChild，右为NextSibling
+
+### 示例
+
+:star: 四种traversal必考
+
+[CSDN文章](https://blog.csdn.net/qq_44096670/article/details/109638015)
+
+只有 inorder 的只针对二叉树
+
+根据两个traversal的顺序写另一个：
+
+- 识别一般规律：postorder根节点最后，
+- inorder
+- 用recursion！
+
+levelorder需要一个queue
+
+非递归实现：用 自定义 stack 代替system stack
+
+时间复杂度：所有的traversal都是线性的：因为每个node当且仅当访问一次！
+
+### 线索二叉树 threaded binary tree
+
+N node 的二叉树有几个 NULL：N + 1
+
+- 每个节点贡献两个分支，共 2N 个，实实在在的边为 N - 1，故 N + 1
 

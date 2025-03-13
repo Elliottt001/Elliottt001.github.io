@@ -144,13 +144,13 @@ vim ~./zshrc
 
 ### 配置C/python/Go环境
 
-记录在另一篇文章[《语言环境》](https://r-z-zhang-ai.github.io/CS/linux/pl/)中。
+记录在另一篇文章[《语言环境》](https://r-z-zhang-ai.github.io/CS/OS/linux/pl/)中。
 
 后来也安上了anaconda，也在上文中。
 
 ### 安装ssh
 
-记录在另一篇文章[《SSH》](https://r-z-zhang-ai.github.io/CS/linux/ssh)中。
+记录在另一篇文章[《SSH》](https://r-z-zhang-ai.github.io/CS/OS/linux/ssh)中。
 
 #### BUG！
 
@@ -184,9 +184,9 @@ connection reset by peer
 
 拼尽全力无法战胜。
 
-![alt text](res/images/28d593a8d29088f8eceb02791a5a402_1_1.png)
+![alt text](res/images/28d593a8d29088f8eceb02791a5a402_1_1_1.png)
 
-![alt text](res/images/827f286af9a34d1542a29b5446de9a0_1_1.png)
+![alt text](res/images/827f286af9a34d1542a29b5446de9a0_1_1_1.png)
 
 呃呃呃呃呃呃
 
@@ -214,9 +214,9 @@ connection reset by peer
 
 尝试直接修改之后直接提交，有报错
 
-![alt text](res/images/image_1.png)
-![alt text](res/images/image-1.png)
-![alt text](res/images/image-2.png)
+![alt text](res/images/image_1_1.png)
+![alt text](res/images/image-1_1.png)
+![alt text](res/images/image-2_1.png)
 
 应该就是改了.git的缘故，之后研究研究.git是什么
 
@@ -246,7 +246,7 @@ g commit -m ""
 gp origin main
 ```
 
-![alt text](image.png)
+![alt text](res/images/image_1.png)
 
 ### 安装 chromium
 
@@ -511,7 +511,7 @@ sudo systemctl disable v2raya
 
 下载tex live，之后再在vscode下载插件，再在setting.json里面添加教程里面给出的东西。
 
-[](res/images/image_1.png)
+[](res/images/image_1_1.png)
 
 #### BUG！
 
@@ -538,9 +538,9 @@ sudo systemctl disable v2raya
 
 ### git文件大小超出限制
 
-![alt text](image-3.png)
+![alt text](res/images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 我认为解决该问题有些大费周章了
 
@@ -553,7 +553,7 @@ git filter-repo --path docs/CS/OS/linux/20250219-1549-29.8014751.mp4 --invert-pa
 ```
 强制删除提交历史中所有关于该视频的内容, 但是发现把origin远程仓库也删掉了, 也就是删除了本地与远程仓库的关联
 
-![alt text](image-6.png)
+![alt text](res/images/image-6.png)
 
 于是, 重新添加远程仓库:
 
