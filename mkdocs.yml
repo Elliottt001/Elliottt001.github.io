@@ -64,18 +64,21 @@ nav:
         - 百日打卡: CS/pl/Python/clock-in.md
     - 计算机系统:
       - 数字逻辑设计: 
-        - Chapter 1: CS/system/digital-design/chap1.md
-        - Chapter 2 布尔代数: CS/system/digital-design/chap2.md
-        - Chapter 3: CS/system/digital-design/chap3.md
+        - Chapter 1 数字系统与信息: CS/system/digital-design/chap1.md
+        - Chapter 2 组合逻辑电路: CS/system/digital-design/chap2.md
+        - Chapter 3 组合逻辑电路的设计: CS/system/digital-design/chap3.md
     - 算法相关: 
       - 数据结构基础:
-        - 基本信息: CS/algorithm/fds/index.md
-        - 基础知识: CS/algorithm/fds/chap1.md
-        - Chapter 3: CS/algorithm/fds/chap3.md
+        - 课程信息: CS/algorithm/fds/index.md
+        - 算法分析: CS/algorithm/fds/chap2.md
+        - Chapter 3 ADT & Stack & Queue: CS/algorithm/fds/chap3.md
+        - Chapter 4 Tree: CS/algorithm/fds/chap4.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
-      - WSL备忘录: CS/OS/linux/wsl-note.md
+      - Linux:
+        - WSL备忘录: docs/CS/OS/linux/wsl-note.md
+        - 虚拟机备忘录: docs/CS/OS/linux/vm-note.md
       - Windows备忘录: CS/OS/windows/win-note.md
     - 网络安全:
       - 基础: CS/IS/basic.md

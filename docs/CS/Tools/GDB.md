@@ -1,26 +1,131 @@
-Here are some of the most frequently needed GDB commands:
-break [file:] [function|line]
-    Set a breakpoint at function or line (in file).
-run [arglist]
-    Start your program (with arglist, if specified).
-bt  Backtrace: display the program stack.
-print expr
-    Display the value of an expression.
-c   Continue running your program (after stopping, e.g. at a breakpoint).
-next
-    Execute next program line (after stopping); step over any function calls in the line.
-edit [file:]function
-	look at the program line where it is presently stopped.
-list [file:]function
-    type the text of the program in the vicinity of where it is presently stopped.
-step
-    Execute next program line (after stopping); step into any function calls in the line.
-help [name]
-    Show information about GDB command name, or general information about using GDB.
-quit
-exit
-    Exit from GDB.
+### **1. 启动与退出**
+- **启动 GDB**：
+  ```bash
+  gdb <可执行文件>          # 启动调试
+  gdb <可执行文件> <core文件> # 调试核心转储文件
+  ```
 
+- **退出 GDB**：
+  ```
+  (gdb) q                  # 退出调试器
+  ```
+
+---
+
+### **2. 设置断点**
+| 命令                           | 说明                         |
+|--------------------------------|------------------------------|
+| `b main`                       | 在 `main` 函数处设置断点       |
+| `b file.c:10`                  | 在 `file.c` 的第 10 行设断点  |
+| `b *0x4005a7`                  | 在内存地址 `0x4005a7` 设断点  |
+| `b func if x > 5`              | 条件断点（当 `x > 5` 时触发） |
+| `info breakpoints`             | 查看所有断点信息               |
+| `delete <断点编号>`            | 删除指定断点                  |
+| `disable/enable <断点编号>`    | 禁用/启用断点                 |
+
+---
+
+### **3. 执行控制**
+| 命令                | 说明                         |
+|---------------------|------------------------------|
+| `r`                 | 运行程序                      |
+| `c`                 | 继续运行到下一个断点或程序结束 |
+| `s`                 | 单步进入（进入函数内部）       |
+| `n`                 | 单步跳过（执行下一行，不进入函数）|
+| `finish`            | 执行完当前函数并返回          |
+| `until <行号>`      | 执行到指定行号                |
+| `kill`              | 终止正在运行的程序            |
+
+---
+
+### **4. 查看变量与内存**
+| 命令                     | 说明                          |
+|--------------------------|-------------------------------|
+| `p x`                    | 打印变量 `x` 的值             |
+| `p/x x`                  | 以十六进制格式打印 `x`         |
+| `p *(int*)0x7fffffffde44`| 查看内存地址的内容             |
+| `info registers`         | 查看寄存器的值                |
+| `x/10w 0x7fffffffde44`   | 查看内存地址的 10 个 4 字节数据 |
+| `watch x`                | 监视变量 `x` 的值变化（硬件断点）|
+
+---
+
+### **5. 堆栈与函数调用**
+| 命令                     | 说明                          |
+|--------------------------|-------------------------------|
+| `bt`                     | 查看当前堆栈跟踪（backtrace） |
+| `frame <帧编号>`         | 切换到指定堆栈帧              |
+| `info args`              | 查看当前函数的参数            |
+| `info locals`            | 查看当前函数的局部变量        |
+| `up/down`                | 切换到上层/下层堆栈帧         |
+
+---
+
+### **6. 多线程调试**
+| 命令                     | 说明                          |
+|--------------------------|-------------------------------|
+| `info threads`           | 查看所有线程信息              |
+| `thread <线程编号>`      | 切换到指定线程                |
+| `b file.c:10 thread 2`   | 在指定线程设置断点            |
+| `set scheduler-locking on`| 锁定其他线程（仅调试当前线程）|
+
+---
+
+### **7. 高级功能**
+| 命令                     | 说明                          |
+|--------------------------|-------------------------------|
+| `disassemble`            | 反汇编当前函数                |
+| `set var x=5`            | 修改变量 `x` 的值为 5         |
+| `define hook-stop`       | 定义每次断点触发时的钩子命令  |
+| `source script.gdb`      | 加载并执行 GDB 脚本           |
+| `tui enable`             | 启用图形化界面（分屏模式）     |
+
+---
+
+### **8. 调试崩溃程序**
+- **生成核心转储文件**（Linux）：
+  ```bash
+  ulimit -c unlimited        # 允许生成 core 文件
+  ./your_program            # 运行程序直到崩溃
+  gdb ./your_program core   # 调试 core 文件
+  ```
+
+- **查看崩溃位置**：
+  ```
+  (gdb) bt                   # 查看崩溃时的堆栈
+  (gdb) p $rip               # 查看崩溃时的指令指针
+  ```
+
+---
+
+### **9. 常用快捷键**
+- `Ctrl + C`：中断程序运行。
+- `Enter`：重复上一条命令。
+- `Tab`：自动补全命令或文件名。
+
+---
+
+### **示例场景**
+**调试段错误（Segmentation Fault）**：
+1. 启动调试：
+   ```bash
+   gdb ./your_program
+   ```
+2. 运行程序：
+   ```
+   (gdb) r
+   ```
+3. 程序崩溃后查看堆栈：
+   ```
+   (gdb) bt
+   ```
+4. 分析崩溃位置的变量：
+   ```
+   (gdb) frame 1
+   (gdb) p x
+   ```
+
+<!-- 
 断点
 
 在使用 GDB（GNU Debugger）时，可以通过命令行来设置、查看、删除（消除）断点。以下是一些常用的 GDB 命令来管理断点：
@@ -151,4 +256,4 @@ gdb myprogram
 
 ll 查看文件
 shell ls
-shell cat 文件名
+shell cat 文件名 -->

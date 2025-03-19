@@ -1,220 +1,230 @@
+组合电路
 
+定义：m个输入n个输出，输出仅由输入决定
 
-## 布尔表达式的代价
+有n个表达式，m个输入分别控制输出
 
-### 文字代价L
+## 组合电路分析
 
-数出现的变量个数，肯定不行的
+![alt text](image-15.png)
 
-问题：只数了第一层
+**方法**
 
-![alt text](res/images/image-25.png)
+1. 分层
 
-### 门输入代价G/GN
+    - 非不算
 
-- G：除了非门之外所有门的输入个数
+2. 分层写表达式
 
-- GN：包含非门，所有门输入个数
+    - 分层标注节点，写“过程式”
+    - 认电路符号
 
-![alt text](res/images/image-24.png)
+3. 展开化简
 
-**给表达式判断门输入代价**
+    - 异或按照定义变与或非
+    - 化简
+4. 画真值表
+5. 推出功能
 
-先数出文字代价，再按计算顺序数出来所有的项，每一个项都加1
+![alt text](image-13.png)
 
-> 每一个计算项都有一个输出，做下一层的计算（输入）
+## 组合电路设计
 
-![alt text](res/images/image-26.png)
+![alt text](image-14.png)
+![alt text](image-16.png)
 
-G = 10
+**方法**
 
-## 优化
+![alt text](image-17.png)
 
-### 卡诺图 K-Map
+**示例**
 
-![alt text](res/images/image-36.png)
+![alt text](image-18.png)
 
-从到SOP/POS方法：将仅有一个变量差异的两个最小项/最大项用最小化定理合起来约简
+- 设计真值表：考虑需求 / 定义的值 0/1 的含义
+- 根据真值表写最小项之和
 
-目标：将二者在空间上靠近
+![alt text](image-19.png)
 
-方法：一维真值表变n维卡诺图
+（奇函数天然优化）
 
-特点：**相邻**两个最小项的编码/索引**只一位不同**：应用格雷码
+![alt text](image-20.png)
 
-周围也有1，成square
+```verilog
+module lamp_control(s1,s2,s3,F );
+input s1,s2,s3;
+output F;
+wire s1,s2,s3,f;
 
-有1的地方，**框包含 $2^n$ 个相邻的含1的格子的矩形**，一个格子可以用两次（代数表达式：重复加一项不影响结果）
+assign F= (~s3&~s2&s1) | (~s3&s2&~s1) | (s3&~s2&~s1) | (s3&s2&s1) ;
+endmodule
+``` 
 
-![alt text](res/images/image-27.png)
+**示例2**
 
-最小项之和 —— SOP   
-最大项之积 —— POS
+表 1 其实就是真值表，用上自由项
 
-![alt text](res/images/image-28.png)
+W X Y Z 分别有几个 1 ，对应 ABCD 分别是什么
 
-相邻/含1的框出，读取几个格子中不变的变量：每个变量都看，看哪个没变，没变的都写出
+![alt text](image-21.png)
+![alt text](image-22.png)
 
-![alt text](res/images/image-29.png)
+卡诺图优化
 
-三维：$yz$ 用格雷码的顺序排，每个格子对应的索引都要填对！不是连续的
+联合优化：四个合起来看，提取公因式
 
-![alt text](res/images/image-30.png)
+![alt text](image-23.png)
+![alt text](image-24.png)
 
-- 这是第二种画图方法，一样的：只填1 不用填0，非变量也可以不写
+输入多：分层
 
-框 $2^n$ 的原因：其他都一样，$2^n$ 的可以合并成1，例如 $xy + x~y + ~xy + ~x~y$
+eg：9输入分成 3 * 3 再加一个合并的第四个
 
-![alt text](res/images/image-39.png)
+![alt text](image-25.png)
 
-三维及以上：空间折叠
+## 技术参数
 
-![alt text](res/images/image-31.png)
-![alt text](res/images/image-32.png)
 
-框的方法：
+![alt text](image-26.png)
 
-- 贪心法：尽可能多（否则得人工优化）
-- 都圈出，可以重复的啊
+fan-in：栅入参数 input个数
 
-![alt text](res/images/image-35.png)
+fan-out：能带几个负载
 
-例题：
+### fan-in
 
-![alt text](res/images/image-33.png)
-![alt text](res/images/image-34.png)
+每个门上面有压降，不是0电阻
 
-![alt text](res/images/image-37.png)
+fan-in 是 ：输出为正确的情况下最多的input个数，（最大识别为1的电压 - 最小的） / 每处压降
 
-有优化选项的项不可以再圈：不再圈3和7
+![alt text](image-27.png)
 
-#### 四维变量
+### fan-out
 
-排布方法：x y方向各放两个变量
+标准负载：1输入1输出的非门
 
-![alt text](res/images/image-40.png)
+看的是带几个标准负载，不同负载与标准负载成倍数
 
-![alt text](res/images/image-41.png)
+转换时间 $t_{LH} $ 和 $t_{HL}$，想变到最后变化之间的时间
 
-空间折叠：
+从0到1，给电容式负载充电，负载多充电能力下降，电平转换时间延长，电路要求工作速度，最大电平转换时间对应的是fan-out
 
-![alt text](res/images/image-42.png)
+![alt text](image-28.png)
 
-![alt text](res/images/image-43.png)
+### propagation delay 传播延迟时间
 
-注意！这对吗
+定义：输入端变化到输出端变化之间的延迟时间 $t_{PHL}$ $t_{PLH}$，端到端时间差
 
-??? success ""
+- **别和转换时间混掉**
 
-    这不对！
+计算：
 
-    中间四个已经各自有优化方法了
+- 控制变量法：将其他输入都开绿灯
+    - 那么与非门变成一个非门，因为另一路输入规定 = 1
+- 聪输出一个一个往前推，找
+- 最后每个加和
 
-#### 五维及以上
+有时取 $t_{PHL}$ 和 $t_{PLH}$ 的最大值/平均值作为每个门的传播延迟时间
 
-![alt text](res/images/image-44.png)
+读波形图：取中点时间差
 
-[b站](https://www.bilibili.com/video/BV1Nq4y1k71R?spm_id_from=333.337.search-card.all.click)
+![alt text](image-29.png)
 
-自由项：并非所有项都会在输入中发生，实际上填入X，但是我们可以尽可能规定他为1（最小项）/0（最大项）进行优化
+#### transport delay 传输延时 
 
-![alt text](res/images/image-45.png)
-![alt text](res/images/image-46.png)
-![alt text](res/images/image-47.png)
+将无延时的波形图后移传输延时时间
 
-$\sum d$ : 就是自由项
+#### inertial delay 阻尼延时
 
-注意题目要求：POS/SOP
+电容会滤波，小的毛刺信号会被吸收，例如拒绝时间 = 5ns，小于他则无法传输
 
-如果要POS：
+以上是两种传播延时的模型
 
-- 法一：先取反函数，可以在原式上直接取反函（除了 $\sum d$ 和 $\sum _m$ 的）
+#### 实际计算
 
-- 法二：直接用最大项，圈0，X尽可能看成0，读不变的变量时候反一下
+传输延时 + 标准负载数 * SL
 
-例题
+## 基本功能模块
 
-![alt text](res/images/image-48.png)
+### 使能
 
-不同编码方式对输入输出复杂度的影响
+相当于开关
 
-![alt text](res/images/image-49.png)
+![alt text](image-30.png)
 
-蕴含项 —— 主🐖蕴含项（所有的框，贪心法） —— 基本主蕴含项（包含别人没有的最小项的框） 
+- 与使能
+- 或使能
 
-算法：先合并基本主蕴含项，剩下的再合并最大的(要做最小覆盖)主蕴含项
+三态门使能与其不同，那个disabe之后输出是高阻状态
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+### decoder 解码器 / 译码器
 
-唯一包含x的不算
+- 输入；编码压缩信号，连续的
+- 输出：离散信号，用于控制
 
-### 继续人工优化
+少输入多输出
 
-从POS/SOP做成多层电路：提公因式
+要求：输入 < 输出
 
-结果：门输入代价可能上升可能下降
+![alt text](image-31.png)
 
-![alt text](image-3.png)
+!
 
-## 其他门
+m输入n输出的译码器：m个非门和n个m输入的与门，但是m大之后与门的fan-in太大
 
-### NAND：与非门
+优化：
 
-逻辑上 == 先非后或
+![alt text](image-33.png)
 
-缺陷：没有结合律，优化机会小
+递归分解的思想，类似归并排序
 
-![alt text](image-4.png)
+#### 三八译码器
 
-### NOR：或非门
+法一：
 
-### 其他
+![](image-32.png)
 
-![alt text](image-5.png)
+法二：
 
-#### 异或/同或
+![](image-34.png)
 
-![alt text](image-6.png)
+多层电路
 
-多维：奇函数/偶函数
+- 好处：输入被复用，门输入代价低
+- 坏处：传输延迟时间大
 
-多个变量异或 == 奇函数，多个变量同或 == 偶函数
+再加一个使能信号，一般用与使能
 
-奇数个变量为1则结果为1
+![alt text](image-35.png)
 
-![alt text](image-7.png)
+如果将使能信号看作输入，将 a/b 看成通道选择，变成信号分离器
 
-构造奇函数利用异或的结合律构造电路
+功能是将 a/b 的输入分离开在不同端输出
 
-![alt text](image-8.png)
+用两个24译码器也可以组成38译码器：自底向上设计
 
-用处：奇函数做偶校验，偶函数做奇校验
+高位作为使能信号
 
-![alt text](image-12.png)
+![alt text](image-36.png)
 
-### Buffer 缓冲门
+#### 用途
 
-提高电平，由于1入多
+实现任何函数：对应的最小项最后或起来
 
-### 3-State Buffer 三态门
+![alt text](image-37.png)
 
-用于多入1，不能硬连接，每一个输出线连一个三态门
+七段数码管：原理是每一个输出管理一个发光二极管，两种接法（共阳极/共阴极），亮/不亮给的电平不一样
 
-![alt text](image-9.png)
+![alt text](image-39.png)
 
-![](image-10.png)
+![alt text](image-40.png)
 
-但是电路有延时，出现同时导通的瞬间
+### encoder 编码器
 
-### 复杂门
+多输入少输出
 
-![alt text](image-11.png)
+结果读取：
 
-名称：
+### 多路选择器
 
-- A
-- O
-- I
-- A、O、I的顺序按电路逻辑操作顺序
+### 信号分配器
