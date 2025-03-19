@@ -58,3 +58,29 @@ openssl
     - Merkle tree
 
 https://www.bilibili.com/video/BV15z411v7ob?spm_id_from=333.788.recommend_more_video.1&vd_source=b14909f255fe42946743657320d2f59a
+
+## 相关网站
+
+[比特币中国](https://www.btcchina.org)
+
+[GitHub](https://github.com/bitcoin/bitcoin)
+
+[源代码](https://dev.visucore.com/bitcoin/doxygen/files.html)
+
+[比特币测试网（学习用）](https://live.blockcypher.com)
+
+[比特币测试网（学习用）](https://blockcypher.com)
+
+```shell
+curl https://api.blockcypher.com/v1/btc/main
+# 访问链的api
+```
+
+![alt text](image.png)
+
+### bitcoin core客户端
+
+每次打开都从别人那里同步过来所有区块（400多G……）一个block就是一个.ldb文件，大概2MB；
+
+- 内存大：跑得快
+- 硬盘大：容量大 4T的mac ￥4w

@@ -87,6 +87,7 @@ nav:
       - 技术原理: CS/blockchain/theory.md
       - 实际应用: CS/blockchain/usage.md
       - 比特币: CS/blockchain/bitcoin.md
+      - 数字货币: CS/blockchain/digital-currency.md
     - 人工智能:
       - 机器学习:
         - RUC讲稿: CS/AI/ML/机器学习讲稿.ipynb
