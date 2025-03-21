@@ -47,6 +47,9 @@ nav:
 
   - 开发:
     - CS/index.md
+    - 实战开发: 
+      - Git规范: CS/develop/git.md
+      - 编程风格: CS/develop/programming.md
     - 编程语言:
       - C/C++:
         - C语言: 
@@ -77,8 +80,9 @@ nav:
       - Sort: CS/algorithm/sort.md
     - 操作系统:
       - Linux:
-        - WSL备忘录: docs/CS/OS/linux/wsl-note.md
-        - 虚拟机备忘录: docs/CS/OS/linux/vm-note.md
+        - WSL备忘录: CS/OS/linux/wsl-record.md
+        - 虚拟机备忘录: CS/OS/linux/vm-record.md
+        - WSL操作指南: CS/OS/linux/wsl-note.md
       - Windows备忘录: CS/OS/windows/win-note.md
     - 网络安全:
       - 基础: CS/IS/basic.md
