@@ -76,7 +76,7 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高考倒计时</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./mkdocs/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -101,7 +101,7 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
         </div>
         <div class="note">* 每年6月7日为准</div>
     </div>
-    <script src="script.js"></script>
+    <script src="./mkdocs/javascripts/script.js"></script>
 </body>
 </html>
 
