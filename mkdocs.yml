@@ -1,7 +1,7 @@
 # [Info]
 # 左上角标题
 site_name: CosHub
-site_url: https://r-z-zhang-AI.github.io/CosHub
+site_url: https://r-z-zhang-AI.github.io/home
 site_author: 张瑞喆
 site_description: Zhang rz的个人网站
 
@@ -250,7 +250,7 @@ edit_uri: edit/main/docs/
 # [添加 GitHub 仓库]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
 repo_url: https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
-repo_name: r-z-zhang-AI.github.io
+repo_name: CosHub
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
