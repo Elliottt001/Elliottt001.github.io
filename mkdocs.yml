@@ -7,7 +7,10 @@ site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
-  - 主页: index.md
+  - 主页: 
+    - Home: home/index.md
+    - 倒计时们: 
+      - 高考: home/countdown/index.html
 
   - 个人:
     - ME/index.md
