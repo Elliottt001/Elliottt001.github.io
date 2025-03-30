@@ -384,6 +384,8 @@ complete binary tree：都有 0 / 2 孩子
 
 ### Insert
 
+是一个确定的情况，给定顺序则树确定
+
 步骤
 
 1. check if 数字在tree中

@@ -21,6 +21,7 @@ nav:
         - 学生会: ME/ZJU/interview/interview for SU.md
         - 专业确认: ME/ZJU/interview/interview for major.md
         - 启真问学: ME/ZJU/interview/interview-for-qzwx.md
+        - X-lab问卷: ME/ZJU/interview/x-lab-application.md
       - 计划:
         - 24寒假: ME/ZJU/plan/plan-for-24winter-holiday.md
       - 学习:
@@ -48,6 +49,7 @@ nav:
   - 开发:
     - CS/index.md
     - 实战开发: 
+      - 项目组织: CS/develop/project.md
       - Git规范: CS/develop/git.md
       - 编程风格: CS/develop/programming.md
     - 编程语言:

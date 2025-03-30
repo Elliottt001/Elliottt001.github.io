@@ -54,7 +54,7 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
 </body>
 </html>
 
-我的计划是……
+<!-- 我的计划是……
 
 !!! success ""
 
@@ -66,8 +66,44 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
         - [ ] 离散看书，微积分自学 + 智云
 
     - [ ] 这周看看离散/微积分可否自学！
-    - [ ] 我真的想给自己的人生规划一下啊
+    - [ ] 我真的想给自己的人生规划一下啊 -->
 
+<!--高考倒计时-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考倒计时</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>高考倒计时</h1>
+        <div class="countdown">
+            <div class="time-block">
+                <span class="number" id="days">00</span>
+                <span class="label">天</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="hours">00</span>
+                <span class="label">时</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="minutes">00</span>
+                <span class="label">分</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="seconds">00</span>
+                <span class="label">秒</span>
+            </div>
+        </div>
+        <div class="note">* 每年6月7日为准</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
 
 !!! danger "努力更新中"
