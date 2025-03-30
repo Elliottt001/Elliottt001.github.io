@@ -1,16 +1,16 @@
 # [Info]
 # 左上角标题
 site_name: CosHub
-site_url: https://r-z-zhang-AI.github.io/home
+site_url: https://r-z-zhang-AI.github.io
 site_author: 张瑞喆
 site_description: Zhang rz的个人网站
 
 # [Navigtion]
 nav:
   - 主页: 
-    - Home: home/index.md
-    - 倒计时们: 
-      - 高考: home/countdown/index.html
+    - home/index.md
+    - 倒计时: 
+      - 高考倒计时: home/countdown/index.html
 
   - 个人:
     - ME/index.md
