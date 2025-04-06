@@ -8,65 +8,78 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.container {
+  }
+  
+  .container {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.countdown {
+  }
+  
+  .countdown {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
-}
-
-.time-block {
+  }
+  
+  .time-block {
     position: relative;
-}
-
-.number {
+  }
+  
+  .number {
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    min-width: 80px;
-    padding: 1rem;
+    min-width: 60px;
+    padding: 0.75rem;
     background: #34495e;
     border-radius: 10px;
     margin: 0 0.5rem;
     transition: all 0.3s ease;
     transform-style: preserve-3d;
-}
-
-.label {
+  }
+  
+  .label {
     display: block;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.3rem;
     color: #bdc3c7;
-}
-
-.note {
-    margin-top: 2rem;
+  }
+  
+  .note {
+    margin-top: 1.5rem;
     color: #95a5a6;
     font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* 花体祝福语样式 */
+  .blessing {
+    margin-top: 1.5rem;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #f39c12;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 768px) {
     .number {
-        font-size: 2rem;
-        min-width: 60px;
-        padding: 0.5rem;
+      font-size: 2rem;
+      min-width: 50px;
+      padding: 0.5rem;
     }
     h1 {
-        font-size: 2rem;
+      font-size: 1.8rem;
     }
-}
+    .blessing {
+      font-size: 1.5rem;
+    }
+  }
+  
