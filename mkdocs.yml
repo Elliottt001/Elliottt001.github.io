@@ -39,9 +39,11 @@ nav:
     - KNOWLEDGE/index.md
     - 微积分:
       - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
-      - 级数: KNOWLEDGE/calculus/series-sdk.md
       - 方法总结: KNOWLEDGE/calculus/summary-of-calculus.md
       - 思想方法: KNOWLEDGE/calculus/thought-for-calculus.md
+      - 级数: KNOWLEDGE/calculus/series-sdk.md
+      - 矢量代数与空间解析几何: KNOWLEDGE/calculus/vector-algebra.md
+      - 多元函数微分学: KNOWLEDGE/calculus/differential-calculus-of-multivariate-function.md
     - 线性代数:
       - 知识体系: KNOWLEDGE/linear-algebra/knowledge-frame-of-LA.md
       - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md 
@@ -118,7 +120,9 @@ nav:
       - vim: CS/Tools/vim.md
       - GDB: CS/Tools/GDB.md
       - Obsidian: CS/Tools/Obsidian.md
-      - Mkdocs: CS/Tools/mkdocs.md
+      - Mkdocs: 
+        - MkDocs: CS/Tools/mkdocs.md
+        - MkDocs图像: CS/Tools/mkdocs-images-copy.md
       - Makefile: CS/Tools/makefile.md
       - Anaconda: CS/Tools/anaconda.md
       - VMware: CS/Tools/vmware-linux.md
@@ -342,6 +346,7 @@ markdown_extensions:
 
   - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
   - md_in_html
+  - pymdownx.blocks.caption
   - pymdownx.keys #添加了一个简单的语法来允许呈现键盘按键和组合 
 
   # Caret 、 Mark和Tilde扩展添加了使用简单语法突出显示文本并定义下标和上标的功能。
