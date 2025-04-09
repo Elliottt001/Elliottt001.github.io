@@ -1,3 +1,8 @@
+<figure markdown="span">
+  ![Image title](https://r-z-zhang-ai.github.io/KNOWLEDGE/calculus/image-16.png){ width="300" }
+  <figcaption>HKU</figcaption>
+</figure>
+
 ## 算法分析
 
 **算法**

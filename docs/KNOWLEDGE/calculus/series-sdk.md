@@ -1,22 +1,9 @@
-![alt text](res/images/image-20_2.png){ align=left }
-
 $$Work \;Hard, \;Play \;Hard.$$
-
-![alt text](res/images/image-20_1.png){ align=left }
 
 <figure markdown="span">
   ![Image title](https://r-z-zhang-ai.github.io/KNOWLEDGE/calculus/res/images/image-20_2.png){ width="300" }
-  <figcaption>HKU-html</figcaption>
+  <figcaption>HKU</figcaption>
 </figure>
-
-![Image title](res/images/image-20_2.png){ width="300" }
-/// caption
-HKU-caption
-///
-
-![alt text](res/images/image-20_2.png#only-light)
-![alt text](res/images/image-20_1.png#only-dark)
-
 
 ## 题型
 

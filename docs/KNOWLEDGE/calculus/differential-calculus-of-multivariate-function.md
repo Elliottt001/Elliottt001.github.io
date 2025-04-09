@@ -1,3 +1,8 @@
+![Image title](image-15.png){ width="300" }
+/// caption
+Stanford University
+///
+
 ## 引入
 
 多元函数，二元函数的性质与多元函数完全一致，与一元函数不同，故拿二元函数为例研究多元函数
