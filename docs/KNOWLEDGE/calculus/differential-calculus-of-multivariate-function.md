@@ -201,4 +201,49 @@ $\frac{\partial^2 f}{\partial x \partial y}$ 先对谁偏导分母上谁就写�
 
 对于初等多元函数，不同顺序的二阶偏导函数，求一个就行
 
-$\frac{\partial^n z}{\partial x^n}$
+$$\frac{\partial^n z}{\partial x^n}$$
+
+## 多元函数的全微分
+
+![alt text](image-17.png)
+![alt text](image-18.png)
+![alt text](image-20.png)
+
+
+$$ \text{全微分}\; dz = A \Delta x + B \Delta y$$
+
+$记 \; o(\Delta x) = \alpha \Delta x$
+
+![alt text](image-19.png)
+/// caption
+可微必连续
+
+不连续则不可微
+///
+
+![alt text](image-21.png)
+/// caption
+可微的必要条件
+///
+
+可微则偏导均存在,反之不成立. 逆否: 至少有一个偏导数不存在, 则不可微
+
+证明: 用偏导数的定义  $\lim_{\Delta x \to 0} \frac {\Delta _x z}{\Delta x}$, 这时 $\Delta y = 0$ (因为偏导)
+
+![alt text](image-22.png)
+
+![alt text](image-23.png)
+/// caption
+证明是否可微
+///
+
+![alt text](image-24.png)
+/// caption
+证明分片函数在 $(0, 0)$ 点是否可微
+///
+
+![alt text](image-25.png)
+![alt text](image-26.png)
+/// caption
+可微的充分条件: 偏导函数连续则可微
+///
