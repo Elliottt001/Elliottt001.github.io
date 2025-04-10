@@ -1,3 +1,9 @@
+## 照习惯，页首会充满涂鸦
+
+$$Work \; Hard, \; Play\;  Hard$$
+
+$$为什么一个人能自律成这样？？？$$$$真的一天都在写写写学学学没有停下来过啊！！！$$$$数学化学轮换着学，手机放身后书架上$$
+
 ![Image title](image-15.png){ width="300" }
 /// caption
 Stanford University
@@ -7,7 +13,7 @@ Stanford University
 
 多元函数，二元函数的性质与多元函数完全一致，与一元函数不同，故拿二元函数为例研究多元函数
 
-## 基本量
+## 多元函数的基本量
 
 ### 定义域
 
@@ -16,7 +22,7 @@ Stanford University
 
 也要在二维坐标系中画出图形，范围看内外
 
-!!! info 
+!!! info ""
 
     曲线将平面分成两部分 / 曲面将空间分成两部分，两边的不等式相反，可以找一边的一个特殊点看不等号方向
 
@@ -26,7 +32,7 @@ Stanford University
 
 ![alt text](res/images/image-76.png)
 
-## 极限
+## 多元函数的极限
 
 ### 定义
 
@@ -49,7 +55,7 @@ Stanford University
 
 ### 求解
 
-!!! success
+!!! success ""
 
     1. 通常转化为一元函数极限
 
@@ -59,13 +65,13 @@ Stanford University
 
 ![alt text](res/images/image-81.png)
 
-!!! warning
+!!! warning ""
 
     找到一个空心邻域，有一些点没定义没关系，按正常方法求解即可
 
     空心邻域和定义域交集非空即可
 
-!!! warning
+!!! warning ""
 
     二次极限 $\ne$ 二重极限，这两个是完全无关的极限，不存在充分/必要条件关系
 
@@ -95,13 +101,13 @@ Stanford University
     ![alt text](res/images/image-88.png)
     ![alt text](res/images/image-89.png)
 
-## 连续
+## 多元函数的连续性
 
 在某点的极限 = 该点处的函数值
 
 初等多元函数 **在定义域区域上都连续**；初等多元函数就是一个解析式给出的函数（即不是分段函数）
 
-!!! success
+!!! success ""
 
     则求极限问题变成求在那一点处函数值问题，因为，初等 + 有定义则连续 + 连续则转化为求值
 
@@ -212,6 +218,8 @@ $$\frac{\partial^n z}{\partial x^n}$$
 
 $$ \text{全微分}\; dz = A \Delta x + B \Delta y$$
 
+$$ 其中, A = f'_x(x, y) ,\; B = f'_y(x, y), \; \Delta x = dx, \; \Delta y = dy$$
+
 $记 \; o(\Delta x) = \alpha \Delta x$
 
 ![alt text](image-19.png)
@@ -227,6 +235,10 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 ///
 
 可微则偏导均存在,反之不成立. 逆否: 至少有一个偏导数不存在, 则不可微
+
+!!! warning ""
+
+    可微比偏导数存在更严格
 
 证明: 用偏导数的定义  $\lim_{\Delta x \to 0} \frac {\Delta _x z}{\Delta x}$, 这时 $\Delta y = 0$ (因为偏导)
 
@@ -244,6 +256,188 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
 ![alt text](image-25.png)
 ![alt text](image-26.png)
+![alt text](image-27.png)
 /// caption
 可微的充分条件: 偏导函数连续则可微
 ///
+
+!!! success "求全微分的方法"
+
+    利用偏导数
+
+![alt text](image-29.png)
+![alt text](image-30.png)
+![alt text](image-28.png)
+
+!!! success "近似计算"
+
+    全微分公式中忽略小量
+
+    ![alt text](image-31.png)
+
+## 多元复合函数的偏导数
+
+![alt text](image-32.png)
+/// caption
+存在性定理
+///
+
+内层不要求可微
+
+$$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial x} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial x}$$
+
+$$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial y}$$
+
+因变量对中间变量分别偏导, 中间变量对x偏导, 相乘再相加。一元函数全是求导，多元函数全是偏导
+
+![alt text](image-33.png)
+
+![alt text](image-34.png)
+/// caption
+偏导结构图
+///
+
+![alt text](image-35.png)
+/// caption
+全导数
+///
+
+![alt text](image-36.png)
+/// caption
+外函数是三元函数
+///
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+![alt text](image-39.png)
+![alt text](image-40.png)
+
+!!! success ""
+
+    外函数有连续的二阶偏导：等价于
+    
+    - 放心求，可微
+    - 二阶偏导两种顺序相等，需要合并化简
+
+!!! warning ""
+
+    一定集中精力，求对一个的偏导，将另一个看成常数，谨记公式
+
+## 全微分一阶形式不变性
+
+![alt text](image-41.png)
+
+即当 $x = g(s, t), y = h(s, t)$ 时，该式也成立，且此时也有 $dz = \frac{\partial z}{\partial s} * ds + \frac{\partial z}{\partial t} * dt$
+
+**也就是对一阶全微分，无论是中间变量还是自变量，都可以这样拆开求微分**
+
+!!! success "求多元复合函数的偏导数"
+
+    ![alt text](image-42.png)
+
+    把微分写成 $u 和 v$ 的函数分别乘两个自变量/中间变量在求和的式子，偏导数就是那个函数
+
+## 全微分的四则运算
+
+![alt text](image-43.png)
+
+!!! info ""
+
+    和一元函数一样
+
+![alt text](image-44.png)
+
+??? info ""
+
+    因为是 $r 和 \theta$ 的函数，所以要化成 $dr 和 d\theta$
+
+    法一：
+
+    ![alt text](image-45.png)
+    ![alt text](image-46.png)
+    ![alt text](image-47.png)
+
+    法二：
+
+    ![alt text](image-48.png)
+
+
+## 方程确定多元函数的偏导数
+
+### 多元隐函数定义
+
+![alt text](image-49.png)
+![alt text](image-50.png)
+
+!!! warning ""
+
+    这里 $z$ 是 $x 和 y$ 的函数，整体是一个复合函数
+
+![alt text](image-51.png)
+![alt text](image-52.png)
+///caption
+定义
+///
+### 方程确定多元函数的偏导数
+
+![alt text](image-54.png)
+/// caption
+推导过程
+///
+
+公式：
+
+$$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
+
+!!! warning ""
+
+    1. 都是对中间变量偏导
+
+    2. 记忆：$x$ 和 $z$ 交换位置，前面有一个负号
+    
+    3. 对一个偏导时将另一个看成常数
+
+    3. 成立条件：偏导数连续 & $F'_z$ 不为零
+
+!!! success ""
+
+    那么，对二元方程确定的一元隐函数，该公式也成立
+
+![alt text](image-57.png)
+/// caption
+一元隐函数偏导数公式
+///
+
+!!! success "一阶微分形式不变性的应用"
+
+    隐函数偏导能直接用公式做的题目一般都能用**一阶微分形式不变性**解决
+
+    ![](image-58.png)
+
+    步骤：
+
+    1. 对等式两侧初步微分
+    2. 想办法造出来 $dx \;dy \;dz$：微分的四则运算 / 对两侧求偏导 /……
+    3. 移项合并同类项，得到形如 $dz = f(x, y)dx + g(x, y)dy$ 的式子，那么 $f是z对x的偏导$，$g是z对y的偏导$
+
+
+
+![alt text](image-59.png)
+/// caption
+例题
+///
+
+??? info ""
+
+    一阶微分形式不变性：
+
+    ![alt text](image-60.png)
+    ![alt text](image-61.png)
+
+    公式法：
+
+    ![alt text](image-62.png)
+
+## 方程组确定的多元函数组的偏导数
+
