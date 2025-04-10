@@ -1,8 +1,12 @@
-## 照习惯，页首会充满涂鸦
+## 页首涂鸦
 
 $$Work \; Hard, \; Play\;  Hard$$
 
-$$为什么一个人能自律成这样？？？$$$$真的一天都在写写写学学学没有停下来过啊！！！$$$$数学化学轮换着学，手机放身后书架上$$
+$$为什么一个人能自律成这样？？？$$
+
+$$真的一天都在写写写学学学没有停下来过啊！！！$$
+
+$$数学化学轮换着学，手机放身后书架上$$
 
 ![Image title](image-15.png){ width="300" }
 /// caption
@@ -381,6 +385,17 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 ///
 ### 方程确定多元函数的偏导数
 
+!!! success "这类题做题方法"
+
+    1. 公式
+    2. 全微分一阶形式不变性
+
+        - 具体方法见下
+    3. 推导公式的过程
+        
+        - 两侧同时偏导
+
+
 ![alt text](image-54.png)
 /// caption
 推导过程
@@ -417,8 +432,8 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
 
     步骤：
 
-    1. 对等式两侧初步微分
-    2. 想办法造出来 $dx \;dy \;dz$：微分的四则运算 / 对两侧求偏导 /……
+    1. 见到等式就两侧微分
+    2. 想办法造出来 $dx \;dy \;dz$：微分的四则运算 
     3. 移项合并同类项，得到形如 $dz = f(x, y)dx + g(x, y)dy$ 的式子，那么 $f是z对x的偏导$，$g是z对y的偏导$
 
 
@@ -440,4 +455,152 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
     ![alt text](image-62.png)
 
 ## 方程组确定的多元函数组的偏导数
+
+!!! success "这类题做题方法"
+
+    1. 全微分一阶形式不变性
+
+        - 具体方法见上
+    2. 推导公式的过程
+        
+        - 两侧同时偏导
+
+m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n - m 元函数。谁是自变量谁是因变量看题目所求偏导形式
+
+## 多元函数的方向导数和梯度
+
+### 方向导数
+
+方向导数：沿某一方向函数的变化率
+
+![alt text](image-63.png)
+![alt text](image-64.png)
+![alt text](image-65.png)
+/// caption
+定义
+///
+
+!!! info "定义"
+
+    设 \( f: \mathbb{R}^n \to \mathbb{R} \) 为多元函数，在点 \( P \) 处可微，\( \mathbf{u} = (u_1, u_2, \dots, u_n) \) 为单位向量，则 \( f \) 在点 \( P \) 沿方向 \( \mathbf{u} \) 的**方向导数**定义为：
+    \[
+    D_{\mathbf{u}} f(P) = \lim_{h \to 0} \frac{f(P + h\mathbf{u}) - f(P)}{h}
+    \]
+    其值表示函数沿 \( \mathbf{u} \) 方向的瞬时变化速率。
+
+
+!!! tip "人话说定义——方向导数"
+
+    定义域内取一个点，找一个方向，点周围有一个邻域，在这个方向上且在邻域内取一个点，两个点对应的函数值差除以两点距离。即，在这个方向上因变量变化率
+
+    ![alt text](image-68.png){ width = "300" }
+
+
+偏导数并不是特殊的方向导数
+
+在某点 对 $x$ 的偏导 = 沿 $x$ 轴正向的导数 = $-$ 沿 $x$ 轴负向的导数, y z 同理
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+/// caption
+方向导数存在的充分条件及计算公式
+///
+
+!!! tip "人话说定义——方向导数存在的充分条件"
+
+    在某点可微则任意方向方向导数存在
+    
+!!! info ""
+
+    三个角分别是反向矢量与轴的夹角，也是对应方向上的单位矢量
+
+!!! warning ""
+
+    分片函数在孤立点处的方向导数必须得用定义求
+
+公式：
+
+\[
+D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u} = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(P) \cdot u_i
+\]
+
+- **二元函数** \( f(x, y) \)：
+
+    \[
+    D_{(u_1, u_2)} f(x_0, y_0) = \frac{\partial f}{\partial x}(x_0, y_0) \cdot u_1 + \frac{\partial f}{\partial y}(x_0, y_0) \cdot u_2
+    \]
+
+- **三元函数** \( f(x, y, z) \)：
+
+    \[
+    D_{(u_1, u_2, u_3)} f(x_0, y_0, z_0) = \frac{\partial f}{\partial x} u_1 + \frac{\partial f}{\partial y} u_2 + \frac{\partial f}{\partial z} u_3
+    \]
+
+**其中，$u$ 是对应方向上的单位矢量**，$u = (u_1, u_2, u_3, \cdots, u_n) = (\cos \alpha _1, \cos \alpha _2, \cos \alpha _3, \cdots, \cos \alpha _n)$，$\alpha _i$ 是该矢量与每个坐标轴正向的夹角
+
+### 梯度
+
+**定义：**
+
+![alt text](image-69.png)
+![alt text](image-70.png)
+
+!!! tip "人话说定义 —— 梯度"
+
+    就是在某点处几个偏导数值组成的向量
+
+**运算法则：**
+
+线性运算法则
+
+![alt text](image-71.png)
+
+!!! info ""
+
+    线性运算法则都是用定义证明的
+
+![alt text](image-72.png)
+/// caption
+用梯度计算方向导数公式的几何意义
+///
+
+![alt text](image-73.png)
+/// caption
+用梯度计算方向导数公式
+///
+
+换种写法：
+
+\[
+D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
+\]
+
+
+![alt text](image-74.png)
+![alt text](image-75.png)
+![alt text](image-76.png)
+/// caption
+方向导数的极值问题
+///
+
+!!! success ""
+
+    问哪个方向的导数最大 $\Leftrightarrow$ 求梯度 $\Leftrightarrow$ 求偏导
+
+
+## 多元函数的极值和应用
+
+!!! info ""
+
+    一元函数极值怀疑点：驻点 + 导数不存在点
+
+!!! success "重要思想"
+
+    研究多元函数：转化为一元函数
+
+![alt text](image-77.png)
+/// caption
+取到极值的必要条件
+///
 
