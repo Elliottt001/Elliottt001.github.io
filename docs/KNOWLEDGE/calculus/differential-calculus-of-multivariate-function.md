@@ -8,9 +8,14 @@ $$真的一天都在写写写学学学没有停下来过啊！！！$$
 
 $$数学化学轮换着学，手机放身后书架上$$
 
-![Image title](image-15.png){ width="300" }
+![Image title](res/images/image-16_4.png#only-light){ width="300" }
 /// caption
 Stanford University
+///
+
+![](res/images/image-14_0.png#only-dark){ width="300" }
+/// caption
+Havard University
 ///
 
 ## 引入
@@ -34,7 +39,7 @@ Stanford University
 
 即距离小于一个数的
 
-![alt text](res/images/image-76.png)
+![alt text](res/images/image-76_1_1_1.png)
 
 ## 多元函数的极限
 
@@ -42,11 +47,11 @@ Stanford University
 
 称为二重极限
 
-![alt text](res/images/image-77.png)
+![alt text](res/images/image-77_2_1_1.png)
 
 可以沿着不同的路径趋于中间那个点，任意路径
 
-![alt text](res/images/image-78.png)
+![alt text](res/images/image-78_2_1_1.png)
 
 !!! success "判断极限不存在的方法"
 
@@ -67,7 +72,7 @@ Stanford University
 
     3. 利用连续性转化为求在该点处函数值
 
-![alt text](res/images/image-81.png)
+![alt text](res/images/image-81_2_1_1.png)
 
 !!! warning ""
 
@@ -79,7 +84,7 @@ Stanford University
 
     二次极限 $\ne$ 二重极限，这两个是完全无关的极限，不存在充分/必要条件关系
 
-    ![alt text](res/images/image-82.png)
+    ![alt text](res/images/image-82_2_1_1.png)
 
 !!! success "路径法"
 
@@ -88,22 +93,22 @@ Stanford University
     - 取 $y = kx$
     - 极限一般都不存在
     
-    ![alt text](res/images/image-83.png)
+    ![alt text](res/images/image-83_2_1_1.png)
 
-    ![alt text](res/images/image-85.png)
+    ![alt text](res/images/image-85_2_1_1.png)
 
-    ![alt text](res/images/image-86.png)
+    ![alt text](res/images/image-86_2_1_1.png)
 
-![alt text](res/images/image-84.png)
+![alt text](res/images/image-84_2_1_1.png)
 
 无穷小乘有界啊啊
 
-![alt text](res/images/image-87.png)
+![alt text](res/images/image-87_2_1_1.png)
 
 ??? info
 
-    ![alt text](res/images/image-88.png)
-    ![alt text](res/images/image-89.png)
+    ![alt text](res/images/image-88_2_1_1.png)
+    ![alt text](res/images/image-89_2_1_1.png)
 
 ## 多元函数的连续性
 
@@ -115,16 +120,16 @@ Stanford University
 
     则求极限问题变成求在那一点处函数值问题，因为，初等 + 有定义则连续 + 连续则转化为求值
 
-![alt text](res/images/image-90.png)
-![alt text](res/images/image-91.png)
-![alt text](image-3.png)
+![alt text](res/images/image-90_2_1_1.png)
+![alt text](res/images/image-91_2_1_1.png)
+![alt text](res/images/image-3_4_1_1.png)
 
 ### 有界闭区域上连续多元函数的性质
 
 闭区域定义
 
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](res/images/image-4_4_1_1.png)
+![alt text](res/images/image-5_4_1_1.png)
 
 包含该区域边界的区域
 
@@ -142,14 +147,14 @@ $\frac{\partial z}{\partial x}$ 这个不代表比值，只是一个记号
 
 本质上是一个一元函数导数
 
-![alt text](image-1.png)
+![alt text](res/images/image-1_3_1_1.png)
 
-![alt text](image-2.png)
+![alt text](res/images/image-2_3_1_1.png)
 
 ### 偏导数定义
 
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](res/images/image-6_3_1_1.png)
+![alt text](res/images/image-7_3_1_1.png)
 
 ### 求偏导数的方法
 
@@ -164,7 +169,7 @@ $\frac{\partial z}{\partial x}$ 这个不代表比值，只是一个记号
     2. 代入其中一个自变量，求一元函数导数
     3. 用偏导数定义：适用于在孤立点（那个点单独定义了函数值）上的偏导数，类似于一元函数区间分界点处导函数。孤立点只能用定义。
 
-![alt text](image-8.png)
+![alt text](res/images/image-8_4_1_1.png)
 
 !!! success "指数底数均有变量"
 
@@ -184,7 +189,7 @@ $\frac{\partial z}{\partial x}$ 这个不代表比值，只是一个记号
 
 要求：$x$ 和 $y$ 地位相同且取值相同
 
-![alt text](image-9.png)
+![alt text](res/images/image-9_4_1_1.png)
 
 ### 偏导数的几何意义
 
@@ -196,18 +201,18 @@ $f'_x(x_0, y_0)$ 表示曲面A和平面B的交线在点 $(x_0, y_0, z_0)$ 处切
 
 **符号表示**
 
-![alt text](image-10.png)
-![alt text](image-11.png)
+![alt text](res/images/image-10_4_1_1.png)
+![alt text](res/images/image-11_4_1_1.png)
 
 $\frac{\partial^2 z}{\partial x^2}$
 
 $\frac{\partial^2 f}{\partial x \partial y}$ 先对谁偏导分母上谁就写前面，这个代表先对x偏
 
-![alt text](image-12.png)
+![alt text](res/images/image-12_3_1_1.png)
 
 其中，“连续”隐含如下条件：
 
-![alt text](image-13.png)
+![alt text](res/images/image-13_4_1_1.png)
 
 对于初等多元函数，不同顺序的二阶偏导函数，求一个就行
 
@@ -215,9 +220,9 @@ $$\frac{\partial^n z}{\partial x^n}$$
 
 ## 多元函数的全微分
 
-![alt text](image-17.png)
-![alt text](image-18.png)
-![alt text](image-20.png)
+![alt text](res/images/image-17_3_1_1.png)
+![alt text](res/images/image-18_3_1_1.png)
+![alt text](res/images/image-20_3_1_1.png)
 
 
 $$ \text{全微分}\; dz = A \Delta x + B \Delta y$$
@@ -226,14 +231,14 @@ $$ 其中, A = f'_x(x, y) ,\; B = f'_y(x, y), \; \Delta x = dx, \; \Delta y = dy
 
 $记 \; o(\Delta x) = \alpha \Delta x$
 
-![alt text](image-19.png)
+![alt text](res/images/image-19_3_1_1.png)
 /// caption
 可微必连续
 
 不连续则不可微
 ///
 
-![alt text](image-21.png)
+![alt text](res/images/image-21_3_1_1.png)
 /// caption
 可微的必要条件
 ///
@@ -246,21 +251,21 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
 证明: 用偏导数的定义  $\lim_{\Delta x \to 0} \frac {\Delta _x z}{\Delta x}$, 这时 $\Delta y = 0$ (因为偏导)
 
-![alt text](image-22.png)
+![alt text](res/images/image-22_2_1_1.png)
 
-![alt text](image-23.png)
+![alt text](res/images/image-23_2_1_1.png)
 /// caption
 证明是否可微
 ///
 
-![alt text](image-24.png)
+![alt text](res/images/image-24_2_1_1.png)
 /// caption
 证明分片函数在 $(0, 0)$ 点是否可微
 ///
 
-![alt text](image-25.png)
-![alt text](image-26.png)
-![alt text](image-27.png)
+![alt text](res/images/image-25_2_1_1.png)
+![alt text](res/images/image-26_2_1_1.png)
+![alt text](res/images/image-27_2_1_1.png)
 /// caption
 可微的充分条件: 偏导函数连续则可微
 ///
@@ -269,19 +274,19 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
     利用偏导数
 
-![alt text](image-29.png)
-![alt text](image-30.png)
-![alt text](image-28.png)
+![alt text](res/images/image-29_2_1.png)
+![alt text](res/images/image-30_2_1_1.png)
+![alt text](res/images/image-28_2_1_1.png)
 
 !!! success "近似计算"
 
     全微分公式中忽略小量
 
-    ![alt text](image-31.png)
+    ![alt text](res/images/image-31_2_1_1.png)
 
 ## 多元复合函数的偏导数
 
-![alt text](image-32.png)
+![alt text](res/images/image-32_2_1_1.png)
 /// caption
 存在性定理
 ///
@@ -294,28 +299,28 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 
 因变量对中间变量分别偏导, 中间变量对x偏导, 相乘再相加。一元函数全是求导，多元函数全是偏导
 
-![alt text](image-33.png)
+![alt text](res/images/image-33_2_1_1.png)
 
-![alt text](image-34.png)
+![alt text](res/images/image-34_2_1_1.png)
 /// caption
 偏导结构图
 ///
 
-![alt text](image-35.png)
+![alt text](res/images/image-35_2_1_1.png)
 /// caption
 全导数
 ///
 
-![alt text](image-36.png)
+![alt text](res/images/image-36_2_1_1.png)
 /// caption
 外函数是三元函数
 ///
 
-![alt text](image-37.png)
+![alt text](res/images/image-37_2_1_1.png)
 
-![alt text](image-38.png)
-![alt text](image-39.png)
-![alt text](image-40.png)
+![alt text](res/images/image-38_1_1_1.png)
+![alt text](res/images/image-39_2_1_1.png)
+![alt text](res/images/image-40_1_1_1.png)
 
 !!! success ""
 
@@ -330,7 +335,7 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 
 ## 全微分一阶形式不变性
 
-![alt text](image-41.png)
+![alt text](res/images/image-41_2_1_1.png)
 
 即当 $x = g(s, t), y = h(s, t)$ 时，该式也成立，且此时也有 $dz = \frac{\partial z}{\partial s} * ds + \frac{\partial z}{\partial t} * dt$
 
@@ -338,19 +343,19 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 
 !!! success "求多元复合函数的偏导数"
 
-    ![alt text](image-42.png)
+    ![alt text](res/images/image-42_2_1_1.png)
 
     把微分写成 $u 和 v$ 的函数分别乘两个自变量/中间变量在求和的式子，偏导数就是那个函数
 
 ## 全微分的四则运算
 
-![alt text](image-43.png)
+![alt text](res/images/image-43_2_1_1.png)
 
 !!! info ""
 
     和一元函数一样
 
-![alt text](image-44.png)
+![alt text](res/images/image-44_2_1_1.png)
 
 ??? info ""
 
@@ -358,28 +363,28 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 
     法一：
 
-    ![alt text](image-45.png)
-    ![alt text](image-46.png)
-    ![alt text](image-47.png)
+    ![alt text](res/images/image-45_2_1_1.png)
+    ![alt text](res/images/image-46_2_1_1.png)
+    ![alt text](res/images/image-47_2_1_1.png)
 
     法二：
 
-    ![alt text](image-48.png)
+    ![alt text](res/images/image-48_2_1_1.png)
 
 
 ## 方程确定多元函数的偏导数
 
 ### 多元隐函数定义
 
-![alt text](image-49.png)
-![alt text](image-50.png)
+![alt text](res/images/image-49_2_1_1.png)
+![alt text](res/images/image-50_2_1_1.png)
 
 !!! warning ""
 
     这里 $z$ 是 $x 和 y$ 的函数，整体是一个复合函数
 
-![alt text](image-51.png)
-![alt text](image-52.png)
+![alt text](res/images/image-51_2_1_1.png)
+![alt text](res/images/image-52_2_1_1.png)
 ///caption
 定义
 ///
@@ -396,7 +401,7 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
         - 两侧同时偏导
 
 
-![alt text](image-54.png)
+![alt text](res/images/image-54_2_1_1.png)
 /// caption
 推导过程
 ///
@@ -419,7 +424,7 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
 
     那么，对二元方程确定的一元隐函数，该公式也成立
 
-![alt text](image-57.png)
+![alt text](res/images/image-57_2_1_1.png)
 /// caption
 一元隐函数偏导数公式
 ///
@@ -428,7 +433,7 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
 
     隐函数偏导能直接用公式做的题目一般都能用**一阶微分形式不变性**解决
 
-    ![](image-58.png)
+    ![](res/images/image-58_2_1_1.png)
 
     步骤：
 
@@ -438,7 +443,7 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
 
 
 
-![alt text](image-59.png)
+![alt text](res/images/image-59_2_1_1.png)
 /// caption
 例题
 ///
@@ -447,12 +452,12 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
 
     一阶微分形式不变性：
 
-    ![alt text](image-60.png)
-    ![alt text](image-61.png)
+    ![alt text](res/images/image-60_2_1_1.png)
+    ![alt text](res/images/image-61_2_1_1.png)
 
     公式法：
 
-    ![alt text](image-62.png)
+    ![alt text](res/images/image-62_2_1_1.png)
 
 ## 方程组确定的多元函数组的偏导数
 
@@ -473,9 +478,9 @@ m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n -
 
 方向导数：沿某一方向函数的变化率
 
-![alt text](image-63.png)
-![alt text](image-64.png)
-![alt text](image-65.png)
+![alt text](res/images/image-63_2_1_1.png)
+![alt text](res/images/image-64_2_1_1.png)
+![alt text](res/images/image-65_2_1_1.png)
 /// caption
 定义
 ///
@@ -489,25 +494,25 @@ m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n -
     其值表示函数沿 \( \mathbf{u} \) 方向的瞬时变化速率。
 
 
-!!! tip "人话说定义——方向导数"
+!!! tip "人话 —— 方向导数"
 
     定义域内取一个点，找一个方向，点周围有一个邻域，在这个方向上且在邻域内取一个点，两个点对应的函数值差除以两点距离。即，在这个方向上因变量变化率
 
-    ![alt text](image-68.png){ width = "300" }
+    ![alt text](res/images/image-68_2_1_1.png){ width = "300" }
 
 
 偏导数并不是特殊的方向导数
 
 在某点 对 $x$ 的偏导 = 沿 $x$ 轴正向的导数 = $-$ 沿 $x$ 轴负向的导数, y z 同理
 
-![alt text](image-66.png)
+![alt text](res/images/image-66_2_1_1.png)
 
-![alt text](image-67.png)
+![alt text](res/images/image-67_2_1_1.png)
 /// caption
 方向导数存在的充分条件及计算公式
 ///
 
-!!! tip "人话说定义——方向导数存在的充分条件"
+!!! tip "人话 —— 方向导数存在的充分条件"
 
     在某点可微则任意方向方向导数存在
     
@@ -543,10 +548,10 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u} = \sum_{i=1}^n \frac{\partial
 
 **定义：**
 
-![alt text](image-69.png)
-![alt text](image-70.png)
+![alt text](res/images/image-69_2_1_1.png)
+![alt text](res/images/image-70_2_1_1.png)
 
-!!! tip "人话说定义 —— 梯度"
+!!! tip "人话 —— 梯度"
 
     就是在某点处几个偏导数值组成的向量
 
@@ -554,18 +559,18 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u} = \sum_{i=1}^n \frac{\partial
 
 线性运算法则
 
-![alt text](image-71.png)
+![alt text](res/images/image-71_2_1_1.png)
 
 !!! info ""
 
     线性运算法则都是用定义证明的
 
-![alt text](image-72.png)
+![alt text](res/images/image-72_2_1_1.png)
 /// caption
 用梯度计算方向导数公式的几何意义
 ///
 
-![alt text](image-73.png)
+![alt text](res/images/image-73_2_1_1.png)
 /// caption
 用梯度计算方向导数公式
 ///
@@ -577,9 +582,9 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 \]
 
 
-![alt text](image-74.png)
-![alt text](image-75.png)
-![alt text](image-76.png)
+![alt text](res/images/image-74_2_1_1.png)
+![alt text](res/images/image-75_1_1_1.png)
+![alt text](res/images/image-76_1_1.png)
 /// caption
 方向导数的极值问题
 ///
@@ -589,7 +594,7 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
     问哪个方向的导数最大 $\Leftrightarrow$ 求梯度 $\Leftrightarrow$ 求偏导
 
 
-## 多元函数的极值和应用
+## 多元函数的极值
 
 !!! info ""
 
@@ -599,8 +604,160 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 
     研究多元函数：转化为一元函数
 
-![alt text](image-77.png)
+![alt text](res/images/image-77_2_1.png)
 /// caption
 取到极值的必要条件
 ///
 
+!!! tip "人话 —— 取到极值的必要条件"
+
+    在该点取到极值则偏导数都等于0
+
+证明方法：转化成一元函数
+
+!!! info "一元函数极值点的判断"
+
+    一元函数在某点的二阶导数：
+    
+    - 大于零极小值
+    - 小于零极大值
+    
+    !!! success "记忆"
+    
+        大小对立
+
+
+
+!!! success "极值点的求解"
+
+    极值怀疑点：
+
+    0. 在区间内部（不含边界）
+    1. 偏导数都等于零的点（驻点 / 稳定点）
+    2. 至少有一个偏导数不存在
+
+    求解极值怀疑点方法：
+
+    1. 求偏导，令其等于0
+    2. 找到偏导没有定义的点
+
+    判断极值怀疑点是否是极值点：
+
+    - **对于驻点**：求三个二阶偏导数，看他们的关系，即用如下充分条件
+    - **对于偏导数不存在点 和 $B^2 - AC = 0$ 的点**：用定义：在邻域内看是不是最大 / 最小的
+
+![alt text](res/images/image-78_2_1.png)
+![alt text](res/images/image-79_2_1.png)
+![alt text](res/images/image-80_2_1.png)
+![alt text](res/images/image-81_2_1.png)
+![alt text](res/images/image-82_2_1.png)
+/// caption
+多元函数极值点充分条件
+///
+
+证明：多元函数的泰勒展开，展开式第一项移项之后整理成二次函数，二次项系数A，一次项系数2B，常数项C，用判别式 + 正负 判断其是否恒成立
+
+!!! info ""
+
+    一元函数中定理：在区间上连续的函数，如果有唯一极值，则他是相应最值。即唯一极大值就是最大值唯一极小值就是极小值。
+
+    **他在多元函数中不成立**
+
+## 多元函数的最值
+
+### 求解方法
+
+定理：在**有界闭**区域上连续，则一定有最大值 & 最小值
+
+- 有界
+- 闭区域：包含边界
+
+!!! success ""
+
+    最值怀疑点：
+
+    1. 内部：极值怀疑点
+    2. 边界：边界上的最大 / 最小值
+
+    判断是否是最大 / 最小值：求出函数值，比大小
+
+### 应用题
+
+!!! info ""
+
+    如果只有一个极值点：可以想办法说清楚该函数只有最大值 / 只有最小值
+
+
+## 多元函数的条件极值
+
+多元函数条件极值的求解可以通过构造拉格朗日函数来实现。以函数 \( f(x, y) \) 在约束条件 \( g(x, y) = 0 \) 下的极值问题为例，步骤如下：
+
+!!! success ""
+
+    拉格朗日乘数法
+
+1. **构造拉格朗日函数**：
+
+    \[
+    \mathcal{L}(x, y, \lambda) = f(x, y) + \lambda g(x, y)
+    \]
+
+2. **求偏导并解方程组，即求拉格朗日函数的驻点**：
+
+    - 参数可以不求，但如果必须求出参数才能得出变量值那就求
+
+    \[
+    \begin{cases}
+    \frac{\partial \mathcal{L}}{\partial x} = \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} = 0 \\
+    \frac{\partial \mathcal{L}}{\partial y} = \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} = 0 \\
+    \frac{\partial \mathcal{L}}{\partial \lambda} = g(x, y) = 0
+    \end{cases}
+    \]
+
+    解得 \( (x, y, \lambda) \)，其中 \( (x, y) \) 即为极值怀疑点，再进一步算函数值得到最大值 / 最小值。
+
+!!! success "灵活"
+
+    复杂的 $f$ 函数（题目中给出）和与其有关的形式简单的 $g$ 函数显然在同样的点处取极值，则构造拉格朗日函数时可以用 $g$ 代替 $f$
+
+    例如，$f(x) = \sqrt{x^2 + y^2 + z^2}$，则用 $g(x) = x^2 + y^2 + z^2$，最后求出来结果还是代入 $f$。再如 $|z| \to z^2$
+
+!!! success "如果限制条件是不等式"
+
+    有一种可能是：直接对原函数（不带限制条件）求极值怀疑点，发现不在限制范围内，则内部没有极值怀疑点，则在边界，转换为等式
+    
+!!! success "其他曲线"
+
+    多个方程确定的曲线，例如三角形，其实是复杂了，但是按部就班🆗
+
+**例题解析**：
+
+**例1**：求 \( f(x, y) = x^2 + y^2 \) 在约束 \( x + y = 1 \) 下的极值。
+
+- 构造拉格朗日函数：
+
+    \[
+    \mathcal{L}(x, y, \lambda) = x^2 + y^2 - \lambda (x + y - 1)
+    \]
+
+- 求偏导并解方程组：
+
+    \[
+    \begin{cases}
+    2x + \lambda = 0 \\
+    2y + \lambda = 0 \\
+    x + y = 1
+    \end{cases}
+    \]
+
+    解得 \( x = y = \frac{1}{2} \)，极值为 \( \left(\frac{1}{2}, \frac{1}{2}\right) \)，对应 \( f \) 的最小值 \( \frac{1}{2} \)。
+
+**结论**：
+多元函数条件极值的拉格朗日乘数法通过引入乘数 \( \lambda \) 将约束优化问题转化为无约束问题，解方程组得到极值点。拉格朗日乘数的几何意义是目标函数与约束条件的梯度在极值点处共线。
+
+
+**多约束条件**
+
+![alt text](res/images/image-84_2_1.png)
+![alt text](res/images/image-85_2_1.png)
+![alt text](res/images/image-86_2_1.png)
