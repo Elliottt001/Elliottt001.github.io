@@ -9,14 +9,7 @@ $$真的一天都在写写写学学学没有停下来过啊！！！$$
 $$数学化学轮换着学，手机放身后书架上$$
 
 ![Image title](res/images/image-16_4.png#only-light){ width="300" }
-/// caption
-Stanford University
-///
-
 ![](res/images/image-14_0.png#only-dark){ width="300" }
-/// caption
-Havard University
-///
 
 ## 引入
 
@@ -76,7 +69,7 @@ Havard University
 
 !!! warning ""
 
-    找到一个空心邻域，有一些点没定义没关系，按正常方法求解即可
+    找到一个空心邻域，在该邻域上有一些点没定义没关系，按正常方法求解即可
 
     空心邻域和定义域交集非空即可
 
@@ -97,15 +90,13 @@ Havard University
 
     ![alt text](res/images/image-85_2_1_1.png)
 
-    ![alt text](res/images/image-86_2_1_1.png)
-
 ![alt text](res/images/image-84_2_1_1.png)
 
 无穷小乘有界啊啊
 
 ![alt text](res/images/image-87_2_1_1.png)
 
-??? info
+??? info "答案"
 
     ![alt text](res/images/image-88_2_1_1.png)
     ![alt text](res/images/image-89_2_1_1.png)
@@ -123,6 +114,10 @@ Havard University
 ![alt text](res/images/image-90_2_1_1.png)
 ![alt text](res/images/image-91_2_1_1.png)
 ![alt text](res/images/image-3_4_1_1.png)
+/// caption
+全增量和偏增量
+///
+
 
 ### 有界闭区域上连续多元函数的性质
 
@@ -161,7 +156,7 @@ $\frac{\partial z}{\partial x}$ 这个不代表比值，只是一个记号
 !!! success "求偏导函数方法"
 
     1. 将一个视为常数，对另一个用一元函数导数
-    2. 用偏导数定义：其他自变量都是 $x_0$, $y_0$ 之类的，对需要的那个求导
+    2. 用偏导数定义：其他自变量都是确定值，对需要的那个求导
 
 !!! success "求某点偏导数方法"
 
@@ -249,7 +244,7 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
     可微比偏导数存在更严格
 
-证明: 用偏导数的定义  $\lim_{\Delta x \to 0} \frac {\Delta _x z}{\Delta x}$, 这时 $\Delta y = 0$ (因为偏导)
+证明: 用偏导数的定义  $\lim_{\Delta x \to 0} \frac {\Delta _x z}{\Delta x}$, 这时 $\Delta y = 0$ (因为偏 $x$)
 
 ![alt text](res/images/image-22_2_1_1.png)
 
@@ -272,7 +267,28 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
 !!! success "求全微分的方法"
 
-    利用偏导数
+    用公式
+
+    - 二元函数
+
+        设 \( z = f(x, y) \) 在点 \( (x_0, y_0) \) 处可微，则全微分公式为：
+        \[
+        dz = \frac{\partial f}{\partial x} \bigg|_{(x_0, y_0)} dx + \frac{\partial f}{\partial y} \bigg|_{(x_0, y_0)} dy
+        \]
+
+    - n元函数
+
+        对于 \( n \) 元函数 \( u = f(x_1, x_2, \dots, x_n) \)，全微分公式推广为：
+
+        \[
+        du = \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i = \frac{\partial f}{\partial x_1} dx_1 + \frac{\partial f}{\partial x_2} dx_2 + \cdots + \frac{\partial f}{\partial x_n} dx_n
+        \]
+
+        其中：
+        - \( \frac{\partial f}{\partial x_i} \) 是函数对第 \( i \) 个变量的偏导数，
+        - \( dx_i \) 是自变量 \( x_i \) 的微小增量。
+
+
 
 ![alt text](res/images/image-29_2_1.png)
 ![alt text](res/images/image-30_2_1_1.png)
@@ -715,6 +731,44 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
     \]
 
     解得 \( (x, y, \lambda) \)，其中 \( (x, y) \) 即为极值怀疑点，再进一步算函数值得到最大值 / 最小值。
+
+
+
+
+!!! info "约束条件的本质"
+
+    1. **单约束**：  
+    例如 \( g(x, y) = 0 \)，表示在求解 \( f(x, y) \) 的极值时，变量 \( x, y \) 必须始终满足 \( g(x, y) = 0 \)。  
+    - **几何意义**：在平面上，\( g(x, y) = 0 \) 定义了一条曲线，极值点必须在这条曲线上（如直线、圆等）。
+
+    2. **多约束**：  
+    如果有多个约束条件，例如：  
+    \[
+    \begin{cases}
+    g_1(x, y, z) = 0 \\
+    g_2(x, y, z) = 0
+    \end{cases}
+    \]  
+    此时约束条件构成一个方程组，变量必须同时满足所有方程。  
+    - **几何意义**：在三维空间中，两个约束方程的交集可能是一条曲线或一个点。
+
+    - 具体实例：如果有 \( m \) 个约束条件 \( g_1 = 0, g_2 = 0, \dots, g_m = 0 \)，则需引入 \( m \) 个拉格朗日乘数 \( \lambda_1, \lambda_2, \dots, \lambda_m \)，构造拉格朗日函数：
+    \[
+    \mathcal{L}(x, y, z, \dots, \lambda_1, \lambda_2, \dots) = f(x, y, z, \dots) - \sum_{i=1}^m \lambda_i \cdot g_i(x, y, z, \dots)
+    \]
+    - 通过求偏导并解方程组（方程数量 = 变量数 + 约束数）：
+        \[
+        \begin{cases}
+        \frac{\partial \mathcal{L}}{\partial x} = 0 \\
+        \frac{\partial \mathcal{L}}{\partial y} = 0 \\
+        \vdots \\
+        g_1(x, y, \dots) = 0 \\
+        g_2(x, y, \dots) = 0 \\
+        \vdots
+        \end{cases}
+        \]
+
+
 
 !!! success "灵活"
 

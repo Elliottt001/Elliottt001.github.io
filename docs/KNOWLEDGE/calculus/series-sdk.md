@@ -432,9 +432,9 @@ $$\lim_{n \to \infty} \sum_{n = 1}^ \infty a_nx^n = \sum_{n = 1}^ \infty lim_{n 
 
 **两个重要的幂级数求和**
 
-$$\sum_{n = 1}{\infty} \frac{x^n}n = -\ln(1-x), x \in [-1, 1)$$
+$$\sum_{n = 1}^{\infty} \frac{x^n}n = -\ln(1-x), x \in [-1, 1)$$
 
-$$\sum_{n = 1}{\infty} nx^{n - 1} = \frac1{(1-x)^}2$$
+$$\sum_{n = 1}^{\infty} nx^{n - 1} = \frac1{(1-x)^2}$$
 
 !!! warning
 

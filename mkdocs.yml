@@ -8,7 +8,7 @@ site_description: Zhang rz的个人网站
 # [Navigtion]
 nav:
   - 主页: 
-    - try.html
+    - index.md
     - 倒计时: 
       - 高考倒计时: countdown/gee/gee.html
       - 生日倒计时: countdown/birthday/birthday.html
@@ -35,7 +35,7 @@ nav:
       - 2024-12: ME/ESSAY/2024-12.md
       - 2025-01: ME/ESSAY/2025-01.md
 
-  - 数学:
+  - 数理:
     - KNOWLEDGE/index.md
     - 微积分:
       - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
@@ -50,7 +50,7 @@ nav:
     - 离散数学:
       - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
     - 大学物理:
-      - 力与运动: KNOWLEDGE/physics/dynamics-motion.md
+      - 动力学: KNOWLEDGE/physics/dynamics-motion.md
 
   - 开发:
     - CS/index.md
