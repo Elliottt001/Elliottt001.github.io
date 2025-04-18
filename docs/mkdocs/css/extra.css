@@ -9,9 +9,3 @@
   .heart {
     animation: heart 1000ms infinite;
   }
-
-  .md-typeset .admonition,
-  .md-typeset details {
-    border-width: 0;
-    border-left-width: 4px;
-  }

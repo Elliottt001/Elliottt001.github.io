@@ -292,3 +292,10 @@
   .toc-tag-reports::before {
     content: "实验报告"
   }
+
+  .changelog-type-refactor {
+    background-color: #c63f94b0;
+  }
+  .changelog-type-refactor::before {
+      content: "文档重构";
+  }

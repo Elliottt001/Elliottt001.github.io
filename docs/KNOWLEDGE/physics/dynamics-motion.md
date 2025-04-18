@@ -160,7 +160,7 @@ $$I = v_c * m $$
 ![alt text](res/images/image-1.png)
 ![alt text](res/images/image-2.png)
 
-## 角动量$L$ / 力矩$M$ / 角动量定理&守恒
+## 角动量L / 力矩M / 角动量定理&守恒
 
 ### 角动量
 

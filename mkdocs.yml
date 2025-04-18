@@ -9,9 +9,12 @@ site_description: Zhang rz的个人网站
 nav:
   - 主页: 
     - index.md
-    - 倒计时: 
-      - 高考倒计时: countdown/gee/gee.html
-      - 生日倒计时: countdown/birthday/birthday.html
+    - 🕑更新记录: changelog.md
+    - 🕑倒计时: 
+      - ✍高考倒计时: countdown/gee/gee.html
+      - 🎂生日倒计时: countdown/birthday/birthday.html
+
+
 
   - 个人:
     - ME/index.md
@@ -322,7 +325,8 @@ plugins:
         exclude:
             - index.md
             - writeups/AAA.md
-  - changelog
+  - changelog:
+    - file: changelog.yml
   - minify:
       minify_html: true
 
