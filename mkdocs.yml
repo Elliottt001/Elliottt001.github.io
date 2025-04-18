@@ -326,7 +326,6 @@ plugins:
             - index.md
             - writeups/AAA.md
   - changelog:
-    - file: changelog.yml
   - minify:
       minify_html: true
 
