@@ -325,7 +325,7 @@ plugins:
         exclude:
             - index.md
             - writeups/AAA.md
-  - changelog:
+  - changelog
   - minify:
       minify_html: true
 
