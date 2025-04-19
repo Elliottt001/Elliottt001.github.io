@@ -176,6 +176,10 @@ $$M = r × F$$
 
 ### 角动量定理
 
+!!! success ""
+
+    这是质点的角动量定理
+
 $$M = \frac{dL}{dt}$$
 
 $$\int _{t_0}^t M dt = L - L_0$$
@@ -192,3 +196,89 @@ $$\int _{t_0}^t M dt称为冲量矩$$
 
     **也有分量式**
 
+## 刚体力学
+
+!!! success ""
+
+    $$\theta \Leftrightarrow x$$
+
+    $$\omega \Leftrightarrow v$$
+
+    $$\beta \Leftrightarrow a$$
+
+    ![alt text](image-8.png)
+    ![alt text](image-9.png)
+
+
+### 刚体定轴转动定律
+
+物理量：
+
+- 角位移 $\theta$
+- 角速度 $\omega$
+- 角加速度 $\beta$
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+!!! success ""
+
+    对于刚体，的转动，用这个
+
+$$定律内容：M = J \beta$$
+
+$J$ 为转动惯量
+
+$$J = \int r^2 dm$$
+
+$$平行轴定理 \; J = J_C + mh^2$$
+
+$$垂直轴定理 \; J_z = J_x + J_y$$
+
+![alt text](image-2.png)
+
+### 回转半径
+
+![alt text](image-3.png)
+
+### 能量
+
+$$E_k = \frac12 J \omega ^2$$
+
+![alt text](image-4.png)
+
+!!! info "记忆"
+
+    动能 $\frac12 m v^2$ $v = \omega r$ $J = mr^2$ 所以可以推过去，为什么用 $J$？因为是刚体，要积分，$J$ 就是积出来的
+
+$$E_k = \frac12 J_c \omega ^2 + \frac12 m v_c^2$$
+
+![alt text](image-5.png)
+
+??? info "证明"
+
+    ![alt text](image-6.png)
+
+$$力矩的功\; A = \int_{\theta_0}^\theta M d \theta$$
+
+$$力矩的功率\; P = M \omega$$
+
+$$动能定理\; A = \frac12 J \omega^2 - \frac12 J \omega_0^2$$
+
+## 动量
+
+$$L = J \omega$$
+
+![alt text](image-7.png)
+
+$$\int _{t_0}^t M dt = J\omega - J_0\omega_0$$
+
+### 刚体的平面运动
+
+刚体的平面运动均可分解成随质心的平动和绕质心轴的转动
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+$$动能 E_k = \frac12 mv_c^2 + \frac12 J \omega^2$$

@@ -1,4 +1,7 @@
 - "2025":
   - "2024-04-18":
     - newpage: 新增时间轴插件~
+    - newpage:
+      - text: 数理 > 大学物理 > 动力学
+      - herf: docs/KNOWLEDGE/physics/dynamics-motion.md
     - pageupdate: 主页修改，包括更改倒计时页面、加入部分emoji等
