@@ -87,6 +87,7 @@ nav:
         - 算法分析: CS/algorithm/fds/chap2.md
         - Chapter 3 ADT & Stack & Queue: CS/algorithm/fds/chap3.md
         - Chapter 4 Tree: CS/algorithm/fds/chap4.md
+        - Chapter 5 Graph: CS/algorithm/fds/graph.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
