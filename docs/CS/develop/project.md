@@ -1,5 +1,10 @@
 ## 项目结构
 
+### 参考博客文章
+
+[C++项目目录结构-CSDN](https://blog.csdn.net/Dontla/article/details/120137863)
+
+
 ### **1. 基础目录结构**
 
 ```bash
