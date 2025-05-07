@@ -52,7 +52,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted univers
 
 !!! success
 
-    以上内容见 <a href="https://www.bilibili.com/video/BV1A7XXYoErA/?spm_id_from=333.1387.homepage.video_card.click" title="我录制的相关B站视频" target="_blank">该视频</a>（这是HTML版本）
+    以上内容见<a href="https://www.bilibili.com/video/BV1A7XXYoErA/?spm_id_from=333.1387.homepage.video_card.click" title="我录制的相关B站视频" target="_blank">该视频</a>（这是HTML版本，用了 <code>"target=_blank</code> 标签使得在新标签页打开该链接）
     
     [该视频](https://www.bilibili.com/video/BV1A7XXYoErA/?spm_id_from=333.1387.homepage.video_card.click)（这是markdown版本）
 

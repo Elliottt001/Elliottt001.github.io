@@ -1,7 +1,28 @@
-# (づ￣ ³￣)づ Welcome !
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+    content="CosHub是张瑞喆的个人全域网站，主要包含本人在浙江大学学习期间的课堂笔记、心得感悟等内容">
+    <base target="_blank">
+    <title>张瑞喆的全域小站</title>
+    <style>
+        input[type="text"] {
+            width: 100%;
+            font-size: 17px;
+        }
+        textarea {
+            width: 100%;
+            font-size: 17px;
+        }
+    </style>
+</head>
 
+<body>
+<h1>(づ￣ ³￣)づ Welcome !</h1>
 
-Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/)
+欢迎光临张瑞喆的个人网站（笔记本） [CosHub](https://r-z-zhang-ai.github.io/)
 
 
 !!! note "" 
@@ -14,43 +35,26 @@ Hi！这里是 张瑞喆的个人网站 [CosHub](https://r-z-zhang-ai.github.io/
     </div>
     <br><br>
 
-<!-- HTML Snippet -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Input</title>
-    <style>
-        input[type="text"] {
-            width: 100%;
-            font-size: 17px;
+
+
+<h3>今日份计划：</h3>
+<textarea id="planInput" placeholder="请输入您的计划..." rows="5"></textarea>
+<u></u>
+<script>
+    // 获取textarea元素
+    const planInput = document.getElementById('planInput');
+    // 页面加载时，从localStorage中读取之前保存的计划
+    window.addEventListener('load', () => {
+        const savedPlan = localStorage.getItem('savedPlan');
+        if (savedPlan) {
+            planInput.value = savedPlan;
         }
-        textarea {
-            width: 100%;
-            font-size: 17px;
-        }
-    </style>
-</head>
-<body>
-    <h3>今日份计划：</h3>
-    <textarea id="planInput" placeholder="请输入您的计划..." rows="5"></textarea>
-    <u></u>
-    <script>
-        // 获取textarea元素
-        const planInput = document.getElementById('planInput');
-        // 页面加载时，从localStorage中读取之前保存的计划
-        window.addEventListener('load', () => {
-            const savedPlan = localStorage.getItem('savedPlan');
-            if (savedPlan) {
-                planInput.value = savedPlan;
-            }
-        });
-        // 当用户输入时，实时保存到localStorage
-        planInput.addEventListener('input', () => {
-            localStorage.setItem('savedPlan', planInput.value);
-        });
-    </script>
+    });
+    // 当用户输入时，实时保存到localStorage
+    planInput.addEventListener('input', () => {
+        localStorage.setItem('savedPlan', planInput.value);
+    });
+</script>
 </body>
 </html>
 
