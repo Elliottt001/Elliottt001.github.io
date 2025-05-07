@@ -20,12 +20,8 @@
 </head>
 
 <body>
-<h1>(づ￣ ³￣)づ Welcome !</h1>
-
-欢迎光临张瑞喆的个人网站（笔记本） [CosHub](https://r-z-zhang-ai.github.io/)
-
-
-!!! note "" 
+    <h1>(づ￣ ³￣)づ Welcome !</h1>
+    <p>欢迎光临张瑞喆的个人网站（笔记本）<a href="https://r-z-zhang-ai.github.io/"> CosHub</a></p>
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
         ~「Miracles happen every day」~
@@ -34,27 +30,24 @@
         只有疯狂到相信自己能改变世界的人才能改变世界。  ———— Steven Paul Jobs
     </div>
     <br><br>
-
-
-
-<h3>今日份计划：</h3>
-<textarea id="planInput" placeholder="请输入您的计划..." rows="5"></textarea>
-<u></u>
-<script>
-    // 获取textarea元素
-    const planInput = document.getElementById('planInput');
-    // 页面加载时，从localStorage中读取之前保存的计划
-    window.addEventListener('load', () => {
-        const savedPlan = localStorage.getItem('savedPlan');
-        if (savedPlan) {
-            planInput.value = savedPlan;
-        }
-    });
-    // 当用户输入时，实时保存到localStorage
-    planInput.addEventListener('input', () => {
-        localStorage.setItem('savedPlan', planInput.value);
-    });
-</script>
+    <h3>今日份计划：</h3>
+    <textarea id="planInput" placeholder="请输入您的计划..." rows="5"></textarea>
+    <u></u>
+    <script>
+        // 获取textarea元素
+        const planInput = document.getElementById('planInput');
+        // 页面加载时，从localStorage中读取之前保存的计划
+        window.addEventListener('load', () => {
+            const savedPlan = localStorage.getItem('savedPlan');
+            if (savedPlan) {
+                planInput.value = savedPlan;
+            }
+        });
+        // 当用户输入时，实时保存到localStorage
+        planInput.addEventListener('input', () => {
+            localStorage.setItem('savedPlan', planInput.value);
+        });
+    </script>
 </body>
 </html>
 
