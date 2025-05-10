@@ -61,6 +61,12 @@ nav:
       - 项目组织: CS/develop/project.md
       - Git规范: CS/develop/git.md
       - 编程风格: CS/develop/programming.md
+    - 前端开发:
+      - 学习笔记:
+        - 内容速查: CS/front-end/note/index.md
+        - web技术基础: CS/front-end/note/web/build.md
+        - HTML: CS/front-end/note/html/tag.md
+        - CSS: CS/front-end/note/css/css-note.md
     - 编程语言:
       - C/C++:
         - C语言: 
