@@ -83,7 +83,7 @@ predecessor / successor：前驱 / 后继
 
 ## 数据结构
 
-### 矩阵
+### 邻接矩阵
 
 用矩阵表示，$matrix[i][j]$ 为1则俩之间有连通，为0则不连通
 
@@ -97,8 +97,25 @@ predecessor / successor：前驱 / 后继
 
 ### 邻接链表 Agjacency list 
 
+!!! warning ""
+
+    每个节点代表一条边
+
+!!! success ""
+
+    每个节点维护一个链表，链表的每个指针代表一个边，即每个节点代表一条边。
+
+    相当于将邻接矩阵的每一行非零节点串起来，在节点的值处记录在矩阵中节点的位置，顺序互换无所谓
+
 ![alt text](image-14.png)
+
+对于有向图，上面的链表只记录了指出去的边有两种方法：
+
+- 加上一个入的边的链表，如下method1
+- 十字链表：一个节点中放俩指针，一个是指出去的，一个是指进来的。如下method2
+
 ![alt text](image-15.png)
+
 
 ![alt text](image-16.png)
 
@@ -113,9 +130,78 @@ predecessor / successor：前驱 / 后继
 
 ![alt text](image-17.png)
 
+
+!!! info "在图的链表表示"
+
+    **1. 邻接表（Adjacency List）**
+    - **适用场景**：有向图或无向图。
+    - **结构特点**：
+    - **顶点结点**：每个顶点维护一个链表，链表中每个结点表示一条从该顶点出发的边（对于无向图，则包含所有邻接顶点）。
+    - **边结点**：存储边的终点（对于有向图）或邻接顶点（对于无向图），以及可能的权重或其他信息。
+    - **示例**：
+        ```c
+        // 邻接表的边结点（有向图）
+        typedef struct AdjListNode {
+            int dest;               // 边的终点（邻接顶点）
+            int weight;            // 边权重
+            struct AdjListNode *next; // 指向下一个邻接边结点
+        } AdjListNode;
+
+        // 顶点结点
+        typedef struct VertexNode {
+            char data;                // 顶点数据
+            AdjListNode *head;       // 邻接链表头指针
+        } VertexNode;
+        ```
+    - **特点**：
+    - 每个边结点仅关联一个顶点（起点由顶点结点隐式确定，终点由边结点显式存储）。
+    - 对于无向图，每条边会被存储两次（分别在两个顶点的链表中）。
+
+    ---
+
+    **2. 邻接多重表（Adjacency Multilist）**
+    - **适用场景**：无向图。
+    - **结构特点**：
+    - **边结点**：每条边用一个结点表示，同时属于两个顶点的邻接链表（避免重复存储）。
+    - **边结点包含两个顶点信息**（如 `vertex1` 和 `vertex2`），并通过指针链接到两个顶点的链表中。
+    - **示例**：
+        ```c
+        // 邻接多重表的边结点（无向图）
+        typedef struct EdgeNode {
+            int v1, v2;              // 边的两个顶点
+            int weight;              // 边权重
+            struct EdgeNode *path1;  // 链接到顶点v1的邻接链表
+            struct EdgeNode *path2;  // 链接到顶点v2的邻接链表
+        } EdgeNode;
+
+        // 顶点结点
+        typedef struct VertexNode {
+            char data;                // 顶点数据
+            EdgeNode *head;           // 邻接链表头指针
+        } VertexNode;
+        ```
+    - **特点**：
+    - 每条边只存储一次，但通过 `path1` 和 `path2` 指针同时存在于两个顶点的链表中。
+    - 适合无向图，节省空间且避免数据冗余。
+
+    ---
+
+    **3. 十字链表（Orthogonal List）**
+    - **适用场景**：有向图（如你之前提到的十字链表）。
+    - **结构特点**：
+    - 边结点同时存在于起点顶点的**出边链表**和终点顶点的**入边链表**。
+    - 边结点明确存储起点（`tailVex`）和终点（`headVex`），并通过 `tLink` 和 `hLink` 指针链接。
+    - 示例见你之前的代码定义。
+
+
+
 ## 应用示例
 
 ### AOV network
+
+- 活动在节点上
+- 边表示活动间的依赖关系
+- 必须是有向无环图DAG
 
 ??? info "AOV network"
 
@@ -179,7 +265,11 @@ predecessor / successor：前驱 / 后继
     - 实际应用中常结合关键路径分析进行优化
 
 
-拓扑序列：前驱到后继地线性序列
+**拓扑序列**：将所有节点进行一个线性排序，要求是该顺序中**前驱必须在后继前面**。
+
+- 由于partial order（不是所有节点间都有依赖关系，如下图）的关系，可能有多个合法的拓扑序列。
+
+![alt text](image-27.png)
 
 第一个节点必须得是没有前驱的
 
@@ -292,7 +382,17 @@ predecessor / successor：前驱 / 后继
     - **动态图处理**：某些场景需支持动态添加顶点/边并维护拓扑序列（如实时任务调度系统）。
     - **加权扩展**：若需要处理带权依赖（如最短时间路径），需结合**AOE网络**和关键路径算法。
 
+例题：给出AOV，若有环报错，无环则给出一个拓扑序
+
+思想：
+
+- 每次在填入没有前驱的节点
+- 更新其后继节点的前驱计数：删除之前填入那个指出的边
+
 ![alt text](image-18.png)
+
+改进：开一个队列/栈存储入度为0的节点（因为上一个算法一开始遍历寻找入度为0使得复杂度高）
+
 ![alt text](image-19.png)
 
 !!! warning ""
@@ -310,6 +410,162 @@ predecessor / successor：前驱 / 后继
 一条路上边的权重求和，需要找一个确定的算法去找它
 
 存在负环：则无最短路，即这个环一直绕
+
+
+??? info "Pick & Relax"
+
+    - Pick : **选择顶点** 
+    - Relax :  **更新路径/权重** 
+
+    ---
+
+    **1. Pick 操作**
+
+    **定义**
+
+    - **Pick**（选择操作）：从候选集合中选择一个顶点，用于后续处理。具体选择策略取决于算法目标：
+    - **最短路径算法**（如 Dijkstra）：选择当前距离起点最近的未处理顶点。
+    - **最小生成树算法**（如 Prim）：选择当前距离生成树最近的顶点。
+
+    **作用**
+
+    - 确定算法的处理顺序，确保每一步都朝着最优解推进。
+    - 避免重复处理已确定最短路径或已加入生成树的顶点。
+
+    **示例**
+
+    - **Dijkstra 算法**：
+    ```python
+    def dijkstra(graph, start):
+        dist = {v: ∞ for v in graph.vertices}  # 初始化距离为无穷大
+        dist[start] = 0
+        visited = set()
+        priority_queue = PriorityQueue()       # 优先队列按距离排序
+        priority_queue.add(start, 0)
+        
+        while not priority_queue.empty():
+            u = priority_queue.extract_min()  # Pick 操作：选择距离最小的顶点
+            visited.add(u)
+            for v in u.neighbors:
+                relax(u, v, graph.edge(u, v))  # Relax 操作
+    ```
+
+    ---
+
+    **2. Relax 操作**
+
+    **定义**
+
+    - **Relax**（松弛操作）：检查是否可以通过某个顶点 `u` 到达顶点 `v` 的路径更短（或更优），如果是，则更新 `v` 的最短距离或权重。
+    - 数学描述（最短路径算法）：
+    ```plaintext
+    if dist[v] > dist[u] + weight(u, v):
+        dist[v] = dist[u] + weight(u, v)
+        prev[v] = u
+    ```
+
+    **作用**
+
+    - 动态更新顶点的最短路径估计值。
+    - 逐步逼近全局最优解。
+
+    **示例**
+
+    - **Dijkstra 算法中的 Relax**：
+    ```python
+    def relax(u, v, weight):
+        if dist[v] > dist[u] + weight:
+            dist[v] = dist[u] + weight
+            prev[v] = u
+            priority_queue.decrease_key(v, dist[v])  # 更新优先级队列
+    ```
+
+    ---
+
+    **3. Pick 和 Relax 的协同工作**
+
+    以 **Dijkstra 算法** 为例，两者的协作流程如下：
+    1. **初始化**：起点距离为 0，其他顶点距离为 ∞。
+    2. **Pick**：从优先队列中选择距离最小的顶点 `u`。
+    3. **Relax**：遍历 `u` 的所有邻接顶点 `v`，尝试通过 `u` 更新 `v` 的距离。
+    4. **重复**：直到所有顶点被处理。
+
+    **可视化流程**
+
+    ```
+    初始状态：
+    顶点 A(0), B(∞), C(∞), D(∞)
+
+    Pick A → Relax A→B 和 A→C：
+    顶点 A(0), B(2), C(5), D(∞)
+
+    Pick B → Relax B→C 和 B→D：
+    顶点 A(0), B(2), C(3), D(7)
+
+    Pick C → Relax C→D：
+    顶点 A(0), B(2), C(3), D(5)
+
+    Pick D → 结束。
+    ```
+
+    ---
+
+    **4. 不同算法中的 Pick 和 Relax**
+
+    **Dijkstra 算法**
+
+    - **Pick**：使用优先队列选择距离起点最近的未处理顶点。
+    - **Relax**：更新邻接顶点的最短距离。
+    - **适用场景**：无负权边的图。
+
+    **Bellman-Ford 算法**
+
+    - **Pick**：无显式选择操作，直接遍历所有边。
+    - **Relax**：对所有边进行松弛，重复 `V-1` 次。
+    - **适用场景**：含负权边的图（可检测负权环）。
+
+    **Prim 算法**
+    x   
+    - **Pick**：选择距离生成树最近的顶点。
+    - **Relax**：更新未加入生成树顶点的最小权重。
+    - **目标**：构建最小生成树。
+
+    ---
+
+    **5. 关键区别**
+    | **算法**       | **Pick 操作**                | **Relax 操作**                      | **时间复杂度**     |
+    |----------------|-----------------------------|-------------------------------------|-------------------|
+    | **Dijkstra**   | 优先队列选择最小距离顶点       | 更新邻接顶点的最短路径               | O((V+E) log V)   |
+    | **Bellman-Ford**| 无显式选择，遍历所有边         | 对所有边进行松弛操作，重复 V-1 次    | O(V·E)           |
+    | **Prim**       | 优先队列选择最小权重边的顶点    | 更新未加入生成树顶点的最小权重       | O((V+E) log V)   |
+
+    ---
+
+    **6. 代码示例（Dijkstra 算法）**
+    ```python
+    import heapq
+
+    def dijkstra(graph, start):
+        dist = {v: float('inf') for v in graph}
+        dist[start] = 0
+        heap = [(0, start)]
+        visited = set()
+        
+        while heap:
+            current_dist, u = heapq.heappop(heap)  # Pick 操作
+            if u in visited:
+                continue
+            visited.add(u)
+            
+            for v, weight in graph[u].items():
+                if dist[v] > dist[u] + weight:    # Relax 条件
+                    dist[v] = dist[u] + weight    # Relax 操作
+                    heapq.heappush(heap, (dist[v], v))
+        
+        return dist
+    ```
+
+
 
 ### 无权最短路
 
@@ -350,6 +606,89 @@ void Unweighted(Table T) {
 
 ![alt text](image-25.png)
 
+### 无环图
+
+用拓扑排序遍历节点，依此松弛即可
+
+例如：AOE网络
+
 ### 所有节点最短路
 
+!!! info ""
+
+    没细讲~
+
 ![alt text](image-26.png)
+
+### 网络流问题
+
+![alt text](image-28.png)
+
+- 流量图
+- 残量图
+
+每次松弛时：残量图加上反向边
+
+
+### 最小生成树
+
+![alt text](image-29.png)
+
+生成树：图的所有节点，边的子集
+
+要求这个图本身是连通的
+
+最小生成树：图的所有节点，边的子集，且边的权重和最小
+
+最小生成树的性质：
+
+- 生成树的边数为 $n - 1$，其中 $n$ 为节点数
+- 生成树是连通的
+- 生成树是无环的
+
+生成算法：
+
+- Prim算法：核心是贪心算法，类似dijkstra算法
+    - 把节点连成树
+    1. 从一个节点开始
+    2. 每次选择一个节点，使得其和已经有的集合距离最小
+    3. 直到所有节点都在树中
+
+- Kruskal算法：核心是并查集
+    - 把小树拼成大数
+    1. 每次找出权重最小边
+        - 将所有边按权重从小到大排序，从小到大遍历 
+        - 把边建成最小堆，每次delete min
+    2. 判断是否会形成环
+        - 用并查集find判断
+    3. 如果不会形成环，则加入树中
+        - 用并查集union
+    4. 直到所有节点都在树中
+
+![alt text](image-31.png)
+
+## 深度优先搜索 DFS
+
+![alt text](image-32.png)
+
+- 如果连通图，一个 DFS
+- 如果非连通图，外面加一个遍历all节点
+
+关节点：去掉这个就不连通了
+
+双连通：去掉1个节点还是连通图
+
+k连通：去掉 k - 1 个还联通
+
+双连通组件：双连通的最大的子图    
+
+一个图的所有双连通组件的边是对原图边集合的划分
+
+### 寻找双连通组件
+
+![alt text](image-33.png)
+
+1. 将一个图做 DFS，虚线画出原图中存在而树中不存在的边
+2. 得到的树中：
+    - 根节点是关节点
+    - 这个节点的祖先和后辈没有用虚线相连则是关节点，即，向下走几步然后可以跳回高点

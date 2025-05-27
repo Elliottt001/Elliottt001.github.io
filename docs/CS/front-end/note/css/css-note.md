@@ -1,4 +1,43 @@
+[MDN - CSS起始页](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Styling_basics)
+
 [MDN - 层叠、优先级、继承](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+
+HTML 中引入 CSS 的方式：
+
+1. **内联样式**：直接在 HTML 元素中使用 `style` 属性定义样式。
+
+   ```html
+   <h1 style="color: blue;">Hello World</h1>
+   ```
+2. **内部样式表**：在 HTML 文档的 `<head>` 部分使用 `<style>` 标签定义样式。
+
+   ```html
+    <head>
+      <style>
+        h1 { color: blue; }
+      </style>
+    </head>
+    ```
+3. **外部样式表**：将 CSS 代码放在单独的 `.css` 文件中，并在 HTML 文档中通过 `<link>` 标签引入。
+
+    ```html
+    <link rel = "stylesheet" href = "CSS文件路径">
+    ```
+
+![alt text](image-5.png)
+///caption
+盒模型示意图
+///
+
+![alt text](image-6.png)
+///caption
+flex 
+///
+
+---
+---
+---
+
 
 ## 选择器
 
@@ -405,6 +444,7 @@ div#sidebar a {}     /* 权重：0,1,0,2 */
 
 ## 级联层
 
+
 !!! warning ""
 
     1. 先前的层中的 important 样式比后面的层以及为在层中声明的 important 样式优先级要高。
@@ -505,3 +545,7 @@ div#sidebar a {}     /* 权重：0,1,0,2 */
 ### **6. 与 `!important` 的交互**
 - **层内 `!important`**：在层内部，`!important` 依然有效，但优先级仍受层顺序控制。
 - **跨层覆盖**：高层级的 `!important` 可以覆盖低层级的 `!important`。
+
+## 颜色
+
+[CSS渐变生成器](https://cssgradient.io/)

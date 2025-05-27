@@ -4,5 +4,8 @@
           "string.h": "c",
           "math.h": "c",
           "stdlib.h": "c"
-     }
+     },
+     "github.copilot.excludeFiles": [
+          "**/docs/PUBLIC/meeting-yzz.md"
+     ]
 }

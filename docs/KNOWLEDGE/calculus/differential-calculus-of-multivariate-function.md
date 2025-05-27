@@ -730,7 +730,7 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
     \end{cases}
     \]
 
-    解得 \( (x, y, \lambda) \)，其中 \( (x, y) \) 即为极值怀疑点，再进一步算函数值得到最大值 / 最小值。
+    解得 \( (x, y, \lambda) \)，其中 \( (x, y) \) 即为极值怀疑点，如果算最大最小值：再进一步算函数值得到最大值 / 最小值。
 
 
 
@@ -742,22 +742,27 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
     - **几何意义**：在平面上，\( g(x, y) = 0 \) 定义了一条曲线，极值点必须在这条曲线上（如直线、圆等）。
 
     2. **多约束**：  
-    如果有多个约束条件，例如：  
-    \[
+    如果有多个约束条件，例如： 
+
+    $$
     \begin{cases}
     g_1(x, y, z) = 0 \\
     g_2(x, y, z) = 0
     \end{cases}
-    \]  
+    $$ 
+
     此时约束条件构成一个方程组，变量必须同时满足所有方程。  
     - **几何意义**：在三维空间中，两个约束方程的交集可能是一条曲线或一个点。
 
-    - 具体实例：如果有 \( m \) 个约束条件 \( g_1 = 0, g_2 = 0, \dots, g_m = 0 \)，则需引入 \( m \) 个拉格朗日乘数 \( \lambda_1, \lambda_2, \dots, \lambda_m \)，构造拉格朗日函数：
-    \[
+    - 具体实例：如果有 \( m \) 个约束条件 \( g_1 = 0, g_2 = 0, \dots, g_m = 0 \)，则需引入 \( m \) 个拉格朗日乘数 $ \lambda_1, \lambda_2, \dots, \lambda_m $ ，构造拉格朗日函数：
+
+    $$
     \mathcal{L}(x, y, z, \dots, \lambda_1, \lambda_2, \dots) = f(x, y, z, \dots) - \sum_{i=1}^m \lambda_i \cdot g_i(x, y, z, \dots)
-    \]
+    $$
+
     - 通过求偏导并解方程组（方程数量 = 变量数 + 约束数）：
-        \[
+
+        $$
         \begin{cases}
         \frac{\partial \mathcal{L}}{\partial x} = 0 \\
         \frac{\partial \mathcal{L}}{\partial y} = 0 \\
@@ -766,7 +771,7 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
         g_2(x, y, \dots) = 0 \\
         \vdots
         \end{cases}
-        \]
+        $$
 
 
 
@@ -776,9 +781,16 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 
     例如，$f(x) = \sqrt{x^2 + y^2 + z^2}$，则用 $g(x) = x^2 + y^2 + z^2$，最后求出来结果还是代入 $f$。再如 $|z| \to z^2$
 
+    !!! success ""
+
+        曲线到 $xy$ 平面的距离最大值：距离是 $|z|$, 即 $f(x, y, z) = |z|$，约束条件是曲线方程（两个曲面联立，即双约束条件）
+
 !!! success "如果限制条件是不等式"
 
-    有一种可能是：直接对原函数（不带限制条件）求极值怀疑点，发现不在限制范围内，则内部没有极值怀疑点，则在边界，转换为等式
+    直接对原函数（不带限制条件）求极值怀疑点，
+    
+    - 如果发现不在限制范围内，则内部没有极值怀疑点，则在边界，转换为等式
+    - 如果有，那个就是极值怀疑点
     
 !!! success "其他曲线"
 
@@ -815,3 +827,46 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 ![alt text](res/images/image-84_2_1.png)
 ![alt text](res/images/image-85_2_1.png)
 ![alt text](res/images/image-86_2_1.png)
+
+
+## 多元偏导数在几何中的应用
+
+### 空间曲线方程的切线
+
+割线方向向量的极限，割线方向向量为 $(\delta x, \delta y, \delta z)$，同除 $\delta t$ （参数），得到的就是三个偏导数。
+
+切线方程为：
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+!!! success ""
+
+    先化成参数方程
+
+    !!! warning ""
+
+        参数不一定是特殊的字母例如 $t$ $a$ $u$ $v$，可以是 $x$ 或者 $y$，只要是一个 **几个方程都包含的** 变量就行
+
+### 空间曲面的切平面和法线
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+给出 $z = f(x, y)$ 平面方程
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+!!! success "空间曲线用一般式（两曲面联立）表示求切线/法平面"
+
+    1. 两曲面切平面交线为切线
+    2. 两曲面法向量叉乘结果为法平面法向量
+
+    !!! info "原因"
+
+        曲线在曲面上，则曲线的切线在曲面的切面上
+
+
+![alt text](image-6.png)

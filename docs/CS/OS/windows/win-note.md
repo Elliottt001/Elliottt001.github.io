@@ -1,5 +1,142 @@
 ## 《万物互联》
 
+
+要通过SSH从Ubuntu远程控制Windows电脑并使用密钥登录，请按照以下步骤操作：
+
+---
+
+### **一、在Windows上安装OpenSSH服务器**
+1. **以管理员身份打开PowerShell**
+   - 右键开始菜单 → 选择 **Windows PowerShell (管理员)**
+
+2. **安装OpenSSH服务器**
+   ```powershell
+   # 检查是否已安装OpenSSH
+   Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+
+   # 安装OpenSSH服务器（如未安装）
+   Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+   ```
+
+3. **启动并配置SSH服务**
+   ```powershell
+   # 启动SSH服务
+   Start-Service sshd
+
+   # 设置SSH服务开机自启
+   Set-Service -Name sshd -StartupType Automatic
+
+   # 验证服务状态
+   Get-Service sshd
+   ```
+
+---
+
+### **二、生成SSH密钥对（在Ubuntu上操作）**
+1. **生成密钥对**
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+   - 按提示选择保存路径（默认 `~/.ssh/id_ed25519`）
+   - 可选：设置密钥密码（增强安全性）
+
+2. **查看公钥内容**
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+   复制输出的公钥内容（以 `ssh-ed25519` 开头）。
+
+---
+
+### **三、将公钥部署到Windows**
+1. **在Windows上创建 `.ssh` 目录**
+   - 打开文件资源管理器 → 输入路径：
+     ```
+     %USERPROFILE%\.ssh
+     ```
+   - 如果不存在，手动创建文件夹并命名为 `.ssh`
+
+2. **创建 `authorized_keys` 文件**
+   - 在 `.ssh` 文件夹内新建文件 `authorized_keys`
+   - 将Ubuntu生成的公钥内容粘贴到此文件中
+   - 保存文件
+
+3. **设置文件权限（关键步骤！）**
+   - 右键 `authorized_keys` → 属性 → 安全 → 高级
+   - 禁用继承 → 删除所有权限 → 添加当前用户并赋予 **完全控制**
+   - 确保 `.ssh` 文件夹权限相同
+
+---
+
+### **四、配置Windows SSH服务器**
+1. **编辑SSH配置文件**
+   - 用记事本以管理员身份打开 `C:\ProgramData\ssh\sshd_config`
+   - 修改以下参数：
+     ```ini
+     PubkeyAuthentication yes
+     AuthorizedKeysFile .ssh/authorized_keys
+     PasswordAuthentication no  # 禁用密码登录（可选）
+     ```
+
+2. **重启SSH服务**
+   ```powershell
+   Restart-Service sshd
+   ```
+
+---
+
+### **五、配置Windows防火墙**
+1. **允许SSH端口（默认22）**
+   - 控制面板 → Windows Defender 防火墙 → 高级设置
+   - 入站规则 → 新建规则 → 端口 → TCP 22 → 允许连接
+
+---
+
+### **六、从Ubuntu连接测试**
+```bash
+ssh -i ~/.ssh/id_ed25519 your_windows_username@windows_ip
+```
+- 替换 `your_windows_username` 为Windows用户名
+- 替换 `windows_ip` 为Windows机器的IP地址
+
+---
+
+### **常见问题排查**
+- **权限错误**：确保Windows上 `.ssh` 和 `authorized_keys` 的权限正确。
+- **连接被拒绝**：检查Windows防火墙是否放行22端口，或SSH服务是否运行。
+- **密钥认证失败**：使用 `ssh -v` 查看详细日志，确认公钥路径正确。
+
+---
+---
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 !!! success ""
 
     成功将WSL、虚拟机、Windows主机互联，实现排列组合操作

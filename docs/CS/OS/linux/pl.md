@@ -222,3 +222,43 @@ go get golang.org/x/tools/cmd/...
 `wget` 步骤连不上网，代理没开的问题
 
 解决方案详见[《Linux备忘录》](https://r-z-zhang-ai.github.io/CS/OS/linux/linux-note/)
+
+
+## PostgreSQL
+
+```shell
+
+# 理论上首先要添加官方仓库。鉴于你已经在使用 linux 系统了，我想你能自己搞定
+# 安装
+sudo apt update
+sudo apt install postgresql-15
+# 启动服务
+sudo systemctl start postgresql
+```
+
+`sudo apt install postgresql-15` 时候报错
+
+![alt text](image.png)
+
+问ds：
+
+```shell
+
+# 安装依赖项以添加仓库
+sudo apt install wget gnupg2
+
+# 下载并导入 PostgreSQL 签名密钥
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/keyrings/postgresql.asc
+
+# 添加仓库（替换 <UBUNTU_CODENAME> 为你的系统代号，如 jammy、focal 等）
+# 使用以下命令自动获取系统代号
+UBUNTU_CODENAME=$(lsb_release -cs)
+echo "deb [signed-by=/etc/apt/keyrings/postgresql.asc] http://apt.postgresql.org/pub/repos/apt ${UBUNTU_CODENAME}-pgdg main" | sudo tee /etc/apt/sources.list.d/postgresql.list
+```
+
+再安装
+
+```shell
+sudo apt install postgresql-15
+```
