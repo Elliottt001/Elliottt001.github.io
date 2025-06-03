@@ -10,6 +10,7 @@
    - 右键开始菜单 → 选择 **Windows PowerShell (管理员)**
 
 2. **安装OpenSSH服务器**
+
    ```powershell
    # 检查是否已安装OpenSSH
    Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'

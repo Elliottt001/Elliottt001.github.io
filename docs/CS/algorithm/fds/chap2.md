@@ -19,7 +19,7 @@
 
 ??? info "运行次数分析"
 
-	![alt text](res/images/image.png)
+	![alt text](res/images/image_1.png)
 
 	1. 外层循环 (`for(i = 0; i < rows; i++)`)
 
@@ -82,7 +82,7 @@
 	O(rows \cdot cols)
 	\]
 
-	![alt text](res/images/image-1.png)
+	![alt text](res/images/image-1_1.png)
 
 	递归的执行次数：分析出其实际上是执行加法，总共n个数，加了n次
 
@@ -126,13 +126,13 @@ $T(n)$ 代表执行次数，取其 $n$ 最高次项并省略系数，得出时�
 
 [b站-时间复杂度](https://www.bilibili.com/video/BV1nE411x7qP/?spm_id_from=333.337.search-card.all.click&vd_source=b14909f255fe42946743657320d2f59a)
 
-![alt text](res/images/image-2.png)
+![alt text](res/images/image-2_1.png)
 
 OOM：内存超出限制
 
 memory：内存，有关空间复杂度
 
-![alt text](res/images/image-3.png)
+![alt text](res/images/image-3_1.png)
 
 **空间换时间**，把之前算的结果存下来
 

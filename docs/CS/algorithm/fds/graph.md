@@ -14,13 +14,13 @@ $$G = (E, V)$$
 
 完全图complete graph：边满
 
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 子图subgraph：顶点集子集 + 边集子集，要匹配
 
 相邻adjacent / incident
 
-![alt text](image-5.png)
+![alt text](res/images/image-5.png)
 
 路径path：从一个顶点到另一个
 
@@ -42,7 +42,7 @@ $simple \; \; path$：这个路径上没有重复的节点，收尾相接中间�
 
     DAG：有向无环图
 
-    ![alt text](image-6.png)
+    ![alt text](res/images/image-6.png)
 
     这个图的节点从左到右设为1、2、3，1可以直接到3，但是3不能直接到1，所以无环
 
@@ -54,13 +54,13 @@ $simple \; \; path$：这个路径上没有重复的节点，收尾相接中间�
 
     强连通和弱连通都是针对有向图的概念
 
-    ![alt text](image-9.png)
+    ![alt text](res/images/image-9.png)
 
-    ![alt text](image-7.png)
+    ![alt text](res/images/image-7.png)
 
     这不是强连通，没有顶点可以走到0节点
 
-    ![alt text](image-8.png)
+    ![alt text](res/images/image-8.png)
 
     这就强连通了
 
@@ -68,8 +68,8 @@ $simple \; \; path$：这个路径上没有重复的节点，收尾相接中间�
 
 !!! info ""
 
-    ![alt text](image-10.png)
-    ![alt text](image-11.png)
+    ![alt text](res/images/image-10.png)
+    ![alt text](res/images/image-11.png)
 
 度数degree：跟一个顶点相邻的节点数
 
@@ -89,11 +89,11 @@ predecessor / successor：前驱 / 后继
 
 无向图是关于对角线对称，则只存下三角
 
-![alt text](image-12.png)
+![alt text](res/images/image-12.png)
 
 节点度数计算
 
-![alt text](image-13.png)
+![alt text](res/images/image-13.png)
 
 ### 邻接链表 Agjacency list 
 
@@ -107,17 +107,17 @@ predecessor / successor：前驱 / 后继
 
     相当于将邻接矩阵的每一行非零节点串起来，在节点的值处记录在矩阵中节点的位置，顺序互换无所谓
 
-![alt text](image-14.png)
+![alt text](res/images/image-14.png)
 
 对于有向图，上面的链表只记录了指出去的边有两种方法：
 
 - 加上一个入的边的链表，如下method1
 - 十字链表：一个节点中放俩指针，一个是指出去的，一个是指进来的。如下method2
 
-![alt text](image-15.png)
+![alt text](res/images/image-15.png)
 
 
-![alt text](image-16.png)
+![alt text](res/images/image-16.png)
 
 !!! success ""
 
@@ -128,7 +128,7 @@ predecessor / successor：前驱 / 后继
 
 边的权重
 
-![alt text](image-17.png)
+![alt text](res/images/image-17.png)
 
 
 !!! info "在图的链表表示"
@@ -269,7 +269,7 @@ predecessor / successor：前驱 / 后继
 
 - 由于partial order（不是所有节点间都有依赖关系，如下图）的关系，可能有多个合法的拓扑序列。
 
-![alt text](image-27.png)
+![alt text](res/images/image-27.png)
 
 第一个节点必须得是没有前驱的
 
@@ -389,11 +389,11 @@ predecessor / successor：前驱 / 后继
 - 每次在填入没有前驱的节点
 - 更新其后继节点的前驱计数：删除之前填入那个指出的边
 
-![alt text](image-18.png)
+![alt text](res/images/image-18.png)
 
 改进：开一个队列/栈存储入度为0的节点（因为上一个算法一开始遍历寻找入度为0使得复杂度高）
 
-![alt text](image-19.png)
+![alt text](res/images/image-19.png)
 
 !!! warning ""
 
@@ -403,7 +403,7 @@ predecessor / successor：前驱 / 后继
 
     [数据结构基础（本） 2025-04-09第7-8节 1小时25分钟处](https://classroom.zju.edu.cn/livingroom?course_id=69838&sub_id=1508064&tenant_code=112)
 
-![alt text](image-20.png)
+![alt text](res/images/image-20.png)
 
 ## 最短路
 
@@ -569,7 +569,7 @@ predecessor / successor：前驱 / 后继
 
 ### 无权最短路
 
-![alt text](image-21.png)
+![alt text](res/images/image-21.png)
 
 标数字，确认
 
@@ -595,16 +595,16 @@ void Unweighted(Table T) {
 
 优化：用队列储存刚改过的节点
 
-![alt text](image-22.png)
+![alt text](res/images/image-22.png)
 
 ### 有权最短路
 
-![alt text](image-23.png)
-![alt text](image-24.png)
+![alt text](res/images/image-23.png)
+![alt text](res/images/image-24.png)
 
 [B站图文讲解](https://www.bilibili.com/video/BV1zz4y1m7Nq/?spm_id_from=333.337.search-card.all.click&vd_source=b14909f255fe42946743657320d2f59a)
 
-![alt text](image-25.png)
+![alt text](res/images/image-25.png)
 
 ### 无环图
 
@@ -618,11 +618,11 @@ void Unweighted(Table T) {
 
     没细讲~
 
-![alt text](image-26.png)
+![alt text](res/images/image-26.png)
 
 ### 网络流问题
 
-![alt text](image-28.png)
+![alt text](res/images/image-28.png)
 
 - 流量图
 - 残量图
@@ -632,7 +632,7 @@ void Unweighted(Table T) {
 
 ### 最小生成树
 
-![alt text](image-29.png)
+![alt text](res/images/image-29.png)
 
 生成树：图的所有节点，边的子集
 
@@ -665,11 +665,11 @@ void Unweighted(Table T) {
         - 用并查集union
     4. 直到所有节点都在树中
 
-![alt text](image-31.png)
+![alt text](res/images/image-31.png)
 
 ## 深度优先搜索 DFS
 
-![alt text](image-32.png)
+![alt text](res/images/image-32.png)
 
 - 如果连通图，一个 DFS
 - 如果非连通图，外面加一个遍历all节点
@@ -686,9 +686,44 @@ k连通：去掉 k - 1 个还联通
 
 ### 寻找双连通组件
 
-![alt text](image-33.png)
+![alt text](res/images/image-33.png)
 
 1. 将一个图做 DFS，虚线画出原图中存在而树中不存在的边
 2. 得到的树中：
     - 根节点是关节点
-    - 这个节点的祖先和后辈没有用虚线相连则是关节点，即，向下走几步然后可以跳回高点
+    - 这个节点的祖先和后辈**没有**用虚线相连则是关节点（拿掉它则上下断开），即，向下走几步然后可以跳回高点
+
+low number：从这个节点出发，能到达的最小的节点编号
+
+![alt text](res/images/image-34.png)
+
+![alt text](res/images/image-35.png)
+
+low number 和往下走能跳上去是等价的
+
+### 欧拉回路（一笔画）
+
+- 欧拉路径：起终点不同
+- 欧拉回路：起终点相同
+
+![alt text](res/images/image-36.png)
+
+- 欧拉回路存在：图中所有点的度数都偶数
+- 欧拉路径存在：图中起终点度数奇数，其他点的度数都偶数
+
+![alt text](res/images/image-37.png)
+
+算法：
+
+- 法一：每次找回路，到没有边可走停下，将其都维持成链表，最后合并
+
+- 法二：每次记录回溯的边到一个链表
+
+![alt text](res/images/image-38.png)
+
+
+### 哈密尔顿回路
+
+每个节点走一遍不重复
+
+没讲

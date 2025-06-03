@@ -318,9 +318,9 @@ levelorder需要一个queue
 
 N node 的二叉树有几个 NULL：N + 1
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
-![alt text](image-1.png)
+![alt text](res/images/image-1.png)
 
 - 每个节点贡献两个分支，共 2N 个，实实在在的边为 N - 1，故 N + 1
 

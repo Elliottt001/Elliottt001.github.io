@@ -221,7 +221,7 @@ victorywang712 noughq
 ![alt text](res/images/image-21.png)
 ![alt text](res/images/image-20.png)
 
-两个表示的关系：不是对偶不是取反，没有关系
+两式等价
 
 **对应的电路**
 
@@ -365,6 +365,9 @@ G = 10
 [b站](https://www.bilibili.com/video/BV1Nq4y1k71R?spm_id_from=333.337.search-card.all.click)
 
 自由项：并非所有项都会在输入中发生，实际上填入X，但是我们可以尽可能规定他为1（最小项）/0（最大项）进行优化
+
+![alt text](image-42.png)
+![alt text](image-41.png)
 
 ![alt text](res/images/image-45.png)
 ![alt text](res/images/image-46.png)

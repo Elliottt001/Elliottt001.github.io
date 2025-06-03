@@ -163,4 +163,4 @@ recursion：编译器自动转换成带标号的
 长度：头减尾/定义长度变量
 
 
-![alt text](image-2.png)
+![alt text](res/images/image-2.png)
