@@ -15,8 +15,6 @@ nav:
       - ✍高考倒计时: countdown/gee/gee.html
       - 🎂生日倒计时: countdown/birthday/birthday.html
 
-
-
   - 个人:
     - ME/index.md
     - 思考: 
@@ -392,13 +390,13 @@ markdown_extensions:
 
 
 extra_css:
-
+  - stylesheets/css/card.css
+  - stylesheets/css/flink.css
   - mkdocs/css/custom.css
   - mkdocs/css/emoji.css
   - mkdocs/css/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  - stylesheets/css/card.css
-  - stylesheets/css/flink.css
+
   # - https://unpkg.com/katex@0/dist/katex.min.css
   # - attr_list
   # - md_in_html
