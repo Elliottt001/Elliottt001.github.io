@@ -10,7 +10,7 @@ nav:
   - 主页: 
     - 封面: index.md
     - 🕑更新记录: changelog.md
-    - 友链: friends.md
+    - 友链: friends.html
     - 🕑倒计时: 
       - ✍高考倒计时: countdown/gee/gee.html
       - 🎂生日倒计时: countdown/birthday/birthday.html
