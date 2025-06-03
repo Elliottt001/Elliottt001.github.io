@@ -8,8 +8,9 @@ site_description: Zhang rz的个人网站
 # [Navigtion]
 nav:
   - 主页: 
-    - index.md
+    - 主页: index.md
     - 🕑更新记录: changelog.md
+    - 友链: friends.md
     - 🕑倒计时: 
       - ✍高考倒计时: countdown/gee/gee.html
       - 🎂生日倒计时: countdown/birthday/birthday.html
