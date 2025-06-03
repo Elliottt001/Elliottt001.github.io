@@ -8,7 +8,7 @@ site_description: Zhang rz的个人网站
 # [Navigtion]
 nav:
   - 主页: 
-    - 主页: index.md
+    - 封面: index.md
     - 🕑更新记录: changelog.md
     - 友链: friends.md
     - 🕑倒计时: 
@@ -397,6 +397,8 @@ extra_css:
   - mkdocs/css/emoji.css
   - mkdocs/css/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - stylesheets/css/card.css
+  - stylesheets/css/flink.css
   # - https://unpkg.com/katex@0/dist/katex.min.css
   # - attr_list
   # - md_in_html
