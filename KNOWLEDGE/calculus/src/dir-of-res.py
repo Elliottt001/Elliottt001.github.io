@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Markdown 文件路径
-markdown_file = "/home/rzzhang/github/mkdocs-site/docs/KNOWLEDGE/calculus/differential-calculus-of-multivariate-function.md"
+markdown_file = "/home/rzzhang/github/mkdocs-site/docs/KNOWLEDGE/calculus/vector-algebra.md"
 # 图片目标路径
 target_image_dir = "res/images"
 
