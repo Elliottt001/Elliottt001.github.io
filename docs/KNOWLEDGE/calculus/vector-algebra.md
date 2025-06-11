@@ -1,4 +1,4 @@
-![Image title](res/images/image-14_0.png){ width="300" }
+![Image title](res/images/image-14_0_1.png){ width="300" }
 /// caption
 Harvard University
 ///
@@ -20,19 +20,19 @@ Harvard University
 ## 空间直角坐标系与矢量的坐标分解
 
 
-![alt text](e1336b2d77c158e1f4cc391ffeca263.png)
+![alt text](res/images/e1336b2d77c158e1f4cc391ffeca263.png)
 /// caption
 两个集合的直积和平面的定义
 ///
 
-![alt text](409fcf3f5562b01d1ee79caf7130a09.png)
-![alt text](90ee23b94cef433cfe9bff8ed04172c.png)
+![alt text](res/images/409fcf3f5562b01d1ee79caf7130a09.png)
+![alt text](res/images/90ee23b94cef433cfe9bff8ed04172c.png)
 
-![alt text](d07affd855b01ecf26d4a18cea866f2.png)
+![alt text](res/images/d07affd855b01ecf26d4a18cea866f2.png)
 
-![alt text](283b5e27f8ed234fa182c368b5c80c0.png)
+![alt text](res/images/283b5e27f8ed234fa182c368b5c80c0.png)
 
-![alt text](e54cf20b326fd64cb9dfd552cd8d566.png)
+![alt text](res/images/e54cf20b326fd64cb9dfd552cd8d566.png)
 
 不同顺序的混合积的正负号关系用三阶行列式性质来记
 
