@@ -100,7 +100,8 @@ nav:
         - WSL备忘录: CS/OS/linux/wsl-record.md
         - 虚拟机备忘录: CS/OS/linux/vm-record.md
         - WSL操作指南: CS/OS/linux/wsl-note.md
-      - Windows备忘录: CS/OS/windows/win-note.md
+      - Windows物理机一: CS/OS/windows/win-note.md
+      - Windows物理机二: CS/OS/windows/win1.md
     - 网络安全:
       - 基础: CS/IS/basic.md
     - 区块链:
