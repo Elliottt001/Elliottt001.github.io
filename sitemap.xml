@@ -77,11 +77,7 @@
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/Misc/Front%20End/</loc>
-         <lastmod>2025-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/Misc/Hardware/</loc>
+         <loc>https://r-z-zhang-AI.github.io/CS/Misc/hardware/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
@@ -93,11 +89,11 @@
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/Misc/things-i-wanna-know/</loc>
+         <loc>https://r-z-zhang-AI.github.io/CS/Misc/shortcuts/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/Misc/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+         <loc>https://r-z-zhang-AI.github.io/CS/Misc/things-i-wanna-know/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
@@ -202,10 +198,6 @@
     </url>
     <url>
          <loc>https://r-z-zhang-AI.github.io/CS/Tools/shell/</loc>
-         <lastmod>2025-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/Tools/try/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
@@ -325,6 +317,10 @@
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
+         <loc>https://r-z-zhang-AI.github.io/CS/front-end/note/web/UIUX/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
          <loc>https://r-z-zhang-AI.github.io/CS/front-end/note/web/build/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
@@ -338,10 +334,6 @@
     </url>
     <url>
          <loc>https://r-z-zhang-AI.github.io/CS/pl/C_Cpp/C/linkedList/</loc>
-         <lastmod>2025-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://r-z-zhang-AI.github.io/CS/pl/Python/Python%20Note/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
@@ -378,6 +370,10 @@
     </url>
     <url>
          <loc>https://r-z-zhang-AI.github.io/CS/pl/Python/py-sequence/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://r-z-zhang-AI.github.io/CS/pl/Python/python-note/</loc>
          <lastmod>2025-07-02</lastmod>
     </url>
     <url>
