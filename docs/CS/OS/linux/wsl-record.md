@@ -481,14 +481,16 @@ sudo systemctl enable v2raya
 ---
 
 步骤四: 设置 WSL 使用代理
+
 在 WSL 中设置环境变量，使 WSL 使用 `v2rayA` 的代理：
 
-    1. 获取 `v2rayA` 的代理地址（默认是 `http://127.0.0.1:20171`）。
-    2. 在 WSL 中运行以下命令：
-    ```bash
-    export http_proxy=http://127.0.0.1:20171
-    export https_proxy=http://127.0.0.1:20171
-    ```
+  1. 获取 `v2rayA` 的代理地址（默认是 `http://127.0.0.1:20171`）。
+  2. 在 WSL 中运行以下命令：
+  
+  ```bash
+  export http_proxy=http://127.0.0.1:20171
+  export https_proxy=http://127.0.0.1:20171
+  ```
 
 步骤五: 测试代理是否生效
    ```bash

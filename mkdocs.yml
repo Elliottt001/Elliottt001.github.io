@@ -66,6 +66,11 @@ nav:
         - web技术基础: CS/front-end/note/web/build.md
         - HTML: CS/front-end/note/html/tag.md
         - CSS: CS/front-end/note/css/css-note.md
+    - 后端开发:
+      - 学习笔记:
+        - 数据库: CS/back-end/note/db/db.md
+        - Golang: none.md
+        - Java: CS/back-end/note/java/methods.md
     - 编程语言:
       - C/C++:
         - C语言: 
@@ -81,6 +86,8 @@ nav:
         - 面向对象: CS/pl/Python/py-oop.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
+      - Go:
+        - GORM: CS/pl/go/db.md
     - 计算机系统:
       - 数字逻辑设计: 
         - Chapter 1 数字系统与信息: CS/system/digital-design/chap1.md
@@ -100,10 +107,15 @@ nav:
         - WSL备忘录: CS/OS/linux/wsl-record.md
         - 虚拟机备忘录: CS/OS/linux/vm-record.md
         - WSL操作指南: CS/OS/linux/wsl-note.md
+        - GitHub Copilot: CS/OS/linux/github-copilot.md
       - Windows物理机一: CS/OS/windows/win-note.md
       - Windows物理机二: CS/OS/windows/win1.md
     - 网络安全:
-      - 基础: CS/IS/basic.md
+      - 首页: CS/CTF/index.md
+      - 基础: CS/CTF/basic.md
+      - CTF&AAA简介: CS/CTF/ctf-and-aaa.md
+      - 实验报告:
+        - lab0: docs/CS/CTF/lab0.md
     - 区块链:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
@@ -118,6 +130,11 @@ nav:
       - DL: CS/AI/DL.md
       - ML: CS/AI/ML.md
       - Turing: CS/AI/Turing.md
+    - X-lab 相关:
+      - 创始人王振阳分享 - X-lab简介: LAB/x-lab.md
+      - 张博学长分享 - 思维高度与前沿创新: LAB/zhangbo.md
+      - 任炜烨学长 - 企业级开发经验分享: LAB/rwy.md
+      - 01学长分享 - 科研深造之路: LAB/01.md
     - 实用工具:
       - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
