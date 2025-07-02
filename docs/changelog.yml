@@ -3,32 +3,32 @@
     - newpage: 新增时间轴插件~
     - newpage:
         text: 数理 > 大学物理 > 动力学
-        href: docs/KNOWLEDGE/physics/dynamics-motion.md
+        href: /KNOWLEDGE/physics/dynamics-motion.md
     - pageupdate: 主页修改，包括更改倒计时页面、加入部分emoji等
   - "2025-05-06":
     - newpage:
         text: 前端开发笔记
-        href: docs/CS/front-end
+        href: /CS/front-end
     - pageupdate: 主页使用HTML标签
   - "2025-07-02":
     - newpage:
         text: 后端开发笔记 - 数据库
-        href: docs/CS/back-end/note/db.md
+        href: /CS/back-end/note/db.md
     - newpage:
         text: 后端开发笔记 - Java
-        href: docs/CS/back-end/note/java/methods.md
+        href: /CS/back-end/note/java/methods.md
     - newpage:
         text: CTF 课程笔记
-        href: docs/CS/CTF/index.md
+        href: /CS/CTF/index.md
     - newpage:
         text: GitHub Copilot 使用指南
-        href: docs/CS/OS/linux/github-copilot.md
+        href: /CS/OS/linux/github-copilot.md
     - newpage:
         text: Go - GORM
-        href: docs/CS/pl/go/db.md
+        href: /CS/pl/go/db.md
     - newpage:
-        text: X-lab 几个讲座
-        href: docs/LAB/zhangbo.md
+        text: X-lab 几个学长的讲座
+        href: /LAB/zhangbo.md
 
 
 

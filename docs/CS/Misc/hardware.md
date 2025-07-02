@@ -1,6 +1,4 @@
 
-![[Pasted image 20241020104517.png]]
-![[Pasted image 20241020105009.png]]
 软件：
 系统：调试编译
 应用
@@ -12,7 +10,7 @@
 
 控制器：控制单元，英文Control Unit（CU），是CPU部件之一，有时也安装于CPU外部。其基本功能是从内存取指令、分析指令和执行指令。
 
-![[Pasted image 20241020122331.png]]![[Pasted image 20241020122309.png]]
+
 
 内存(Memory)是计算机的重要部件，也称内存储器和[主存储器](https://baike.baidu.com/item/%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8/10635399?fromModule=lemma_inlink)，它用于暂时存放CPU中的运算数据，以及与硬盘等[外部存储器](https://baike.baidu.com/item/%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/4843180?fromModule=lemma_inlink)交换的数据。它是[外存](https://baike.baidu.com/item/%E5%A4%96%E5%AD%98/2445612?fromModule=lemma_inlink)与[CPU](https://baike.baidu.com/item/CPU/120556?fromModule=lemma_inlink)进行沟通的桥梁，计算机中所有程序的运行都在内存中进行，内存性能的强弱影响计算机整体发挥的水平。只要计算机开始运行，操作系统就会把需要运算的数据从内存调到CPU中进行运算，当运算完成，CPU将结果传送出来。
 

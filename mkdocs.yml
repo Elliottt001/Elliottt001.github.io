@@ -66,6 +66,8 @@ nav:
         - web技术基础: CS/front-end/note/web/build.md
         - HTML: CS/front-end/note/html/tag.md
         - CSS: CS/front-end/note/css/css-note.md
+      - 环境配置及知识:
+        - JavaScript: CS/front-end/note/js.md
     - 后端开发:
       - 学习笔记:
         - 数据库: CS/back-end/note/db/db.md
@@ -84,8 +86,12 @@ nav:
         - 数据容器: CS/pl/Python/py-sequence.md
         - 文件和异常: CS/pl/Python/file.md
         - 面向对象: CS/pl/Python/py-oop.md
+        - 文件基础: CS/pl/Python/file-basic.md
+        - 文件进阶: CS/pl/Python/file-advanced.md
+        - 标准库积累: CS/pl/Python/modules.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
+        - YL 笔记: CS/pl/Python/python-note.md
       - Go:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
@@ -100,6 +106,8 @@ nav:
         - Chapter 3 ADT & Stack & Queue: CS/algorithm/fds/chap3.md
         - Chapter 4 Tree: CS/algorithm/fds/chap4.md
         - Chapter 5 Graph: CS/algorithm/fds/graph.md
+        - Chapter 6 Hash Table: CS/algorithm/fds/hashing.md
+        - Chapter 7 Sorting: CS/algorithm/fds/sorting.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
@@ -115,13 +123,14 @@ nav:
       - 基础: CS/CTF/basic.md
       - CTF&AAA简介: CS/CTF/ctf-and-aaa.md
       - 实验报告:
-        - lab0: docs/CS/CTF/lab0.md
+        - lab0: CS/CTF/lab0.md
     - 区块链:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
       - 实际应用: CS/blockchain/usage.md
       - 比特币: CS/blockchain/bitcoin.md
       - 数字货币: CS/blockchain/digital-currency.md
+      - 以太坊: CS/blockchain/ethereum.md
     - 人工智能:
       - 机器学习:
         - RUC讲稿: CS/AI/ML/机器学习讲稿.ipynb
@@ -136,7 +145,9 @@ nav:
       - 任炜烨学长 - 企业级开发经验分享: LAB/rwy.md
       - 01学长分享 - 科研深造之路: LAB/01.md
     - 实用工具:
-      - shell: CS/Tools/shell.md
+      - shell: 
+        - 笔记一: CS/Tools/shell.md
+        - 笔记二: CS/Tools/shell-new.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
       - Git&GitHub: CS/Tools/Git & GitHub.md
@@ -156,6 +167,9 @@ nav:
     - 杂七杂八:
       - 想了解的东西: CS/Misc/things-i-wanna-know.md
       - 正则表达式: CS/Misc/regex.md
+      - 网络相关: CS/Misc/network.md
+      - 一些快捷键: CS/Misc/shortcuts.md
+      - 硬件by AI: CS/Misc/hardware.md
 
   # - 金融:
   #   - FINANCE/index.md
