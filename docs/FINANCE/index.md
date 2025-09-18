@@ -1,4 +1,4 @@
-# Computer Science
+# Finance
 
 !!! note "" 
     <br><br>
@@ -15,4 +15,4 @@
 
 !!! info "Abstract"
 
-    一些[经济 / 金融的学习笔记](https://r-z-zhang-ai.github.io/CS)，包括微观经济学、宏观经济学等。
+    一些[经济 / 金融的学习笔记](https://r-z-zhang-ai.github.io/FINANCE)，包括微观经济学、宏观经济学等。
