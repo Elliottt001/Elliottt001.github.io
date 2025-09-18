@@ -52,6 +52,7 @@ nav:
     - 离散数学:
       - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
     - 大学物理:
+      - 大雾下课程信息: KNOWLEDGE/physics/index.md
       - 动力学: KNOWLEDGE/physics/dynamics-motion.md
 
   - 开发:
@@ -99,6 +100,9 @@ nav:
         - Chapter 1 数字系统与信息: CS/system/digital-design/chap1.md
         - Chapter 2 组合逻辑电路: CS/system/digital-design/chap2.md
         - Chapter 3 组合逻辑电路的设计: CS/system/digital-design/chap3.md
+      - 计算机组成原理:
+        - 课程信息: CS/system/priciples/index.md
+        
     - 算法相关: 
       - 数据结构基础:
         - 课程信息: CS/algorithm/fds/index.md
@@ -171,10 +175,17 @@ nav:
       - 一些快捷键: CS/Misc/shortcuts.md
       - 硬件by AI: CS/Misc/hardware.md
 
-  # - 金融:
-  #   - FINANCE/index.md
-  #   - 零碎自学:
-  #     - 金本位: FINANCE/DIY/gold-standard.md
+  - 金融:
+    - FINANCE/index.md
+    - 微观经济学:
+      - 课程信息: FINANCE/micro/index.md
+      - 绪论: FINANCE/micro/start.md
+
+    - 宏观经济学:
+      - 课程信息: FINANCE/macro/index.md
+      
+    - 零碎自学:
+      - 金本位: FINANCE/DIY/gold-standard.md
   - 阅读:
     - BOOK/index.md
     - 文学名著:
@@ -195,8 +206,7 @@ nav:
 # [top]
 theme:
   name: material
-  icon:
-    logo: material/library-outline
+
   favicon: images/favicon_circle.png
   custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
@@ -255,6 +265,7 @@ theme:
     # 将公告标记为已读
     - announce.dismiss
   icon:
+    logo: material/library-outline
     # [添加 GitHub 仓库]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
     repo: fontawesome/brands/github
@@ -274,18 +285,18 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-      note: fontawesome/solid/note-sticky
-      abstract: fontawesome/solid/book
-      info: fontawesome/solid/circle-info
-      tip: fontawesome/solid/bullhorn
-      success: fontawesome/solid/check
-      question: fontawesome/solid/circle-question
-      warning: fontawesome/solid/triangle-exclamation
-      failure: fontawesome/solid/bomb
-      danger: fontawesome/solid/skull
-      bug: fontawesome/solid/robot
-      example: fontawesome/solid/flask
-      quote: fontawesome/solid/quote-left
+      # note: fontawesome/solid/note-sticky
+      # abstract: fontawesome/solid/book
+      # info: fontawesome/solid/circle-info
+      # tip: fontawesome/solid/bullhorn
+      # success: fontawesome/solid/check
+      # question: fontawesome/solid/circle-question
+      # warning: fontawesome/solid/triangle-exclamation
+      # failure: fontawesome/solid/bomb
+      # danger: fontawesome/solid/skull
+      # bug: fontawesome/solid/robot
+      # example: fontawesome/solid/flask
+      # quote: fontawesome/solid/quote-left
     # 注释: https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-2
     annotation: material/checkbox-marked-circle-auto-outline
   
@@ -382,7 +393,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          # format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details #admonition可以折叠
 
   - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
@@ -397,9 +408,9 @@ markdown_extensions:
 
   - pymdownx.critic #允许使用Critic 标记来突出显示文档中添加、删除或更新的部分，即跟踪 Markdown 语法的更改。
 
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji 
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg  
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji 
+  #     emoji_generator: !!python/name:material.extensions.emoji.to_svg  
   # 相关内容或者代码块可以分组展示
   - pymdownx.tabbed:
       alternate_style: true

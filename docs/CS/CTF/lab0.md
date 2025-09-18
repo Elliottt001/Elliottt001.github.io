@@ -48,13 +48,13 @@ ping [参数] 目标地址（IP/域名）
 
 ![alt text](res/images/af1086ee023e918164b5a2444420b77.jpg)
 
-## Challenge 2
+### Challenge 2
 
-### 代码功能解释
+#### 代码功能解释
 
 转换大小写
 
-### 计算题
+#### 计算题
 
 ```python
 
@@ -130,6 +130,33 @@ if __name__ == "__main__":
 
 flag是 `AAA{melody_loves_doing_calculus_qq_qun_386796080}`
 
+## Web
+
+### Challenge 1
+
+```python
+import re
+import requests
+sess = requests.session()
+for i in range(1337): # 重复1337次
+    # 获取网页代码
+    res = sess.get("http:!$pumpk1n.com/lab0.php")
+    ## 正则表达式提取内容
+    r = re.findall(r"token=(.*)'",res.text)
+    token = r[0]
+    res = sess.get(f"http:!$pumpk1n.com/flag.php?token={token}")
+print(res.text)
+```
+
+flag是：flag{56297ad00e70449a16700a77bf24b071}
+
+## Reverse
+
+![alt text](image-1.png)
+
+⽤ghidra反编译后查看verify函数找到对应密码的ASCII码序列 65 65 65 123 72 105 82 101 118 101 114 115 101 125
+
+falg是：flag: AAA{HiReverse}
 
 ## Misc
 
@@ -194,6 +221,4 @@ print(a85decoded_bytes.decode('utf-8'))
 
 因此前半段 flag 为 `AAA{gr3@t_J08!_1et'5` 
 
-拼尽全力无法战胜后半段……
-
-希望在课程中进一步学习qwq
+查看图片文件内容后，在文件结尾得到后半段：P1@y_m1SC_TOG3Th3R}

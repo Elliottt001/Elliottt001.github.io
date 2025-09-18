@@ -74,6 +74,92 @@ git checkout -- file
 3. 如果合并有冲突，则解决冲突，并在本地提交；
 4. 没有冲突或者解决掉冲突后，再用 `git push origin <branch-name>` 推送就能成功！
 
+当然！这里帮你整理了一份 **GitHub CLI (`gh`) 常用命令速查表**，方便你快速使用和参考：
+
+---
+
+## GitHub CLI (`gh`) 常用命令速查表
+
+### 1. 认证和账户
+
+| 命令               | 说明              | 示例                                 |
+| ---------------- | --------------- | ---------------------------------- |
+| `gh auth login`  | 登录 GitHub       | `gh auth login`                    |
+| `gh auth logout` | 登出 GitHub       | `gh auth logout`                   |
+| `gh auth status` | 查看当前认证状态        | `gh auth status`                   |
+| `gh api`         | 直接调用 GitHub API | `gh api repos/octocat/hello-world` |
+
+---
+
+### 2. 仓库管理
+
+| 命令                     | 说明         | 示例                                  |
+| ---------------------- | ---------- | ----------------------------------- |
+| `gh repo clone <repo>` | 克隆仓库       | `gh repo clone octocat/hello-world` |
+| `gh repo create`       | 创建新仓库（交互式） | `gh repo create`                    |
+| `gh repo view`         | 查看仓库详情     | `gh repo view`                      |
+| `gh repo fork`         | Fork 一个仓库  | `gh repo fork owner/repo`           |
+
+---
+
+### 3. Pull Request（PR）管理
+
+| 命令                        | 说明         | 示例                   |
+| ------------------------- | ---------- | -------------------- |
+| `gh pr create`            | 创建 PR      | `gh pr create`       |
+| `gh pr status`            | 查看 PR 状态   | `gh pr status`       |
+| `gh pr list`              | 列出 PR      | `gh pr list`         |
+| `gh pr view <number>`     | 查看指定 PR 详情 | `gh pr view 123`     |
+| `gh pr checkout <number>` | 切换到 PR 分支  | `gh pr checkout 123` |
+| `gh pr merge <number>`    | 合并 PR      | `gh pr merge 123`    |
+| `gh pr close <number>`    | 关闭 PR      | `gh pr close 123`    |
+
+---
+
+### 4. Issue 管理
+
+| 命令                        | 说明            | 示例                   |
+| ------------------------- | ------------- | -------------------- |
+| `gh issue create`         | 创建 Issue      | `gh issue create`    |
+| `gh issue list`           | 列出 Issue      | `gh issue list`      |
+| `gh issue view <number>`  | 查看指定 Issue 详情 | `gh issue view 456`  |
+| `gh issue close <number>` | 关闭 Issue      | `gh issue close 456` |
+
+---
+
+### 5. GitHub Actions 工作流
+
+| 命令                     | 说明        | 示例                          |
+| ---------------------- | --------- | --------------------------- |
+| `gh run list`          | 查看工作流运行历史 | `gh run list`               |
+| `gh run view <run_id>` | 查看指定运行日志  | `gh run view 12345678`      |
+| `gh workflow list`     | 查看工作流定义   | `gh workflow list`          |
+| `gh workflow run <id>` | 触发指定工作流   | `gh workflow run build.yml` |
+
+---
+
+### 6. 其他实用命令
+
+| 命令                      | 说明      | 示例                            |
+| ----------------------- | ------- | ----------------------------- |
+| `gh gist create <file>` | 创建 Gist | `gh gist create snippet.js`   |
+| `gh alias set`          | 设置命令别名  | `gh alias set co pr checkout` |
+| `gh help`               | 查看帮助    | `gh help`                     |
+
+---
+
+## 小提示
+
+* 交互模式：很多命令（如 `gh pr create`）会自动进入交互式填写模式，非常方便。
+* 支持自动补全：在终端中输入 `gh` 后按 Tab 键，自动补全命令和参数。
+* `gh --version`：查看当前 CLI 版本。
+
+---
+
+如果你需要，我还能帮你写一个用 `gh` 快速创建 PR 或 Issue 的示范脚本！你想要吗？
+
+
+
 ## 杂项
 
 ### 文件大小限制
