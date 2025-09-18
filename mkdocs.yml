@@ -183,7 +183,7 @@ nav:
 
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
-      
+
     - 零碎自学:
       - 金本位: FINANCE/DIY/gold-standard.md
   - 阅读:
@@ -393,7 +393,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          # format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details #admonition可以折叠
 
   - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
@@ -408,9 +408,9 @@ markdown_extensions:
 
   - pymdownx.critic #允许使用Critic 标记来突出显示文档中添加、删除或更新的部分，即跟踪 Markdown 语法的更改。
 
-  # - pymdownx.emoji:
-  #     emoji_index: !!python/name:material.extensions.emoji.twemoji 
-  #     emoji_generator: !!python/name:material.extensions.emoji.to_svg  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg  
   # 相关内容或者代码块可以分组展示
   - pymdownx.tabbed:
       alternate_style: true
