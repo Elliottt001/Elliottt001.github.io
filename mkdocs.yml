@@ -54,7 +54,9 @@ nav:
     - 大学物理:
       - 大雾下课程信息: KNOWLEDGE/physics/index.md
       - 动力学: KNOWLEDGE/physics/dynamics-motion.md
-
+    - 概率论与数理统计:
+      - 课程信息: KNOWLEDGE/probability/index.md
+      
   - 开发:
     - CS/index.md
     - 实战开发: 
@@ -81,7 +83,8 @@ nav:
           - 错题整理: CS/pl/C_Cpp/C/c-errors-and-tips.md
           - 链表: CS/pl/C_Cpp/C/linkedList.md
         - C++:
-          - 学习笔记: none.md
+          - 课程信息: CS/pl/C_Cpp/cpp/index.md
+          - 变量和基础语法: CS/pl/C_Cpp/cpp/basic.md
       - Python:
         - 基础语法: CS/pl/Python/py-basic-grammar.md
         - 数据容器: CS/pl/Python/py-sequence.md
@@ -102,6 +105,7 @@ nav:
         - Chapter 3 组合逻辑电路的设计: CS/system/digital-design/chap3.md
       - 计算机组成原理:
         - 课程信息: CS/system/priciples/index.md
+        - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
         
     - 算法相关: 
       - 数据结构基础:
@@ -219,7 +223,7 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: slate
       primary: purple
       toggle:
         icon: material/weather-sunny
@@ -227,7 +231,7 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+      scheme: default
       primary: purple
       toggle:
         icon: material/weather-night
