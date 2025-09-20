@@ -40,7 +40,34 @@
     font-size: .7rem;
   }
   
+  /* 标题字体大小设置 - 确保所有标题都比正文大 */
+  .md-typeset h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
   .md-typeset h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .md-typeset h4 {
+    font-size: 1.0rem;
+    font-weight: 600;
+  }
+  
+  .md-typeset h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .md-typeset h6 {
+    font-size: 0.8rem;
     font-weight: 600;
   }
   

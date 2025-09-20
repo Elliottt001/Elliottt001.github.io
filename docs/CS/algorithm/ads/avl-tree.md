@@ -17,6 +17,11 @@
 #### RR rotate
 ![alt text](image.png)
 
-1. trouble maker: 右子树的右子树插入
-2. trouble finder
-1. 右子树的右子树插入，左旋
+1. trouble maker: $B_R$，右子树的右子树插入
+2. trouble finder（此处是A）：从插入/删除点往上回溯
+3. 局部调整，整体起效：一般 AVL 调整只需要处理 离插入点最近的、最底层的失衡节点（即第一个 finder），即此处 A 没必要是根节点
+4. 调整过程保持 二叉搜索树的中序遍历结果不变，即这里 $B_L$ 变成 A 的右子树
+
+#### LL rotate
+
+![alt text](image-1.png)

@@ -115,6 +115,10 @@ nav:
         - Chapter 5 Graph: CS/algorithm/fds/graph.md
         - Chapter 6 Hash Table: CS/algorithm/fds/hashing.md
         - Chapter 7 Sorting: CS/algorithm/fds/sorting.md
+
+      - 高级数据结构与算法分析:
+        - 课程信息: CS/algorithm/ads/index.md
+        - AVL树: CS/algorithm/ads/avl-tree.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:
