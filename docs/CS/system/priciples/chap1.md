@@ -118,7 +118,9 @@ ISA（Instruction Set Architecture，指令集架构）
 
 影响因素：
 
-- CPU 主频（时钟频率）4G / 2G
+- CPU 主频（时钟频率）4GHz / 2GHz
+
+    - 1 GHz = 每秒 10⁹ 次周期。
 
 评判标准：执行同样任务所用时间的倒数
 
@@ -138,7 +140,7 @@ $$Performance_x / Performance_y = Execution Time_y / Execution Time_x$$
 
 CPU 时钟（CPU clocking）
 
-- 2G：2GHz：250ps：250皮秒：250×10^-12秒
+- 4G：4GHz：250ps：250皮秒：250×10^-12秒
 
 - 时钟频率 = 1 / 时钟周期
 
@@ -185,4 +187,25 @@ RISC 指令集：精简指令集体系结构
 
 - 目标：每条指令一个时钟周期
 - 复杂操作：汇编语言编程时候写多条指令
+
+In COMS IC technology, 
+
+$$ Power = Capacitive Load × (Voltage)^2 × Frequency$$
+
+功耗墙：
+
+- 电压不能再降低
+- 热量不能太多
+
+性能提高：电子计算机 —— 量子计算机
+
+#### 多处理器
+
+多核处理器（Multi-core Processor）
+
+并行处理（Parallel Processing）
+
+- 指令级并行：无关指令才可并行，靠硬件判断
+
+负载均衡
 

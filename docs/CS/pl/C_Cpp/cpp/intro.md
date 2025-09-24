@@ -6,7 +6,7 @@
     4. NOT: memorize the syntax of C++.
 
 
-![alt text](image-1.png)
+![alt text](res/images/image-1.png)
 
 ## Assembly
 
@@ -37,8 +37,8 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](res/images/image-2.png)
+![alt text](res/images/image-3.png)
 
 For the reason that people use different assembly syntax, a code work well on others computer may not work on your machine. C++ is Cross-platform.  
 
@@ -46,7 +46,7 @@ For the reason that people use different assembly syntax, a code work well on ot
 
 ## Design Philosophy of C++ 
 
-![alt text](image-5.png)
+![alt text](res/images/image-5.png)
 
 Performance! Performance! Performance!
 

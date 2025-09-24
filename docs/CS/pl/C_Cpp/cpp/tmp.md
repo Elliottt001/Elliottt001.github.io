@@ -4,8 +4,8 @@ It is finished in **compiler time**, not runtime. So in the runtime, for example
 
 Computation on Type （类型计算） is the core of the template metaprogramming（模板元编程，TMP）
 
-![alt text](fad00d8912a0fecb3bf1b1f97107d247.jpg)
-![alt text](71163d7dcd306d28efc0c040df4f3323.jpg)
+![alt text](res/images/fad00d8912a0fecb3bf1b1f97107d247.jpg)
+![alt text](res/images/71163d7dcd306d28efc0c040df4f3323.jpg)
 
 !!! success "Translation"
 
@@ -15,7 +15,7 @@ Computation on Type （类型计算） is the core of the template metaprogrammi
 
     We can pass a TYPE as the parameter to a meta-function, and get TYPE out as the return value. Also, we can get value out of the meta-function. In another word, most thing we can do on value, we have an analogous thing we can do on types. 
 
-![alt text](f39e5f14a2ae7a27e5e9506a241be342.jpg)
+![alt text](res/images/f39e5f14a2ae7a27e5e9506a241be342.jpg)
 
 In the right part, what we do is:
 
@@ -23,7 +23,7 @@ In the right part, what we do is:
 2. Let `cl_ref == const S& == const int&`, meaning that we write `cl_ref` equals to writing `const int&`.
 3. By using `remove_reference` with `const int&`, we let `result == const int`, and get type `const int` into `result`
 
-![alt text](604353323bd632918684280165a4730c.jpg)
+![alt text](res/images/604353323bd632918684280165a4730c.jpg)
 
 ???- info "lvalue reference"
 
@@ -42,7 +42,7 @@ In the right part, what we do is:
     - `Tpye name = lvalue`: copy `lvalue` to `name`, `name` is in different place of memory with `lvalue`
     - `Tpye& name = lvalue`: `name` and `lvalue` point to the same block of memory
 
-![alt text](b84eef736e911c259459e32b36d35c5e.jpg)
+![alt text](res/images/b84eef736e911c259459e32b36d35c5e.jpg)
 
 Must use CLASS or STRUCT to define a meta-function, because CLASS or STRUCT can have member TYPE / VALUE.
 
@@ -73,9 +73,9 @@ We can use `using` (`using <name> = <type>;`) to define a TYPE member, and `stat
 
 Template Specialization: we can have generic template, and also have special version of the template for some specific types.
 
-![alt text](7e066085610d081aecbe3b832246f793.jpg)
+![alt text](res/images/7e066085610d081aecbe3b832246f793.jpg)
 
-![alt text](9ef5c7fc169194a9a1c0652cd5dfdbf3.jpg)
+![alt text](res/images/9ef5c7fc169194a9a1c0652cd5dfdbf3.jpg)
 
 We can judge whether it is specialization by looking at the template argument list. 
 

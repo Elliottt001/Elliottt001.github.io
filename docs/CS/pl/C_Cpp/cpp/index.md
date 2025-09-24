@@ -23,6 +23,6 @@
 
 ---
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
 词对应的知识点知道考试就没问题

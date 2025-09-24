@@ -65,3 +65,7 @@
 5. 预测 prediction：内存取数纳秒硬盘取数微秒，预取
 6. 层次：按照层次理解系统。硬盘——内存——缓存cashe——寄存器register（速度由慢到快，容量大到小）
 7. 可靠性
+
+## 一些词
+
+ISA: Instruction Set Architecture 指令集架构

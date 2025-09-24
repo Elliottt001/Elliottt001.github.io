@@ -84,6 +84,9 @@ nav:
         - C++:
           - 课程信息: CS/pl/C_Cpp/cpp/index.md
           - 变量和基础语法: CS/pl/C_Cpp/cpp/basic.md
+          - 关键字: CS/pl/C_Cpp/cpp/keyword.md
+          - 引入: CS/pl/C_Cpp/cpp/intro.md
+          - 模板元编程: CS/pl/C_Cpp/cpp/tmp.md
       - Python:
         - 基础语法: CS/pl/Python/py-basic-grammar.md
         - 数据容器: CS/pl/Python/py-sequence.md
@@ -105,6 +108,7 @@ nav:
       - 计算机组成原理:
         - 课程信息: CS/system/priciples/index.md
         - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
+        - Chapter 2 汇编语言: CS/system/priciples/chap2.md
         
     - 算法相关: 
       - 数据结构基础:
@@ -119,6 +123,7 @@ nav:
       - 高级数据结构与算法分析:
         - 课程信息: CS/algorithm/ads/index.md
         - AVL树: CS/algorithm/ads/avl-tree.md
+        - 红黑树和B+数: CS/algorithm/ads/redblack_tree_bplus_tree.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 操作系统:

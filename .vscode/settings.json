@@ -7,5 +7,6 @@
      },
      "github.copilot.excludeFiles": [
           "**/docs/PUBLIC/meeting-yzz.md"
-     ]
+     ],
+     "markdown.validate.enabled": true
 }
