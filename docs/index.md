@@ -69,12 +69,15 @@
 
 !!! danger "努力更新中"
 
-    - [ ] 《山茶文具店》
-    - [ ] 2024年终总结
+    敬请期待
 
 !!! info "正在学习的内容"
 
-    - [ ] Python：[Python-100-days](https://github.com/jackfrued/Python-100-Days/tree/master)，[Python-50-days](https://github.com/jackfrued/Python-Core-50-Courses/)
+    - [Advanced Data Structure and Algorithm Analysis](https://r-z-zhang-ai.github.io/CS/algorithm/ads/)
+    - [Computer System Principles](https://r-z-zhang-ai.github.io/CS/system/priciples/)
+    - [C++ Programming Language](https://r-z-zhang-ai.github.io/CS/pl/C_Cpp/cpp/)
+    - [Microeconomics](https://r-z-zhang-ai.github.io/FINANCE/micro/)
+    - [Macroeconomics](https://r-z-zhang-ai.github.io/FINANCE/macro/)
 
 
 !!! inline warning "施工中！" 
@@ -83,6 +86,6 @@
 
 !!! success "推荐阅读"
 
-    目前还没有……
+    [Microeconomics](https://r-z-zhang-ai.github.io/FINANCE/micro/)
 
 ---
