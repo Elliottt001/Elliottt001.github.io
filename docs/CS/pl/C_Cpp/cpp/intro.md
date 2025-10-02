@@ -50,6 +50,12 @@ For the reason that people use different assembly syntax, a code work well on ot
 
 Performance! Performance! Performance!
 
+## Smome Command
+
+!!! info "About compiling command"
+
+    g++ -std=c++17 -Wall streams.cpp -o streams
+
 ## References
 
 [Here](https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/lectures/intro/intro.pdf) is the slides of lecture 1
