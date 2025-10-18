@@ -1,8 +1,8 @@
-## 定义概念
+## AVL tree
 
-平均搜索时间 average search time：节点深度平均值
+### 定义
 
-### AVL tree 定义
+目标：保证每次操作时间是 $O(\log n)$
 
 0. 空树是 height balanced 的
 1. 左右子树都 height balanced：**递归下去所有都是**
@@ -12,11 +12,18 @@
 
     定义  $BF(node) = h_L - h_R$
 
-## 旋转（核心）
+### 旋转（核心）
+
+!!! abstract "课下总结"
+
+    - 对于 LR 和 RL，按照从 trouble maker 到 trouble finder 的走势，决定顺逆时针。
+        - 往右撇，顺时针
+        - 往左撇，逆时针
+    - 只旋转 trouble maker，按照刚刚的顺逆时针
 
 **一句话，每次插入 / 删除，带来 BF 的变化，就要看需不需要旋转，如果需要的话，看从 trouble maker 到 trouble finder 这条路上的情况，决定怎样旋转**
 
-### 规律
+#### 规律
 
 **命名来由**（LL / LR / RR / RL）：
 
@@ -31,7 +38,7 @@
 - RL：右子树的左子树插入
 
 
-### RR rotate
+#### RR rotate
 ![alt text](res/images/image.png)
 
 1. trouble maker: $B_R$，右子树的右子树插入
@@ -39,11 +46,11 @@
 3. 局部调整，整体起效：一般 AVL 调整只需要处理 离插入点最近的、最底层的失衡节点（即第一个 finder），即此处 A 没必要是根节点
 4. 调整过程保持 二叉搜索树的中序遍历结果不变，即这里 $B_L$ 变成 A 的右子树
 
-### LL rotate
+#### LL rotate
 
 ![alt text](res/images/image-1.png)
 
-### LR rotate
+#### LR rotate
 
 ![alt text](res/images/image-3.png)
 
@@ -57,15 +64,15 @@
 
 左：旋转原来的 trouble finder 节点，向右旋转（顺时针）
 
-### RL rotate
+#### RL rotate
 
 ![alt text](res/images/image-2.png)
 
 基本同上，变一下顺序
 
-## 数据存储
+### 数据存储
 
-## 复杂度
+### 复杂度
 ![alt text](res/images/image-4.png)
 
 $n_h$ 为高度为 h 的 AVL 树的最小节点数，由于是最小，则 root 的左右子树高度差1（相等的话左 / 右减去一个还是 AVL 树）
@@ -79,9 +86,18 @@ $$n_h = 1 + n_{h-1} + n_{h-2}$$
 - 查找：$O(\log n)$
 
 
-## Spary Tree
+## Splay Tree
+
+### 定义 / 目标
+
+保证 $m$ 次操作的总时间复杂度为 $O(m \log n)$
 
 ### 基础操作
+
+!!! success "大体思路"
+
+    思路: 当查询到时间极长的（一般是 $O(N)$）的，就 **通过旋转操作把他旋转到根节点**
+
 
 有些操作比较快（要求松），有的操作比较慢，做到连续 M 次操作最多 $O(M \log n)$
 
@@ -91,21 +107,33 @@ $$n_h = 1 + n_{h-1} + n_{h-2}$$
 
 ![alt text](res/images/image-6.png)
 
-看一个节点 X、其父亲 P，和其祖父 G：
+**看一个节点 X、其父亲 P，和其祖父 G：**
 
-zig-zig
+zig-zig：一条线
 
 - X 是 P 的左子树，P 是 G 的左子树：两次单旋，先 P & G，再 X & P
 - X 是 P 的右子树，P 是 G 的右子树：两次单旋
 
-zig-zag
+zig-zag：拐一下
+
+!!! abstract "课下总结"
+
+    按照 AVL 的方法旋转
 
 - X 是 P 的右子树，P 是 G 的左子树：一次双旋，左旋 P，再右旋 G
 - X 是 P 的左子树，P 是 G 的右子树：一次双旋，右旋 P，再左旋 G
 
 ![alt text](res/images/image-7.png)
 
+!!! abstract "课下总结"
+
+    通过几次旋转（zig-zig / zig-zag）把被查询的 X 旋转到根节点
+
 ### 删除
+
+!!! abstract "课下总结"
+
+    保证删除后树依然是 BST
 
 ![alt text](res/images/image-8.png)
 
@@ -148,7 +176,7 @@ Example: on an initially
 
 以 multipop 举例，只有 push 才能 pop，push 时存一个 1 的 credit
 
-### Potential method
+### Potential method 势能法
 
 ![alt text](res/images/image-12.png)
 
@@ -156,9 +184,27 @@ Example: on an initially
 
 用 Potential method 可以计算 accounting method 的 credit，继而算 amortized time
 
+举例：Splay Tree
+
 ![alt text](res/images/image-11.png)
 
-Why rank of the subtree, not height of the tree.
+首先要选取势能函数：每次旋转操作后，发生变化的只有 X / P / G 的子树的节点数，其他node的子树的节点数不变；另外，由局部性原理：rank 只与局部有关（X / P / G），使得 rank 的计算简单于 树高 height。
 
-局部性原理：rank 只与局部有关（X / P / G）
+!!! info ""
+
+    rank(node) = log(size of subtree) 约等于 Height of subtree
+
+    rank(X) = log|size(X)| 只依赖于：
+    - X 的子树大小
+    - 在旋转时，只有 X、P、G 三个节点的 rank 会变化
+    - 其他节点的 rank 保持不变
+
+!!! quote ""
+
+    Lemma: if a + b < c, then log(a) + log(b) < 2log(c) - 2
+
+
+![alt text](1f5b5b0f98742aab7d9da213b64d1201.jpg)
+
+通过上面引理，可以放缩，进而将其都放缩成3倍的，且每次操作上一次减的项和下一次加的项可以裂项相消，进而就剩下 log(n) 级别的项（根节点的 rank，basically height of the tree）
 

@@ -53,6 +53,7 @@ nav:
     - 大学物理:
       - 大雾下课程信息: KNOWLEDGE/physics/index.md
       - 动力学: KNOWLEDGE/physics/dynamics-motion.md
+      - 电磁学: KNOWLEDGE/physics/electricity.md
     - 概率论与数理统计:
       - 课程信息: KNOWLEDGE/probability/index.md
       
@@ -85,6 +86,8 @@ nav:
           - 课程信息: CS/pl/C_Cpp/cpp/index.md
           - Lecture 0:Introduction: CS/pl/C_Cpp/cpp/intro.md
           - Lecture 1&2:Streams: CS/pl/C_Cpp/cpp/streams.md
+          - Lecture 3:Standard Template Library: CS/pl/C_Cpp/cpp/stl.md
+          - Lecture 4:Modern C++ Types: CS/pl/C_Cpp/cpp/type.md
           - Guest Lecture:Template metaprogramming: CS/pl/C_Cpp/cpp/tmp.md
           - Varibles & Synatax: CS/pl/C_Cpp/cpp/basic.md
           - Keywords: CS/pl/C_Cpp/cpp/keyword.md
@@ -109,7 +112,7 @@ nav:
       - 计算机组成原理:
         - 课程信息: CS/system/priciples/index.md
         - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
-        - Chapter 2 汇编语言: CS/system/priciples/chap2.md
+        - Chapter 2 汇编语言和数的表示: CS/system/priciples/chap2.md
         
     - 算法相关: 
       - 数据结构基础:
@@ -160,7 +163,8 @@ nav:
       - 创始人王振阳分享 - X-lab简介: LAB/x-lab.md
       - 张博学长分享 - 思维高度与前沿创新: LAB/zhangbo.md
       - 任炜烨学长 - 企业级开发经验分享: LAB/rwy.md
-      - 01学长分享 - 科研深造之路: LAB/01.md
+      - 江林益学长分享 - 科研深造之路: LAB/01.md
+      - 转正大会: LAB/转正大会.md
     - 实用工具:
       - shell: 
         - 笔记一: CS/Tools/shell.md
@@ -213,7 +217,6 @@ nav:
     - 工作汇报: PUBLIC/work-report.md
     - 报销工作注意事项: PUBLIC/reimbursement.md
     - ZJU-vlog: PUBLIC/zju-vlog.md
-
 
 # [UI]
 # [top]
