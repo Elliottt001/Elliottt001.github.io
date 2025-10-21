@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人工智能知识关系图谱</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #0d1117;
+    margin: 0;
+    overflow: hidden;
+  }
+  svg {
+    width: 100vw;
+    height: 100vh;
+  }
+  text {
+    fill: #ffffff;
+    font-size: 12px;
+    pointer-events: none;
+  }
+  .link {
+    stroke: #888;
+    stroke-opacity: 0.6;
+  }
+  .node circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+</style>
+</head>
+<body>
+<svg></svg>
+<script>
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const graph = {
+  nodes: [
+    { id: "人工智能 AI", group: 1 },
+    { id: "机器学习 ML", group: 2 },
+    { id: "深度学习 DL", group: 2 },
+    { id: "自然语言处理 NLP", group: 2 },
+    { id: "计算机视觉 CV", group: 2 },
+    { id: "强化学习 RL", group: 2 },
+    { id: "生成式 AI", group: 2 },
+    { id: "知识图谱", group: 2 },
+    { id: "应用领域", group: 2 },
+
+    // 机器学习子节点
+    { id: "监督学习", group: 3 },
+    { id: "无监督学习", group: 3 },
+    { id: "决策树", group: 3 },
+    { id: "SVM", group: 3 },
+
+    // 深度学习子节点
+    { id: "CNN", group: 3 },
+    { id: "RNN", group: 3 },
+    { id: "Transformer", group: 3 },
+    { id: "自编码器", group: 3 },
+
+    // NLP
+    { id: "BERT", group: 3 },
+    { id: "GPT", group: 3 },
+    { id: "Chatbot", group: 3 },
+    { id: "翻译", group: 3 },
+    { id: "情感分析", group: 3 },
+
+    // CV
+    { id: "图像分类", group: 3 },
+    { id: "目标检测", group: 3 },
+    { id: "图像生成", group: 3 },
+
+    // RL
+    { id: "Q-learning", group: 3 },
+    { id: "DQN", group: 3 },
+    { id: "AlphaGo", group: 3 },
+    { id: "机器人控制", group: 3 },
+
+    // 生成式AI
+    { id: "DALL·E", group: 3 },
+    { id: "Stable Diffusion", group: 3 },
+    { id: "文本生成", group: 3 },
+
+    // 知识图谱
+    { id: "实体", group: 3 },
+    { id: "关系", group: 3 },
+    { id: "本体", group: 3 },
+    { id: "图数据库", group: 3 },
+
+    // 应用领域
+    { id: "自动驾驶", group: 3 },
+    { id: "医疗诊断", group: 3 },
+    { id: "金融风控", group: 3 },
+    { id: "教育", group: 3 },
+    { id: "智能制造", group: 3 }
+  ],
+  links: [
+    // 一级关系
+    { source: "人工智能 AI", target: "机器学习 ML" },
+    { source: "人工智能 AI", target: "深度学习 DL" },
+    { source: "人工智能 AI", target: "自然语言处理 NLP" },
+    { source: "人工智能 AI", target: "计算机视觉 CV" },
+    { source: "人工智能 AI", target: "强化学习 RL" },
+    { source: "人工智能 AI", target: "生成式 AI" },
+    { source: "人工智能 AI", target: "知识图谱" },
+    { source: "人工智能 AI", target: "应用领域" },
+
+    // 二级关系
+    { source: "机器学习 ML", target: "监督学习" },
+    { source: "机器学习 ML", target: "无监督学习" },
+    { source: "机器学习 ML", target: "决策树" },
+    { source: "机器学习 ML", target: "SVM" },
+
+    { source: "深度学习 DL", target: "CNN" },
+    { source: "深度学习 DL", target: "RNN" },
+    { source: "深度学习 DL", target: "Transformer" },
+    { source: "深度学习 DL", target: "自编码器" },
+
+    { source: "自然语言处理 NLP", target: "BERT" },
+    { source: "自然语言处理 NLP", target: "GPT" },
+    { source: "自然语言处理 NLP", target: "Chatbot" },
+    { source: "自然语言处理 NLP", target: "翻译" },
+    { source: "自然语言处理 NLP", target: "情感分析" },
+
+    { source: "计算机视觉 CV", target: "图像分类" },
+    { source: "计算机视觉 CV", target: "目标检测" },
+    { source: "计算机视觉 CV", target: "图像生成" },
+
+    { source: "强化学习 RL", target: "Q-learning" },
+    { source: "强化学习 RL", target: "DQN" },
+    { source: "强化学习 RL", target: "AlphaGo" },
+    { source: "强化学习 RL", target: "机器人控制" },
+
+    { source: "生成式 AI", target: "GPT" },
+    { source: "生成式 AI", target: "DALL·E" },
+    { source: "生成式 AI", target: "Stable Diffusion" },
+    { source: "生成式 AI", target: "文本生成" },
+
+    { source: "知识图谱", target: "实体" },
+    { source: "知识图谱", target: "关系" },
+    { source: "知识图谱", target: "本体" },
+    { source: "知识图谱", target: "图数据库" },
+
+    { source: "应用领域", target: "自动驾驶" },
+    { source: "应用领域", target: "医疗诊断" },
+    { source: "应用领域", target: "金融风控" },
+    { source: "应用领域", target: "教育" },
+    { source: "应用领域", target: "智能制造" }
+  ]
+};
+
+const svg = d3.select("svg");
+const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+const simulation = d3.forceSimulation(graph.nodes)
+  .force("link", d3.forceLink(graph.links).id(d => d.id).distance(80))
+  .force("charge", d3.forceManyBody().strength(-200))
+  .force("center", d3.forceCenter(width / 2, height / 2));
+
+const link = svg.append("g")
+  .attr("stroke", "#aaa")
+  .selectAll("line")
+  .data(graph.links)
+  .join("line")
+  .attr("class", "link");
+
+const node = svg.append("g")
+  .selectAll("circle")
+  .data(graph.nodes)
+  .join("circle")
+  .attr("r", 8)
+  .attr("fill", d => color(d.group))
+  .call(drag(simulation));
+
+const label = svg.append("g")
+  .selectAll("text")
+  .data(graph.nodes)
+  .join("text")
+  .text(d => d.id)
+  .attr("x", 10)
+  .attr("y", 3);
+
+simulation.on("tick", () => {
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+
+  node
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y);
+
+  label
+    .attr("x", d => d.x + 10)
+    .attr("y", d => d.y + 3);
+});
+
+function drag(simulation) {
+  function dragstarted(event, d) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
+  }
+
+  function dragended(event, d) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  return d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
+}
+</script>
+</body>
+</html>
