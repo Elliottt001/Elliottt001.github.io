@@ -12,4 +12,4 @@
 
 !!! info "Abstract"
 
-    一些[ZJU学习中数理基础课笔记](https://r-z-zhang-ai.github.io/KNOWLEDGE)，包括微积分、线性代数、离散数学、[大学物理](https://r-z-zhang-ai.github.io/KNOWLEDGE/physics/)、[概率论与数理统计](https://r-z-zhang-ai.github.io/KNOWLEDGE/probability/)。
+    一些[ZJU学习中数理基础课笔记](https://Elliottt001.github.io/KNOWLEDGE)，包括微积分、线性代数、离散数学、[大学物理](https://Elliottt001.github.io/KNOWLEDGE/physics/)、[概率论与数理统计](https://Elliottt001.github.io/KNOWLEDGE/probability/)。

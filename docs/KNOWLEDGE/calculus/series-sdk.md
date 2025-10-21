@@ -3,7 +3,7 @@
 $$Work \;Hard, \;Play \;Hard.$$
 
 <figure markdown="span">
-  ![Image title](https://r-z-zhang-ai.github.io/KNOWLEDGE/calculus/res/images/image-20_2.png){ width="300" }
+  ![Image title](https://Elliottt001.github.io/KNOWLEDGE/calculus/res/images/image-20_2.png){ width="300" }
   <figcaption>HKU</figcaption>
 </figure>
 

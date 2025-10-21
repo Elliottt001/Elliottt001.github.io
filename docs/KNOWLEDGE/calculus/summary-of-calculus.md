@@ -1019,7 +1019,7 @@ $$
 用〇阶、二阶讨论一阶，当然泰勒；问x，则x为特殊点，在这展开；展什么？端点；俩，消元
 
 
-<!-- [公式](https://r-z-zhang-ai.github.io/KNOWLEDGE/Note/Calculus/Knowledge%20Frame%20of%20Calculus/#_53) -->
+<!-- [公式](https://Elliottt001.github.io/KNOWLEDGE/Note/Calculus/Knowledge%20Frame%20of%20Calculus/#_53) -->
 
 
 

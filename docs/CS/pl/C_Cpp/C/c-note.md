@@ -4555,7 +4555,7 @@ printf("hello world");
 
 功能：可增大、可获取大小、可访问
 
-[查看原码](https://github.com/r-z-zhang-AI/Code/tree/main/C/Practice/changeable-array)
+[查看原码](https://github.com/Elliottt001/Code/tree/main/C/Practice/changeable-array)
 
 设计思想：
 

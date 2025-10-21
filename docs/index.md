@@ -21,7 +21,7 @@
 
 <body>
     <h1>(づ￣ ³￣)づ Welcome !</h1>
-    <p>欢迎光临张瑞喆的个人网站（笔记本）<a href="https://r-z-zhang-ai.github.io/"> CosHub</a></p>
+    <p>欢迎光临张瑞喆的个人网站（笔记本）<a href="https://Elliottt001.github.io/"> CosHub</a></p>
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
         ~「Miracles happen every day」~
@@ -73,11 +73,11 @@
 
 !!! info "正在学习的内容"
 
-    - [Advanced Data Structure and Algorithm Analysis](https://r-z-zhang-ai.github.io/CS/algorithm/ads/)
-    - [Computer System Principles](https://r-z-zhang-ai.github.io/CS/system/priciples/)
-    - [C++ Programming Language](https://r-z-zhang-ai.github.io/CS/pl/C_Cpp/cpp/)
-    - [Microeconomics](https://r-z-zhang-ai.github.io/FINANCE/micro/)
-    - [Macroeconomics](https://r-z-zhang-ai.github.io/FINANCE/macro/)
+    - [Advanced Data Structure and Algorithm Analysis](https://Elliottt001.github.io/CS/algorithm/ads/)
+    - [Computer System Principles](https://Elliottt001.github.io/CS/system/priciples/)
+    - [C++ Programming Language](https://Elliottt001.github.io/CS/pl/C_Cpp/cpp/)
+    - [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
+    - [Macroeconomics](https://Elliottt001.github.io/FINANCE/macro/)
 
 
 !!! inline warning "施工中！" 
@@ -86,6 +86,6 @@
 
 !!! success "推荐阅读"
 
-    [Microeconomics](https://r-z-zhang-ai.github.io/FINANCE/micro/)
+    [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
 
 ---

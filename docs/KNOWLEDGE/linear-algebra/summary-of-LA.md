@@ -155,7 +155,7 @@ $P^n$ 空间：矩阵，化阶梯看秩 $\Leftrightarrow$ 行列式 $\ne 0$ $\Le
 
 两个向量组（例如向量组的相互表示）：俩合并在一起成一个大矩阵，前面一半化 $E$ ，后面即为所求，不要分开多个写
 
-[去看看公式](https://r-z-zhang-ai.github.io/KNOWLEDGE/Note/Linear%20Algebra/Knowledge%20Frame%20of%20LA/#_24)，尤其是过渡矩阵谁在前：这个可以通过矩阵乘法的条件判断（记住 $M$ 是方阵）
+[去看看公式](https://Elliottt001.github.io/KNOWLEDGE/Note/Linear%20Algebra/Knowledge%20Frame%20of%20LA/#_24)，尤其是过渡矩阵谁在前：这个可以通过矩阵乘法的条件判断（记住 $M$ 是方阵）
 
 #### 抽象向量组
 

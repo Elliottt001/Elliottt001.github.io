@@ -144,13 +144,13 @@ vim ~./zshrc
 
 ### 配置C/python/Go环境
 
-记录在另一篇文章[《语言环境》](https://r-z-zhang-ai.github.io/CS/OS/linux/pl/)中。
+记录在另一篇文章[《语言环境》](https://Elliottt001.github.io/CS/OS/linux/pl/)中。
 
 后来也安上了anaconda，也在上文中。
 
 ### 安装ssh
 
-记录在另一篇文章[《SSH》](https://r-z-zhang-ai.github.io/CS/OS/linux/ssh)中。
+记录在另一篇文章[《SSH》](https://Elliottt001.github.io/CS/OS/linux/ssh)中。
 
 #### BUG！
 
@@ -228,7 +228,7 @@ cp -r <path-to-origin-dir> <path-to-backuped-fir>
 # 把~github/mkdocs-site下所有文件备份到~/github/backup下
 ```
 ```shell
-git clone git@github.com:r-z-zhang-AI/r-z-zhang-AI.github.io.git
+git clone git@github.com:Elliottt001/Elliottt001.github.io.git
 ```
 ```shell
 rm -r
@@ -534,7 +534,7 @@ sudo systemctl disable v2raya
 
 参考：[知乎良心教程](https://zhuanlan.zhihu.com/p/621873601)
 
-并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面，原文链接：[《WSL迁移》](https://r-z-zhang-ai.github.io/CS/linux/wsl-c2d.md)
+并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面，原文链接：[《WSL迁移》](https://Elliottt001.github.io/CS/linux/wsl-c2d.md)
 
 很好成功
 
@@ -560,14 +560,14 @@ git filter-repo --path docs/CS/OS/linux/20250219-1549-29.8014751.mp4 --invert-pa
 于是, 重新添加远程仓库:
 
 ```shell
-git remote add origin https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
+git remote add origin https://github.com/Elliottt001/Elliottt001.github.io
 ```
 
 从此GitHub仓库作者变成了 rzzhang 和 rzzhang
 
 ### docker的安装配置与使用
 
-专门写了一篇[docker的文档](https://r-z-zhang-ai.github.io/CS/Tools/docker/)
+专门写了一篇[docker的文档](https://Elliottt001.github.io/CS/Tools/docker/)
 
 ## 后记
 俗话说，一杯茶一根烟 一个环境配一天。

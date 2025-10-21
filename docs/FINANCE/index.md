@@ -15,7 +15,7 @@
 
 !!! info "Abstract"
 
-    一些[经济 / 金融的学习笔记](https://r-z-zhang-ai.github.io/FINANCE)，包括[微观经济学](https://r-z-zhang-ai.github.io/FINANCE/micro/)、[宏观经济学](https://r-z-zhang-ai.github.io/FINANCE/macro/)等。
+    一些[经济 / 金融的学习笔记](https://Elliottt001.github.io/FINANCE)，包括[微观经济学](https://Elliottt001.github.io/FINANCE/micro/)、[宏观经济学](https://Elliottt001.github.io/FINANCE/macro/)等。
 
 ## 一些经验贴
 

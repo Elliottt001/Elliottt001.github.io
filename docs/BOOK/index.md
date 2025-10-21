@@ -15,4 +15,4 @@
 
 !!! info "Abstract"
 
-    一些[读书笔记](https://r-z-zhang-ai.github.io/BOOK)
+    一些[读书笔记](https://Elliottt001.github.io/BOOK)

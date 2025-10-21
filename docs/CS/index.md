@@ -15,4 +15,4 @@
 
 !!! info "Abstract"
 
-    一些[CS学习笔记](https://r-z-zhang-ai.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
+    一些[CS学习笔记](https://Elliottt001.github.io/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。

@@ -12,7 +12,7 @@
 
 !!! info "Abstract"
 
-    一些[自媒体文字稿](https://r-z-zhang-ai.github.io/PUBLIC)，包括：
+    一些[自媒体文字稿](https://Elliottt001.github.io/PUBLIC)，包括：
 
     - **个人公众号「CosHub」**
     - **B站「\_吉吉学长\_」**（点击[这里](https://space.bilibili.com/3546769117940081?spm_id_from=333.1007.0.0)跳转B站个人主页）

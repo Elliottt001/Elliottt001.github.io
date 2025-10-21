@@ -1,7 +1,7 @@
 # [Info]
 # 左上角标题
 site_name: CosHub
-site_url: https://r-z-zhang-AI.github.io
+site_url: https://Elliottt001.github.io
 site_author: 张瑞喆
 site_description: Zhang rz的个人网站
 
@@ -322,7 +322,7 @@ edit_uri: edit/main/docs/
 # [top-right corner]
 # [添加 GitHub 仓库]
 # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
-repo_url: https://github.com/r-z-zhang-AI/r-z-zhang-AI.github.io
+repo_url: https://github.com/Elliottt001/Elliottt001.github.io
 repo_name: CosHub
 # [bottom-left corner]
 # [版权说明]
@@ -338,9 +338,9 @@ extra:
   # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
   # name 会在鼠标悬浮时提示
   social: # icons
-    - name: GitHub | r-z-zhang-AI
+    - name: GitHub | Elliottt001
       icon: fontawesome/brands/github
-      link: https://github.com/r-z-zhang-AI
+      link: https://github.com/Elliottt001
   generator: false
 
   consent:
