@@ -81,7 +81,7 @@ RISC-V 指令长度固定为 32 位，分为以下几种格式：
 - U 型（上位立即数类型）：用于加载高位立即数
 - J 型（跳转类型）：用于无条件跳转
 
-## 算术操作
+## Arithmetic Operations
 
 约定：汇编语言一行只写一条指令，后面可以用 `#` 注释
 
@@ -117,7 +117,7 @@ sub f, t0, t1  # f = t0 - t1
     - 在内存还是寄存器
     - 在内存的什么位置
 
-## R-type Instruction
+### R-type Instruction
 
 ![alt text](image-2.png)
 
@@ -358,7 +358,7 @@ R 型指令的机器码中：
 * 立即数
 * 内存地址：在 RISC-V 里面没有，因为是先把内存的数加载到寄存器里，再操作寄存器，但是在 x86 等 ISA 里面有
 
-## Memory Operands
+### Memory Operands
 
 如果程序在内存里面放不下，则放到硬盘。内存和硬盘的数据交换的单位是 page（页），一般是 4KB，也有 8KB。内存和寄存器的数据交换就比较自由，可以 1Byte，也可以 0.5Byte
 
@@ -370,7 +370,7 @@ CPU 访问内存是按字（word）为单位读取的，一个“字”通常就
 
 ![alt text](image-3.png)
 
-### 内存地址
+#### 内存地址
 
 用基地址 + 偏移量（offset）来表示内存地址
 
@@ -388,7 +388,7 @@ RISC-V 是小端序，就是低位存在低地址，即从右往左写
 
 偏移量写在外面，作为一个立即数
 
-## Immediate Operands
+### Immediate Operands
 
 立即数：直接写在指令里的数
 
@@ -396,7 +396,7 @@ RISC-V 是小端序，就是低位存在低地址，即从右往左写
 
 ![alt text](image-6.png)
 
-### The Constant Zero
+#### The Constant Zero
 
 `x0` is the constant 0, which cannot be overwritten.
 
@@ -407,88 +407,66 @@ It is useful for: move between registers
 add x6, x5, x0  # x6 = x5 + 0
 ```
 
-## 数的表示
-
-### 无符号数 Unsigned Binary Integers
-
-Given a n-bit number, 
-
-$$x = \sum_{i=0}^{n-1} b_i 2^i$$
-
-where $b_i \in \{0, 1\}$
-
-我们上课用的是 64 位 RISC-V 的表示方法
-
-### 进制转化
-
-![alt text](image-7.png)
-
-小数：从小数点开始，往左找，往右找，对于16 / 8进制，都是 4 / 3 位一组，不够则在后面补0
-
-![alt text](image-8.png)
-
-导致了浮点数的不精确表示
-
-简便方法：
-
-![alt text](image-9.png)
-
-### 有符号数
-
-#### 补码表示法
-
-最高位（Bit 63）决定正负：
-
-Bit 63 is sign bit
-- 1 for negative numbers
-- 0 for non-negative numbers
-
-在 n 位二进制中，$-x ≡ 2^n - x (mod 2^n)$
-
-```
-补码(-x) = 2^n - x
-```
-
-$2^n$ 实际上是高一位的1，被忽略了，所以加 $2^n$ 相当于没加，所以把负数加 $2^n$
-
-![alt text](image-10.png)
-
-其中，$n$ 是二进制位数
-
-结论：负数的补码等于其绝对值的二进制，各位取反，再加一。
-
-将32位数扩展为64位数的方法：
-
-- 有符号数： sign extension，即在高位补符号位
-
-    - 负数：高位补1
-    - 正数：高位补0
-
-- 无符号数： zero extension，即在高位补0
-
-
-#### 原码表示法
-
-用二进制表示数值的绝对值，符号位用来表示正负，正数符号位为0，负数符号位为1。
-
-浮点数用的就是原码表示法。
-
-缺点：
-
-- 有两个0：+0 和 -0
-- 运算复杂：加减法需要考虑符号位，增加了运算的复杂性。
-
-
-#### 移码表示
-
-将数值加上一个固定的偏移量（bias），使得所有数值都变为非负数，一般来说，n位二进制的偏移量为 $2^{n-1}$。
-
-作用：可以简化比较，尤其是浮点数的比较。
-
-![alt text](image-11.png)
-
 对于简单指令，要熟悉汇编语言和机器码的翻译过程：
 
 - 寄存器数值就是对应位置的十进制，翻译成二进制
 - 操作码等要知道
+
+### I-format Instruction
+
+I: 立即数
+
+![alt text](image-12.png)
+
+前面12位立即数是用 **补码** 表示的
+
+### S-format Instruction
+
+![alt text](image-13.png)
+
+也是立即数型指令
+
+把立即数拆成两部分: `imm[11:5]` and `imm[4:0]`
+
+专门应用于 `store` instruction, 其他立即数指令都是用 I-format
+
+Example:
+
+```c
+A[30] = h + A[30] + 1
+```
+
+equals to:
+
+```assembly
+
+```
+
+equals to:
+
+![alt text](image-14.png)
+![alt text](image-15.png)
+
+## Store the Program
+
+![alt text](image-16.png)
+
+在内存里面，程序和数据都是一样的形式存储的。
+
+## Logic Operantions
+
+![alt text](image-17.png)
+
+
+### Shift Operations
+
+`sll`, `slli`, `srl`, `srli`, `sra`, `srai` 
+
+分类：算术移位 / 逻辑移位；左移右移；是否立即数版本
+
+右移时候：
+
+- 算术移位：高位符号扩展
+
+- 逻辑移位：高位补0
 
