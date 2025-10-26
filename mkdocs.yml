@@ -112,7 +112,8 @@ nav:
       - 计算机组成原理:
         - 课程信息: CS/system/priciples/index.md
         - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
-        - Chapter 2 汇编语言和数的表示: CS/system/priciples/chap2.md
+        - 汇编语言指令概述: CS/system/priciples/instructions.md
+        - 数的表示: CS/system/priciples/number_representation.md
         
     - 算法相关: 
       - 数据结构基础:
@@ -130,12 +131,17 @@ nav:
         - 红黑树和B+数: CS/algorithm/ads/redblack_tree_bplus_tree.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
+    - 数据科学:
+      - 大数据挖掘:
+        - 课程信息: CS/data/mining-massive-data/index.md
+
     - 操作系统:
       - Linux:
         - WSL备忘录: CS/OS/linux/wsl-record.md
         - 虚拟机备忘录: CS/OS/linux/vm-record.md
         - WSL操作指南: CS/OS/linux/wsl-note.md
         - GitHub Copilot: CS/OS/linux/github-copilot.md
+        - Clash Verge Rev 安装/配环境指南: CS/OS/linux/clash-verge-rev.md
       - Windows物理机一: CS/OS/windows/win-note.md
       - Windows物理机二: CS/OS/windows/win1.md
     - 网络安全:

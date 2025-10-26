@@ -470,3 +470,293 @@ equals to:
 
 - 逻辑移位：高位补0
 
+逻辑移位 == 乘除法，且移位操作快
+
+对无符号数，右移，前面补0，相当于除
+
+### And Operations
+
+`and x9, x10, x11`  # x9 = x10 & x11
+
+### Or Operations
+
+作用：把数字的某些位设置为 1
+
+### XOR Operations
+
+作用：把数字的某些位取反
+
+立即数的扩展：
+
+![alt text](image-18.png)
+
+## Making Decision
+
+跳转指令
+
+- 有条件跳转：for / while
+- 无条件跳转：jump
+
+### Conditional Operation
+
+#### `beq` and `bne`
+
+跳转：
+
+`beq` = branch if equal
+
+```assembly
+beq rs1, rs2, L1 
+# if(rs1 == rs2) goto L1, meaning: if(rs1 == rs2) branch to instruction labled L1
+# PC = PC + (L1 << 1)
+```
+
+这里面，**`L1` 是一条指令的标签**
+
+??? info "有关 `PC << 1` 的说明"
+
+    1. "距离"本身已经是 4 的倍数
+    因为 RISC-V 32位系统中:
+
+    每条指令长度固定是 4 字节
+    所以指令地址一定是 4 的倍数(0x0, 0x4, 0x8, 0xC, ...)
+    两条指令之间的"距离"也一定是 4 的倍数
+    2. 为什么要左移 1 位(乘以 2)?
+    关键在这句话:"又因为RISC-V兼顾16位的操作系统(指令长度为2的倍数)"
+
+    这意味着:
+
+    在 RV32I(32位指令集)中,指令是 4 字节对齐
+    在 RV32C(压缩指令集)中,指令可以是 2 字节
+    RISC-V 支持混合使用 32位和16位指令
+    3. 立即数空间优化
+    在分支指令(B-type)中,立即数字段有限(只有12位):
+
+    ```
+    | imm[12] | imm[10:5] | rs2 | rs1 | funct3 | imm[4:1] | imm[11] | opcode |
+    ```
+
+    注意:立即数只存储 `imm[12:1]`,没有存 `imm[0]`!
+
+    因为:
+
+    最小的跳转单位是 2 字节(16位指令)
+    所以偏移量的最低位 `imm[0]` 永远是 0
+    硬件直接假设 `imm[0] = 0`,把它省略掉
+    实际计算时:
+
+    ```
+    实际偏移 = 立即数 << 1  (左移1位,相当于乘以2,补上省略的 imm[0])
+    ```
+
+    **完整流程**
+
+    ```
+    beq x5, x6, label  # 假设 label 距离当前PC是 +100 字节
+    ```
+
+    1. 汇编器计算距离: `label地址 - PC = 100`
+    2. 右移1位存入指令: `100 >> 1 = 50` 存入立即数字段
+    3. CPU执行时左移1位还原: `50 << 1 = 100`
+    4. PC相对跳转: `PC = PC + 100`
+
+- PC relative addressing：PC 相对寻址
+
+即在机器码中，用相对位置的差值（**距离**）表示 `L1`，而不是绝对地址，那么这用的是立即数，说明相对位置差不能太大，否则立即数表示不下。其中，正距离表示向前跳转，负距离表示向后跳转。32位系统指令长度是 4 字节，所以“距离”都是 4 的倍数。又因为RISC-V兼顾16位的操作系统（指令长度为2的倍数），所以跳转地址要左移 1 位（乘以 2），即后面补一个 0。
+
+`PC` 是程序计数器（寄存器），存放下一条要执行的指令地址，由系统自动控制，每次执行完指令，`PC` 会自动加上指令长度（RISC-V 是 4 字节）
+
+
+`bne` = branch if not equal
+
+```assembly
+bne rs1, rs2, L1  # if(rs1 != rs2) goto L1, meaning: if(rs1 != rs2) branch to instruction labled L1
+```
+
+例子：
+
+```c
+if (i == j) {
+    f = g + h;
+} else {
+    f = g - h;
+}
+```
+
+```assembly
+    bne x22, x23, Else(2)   # if (i != j) goto Else
+    add x19, x20, x21  # f = g + h
+    beq x0, x0, Exit (1)    # goto Exit
+Else: sub x19, x20, x21  # f = g - h
+Exit:
+```
+{ .annotate }
+
+1.  此处其实是一个 **无条件跳转**，即判断条件永远为真（`x0` 恒为   0），所以直接跳转到 `Exit` 标签处。另外此处机器码中立即数是 4
+
+2.  此处翻译成机器码后立即数是 6
+
+!!! info "立即数的计算范例"
+
+    逐条分析立即数
+    1. bne x22, x23, Else (地址 0x1000)
+    目标: 跳转到 Else 标签（地址 0x100C）
+
+    计算距离:
+
+    机器码中的立即数:
+
+    因为 B-type 指令会自动左移1位（<< 1），所以存储时右移1位。
+
+    二进制: 000000000110 (12位，补码表示)
+
+    2. beq x0, x0, Exit (地址 0x1008)
+    目标: 跳转到 Exit 标签（地址 0x1010）
+
+    计算距离:
+
+    机器码中的立即数:
+
+    二进制: 000000000100 (12位，补码表示)
+
+    B-type 指令的机器码格式
+    示例：bne x22, x23, Else (立即数 = 6)
+    立即数 6 的二进制（13位，因为包含 imm[12:0]，但 imm[0] 永远是0）:
+
+    拆分到机器码各字段：
+
+    - `imm[12]` = 0
+    - `imm[10:5]` = 000000
+    - `imm[4:1]` = 0011
+    - `imm[11]` = 0
+    - `rs2` = x23 = 10111
+    - `rs1` = x22 = 10110
+    - `funct3` = 001 (bne 的功能码)
+    - `opcode` = 1100011 (B-type)
+
+    完整机器码:
+
+    总结
+    指令	跳转距离（字节）	机器码中的立即数（十进制）	立即数（二进制12位）
+    bne x22, x23, Else	12	6	000000000110
+    beq x0, x0, Exit	8	4	000000000100
+    关键点:
+
+    实际跳转距离是 12 字节和 8 字节
+    但机器码中存储的立即数是 6 和 4（右移1位后的结果）
+    CPU 执行时会自动左移1位还原成实际偏移量
+
+
+```c
+while (save[i] == k) i += 1
+```
+
+- in in x22, k in x24, address of save in x25
+
+```assembly
+Loop: slli x10, x22, 3
+      add x10, x10, x25   # x10 = &save[i]
+      ld x9, 0(x10)      # x9 = save[i]
+      bne x9, x24, Exit  # if(save[i] != k) goto Exit
+      addi x22, x22, 1    # i += 1
+      beq x0, x0, Loop    # goto Loop
+Exit:
+```
+
+```assembly
+slli x10, x22, 3
+add x10, x10, x25   # x10 = &save[i]
+```
+
+这两句是在计算 `&save[i]`，因为 `save` 是 `double` 类型，占 8 字节（2^3 = 8），所以要把 `i` 左移 3 位（乘以 8）再加上 `save` 的基地址 `x25`。
+
+#### `blt`, `bge`, `bltu`, `bgeu`
+
+`blt` = branch if less than
+
+```assembly
+blt rs1, rs2, L1  # if(rs1 < rs2) goto L1, meaning: if(rs1 < rs2) branch to instruction labled L1
+```
+
+!!! success "技巧"
+
+    汇编语言中条件指令一般用与高级语言中相反的
+
+`bge` = branch if greater than or equal
+
+有符号数和无符号数的比较
+
+- 有符号数比较：`blt`, `bge`
+- 无符号数比较：`bltu`, `bgeu`
+
+![alt text](image-19.png)
+
+因为负数的话将其当作无符号数时候他是非常大的正数
+
+### Basic Block 基本块
+
+一整个完整的没有跳转出去和跳转进来的指令序列
+
+## Procedure Calling 过程调用
+
+变量作用域、参数传递都要自己写
+
+![alt text](image-20.png)
+
+- 约定：`x10` - `x17` 放参数，多了就只能放内存
+- 程序栈
+- 返回值放 `x10`, `x11`
+
+### `jal` and `jalr`
+
+`jal` = jump and link: Procedure Call
+
+```assembly
+jal x1, ProcedureLabel1
+```
+
+- 将下一条指令地址（`PC + 4`）存入 `x1`（`$ra`，返回地址寄存器）
+- 跳转到 `ProcedureLabel1` 处执行
+
+`jalr` = jump and link register: Return from Procedure
+
+```assembly
+jalr x0, 0(x1)
+```
+
+- 将返回地址寄存器 `x1` 的值（即 `PC + 4`）存入 `PC`，实现返回
+
+`jarl` 指令也有别的用途
+
+- 无条件跳转
+- 高级语言的 `case`
+
+```
+# 调用函数 func
+jal ra, func        # 跳转到 func，同时保存返回地址到 ra
+
+# 函数体 func:
+func:
+    ...             # 执行一些操作
+    jalr x0, 0(ra)  # 从 ra 返回到调用点
+```
+1. jal ra, func → 跳到函数，ra 里存返回地址；
+2. 函数执行；
+3. jalr x0, 0(ra) → 跳回调用处。
+
+### Stack  栈指针
+
+程序栈：每次进入一个程序，都分配一块栈空间
+
+对一块栈空间：顶部地址大，底部地址小，但是栈是从高地址向低地址增长的。
+
+栈指针就是指向栈顶的地址，可以往下增长（分配空间），也可以往上减少（释放空间）
+
+![alt text](image-21.png)
+
+把父程序的三个值放在栈里：当执行完子程序要访问父程序的变量时，可以通过栈指针加上偏移量来访问（类似于恢复现场）
+
+当申请3个寄存器的空间时候，`SP` 要减去 12（3 * 4 字节）
+
+为什么是减：因为栈是从高地址向低地址增长的
+

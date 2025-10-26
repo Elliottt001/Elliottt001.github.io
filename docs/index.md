@@ -73,11 +73,17 @@
 
 !!! info "正在学习的内容"
 
-    - [Advanced Data Structure and Algorithm Analysis](https://Elliottt001.github.io/CS/algorithm/ads/)
-    - [Computer System Principles](https://Elliottt001.github.io/CS/system/priciples/)
-    - [C++ Programming Language](https://Elliottt001.github.io/CS/pl/C_Cpp/cpp/)
-    - [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
-    - [Macroeconomics](https://Elliottt001.github.io/FINANCE/macro/)
+    === "校内课程"
+
+        - [Advanced Data Structure and Algorithm Analysis](https://Elliottt001.github.io/CS/algorithm/ads/)
+        - [Computer System Principles](https://Elliottt001.github.io/CS/system/priciples/)
+        - [C++ Programming Language](https://Elliottt001.github.io/CS/pl/C_Cpp/cpp/)
+        - [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
+        - [Macroeconomics](https://Elliottt001.github.io/FINANCE/macro/)
+
+    === "自主学习"
+
+        - [Mining Massive Datasets](https://Elliottt001.github.io/CS/data/mining-massive-data/)
 
 
 !!! inline warning "施工中！" 
