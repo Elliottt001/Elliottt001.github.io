@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Markdown 文件路径
-markdown_file = "/home/rzzhang/github/mkdocs-site/docs/CS/algorithm/ads/redblack_tree_bplus_tree.md"
+markdown_file = "/home/ruizhe/github/mkdocs-site/docs/CS/algorithm/ads/redblack_tree.md"
 # 图片目标路径
 target_image_dir = "res/images"
 
