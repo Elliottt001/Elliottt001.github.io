@@ -8,6 +8,7 @@
 1. 左右子树都 height balanced：**递归下去所有都是**
 2. $|h_L - h_r| \le 1$，即对所有节点 $BF(node) = -1 / 0 / 1$，
 
+
 !!! info ""
 
     定义  $BF(node) = h_L - h_R$
