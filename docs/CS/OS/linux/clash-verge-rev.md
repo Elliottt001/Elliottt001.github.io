@@ -37,10 +37,25 @@ mv mihomo-linux-amd64-v1.19.15 /usr/local/bin/mihomo
 
 ```bash
 curl -L -o config.yaml "生成的Clash配置链接"
+```
+
+检查 `config.yaml` 文件是否下载成功且不为空
+
+```bash
+ls -lh config.yaml
+cat config.yaml | head -n 20
+```
+
+确认正确之后运行：
+
+```bash
 mihomo -f config.yaml -d .
 ```
 
-如果遇到 🚫 can't download MMDB → 无法从 GitHub 下载地理数据库文件（geoip.metadb）问题，只需要从 GitHub 手动下载地理数据库文件
+如果 `config.yaml` 文件不完整，说明订阅链接不太符合 linux 命令格式要求，可以用浏览器下载后传到服务器上替换掉，或者直接在浏览器中打开订阅链接，全选，复制，写入 `config.yaml` 文件中。
+
+
+如果遇到 `can't download MMDB` （ERRO can't initial GeoIP: can't download MMDB: Get "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb": context deadline exceeded）→ 无法从 GitHub 下载地理数据库文件（geoip.metadb）问题，只需要从 GitHub 手动下载地理数据库文件
 
 ```bash
 cd ~/clash

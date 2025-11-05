@@ -128,12 +128,20 @@ nav:
       - 高级数据结构与算法分析:
         - 课程信息: CS/algorithm/ads/index.md
         - AVL树: CS/algorithm/ads/avl-tree.md
-        - 红黑树和B+数: CS/algorithm/ads/redblack_tree_bplus_tree.md
+        - 红黑树: CS/algorithm/ads/redblack_tree.md
+        - B+树: CS/algorithm/ads/bplus_tree.md
+        - 倒排表: CS/algorithm/ads/inverted_file_index.md
+        - 左偏树和斜堆: CS/algorithm/ads/leftist_heap.md
+        - 二项队列: CS/algorithm/ads/binomial_queue.md
+        - 回溯法: CS/algorithm/ads/backtracking.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 数据科学:
       - 大数据挖掘:
         - 课程信息: CS/data/mining-massive-data/index.md
+        - Map Reduce and Spark: CS/data/mining-massive-data/mapreduce-and-spark.md
+        - Frequent Itemsets Mining: CS/data/mining-massive-data/frequent-itemsets-mining.md
+        - LSH(Locality Sensitive Hashing): CS/data/mining-massive-data/lsh.md
 
     - 操作系统:
       - Linux:

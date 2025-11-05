@@ -204,7 +204,7 @@ Example: on an initially
     Lemma: if a + b < c, then log(a) + log(b) < 2log(c) - 2
 
 
-![alt text](1f5b5b0f98742aab7d9da213b64d1201.jpg)
+![alt text](res/images/1f5b5b0f98742aab7d9da213b64d1201.jpg)
 
 通过上面引理，可以放缩，进而将其都放缩成3倍的，且每次操作上一次减的项和下一次加的项可以裂项相消，进而就剩下 log(n) 级别的项（根节点的 rank，basically height of the tree）
 
