@@ -53,9 +53,12 @@ quit  # to quit the help file
 ## 数据容器
 
 ### 数据容器总结
+
 ![[63178ff0bddb8b3d19ff53ae8417e90.jpg]]
 ![[767def4f0bdfa79420e48fb7b1c3371.jpg]]
+
 #### .方法
+
 	new_name = sorted(name, reverse)
 		reverse: 不传默认False : 不倒序即正序
 		reverse = True : 倒序
@@ -65,14 +68,19 @@ quit  # to quit the help file
 	min_item = min(name)
 
 #### 比大小
+
 ASCII, UTF-8
 
 逻辑：一个一个比，到不一样的那个开始出大小，跟长度没关系
+
 ### 序列sequence
+
 #### 序列总结
+
 ![[e3aa546b6378288f581c530b96df6b4.jpg]]
 
 ##### 序列的切片
+
 定义：取出一个子序列
 
 语法：sequence_name\[start: stop: step]
@@ -94,20 +102,29 @@ ASCII, UTF-8
 	倒序输出：print(序列名\[ : : -1]) : 如果前面两个都没填，则默认第一个是-1，最后一个是0
 
 #### 列表list
+
 ##### 定义
+
 方法1. list_name = \["任意类型的数据", 123, 4 + 5j, \["甚至可以放列表", 5.3], None, True]
 
 方法2. list_name = list( "里面什么都能装")
+
 ##### 访问
+
 list_name\[index] : index从0开始
+
 超过限制：报错
 
 index是负数：反向index：最后一个-1，倒数第二个-2，依此类推
 
 二维列表（列表·里面有列表）：list_name\[index1]\[index2]
+
 ##### 修改
+
 list_name\[index] = new_item_which_can_be_any_type
+
 ##### 点操作
+
 访问对象的属性和方法
 
 每一种数据类型都是一个类，当用这种数据类型，就是引出一个对象，就可以用这个对象的属性和方法
@@ -146,6 +163,7 @@ list_name\[index] = new_item_which_can_be_any_type
 		排序
 
 ##### 循环遍历
+
 ```python
 index = 0
 while(index < len(list_name)):
@@ -167,7 +185,9 @@ PS: range(start, stop, step)
 - step : 省略默认1
 
 #### 元组tuple
+
 ##### 跟list：
+
 定义：把\[]变成()即可
 
 不同：不能修改！所以.方法没有添加删除那几个
@@ -177,18 +197,26 @@ PS: range(start, stop, step)
 	.index()
 	.count()
 	len()
+
 ##### 元组的解包
+
 ```python
+
 tuple_name = (item1, item2, item3) #多个item，可以是任意数据类型
 a, b, c = tuple_name
 # 现在，a是item1， 依此类推
+
 ```
+
 ##### 作用
+
 保护数据，不可修改
 函数的多返回值是个元组
 
 ##### tips
+
 ```python
+
 my_tuple = (124, 'hello', ["a", "b", 89])
 my_tuple[2][0] = 'A'
 print(my_tuple)
@@ -196,14 +224,18 @@ print(my_tuple)
 ```
 
 #### 字符串string
+
 ##### 跟list相同点
+
 	.index()
 	.count()
 	len()
 ##### 跟list不同
+
 不可直接修改！
 
 如果要修改，换新的字符串：见下，用.方法: new_str = ori_str.func(pra)
+
 ##### .方法（修改必须新字符串+调用函数）
 
 原字符串永远不可能被修改
@@ -228,15 +260,23 @@ print(my_tuple)
 			场景：用AI聊天式办公：前后的空格都占用AI的算力，故删除
 
 ### 另外两个
+
 #### 集合set
+
 ##### 特点：
+
 不重复、无序、无索引index！
+
 可以修改！
+
 ##### 定义：
+
 方法一：set_name = {item1, item2, item3, ......}
 
 方法二：set_name = set(item1, item2, item3, ......)
+
 ##### .方法
+
 	len(set_name)也适用
 	set_name.add(added_item)
 		追加元素，当然，没有顺序随机放置，甚至每次打印那些个元素的顺序都不一样
@@ -249,6 +289,7 @@ print(my_tuple)
 		清空集合
 
 ##### 集合的运算(也是.方法)
+
 并集
 - 方法一：new_set = set1 | set2
 - 方法二：new_set = set1.union(set2)
@@ -262,11 +303,13 @@ print(my_tuple)
 - 方法二：new_set = set1.difference(set2)
 
 ##### 遍历
+
 只能用for：for item in set_name:
 
 while不行: 因为没有index
 
 ##### 应用
+
 给列表去重
 
 	引用：爬去豆瓣排名前100的导演，去分析他们的合作关系之类的东西
@@ -276,15 +319,21 @@ my_list = list(set(my_list))
 ```
 
 #### 字典dict
+
 ##### 定义
+
 方法1：dict_name = {key1: value1, key2: value2, key3: value3 ……} ：元素为键值对
 
 方法2：dict_name = dict()
+
 ##### 规范
+
 数据类型：除键不能是字典外，对key和value其他随便啥数据类型都行
 
 key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
+
 ##### 访问
+
 查找：dict_name\[key_name]
 
 新增：dict_name\[new_key_name] = new_value
@@ -295,7 +344,9 @@ key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 	<!--“我干过别的……嘿嘿嘿……”看看人家大学四年的技术水平，本科毕业直接工作，报价3000的爬虫小项目-->
 	<!--by YL-->
 没有下标索引
+
 ##### .方法
+
 	dict_name.pop(key_name)
 		删除指定元素
 	dict_name.clear()
@@ -325,6 +376,7 @@ key要唯一：如果不唯一则后面覆盖前面（即按最后一个算）
 [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
 ### 定义语法
+
 ```python
 # 方法一
 try:
@@ -369,6 +421,7 @@ finally:
 也不一定是打印，就特定的需求吧
 
 例子：
+
 ```python
 def div(a, b):
     return a/b
@@ -382,7 +435,9 @@ a = int(input())
 b = int(input())
 print(calculator(a, b, div))
 ```
+
 ### 杂项
+
 1. 异常捕获具有传递性
 	随着*程序执行的过程*（函数的参数传递和调用过程……）进行传递
 		看：YL 7.32 2:28:00
@@ -394,7 +449,9 @@ print(calculator(a, b, div))
 [Python高阶语法](https://www.yuque.com/u26596123/re4lmd/on3q87t95utuea4o)
 
 ### 类的定义方法（不够简便）
+
 ### 类的构造方法（最简便的）
+
 ```python
 class Animal():
     def __init__(self, name, age, sound, species = "动物", love_status = False):
@@ -467,6 +524,7 @@ print(tiger.__getlove_status()) # AttributeError: 'Animal' object has no attribu
 		那么，可以：my_list.append(), my_list.remove(), etc.
 
 ### 魔术方法
+
 魔术方法的调用通常是隐式的，即由Python解释器在特定操作发生时自动调用，而不是直接由用户代码显式调用
 魔术方法的显式调用：可以但是不建议，会被辞退
 	另一个方法（可以是自定义也可以是另一个魔术方法）的返回值写例如：return self.\_\_str__()  

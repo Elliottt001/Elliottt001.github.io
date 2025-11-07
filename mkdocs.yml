@@ -92,16 +92,16 @@ nav:
           - Varibles & Synatax: CS/pl/C_Cpp/cpp/basic.md
           - Keywords: CS/pl/C_Cpp/cpp/keyword.md
       - Python:
+        - python主页: CS/pl/Python/index.md
         - 基础语法: CS/pl/Python/py-basic-grammar.md
         - 数据容器: CS/pl/Python/py-sequence.md
-        - 文件和异常: CS/pl/Python/file.md
         - 面向对象: CS/pl/Python/py-oop.md
         - 文件基础: CS/pl/Python/file-basic.md
-        - 文件进阶: CS/pl/Python/file-advanced.md
+        - 文件进阶: CS/pl/Python/file-advance.md
         - 标准库积累: CS/pl/Python/modules.md
         - 项目开发: CS/pl/Python/development-in-py.md
         - 百日打卡: CS/pl/Python/clock-in.md
-        - YL 笔记: CS/pl/Python/python-note.md
+        - 伊力笔记: CS/pl/Python/python-note.md
       - Go:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
