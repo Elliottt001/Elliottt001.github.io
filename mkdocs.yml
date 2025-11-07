@@ -134,6 +134,8 @@ nav:
         - 左偏树和斜堆: CS/algorithm/ads/leftist_heap.md
         - 二项队列: CS/algorithm/ads/binomial_queue.md
         - 回溯法: CS/algorithm/ads/backtracking.md
+        - 分治合并法: CS/algorithm/ads/divide_conquer.md
+        - 动态规划: CS/algorithm/ads/dynamic_programming.md
       - Misc: CS/algorithm/misc.md
       - Sort: CS/algorithm/sort.md
     - 数据科学:
