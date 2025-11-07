@@ -4,7 +4,7 @@
 
 回溯法：在枚举的基础上剪枝，遇见不符合条件的直接干掉不继续看这个方案的后面的情况
 
-![alt text](res/images/image-25.png)
+![alt text](res/images/image-25_1.png)
 
 **很多问题的解都可以抽象成一个有序系列，很多问题的解法都能用树表示，用树表示之后遍历，DFS / BFS，其中 DFS 出现频率高。**
 
@@ -20,10 +20,10 @@ game tree
 
 事实上做题的时候不会真正生成一棵树，那个树的结构只是逻辑结构，手中无树，心中有树
 
-![alt text](res/images/image-26.png)
-![alt text](res/images/image-29.png)
-![alt text](res/images/image-27.png)
-![alt text](res/images/image-28.png)
+![alt text](res/images/image-26_1.png)
+![alt text](res/images/image-29_1.png)
+![alt text](res/images/image-27_1.png)
+![alt text](res/images/image-28_1.png)
 
 答案序列：第 i 个元素代表在第 i 行，其值代表在第几列
 
@@ -31,12 +31,12 @@ game tree
 
 利用当前剩下的最大距离，看他是那两个加油站之间的距离而枚举下一个，检查新的可能的节点和也有其他节点的举例是否在给定的距离里面
 
-![alt text](res/images/image-30.png)
-![alt text](res/images/image-31.png)
+![alt text](res/images/image-30_1.png)
+![alt text](res/images/image-31_1.png)
 
 回溯法代码模版：
 
-![alt text](res/images/image-32.png)
+![alt text](res/images/image-32_1.png)
 
 回溯法的难点：剪枝的方法，有些时候得提前预测
 
@@ -52,7 +52,7 @@ game tree: 路径，要求 root 和 leaf 都是出发点，但是这样只有 DF
 
 2. 考虑极端情况：如果还没走的几步每次都能抓到兔子，设现在抓到了 $M'$ 只兔子，走了 $k'$ 步，如果 $M - M' > k - k'$，则肯定失败，可以剪枝
 
-![alt text](res/images/image-33.png)
+![alt text](res/images/image-33_1.png)
 
 上面比较好，剪枝过程中如果在上面的节点剪掉的话可以排除好多。
 
@@ -78,9 +78,13 @@ game tree: 路径，要求 root 和 leaf 都是出发点，但是这样只有 DF
 
 估价函数 evaluation function，评估在当前情况下对计算机 / 人的有利情况，即函数返回值（分数）越高，对计算机越有利，分数越低对人越有利。
 
+![alt text](res/images/image_2.png)
+
 事实上估价函数可以很复杂，例如alpha go 就是在这训练了一个神经网络。这里我们取在当前情况下，只让一方（A）走另一方（B）不走，A走赢的可能性的数量 - B 走赢的可能性的数量 = 分数，这里 A 是计算机，B是人，那么分数越高对计算机越有利
 
 ### 剪枝方法
+
+![alt text](res/images/image-1_2.png)
 
 minimax 的策略选择：给定搜索深度从这个深度在 game tree 里面回溯，每次选择的主体都是人和计算机中的一个，交替进行，每次都由人、计算机选出对自己最有利的一个分支，再从这个分支往上走（在里面选一个的过程就是剪枝）。
 
@@ -89,4 +93,23 @@ minimax 的策略选择：给定搜索深度从这个深度在 game tree 里面�
 方法2：
 
 $\alpha \beta$ 剪枝
+
+![alt text](res/images/image-2_2.png)
+![alt text](res/images/image-3_2.png)
+
+## 华容道问题
+
+![alt text](res/images/e739b82906d0b22c45b3fb5b440c56e7_1.jpg)
+
+### 方法
+
+game tree 的每个节点都是一个状态，分支按照空格和哪个交换
+
+### 剪枝
+
+记录当前得到的解的步数，由于要找最优解（步数最小），那么如果在另一个解没走完的时候，后面的步数的极限情况都比目前已有的解的步数多，就可以提前剪枝了。
+
+后面步数的极限情况计算方法：
+
+丢弃其他数字的影响，只看一个数字看它走到目标位置要走的最少步数，也就是，边界步数（因为考虑其他影响的话肯定至少大于等于这个步数）如果这个最小步数都比剩下的步数多，则剪枝
 
