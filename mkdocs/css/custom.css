@@ -37,7 +37,8 @@
   }
   
   .md-typeset {
-    font-size: 1.1rem;
+    font-size: .9rem;
+    line-height: 1.5;
   }
   
   /* 标题字体大小设置 - 使用相对大小（em），与正文保持相对比例 */
