@@ -37,37 +37,37 @@
   }
   
   .md-typeset {
-    font-size: .7rem;
+    font-size: .9rem;
   }
   
-  /* 标题字体大小设置 - 确保所有标题都比正文大 */
+  /* 标题字体大小设置 - 使用相对大小（em），与正文保持相对比例 */
   .md-typeset h1 {
-    font-size: 1.6rem;
+    font-size: 2em;
     font-weight: 600;
   }
   
   .md-typeset h2 {
-    font-size: 1.3rem;
+    font-size: 1.625em;
     font-weight: 600;
   }
   
   .md-typeset h3 {
-    font-size: 1.1rem;
+    font-size: 1.375em;
     font-weight: 600;
   }
   
   .md-typeset h4 {
-    font-size: 1.0rem;
+    font-size: 1.25em;
     font-weight: 600;
   }
   
   .md-typeset h5 {
-    font-size: 0.9rem;
+    font-size: 1.125em;
     font-weight: 600;
   }
   
   .md-typeset h6 {
-    font-size: 0.8rem;
+    font-size: 1em;
     font-weight: 600;
   }
   
