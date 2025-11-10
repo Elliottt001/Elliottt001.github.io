@@ -12,6 +12,26 @@
 
 - 1：深度优先，遇到方块就停
 
+python 实现
+
+```python
+def backtrack(path, choices, result):
+    # path: 当前部分解（列表）
+    # choices: 可选项（或通过索引选择）
+    if is_solution(path):
+        result.append(path.copy())
+        return
+
+    for c in get_candidates(path, choices):
+        # 做选择
+        path.append(c)
+        # 可以在此处标记 c 已被使用（若需要）
+        backtrack(path, choices, result)
+        # 撤销选择
+        path.pop()
+        # 取消标记
+```
+
 ## 八皇后问题
 
 game tree

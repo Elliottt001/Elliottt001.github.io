@@ -128,7 +128,7 @@ nav:
       - 高级数据结构与算法分析:
         - 课程信息: CS/algorithm/ads/index.md
         - 考试复习笔记: CS/algorithm/ads/exam-review.md
-        - AVL树: CS/algorithm/ads/avl-tree.md
+        - AVL树和Splay树: CS/algorithm/ads/avl-tree_splay-tree.md
         - 红黑树: CS/algorithm/ads/redblack_tree.md
         - B+树: CS/algorithm/ads/bplus_tree.md
         - 倒排表: CS/algorithm/ads/inverted_file_index.md
@@ -186,6 +186,7 @@ nav:
       - shell: 
         - 笔记一: CS/Tools/shell.md
         - 笔记二: CS/Tools/shell-new.md
+      - iOS Fake Run: CS/Tools/iosfakerun.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
       - Git&GitHub: CS/Tools/Git & GitHub.md
