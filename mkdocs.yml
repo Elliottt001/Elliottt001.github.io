@@ -52,8 +52,10 @@ nav:
       - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
     - 大学物理:
       - 大雾下课程信息: KNOWLEDGE/physics/index.md
+      - 考试复习笔记: KNOWLEDGE/physics/exam-review.md
       - 动力学: KNOWLEDGE/physics/dynamics-motion.md
       - 电磁学: KNOWLEDGE/physics/electricity.md
+      - 电磁学公式物理量总结: KNOWLEDGE/physics/electricity-summary.md
     - 概率论与数理统计:
       - 课程信息: KNOWLEDGE/probability/index.md
       

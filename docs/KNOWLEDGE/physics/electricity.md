@@ -1,12 +1,16 @@
-$$k = \frac 1 {4 \pi \epsilon_0}$$
+!!! info "说明"
 
----
-counter: true
----
+    本文档内容基于[NoughtQ 学长的笔记](https://note.noughtq.top/misc/physics/1)编写，作为详细笔记，适用于大多数高校的物理课程复习和参考。
 
-# 电磁学部分
+    公式均采用国际单位制（SI），部分公式可能与其他版本教材有所不同，请以具体课程要求为准。
+
+!!! info "补天速览"
+
+
 
 ## 静电场
+
+$$k = \frac 1 {4 \pi \epsilon_0}$$  
 
 ### 电场强度
 
@@ -41,7 +45,7 @@ $$
 - 平面$S$的法线与$E$的夹角为$\theta \Rightarrow \Phi_e = ES \cos \theta = \bm{E \cdot S}$
 
 <div style="text-align: center">
-    <img src="images/C1/2.png" width=30%>
+    <img src="res/images/2.png" width=30%>
 </div>
 
 
@@ -59,7 +63,7 @@ $$
 - **无限大平面**（可有厚度）（面密度$\sigma$）：$E = \dfrac{\sigma}{2 \varepsilon_0}$
 
 <div style="text-align: center">
-    <img src="images/C1/3.png" width=90%>
+    <img src="res/images/3.png" width=90%>
 </div>
 
 
@@ -97,8 +101,8 @@ $$
 ??? example "例题"
 
     <div style="text-align: center">
-        <img src="images/C1/10.png" width=60%>
-        <img src="images/C1/11.png" width=60%>
+        <img src="res/images/10.png" width=60%>
+        <img src="res/images/11.png" width=60%>
     </div>
 
     电偶极子的场强分布即为电势梯度的负值（下面会讲到）
@@ -135,7 +139,7 @@ $$
     - 若外表面接地（电势 = 0），则内外电场互不干扰
 
 <div style="text-align: center">
-    <img src="images/C1/12.png" width=60%>
+    <img src="res/images/12.png" width=60%>
 </div>
 
 !!! note "静电场中金属导体问题求解的步骤"
@@ -165,7 +169,7 @@ $$
     - 公式：$C = \dfrac{Q}{U_A - U_B} = \dfrac{\varepsilon_0 S}{d}$
 
     <div style="text-align: center">
-        <img src="images/C1/13.png" width=40%>
+        <img src="res/images/13.png" width=40%>
     </div>
 
     - 注意两类问题：
@@ -176,7 +180,7 @@ $$
     - 公式（用高斯定理 + 电势定义式推导）：$C = \dfrac{Q}{U_A - U_B} = \dfrac{\lambda l}{U_A - U_B} = \dfrac{2\pi \varepsilon_0 l}{\ln \frac{R_B}{R_A}}$
 
     <div style="text-align: center">
-        <img src="images/C1/14.png" width=20%>
+        <img src="res/images/14.png" width=20%>
     </div>
 
 - 球形电容器：两同心金属球壳半径分别为$R_A, R_B$，电荷分别为$+q, -q$
@@ -184,7 +188,7 @@ $$
 
 
     <div style="text-align: center">
-        <img src="images/C1/15.png" width=30%>
+        <img src="res/images/15.png" width=30%>
     </div>
 
 电容的串并联
@@ -201,14 +205,14 @@ $$
     === "题目"
 
         <div style="text-align: center">
-            <img src="images/C1/38.png" width=80%>
+            <img src="res/images/38.png" width=80%>
         </div>
 
     === "答案"
 
         <div style="text-align: center">
-            <img src="images/C1/39.png" width=80%>
-            <img src="images/C1/40.png" width=80%>
+            <img src="res/images/39.png" width=80%>
+            <img src="res/images/40.png" width=80%>
         </div>
 
 
@@ -256,15 +260,15 @@ $$
     === "题目"
 
         <div style="text-align: center">
-            <img src="images/C1/23.png" width=50%>
+            <img src="res/images/23.png" width=50%>
         </div>
 
     === "答案"
 
         <div style="text-align: center">
-            <img src="images/C1/24.png" width=50%>
-            <img src="images/C1/25.png" width=50%>
-            <img src="images/C1/26.png" width=50%>
+            <img src="res/images/24.png" width=50%>
+            <img src="res/images/25.png" width=50%>
+            <img src="res/images/26.png" width=50%>
         </div>
 
 ### 静电场中的能量
@@ -377,13 +381,13 @@ $$
 其中$\bm{r}$为电流元指向$P$的矢量，$\mu_0 = 4 \pi \times 10^{-7} \text{N/A}^2$为真空磁导率。
 
 <div style="text-align: center">
-    <img src="images/C1/4.png" width=30%>
+    <img src="res/images/4.png" width=30%>
 </div>
 
 常用结论：
 
 <div style="text-align: center">
-    <img src="images/C1/5.png" width=80%>
+    <img src="res/images/5.png" width=80%>
 </div>
 
 推论：
@@ -398,14 +402,14 @@ $$
 - 载流直螺线管内部（对$P$点）的磁场：$B = \dfrac{\mu_0}{2} nI (\cos \beta_2 - \cos \beta_1)$，其中$n$为单位长度环绕的线圈匝数
 
     <div style="text-align: center">
-        <img src="images/C1/18.png" width=40%>
+        <img src="res/images/18.png" width=40%>
     </div>
 
     - 当$L \gg R$时，$B = \mu_0 nI$
     - 在长直螺线管上的两端点：$B = \dfrac{1}{2} \mu_0 nI$
 
     <div style="text-align: center">
-        <img src="images/C1/17.png" width=60%>
+        <img src="res/images/17.png" width=60%>
     </div>
 
     >说实话，个人感觉不会考这个模型，而且它的公式还可以用下面讲的安培环路定理来推导，比这里的更加容易理解
@@ -422,7 +426,7 @@ $$
     - 方向：
 
     <div style="text-align: center">
-        <img src="images/C1/19.png" width=40%>
+        <img src="res/images/19.png" width=40%>
     </div>
 
 - 当多电荷（连续分布电荷）匀速运动时，可求这些电荷形成的等效电流$I = \dfrac{\text{d}q}{\text{d}t}$
@@ -439,7 +443,7 @@ $$
 常用结论：
 
 <div style="text-align: center">
-    <img src="images/C1/6.png" width=90%>
+    <img src="res/images/6.png" width=90%>
 </div>
 
 与叠加定理结合：有些因不对称无法适用安培环路定理的磁场可以分解为多个可以适用的磁场的叠加
@@ -455,7 +459,7 @@ $$
 **磁矩**：$\bm{p}_m = NIS\hat{n}$（单位：$\text{A}\cdot\text{m}^2$），其中$N$为线圈匝数，$\hat{n}$表示磁矩方向（无大小），与电流环绕方向呈右手螺旋关系。
 
 <div style="text-align: center">
-    <img src="images/C1/16.png" width=30%>
+    <img src="res/images/16.png" width=30%>
 </div>
 
 - 作匀速圆周运动的电荷磁矩$\bm{p}_{m} = IS = \dfrac{\text{d}q}{\text{d}t} \pi r^2$（$\text{d}q$和$\text{d}t$根据实际情况求解，一般可用$e$和$\dfrac{2\pi r}{v} = \dfrac{2\pi}{\omega}$来替换；$r$为轨道半径）（几乎每年都考这类题型）
@@ -473,7 +477,7 @@ $$
         对于不规则形状的导线，它受到的安培力等价于与它始末位置相同的，通以同等大小电流的直导线所受的安培力
 
         <div style="text-align: center">
-            <img src="images/C1/27.png" width=70%>
+            <img src="res/images/27.png" width=70%>
         </div>
 
 - 载流平面线圈的**磁力矩**
@@ -495,7 +499,7 @@ $$
     - 螺距：$h = v_{0x}T = v_{0x}\dfrac{2\pi R}{v_{0n}} = v_{0x} \dfrac{2\pi m}{qB}$
 
     <div style="text-align: center">
-        <img src="images/C1/20.png" width=40%>
+        <img src="res/images/20.png" width=40%>
     </div>
 
 应用：
@@ -504,7 +508,7 @@ $$
     - 示意图：
 
     <div style="text-align: center">
-        <img src="images/C1/21.png" width=60%>
+        <img src="res/images/21.png" width=60%>
     </div>
 
     - $\dfrac{q}{m} = \dfrac{v}{RB'} = \dfrac{E}{RBB'}$
@@ -516,7 +520,7 @@ $$
 - 霍尔效应：处在均匀磁场中的通电导体薄板，当电流方向与磁场方向垂直时，则在垂直于磁场和电流方向的薄板上、下两端之间出现电势差。
 
     <div style="text-align: center">
-        <img src="images/C1/7.png" width=80%>
+        <img src="res/images/7.png" width=80%>
     </div>
 
     - 电势差方向判别：
@@ -551,7 +555,7 @@ $$
 - **磁化电流**$I_m$：由磁介质中各分子的分子电流叠加而成，仅在磁介质表面产生的等效环形电流
 
     <div style="text-align: center">
-        <img src="images/C1/8.png" width=70%>
+        <img src="res/images/8.png" width=70%>
     </div>
 
     - 磁介质表面上某处**磁化电流线密度**$j_m$等于该点磁化强度$\bm{M}$沿表面的切向分量。若是均匀磁介质被磁化，则$j_m = |\bm{M}|$
@@ -564,6 +568,18 @@ $$
     $$
     \oint\limits_L \bm{H} \text{d}\bm{l} = \sum I_0
     $$
+
+!!! info "两个安培环路定理的区别"
+
+    本质区别是在于电流 $I$ 指的是哪个电流不同：
+
+    $\oint\limits_L \bm{H} \text{d}\bm{l} = \sum I_{free}$
+
+    $\oint\limits_L \bm{B} \text{d}\bm{l} = \mu_0 \sum I_{total}$
+
+    其中， $I_{total} = I_{free} + I_{bound}$
+
+    总电流 = 自由电流（线圈中流的） + 束缚电流（磁介质中分子电流的总和）
 
 - $ \bm{B}, \bm{M}, \bm{H}$之间的关系（各向同性的磁介质）
     - 基本关系式：$\bm{M} = \chi_m \bm{H}$（$\chi_m$为介质的**磁化率**，顺磁质为正，抗磁质为负）
@@ -582,7 +598,7 @@ $$
 - **起始磁化曲线**：当铁磁质从未磁化状态开始加外磁场测得的曲线
 
     <div style="text-align: center">
-        <img src="images/C1/9.png" width=40%>
+        <img src="res/images/9.png" width=40%>
     </div>
 
     - 曲线成"S"型，说明$\mu$不是常数
@@ -592,7 +608,7 @@ $$
 - **磁滞回线**：
 
     <div style="text-align: center">
-        <img src="images/C1/22.png" width=40%>
+        <img src="res/images/22.png" width=40%>
     </div>
 
     - 铁磁质达到饱和状态后，当减小$H$时，$B$的减小呈现出滞后性（磁滞现象）
@@ -601,6 +617,17 @@ $$
     - 此后再减小$H$（增大反向磁场），铁磁质开始反向磁化至反向饱和状态；再沿正方向增加$H$，$B$又会滞后于$H$达到饱和状态，形成磁滞回线
     - 实际上，即使未达到饱和状态就开始减小$H$，也会形成磁滞回线，只是相比之下会小一些（图中的虚线）
     - 磁滞损耗：磁化过程中，会发热消耗能量，与磁滞回线所包围的面积成正比
+
+!!! info "H"
+
+    H 是磁场强度，只由外界的场决定，就像 E 一样；
+    B 是磁感应强度，是 H 和介质共同作用的结果，就像 D 一样。
+
+    $$B = \mu H$$
+
+    $$D = \varepsilon E$$
+
+    但事实上，$B$ 是磁场的基本物理量
 
 !!! note "总结：磁介质与电介质的对比"
 
@@ -623,7 +650,7 @@ $$
 **楞次定律**：闭合回路中感应电流的方向，总是使它所激发出的磁场去阻碍原磁通量的变化。
 
 <div style="text-align: center">
-    <img src="images/C1/28.png" width=60%>
+    <img src="res/images/28.png" width=60%>
 </div>
 
 **法拉第电磁感应定律**：回路所包围面积的磁通量$\Phi$发生变化时，回路中会产生感应电动势$\varepsilon_i$，即$\varepsilon_i = -\dfrac{\text{d}\Phi}{\text{d}t}$
@@ -631,7 +658,7 @@ $$
 - 方向：通常规定$\Phi$方向与原磁感应强度方向成右螺旋关系的回路方向为正方向，然后再判断$\dfrac{\text{d}\Phi}{\text{d}t}$的方向，$\varepsilon_i$的反向与之相反
 
 <div style="text-align: center">
-    <img src="images/C1/29.png" width=70%>
+    <img src="res/images/29.png" width=70%>
 </div>
 
 - **全通量**$\Psi$：若导体由多个线圈串联而成，每个线圈的磁通量为$\Phi_1, \dots, \Phi_n$，则$\varepsilon_i = -\dfrac{\text{d}\Psi}{\text{d}t}$，其中$\Psi = \Phi_1 + \Phi_2 + \dots + \Phi_n$
@@ -643,6 +670,10 @@ $$
 !!! warning "注意"
 
     当通过回路的磁通量不变时，整个回路的感应电动势为0，但这并不代表每根导线上没有感应电动势，可能只是这些感应电动势的代数和为0而已。
+
+    举例：
+
+    🌟导体环同时穿过两种磁场区域（+B 和 −B）：金属环一半在磁场 +𝐵，另一半在磁场 −𝐵，两个磁场强度随时间变化，但方向相反。结果：上半环磁通变化产生电动势顺时针；下半环磁通变化产生电动势逆时针；环路总磁通量变化率为 0（因为两部分磁通变化方向相反且相等）；整体感应电动势 = 0；但上、下半环仍存在电场与电荷运动趋势（方向相反）。
 
 !!! note "用法拉第电磁感应定律求电动势——磁通量法"
 
@@ -666,6 +697,183 @@ $$
         - 作平动：$\varepsilon_i = (\bm{v} \cdot \bm{B}) \cdot \bm{L}$
         - 绕一端作转动：$\varepsilon_i = \dfrac{1}{2}\omega B L^2$
 
+??? note "两种方法详解"
+
+    🌟 一、动生电动势的两种基本思路
+
+    在**稳恒磁场**中，由于没有随时间变化的磁通量，**感应电动势的来源**是导体的运动（即动生电动势）。
+
+    我们有两种等价的描述方法：
+
+    | 方法     | 适用情景            | 本质                                                                         | 常用表达式 |
+    | ------ | --------------- | -------------------------------------------------------------------------- | ----- |
+    | ① 线积分法 | 已知导体上各点速度分布     | 对导线积分：\(\varepsilon_i = \int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}\) | 局部、精确 |
+    | ② 磁通量法 | 可将导体与其它部分组成完整回路 | 用法拉第定律：\(\varepsilon_i = -\dfrac{d\Phi}{dt}\)                                | 全局、快速 |
+
+    但是有时你要求的并不是一个**真实回路**上的电动势（例如单根导体），
+    而法拉第定律只对“回路”成立。
+    这就引出了两种巧妙的“构造法”👇
+
+    ---
+
+    ⚙️ 二、磁通量法的两种技巧
+
+    （1）磁通量法——**补全法**
+
+    📘 适用场景：
+
+    当要求的是**单根运动导体的电动势**时（它本身不是闭合回路）。
+
+    💡 思想：
+
+    > 用一个“假想导体”把它补成一个**闭合回路**，
+    > 然后用法拉第定律求整个回路的感应电动势。
+
+    因为假想导体“不切割磁力线”（即它不动或平行于磁场），
+    所以整个回路的电动势全部来自那根**真实运动的导体**。
+
+    ---
+
+    📐 推导思路：
+
+    设：
+
+    * 磁场 \(\mathbf{B}\) 稳恒；
+    * 单根导体长度 \(L\)，速度 \(\mathbf{v}\)；
+    * 导体与磁场相交角度固定。
+
+    我们“补”上一根静止的虚线导体，使其和两条连接导线围成闭合回路。
+
+    则：
+    \[
+    \varepsilon_{\text{回路}} = -\frac{d\Phi}{dt}
+    \]
+    而这个回路的磁通量变化，正是因为**那根真实导体在运动**导致回路面积变化。
+
+    于是：
+    \[
+    \varepsilon_{\text{导体}} = \varepsilon_{\text{回路}} = -\frac{d\Phi}{dt}
+    \]
+
+    ---
+
+    🧲 举例：导体杆在磁场中平动
+
+    ![](https://i.imgur.com/rEXAKif.png)
+
+    * 磁场垂直纸面；
+    * 两平行导轨与滑动导体杆组成闭合回路；
+    * 杆以速度 \(v\) 向右滑动；
+    * 回路面积 \(S = Lx\)，磁通量 \(\Phi = BLx\)。
+
+    于是：
+    \[
+    \varepsilon_i = -\frac{d\Phi}{dt} = -B L \frac{dx}{dt} = -BLv
+    \]
+
+    如果你想求**仅杆上的电动势**，
+    我们可以想象——只要补上静止导轨（不切割磁感线），
+    整回路的电动势全来自那根运动杆。
+
+    ✅ **所以：**
+    \[
+    \boxed{\varepsilon_{\text{杆}} = B L v}
+    \]
+
+    这就是“磁通量法的补全思想”：
+
+    > 用假想导体补成回路，然后用 \(-\dfrac{d\Phi}{dt}\) 求感应电动势。
+
+    ---
+
+    （2）磁通量法——**转化法**
+
+    📘 适用场景：
+
+    当导体**形状复杂、速度分布复杂**时，
+    直接算 \(\int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}\) 很麻烦。
+
+    💡 思想：
+
+    > 把“难求的导体”通过等效变换，
+    > **转化为一个简单导体**（比如直导线）来求解。
+
+    关键技巧是：
+
+    > 找一个“假想回路”，使得这个假想回路的**总磁通量不变**。
+
+    在这种情况下，假想导体上产生的电动势
+    就等于原来复杂导体上的电动势（因为总电动势必须相同）。
+
+    ---
+
+    📐 物理解释：
+
+    * 法拉第定律只约束回路的总电动势；
+    * 只要两回路**磁通量随时间的变化相同**，
+    它们的总电动势也相同；
+    * 因此我们可以用“磁通量相同”的简单回路替代复杂形状的回路。
+
+    ---
+
+    🧲 举例：旋转导体的电动势
+
+    设一根导体杆在**均匀磁场**中绕一端旋转：
+
+    * 磁场垂直纸面；
+    * 导体长度 \(L\)，角速度 \(\omega\)。
+
+    若直接用线积分法：
+    \[
+    \varepsilon_i = \int_0^L (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}
+    \]
+    但速度 \(v = \omega r\) 随 \(r\) 变化，要积分，麻烦。
+
+    于是用磁通量法“转化”思路：
+
+    补上静止导线，使得杆的扫过面积为扇形：
+    \[
+    S = \frac{1}{2}\omega t L^2
+    \]
+    磁通量随时间变化：
+    \[
+    \Phi = B S = \frac{1}{2}B\omega t L^2
+    \]
+    所以：
+    \[
+    \varepsilon_i = -\frac{d\Phi}{dt} = -\frac{1}{2}B\omega L^2
+    \]
+
+    ✅ **结论：**
+    \[
+    \boxed{\varepsilon_i = \frac{1}{2}B\omega L^2}
+    \]
+
+    这就是常见结论，用“磁通量变化”代替线积分。
+
+    ---
+
+    🧭 对比总结
+
+    | 方法      | 思想            | 关键条件        | 常用场景       | 特点      |
+    | ------- | ------------- | ----------- | ---------- | ------- |
+    | **补全法** | 把孤立导体补成回路     | 假想导体不切割磁力线  | 求单根导体电动势   | 快速、物理清晰 |
+    | **转化法** | 把复杂回路变成等效简单回路 | 两回路磁通量变化率相同 | 旋转导体、非规则形状 | 省事、数学简洁 |
+
+    ---
+
+    🎯 最后一层理解
+
+    两种方法本质上都是对**法拉第定律**
+    \[
+    \varepsilon = -\frac{d\Phi}{dt}
+    \]
+    的巧妙应用，只不过：
+
+    * “补全法”是在构造一个**真实回路**来使用；
+    * “转化法”是在构造一个**等效回路**来简化计算。
+
+
 ---
 **感生电动势**：导体所处磁场发生变化所产生的电动势（在周围激发**涡旋电场**）
 
@@ -680,7 +888,7 @@ $$
     $$
 
     <div style="text-align: center">
-        <img src="images/C1/37.png" width=30%>
+        <img src="res/images/37.png" width=30%>
     </div>
 
     - 感生电动势在数值上等于单位正电荷绕闭合回路一周涡旋电场力所做的功，即$\varepsilon_i = \oint\limits_{L} \bm{E}_i \cdot \text{d} \bm{l}$
@@ -723,13 +931,13 @@ $$
     - 电路接通时的电流（电流的增长过程）：$I = I_0(1 - e^{-\frac{R}{L}t})$
 
     <div style="text-align: center">
-        <img src="images/C1/35.png" width=30%>
+        <img src="res/images/35.png" width=30%>
     </div>
 
     - 电路切断时的电流（电流的衰减过程）：$I = I_0e^{-\frac{R}{L}t}$
 
     <div style="text-align: center">
-        <img src="images/C1/36.png" width=30%>
+        <img src="res/images/36.png" width=30%>
     </div>
 
 ---
@@ -752,7 +960,7 @@ $$
 ??? example "例题"
 
     <div style="text-align: center">
-        <img src="images/C1/41.png" width=80%>
+        <img src="res/images/41.png" width=80%>
     </div>
 
 !!! note "求解步骤"
@@ -814,7 +1022,7 @@ $$
         - 传播电场$\bm{E}$和磁场$\bm{H}$，两者垂直，传播方向为$\bm{E} \times \bm{H}$
 
         <div style="text-align: center">
-            <img src="images/C1/30.png" width=60%>
+            <img src="res/images/30.png" width=60%>
         </div>
 
         - 真空中速度为光速$c = \dfrac{1}{\sqrt{\mu_0 \varepsilon_0}} = 2.9978 \times 10^8 m/s$，介质中为$u = \dfrac{c}{n}$，其中介质折射率$n = \sqrt{\mu_r \varepsilon_r}$
@@ -824,7 +1032,7 @@ $$
 - 电磁振荡
 
     <div style="text-align: center">
-        <img src="images/C1/31.png" width=50%>
+        <img src="res/images/31.png" width=50%>
     </div>
 
     - 电容器电荷量$q = Q_0 \cos(\omega t + \varphi)$
@@ -839,15 +1047,15 @@ $$
     - 振荡电偶极子的辐射强度分布：$\overline{S} = \dfrac{p_0^2}{32 \pi^2 \varepsilon_0 c^3}\dfrac{\omega^4 \sin^2 \theta}{r^2}$
     
     <div style="text-align: center">
-        <img src="images/C1/32.png" width=30%>
+        <img src="res/images/32.png" width=30%>
     </div>
 
 - 电磁波谱
 
     <div style="text-align: center">
-        <img src="images/C1/33.png" width=80%>
+        <img src="res/images/33.png" width=80%>
     </div>
 
     <div style="text-align: center">
-        <img src="images/C1/34.png" width=60%>
+        <img src="res/images/34.png" width=60%>
     </div>

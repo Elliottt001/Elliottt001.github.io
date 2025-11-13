@@ -35,7 +35,7 @@ $a_n = \omega × (\omega × R)$
 
 解题: 用"相对运动 + 水平竖直分解", 需要习惯多少倍的 **$i$** + 多少倍的 **$j$** 的书写形式
 
-![alt text](res/images/IMG_20250227_102643.jpg)
+![alt text](res/images/IMG_20250227_102643_1.jpg)
 
 "落回抛出点": 在地面系中竖直上抛 $\Leftrightarrow$ 水平速度 = 0
 
@@ -64,15 +64,15 @@ $F = ma$
 
 只有当绳子质量可忽略, 绳上的弹力才相等
 
-![alt text](res/images/6c3e2f8af74caa901de19fea95ea4ae.png)
+![alt text](res/images/6c3e2f8af74caa901de19fea95ea4ae_1.png)
 
 ??? info "答案"
     
     思路：取 $\theta$ 处的线元受力分析，切向法向分解列平衡，积分，忽略小量
 
-    ![alt text](res/images/ed9fdcf9f43e68dcdb5c76a70ea35e7.png)
-    ![alt text](res/images/23d0bc23aa93f821690defdf5f9302e.png)
-    ![alt text](res/images/71cec117db428d0912ea0123fb40b23.png)
+    ![alt text](res/images/ed9fdcf9f43e68dcdb5c76a70ea35e7_1.png)
+    ![alt text](res/images/23d0bc23aa93f821690defdf5f9302e_1.png)
+    ![alt text](res/images/71cec117db428d0912ea0123fb40b23_1.png)
 
 ## 非惯性系中的力学规律
 
@@ -84,14 +84,14 @@ $F = ma$
 
     要识别非惯性系，并学会用惯性力！
 
-![alt text](res/images/9316cded3e3c2a368eb4e1a18dfb466.png)
+![alt text](res/images/9316cded3e3c2a368eb4e1a18dfb466_1.png)
 
-![alt text](res/images/1583402d5154c6d08b0d946c4ff4cc0.png)
+![alt text](res/images/1583402d5154c6d08b0d946c4ff4cc0_1.png)
 
 ??? info "答案"
 
-    ![alt text](res/images/6fa35ffb31e91e1e3af1d9725c4468e.png)
-    ![alt text](res/images/5451290b16ef5882e928db21c04b1bb.png)
+    ![alt text](res/images/6fa35ffb31e91e1e3af1d9725c4468e_1.png)
+    ![alt text](res/images/5451290b16ef5882e928db21c04b1bb_1.png)
 
 ## 动量定理/动量守恒
 
@@ -130,7 +130,7 @@ $$\int _{t_0}^tFdt = p - p_0 质点系动量增量 = 合外力冲量$$
 
 质点系相对地面的运动 = 随质心整体运动 + 各质点相对质心的运动
 
-![alt text](res/images/4fe6cb9cba6452f209ad27a8d572223.png)
+![alt text](res/images/4fe6cb9cba6452f209ad27a8d572223_1.png)
 
 $$I = v_c * m $$
 
@@ -155,10 +155,10 @@ $$I = v_c * m $$
 
 保守力做功只决定于始末态的位置，而与路径无关，即环路积分 = 0
 
-![alt text](res/images/image.png)
+![alt text](res/images/image_1.png)
 
-![alt text](res/images/image-1.png)
-![alt text](res/images/image-2.png)
+![alt text](res/images/image-1_1.png)
+![alt text](res/images/image-2_1.png)
 
 ## 角动量L / 力矩M / 角动量定理&守恒
 
@@ -206,8 +206,8 @@ $$\int _{t_0}^t M dt称为冲量矩$$
 
     $$\beta \Leftrightarrow a$$
 
-    ![alt text](image-8.png)
-    ![alt text](image-9.png)
+    ![alt text](res/images/image-8.png)
+    ![alt text](res/images/image-9.png)
 
 
 ### 刚体定轴转动定律
@@ -218,8 +218,8 @@ $$\int _{t_0}^t M dt称为冲量矩$$
 - 角速度 $\omega$
 - 角加速度 $\beta$
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](res/images/image.png)
+![alt text](res/images/image-1.png)
 
 !!! success ""
 
@@ -235,17 +235,17 @@ $$平行轴定理 \; J = J_C + mh^2$$
 
 $$垂直轴定理 \; J_z = J_x + J_y$$
 
-![alt text](image-2.png)
+![alt text](res/images/image-2.png)
 
 ### 回转半径
 
-![alt text](image-3.png)
+![alt text](res/images/image-3.png)
 
 ### 能量
 
 $$E_k = \frac12 J \omega ^2$$
 
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 !!! info "记忆"
 
@@ -253,11 +253,11 @@ $$E_k = \frac12 J \omega ^2$$
 
 $$E_k = \frac12 J_c \omega ^2 + \frac12 m v_c^2$$
 
-![alt text](image-5.png)
+![alt text](res/images/image-5.png)
 
 ??? info "证明"
 
-    ![alt text](image-6.png)
+    ![alt text](res/images/image-6.png)
 
 $$力矩的功\; A = \int_{\theta_0}^\theta M d \theta$$
 
@@ -269,7 +269,7 @@ $$动能定理\; A = \frac12 J \omega^2 - \frac12 J \omega_0^2$$
 
 $$L = J \omega$$
 
-![alt text](image-7.png)
+![alt text](res/images/image-7.png)
 
 $$\int _{t_0}^t M dt = J\omega - J_0\omega_0$$
 
@@ -277,8 +277,8 @@ $$\int _{t_0}^t M dt = J\omega - J_0\omega_0$$
 
 刚体的平面运动均可分解成随质心的平动和绕质心轴的转动
 
-![alt text](image-10.png)
+![alt text](res/images/image-10.png)
 
-![alt text](image-11.png)
+![alt text](res/images/image-11.png)
 
 $$动能 E_k = \frac12 mv_c^2 + \frac12 J \omega^2$$
