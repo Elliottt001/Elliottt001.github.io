@@ -1,12 +1,14 @@
 !!! info "说明"
 
-    本文档内容基于[NoughtQ 学长的笔记](https://note.noughtq.top/misc/physics/1)编写，作为详细笔记，适用于大多数高校的物理课程复习和参考。
+    本文档内容基于[NoughtQ 学长的笔记](https://note.noughtq.top/misc/physics/1)编写（实为看学长的笔记复习的时候将学长的笔记copy下来，方便加入自己的批注），作为详细笔记，适用于大多数高校的物理课程复习和参考。
 
     公式均采用国际单位制（SI），部分公式可能与其他版本教材有所不同，请以具体课程要求为准。
 
 !!! info "补天速览"
 
+    [电磁学考试复习笔记](./exam-review.md)
 
+    [电磁学物理量+公式总结](./electricity-summary.md)
 
 ## 静电场
 
@@ -45,7 +47,7 @@ $$
 - 平面$S$的法线与$E$的夹角为$\theta \Rightarrow \Phi_e = ES \cos \theta = \bm{E \cdot S}$
 
 <div style="text-align: center">
-    <img src="res/images/2.png" width=30%>
+    <img src="../res/images/2.png" width=30%>
 </div>
 
 
@@ -63,7 +65,7 @@ $$
 - **无限大平面**（可有厚度）（面密度$\sigma$）：$E = \dfrac{\sigma}{2 \varepsilon_0}$
 
 <div style="text-align: center">
-    <img src="res/images/3.png" width=90%>
+    <img src="../res/images/3.png" width=90%>
 </div>
 
 
@@ -101,8 +103,8 @@ $$
 ??? example "例题"
 
     <div style="text-align: center">
-        <img src="res/images/10.png" width=60%>
-        <img src="res/images/11.png" width=60%>
+        <img src="../res/images/10.png" width=60%>
+        <img src="../res/images/11.png" width=60%>
     </div>
 
     电偶极子的场强分布即为电势梯度的负值（下面会讲到）
@@ -139,7 +141,7 @@ $$
     - 若外表面接地（电势 = 0），则内外电场互不干扰
 
 <div style="text-align: center">
-    <img src="res/images/12.png" width=60%>
+    <img src="../res/images/12.png" width=60%>
 </div>
 
 !!! note "静电场中金属导体问题求解的步骤"
@@ -169,7 +171,7 @@ $$
     - 公式：$C = \dfrac{Q}{U_A - U_B} = \dfrac{\varepsilon_0 S}{d}$
 
     <div style="text-align: center">
-        <img src="res/images/13.png" width=40%>
+        <img src="../res/images/13.png" width=40%>
     </div>
 
     - 注意两类问题：
@@ -180,7 +182,7 @@ $$
     - 公式（用高斯定理 + 电势定义式推导）：$C = \dfrac{Q}{U_A - U_B} = \dfrac{\lambda l}{U_A - U_B} = \dfrac{2\pi \varepsilon_0 l}{\ln \frac{R_B}{R_A}}$
 
     <div style="text-align: center">
-        <img src="res/images/14.png" width=20%>
+        <img src="../res/images/14.png" width=20%>
     </div>
 
 - 球形电容器：两同心金属球壳半径分别为$R_A, R_B$，电荷分别为$+q, -q$
@@ -188,7 +190,7 @@ $$
 
 
     <div style="text-align: center">
-        <img src="res/images/15.png" width=30%>
+        <img src="../res/images/15.png" width=30%>
     </div>
 
 电容的串并联
@@ -205,14 +207,14 @@ $$
     === "题目"
 
         <div style="text-align: center">
-            <img src="res/images/38.png" width=80%>
+            <img src="../res/images/38.png" width=80%>
         </div>
 
     === "答案"
 
         <div style="text-align: center">
-            <img src="res/images/39.png" width=80%>
-            <img src="res/images/40.png" width=80%>
+            <img src="../res/images/39.png" width=80%>
+            <img src="../res/images/40.png" width=80%>
         </div>
 
 
@@ -260,15 +262,15 @@ $$
     === "题目"
 
         <div style="text-align: center">
-            <img src="res/images/23.png" width=50%>
+            <img src="../res/images/23.png" width=50%>
         </div>
 
     === "答案"
 
         <div style="text-align: center">
-            <img src="res/images/24.png" width=50%>
-            <img src="res/images/25.png" width=50%>
-            <img src="res/images/26.png" width=50%>
+            <img src="../res/images/24.png" width=50%>
+            <img src="../res/images/25.png" width=50%>
+            <img src="../res/images/26.png" width=50%>
         </div>
 
 ### 静电场中的能量
@@ -365,7 +367,7 @@ $$
 
 - 洛伦兹力：运动电荷在某点收到的磁场作用力$\bm{F} = q\bm{v} \times \bm{B}$（用左手定则判定方向）
 
->注：如果给出了$\bm{v}$和$\bm{B}$的三维坐标，那么需要用[行列式](../../math/calculus/7.md#矢量积)的方法计算。
+>注：如果给出了$\bm{v}$和$\bm{B}$的三维坐标，那么需要用行列式的方法计算。
 
 - 右手螺旋法则
     - 直线电流产生的磁场：大拇指指向电流方向，四指绕行方向为$\bm{B}$的方向
@@ -381,13 +383,13 @@ $$
 其中$\bm{r}$为电流元指向$P$的矢量，$\mu_0 = 4 \pi \times 10^{-7} \text{N/A}^2$为真空磁导率。
 
 <div style="text-align: center">
-    <img src="res/images/4.png" width=30%>
+    <img src="../res/images/4.png" width=30%>
 </div>
 
 常用结论：
 
 <div style="text-align: center">
-    <img src="res/images/5.png" width=80%>
+    <img src="../res/images/5.png" width=80%>
 </div>
 
 推论：
@@ -402,14 +404,14 @@ $$
 - 载流直螺线管内部（对$P$点）的磁场：$B = \dfrac{\mu_0}{2} nI (\cos \beta_2 - \cos \beta_1)$，其中$n$为单位长度环绕的线圈匝数
 
     <div style="text-align: center">
-        <img src="res/images/18.png" width=40%>
+        <img src="../res/images/18.png" width=40%>
     </div>
 
     - 当$L \gg R$时，$B = \mu_0 nI$
     - 在长直螺线管上的两端点：$B = \dfrac{1}{2} \mu_0 nI$
 
     <div style="text-align: center">
-        <img src="res/images/17.png" width=60%>
+        <img src="../res/images/17.png" width=60%>
     </div>
 
     >说实话，个人感觉不会考这个模型，而且它的公式还可以用下面讲的安培环路定理来推导，比这里的更加容易理解
@@ -426,7 +428,7 @@ $$
     - 方向：
 
     <div style="text-align: center">
-        <img src="res/images/19.png" width=40%>
+        <img src="../res/images/19.png" width=40%>
     </div>
 
 - 当多电荷（连续分布电荷）匀速运动时，可求这些电荷形成的等效电流$I = \dfrac{\text{d}q}{\text{d}t}$
@@ -443,7 +445,7 @@ $$
 常用结论：
 
 <div style="text-align: center">
-    <img src="res/images/6.png" width=90%>
+    <img src="../res/images/6.png" width=90%>
 </div>
 
 与叠加定理结合：有些因不对称无法适用安培环路定理的磁场可以分解为多个可以适用的磁场的叠加
@@ -459,7 +461,7 @@ $$
 **磁矩**：$\bm{p}_m = NIS\hat{n}$（单位：$\text{A}\cdot\text{m}^2$），其中$N$为线圈匝数，$\hat{n}$表示磁矩方向（无大小），与电流环绕方向呈右手螺旋关系。
 
 <div style="text-align: center">
-    <img src="res/images/16.png" width=30%>
+    <img src="../res/images/16.png" width=30%>
 </div>
 
 - 作匀速圆周运动的电荷磁矩$\bm{p}_{m} = IS = \dfrac{\text{d}q}{\text{d}t} \pi r^2$（$\text{d}q$和$\text{d}t$根据实际情况求解，一般可用$e$和$\dfrac{2\pi r}{v} = \dfrac{2\pi}{\omega}$来替换；$r$为轨道半径）（几乎每年都考这类题型）
@@ -477,7 +479,7 @@ $$
         对于不规则形状的导线，它受到的安培力等价于与它始末位置相同的，通以同等大小电流的直导线所受的安培力
 
         <div style="text-align: center">
-            <img src="res/images/27.png" width=70%>
+            <img src="../res/images/27.png" width=70%>
         </div>
 
 - 载流平面线圈的**磁力矩**
@@ -499,7 +501,7 @@ $$
     - 螺距：$h = v_{0x}T = v_{0x}\dfrac{2\pi R}{v_{0n}} = v_{0x} \dfrac{2\pi m}{qB}$
 
     <div style="text-align: center">
-        <img src="res/images/20.png" width=40%>
+        <img src="../res/images/20.png" width=40%>
     </div>
 
 应用：
@@ -508,7 +510,7 @@ $$
     - 示意图：
 
     <div style="text-align: center">
-        <img src="res/images/21.png" width=60%>
+        <img src="../res/images/21.png" width=60%>
     </div>
 
     - $\dfrac{q}{m} = \dfrac{v}{RB'} = \dfrac{E}{RBB'}$
@@ -520,7 +522,7 @@ $$
 - 霍尔效应：处在均匀磁场中的通电导体薄板，当电流方向与磁场方向垂直时，则在垂直于磁场和电流方向的薄板上、下两端之间出现电势差。
 
     <div style="text-align: center">
-        <img src="res/images/7.png" width=80%>
+        <img src="../res/images/7.png" width=80%>
     </div>
 
     - 电势差方向判别：
@@ -555,7 +557,7 @@ $$
 - **磁化电流**$I_m$：由磁介质中各分子的分子电流叠加而成，仅在磁介质表面产生的等效环形电流
 
     <div style="text-align: center">
-        <img src="res/images/8.png" width=70%>
+        <img src="../res/images/8.png" width=70%>
     </div>
 
     - 磁介质表面上某处**磁化电流线密度**$j_m$等于该点磁化强度$\bm{M}$沿表面的切向分量。若是均匀磁介质被磁化，则$j_m = |\bm{M}|$
@@ -598,7 +600,7 @@ $$
 - **起始磁化曲线**：当铁磁质从未磁化状态开始加外磁场测得的曲线
 
     <div style="text-align: center">
-        <img src="res/images/9.png" width=40%>
+        <img src="../res/images/9.png" width=40%>
     </div>
 
     - 曲线成"S"型，说明$\mu$不是常数
@@ -608,7 +610,7 @@ $$
 - **磁滞回线**：
 
     <div style="text-align: center">
-        <img src="res/images/22.png" width=40%>
+        <img src="../res/images/22.png" width=40%>
     </div>
 
     - 铁磁质达到饱和状态后，当减小$H$时，$B$的减小呈现出滞后性（磁滞现象）
@@ -650,7 +652,7 @@ $$
 **楞次定律**：闭合回路中感应电流的方向，总是使它所激发出的磁场去阻碍原磁通量的变化。
 
 <div style="text-align: center">
-    <img src="res/images/28.png" width=60%>
+    <img src="../res/images/28.png" width=60%>
 </div>
 
 **法拉第电磁感应定律**：回路所包围面积的磁通量$\Phi$发生变化时，回路中会产生感应电动势$\varepsilon_i$，即$\varepsilon_i = -\dfrac{\text{d}\Phi}{\text{d}t}$
@@ -658,7 +660,7 @@ $$
 - 方向：通常规定$\Phi$方向与原磁感应强度方向成右螺旋关系的回路方向为正方向，然后再判断$\dfrac{\text{d}\Phi}{\text{d}t}$的方向，$\varepsilon_i$的反向与之相反
 
 <div style="text-align: center">
-    <img src="res/images/29.png" width=70%>
+    <img src="../res/images/29.png" width=70%>
 </div>
 
 - **全通量**$\Psi$：若导体由多个线圈串联而成，每个线圈的磁通量为$\Phi_1, \dots, \Phi_n$，则$\varepsilon_i = -\dfrac{\text{d}\Psi}{\text{d}t}$，其中$\Psi = \Phi_1 + \Phi_2 + \dots + \Phi_n$
@@ -888,7 +890,7 @@ $$
     $$
 
     <div style="text-align: center">
-        <img src="res/images/37.png" width=30%>
+        <img src="../res/images/37.png" width=30%>
     </div>
 
     - 感生电动势在数值上等于单位正电荷绕闭合回路一周涡旋电场力所做的功，即$\varepsilon_i = \oint\limits_{L} \bm{E}_i \cdot \text{d} \bm{l}$
@@ -931,13 +933,13 @@ $$
     - 电路接通时的电流（电流的增长过程）：$I = I_0(1 - e^{-\frac{R}{L}t})$
 
     <div style="text-align: center">
-        <img src="res/images/35.png" width=30%>
+        <img src="../res/images/35.png" width=30%>
     </div>
 
     - 电路切断时的电流（电流的衰减过程）：$I = I_0e^{-\frac{R}{L}t}$
 
     <div style="text-align: center">
-        <img src="res/images/36.png" width=30%>
+        <img src="../res/images/36.png" width=30%>
     </div>
 
 ---
@@ -960,7 +962,7 @@ $$
 ??? example "例题"
 
     <div style="text-align: center">
-        <img src="res/images/41.png" width=80%>
+        <img src="../res/images/41.png" width=80%>
     </div>
 
 !!! note "求解步骤"
@@ -1022,7 +1024,7 @@ $$
         - 传播电场$\bm{E}$和磁场$\bm{H}$，两者垂直，传播方向为$\bm{E} \times \bm{H}$
 
         <div style="text-align: center">
-            <img src="res/images/30.png" width=60%>
+            <img src="../res/images/30.png" width=60%>
         </div>
 
         - 真空中速度为光速$c = \dfrac{1}{\sqrt{\mu_0 \varepsilon_0}} = 2.9978 \times 10^8 m/s$，介质中为$u = \dfrac{c}{n}$，其中介质折射率$n = \sqrt{\mu_r \varepsilon_r}$
@@ -1032,7 +1034,7 @@ $$
 - 电磁振荡
 
     <div style="text-align: center">
-        <img src="res/images/31.png" width=50%>
+        <img src="../res/images/31.png" width=50%>
     </div>
 
     - 电容器电荷量$q = Q_0 \cos(\omega t + \varphi)$
@@ -1047,15 +1049,15 @@ $$
     - 振荡电偶极子的辐射强度分布：$\overline{S} = \dfrac{p_0^2}{32 \pi^2 \varepsilon_0 c^3}\dfrac{\omega^4 \sin^2 \theta}{r^2}$
     
     <div style="text-align: center">
-        <img src="res/images/32.png" width=30%>
+        <img src="../res/images/32.png" width=30%>
     </div>
 
 - 电磁波谱
 
     <div style="text-align: center">
-        <img src="res/images/33.png" width=80%>
+        <img src="../res/images/33.png" width=80%>
     </div>
 
     <div style="text-align: center">
-        <img src="res/images/34.png" width=60%>
+        <img src="../res/images/34.png" width=60%>
     </div>

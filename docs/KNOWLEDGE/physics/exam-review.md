@@ -5,18 +5,39 @@
     - [电磁学物理量+公式总结](./electricity_summary.md)
     - [电磁学详细笔记](./electricity.md)
 
-### 手写笔记
+### 手写笔记（公式）
+
+!!! warning "勘误"
+
+    \[
+    \boxed{M=(\mu _r -1)H = \frac{B(\mu_r-1)}{\mu_0\mu_r}}
+    \]
+
+!!! warning ""
+
+    16-6 涡电流、16-9 互感、16-11传感器是一般了解内容好像不考
+
+![alt text](res/images/a16ef38ece960e9f99e40522e1dddc73.jpg)
 
 ![alt text](res/images/c4944b60ce2c47a417ffa3f486d93ffe.jpg)
 
 ![alt text](res/images/9de981c57e7226b7c76058c373b4525d.jpg)
 
-PDF 版本: [电磁学复习笔记.pdf](res/files/电磁学公式.pdf)
+!!! success "PDF 版本"
+
+    [电磁学复习笔记.pdf](res/files/电磁学公式.pdf)
+
+!!! info "被挡住的部分"
+
+    $$U_m = \frac12 L I_0^2$$
 
 ### 概念性知识
 
 #### 磁介质
 
+!!! warning ""
+
+    15-3 顺磁性和抗磁性、15-4 铁磁性、15-5 磁记录 是一般了解内容好像不考
 
 磁介质内的磁感应强度$B$ = 真空中原来的磁感应强度$B_0$ + 附加磁感应强度$B'$
 
@@ -40,7 +61,7 @@ PDF 版本: [电磁学复习笔记.pdf](res/files/电磁学公式.pdf)
 - **起始磁化曲线**：当铁磁质从未磁化状态开始加外磁场测得的曲线
 
     <div style="text-align: center">
-        <img src="res/images/9.png" width=40%>
+        <img src="../res/images/9.png" width=40%>
     </div>
 
     - 曲线成"S"型，说明$\mu$不是常数
@@ -50,7 +71,7 @@ PDF 版本: [电磁学复习笔记.pdf](res/files/电磁学公式.pdf)
 - **磁滞回线**：
 
     <div style="text-align: center">
-        <img src="res/images/22.png" width=40%>
+        <img src="../res/images/22.png" width=40%>
     </div>
 
     - 铁磁质达到饱和状态后，当减小$H$时，$B$的减小呈现出滞后性（磁滞现象）
@@ -93,7 +114,7 @@ PDF 版本: [电磁学复习笔记.pdf](res/files/电磁学公式.pdf)
 - 若外表面接地（电势 = 0），则内外电场互不干扰
 
 <div style="text-align: center">
-    <img src="res/images/12.png" width=60%>
+    <img src="../res/images/12.png" width=60%>
 </div>
 
 !!! note "静电场中金属导体问题求解的步骤"

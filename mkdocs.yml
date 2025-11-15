@@ -5,6 +5,9 @@ site_url: https://Elliottt001.github.io
 site_author: 张瑞喆
 site_description: Zhang rz的个人网站
 
+# 禁用目录 URL 以修复图片路径问题（可选）
+# use_directory_urls: false
+
 # [Navigtion]
 nav:
   - 主页: 
@@ -392,16 +395,9 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   - tags
-
   - glightbox #图片放大
-  
-  - statistics: #统计页面字数、代 码行数、阅读时间
+  - statistics #统计页面字数、代码行数、阅读时间
     #https://github.com/TonyCrane/mkdocs-statistics-plugin  
-  - search
-  - git-revision-date-localized
-
-  - rss
-  - search
   - git-revision-date-localized:
         type: datetime
         timezone: Asia/Shanghai
@@ -410,6 +406,7 @@ plugins:
         exclude:
             - index.md
             - writeups/AAA.md
+  - rss
   - changelog
   - minify:
       minify_html: true
@@ -469,29 +466,11 @@ markdown_extensions:
 
 
 extra_css:
-  - stylesheets/css/card.css
-  - stylesheets/css/flink.css
+  - mkdocs/css/card.css
+  - mkdocs/css/flink.css
   - mkdocs/css/custom.css
-  - mkdocs/css/emoji.css
   - mkdocs/css/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-
-  # - https://unpkg.com/katex@0/dist/katex.min.css
-  # - attr_list
-  # - md_in_html
-  # - toc:
-  #     permalink: true
-  # - pymdownx.highlight:
-  #     linenums: true
-  #     auto_title: true
-  #     line_spans: __span
-  #     pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - admonition
-  - pymdownx.details
-  - footnotes
 
 extra_javascript:
   # [数学公式支持]
