@@ -191,7 +191,6 @@ nav:
       - shell: 
         - 笔记一: CS/Tools/shell.md
         - 笔记二: CS/Tools/shell-new.md
-      - iOS Fake Run: CS/Tools/iosfakerun.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
       - Git&GitHub: CS/Tools/Git & GitHub.md
@@ -215,6 +214,40 @@ nav:
       - 一些快捷键: CS/Misc/shortcuts.md
       - 硬件by AI: CS/Misc/hardware.md
 
+  - 机器人:
+    - ROBOTICS/index.md
+    - FTC教程:
+      - 教程主页: ROBOTICS/FTCTutorial/index.md
+      - 1.Java基础:
+        - 1.1程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
+        - 1.2.变量、常量与数据类型: ROBOTICS/FTCTutorial/1.2.变量、常量与数据类型.md
+        - 1.3.程序控制结构: ROBOTICS/FTCTutorial/1.3.程序控制结构.md
+        - 1.4.面向对象编程基础: ROBOTICS/FTCTutorial/1.4.面向对象编程基础.md
+      - 2.FTC基础:
+        - 2.1FTC游戏手柄使用指南: ROBOTICS/FTCTutorial/2.1FTC游戏手柄使用指南.md
+        - 2.2FTC遥测系统使用指南: ROBOTICS/FTCTutorial/2.2FTC遥测系统使用指南.md
+      - 3.操作模式:
+        - 3.1操作模式概念解析: ROBOTICS/FTCTutorial/3.1操作模式概念解析.md
+        - 3.2操作模式注解: ROBOTICS/FTCTutorial/3.2操作模式注解.md
+        - 3.3线性操作模式基础: ROBOTICS/FTCTutorial/3.3线性操作模式基础.md
+        - 3.4常见的驱动控制模式: ROBOTICS/FTCTutorial/3.4常见的驱动控制模式.md
+      - 4.硬件基础:
+        - 4.1伺服电机使用指南: ROBOTICS/FTCTutorial/4.1伺服电机使用指南.md
+        - 4.2机器人硬件组织: ROBOTICS/FTCTutorial/4.2机器人硬件组织.md
+      - 5.传感器:
+        - 5.1陀螺仪使用指南: ROBOTICS/FTCTutorial/5.1陀螺仪使用指南.md
+      - 进阶:
+        - PID: ROBOTICS/FTCTutorial/PID.md
+        - PedroPathing: ROBOTICS/FTCTutorial/PedroPathing.md
+        - FileSystem: ROBOTICS/FTCTutorial/FileSystem.md
+        - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
+        - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
+
+  - 金融:
+    - FTC 教程:
+      - 主页: ROBOTICS/FTCTutorial/index.md
+      - 1.1程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
+      
   - 金融:
     - FINANCE/index.md
     - 微观经济学:
