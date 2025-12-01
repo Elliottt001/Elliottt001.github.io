@@ -111,6 +111,7 @@ $$MRS_{XY} = -\frac{dY}{dX} = \frac{\partial U / \partial X}{\partial U / \parti
 
 完全替代品：
 
+
 ![alt text](res/images/image-11_1.png)
 
 完全互补品：
