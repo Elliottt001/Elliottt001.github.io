@@ -217,7 +217,7 @@ nav:
   - 机器人:
     - ROBOTICS/index.md
     - FTC教程:
-      - 教程主页: ROBOTICS/FTCTutorial/index.md
+      - 主页: ROBOTICS/FTCTutorial/index.md
       - 1.Java基础:
         - 1.1程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
         - 1.2.变量、常量与数据类型: ROBOTICS/FTCTutorial/1.2.变量、常量与数据类型.md
@@ -242,17 +242,15 @@ nav:
         - FileSystem: ROBOTICS/FTCTutorial/FileSystem.md
         - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
         - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
-
-  - 金融:
-    - FTC 教程:
-      - 主页: ROBOTICS/FTCTutorial/index.md
-      - 1.1程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
       
   - 金融:
     - FINANCE/index.md
     - 微观经济学:
       - 课程信息: FINANCE/micro/index.md
       - 绪论: FINANCE/micro/start.md
+      - 价格理论: FINANCE/micro/price-theory.md
+      - 弹性理论: FINANCE/micro/theory-of-elasticity.md
+      - 消费者行为理论: FINANCE/micro/consumer-behavior-theory.md
 
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
