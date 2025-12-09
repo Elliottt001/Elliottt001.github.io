@@ -254,6 +254,10 @@ nav:
 
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
+      - 宏观经济的基本指标及其衡量:
+        - 国内生产总值: FINANCE/macro/gdp.md
+        - 消费、储蓄、投资、政府购买、净出口: FINANCE/macro/other-variables.md
+        - 货币需求和货币供给: FINANCE/macro/currency.md
 
     - 零碎自学:
       - 金本位: FINANCE/DIY/gold-standard.md

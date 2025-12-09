@@ -2,7 +2,7 @@
 
 ### 效用
 
-![alt text](res/images/image.png)
+![alt text](res/images/image_1.png)
 
 效用 Utility：从某种行为（不一定是消费每种物品）中获得的满足感，消费者主观感受
 
@@ -10,13 +10,13 @@
 
 效用很难衡量，其绝对值不重要，重要的是不同商品的效用排序。多数时候用货币来衡量效用。
 
-![alt text](res/images/image-1_1.png)
+![alt text](res/images/image-1_1_1.png)
 
 ### 消费者均衡
 
 条件：
 
-![alt text](res/images/image-2_1.png)
+![alt text](res/images/image-2_1_1.png)
 
 约束条件：收入等于支出
 
@@ -30,9 +30,9 @@
 
 $P = \frac{\lambda}{MU}$, MU 递减，需求曲线也就递减，因为消费者从商品那里获得了边际效用，才会有需求
 
-![alt text](res/images/image-4_1.png)
+![alt text](res/images/image-4_1_1.png)
 
-![alt text](res/images/image-3_1.png)
+![alt text](res/images/image-3_1_1.png)
 
 这里需求曲线指的是愿意支付的价格而非标价：
 
@@ -50,7 +50,7 @@ $P = \frac{\lambda}{MU}$, MU 递减，需求曲线也就递减，因为消费者
 
 消费者在自愿的交易中是获利的！  
 
-![alt text](res/images/image-5_1.png)
+![alt text](res/images/image-5_1_1.png)
 
 计算：愿意出的价钱 - 实际付出的价钱，如果多件商品就是 $\sum (WTP - P)$
 
@@ -62,7 +62,7 @@ $P = \frac{\lambda}{MU}$, MU 递减，需求曲线也就递减，因为消费者
 
 ### 理性偏好公理
 
-![alt text](res/images/image-6_1.png)
+![alt text](res/images/image-6_1_1.png)
 
 理性偏好有上面三个公理
 
@@ -72,7 +72,7 @@ $P = \frac{\lambda}{MU}$, MU 递减，需求曲线也就递减，因为消费者
 
 ### 无差异曲线
 
-![alt text](res/images/image-7_1.png)
+![alt text](res/images/image-7_1_1.png)
 
 X 轴 Y 轴分别表示两种商品的数量
 
@@ -80,7 +80,7 @@ X 轴 Y 轴分别表示两种商品的数量
 
 无差异曲线的特征
 
-![alt text](res/images/image-8_1.png)
+![alt text](res/images/image-8_1_1.png)
 
 斜率为负：因为两种商品都是“多多益善”（前提：两种商品都是好的商品），要保持效用不变，增加一种商品的数量，必须减少另一种商品的数量
 
@@ -90,7 +90,7 @@ Marginal Rate of Substitution, MRS
 
 商品的边际替代率，就是无差异曲线斜率绝对值
 
-![alt text](res/images/image-9_1.png)
+![alt text](res/images/image-9_1_1.png)
 
 边际替代率递减：随着 X 商品数量的增加，消费者愿意放弃的 Y 商品数量越来越少
 
@@ -105,33 +105,32 @@ $$MRS_{XY} = -\frac{dY}{dX} = \frac{\partial U / \partial X}{\partial U / \parti
 
 而随着 $X$ 增加，$MU_X$ 递减；且 $Y$ 减少，$MU_Y$ 递增，所以 $MRS_{XY}$ 递减
 
-![alt text](res/images/image-10_1.png)
+![alt text](res/images/image-10_1_1.png)
 
 极端例子：完全互补品，完全替代品
 
 完全替代品：
 
-
-![alt text](res/images/image-11_1.png)
+![alt text](res/images/image-11_1_1.png)
 
 完全互补品：
 
-![alt text](res/images/image-12_1.png)
+![alt text](res/images/image-12_1_1.png)
 
 L 型：因为值增加一个不增加另一个是没有意义的，效用是一样的。
 
 一定在拐点消费，因为多买一个不买另一个没有效用
 
-![alt text](res/images/image-13_1.png)
+![alt text](res/images/image-13_1_1.png)
 
 - 右下的是效用大的：可以固定一个看另一个
 - 斜率逐渐减小因为坏商品多，得拿更多的好商品来平衡
 
 ## 消费预算线
 
-![alt text](res/images/image-14_1.png)
+![alt text](res/images/image-14_1_1.png)
 
-![alt text](res/images/image-15_1.png)
+![alt text](res/images/image-15_1_1.png)
 
 预算线外面的点是买不起的，里面的点是买得起的
 
@@ -143,20 +142,20 @@ L 型：因为值增加一个不增加另一个是没有意义的，效用是一
 
 - 三个变化倍数一样，预算直线不变
 
-![alt text](res/images/image-16_1.png)
+![alt text](res/images/image-16_1_1.png)
 
 ## 消费者均衡的实现
 
 无差异曲线和消费预算线的切点
 
-![alt text](res/images/image-17_1.png)
+![alt text](res/images/image-17_1_1.png)
 
 理解：首先肯定得在消费预算线上面，另外保证效用最大，即无差异曲线尽可能往右上方
 
 拐角解
 
-![alt text](res/images/image-18_1.png)
-![alt text](res/images/image-19_1.png)
+![alt text](res/images/image-18_1_1.png)
+![alt text](res/images/image-19_1_1.png)
 
 实际上在下面切点但是 Y < 0 不可行
 
@@ -170,14 +169,14 @@ $$\text{MU}_X = \frac{\partial U(x, y, \dots)}{\partial x}$$
 
 > 原因：边际效用 ($MU_X$) 是指在其他商品的消费量保持不变的条件下，消费者增加一单位商品 $X$ 的消费所引起的总效用 ($U$) 的增量。因此，它的数学表达式就是效用函数 $U$ 对商品 $X$ 的消费量 $x$ 的偏导数
 
-![alt text](res/images/image-20_1.png)
+![alt text](res/images/image-20_1_1.png)
 
-![alt text](res/images/image-21_1.png)
-![alt text](res/images/image-22_1.png)
+![alt text](res/images/image-21_1_1.png)
+![alt text](res/images/image-22_1_1.png)
 
 图解：
 
-![alt text](res/images/image-23_1.png)
+![alt text](res/images/image-23_1_1.png)
 
 补充：cobb-Douglas 效用函数：$U = A X^a Y^b$
 
@@ -186,6 +185,103 @@ $$\text{MU}_X = \frac{\partial U(x, y, \dots)}{\partial x}$$
 $$X^* = \frac{a}{a+b} \frac{M}{P_X}$$
 $$Y^* = \frac{b}{a+b} \frac{M}{P_Y}$$
 
-## 需求曲线的推导
+## 需求曲线和恩格尔曲线的推导
 
-![alt text](res/images/image-24_1.png)
+### 价格消费曲线 PCC
+
+![alt text](res/images/image-24_1_1.png)
+
+当一个商品价格变化时，连接各个均衡点的曲线
+
+从这条曲线推导需求曲线：
+
+- 每一个 $P_X$（不同的消费预算线）都有均衡点时 $X$ 的数量
+- 连接这些点，横轴是 $X$ 数量，纵轴是 $P_X$，就是需求曲线
+
+### 收入消费曲线 ICC
+
+![alt text](res/images/image.png)
+
+当收入变化时，连接各个均衡点的曲线
+
+从这条曲线推导恩格尔曲线：
+
+![alt text](res/images/image-1_1.png)
+
+M 和 X 的关系曲线就是恩格尔曲线）
+
+四类恩格尔曲线
+
+![alt text](res/images/image-2_1.png)
+![alt text](res/images/image-3_1.png)
+
+弯折的恩格尔曲线例子：快餐
+
+### 恩格尔系数和恩格尔定律
+
+![alt text](res/images/image-4_1.png)
+![alt text](res/images/image-5_1.png)
+
+## 收入效应和替代效应
+
+![alt text](res/images/image-6_1.png)
+
+价格效应：价格变化引起的需求量变化
+
+- 实际收入：实际的购买力 or 购买商品得到的效用
+- 名义收入：拿到的货币数量
+
+举例：收入100元，商品A价格10元，商品B价格20元，可以有一个购买组合达到最大效用。第二年商品A价格降到5元，名义收入还是100元，价格效应分为：要么买更多A，要么买更多B；且A价格下降后，实际收入增加了，可以购买更多商品
+
+![alt text](res/images/image-7_1.png)
+
+**先转动，再平移**
+
+转动：从 $B_0$ 到 $B_1'$，保持实际收入不变，价格变化引起的替代效应（即旋转导致的 X 的变化就是替代效应）
+
+转动消费预算线的要求：
+
+1. 反映新的相对价格
+2. 与原来无差异曲线相切
+
+平移：从 $B_1'$ 到 $B_1$，实际收入变化引起的收入效应（即平移导致的 X 的变化就是收入效应）
+
+平移的要求：
+1. 到新的消费预算线即可
+
+![alt text](res/images/image-8_1.png)
+
+吉芬商品：
+
+1. 是低档商品： 收入增加时，购买量会减少。
+2. 收入效应大于替代效应：价格上升时，购买量反而增加（违反需求定律）。
+
+当降价：收入效应让他少买（因为是低档品，收入增加，购买量减少），替代效应让他多买，但收入效应更大，所以总的来说少买
+
+吉芬商品的需求曲线是向上倾斜的
+
+### 劳动供给中的收入效应和替代效应
+
+![alt text](res/images/image-9_1.png)
+
+劳动的个人供给曲线：向后弯曲
+
+![alt text](res/images/image-10_1.png)
+
+### 对利息征税的收入效应和替代效应
+
+![alt text](res/images/image-11_1.png)
+
+考虑机会成本：当期消费的机会成本是储蓄的话下一期取出来的钱，利率变低，机会成本变低，成本变低，倾向于多消费少储蓄（替代效应）
+
+收入效应：利率变低，储蓄的人实际收入变低，倾向于少消费多储蓄（收入效应）
+
+## 不确定和风险*
+
+![alt text](res/images/image-12_1.png)
+
+风险者类型：
+
+![alt text](res/images/image-13_1.png)
+
+大多数人是风险规避型，所以保险公司才能赚钱：为了规避风险，消费者愿意支付高于预期损失的保费（期望损失）
