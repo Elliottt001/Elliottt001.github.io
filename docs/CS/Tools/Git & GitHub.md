@@ -14,7 +14,7 @@ github：理解成云端（== 百度云），通过git上传，上传内容主�
 
 原理：指针操作
 
-![alt text](image-1.png)
+![alt text](res/images/image-1_2.png)
 
 ```shell
 git log
@@ -42,8 +42,8 @@ git reflog
 
 - 第二步是用 `git commit` 提交更改，是把**暂存区**的所有内容提交到当前分支。
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](res/images/image-2_2.png)
+![alt text](res/images/image-3_2.png)
 
 ```shell
 git checkout -- file
@@ -164,11 +164,11 @@ git checkout -- file
 
 ### 文件大小限制
 
-![alt text](image-10.png)
+![alt text](res/images/image-10_1.png)
 
-![alt text](image-11.png)
+![alt text](res/images/image-11.png)
 
-![alt text](image.png)
+![alt text](res/images/image_2.png)
 
 ### 提交哈希值
 

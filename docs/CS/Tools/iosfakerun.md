@@ -191,7 +191,7 @@ nmake install # 安装 OpenSSL
 
 - [ ] 罢工
 
-![alt text](image-4.png)
+![alt text](res/images/image-4_2.png)
 
 #### 待干的事情
 
