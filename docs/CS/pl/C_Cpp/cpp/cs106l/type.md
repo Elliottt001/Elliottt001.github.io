@@ -12,7 +12,7 @@ Sometimes you don't know the type, and you need to ask the compiler to figure it
 
 Some guidelines for using `auto`:
 
-![alt text](image-4.png)
+![alt text](res/images/image-4.png)
 
 Example:
 

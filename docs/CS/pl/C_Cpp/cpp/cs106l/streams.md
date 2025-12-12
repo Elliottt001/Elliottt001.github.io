@@ -1,6 +1,6 @@
 The reason why we use streams is we often want our programs to interact with external devices.
 
-![alt text](image.png)
+![alt text](res/images/image.png)
 
 ## Stringstream
 
@@ -113,7 +113,7 @@ The reason why we use streams is we often want our programs to interact with ext
 
 ### stringstream positioning functions
 
-![alt text](image-1.png)
+![alt text](res/images/image-1_1.png)
 
 ??? info "Example"
 
@@ -149,7 +149,7 @@ Indicate the state of the stream.
 Check the buffer state before and after the 
 After the function, if not Fail or EOF, the buffer is cleared after the program.
 
-![alt text](image-2.png)
+![alt text](res/images/image-2_1.png)
 
 `good()`, `bad()`, `fail()`, `eof()`: functions of stream object whose return value is boolean. Like `cin.good()`, `iss.bad()`, `oss.fail()`, `cout.eof()`.
 
@@ -160,7 +160,7 @@ After the function, if not Fail or EOF, the buffer is cleared after the program.
     2. When you want to format input/output in memory.
     3. When you want to parse different types from a string.
 
-    ![alt text](image-5.png)
+    ![alt text](res/images/image-5_1.png)
 
     🧩 一、`stringstream` 是什么？
 
@@ -531,7 +531,7 @@ It does not directly return the thing into the console, instead, it return it in
 
 So, if the buffer is not empty, things left in the buffer 
 
-![alt text](image-3.png)
+![alt text](res/images/image-3_1.png)
 
 ### getline
 

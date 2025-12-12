@@ -89,13 +89,17 @@ nav:
           - 链表: CS/pl/C_Cpp/C/linkedList.md
         - C++:
           - 课程信息: CS/pl/C_Cpp/cpp/index.md
-          - Lecture 0:Introduction: CS/pl/C_Cpp/cpp/intro.md
-          - Lecture 1&2:Streams: CS/pl/C_Cpp/cpp/streams.md
-          - Lecture 3:Standard Template Library: CS/pl/C_Cpp/cpp/stl.md
-          - Lecture 4:Modern C++ Types: CS/pl/C_Cpp/cpp/type.md
-          - Guest Lecture:Template metaprogramming: CS/pl/C_Cpp/cpp/tmp.md
-          - Varibles & Synatax: CS/pl/C_Cpp/cpp/basic.md
-          - Keywords: CS/pl/C_Cpp/cpp/keyword.md
+          - CS106X:
+            - 课程信息: CS/pl/C_Cpp/cpp/cs106x/index.md
+            - Lecture 1:Functions: CS/pl/C_Cpp/cpp/cs106x/functions.md
+            - Lecture 2:Strings: CS/pl/C_Cpp/cpp/cs106x/strings.md
+          - CS106L:
+            - 课程信息: CS/pl/C_Cpp/cpp/cs106l/index.md
+            - Lecture 0:Introduction: CS/pl/C_Cpp/cpp/cs106l/intro.md
+            - Lecture 1&2:Streams: CS/pl/C_Cpp/cpp/cs106l/streams.md
+            - Lecture 3:Standard Template Library: CS/pl/C_Cpp/cpp/cs106l/stl.md
+            - Lecture 4:Modern C++ Types: CS/pl/C_Cpp/cpp/cs106l/type.md
+            - Guest Lecture:Template metaprogramming: CS/pl/C_Cpp/cpp/cs106l/tmp.md
       - Python:
         - python主页: CS/pl/Python/index.md
         - 基础语法: CS/pl/Python/py-basic-grammar.md
@@ -214,7 +218,7 @@ nav:
       - 一些快捷键: CS/Misc/shortcuts.md
       - 硬件by AI: CS/Misc/hardware.md
 
-  - 机器人:
+  - 硬件:
     - ROBOTICS/index.md
     - FTC教程:
       - 主页: ROBOTICS/FTCTutorial/index.md
@@ -243,7 +247,7 @@ nav:
         - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
         - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
       
-  - 金融:
+  - 经济金融管理:
     - FINANCE/index.md
     - 微观经济学:
       - 课程信息: FINANCE/micro/index.md
@@ -252,8 +256,8 @@ nav:
       - 弹性理论: FINANCE/micro/theory-of-elasticity.md
       - 消费者行为理论: FINANCE/micro/consumer-behavior-theory.md
       - 生产理论和成本理论: FINANCE/micro/production-and-cost-theory.md
-      - 完全竞争市场: FINANCE/micro/perfect-competition-market.md
-      - 不完全竞争市场: FINANCE/micro/imperfect-competition-market.md
+      - 完全竞争市场: FINANCE/micro/perfect-competitive-market.md
+      - 不完全竞争市场: FINANCE/micro/imperfectly-competitive-market.md
 
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
@@ -261,6 +265,8 @@ nav:
         - 国内生产总值: FINANCE/macro/gdp.md
         - 消费、储蓄、投资、政府购买、净出口: FINANCE/macro/other-variables.md
         - 货币需求和货币供给: FINANCE/macro/currency.md
+    - 博弈论:
+      - 课程信息: FINANCE/game-theory/index.md
 
     - 零碎自学:
       - 金本位: FINANCE/DIY/gold-standard.md
@@ -271,13 +277,13 @@ nav:
       - 暮光之城: BOOK/fictions/twilight.md
     - 专业书籍:
       - 1.md
-  - 公众:
-    - PUBLIC/index.md
-    - 秀米: PUBLIC/xiumi.md
-    - 哪吒: PUBLIC/nezha.md
-    - 工作汇报: PUBLIC/work-report.md
-    - 报销工作注意事项: PUBLIC/reimbursement.md
-    - ZJU-vlog: PUBLIC/zju-vlog.md
+  # - 公众:
+  #   - PUBLIC/index.md
+  #   - 秀米: PUBLIC/xiumi.md
+  #   - 哪吒: PUBLIC/nezha.md
+  #   - 工作汇报: PUBLIC/work-report.md
+  #   - 报销工作注意事项: PUBLIC/reimbursement.md
+  #   - ZJU-vlog: PUBLIC/zju-vlog.md
 
 # [UI]
 # [top]

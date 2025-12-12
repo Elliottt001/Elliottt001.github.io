@@ -11,18 +11,8 @@
 
         - 上机考试
 
-!!! success "CS106L"
-
-    [Videos in YouTube](https://www.youtube.com/watch?v=Ct3QF2qENGM&list=PLCgD3ws8aVdolCexlz8f3U-RROA0s5jWA&index=1)
-
-    [Official Slides](https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/lectures.html)
-
-    [Official Website](https://web.stanford.edu/class/cs106l/)
-
-    [Notes / Reference / Codes in GitHub](https://github.com/jackwang0108/CS106L-2019Fall)
-
 ---
 
-![alt text](res/images/image.png)
+![alt text](cs106l/res/images/image_1.png)
 
 词对应的知识点知道考试就没问题

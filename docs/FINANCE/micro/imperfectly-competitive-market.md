@@ -233,7 +233,17 @@ $\epsilon$ 是负数，他越大，弹性越小（绝对值越小）
 
 Cournot Model 和 Stackelberg Model 都是产量竞争（寡头决定产量，市场决定价格），Bertrand Model 是价格竞争（寡头决定价格，市场决定产量）。
 
+!!! info "要求"
+
+    1. 知道什么情况下用哪个模型
+    2. Cournot 和 Stackelberg 要会计算
+    2. Bertrand 和 Sweezy 要知道结论
+
 #### 古尔诺模型 Cournot Model
+
+!!! info "特征"
+
+    “两个同样水平的厂商同时决定产量”
 
 ![alt text](res/images/image-94.png)
 
@@ -241,8 +251,199 @@ Cournot Model 和 Stackelberg Model 都是产量竞争（寡头决定产量，�
 
 A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观测到对方的决策。A 在做决策时推测 B 的产量是多少，按照这个产量来决定自己利润最大的产量。
 
+计算方法：
+
+1. 写出总需求函数 $P = H - aQ$，其中 $Q = Q_A + Q_B$。
+2. 写出 A 和 B 的收益函数 $\Pi_A = P * Q_A$，$\Pi_B = P * Q_B$。
+3. 对 A 求 $\Pi_A$ 关于 $Q_A$ 的一阶导数，令其等于 0，解出 A 的反应函数 $Q_A^* = \frac{H - aQ_B}{2a}$。B 同理，解出 B 的反应函数 $Q_B^* = \frac{H - aQ_A}{2a}$。
+4. 联立 A 和 B 的反应函数，解出均衡产量 $Q_A^*$ 和 $Q_B^*$。
+
+    - 反应函数：做出 best response 的函数。即给定 H 和 $Q_B$，A 根据这个函数求出的最优产量是多少。
+    - 这里可以联立的原因：A的反应函数里面 $Q_B$ 是 A 认为 B 的产量，当 B 实际的产量等于 A 认为的产量时，就不再发生变化。
+5. 将均衡产量代入总需求函数，解出均衡价格 $P^*$。
+
+![alt text](image-6.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+图示法：
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+
 #### 斯坦克贝模型 Stackelberg Model
+
+!!! info "特征"
+
+    “两个厂商先后决定产量”
+
+!!! success "博弈论/经济学中先和行动问题的一般思路"
+
+    从最后一步往前推，即先考虑后行动的一方
+
+![alt text](image-7.png)
+
+计算方法：
+
+1. 写出总需求函数 $P = H - aQ$，其中 $Q = Q_A + Q_B$。
+2. 写出后发者（假设是 B）的收益函数 $\Pi_B = P * Q_B = (H - aQ_A)Q_B - aQ_B^2$ 。
+3. 对 B 求 $\Pi_B$ 关于 $Q_B$ 的一阶导数，令其等于 0，解出 B 的反应函数 $Q_B^* = \frac{H - aQ_A}{2a}$。
+4. 列出先发者的收益函数 $\Pi_A = P * Q_A = (H - a(Q_A + Q_B^*))Q_A$，**将 B 的反应函数代入**。
+
+    - 不能直接用 A 的收益函数对 $Q_A$ 求导，因为 B 会根据 A 的产量来调整自己的产量，即 $Q_B$ 是变量。
+5. 对 A 求 $\Pi_A$ 关于 $Q_A$ 的一阶导数，令其等于 0，解出均衡产量 $Q_A^*$。
+6. 将 $Q_A^*$ 代入 B 的反应函数，解出均衡产量 $Q_B^*$。
+7. 将均衡产量代入总需求函数，解出均衡价格 $P^*$。
+
+领导者利润占优（先发着优势）
 
 #### 贝尔兰特模型 Bertrand Model
 
+!!! info "特征"
+
+    “两个同样水平的厂商同时决定价格”
+
+特征：
+
+1. 寡头之间通过定价竞争
+2. 考虑到竞争对手的价格后选择其价格
+3. 实现自身利润最大化
+
+假设：
+
+1. 产品同质
+2. 单位成本固定，即不存在边际成本递增
+
+![alt text](image-8.png)
+
+定价低的占领整个市场，定价高的没有市场，定价一样平分市场
+
+结论：
+
+![alt text](image-9.png)
+
+均衡价格 = 边际成本，仅存在唯一的纳什均衡（唯一价格）
+
+给定 A 的价格不变，B 降价会占领整个市场但是利润为负（$\pi_B = (P_B - MC) \cdot Q_{Total} < 0$）；B 提价会失去整个市场于是销量为零利润为零（$\pi_B = (P_B - MC) \cdot 0 = 0$）；所以 B 没有改变价格的动机。A 同理。
+
+???- info "解释"
+
+    ![alt text](image-10.png)
+    ![alt text](image-11.png)
+
+双寡头贝尔兰特模型的均衡条件和完全竞争市场相同：Bertrand Paradox
+
+![alt text](image-12.png)
+
+引入差别，消费者偏好后，均衡价格会高于边际成本，经济利润提高
+
+其他解决方案：引入生产规模/生产能力限制
+
+或者引入无限期/不确定期限合作（抬高价格）。
+
+- 如果合作期限确定，用 backward，最后一期肯定有一方降价，倒数第二期也是，依次类推，不可能在确定期限内合作成功。
+
 #### 斯威齐模型 Sweezy Model
+
+用于解释价格刚性。
+
+> 价格刚性（Price Rigidity）：指在某些市场条件下（例如 MC 提高），价格对供需变化表现出较强的抵抗力，即价格在短期内难以发生显著变化的现象。
+
+![alt text](image-13.png)
+
+假设的核心：寡头厂商之间非对称反应（Asymmetric Response）
+
+![alt text](image-14.png)
+
+!!! info "解释方法"
+
+    ![alt text](image-15.png)
+    ![alt text](image-16.png)
+
+其他解释价格刚性的理论：
+
+- menu cost 菜单成本：改变价格产生的成本，例如修改菜单重新标价、和顾客沟通等。
+
+### 寡头垄断厂商的勾结与定价策略
+
+![alt text](image-17.png)
+
+- 晴雨表型：消息最多的定价
+
+成本加成：成本 + 固定百分比，需求价格弹性越大，成本加成越小，因为需求弹性大，消费者对价格敏感，成本加成过高会导致销量大幅下降。
+
+
+#### 支配型价格领导
+
+![alt text](image-18.png)
+
+???+ info "分析步骤"
+
+    ![alt text](image-19.png)
+    ![alt text](image-20.png)
+    ![alt text](image-21.png)
+
+### 博弈及其要素
+
+![alt text](image-22.png)
+
+- payoff：收益，得到的东西
+
+#### 纳什均衡
+
+![alt text](image-23.png)
+
+给定对方策略，我方没有动机改变自己的策略，即对于我来说也是最优策略
+
+优超策略：无论对方选择什么策略，某一策略总是优于其他策略
+
+![alt text](image-24.png)
+
+只 care 自己的 payoff 大小
+
+#### 囚徒困境
+
+![alt text](image-25.png)
+
+#### 寡头博弈
+
+## 垄断竞争市场 Monopolistic Competition Market
+
+特征：
+
+![alt text](image-26.png)
+![alt text](image-27.png)
+
+产品的差异性带来垄断力量，产品差异性越大，垄断力量越大
+
+![alt text](image-28.png)
+
+因为进出自由，长期均衡时利润为零
+
+![alt text](image-29.png)
+
+### 需求曲线
+
+![alt text](image-31.png)
+
+- 有替代性，则消费者价格敏感度更高，需求曲线比完全垄断市场更平坦
+- MR 曲线同样在需求曲线下方。因为只要 P 和 Q 成反方向变化，MR 就小于 P
+
+![alt text](image-32.png)
+![alt text](image-33.png)
+
+主观：忽略别人，只考虑自己抬价/降价。
+
+如果只有一家降价/抬价（主观），消费者敏感度高，需求量变化大，需求曲线更平
+
+### 短期均衡
+
+![alt text](image-34.png)
+
+## 对比分析
+
+需求曲线：
+
+![alt text](image-30.png)
