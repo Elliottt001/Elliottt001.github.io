@@ -82,24 +82,25 @@ nav:
         - Golang: none.md
         - Java: CS/back-end/note/java/methods.md
     - 编程语言:
-      - C/C++:
-        - C语言: 
-          - 学习笔记: CS/pl/C_Cpp/C/c-note.md
-          - 错题整理: CS/pl/C_Cpp/C/c-errors-and-tips.md
-          - 链表: CS/pl/C_Cpp/C/linkedList.md
-        - C++:
-          - 课程信息: CS/pl/C_Cpp/cpp/index.md
-          - CS106X:
-            - 课程信息: CS/pl/C_Cpp/cpp/cs106x/index.md
-            - Lecture 1:Functions: CS/pl/C_Cpp/cpp/cs106x/functions.md
-            - Lecture 2:Strings: CS/pl/C_Cpp/cpp/cs106x/strings.md
-          - CS106L:
-            - 课程信息: CS/pl/C_Cpp/cpp/cs106l/index.md
-            - Lecture 0:Introduction: CS/pl/C_Cpp/cpp/cs106l/intro.md
-            - Lecture 1&2:Streams: CS/pl/C_Cpp/cpp/cs106l/streams.md
-            - Lecture 3:Standard Template Library: CS/pl/C_Cpp/cpp/cs106l/stl.md
-            - Lecture 4:Modern C++ Types: CS/pl/C_Cpp/cpp/cs106l/type.md
-            - Guest Lecture:Template metaprogramming: CS/pl/C_Cpp/cpp/cs106l/tmp.md
+      - C语言: 
+        - 学习笔记: CS/pl/C/c-note.md
+        - 错题整理: CS/pl/C/c-errors-and-tips.md
+        - 链表: CS/pl/C/linkedList.md
+      - C++:
+        - 课程信息: CS/pl/cpp/index.md
+        - CS106X:
+          - 课程信息: CS/pl/cpp/cs106x/index.md
+          - Lecture 1:Functions: CS/pl/cpp/cs106x/functions.md
+          - Lecture 2:Strings: CS/pl/cpp/cs106x/strings.md
+          - Lecture 3:Streams: CS/pl/cpp/cs106x/streams.md
+
+        - CS106L:
+          - 课程信息: CS/pl/cpp/cs106l/index.md
+          - Lecture 0:Introduction: CS/pl/cpp/cs106l/intro.md
+          - Lecture 1&2:Streams: CS/pl/cpp/cs106l/streams.md
+          - Lecture 3:Standard Template Library: CS/pl/cpp/cs106l/stl.md
+          - Lecture 4:Modern C++ Types: CS/pl/cpp/cs106l/type.md
+          - Guest Lecture:Template metaprogramming: CS/pl/cpp/cs106l/tmp.md
       - Python:
         - python主页: CS/pl/Python/index.md
         - 基础语法: CS/pl/Python/py-basic-grammar.md
