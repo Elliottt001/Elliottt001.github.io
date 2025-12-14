@@ -93,6 +93,7 @@ nav:
           - Lecture 1:Functions: CS/pl/cpp/cs106x/functions.md
           - Lecture 2:Strings: CS/pl/cpp/cs106x/strings.md
           - Lecture 3:Streams: CS/pl/cpp/cs106x/streams.md
+          - Lecture 4:Vectors, Grids, Linked Lists: CS/pl/cpp/cs106x/vector-grid-linkedlist.md
 
         - CS106L:
           - 课程信息: CS/pl/cpp/cs106l/index.md
