@@ -2,17 +2,17 @@
 
 ### 完全垄断市场的特征与成因
 
-![alt text](res/images/image-55_1.png)
-![alt text](res/images/image-56.png)
+![alt text](res/images/image-55_1_1.png)
+![alt text](res/images/image-56_1.png)
 
 ### 完全垄断的收益
 
-![alt text](res/images/image-57.png)
-![alt text](res/images/image-58.png)
+![alt text](res/images/image-57_1.png)
+![alt text](res/images/image-58_1.png)
 
 厂商的需求曲线 = 市场需求曲线，斜向下：随价格增加，需求量减少
 
-![alt text](res/images/image-59.png)
+![alt text](res/images/image-59_1.png)
 
 $MR \lt P$
 
@@ -24,23 +24,23 @@ $P = a - bQ，TR = P*Q = aQ - bQ^2， MR = d(TR)/dQ = a - 2bQ$
 
 #### 短期均衡
 
-![alt text](res/images/image-60.png)
+![alt text](res/images/image-60_1.png)
 
 利润情况：
 
-![alt text](res/images/image-61.png)
+![alt text](res/images/image-61_1.png)
 
 读图方法：
 
 由 $MR = MC$ 求出均衡产量 $Q^*$，再由需求曲线（$D(AC)$）求出均衡价格 $P^*$，再由 $SAC$ 曲线找到 $Q^*$ 对应的单位成本 $SAC^*$，利润为 $(P^* - SAC^*) * Q^*$。
 
-![alt text](res/images/image-62.png)
+![alt text](res/images/image-62_1.png)
 
 #### 长期均衡
 
-![alt text](res/images/image-63.png)
+![alt text](res/images/image-63_1.png)
 
-![alt text](res/images/image-64.png)
+![alt text](res/images/image-64_1.png)
 
 长期均衡中垄断不可能有负利润。但是可能有正利润（因为其他企业进入受限）。
 
@@ -48,26 +48,26 @@ $P = a - bQ，TR = P*Q = aQ - bQ^2， MR = d(TR)/dQ = a - 2bQ$
 
 垄断者没有供给曲线
 
-![alt text](res/images/image-65.png)
+![alt text](res/images/image-65_1.png)
 
 ???+ question "怎么理解没有供给曲线"
 
-    ![alt text](res/images/image-67.png)
-    ![alt text](res/images/image-68.png)
+    ![alt text](res/images/image-67_1.png)
+    ![alt text](res/images/image-68_1.png)
 
 
 ### 垄断的经济效率 
 
-![alt text](res/images/image-66.png)
+![alt text](res/images/image-66_1.png)
 
 剩余分析：
 
-![alt text](res/images/image-69.png)
+![alt text](res/images/image-69_1.png)
 
 存在无谓损失
 
-![alt text](res/images/image-70.png)
-![alt text](res/images/image-72.png)
+![alt text](res/images/image-70_1.png)
+![alt text](res/images/image-72_1.png)
 
 > 社会总剩余（Total Surplus, TS）通常被用作衡量社会福利（Social Welfare）或经济福利（Economic Well-being）的指标。
 
@@ -84,11 +84,11 @@ $P = a - bQ，TR = P*Q = aQ - bQ^2， MR = d(TR)/dQ = a - 2bQ$
 
 Theory of Price Discrimination
 
-![alt text](res/images/image-71.png)
+![alt text](res/images/image-71_1.png)
 
 #### 条件
 
-![alt text](res/images/image-73.png)
+![alt text](res/images/image-73_1.png)
 
 市场势力：
 
@@ -99,7 +99,7 @@ Theory of Price Discrimination
 - 防止消费者套利（转售）
 - 人群可以被有效区分
 
-![alt text](res/images/image-74.png)
+![alt text](res/images/image-74_1.png)
 
 >（3）：price discrimination could increase social welfare if it enables more consumers to be served.
 
@@ -113,18 +113,18 @@ Theory of Price Discrimination
 
 perfect Price Discrimination / First-Degree Price Discrimination
 
-![alt text](res/images/image-75.png)
+![alt text](res/images/image-75_1.png)
 
 每一单位产品都像消费者索取其愿意支付的最高价格
 
-![alt text](res/images/image-76.png)
+![alt text](res/images/image-76_1.png)
 
 一级价格歧视卖到P = MC为止，产量等于完全竞争市场的时候
 
 ???+ question "原因"
 
-    ![alt text](res/images/image-77.png)
-    ![alt text](res/images/image-78.png)
+    ![alt text](res/images/image-77_1.png)
+    ![alt text](res/images/image-78_1.png)
 
 消费者剩余为0，社会上有剩余都在垄断者那里。且不产生无谓损失/福利损失。
 
@@ -134,7 +134,7 @@ perfect Price Discrimination / First-Degree Price Discrimination
 
 versioning / Second-Degree Price Discrimination
 
-![alt text](res/images/image-79.png)
+![alt text](res/images/image-79_1.png)
 
 核心：商家给消费者提供一个 menu，让消费者 **自我选择**
 
@@ -150,7 +150,7 @@ versioning / Second-Degree Price Discrimination
 
 一个例子：
 
-![alt text](res/images/image-80.png)
+![alt text](res/images/image-80_1.png)
 
 一般来说，厂家会将低支付意愿的消费者的消费者剩余全部拿走，而高支付意愿的消费者会剩下一部分消费者剩余。
 
@@ -158,14 +158,14 @@ versioning / Second-Degree Price Discrimination
 
 market segmentation / Third-Degree Price Discrimination
 
-![alt text](res/images/image-81.png)
+![alt text](res/images/image-81_1.png)
 
 厂家划分的市场/消费者
 
 计算：
 
-![alt text](res/images/image-82.png)
-![alt text](res/images/image-83.png)
+![alt text](res/images/image-82_1.png)
+![alt text](res/images/image-83_1.png)
 
 即要求两个市场的边际收入相等且等于边际成本
 
@@ -176,11 +176,11 @@ market segmentation / Third-Degree Price Discrimination
 
 将消费者分成 $n$ 个市场，利润最大化条件：$MR_1 = MR_2 = ... = MR_n = MC$
 
-![alt text](res/images/image-84.png)
+![alt text](res/images/image-84_1.png)
 
 被分割的每个市场都是一个完全垄断市场
 
-![alt text](res/images/image-85.png)
+![alt text](res/images/image-85_1.png)
 
 $\epsilon$ 是负数，他越大，弹性越小（绝对值越小）
 
@@ -203,27 +203,27 @@ $\epsilon$ 是负数，他越大，弹性越小（绝对值越小）
 
 ## 寡头垄断市场 Oligopoly Market
 
-![alt text](res/images/image-86.png)
+![alt text](res/images/image-86_1.png)
 
 ### 特征&成因
 
-![alt text](res/images/image-87.png)
+![alt text](res/images/image-87_1.png)
 
-![alt text](res/images/image-88.png)
+![alt text](res/images/image-88_1.png)
 
 成因：
 
-![alt text](res/images/image-89.png)
+![alt text](res/images/image-89_1.png)
 
 ### 卡特尔
 
-![alt text](res/images/image-91.png)
-![alt text](res/images/image-90.png)
+![alt text](res/images/image-91_1.png)
+![alt text](res/images/image-90_1.png)
 
 可以将其视作一个完全垄断市场
 
-![alt text](res/images/image-92.png)
-![alt text](res/images/image-93.png)
+![alt text](res/images/image-92_1.png)
+![alt text](res/images/image-93_1.png)
 
 就是博弈论中经典的：**囚徒困境**
 
@@ -245,7 +245,7 @@ Cournot Model 和 Stackelberg Model 都是产量竞争（寡头决定产量，�
 
     “两个同样水平的厂商同时决定产量”
 
-![alt text](res/images/image-94.png)
+![alt text](res/images/image-94_1.png)
 
 > 成本为零不是古尔诺模型的基础假设，只是基础课里面为了简化计算。
 
@@ -262,16 +262,16 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
     - 这里可以联立的原因：A的反应函数里面 $Q_B$ 是 A 认为 B 的产量，当 B 实际的产量等于 A 认为的产量时，就不再发生变化。
 5. 将均衡产量代入总需求函数，解出均衡价格 $P^*$。
 
-![alt text](image-6.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](res/images/image-6_3.png)
+![alt text](res/images/image-4_3.png)
+![alt text](res/images/image-5_3.png)
 
 图示法：
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](res/images/image_3.png)
+![alt text](res/images/image-1_3.png)
+![alt text](res/images/image-2_3.png)
+![alt text](res/images/image-3_3.png)
 
 #### 斯坦克贝模型 Stackelberg Model
 
@@ -283,7 +283,7 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
     从最后一步往前推，即先考虑后行动的一方
 
-![alt text](image-7.png)
+![alt text](res/images/image-7_3.png)
 
 计算方法：
 
@@ -316,13 +316,13 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 1. 产品同质
 2. 单位成本固定，即不存在边际成本递增
 
-![alt text](image-8.png)
+![alt text](res/images/image-8_3.png)
 
 定价低的占领整个市场，定价高的没有市场，定价一样平分市场
 
 结论：
 
-![alt text](image-9.png)
+![alt text](res/images/image-9_3.png)
 
 均衡价格 = 边际成本，仅存在唯一的纳什均衡（唯一价格）
 
@@ -330,12 +330,12 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 ???- info "解释"
 
-    ![alt text](image-10.png)
-    ![alt text](image-11.png)
+    ![alt text](res/images/image-10_3.png)
+    ![alt text](res/images/image-11_3.png)
 
 双寡头贝尔兰特模型的均衡条件和完全竞争市场相同：Bertrand Paradox
 
-![alt text](image-12.png)
+![alt text](res/images/image-12_3.png)
 
 引入差别，消费者偏好后，均衡价格会高于边际成本，经济利润提高
 
@@ -351,16 +351,16 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 > 价格刚性（Price Rigidity）：指在某些市场条件下（例如 MC 提高），价格对供需变化表现出较强的抵抗力，即价格在短期内难以发生显著变化的现象。
 
-![alt text](image-13.png)
+![alt text](res/images/image-13_3.png)
 
 假设的核心：寡头厂商之间非对称反应（Asymmetric Response）
 
-![alt text](image-14.png)
+![alt text](res/images/image-14_2.png)
 
 !!! info "解释方法"
 
-    ![alt text](image-15.png)
-    ![alt text](image-16.png)
+    ![alt text](res/images/image-15_2.png)
+    ![alt text](res/images/image-16_2.png)
 
 其他解释价格刚性的理论：
 
@@ -368,7 +368,7 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 ### 寡头垄断厂商的勾结与定价策略
 
-![alt text](image-17.png)
+![alt text](res/images/image-17_2.png)
 
 - 晴雨表型：消息最多的定价
 
@@ -377,35 +377,35 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 #### 支配型价格领导
 
-![alt text](image-18.png)
+![alt text](res/images/image-18_2.png)
 
 ???+ info "分析步骤"
 
-    ![alt text](image-19.png)
-    ![alt text](image-20.png)
-    ![alt text](image-21.png)
+    ![alt text](res/images/image-19_2.png)
+    ![alt text](res/images/image-20_2.png)
+    ![alt text](res/images/image-21_2.png)
 
 ### 博弈及其要素
 
-![alt text](image-22.png)
+![alt text](res/images/image-22_1.png)
 
 - payoff：收益，得到的东西
 
 #### 纳什均衡
 
-![alt text](image-23.png)
+![alt text](res/images/image-23_1.png)
 
 给定对方策略，我方没有动机改变自己的策略，即对于我来说也是最优策略
 
 优超策略：无论对方选择什么策略，某一策略总是优于其他策略
 
-![alt text](image-24.png)
+![alt text](res/images/image-24_1.png)
 
 只 care 自己的 payoff 大小
 
 #### 囚徒困境
 
-![alt text](image-25.png)
+![alt text](res/images/image-25_1.png)
 
 #### 寡头博弈
 
@@ -413,26 +413,26 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 特征：
 
-![alt text](image-26.png)
-![alt text](image-27.png)
+![alt text](res/images/image-26_1.png)
+![alt text](res/images/image-27_1.png)
 
 产品的差异性带来垄断力量，产品差异性越大，垄断力量越大
 
-![alt text](image-28.png)
+![alt text](res/images/image-28_1.png)
 
 因为进出自由，长期均衡时利润为零
 
-![alt text](image-29.png)
+![alt text](res/images/image-29_1.png)
 
 ### 需求曲线
 
-![alt text](image-31.png)
+![alt text](res/images/image-31_1.png)
 
 - 有替代性，则消费者价格敏感度更高，需求曲线比完全垄断市场更平坦
 - MR 曲线同样在需求曲线下方。因为只要 P 和 Q 成反方向变化，MR 就小于 P
 
-![alt text](image-32.png)
-![alt text](image-33.png)
+![alt text](res/images/image-32_1.png)
+![alt text](res/images/image-33_1.png)
 
 主观：忽略别人，只考虑自己抬价/降价。
 
@@ -440,10 +440,10 @@ A 和 B 同时做决定，A 在做决策时觉得 B 的产量不变。不能观�
 
 ### 短期均衡
 
-![alt text](image-34.png)
+![alt text](res/images/image-34_1.png)
 
 ## 对比分析
 
 需求曲线：
 
-![alt text](image-30.png)
+![alt text](res/images/image-30_1.png)

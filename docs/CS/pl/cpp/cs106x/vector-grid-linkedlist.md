@@ -42,7 +42,9 @@ cpp 的 `vector` 只能存一种类型的元素, 想存多种类型需要用 `po
 
 用 grid 比 nested vector 更多.
 
+### Efficiency
 
+![alt text](image-13.png)
 
 ## Grid（Stanford C++ Library）
 
@@ -54,3 +56,17 @@ cpp 的 `vector` 只能存一种类型的元素, 想存多种类型需要用 `po
 grid 都要用 reference 传参，因为 copy 一    个 grid 太耗时了。
 
 可以用 `const` 防止修改 grid。
+
+## Linked List（Stanford C++ Library）
+
+`#include "linkedlist.h"`
+
+![alt text](image-14.png)
+
+与 vector 的方法完全相同， 只是效率不同。
+
+![alt text](image-15.png)
+
+## ADT
+
+![alt text](image-16.png)

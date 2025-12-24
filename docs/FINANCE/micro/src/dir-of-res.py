@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Markdown 文件路径
-markdown_file = "/home/rzzhang/github/mkdocs-site/docs/FINANCE/micro/production-and-cost-theory.md"
+markdown_file = "/home/rzzhang/github/mkdocs-site/docs/FINANCE/micro/imperfectly-competitive-market.md"
 # 图片目标路径
 target_image_dir = "res/images"
 
