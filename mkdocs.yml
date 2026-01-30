@@ -103,16 +103,24 @@ nav:
           - Lecture 4:Modern C++ Types: CS/pl/cpp/cs106l/type.md
           - Guest Lecture:Template metaprogramming: CS/pl/cpp/cs106l/tmp.md
       - Python:
-        - python主页: CS/pl/Python/index.md
-        - 基础语法: CS/pl/Python/py-basic-grammar.md
-        - 数据容器: CS/pl/Python/py-sequence.md
-        - 面向对象: CS/pl/Python/py-oop.md
-        - 文件基础: CS/pl/Python/file-basic.md
-        - 文件进阶: CS/pl/Python/file-advance.md
-        - 标准库积累: CS/pl/Python/modules.md
-        - 项目开发: CS/pl/Python/development-in-py.md
-        - 百日打卡: CS/pl/Python/clock-in.md
-        - 伊力笔记: CS/pl/Python/python-note.md
+        - python封面: CS/pl/Python/index.md
+        - 面向对象编程入门: CS/pl/Python/17.md
+        - 面向对象编程进阶: CS/pl/Python/18.md
+        - 面向对象编程应用: CS/pl/Python/19.md
+        - Python标准库初探: CS/pl/Python/20.md
+        - 文件读写和异常处理: CS/pl/Python/21.md
+        - 网络数据采集概述: CS/pl/Python/31.md
+        - 用Python获取网络数据: CS/pl/Python/32.md
+        - 用Python解析HTML页面: CS/pl/Python/33.md
+        # - 基础语法: CS/pl/Python/py-basic-grammar.md
+        # - 数据容器: CS/pl/Python/py-sequence.md
+        # - 面向对象: CS/pl/Python/py-oop.md
+        # - 文件基础: CS/pl/Python/file-basic.md
+        # - 文件进阶: CS/pl/Python/file-advance.md
+        # - 标准库积累: CS/pl/Python/modules.md
+        # - 项目开发: CS/pl/Python/development-in-py.md
+        # - 百日打卡: CS/pl/Python/clock-in.md
+        # - 伊力笔记: CS/pl/Python/python-note.md
       - Go:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
