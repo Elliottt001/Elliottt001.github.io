@@ -304,7 +304,7 @@ theme:
   name: material
 
   # 浏览器标签页和收藏夹使用的站点图标。
-  favicon: images/favicon_circle.png
+  favicon: images/logo.png
 
   # 自定义主题覆盖目录；当前用于放置评论等模板片段。
   custom_dir: overrides
@@ -432,10 +432,10 @@ extra:
       icon: fontawesome/brands/github
       link: https://github.com/Elliottt001
     - name: Email | Elliottt001
-      icon: fontawesome/brands/envelope
+      icon: fontawesome/solid/envelope
       link: mailto:rzzhangzju@gmail.com
     - name: Personal Website
-      icon: fontawesome/brands/globe
+      icon: fontawesome/solid/globe
       link: https://me.elliotttzhang.cn
     - name: LinkedIn | Elliottt001
       icon: fontawesome/brands/linkedin
