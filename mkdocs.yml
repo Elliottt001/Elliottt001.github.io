@@ -1,14 +1,17 @@
 # [Info]
-# 左上角标题
-site_name: CosHub
-site_url: https://Elliottt001.github.io
-site_author: 张瑞喆
-site_description: Zhang rz的个人网站
+# 站点名称：显示在浏览器标题、页面页眉和主题导航中。
+site_name: Note
 
-# 禁用目录 URL 以修复图片路径问题（可选）
-# use_directory_urls: false
+# 站点线上地址：用于生成 sitemap、canonical URL、RSS 等绝对链接。
+site_url: https://note.elliotttzhang.cn/
 
-# [Navigtion]
+# 站点作者：写入页面元信息，便于主题和插件读取。
+site_author: Elliottt Zhang
+
+# 站点描述：写入 HTML meta description，影响搜索结果摘要。
+site_description: 这里放着一些 Elliottt Zhang 的笔记
+
+# [Navigation]
 nav:
   - 主页: 
     - 封面: index.md
@@ -82,10 +85,19 @@ nav:
         - Golang: none.md
         - Java: CS/back-end/note/java/methods.md
     - 编程语言:
-      - C语言: 
-        - 学习笔记: CS/pl/C/c-note.md
-        - 错题整理: CS/pl/C/c-errors-and-tips.md
-        - 链表: CS/pl/C/linkedList.md
+      - C语言:
+        - 数据类型: CS/pl/C/01-data-types.md
+        - 运算符和表达式: CS/pl/C/02-operators.md
+        - 循环和分支: CS/pl/C/03-control-flow.md
+        - 函数: CS/pl/C/04-functions.md
+        - 数组: CS/pl/C/05-arrays.md
+        - 指针: CS/pl/C/06-pointers.md
+        - 编译预处理和宏: CS/pl/C/07-preprocessor.md
+        - 动态内存与链表: CS/pl/C/08-dynamic-memory.md
+        - 大程序结构: CS/pl/C/09-program-structure.md
+        - 文件: CS/pl/C/10-file-io.md
+        - 杂项: CS/pl/C/11-misc.md
+        - 错题与心得: CS/pl/C/12-errors-and-tips.md
       - C++:
         - 课程信息: CS/pl/cpp/index.md
         - CS106X:
@@ -103,24 +115,15 @@ nav:
           - Lecture 4:Modern C++ Types: CS/pl/cpp/cs106l/type.md
           - Guest Lecture:Template metaprogramming: CS/pl/cpp/cs106l/tmp.md
       - Python:
-        - python封面: CS/pl/Python/index.md
-        - 面向对象编程入门: CS/pl/Python/17.md
-        - 面向对象编程进阶: CS/pl/Python/18.md
-        - 面向对象编程应用: CS/pl/Python/19.md
-        - Python标准库初探: CS/pl/Python/20.md
-        - 文件读写和异常处理: CS/pl/Python/21.md
-        - 网络数据采集概述: CS/pl/Python/31.md
-        - 用Python获取网络数据: CS/pl/Python/32.md
-        - 用Python解析HTML页面: CS/pl/Python/33.md
-        # - 基础语法: CS/pl/Python/py-basic-grammar.md
-        # - 数据容器: CS/pl/Python/py-sequence.md
-        # - 面向对象: CS/pl/Python/py-oop.md
-        # - 文件基础: CS/pl/Python/file-basic.md
-        # - 文件进阶: CS/pl/Python/file-advance.md
-        # - 标准库积累: CS/pl/Python/modules.md
-        # - 项目开发: CS/pl/Python/development-in-py.md
-        # - 百日打卡: CS/pl/Python/clock-in.md
-        # - 伊力笔记: CS/pl/Python/python-note.md
+        - 概览: CS/pl/Python/index.md
+        - 基础语法: CS/pl/Python/py-basic-grammar.md
+        - 数据容器: CS/pl/Python/py-sequence.md
+        - 面向对象编程: CS/pl/Python/py-oop.md
+        - 文件基础: CS/pl/Python/file-basic.md
+        - 文件进阶: CS/pl/Python/file-advance.md
+        - 标准库积累: CS/pl/Python/modules.md
+        - 网络数据采集: CS/pl/Python/web-scraping.md
+        - 项目开发与风格: CS/pl/Python/development-in-py.md
       - Go:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
@@ -202,23 +205,22 @@ nav:
       - 江林益学长分享 - 科研深造之路: LAB/01.md
       - 转正大会: LAB/转正大会.md
     - 实用工具:
-      - shell: 
-        - 笔记一: CS/Tools/shell.md
-        - 笔记二: CS/Tools/shell-new.md
+      - shell: CS/Tools/shell.md
       - CSS: CS/Tools/CSS.md
       - HTML: CS/Tools/HTML.md
-      - Git&GitHub: CS/Tools/Git & GitHub.md
+      - Git & GitHub: CS/Tools/git-github.md
       - Docker: CS/Tools/docker.md
-      - Markdown: CS/Tools/Markdown(obsidian).md
+      - Markdown:
+        - 基础: CS/Tools/markdown-basics.md
+        - 进阶: CS/Tools/markdown-advanced.md
+        - Obsidian: CS/Tools/markdown-obsidian.md
       - LaTeX: CS/Tools/LaTeX.md
       - Linux: CS/Tools/Linux.md
       - vim: CS/Tools/vim.md
       - GDB: CS/Tools/GDB.md
-      - Obsidian: CS/Tools/Obsidian.md
-      - Mkdocs: 
+      - Mkdocs:
         - MkDocs: CS/Tools/mkdocs.md
-        - MkDocs图像: CS/Tools/mkdocs-images-copy.md
-      - Makefile: CS/Tools/makefile.md
+        - MkDocs 图像: CS/Tools/mkdocs-images.md
       - Anaconda: CS/Tools/anaconda.md
       - VMware: CS/Tools/vmware-linux.md
     - 杂七杂八:
@@ -296,238 +298,341 @@ nav:
   #   - ZJU-vlog: PUBLIC/zju-vlog.md
 
 # [UI]
-# [top]
+# Material 主题设置：控制站点外观、导航交互和图标。
 theme:
+  # 使用 MkDocs Material 主题。
   name: material
 
+  # 浏览器标签页和收藏夹使用的站点图标。
   favicon: images/favicon_circle.png
-  custom_dir: overrides # 用来搞评论的，参考 https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
 
+  # 自定义主题覆盖目录；当前用于放置评论等模板片段。
+  custom_dir: overrides
+
+  # 明暗主题配色：提供自动、亮色、暗色三种入口。
   palette:
-    # Palette toggle for automatic mode
+    # 自动模式：跟随浏览器或操作系统的颜色偏好。
     - media: "(prefers-color-scheme)"
+      # 自动模式按钮设置。
       toggle:
+        # 自动模式按钮图标。
         icon: material/brightness-auto
-        name: Switch to light mode
+        # 自动模式按钮提示文案。
+        name: 跟随系统
 
-    # Palette toggle for light mode
+    # 亮色模式：使用 Material 默认浅色方案。
     - media: "(prefers-color-scheme: light)"
-      scheme: slate
-      primary: purple
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+      # 亮色模式主题方案。
       scheme: default
+      # 亮色模式主色。
       primary: purple
+      # 亮色模式按钮设置。
       toggle:
+        # 亮色模式按钮图标。
+        icon: material/weather-sunny
+        # 亮色模式按钮提示文案。
+        name: 切换到深色模式
+
+    # 暗色模式：使用 Material 的 slate 深色方案。
+    - media: "(prefers-color-scheme: dark)"
+      # 暗色模式主题方案。
+      scheme: slate
+      # 暗色模式主色。
+      primary: purple
+      # 暗色模式按钮设置。
+      toggle:
+        # 暗色模式按钮图标。
         icon: material/weather-night
-        name: Switch to system preference
-  font: False
+        # 暗色模式按钮提示文案。
+        name: 切换到系统偏好
 
+  # 禁用主题默认在线字体加载，避免依赖 Google Fonts。
+  font: false
 
+  # 主题功能开关：保留当前站点实际启用的交互能力。
   features:
-    # 使用 Tab 来进行分类
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    # 顶层导航以标签页形式展示。
     - navigation.tabs
-    # 返回顶部的按钮，在上滑时出现
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    # 页面滚动后显示返回顶部按钮。
     - navigation.top
-    # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages-with-section-index-pages
+    # 点击分区导航时优先打开该分区的 index.md。
     - navigation.indexes
-    # 右侧目录随页面滑动
-    - toc.follow 
-    # # 打开 Tab 时左侧目录全部展开
-    # # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
-    # - navigation.expand
-    # 搜索输入一些字母时推荐补全整个单词
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    # 右侧目录跟随页面滚动同步高亮。
+    - toc.follow
+    # 搜索框提供关键词补全建议。
     - search.suggest
-    # 搜索的关键词文章加入高亮
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting
+    # 搜索结果页高亮匹配关键词。
     - search.highlight
-    # 可以通过按钮复制代码
-    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
+    # 代码块显示复制按钮。
     - content.code.copy
-    # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
-    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    # 页面正文显示“编辑此页”的入口。
     - content.action.edit
-    # 将公告标记为已读
+    # 允许用户关闭公告横幅。
     - announce.dismiss
+
+  # 主题图标配置：控制站点 Logo、仓库入口、编辑按钮和提示块图标。
   icon:
+    # 顶部站点 Logo 图标。
     logo: material/library-outline
-    # [添加 GitHub 仓库]
-    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
+    # 右上角仓库链接图标。
     repo: fontawesome/brands/github
-    edit: material/pencil 
+    # “编辑此页”动作图标。
+    edit: material/pencil
+    # “查看源码”动作图标。
     view: material/eye
-    # 块: https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons-octicons
+    # Admonition 提示块图标映射。
     admonition:
+      # note 提示块图标。
       note: octicons/tag-16
+      # abstract 提示块图标。
       abstract: octicons/checklist-16
+      # info 提示块图标。
       info: octicons/info-16
+      # tip 提示块图标。
       tip: octicons/squirrel-16
+      # success 提示块图标。
       success: octicons/check-16
+      # question 提示块图标。
       question: octicons/question-16
+      # warning 提示块图标。
       warning: octicons/alert-16
+      # failure 提示块图标。
       failure: octicons/x-circle-16
+      # danger 提示块图标。
       danger: octicons/zap-16
+      # bug 提示块图标。
       bug: octicons/bug-16
+      # example 提示块图标。
       example: octicons/beaker-16
+      # quote 提示块图标。
       quote: octicons/quote-16
-      # note: fontawesome/solid/note-sticky
-      # abstract: fontawesome/solid/book
-      # info: fontawesome/solid/circle-info
-      # tip: fontawesome/solid/bullhorn
-      # success: fontawesome/solid/check
-      # question: fontawesome/solid/circle-question
-      # warning: fontawesome/solid/triangle-exclamation
-      # failure: fontawesome/solid/bomb
-      # danger: fontawesome/solid/skull
-      # bug: fontawesome/solid/robot
-      # example: fontawesome/solid/flask
-      # quote: fontawesome/solid/quote-left
-    # 注释: https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-2
+    # Markdown 注释标记的图标。
     annotation: material/checkbox-marked-circle-auto-outline
-  
-# [点击按钮跳转至 GitHub 修改 Markdown 源文件]
-# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+
+# 页面编辑链接前缀：与 repo_url 拼接后跳转到 GitHub 上的 Markdown 源文件。
 edit_uri: edit/main/docs/
-# [top-right corner]
-# [添加 GitHub 仓库]
-# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
+
+# 仓库地址：用于右上角仓库入口和页面编辑入口。
 repo_url: https://github.com/Elliottt001/Elliottt001.github.io
-repo_name: CosHub
-# [bottom-left corner]
-# [版权说明]
-# https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
+
+# 仓库展示名：显示在主题右上角仓库按钮旁。
+repo_name: Elliottt001.github.io
+
+# 页脚版权信息：支持 HTML，用于保留 Cookie 设置入口。
 copyright: >
-  Copyright © 2024 张瑞喆 All rights reserved.
-  
-  <a href="#__consent">Change cookie settings</a>
-# [bottom-right corner]
+  Copyright © 2024 Elliottt Zhang All rights reserved.
+
+  <a href="#__consent">Cookie 设置</a>
+
+# 主题扩展信息：控制页脚社交链接、生成器标识和 Cookie 授权弹窗。
 extra:
-  # [添加社交网络图标和链接]
-  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
-  # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
-  # name 会在鼠标悬浮时提示
-  social: # icons
+  # 页脚社交链接列表。
+  social:
     - name: GitHub | Elliottt001
       icon: fontawesome/brands/github
       link: https://github.com/Elliottt001
+    - name: Email | Elliottt001
+      icon: fontawesome/brands/envelope
+      link: mailto:rzzhangzju@gmail.com
+    - name: Personal Website
+      icon: fontawesome/brands/globe
+      link: https://me.elliotttzhang.cn
+    - name: LinkedIn | Elliottt001
+      icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/%E7%91%9E%E5%96%86-%E5%BC%A0-23ba9b380/
+
+  # 关闭页脚默认的 “Made with Material for MkDocs” 标识。
   generator: false
 
+  # Cookie 授权弹窗配置。
   consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+    # 弹窗标题。
+    title: Cookie 设置
+    # 弹窗说明：使用本站自己的说明，避免保留默认示例文案。
+    description: >-
+      本站可能使用必要 Cookie 记录偏好设置，并在启用统计服务时用于匿名访问分析。
+      你可以在这里管理授权。
+    # 可管理的 Cookie 类型。
     cookies:
+      # 访问统计授权项；默认不勾选。
       analytics:
-        name: Google Analytics
-        checked: false
+        # 统计 Cookie 在弹窗中的展示名称。
+        name: 访问统计
+        # 默认不启用统计 Cookie。
+        checked: True
+    # 弹窗按钮动作。
     actions:
+      # 接受当前 Cookie 设置。
       - accept
-      - manage  
-  
-# [Extensions]
+      # 打开 Cookie 管理面板。
+      - manage
+
+# [Plugins]
+# MkDocs 插件：控制搜索、标签、图片灯箱、页面统计、修订时间、RSS、更新日志和压缩。
 plugins:
-  # [搜索功能]
-  # https://squidfunk.github.io/mkdocs-material/plugins/search/
-  # 之前中文搜索是 Insider 的功能（https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/），现在好像已经是默认功能了，
+  # 全文搜索插件；lang 配置用于中文、英文和西文内容检索。
   - search:
+      # 搜索分词语言列表。
       lang:
+        # 中文内容。
         - zh
+        # 英文内容。
         - en
+        # 西文内容。
         - es
-  # [给单篇文章添加标签]
-  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
-  # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
+
+  # 标签插件：读取页面 meta.tags 并生成标签索引。
   - tags
-  - glightbox #图片放大
-  - statistics #统计页面字数、代码行数、阅读时间
-    #https://github.com/TonyCrane/mkdocs-statistics-plugin  
+
+  # 图片灯箱插件：点击图片后放大预览。
+  - glightbox
+
+  # 页面统计插件：显示字数、代码行数和预计阅读时间。
+  - statistics
+
+  # Git 修订时间插件：显示页面最后更新和创建时间。
   - git-revision-date-localized:
-        type: datetime
-        timezone: Asia/Shanghai
-        locale: zh
-        enable_creation_date: true
-        exclude:
-            - index.md
-            - writeups/AAA.md
+      # 日期显示精确到日期和时间。
+      type: datetime
+      # 使用站点主要受众所在时区。
+      timezone: Asia/Shanghai
+      # 日期本地化语言。
+      locale: zh
+      # 同时显示页面创建时间。
+      enable_creation_date: true
+      # 不需要显示修订时间的页面。
+      exclude:
+        # 首页不显示修订时间。
+        - index.md
+        # 指定 writeup 页面不显示修订时间。
+        - writeups/AAA.md
+
+  # RSS 插件：根据站点页面生成订阅源。
   - rss
+
+  # 更新日志插件：根据 docs/changelog.yml 生成 changelog 页面。
   - changelog
+
+  # HTML 压缩插件：减小构建后页面体积。
   - minify:
+      # 启用 HTML 压缩。
       minify_html: true
 
+# Markdown 扩展：控制目录、提示块、代码高亮、任务列表、公式、表格等语法能力。
 markdown_extensions:
+  # 自动生成页面目录。
   - toc:
+      # 标题旁显示可复制的锚点链接。
       permalink: true
+      # 目录最多包含 5 级标题。
       toc_depth: 5
-  - admonition #应用admonition
+
+  # 启用 !!! note 这类提示块语法。
+  - admonition
+
+  # 代码块语法高亮配置。
   - pymdownx.highlight:
+      # 允许行号锚点。
       anchor_linenums: true
+      # 为每行代码生成 span，便于主题样式定位。
       line_spans: __span
+      # 为代码块添加语言类名。
       pygments_lang_class: true
-  - pymdownx.inlinehilite #添加了对内联代码块的语法突出显示的支持
-  - pymdownx.snippets #使用简单语法将任意文件的内容嵌入到文档
-  - pymdownx.superfences: #允许代码和内容块任意嵌套，包括警告、选项卡、列表和所有其他元素
+
+  # 内联代码语法高亮。
+  - pymdownx.inlinehilite
+
+  # 允许在 Markdown 中嵌入外部文件片段。
+  - pymdownx.snippets
+
+  # 增强代码围栏，支持在提示块、选项卡和列表中嵌套代码块。
+  - pymdownx.superfences:
+      # 自定义代码围栏类型。
       custom_fences:
+        # Mermaid 图表围栏。
         - name: mermaid
+          # 渲染 Mermaid 所需的 CSS 类名。
           class: mermaid
+          # 使用 pymdownx 默认代码围栏格式化函数。
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.details #admonition可以折叠
 
-  - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
+  # 允许提示块折叠展开。
+  - pymdownx.details
+
+  # 允许用 Markdown 语法为元素添加 HTML 属性和 CSS 类。
+  - attr_list
+
+  # 允许在 HTML 块内部继续解析 Markdown。
   - md_in_html
-  - pymdownx.blocks.caption
-  - pymdownx.keys #添加了一个简单的语法来允许呈现键盘按键和组合 
 
-  # Caret 、 Mark和Tilde扩展添加了使用简单语法突出显示文本并定义下标和上标的功能。
+  # 支持图片、表格等内容的 caption 写法。
+  - pymdownx.blocks.caption
+
+  # 支持键盘按键样式，例如 ++ctrl+c++。
+  - pymdownx.keys
+
+  # 支持上标和插入标记语法。
   - pymdownx.caret
+
+  # 支持文本高亮标记语法。
   - pymdownx.mark
+
+  # 支持删除线和下标语法。
   - pymdownx.tilde
 
-  - pymdownx.critic #允许使用Critic 标记来突出显示文档中添加、删除或更新的部分，即跟踪 Markdown 语法的更改。
+  # 支持 CriticMarkup 的增删改批注语法。
+  - pymdownx.critic
 
+  # Emoji 渲染配置。
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji 
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg  
-  # 相关内容或者代码块可以分组展示
+      # 使用 Material 提供的 Twemoji 索引。
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      # 将 emoji 渲染为 SVG。
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # 支持内容或代码块分组选项卡。
   - pymdownx.tabbed:
+      # 使用 Material 推荐的新式选项卡样式。
       alternate_style: true
-  
-  # 允许使用任务清单即- []      
+
+  # 支持任务清单语法，例如 - [x]。
   - pymdownx.tasklist:
+      # 使用主题自定义复选框样式。
       custom_checkbox: true
-  
-  # 允许渲染公式，还需要添加mathjax配置和JavaScript      
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+
+  # 数学公式扩展；配合 extra_javascript 中的 MathJax 使用。
   - pymdownx.arithmatex:
+      # 输出通用公式标记，交给 MathJax 在前端渲染。
       generic: true
 
-  - def_list #使用各类表格
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  # 支持定义列表语法。
+  - def_list
+
+  # 允许页面级 YAML front matter。
   - meta
+
+  # 使用更符合直觉的有序/无序列表解析规则。
   - sane_lists
+
+  # 自动识别裸链接、issue、commit 等常见链接文本。
   - pymdownx.magiclink
 
-
+# 额外 CSS：按顺序覆盖主题样式。
 extra_css:
+  # 卡片布局样式。
   - mkdocs/css/card.css
+  # 友链或链接卡片样式。
   - mkdocs/css/flink.css
+  # 站点自定义通用样式。
   - mkdocs/css/custom.css
+  # 额外覆盖样式。
   - mkdocs/css/extra.css
+  # LXGW WenKai 在线字体样式。
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
+# 额外 JavaScript：用于前端增强能力。
 extra_javascript:
-  # [数学公式支持]
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  # MathJax 初始化脚本。
   - mkdocs/javascripts/mathjax.js
+  # MathJax 3 CDN，用于渲染 TeX、MathML 和 CHTML。
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

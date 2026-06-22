@@ -68,18 +68,11 @@
 	10                      }
 	11              }
 	12      }
-	![[Pasted image 20241017190130.png]]
 
 - 循环的执行过程
 	上面那个程序到gdb里面run一下
 	执行完 for(i = 1; i < 20; i++) 这一句，i 就+1
 - int 和 double
-	![[53c17156f6ffa4372ddae69fe4265e1.jpg]]
-
-辉煌战绩
-![[0d6318858e5e93ef8c29f1c3ff5ae35.jpg]]
-![[eeb3b32f033b0892c00862fd15bd38a.jpg]]
-![[9c21c8092334d0994dfee716c8cc17d.jpg]]
 
 4-4问一下
 

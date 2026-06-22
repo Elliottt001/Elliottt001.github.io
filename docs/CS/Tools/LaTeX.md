@@ -1,9 +1,25 @@
-[LaTeX新手教程-知乎](https://zhuanlan.zhihu.com/p/456055339)
-[LaTeX详细教程+技巧总结-CSDN博客](https://blog.csdn.net/NSJim/article/details/109066847?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522DDE21D5F-09C5-4831-9600-120D6CEF2094%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=DDE21D5F-09C5-4831-9600-120D6CEF2094&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109066847-null-null.142^v100^pc_search_result_base4&utm_term=latex&spm=1018.2226.3001.4187)
-[直接查看第二篇博客中的LaTex数学公式部分](https://blog.csdn.net/NSJim/article/details/109045914)
+# LaTeX
 
-[希腊字母和LaTeX命令对照表](https://www.xilazimu.net/m/articles/greek_letter_latex.html)
-在Markdown中生成矩阵，你可以使用LaTeX语法，因为Markdown本身不支持复杂的数学公式排版，但很多Markdown编辑器和渲染器支持LaTeX语法。以下是一些矩阵的LaTeX表示方法：
+[官方教学文档](https://cn.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+
+[LaTeX 新手教程（知乎）](https://zhuanlan.zhihu.com/p/456055339)
+
+[LaTeX 详细教程 + 技巧总结（CSDN）](https://blog.csdn.net/NSJim/article/details/109066847)
+
+[希腊字母与 LaTeX 命令对照表](https://www.xilazimu.net/m/articles/greek_letter_latex.html)
+
+## 环境与组件
+
+LaTeX 环境与 C、Python 环境的对应关系：
+
+| 组件 | LaTeX 环境 | C 语言环境 | Python 环境 |
+|------|------------|------------|-------------|
+| 环境 | TeX Live | MinGW | Python 3.x |
+| 功能 | LaTeX 编译器、宏包、字体 | C 编译器 (gcc)、标准库 | Python 解释器、标准库 |
+| IDE | VSCode | DevC++ / VSCode | PyCharm / VSCode |
+| VSCode 插件 | LaTeX Workshop | C/C++ | Python、Pylance、Python Debugger |
+
+编辑 LaTeX 文档需要安装 TeX Live；编辑 C 代码需要 MinGW（含 gcc、gdb、make）；运行 Python 需要 Python 3.x 解释器与 pip。
 
 ## 矩阵
 1. **一般矩阵**：

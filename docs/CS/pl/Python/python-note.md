@@ -511,7 +511,6 @@ print(tiger.__love_status) # AttributeError: 'Animal' object has no attribute '_
 print(tiger.__getlove_status()) # AttributeError: 'Animal' object has no attribute '__getlove_status'.
 ```
 
-^f2109a
 
 类，有成员，成员分为：属性（变量）、方法（函数）
 当用类创建对象，该对象自动具有该类的成员，包括变量&函数

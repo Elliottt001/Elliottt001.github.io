@@ -21,7 +21,7 @@
 
 <body>
     <h1>(づ￣ ³￣)づ Welcome !</h1>
-    <p>欢迎光临张瑞喆的个人网站（笔记本）<a href="https://Elliottt001.github.io/"> CosHub</a></p>
+    <p>欢迎光临张瑞喆的个人网站（笔记本）<a href="https://note.elliotttzhang.cn//"> CosHub</a></p>
     <br><br>
     <div align="center" style="font-size:32px;font-weight:bold">
         ~「Miracles happen every day」~
@@ -75,15 +75,15 @@
 
     === "校内课程"
 
-        - [Advanced Data Structure and Algorithm Analysis](https://Elliottt001.github.io/CS/algorithm/ads/)
-        - [Computer System Principles](https://Elliottt001.github.io/CS/system/priciples/)
-        - [C++ Programming Language](https://Elliottt001.github.io/CS/pl/C_Cpp/cpp/)
-        - [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
-        - [Macroeconomics](https://Elliottt001.github.io/FINANCE/macro/)
+        - [Advanced Data Structure and Algorithm Analysis](https://note.elliotttzhang.cn//CS/algorithm/ads/)
+        - [Computer System Principles](https://note.elliotttzhang.cn//CS/system/priciples/)
+        - [C++ Programming Language](https://note.elliotttzhang.cn//CS/pl/C_Cpp/cpp/)
+        - [Microeconomics](https://note.elliotttzhang.cn//FINANCE/micro/)
+        - [Macroeconomics](https://note.elliotttzhang.cn//FINANCE/macro/)
 
     === "自主学习"
 
-        - [Mining Massive Datasets](https://Elliottt001.github.io/CS/data/mining-massive-data/)
+        - [Mining Massive Datasets](https://note.elliotttzhang.cn//CS/data/mining-massive-data/)
 
 
 !!! inline warning "施工中！" 
@@ -92,6 +92,6 @@
 
 !!! success "推荐阅读"
 
-    [Microeconomics](https://Elliottt001.github.io/FINANCE/micro/)
+    [Microeconomics](https://note.elliotttzhang.cn//FINANCE/micro/)
 
 ---

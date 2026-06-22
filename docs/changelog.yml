@@ -1,22 +1,316 @@
+- "2026":
+  - "2026-01-30":
+    - newpage:
+        text: Python 笔记 17 - 21
+        href: /CS/pl/Python/17
+    - newpage:
+        text: Python 笔记 31 - 33
+        href: /CS/pl/Python/31
+
 - "2025":
-  - "2025-04-18":
-    - newpage: 新增时间轴插件~
+  - "2025-12-24":
     - newpage:
-        text: 数理 > 大学物理 > 动力学
-        href: /KNOWLEDGE/physics/dynamics-motion
-    - pageupdate: 主页修改，包括更改倒计时页面、加入部分emoji等
-  - "2025-05-06":
+        text: SQL 总结
+        href: /CS/data/db/sql-summary
     - newpage:
-        text: 前端开发笔记
-        href: /CS/front-end
-    - pageupdate: 主页使用HTML标签
+        text: CS106X - Stacks & Queues
+        href: /CS/pl/cpp/cs106x/stacks-queues
+  - "2025-12-14":
+    - newpage:
+        text: CS106X - Streams
+        href: /CS/pl/cpp/cs106x/streams
+    - newpage:
+        text: CS106X - Vector / Grid / Linked List
+        href: /CS/pl/cpp/cs106x/vector-grid-linkedlist
+  - "2025-12-12":
+    - newpage:
+        text: CS106L - 关联容器
+        href: /CS/pl/C_Cpp/cpp/cs106l/associative-container
+    - newpage:
+        text: CS106L 课程信息
+        href: /CS/pl/C_Cpp/cpp/cs106l/index
+    - newpage:
+        text: CS106X - Functions
+        href: /CS/pl/C_Cpp/cpp/cs106x/fuctions
+    - newpage:
+        text: CS106X 课程信息
+        href: /CS/pl/C_Cpp/cpp/cs106x/index
+    - newpage:
+        text: CS106X - Strings
+        href: /CS/pl/C_Cpp/cpp/cs106x/strings
+    - newpage:
+        text: 博弈论课程信息
+        href: /FINANCE/game-theory/index
+    - newpage:
+        text: 微观经济学 - 不完全竞争市场
+        href: /FINANCE/micro/imperfectly-competitive-market
+    - newpage:
+        text: 微观经济学 - 完全竞争市场
+        href: /FINANCE/micro/perfectly-competitive-market
+  - "2025-12-09":
+    - newpage:
+        text: 宏观经济学 - 货币
+        href: /FINANCE/macro/currency
+    - newpage:
+        text: 宏观经济学 - GDP
+        href: /FINANCE/macro/gdp
+    - newpage:
+        text: 宏观经济学 - 其他变量
+        href: /FINANCE/macro/other-variables
+    - newpage:
+        text: 宏观经济学 - 绪论
+        href: /FINANCE/macro/start
+    - newpage:
+        text: 微观经济学 - 生产理论和成本理论
+        href: /FINANCE/micro/production-theory-and-cost-theory
+  - "2025-12-01":
+    - newpage:
+        text: 微观经济学 - 消费者行为理论
+        href: /FINANCE/micro/consumer-behavior-theory
+    - newpage:
+        text: 微观经济学 - 价格理论
+        href: /FINANCE/micro/price-theory
+    - newpage:
+        text: 微观经济学 - 弹性理论
+        href: /FINANCE/micro/theory-of-elasticity
+  - "2025-11-25":
+    - newpage:
+        text: 实用工具 - 位置
+        href: /CS/Tools/locations
+    - newpage:
+        text: ADS - AVL 树与 B 树
+        href: /CS/algorithm/ads/avl-b-tree
+    - newpage:
+        text: ZJU - 分享
+        href: /ME/ZJU/share
+    - newpage:
+        text: FTC 教程 - 主页
+        href: /ROBOTICS/FTCTutorial/index
+    - newpage:
+        text: FTC 教程 - 1.1 程序入门
+        href: /ROBOTICS/FTCTutorial/1.1程序入门
+    - newpage:
+        text: FTC 教程 - 1.2 变量、常量与数据类型
+        href: /ROBOTICS/FTCTutorial/1.2.变量、常量与数据类型
+    - newpage:
+        text: FTC 教程 - 1.3 程序控制结构
+        href: /ROBOTICS/FTCTutorial/1.3.程序控制结构
+    - newpage:
+        text: FTC 教程 - 1.4 面向对象编程基础
+        href: /ROBOTICS/FTCTutorial/1.4.面向对象编程基础
+    - newpage:
+        text: FTC 教程 - 2.1 游戏手柄使用指南
+        href: /ROBOTICS/FTCTutorial/2.1FTC游戏手柄使用指南
+    - newpage:
+        text: FTC 教程 - 2.2 遥测系统使用指南
+        href: /ROBOTICS/FTCTutorial/2.2FTC遥测系统使用指南
+    - newpage:
+        text: FTC 教程 - 3.1 操作模式概念解析
+        href: /ROBOTICS/FTCTutorial/3.1操作模式概念解析
+    - newpage:
+        text: FTC 教程 - 3.2 操作模式注解
+        href: /ROBOTICS/FTCTutorial/3.2操作模式注解
+    - newpage:
+        text: FTC 教程 - 3.3 线性操作模式基础
+        href: /ROBOTICS/FTCTutorial/3.3线性操作模式基础
+    - newpage:
+        text: FTC 教程 - 3.4 常见的驱动控制模式
+        href: /ROBOTICS/FTCTutorial/3.4常见的驱动控制模式
+    - newpage:
+        text: FTC 教程 - 4.1 伺服电机使用指南
+        href: /ROBOTICS/FTCTutorial/4.1伺服电机使用指南
+    - newpage:
+        text: FTC 教程 - 4.2 机器人硬件组织
+        href: /ROBOTICS/FTCTutorial/4.2机器人硬件组织
+    - newpage:
+        text: FTC 教程 - 5.1 陀螺仪使用指南
+        href: /ROBOTICS/FTCTutorial/5.1陀螺仪使用指南
+    - newpage:
+        text: FTC 教程 - PID
+        href: /ROBOTICS/FTCTutorial/PID
+    - newpage:
+        text: FTC 教程 - PedroPathing
+        href: /ROBOTICS/FTCTutorial/PedroPathing
+    - newpage:
+        text: FTC 教程 - FileSystem
+        href: /ROBOTICS/FTCTutorial/FileSystem
+    - newpage:
+        text: FTC 教程 - OpmodesFiles
+        href: /ROBOTICS/FTCTutorial/OpmodesFiles
+    - newpage:
+        text: FTC 教程 - BLUE_Far_12ball
+        href: /ROBOTICS/FTCTutorial/BLUE_Far_12ball
+    - newpage:
+        text: 硬件板块首页
+        href: /ROBOTICS/index
+  - "2025-11-14":
+    - newpage:
+        text: 大学物理 - 电磁学公式总结
+        href: /KNOWLEDGE/physics/electricity_summary
+    - newpage:
+        text: 大学物理 - 考试复习
+        href: /KNOWLEDGE/physics/exam-review
+  - "2025-11-11":
+    - newpage:
+        text: 实用工具 - iOS Fake Run
+        href: /CS/Tools/iosfakerun
+  - "2025-11-09":
+    - newpage:
+        text: ADS - 考试复习笔记
+        href: /CS/algorithm/ads/exam-review
+  - "2025-11-08":
+    - newpage:
+        text: Python 概览
+        href: /CS/pl/Python/index
+  - "2025-11-07":
+    - newpage:
+        text: ADS - 分治合并法
+        href: /CS/algorithm/ads/divide_conquer
+    - newpage:
+        text: ADS - 动态规划
+        href: /CS/algorithm/ads/dynamic_programming
+  - "2025-11-05":
+    - newpage:
+        text: ADS - 回溯法
+        href: /CS/algorithm/ads/backtracking
+    - newpage:
+        text: ADS - 二项队列
+        href: /CS/algorithm/ads/binomial_queue
+    - newpage:
+        text: ADS - B+ 树
+        href: /CS/algorithm/ads/bplus_tree
+    - newpage:
+        text: ADS - 倒排索引
+        href: /CS/algorithm/ads/inverted_file_index
+    - newpage:
+        text: ADS - 左偏堆
+        href: /CS/algorithm/ads/leftist_heap
+    - newpage:
+        text: ADS - 红黑树
+        href: /CS/algorithm/ads/redblack_tree
+    - newpage:
+        text: 大数据挖掘 - 频繁项集挖掘
+        href: /CS/data/mining-massive-data/frequent-itemsets-mining
+    - newpage:
+        text: 大数据挖掘 - LSH
+        href: /CS/data/mining-massive-data/lsh
+    - newpage:
+        text: 大数据挖掘 - MapReduce 与 Spark
+        href: /CS/data/mining-massive-data/mapreduce-and-spark
+  - "2025-10-26":
+    - newpage:
+        text: Linux - Clash Verge Rev 指南
+        href: /CS/OS/linux/clash-verge-rev
+    - newpage:
+        text: 大数据挖掘 - 课程信息
+        href: /CS/data/mining-massive-data/index
+  - "2025-10-22":
+    - newpage:
+        text: 计组 - 汇编语言指令概述
+        href: /CS/system/priciples/instructions
+    - newpage:
+        text: 计组 - 数的表示
+        href: /CS/system/priciples/number_representation
+  - "2025-10-21":
+    - newpage:
+        text: AI - 基础
+        href: /CS/AI/basic
+  - "2025-10-18":
+    - newpage:
+        text: C++ - STL
+        href: /CS/pl/C_Cpp/cpp/stl
+    - newpage:
+        text: C++ - 类型系统
+        href: /CS/pl/C_Cpp/cpp/type
+    - newpage:
+        text: 大学物理 - 电磁学
+        href: /KNOWLEDGE/physics/electricity
+    - newpage:
+        text: X-lab 转正大会
+        href: /LAB/转正大会
+  - "2025-10-02":
+    - newpage:
+        text: C++ - Streams
+        href: /CS/pl/C_Cpp/cpp/streams
+  - "2025-09-24":
+    - newpage:
+        text: ADS - 红黑树与 B+ 树
+        href: /CS/algorithm/ads/redblack_tree_bplus_tree
+    - newpage:
+        text: 计组 - Chapter 2
+        href: /CS/system/priciples/chap2
+    - newpage:
+        text: C++ - 简介
+        href: /CS/pl/C_Cpp/cpp/intro
+    - newpage:
+        text: C++ - 关键字
+        href: /CS/pl/C_Cpp/cpp/keyword
+    - newpage:
+        text: C++ - 模板元编程
+        href: /CS/pl/C_Cpp/cpp/tmp
+  - "2025-09-20":
+    - newpage:
+        text: ADS - AVL 树
+        href: /CS/algorithm/ads/avl-tree
+    - newpage:
+        text: ADS - 课程信息
+        href: /CS/algorithm/ads/index
+    - newpage:
+        text: C++ - 基础
+        href: /CS/pl/C_Cpp/cpp/basic
+    - newpage:
+        text: 计组 - Chapter 1
+        href: /CS/system/priciples/chap1
+    - newpage:
+        text: 概率论与数理统计课程信息
+        href: /KNOWLEDGE/probability/index
+  - "2025-09-18":
+    - newpage:
+        text: 经济金融板块首页
+        href: /FINANCE/index
+    - newpage:
+        text: CTF - Lab1 Misc
+        href: /CS/CTF/lab1-misc
+    - newpage:
+        text: CTF - Misc
+        href: /CS/CTF/misc
+    - newpage:
+        text: CTF - Pwn
+        href: /CS/CTF/pwn
+    - newpage:
+        text: CTF - Youku
+        href: /CS/CTF/youku
+    - newpage:
+        text: 后端开发 - 灵途
+        href: /CS/back-end/develop/lingtour
+    - newpage:
+        text: C++ - 课程信息
+        href: /CS/pl/C_Cpp/cpp/index
+    - newpage:
+        text: 计组 - 第 1 章
+        href: /CS/system/priciples/1
+    - newpage:
+        text: 计组 - 课程信息
+        href: /CS/system/priciples/index
+    - newpage:
+        text: 宏观经济学 - 课程信息
+        href: /FINANCE/macro/index
+    - newpage:
+        text: 微观经济学 - 课程信息
+        href: /FINANCE/micro/index
+    - newpage:
+        text: 微观经济学 - 绪论
+        href: /FINANCE/micro/start
+    - newpage:
+        text: 大学物理 - 课程信息
+        href: /KNOWLEDGE/physics/index
+    - newpage:
+        text: X-lab 年会
+        href: /LAB/annual-meeting
   - "2025-07-02":
     - newpage:
-        text: 后端开发笔记 - 数据库
-        href: /CS/back-end/note/db
-    - newpage:
-        text: 后端开发笔记 - Java
-        href: /CS/back-end/note/java/methods
+        text: CTF & AAA 简介
+        href: /CS/CTF/ctf-and-aaa
     - newpage:
         text: CTF 课程笔记
         href: /CS/CTF/index
@@ -24,95 +318,581 @@
         text: GitHub Copilot 使用指南
         href: /CS/OS/linux/github-copilot
     - newpage:
+        text: 后端开发笔记 - 数据库
+        href: /CS/back-end/note/db/db
+    - newpage:
+        text: 后端开发笔记 - Java
+        href: /CS/back-end/note/java/methods
+    - newpage:
         text: Go - GORM
         href: /CS/pl/go/db
     - newpage:
-        text: X-lab 几个学长的讲座
+        text: X-lab - 江林益学长分享
+        href: /LAB/01
+    - newpage:
+        text: X-lab - 任炜烨学长分享
+        href: /LAB/rwy
+    - newpage:
+        text: X-lab - 张博学长分享
         href: /LAB/zhangbo
+  - "2025-06-24":
+    - newpage:
+        text: Windows 物理机二
+        href: /CS/OS/windows/win1
+  - "2025-06-11":
+    - newpage:
+        text: 微积分 - 多元函数总结
+        href: /KNOWLEDGE/calculus/summary-of-multi-func
+    - newpage:
+        text: 离散数学 - 期末
+        href: /KNOWLEDGE/discrete/final
+  - "2025-06-03":
+    - newpage:
+        text: 友链页面
+        href: /friends
+    - newpage:
+        text: FDS - 哈希
+        href: /CS/algorithm/fds/hashing
+    - newpage:
+        text: FDS - 排序
+        href: /CS/algorithm/fds/sorting
+    - newpage:
+        text: 前端 - JavaScript
+        href: /CS/front-end/note/environment/js
+  - "2025-05-27":
+    - newpage:
+        text: 信安 - Lab0
+        href: /CS/IS/lab0_张瑞喆_3240105996
+    - newpage:
+        text: 微积分 - 二重积分
+        href: /KNOWLEDGE/calculus/double-integral
+  - "2025-05-10":
+    - newpage:
+        text: 前端 - CSS 笔记
+        href: /CS/front-end/note/css/css-note
+    - newpage:
+        text: 前端 - HTML
+        href: /CS/front-end/note/html/html
+    - newpage:
+        text: 前端 - HTML input
+        href: /CS/front-end/note/html/input
+    - newpage:
+        text: 前端 - HTML 标签
+        href: /CS/front-end/note/html/tag
+    - newpage:
+        text: 前端开发笔记
+        href: /CS/front-end/note/index
+    - newpage:
+        text: 前端 - Web 构建
+        href: /CS/front-end/note/web/build
+  - "2025-05-07":
+    - newpage:
+        text: 前端 - HTML（初稿）
+        href: /CS/front-end/note/html
+  - "2025-04-27":
+    - newpage:
+        text: 实用工具 - Shell（新）
+        href: /CS/Tools/shell-new
+    - newpage:
+        text: FDS - 图
+        href: /CS/algorithm/fds/graph
+  - "2025-04-18":
+    - newpage: 新增时间轴插件~
+    - newpage:
+        text: 数理 > 大学物理 > 动力学
+        href: /KNOWLEDGE/physics/dynamics-motion
+    - pageupdate: 主页修改，包括更改倒计时页面、加入部分emoji等
+  - "2025-04-09":
+    - newpage:
+        text: MkDocs 图像复制
+        href: /CS/Tools/mkdocs-images-copy
+    - newpage:
+        text: X-lab 介绍
+        href: /CS/x-lab
+    - newpage:
+        text: 微积分 - 多元函数微分学
+        href: /KNOWLEDGE/calculus/differential-calculus-of-multivariate-function
+    - newpage:
+        text: 微积分 - 向量代数
+        href: /KNOWLEDGE/calculus/vector-algebra
+  - "2025-03-30":
+    - newpage:
+        text: FDS - Chapter 5
+        href: /CS/algorithm/fds/chap5
+    - newpage:
+        text: 区块链 - 以太坊
+        href: /CS/blockchain/ethereum
+    - newpage:
+        text: 实战开发 - 项目组织
+        href: /CS/develop/project
+    - newpage:
+        text: 微积分 - 级数
+        href: /KNOWLEDGE/calculus/series-sdk
+    - newpage:
+        text: X-lab 问卷
+        href: /ME/ZJU/interview/x-lab-application
+  - "2025-03-21":
+    - newpage:
+        text: Linux - WSL 备忘录
+        href: /CS/OS/linux/wsl-record
+    - newpage:
+        text: 实战开发 - Git 规范
+        href: /CS/develop/git
+    - newpage:
+        text: 实战开发 - 编程风格
+        href: /CS/develop/programming
+  - "2025-03-19":
+    - newpage:
+        text: 区块链 - 数字货币
+        href: /CS/blockchain/digital-currency
+    - newpage:
+        text: Linux - 虚拟机备忘录
+        href: /CS/OS/linux/vm-note
+    - newpage:
+        text: FDS - Chapter 4
+        href: /CS/algorithm/fds/chap4
+    - newpage:
+        text: 离散数学 - Chapter 1
+        href: /KNOWLEDGE/discrete/chap1
+  - "2025-03-13":
+    - newpage:
+        text: 机器学习 - Lecture 1
+        href: /CS/AI/ML/lec-1
+    - newpage:
+        text: FDS - 课程信息
+        href: /CS/algorithm/fds/index
+    - newpage:
+        text: 区块链 - 比特币
+        href: /CS/blockchain/bitcoin
+  - "2025-03-07":
+    - newpage:
+        text: 实用工具 - VMware
+        href: /CS/Tools/vmware-linux
+    - newpage:
+        text: 区块链 - 实际应用
+        href: /CS/blockchain/usage
+    - newpage:
+        text: 数字逻辑设计 - Chapter 3
+        href: /CS/system/digital-design/chap3
+    - newpage:
+        text: 公众 - CEE
+        href: /PUBLIC/cee
+    - newpage:
+        text: 公众 - 会议
+        href: /PUBLIC/conference
+    - newpage:
+        text: 公众 - 计划
+        href: /PUBLIC/plan
+  - "2025-02-26":
+    - newpage:
+        text: FDS - Chapter 3
+        href: /CS/algorithm/fds/chap3
+    - newpage:
+        text: 区块链 - 技术原理
+        href: /CS/blockchain/theory
+    - newpage:
+        text: C 语言 - 链表
+        href: /CS/pl/C_Cpp/C/linkedList
+    - newpage:
+        text: 数字逻辑设计 - Chapter 2
+        href: /CS/system/digital-design/chap2
+    - newpage:
+        text: 公众 - 毛泽东
+        href: /PUBLIC/maozedong
+  - "2025-02-20":
+    - newpage:
+        text: 大学物理 - 动力学
+        href: /KNOWLEDGE/physics/dynamics-motion
+  - "2025-02-19":
+    - newpage:
+        text: FDS - 基础
+        href: /CS/algorithm/fds/basic
+    - newpage:
+        text: 区块链 - 基础引入
+        href: /CS/blockchain/background
+    - newpage:
+        text: 数字逻辑设计 - Chapter 1
+        href: /CS/system/digital-design/chap1
+    - newpage:
+        text: 微积分 - 笔记
+        href: /KNOWLEDGE/calculus/note
+  - "2025-02-18":
+    - newpage:
+        text: 离散数学 - Chapter 1
+        href: /KNOWLEDGE/discrete/chap-1
+    - newpage:
+        text: 离散数学 - 评分
+        href: /KNOWLEDGE/discrete/grading
+    - newpage:
+        text: 公众 - ZJU Vlog
+        href: /PUBLIC/zju-vlog
+  - "2025-02-17":
+    - newpage:
+        text: 实用工具 - Docker
+        href: /CS/Tools/docker
+    - newpage:
+        text: 公众 - 报销
+        href: /PUBLIC/reimbursement
+  - "2025-02-15":
+    - newpage:
+        text: 公众 - 工作报告
+        href: /PUBLIC/work-report
+  - "2025-02-14":
+    - newpage:
+        text: 杂七杂八 - 网络
+        href: /CS/Misc/network
+  - "2025-02-10":
+    - newpage:
+        text: 公众板块首页
+        href: /PUBLIC/index
+  - "2025-02-05":
+    - newpage:
+        text: 经济 - 金本位
+        href: /FINANCE/DIY/gold-standard
+    - newpage:
+        text: 公众 - 哪吒
+        href: /PUBLIC/nezha
+  - "2025-01-30":
+    - newpage:
+        text: 实用工具 - LaTeX
+        href: /CS/Tools/latex
+    - newpage:
+        text: Linux - PL
+        href: /CS/linux/pl
+    - newpage:
+        text: Linux - WSL C2D
+        href: /CS/linux/wsl-c2d
+    - newpage:
+        text: Python - 文件进阶
+        href: /CS/pl/Python/file-advance
+    - newpage:
+        text: Windows 笔记
+        href: /CS/windows/win-note
+    - newpage:
+        text: SDFZ - 1.24
+        href: /ME/SDFZ/1.24
+    - newpage:
+        text: 工具 - Obsidian
+        href: /ME/TOOLS/obsidian
+    - newpage:
+        text: 公众 - 秀米
+        href: /PUBLIC/xiumi
+  - "2025-01-19":
+    - newpage:
+        text: 思考 - 欲望
+        href: /ME/THOUGHT/desire
+  - "2025-01-18":
+    - newpage:
+        text: Python - 文件 try
+        href: /CS/pl/Python/py-file-try
+    - newpage:
+        text: 暮光之城
+        href: /BOOK/fictions/twilight
+    - newpage:
+        text: Python - 文件
+        href: /CS/pl/Python/file
+  - "2025-01-15":
+    - newpage:
+        text: 教程板块首页
+        href: /TUTORIAL/index
+    - newpage:
+        text: 实用工具 - Anaconda
+        href: /CS/Tools/anaconda
+    - newpage:
+        text: Python - 基础语法
+        href: /CS/pl/Python/py-basic-grammar
+    - newpage:
+        text: Python - 面向对象编程
+        href: /CS/pl/Python/py-oop
+    - newpage:
+        text: Python - 数据容器
+        href: /CS/pl/Python/py-sequence
+    - newpage:
+        text: 教程 - Windows 磁盘
+        href: /TUTORIAL/CS/windows/disk
+  - "2025-01-13":
+    - newpage:
+        text: 环境配置 - PL
+        href: /CS/Misc/enviroment/pl
+    - newpage:
+        text: 环境配置 - SSH
+        href: /CS/Misc/enviroment/ssh
+  - "2025-01-12":
+    - newpage:
+        text: 实用工具 - try
+        href: /CS/Tools/try
+    - newpage:
+        text: 环境配置 - Linux
+        href: /CS/Misc/enviroment/linux
+    - newpage:
+        text: 环境配置 - 起始
+        href: /CS/Misc/enviroment/start
+    - newpage:
+        text: Python - 标准库
+        href: /CS/pl/Python/modules
+  - "2025-01-11":
+    - newpage:
+        text: 阅读 - 富爸爸穷爸爸
+        href: /BOOK/professionals/finance/rich-dad-poor-dad
+  - "2025-01-10":
+    - newpage:
+        text: Python - 项目开发与风格
+        href: /CS/pl/Python/development-in-py
+  - "2025-01-09":
+    - newpage:
+        text: 杂七杂八 - 正则表达式
+        href: /CS/Misc/regex
+    - newpage:
+        text: 职业 - 写作变现
+        href: /ME/CAREER/write-for-money
+  - "2025-01-07":
+    - newpage:
+        text: Python - 打卡
+        href: /CS/pl/Python/clock-in
+    - newpage:
+        text: 随笔 - 2025-01
+        href: /ME/ESSAY/2025-01
+    - newpage:
+        text: 山茶文具店
+        href: /BOOK/fictions/山茶文具店
+    - newpage:
+        text: 阅读板块首页
+        href: /BOOK/index
+    - newpage:
+        text: 随笔板块首页
+        href: /ESSAY/index
+  - "2025-01-06":
+    - newpage:
+        text: 信安 - 介绍
+        href: /CS/IS/is
+    - newpage:
+        text: 随笔 - 2024 到 2025
+        href: /ESSAY/2024-to-2025
+    - newpage:
+        text: 微积分 - 错误总结
+        href: /KNOWLEDGE/note/calculus/errors-in-calculus
+    - newpage:
+        text: 微积分 - 思想方法
+        href: /KNOWLEDGE/note/calculus/thought-for-calculus
+    - newpage:
+        text: 职业 - 计划书
+        href: /ME/CAREER/plan-book
+    - newpage:
+        text: 思考 - 对金钱的欲望
+        href: /ME/THOUGHT/the-desire-to-money
+    - newpage:
+        text: 思考 - 写作变现
+        href: /ME/THOUGHT/write-for-money
 
-
-
-
-
-
-# - "2025":
-#   - "2025-06-22":
-#     - newpage: 
-#         text: 《数据库系统》完工！
-#         href: /system/db
-#     - newpage: 
-#         text: 《计算机体系结构》完工！
-#         href: /system/ca
-#     - newpage: 
-#         text: 《数值分析》完工！
-#         href: /math/na
-#     - function: 新增自动隐藏左右边栏的功能，提供更“干净”的阅读体验
-#   - "2025-03-21":
-#     - newpage: 
-#         text: SQLite 笔记完成！
-#         href: /lang/sqlite
-#   - "2025-02-14":
-#     - newpage: 
-#         text: 新增“论文阅读”板块
-#         href: /papers
-#   - "2025-02-01":
-#     - function: 新增“笔记漫游”功能：随机跳转到任一笔记，于无意之中获取灵感
-#   - "2025-01-30":
-#     - refactor: 主页大更新！
-#     - newpage: 
-#         text: 新增留言板一栏~
-#         href: /board
-#   - "2025-01-07":
-#     - pageupdate: 
-#         text: 《心理学导论》完工！
-#         href: /misc/psychology/intro/
-#     - refactor: “更新记录”页面去掉了大量乱七八糟的小更新，仅保留笔记初稿的完成时间
-
-# - "2024":
-#   - "2024-12-29":
-#     - pageupdate: 
-#         text: 《社会心理学》完工！
-#         href: /misc/psychology/social/
-#   - "2024-12-21":
-#     - newpage: 
-#         text: 把《创业启程》笔记搬上来了
-#         href: /misc/entrepreneurship
-#   - "2024-12-19":
-#     - newpage: 
-#         text: 《大学物理（乙）II》完工！
-#         href: /math/physics/
-#   - "2024-12-18":
-#     - pageupdate: 《x86 汇编语言》基本完工！
-#   - "2024-12-15":
-#     - refactor: 《汇编程序设计基础》笔记更名为《x86 汇编语言》，并根据王爽《汇编语言》重构笔记内容，目前进度为50%左右
-#     - newpage: 
-#         text: 《图像信息处理》完工！
-#         href: /software/dip
-#   - "2024-12-11":
-#     - newpage: 
-#         text: 《计算机组成》完工！
-#         href: /system/co
-#   - "2024-12-10":
-#     - newpage: 
-#         text: 《高级数据结构与算法分析》完工！
-#         href: /algorithms/ads/
-#   - "2024-12-05":
-#     - newpage: 
-#         text: 《概率论与数理统计》完工！
-#         href: /math/pro-sta/
-#   - "2024-10-15":
-#     - refactor: 导航栏新增“软件相关”一栏，《图像信息处理》归类到“软件相关”中（原来位于“杂项”一栏）
-#   - "2024-09-24":
-#     - pageupdate: 两侧目录和笔记本头部的字体仅设置霞鹜文楷（原来的JetBrains Mono字体偏大，不适合作为目录文本）
-#   - "2024-09-23":
-#     - pageupdate: 笔记去除背景（加载过慢，以及没有做好各种设备尺寸的适配，所以就删了...）
-#   - "2024-09-16":
-#     - pageupdate: 「杂项」部分页面小更新
-#   - "2024-08-28":
-#     - newpage: 新增时间轴插件，记录我的学习过程~
-#     - refactor: 主页修改，包括删除主页目录等
-
-
-   
-
-
+- "2024":
+  - "2024-12-17":
+    - newpage:
+        text: 实用工具 - Makefile
+        href: /CS/Tools/makefile
+  - "2024-12-16":
+    - newpage:
+        text: 杂七杂八 - 想了解的东西
+        href: /CS/Misc/things-i-wanna-know
+  - "2024-12-15":
+    - newpage:
+        text: 思考 - 大学教育与人生发展
+        href: /ME/THOUGHT/colledge-education-and-my-future
+  - "2024-12-13":
+    - newpage:
+        text: 算法 - 杂项
+        href: /CS/Algorithm/misc
+    - newpage:
+        text: 算法 - 排序
+        href: /CS/Algorithm/sort
+    - newpage:
+        text: ZJU - 课程
+        href: /ME/ZJU/learn/courses
+  - "2024-12-12":
+    - newpage:
+        text: ZJU - 学习资源
+        href: /ME/ZJU/learn/resoure
+    - newpage:
+        text: ZJU - 24 寒假计划
+        href: /ME/ZJU/plan/plan-for-24winter-holiday
+    - newpage:
+        text: 阅读 - 原则
+        href: /BOOK/principles
+  - "2024-12-09":
+    - newpage:
+        text: ZJU - 启真问学面试
+        href: /ME/ZJU/interview/interview-for-qzwx
+  - "2024-12-04":
+    - newpage:
+        text: 随笔 - 2024-12
+        href: /ESSAY/2024-12
+  - "2024-11-29":
+    - newpage:
+        text: C 语言 - C questions
+        href: /CS/Programming/C/C questions
+  - "2024-11-26":
+    - newpage:
+        text: 微积分 - 思想方法
+        href: /KNOWLEDGE/Note/Calculus/thought for calculus
+    - newpage:
+        text: SDFZ - 回忆录
+        href: /ME/SDFZ/sdfz_memorior
+  - "2024-11-25":
+    - newpage:
+        text: 微积分 - 错误整理
+        href: /KNOWLEDGE/Note/Calculus/errors in calculus
+    - newpage:
+        text: 随笔 - 2024-11
+        href: /ESSAY/202411
+  - "2024-11-24":
+    - newpage:
+        text: ZJU - 学生会面试
+        href: /ME/ZJU/interview/interview for SU
+    - newpage:
+        text: ZJU - 我，落选了
+        href: /ME/ZJU/我，落选了
+  - "2024-11-23":
+    - newpage:
+        text: SDFZ - 回首向来萧瑟处，归去，也无风雨也无晴
+        href: /ME/SDFZ/回首向来萧瑟处，归去，也无风雨也无晴
+  - "2024-11-18":
+    - newpage:
+        text: 实用工具 - Shell
+        href: /CS/Tools/shell
+    - newpage:
+        text: 拾遗 - 快捷键
+        href: /CS/拾遗/快捷键
+  - "2024-11-17":
+    - newpage:
+        text: ZJU - 一些想学的东西
+        href: /ME/ZJU/一些想学的东西
+  - "2024-11-16":
+    - newpage:
+        text: 实用工具 - MkDocs
+        href: /CS/Tools/mkdocs
+    - newpage:
+        text: AI 总览
+        href: /CS/AI/AI
+    - newpage:
+        text: AI - ANN
+        href: /CS/AI/ANN
+    - newpage:
+        text: AI - DL
+        href: /CS/AI/DL
+    - newpage:
+        text: AI - ML
+        href: /CS/AI/ML
+    - newpage:
+        text: AI - Turing
+        href: /CS/AI/Turing
+    - newpage:
+        text: C 语言 - 错误与小技巧
+        href: /CS/Programming/C/C Errors and Tips
+    - newpage:
+        text: 编程思想 & 算法
+        href: /CS/Programming/编程思想&算法
+    - newpage:
+        text: 实用工具 - CSS
+        href: /CS/Tools/CSS
+    - newpage:
+        text: 实用工具 - GDB
+        href: /CS/Tools/GDB
+    - newpage:
+        text: 实用工具 - Git & GitHub
+        href: /CS/Tools/Git & GitHub
+    - newpage:
+        text: 实用工具 - HTML
+        href: /CS/Tools/HTML
+    - newpage:
+        text: 实用工具 - LaTeX
+        href: /CS/Tools/LaTeX
+    - newpage:
+        text: 实用工具 - Linux
+        href: /CS/Tools/Linux
+    - newpage:
+        text: Markdown (Obsidian)
+        href: /CS/Tools/MarkDown(obsidian)
+    - newpage:
+        text: 实用工具 - Obsidian
+        href: /CS/Tools/Obsidian
+    - newpage:
+        text: 实用工具 - vim
+        href: /CS/Tools/vim
+    - newpage:
+        text: 拾遗 - 前端
+        href: /CS/拾遗/Front End
+    - newpage:
+        text: 拾遗 - 硬件
+        href: /CS/拾遗/Hardware
+    - newpage:
+        text: ZJU - 面试经历
+        href: /ME/ZJU/interviews
+  - "2024-11-14":
+    - newpage:
+        text: 项目 - 豆瓣热门
+        href: /DEV/Project/Crawler/DoubanHot
+    - newpage:
+        text: 大佬资源
+        href: /DEV/Dalao/resouce
+    - newpage:
+        text: SDFZ - Memoir
+        href: /ME/SDFZ/memoir
+    - newpage:
+        text: 个人板块首页
+        href: /ME/index
+  - "2024-11-13":
+    - newpage:
+        text: 简历
+        href: /ME/resume
+    - newpage:
+        text: 个人陈述
+        href: /ME/statement
+    - newpage:
+        text: 项目 - 豆瓣 Top 250 代码
+        href: /DEV/Project/crawler/DoubanTop250Code
+    - newpage:
+        text: 项目 - 法律
+        href: /DEV/Project/law
+    - newpage:
+        text: 项目 - try
+        href: /DEV/Project/try
+    - newpage:
+        text: Python 学习笔记
+        href: /DEV/Programming/Python/Python
+  - "2024-11-12":
+    - newpage:
+        text: 项目 - 贪吃蛇代码
+        href: /DEV/Project/snake_code
+    - newpage:
+        text: 微积分总结
+        href: /BLOG/Note/Caculus/Summary Of Calculus
+    - newpage:
+        text: 线性代数知识框架
+        href: /BLOG/Note/Linear Algebra/Knowledge Frame of LA
+    - newpage:
+        text: 线性代数总结
+        href: /BLOG/Note/Linear Algebra/Summary Of Linear Algebra
+    - newpage:
+        text: C 语言学习笔记
+        href: /DEV/Programming/C/C Programming Note
+    - newpage:
+        text: 编程 - C
+        href: /DEV/Programming/C
+    - newpage:
+        text: 编程 - Python
+        href: /DEV/Programming/Python
+    - newpage:
+        text: 开发板块首页
+        href: /DEV/index
+    - newpage:
+        text: 微积分知识框架
+        href: /BLOG/Note/Caculus/Knowledge Frame of Caculus
+    - newpage:
+        text: 微积分总结（旧）
+        href: /BLOG/Note/Caculus/Summary of Caculus
+    - newpage:
+        text: 博客首页
+        href: /BLOG/index
+  - "2024-10-19":
+    - newpage:
+        text: 网站初始化
+        href: /index
