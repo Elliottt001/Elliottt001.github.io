@@ -11,59 +11,47 @@ site_author: Elliottt Zhang
 # 站点描述：写入 HTML meta description，影响搜索结果摘要。
 site_description: 这里放着一些 Elliottt Zhang 的笔记
 
+# 构建钩子：在构建前把根目录 assets/ 复制到 docs/assets/
+hooks:
+  - hooks/copy_assets.py
+
 # [Navigation]
 nav:
   - 主页: 
     - 封面: index.md
     - 🕑更新记录: changelog.md
-    - 🕑倒计时: 
-      - ✍高考倒计时: countdown/gee/gee.html
-      - 🎂生日倒计时: countdown/birthday/birthday.html
-
-  - 个人:
-    - ME/index.md
-    - 思考: 
-      - 大学教育与人生发展: ME/THOUGHT/colledge-education-and-my-future.md
-    - SDFZ:
-      - 永远的391: ME/SDFZ/391forever.md
-      - 附中回忆录: ME/SDFZ/sdfz_memorior.md
-    - ZJU:
-      - 面试经历: 
-        - 学生会: ME/ZJU/interview/interview for SU.md
-        - 专业确认: ME/ZJU/interview/interview for major.md
-        - 启真问学: ME/ZJU/interview/interview-for-qzwx.md
-        - X-lab问卷: ME/ZJU/interview/x-lab-application.md
-      - 计划:
-        - 24寒假: ME/ZJU/plan/plan-for-24winter-holiday.md
-      - 学习:
-        - 资源: ME/ZJU/learn/resoure.md
-    - 随笔:
-      - 2024-11: ME/ESSAY/2024-11.md
-      - 2024-12: ME/ESSAY/2024-12.md
-      - 2025-01: ME/ESSAY/2025-01.md
-
+  - 人工智能:
+    - AI基础:
+      - ANN: AI/basic/ANN.md
+      - DL: AI/basic/DL.md
+      - ML: AI/basic/ML.md
+      - Turing: AI/basic/Turing.md
+    - 智能体:
+      - 智能体基本概念汇总: AI/agent/agent-basic-concepts.md
+      - 多智能体: AI/agent/multi-agent.md
+      - 检索增强生成: AI/agent/rag.md
   - 数理:
-    - KNOWLEDGE/index.md
+    - MATH/index.md
     - 微积分:
-      - 知识体系: KNOWLEDGE/calculus/knowledge-frame-of-calculus.md
-      - 方法总结: KNOWLEDGE/calculus/summary-of-calculus.md
-      - 思想方法: KNOWLEDGE/calculus/thought-for-calculus.md
-      - 级数: KNOWLEDGE/calculus/series-sdk.md
-      - 矢量代数与空间解析几何: KNOWLEDGE/calculus/vector-algebra.md
-      - 多元函数微分学: KNOWLEDGE/calculus/differential-calculus-of-multivariate-function.md
+      - 知识体系: MATH/calculus/MATH-frame-of-calculus.md
+      - 方法总结: MATH/calculus/summary-of-calculus.md
+      - 思想方法: MATH/calculus/thought-for-calculus.md
+      - 级数: MATH/calculus/series-sdk.md
+      - 矢量代数与空间解析几何: MATH/calculus/vector-algebra.md
+      - 多元函数微分学: MATH/calculus/differential-calculus-of-multivariate-function.md
     - 线性代数:
-      - 知识体系: KNOWLEDGE/linear-algebra/knowledge-frame-of-LA.md
-      - 方法总结: KNOWLEDGE/linear-algebra/summary-of-LA.md 
+      - 知识体系: MATH/linear-algebra/MATH-frame-of-LA.md
+      - 方法总结: MATH/linear-algebra/summary-of-LA.md 
     - 离散数学:
-      - Chap1 逻辑和证明: KNOWLEDGE/discrete/chap-1.md
+      - Chap1 逻辑和证明: MATH/discrete/chap-1.md
     - 大学物理:
-      - 大雾下课程信息: KNOWLEDGE/physics/index.md
-      - 考试复习笔记: KNOWLEDGE/physics/exam-review.md
-      - 动力学: KNOWLEDGE/physics/dynamics-motion.md
-      - 电磁学: KNOWLEDGE/physics/electricity.md
-      - 电磁学公式物理量总结: KNOWLEDGE/physics/electricity-summary.md
+      - 大雾下课程信息: MATH/physics/index.md
+      - 考试复习笔记: MATH/physics/exam-review.md
+      - 动力学: MATH/physics/dynamics-motion.md
+      - 电磁学: MATH/physics/electricity.md
+      - 电磁学公式物理量总结: MATH/physics/electricity-summary.md
     - 概率论与数理统计:
-      - 课程信息: KNOWLEDGE/probability/index.md
+      - 课程信息: MATH/probability/index.md
       
   - 开发:
     - CS/index.md
@@ -73,17 +61,12 @@ nav:
       - 编程风格: CS/develop/programming.md
     - 前端开发:
       - 学习笔记:
-        - 内容速查: CS/front-end/note/index.md
-        - web技术基础: CS/front-end/note/web/build.md
-        - HTML: CS/front-end/note/html/tag.md
-        - CSS: CS/front-end/note/css/css-note.md
+        - 内容速查: CS/frontend/note/index.md
+        - web技术基础: CS/frontend/note/web/build.md
+        - HTML: CS/frontend/note/html/tag.md
+        - CSS: CS/frontend/note/css/css-note.md
       - 环境配置及知识:
-        - JavaScript: CS/front-end/note/js.md
-    - 后端开发:
-      - 学习笔记:
-        - 数据库: CS/back-end/note/db/db.md
-        - Golang: none.md
-        - Java: CS/back-end/note/java/methods.md
+        - JavaScript: CS/frontend/note/js.md
     - 编程语言:
       - C语言:
         - 数据类型: CS/pl/C/01-data-types.md
@@ -138,6 +121,8 @@ nav:
         - 数的表示: CS/system/priciples/number_representation.md
         
     - 算法相关: 
+      - LeetCode: 
+        - 两数之和: CS/algorithm/leetcode/two-sum.md
       - 数据结构基础:
         - 课程信息: CS/algorithm/fds/index.md
         - 算法分析: CS/algorithm/fds/chap2.md
@@ -167,22 +152,16 @@ nav:
         - Map Reduce and Spark: CS/data/mining-massive-data/mapreduce-and-spark.md
         - Frequent Itemsets Mining: CS/data/mining-massive-data/frequent-itemsets-mining.md
         - LSH(Locality Sensitive Hashing): CS/data/mining-massive-data/lsh.md
-
-    - 操作系统:
-      - Linux:
-        - WSL备忘录: CS/OS/linux/wsl-record.md
-        - 虚拟机备忘录: CS/OS/linux/vm-record.md
-        - WSL操作指南: CS/OS/linux/wsl-note.md
-        - GitHub Copilot: CS/OS/linux/github-copilot.md
-        - Clash Verge Rev 安装/配环境指南: CS/OS/linux/clash-verge-rev.md
-      - Windows物理机一: CS/OS/windows/win-note.md
-      - Windows物理机二: CS/OS/windows/win1.md
+      - 数据库系统:
+        - 课程信息: CS/data/db/index.md
+        - 复习笔记: CS/data/db/review.md
+        - SQL 总结: CS/data/db/sql-summary.md
     - 网络安全:
-      - 首页: CS/CTF/index.md
-      - 基础: CS/CTF/basic.md
-      - CTF&AAA简介: CS/CTF/ctf-and-aaa.md
+      - 首页: CS/ctf/index.md
+      - 基础: CS/ctf/basic.md
+      - CTF&AAA简介: CS/ctf/ctf-and-aaa.md
       - 实验报告:
-        - lab0: CS/CTF/lab0.md
+        - lab0: CS/ctf/lab0.md
     - 区块链:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
@@ -190,45 +169,38 @@ nav:
       - 比特币: CS/blockchain/bitcoin.md
       - 数字货币: CS/blockchain/digital-currency.md
       - 以太坊: CS/blockchain/ethereum.md
-    - 人工智能:
-      - 机器学习:
-        - RUC讲稿: CS/AI/ML/机器学习讲稿.ipynb
-      - AI: CS/AI/AI.md
-      - ANN: CS/AI/ANN.md
-      - DL: CS/AI/DL.md
-      - ML: CS/AI/ML.md
-      - Turing: CS/AI/Turing.md
-    - X-lab 相关:
-      - 创始人王振阳分享 - X-lab简介: LAB/x-lab.md
-      - 张博学长分享 - 思维高度与前沿创新: LAB/zhangbo.md
-      - 任炜烨学长 - 企业级开发经验分享: LAB/rwy.md
-      - 江林益学长分享 - 科研深造之路: LAB/01.md
-      - 转正大会: LAB/转正大会.md
     - 实用工具:
-      - shell: CS/Tools/shell.md
-      - CSS: CS/Tools/CSS.md
-      - HTML: CS/Tools/HTML.md
-      - Git & GitHub: CS/Tools/git-github.md
-      - Docker: CS/Tools/docker.md
+      - Linux相关:
+        - WSL备忘录: CS/tools/linux/wsl-record.md
+        - 虚拟机备忘录: CS/tools/linux/vm-record.md
+        - WSL操作指南: CS/tools/linux/wsl-note.md
+        - GitHub Copilot: CS/tools/linux/github-copilot.md
+        - Clash Verge Rev 安装/配环境指南: CS/tools/linux/clash-verge-rev.md
+      - Windows配置: CS/tools/windows/win-note.md
+      - shell: CS/tools/shell.md
+      - Git & GitHub: CS/tools/git-github.md
+      - Docker: CS/tools/docker.md
       - Markdown:
-        - 基础: CS/Tools/markdown-basics.md
-        - 进阶: CS/Tools/markdown-advanced.md
-        - Obsidian: CS/Tools/markdown-obsidian.md
-      - LaTeX: CS/Tools/LaTeX.md
-      - Linux: CS/Tools/Linux.md
-      - vim: CS/Tools/vim.md
-      - GDB: CS/Tools/GDB.md
+        - 基础: CS/tools/markdown-basics.md
+        - 进阶: CS/tools/markdown-advanced.md
+        - Obsidian: CS/tools/markdown-obsidian.md
+      - LaTeX: CS/tools/LaTeX.md
+      - vim: CS/tools/vim.md
+      - GDB: CS/tools/GDB.md
       - Mkdocs:
-        - MkDocs: CS/Tools/mkdocs.md
-        - MkDocs 图像: CS/Tools/mkdocs-images.md
-      - Anaconda: CS/Tools/anaconda.md
-      - VMware: CS/Tools/vmware-linux.md
+        - MkDocs: CS/tools/mkdocs.md
+      - Anaconda: CS/tools/anaconda.md
+      - VMware: CS/tools/vmware-linux.md
     - 杂七杂八:
-      - 想了解的东西: CS/Misc/things-i-wanna-know.md
-      - 正则表达式: CS/Misc/regex.md
-      - 网络相关: CS/Misc/network.md
-      - 一些快捷键: CS/Misc/shortcuts.md
-      - 硬件by AI: CS/Misc/hardware.md
+      - 想了解的东西: CS/misc/things-i-wanna-know.md
+      - 正则表达式: CS/misc/regex.md
+      - 网络相关: CS/misc/network.md
+      - 一些快捷键: CS/misc/shortcuts.md
+      - 硬件by AI: CS/misc/hardware.md
+
+  - 实习:
+    - 封面: INTERN/index.md
+    - 八股: none.md
 
   - 硬件:
     - ROBOTICS/index.md
@@ -259,7 +231,7 @@ nav:
         - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
         - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
       
-  - 经济金融管理:
+  - 商科:
     - FINANCE/index.md
     - 微观经济学:
       - 课程信息: FINANCE/micro/index.md
@@ -282,13 +254,23 @@ nav:
 
     - 零碎自学:
       - 金本位: FINANCE/DIY/gold-standard.md
+
+  - 工作:
+    - 学生工作:
+      - 报销文档: WORK/school/reimbursement.md
+      - 副书记工作汇报: WORK/school/work-report.md
+    - X-Lab: 
+      - 张博老师分享: WORK/x-lab/zhangbo.md
   - 阅读:
     - BOOK/index.md
-    - 文学名著:
+    - 文学:
       - 山茶文具店: BOOK/fictions/山茶文具店.md
       - 暮光之城: BOOK/fictions/twilight.md
-    - 专业书籍:
+    - 专业:
       - 1.md
+
+
+  - 
   # - 公众:
   #   - PUBLIC/index.md
   #   - 秀米: PUBLIC/xiumi.md
@@ -304,7 +286,7 @@ theme:
   name: material
 
   # 浏览器标签页和收藏夹使用的站点图标。
-  favicon: images/logo.png
+  favicon: assets/images/logo.png
 
   # 自定义主题覆盖目录；当前用于放置评论等模板片段。
   custom_dir: overrides
@@ -620,19 +602,19 @@ markdown_extensions:
 # 额外 CSS：按顺序覆盖主题样式。
 extra_css:
   # 卡片布局样式。
-  - mkdocs/css/card.css
+  - assets/mkdocs/css/card.css
   # 友链或链接卡片样式。
-  - mkdocs/css/flink.css
+  - assets/mkdocs/css/flink.css
   # 站点自定义通用样式。
-  - mkdocs/css/custom.css
+  - assets/mkdocs/css/custom.css
   # 额外覆盖样式。
-  - mkdocs/css/extra.css
+  - assets/mkdocs/css/extra.css
   # LXGW WenKai 在线字体样式。
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
 # 额外 JavaScript：用于前端增强能力。
 extra_javascript:
   # MathJax 初始化脚本。
-  - mkdocs/javascripts/mathjax.js
+  - assets/mkdocs/javascripts/mathjax.js
   # MathJax 3 CDN，用于渲染 TeX、MathML 和 CHTML。
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

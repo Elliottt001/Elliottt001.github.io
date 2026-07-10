@@ -1,6 +1,9 @@
 # MkDocs 构建输出目录
 site/
 
+# 构建钩子生成的资源目录（源文件在根目录 assets/）
+docs/assets/
+
 # Python 缓存
 __pycache__/
 *.py[cod]
