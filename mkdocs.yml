@@ -17,7 +17,10 @@ hooks:
 
 # [Navigation]
 nav:
-  - 主页: 
+  - PROJECT:
+    - intellideploy:
+      - retrieval-recall: PROJECT/intellideploy/retrieval-recall.md
+  - 主页:
     - 封面: index.md
     - 🕑更新记录: changelog.md
   - 人工智能:
@@ -33,15 +36,19 @@ nav:
   - 数理:
     - MATH/index.md
     - 微积分:
-      - 知识体系: MATH/calculus/MATH-frame-of-calculus.md
+      - double-integral: MATH/calculus/double-integral.md
+      - errors-in-calculus: MATH/calculus/errors-in-calculus.md
+      - knowledge-frame-of-calculus: MATH/calculus/knowledge-frame-of-calculus.md
+      - series: MATH/calculus/series.md
+      - summary-of-multi-func: MATH/calculus/summary-of-multi-func.md
       - 方法总结: MATH/calculus/summary-of-calculus.md
       - 思想方法: MATH/calculus/thought-for-calculus.md
       - 级数: MATH/calculus/series-sdk.md
       - 矢量代数与空间解析几何: MATH/calculus/vector-algebra.md
       - 多元函数微分学: MATH/calculus/differential-calculus-of-multivariate-function.md
     - 线性代数:
-      - 知识体系: MATH/linear-algebra/MATH-frame-of-LA.md
-      - 方法总结: MATH/linear-algebra/summary-of-LA.md 
+      - knowledge-frame-of-LA: MATH/linear-algebra/knowledge-frame-of-LA.md
+      - 方法总结: MATH/linear-algebra/summary-of-LA.md
     - 离散数学:
       - Chap1 逻辑和证明: MATH/discrete/chap-1.md
     - 大学物理:
@@ -52,10 +59,14 @@ nav:
       - 电磁学公式物理量总结: MATH/physics/electricity-summary.md
     - 概率论与数理统计:
       - 课程信息: MATH/probability/index.md
-      
   - 开发:
     - CS/index.md
-    - 实战开发: 
+    - is:
+      - index: CS/is/index.md
+      - lec1: CS/is/lec1.md
+    - web:
+      - web: CS/web/web.md
+    - 实战开发:
       - 项目组织: CS/develop/project.md
       - Git规范: CS/develop/git.md
       - 编程风格: CS/develop/programming.md
@@ -65,8 +76,6 @@ nav:
         - web技术基础: CS/frontend/note/web/build.md
         - HTML: CS/frontend/note/html/tag.md
         - CSS: CS/frontend/note/css/css-note.md
-      - 环境配置及知识:
-        - JavaScript: CS/frontend/note/js.md
     - 编程语言:
       - C语言:
         - 数据类型: CS/pl/C/01-data-types.md
@@ -85,16 +94,13 @@ nav:
         - 课程信息: CS/pl/cpp/index.md
         - CS106X:
           - 课程信息: CS/pl/cpp/cs106x/index.md
-          - Lecture 1:Functions: CS/pl/cpp/cs106x/functions.md
           - Lecture 2:Strings: CS/pl/cpp/cs106x/strings.md
           - Lecture 3:Streams: CS/pl/cpp/cs106x/streams.md
           - Lecture 4:Vectors, Grids, Linked Lists: CS/pl/cpp/cs106x/vector-grid-linkedlist.md
-
         - CS106L:
           - 课程信息: CS/pl/cpp/cs106l/index.md
           - Lecture 0:Introduction: CS/pl/cpp/cs106l/intro.md
           - Lecture 1&2:Streams: CS/pl/cpp/cs106l/streams.md
-          - Lecture 3:Standard Template Library: CS/pl/cpp/cs106l/stl.md
           - Lecture 4:Modern C++ Types: CS/pl/cpp/cs106l/type.md
           - Guest Lecture:Template metaprogramming: CS/pl/cpp/cs106l/tmp.md
       - Python:
@@ -110,7 +116,7 @@ nav:
       - Go:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
-      - 数字逻辑设计: 
+      - 数字逻辑设计:
         - Chapter 1 数字系统与信息: CS/system/digital-design/chap1.md
         - Chapter 2 组合逻辑电路: CS/system/digital-design/chap2.md
         - Chapter 3 组合逻辑电路的设计: CS/system/digital-design/chap3.md
@@ -119,9 +125,8 @@ nav:
         - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
         - 汇编语言指令概述: CS/system/priciples/instructions.md
         - 数的表示: CS/system/priciples/number_representation.md
-        
-    - 算法相关: 
-      - LeetCode: 
+    - 算法相关:
+      - LeetCode:
         - 两数之和: CS/algorithm/leetcode/two-sum.md
       - 数据结构基础:
         - 课程信息: CS/algorithm/fds/index.md
@@ -131,7 +136,6 @@ nav:
         - Chapter 5 Graph: CS/algorithm/fds/graph.md
         - Chapter 6 Hash Table: CS/algorithm/fds/hashing.md
         - Chapter 7 Sorting: CS/algorithm/fds/sorting.md
-
       - 高级数据结构与算法分析:
         - 课程信息: CS/algorithm/ads/index.md
         - 考试复习笔记: CS/algorithm/ads/exam-review.md
@@ -151,7 +155,7 @@ nav:
         - 课程信息: CS/data/mining-massive-data/index.md
         - Map Reduce and Spark: CS/data/mining-massive-data/mapreduce-and-spark.md
         - Frequent Itemsets Mining: CS/data/mining-massive-data/frequent-itemsets-mining.md
-        - LSH(Locality Sensitive Hashing): CS/data/mining-massive-data/lsh.md
+        - Locality Sensitive Hashing: CS/data/mining-massive-data/lsh.md
       - 数据库系统:
         - 课程信息: CS/data/db/index.md
         - 复习笔记: CS/data/db/review.md
@@ -197,13 +201,11 @@ nav:
       - 网络相关: CS/misc/network.md
       - 一些快捷键: CS/misc/shortcuts.md
       - 硬件by AI: CS/misc/hardware.md
-
   - 实习:
     - 封面: INTERN/index.md
     - 八股: none.md
-
   - 硬件:
-    - ROBOTICS/index.md
+    - 封面: ROBOTICS/index.md
     - FTC教程:
       - 主页: ROBOTICS/FTCTutorial/index.md
       - 1.Java基础:
@@ -230,9 +232,10 @@ nav:
         - FileSystem: ROBOTICS/FTCTutorial/FileSystem.md
         - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
         - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
-      
   - 商科:
     - FINANCE/index.md
+    - 计量经济学:
+      - index: FINANCE/econometrics/index.md
     - 微观经济学:
       - 课程信息: FINANCE/micro/index.md
       - 绪论: FINANCE/micro/start.md
@@ -242,7 +245,6 @@ nav:
       - 生产理论和成本理论: FINANCE/micro/production-and-cost-theory.md
       - 完全竞争市场: FINANCE/micro/perfectly-competitive-market.md
       - 不完全竞争市场: FINANCE/micro/imperfectly-competitive-market.md
-
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
       - 宏观经济的基本指标及其衡量:
@@ -251,15 +253,14 @@ nav:
         - 货币需求和货币供给: FINANCE/macro/currency.md
     - 博弈论:
       - 课程信息: FINANCE/game-theory/index.md
-
     - 零碎自学:
       - 金本位: FINANCE/DIY/gold-standard.md
-
   - 工作:
+    - 总览: WORK/index.md
     - 学生工作:
       - 报销文档: WORK/school/reimbursement.md
       - 副书记工作汇报: WORK/school/work-report.md
-    - X-Lab: 
+    - X-Lab:
       - 张博老师分享: WORK/x-lab/zhangbo.md
   - 阅读:
     - BOOK/index.md
@@ -268,19 +269,6 @@ nav:
       - 暮光之城: BOOK/fictions/twilight.md
     - 专业:
       - 1.md
-
-
-  - 
-  # - 公众:
-  #   - PUBLIC/index.md
-  #   - 秀米: PUBLIC/xiumi.md
-  #   - 哪吒: PUBLIC/nezha.md
-  #   - 工作汇报: PUBLIC/work-report.md
-  #   - 报销工作注意事项: PUBLIC/reimbursement.md
-  #   - ZJU-vlog: PUBLIC/zju-vlog.md
-
-# [UI]
-# Material 主题设置：控制站点外观、导航交互和图标。
 theme:
   # 使用 MkDocs Material 主题。
   name: material
