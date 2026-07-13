@@ -221,7 +221,7 @@ go get golang.org/x/tools/cmd/...
 
 `wget` 步骤连不上网，代理没开的问题
 
-解决方案详见[《Linux备忘录》](https://note.elliotttzhang.cn//CS/OS/linux/linux-note/)
+解决方案详见[《Linux备忘录》](https://note.elliotttzhang.cn/CS/OS/linux/linux-note/)
 
 
 ## PostgreSQL

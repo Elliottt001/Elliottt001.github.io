@@ -1,5 +1,5 @@
 <figure markdown="span">
-  ![Image title](https://note.elliotttzhang.cn//KNOWLEDGE/calculus/image-16.png){ width="300" }
+  ![Image title](https://note.elliotttzhang.cn/KNOWLEDGE/calculus/image-16.png){ width="300" }
   <figcaption>HKU</figcaption>
 </figure>
 

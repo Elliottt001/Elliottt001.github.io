@@ -33,4 +33,4 @@ def on_serve(server, config, **kwargs):
     config_dir = os.path.dirname(config.config_file_path)
     assets_dir = os.path.join(config_dir, "assets")
     if os.path.isdir(assets_dir):
-        server.watch(assets_dir, builder=kwargs.get("builder"))
+        server.watch(assets_dir)

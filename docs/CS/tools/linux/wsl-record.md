@@ -144,13 +144,13 @@ vim ~./zshrc
 
 ### 配置C/python/Go环境
 
-记录在另一篇文章[《语言环境》](https://note.elliotttzhang.cn//CS/OS/linux/pl/)中。
+记录在另一篇文章[《语言环境》](https://note.elliotttzhang.cn/CS/OS/linux/pl/)中。
 
 后来也安上了anaconda，也在上文中。
 
 ### 安装ssh
 
-记录在另一篇文章[《SSH》](https://note.elliotttzhang.cn//CS/OS/linux/ssh)中。
+记录在另一篇文章[《SSH》](https://note.elliotttzhang.cn/CS/OS/linux/ssh)中。
 
 #### BUG！
 
@@ -534,7 +534,7 @@ sudo systemctl disable v2raya
 
 参考：[知乎良心教程](https://zhuanlan.zhihu.com/p/621873601)
 
-并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面，原文链接：[《WSL迁移》](https://note.elliotttzhang.cn//CS/linux/wsl-c2d.md)
+并自己写了一篇[教程](https://mp.weixin.qq.com/s/-zICf02Hs48Nb76FqXDw4Q?token=438288014&lang=zh_CN)发在公众号上面，原文链接：[《WSL迁移》](https://note.elliotttzhang.cn/CS/linux/wsl-c2d.md)
 
 很好成功
 
@@ -567,7 +567,7 @@ git remote add origin https://github.com/Elliottt001/Elliottt001.github.io
 
 ### docker的安装配置与使用
 
-专门写了一篇[docker的文档](https://note.elliotttzhang.cn//CS/Tools/docker/)
+专门写了一篇[docker的文档](https://note.elliotttzhang.cn/CS/Tools/docker/)
 
 ## 后记
 俗话说，一杯茶一根烟 一个环境配一天。

@@ -17,13 +17,11 @@ hooks:
 
 # [Navigation]
 nav:
-  - PROJECT:
-    - intellideploy:
-      - retrieval-recall: PROJECT/intellideploy/retrieval-recall.md
   - 主页:
     - 封面: index.md
     - 🕑更新记录: changelog.md
   - 人工智能:
+    - 封面: AI/index.md
     - AI基础:
       - ANN: AI/basic/ANN.md
       - DL: AI/basic/DL.md
@@ -34,7 +32,7 @@ nav:
       - 多智能体: AI/agent/multi-agent.md
       - 检索增强生成: AI/agent/rag.md
   - 数理:
-    - MATH/index.md
+    - 封面: MATH/index.md
     - 微积分:
       - double-integral: MATH/calculus/double-integral.md
       - errors-in-calculus: MATH/calculus/errors-in-calculus.md
@@ -61,11 +59,6 @@ nav:
       - 课程信息: MATH/probability/index.md
   - 开发:
     - CS/index.md
-    - is:
-      - index: CS/is/index.md
-      - lec1: CS/is/lec1.md
-    - web:
-      - web: CS/web/web.md
     - 实战开发:
       - 项目组织: CS/develop/project.md
       - Git规范: CS/develop/git.md
@@ -201,6 +194,10 @@ nav:
       - 网络相关: CS/misc/network.md
       - 一些快捷键: CS/misc/shortcuts.md
       - 硬件by AI: CS/misc/hardware.md
+  - 项目:
+    - 封面: PROJECT/index.md
+    - intellideploy:
+      - 检索与召回: PROJECT/intellideploy/retrieval-recall.md
   - 实习:
     - 封面: INTERN/index.md
     - 八股: none.md
@@ -294,8 +291,10 @@ theme:
     - media: "(prefers-color-scheme: light)"
       # 亮色模式主题方案。
       scheme: default
-      # 亮色模式主色。
-      primary: purple
+      # 亮色模式主色（深蓝灰，接近参考项目 navy）。
+      primary: blue grey
+      # 亮色模式强调色（薄荷绿，用于链接和交互元素）。
+      accent: teal
       # 亮色模式按钮设置。
       toggle:
         # 亮色模式按钮图标。
@@ -307,8 +306,10 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       # 暗色模式主题方案。
       scheme: slate
-      # 暗色模式主色。
-      primary: purple
+      # 暗色模式主色（纯黑，配合 CSS 覆盖为 navy）。
+      primary: black
+      # 暗色模式强调色（薄荷绿）。
+      accent: teal
       # 暗色模式按钮设置。
       toggle:
         # 暗色模式按钮图标。

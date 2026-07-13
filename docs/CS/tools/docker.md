@@ -139,7 +139,7 @@ docker build -t hello-docker .
 
 步骤一: 在WSL打开v2rayA
 
-- 操作方法见[Linux备忘录中相关内容](https://note.elliotttzhang.cn//CS/OS/linux/linux-note/#v2raya)
+- 操作方法见[Linux备忘录中相关内容](https://note.elliotttzhang.cn/CS/OS/linux/linux-note/#v2raya)
 
 !!! info "关于直接使用主机代理"
 

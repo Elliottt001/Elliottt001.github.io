@@ -1,101 +1,166 @@
+/* ============================================================
+   Card Styles — 精确匹配 ~/project/site 的卡片设计
+
+   参考来源: ~/project/site/src/styles/mixins.js boxShadow mixin
+            ~/project/site/src/components/sections/projects.js StyledProject
+            ~/project/site/src/components/sections/awards.js award-inner
+
+   参考值:
+     bg:        #112240 (--light-navy)
+     border:    none
+     radius:    4px
+     shadow:    0 10px 30px -15px rgba(2,12,27,0.7)
+     padding:   2rem 1.75rem
+     hover:     translateY(-7px)
+     hovShadow: 0 20px 30px -15px rgba(2,12,27,0.7)
+     easing:    cubic-bezier(0.645, 0.045, 0.355, 1)
+     duration:  0.25s
+   ============================================================ */
+
+/* ----- 卡片外层：覆盖 Material 默认 .grid > .card ----- */
+.md-typeset .grid > .card,
 .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    width: 70%;
-    margin: auto;
-    word-wrap: break-word;
-    background-color: #FEFEFE;
-    background-clip: border-box;
-    border: 0.5px solid #606060;
-    border-radius: .25rem;
-    margin-bottom: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* 参考项目: background-color: var(--light-navy) = #112240 */
+  background-color: #112240;
+  background-clip: border-box;
+  /* 参考项目: 无边框，仅 border-radius: var(--border-radius) = 4px */
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  /* 参考项目: box-shadow: 0 10px 30px -15px var(--navy-shadow) */
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  /* 参考项目: padding: 2rem 1.75rem (project-inner) */
+  padding: 2rem 1.75rem;
+  /* 参考项目: transition: var(--transition) = all 0.25s cubic-bezier(...) */
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-[data-md-color-scheme="slate"] .card {
-    background-color: #181818;
-    border: 0.5px solid #606060;
+/* ----- Hover: 上浮 7px + 阴影增强（参考项目 project card）----- */
+.md-typeset .grid > .card:hover,
+.md-typeset .grid > .card:focus-within,
+.card:hover,
+.card:focus-within {
+  /* 参考项目: transform: translateY(-7px) */
+  transform: translateY(-7px);
+  /* 参考项目: hover box-shadow 0 20px 30px -15px rgba(2,12,27,0.7)
+                 注意: 阴影颜色不透明度保持 0.7，仅扩展阴影范围 */
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
 }
 
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 0.5rem;
+/* ----- 亮色模式（参考项目无亮色模式，这里提供合理浅色方案）----- */
+[data-md-color-scheme="default"] .md-typeset .grid > .card,
+[data-md-color-scheme="default"] .card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
+[data-md-color-scheme="default"] .md-typeset .grid > .card:hover,
+[data-md-color-scheme="default"] .md-typeset .grid > .card:focus-within,
+[data-md-color-scheme="default"] .card:hover,
+[data-md-color-scheme="default"] .card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- 卡片头部：重置边距（由 .card 统一提供左右 padding）----- */
 .card-header {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 600;
+  padding: 0 0 0.35rem 0;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ----- 卡片内容：重置边距（由 .card 统一提供 padding）----- */
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0;
 }
 
 .card-body ul {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .md-typeset :is(.card-body details) {
-    margin-top: 0.25rem;
-    margin-bottom: 0;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 }
 
+/* ----- 文件列表项 ----- */
 .file-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.2em 1em;
-    transition: background-color .3s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.2em 0;
+  transition: background-color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 3px;
 }
 
 .file-block:hover {
-    background-color: #eeeeee;
+  /* 参考项目: green-tint = rgba(100, 255, 218, 0.1) */
+  background-color: rgba(100, 255, 218, 0.08);
 }
-[data-md-color-scheme="slate"] .file-block:hover {
-    background-color: #606060;
+
+[data-md-color-scheme="default"] .file-block:hover {
+  background-color: #edf2f7;
 }
 
 .file-title {
-    padding-left: 0rem;
-    margin-bottom: 0;
-    font-size: 1.1em;
-    font-weight: 600;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 .file-meta {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
+  flex: 1 1 auto;
+  min-height: 1px;
 }
 
 .file-body {
-    padding-left: 1em;
-    margin-right: auto;
+  padding-left: 1em;
+  margin-right: auto;
 }
 
+/* ----- 下载按钮（参考项目 button mixin 风格）----- */
 .down-button {
-    border: 0.05rem solid;
-    border-radius: 0.1rem;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 700;
-    padding: 0.25em 0.5em;
-    transition: color .3s,background-color .3s,border-color .3s !important;
+  /* 参考项目: border: 1px solid var(--green); */
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.5em 0.75em;
+  color: #64ffda;
+  background: transparent;
+  /* 参考项目: transition: var(--transition) */
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.down-button:is(:focus,:hover) {
-    background-color: var(--md-accent-fg-color);
-    border-color: var(--md-accent-fg-color);
-    color: var(--md-accent-bg-color) !important;
+.down-button:is(:focus, :hover) {
+  background-color: rgba(100, 255, 218, 0.1);
+  border-color: #64ffda;
+  color: #64ffda !important;
+  /* 参考项目 smallButton hover: box-shadow: 3px 3px 0 0 var(--green)
+                                transform: translate(-4px, -4px) */
+  box-shadow: 3px 3px 0 0 #64ffda;
+  transform: translate(-3px, -3px);
+}
+
+[data-md-color-scheme="default"] .down-button {
+  color: #0a192f;
+  border-color: #0a192f;
+}
+
+[data-md-color-scheme="default"] .down-button:is(:focus, :hover) {
+  background-color: rgba(10, 25, 47, 0.06);
+  border-color: #0a192f;
+  color: #0a192f !important;
+  box-shadow: 3px 3px 0 0 #0a192f;
+  transform: translate(-3px, -3px);
 }
