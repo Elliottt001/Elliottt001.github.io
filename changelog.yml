@@ -1,4 +1,53 @@
 - "2026":
+  - "2026-07-11":
+    - newpage:
+        text: AI 智能体 - 基本概念汇总
+        href: /AI/agent/agent-basic-concepts
+    - newpage:
+        text: AI 智能体 - 多智能体
+        href: /AI/agent/multi-agent
+    - newpage:
+        text: AI 智能体 - 检索增强生成 (RAG)
+        href: /AI/agent/rag
+    - newpage:
+        text: 数据库系统 - 复习笔记
+        href: /CS/data/db/review
+    - newpage:
+        text: Web 开发概览
+        href: /CS/web/web
+    - newpage:
+        text: IntelliDeploy - 检索召回
+        href: /PROJECT/intellideploy/retrieval-recall
+    - siteupdate: 文档结构大型重构：资源文件重组、构建钩子添加、导航目录调整
+  - "2026-06-23":
+    - newpage:
+        text: C 语言笔记 01-11（重构为分章节）
+        href: /CS/pl/C/01-data-types
+    - newpage:
+        text: Python - 网络数据采集
+        href: /CS/pl/Python/web-scraping
+    - newpage:
+        text: Markdown - 基础
+        href: /CS/tools/markdown-basics
+    - newpage:
+        text: Markdown - 进阶
+        href: /CS/tools/markdown-advanced
+    - newpage:
+        text: Markdown - Obsidian
+        href: /CS/tools/markdown-obsidian
+    - newpage:
+        text: 信息安全 - 课程信息
+        href: /CS/is/index
+    - newpage:
+        text: 信息安全 - 笔记
+        href: /CS/is/lec1
+    - newpage:
+        text: 数据库系统 - 课程信息
+        href: /CS/data/db/index
+    - newpage:
+        text: 计量经济学 - 课程信息
+        href: /FINANCE/econometrics/index
+    - siteupdate: 修复社交媒体图标路径错误
   - "2026-01-30":
     - newpage:
         text: Python 笔记 17 - 21
