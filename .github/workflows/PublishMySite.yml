@@ -25,4 +25,5 @@ jobs: # 工作流的具体内容
       - run: pip install pymdown-extensions
       - run: pip install mkdocs-minify-plugin
       # - run: pip install mkdocs-backlinks
+      - run: echo "note.elliotttzhang.cn" > docs/CNAME  # 确保CNAME文件存在，防止自定义域名被清空
       - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
