@@ -20,7 +20,7 @@
 
 ## 01 / 内容导览
 
-一些 [ZJU 学习中数理基础课笔记](./)，包括微积分、线性代数、离散数学、[大学物理](physics/)、[概率论与数理统计](probability/)。
+一些 ZJU 学习中数理基础课笔记，包括微积分、线性代数、离散数学、[大学物理](physics/index.md)、[概率论与数理统计](probability/index.md)。
 
 <div class="grid cards" markdown>
 
@@ -54,6 +54,7 @@
 
     逻辑、集合、图论、组合 —— 计算机科学的数学基石。
 
+    - [课程信息与复习范围](discrete/index.md)
     - [Chap1 逻辑和证明](discrete/chap-1.md)
 
 - <span class="ns-card-title">:material-atom: &nbsp;大学物理</span>

@@ -30,14 +30,14 @@
 </code></pre><p>新建文件</p>
 <pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code>code 文件/目录的路径
 </code></pre><p>用vscode打开文件</p>
-<p><img src="res/images/image-3_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-3_1.png" alt="alt text"></p>
 <pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">man</span> 命令名称
 </code></pre><p>查看官方给出的命令教程文档，包含释义 + 参数及解释 + 命令开发历史记录等</p>
-<p><img src="res/images/image-1_1.png" alt="alt text"><br>
-<img src="res/images/image_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-1_1.png" alt="alt text"><br>
+<img src="../../docs/CS/ctf/res/images/image_1.png" alt="alt text"></p>
 <pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">ping</span> <span class="token punctuation">[</span>参数<span class="token punctuation">]</span> 目标地址（IP/域名）
 </code></pre><p>用于网络连通性测试、延迟测量等</p>
-<p><img src="res/images/image-2_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-2_1.png" alt="alt text"></p>
 <div class="admonition info">
 <p class="admonition-title">"ping输出解读 from deepseek"</p>
 <p><strong>单次回复示例</strong>：</p>
@@ -55,7 +55,7 @@ Approximate round trip <span class="token builtin class-name">times</span> <span
 <li>丢包率（Loss）和延迟统计。</li>
 </ul>
 </div>
-<p><img src="res/images/af1086ee023e918164b5a2444420b77.jpg" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/af1086ee023e918164b5a2444420b77.jpg" alt="alt text"></p>
 <h3 id="challenge-2">Challenge 2 </h3>
 <h4 id="代码功能解释">代码功能解释 </h4>
 <p>转换大小写</p>
@@ -126,7 +126,7 @@ PORT <span class="token operator">=</span> <span class="token number">11002</spa
 
 <span class="token keyword keyword-if">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre><p><img src="res/images/image-4_1.png" alt="alt text"></p>
+</code></pre><p><img src="../../docs/CS/ctf/res/images/image-4_1.png" alt="alt text"></p>
 <p>flag是 <code>AAA{melody_loves_doing_calculus_qq_qun_386796080}</code></p>
 <h2 id="web">Web </h2>
 <h3 id="challenge-1-1">Challenge 1 </h3>
@@ -143,7 +143,7 @@ sess <span class="token operator">=</span> requests<span class="token punctuatio
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
 </code></pre><p>flag是：flag{56297ad00e70449a16700a77bf24b071}</p>
 <h2 id="reverse">Reverse </h2>
-<p><img src="image-1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/image-1.png" alt="alt text"></p>
 <p>⽤ghidra反编译后查看verify函数找到对应密码的ASCII码序列 65 65 65 123 72 105 82 101 118 101 114 115 101 125</p>
 <p>falg是：flag: AAA{HiReverse}</p>
 <h2 id="misc">Misc </h2>
@@ -183,13 +183,13 @@ SUZBVUM2M1hJVkdHR01ETkdOUFhJTUM3SU4yR01YWlZPVldVMlJMU0w1UlRBVkxTT05DVjZNUlFHSTJY
 </code></pre></li>
 </ol>
 <p>结果正确。</p>
-<p><img src="res/images/image-6_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-6_1.png" alt="alt text"></p>
 <p>回到实验文档，在 <a href="https://lab.tonycrane.cc/CyberChef/">CyberChef</a> 中寻找方法，尝试 <code>magic</code> 方法，正确，按照分解步骤实验，正确。</p>
-<p><img src="res/images/image-7_1.png" alt="alt text"><br>
-<img src="res/images/image-5_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-7_1.png" alt="alt text"><br>
+<img src="../../docs/CS/ctf/res/images/image-5_1.png" alt="alt text"></p>
 <h3 id="challenge-2-1">Challenge 2 </h3>
 <p>学习 LSB 隐写术，使用 <code>stegsolve</code> 工具，对图像进行分析，结果如下。</p>
-<p><img src="res/images/image-8_1.png" alt="alt text"></p>
+<p><img src="../../docs/CS/ctf/res/images/image-8_1.png" alt="alt text"></p>
 <p>因此前半段 flag 为 <code>AAA{gr3@t_J08!_1et'5</code></p>
 <p>查看图片文件内容后，在文件结尾得到后半段：P1@y_m1SC_TOG3Th3R}</p>
 

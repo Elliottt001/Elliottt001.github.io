@@ -11,7 +11,7 @@
 [JavaScript - MDN Web 文档术语表：Web 相关术语的定义 | MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/JavaScript)
 
 
-![alt text](image-7.png)
+![alt text](../../../tools/res/images/image-7.png)
 
 ## 基本骨架
 ```html

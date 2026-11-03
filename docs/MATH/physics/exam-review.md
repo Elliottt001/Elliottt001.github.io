@@ -1,8 +1,8 @@
-## 电磁学
+## 电磁学 {#electromagnetism}
 
 !!! success "相关链接"
 
-    - [电磁学物理量+公式总结](./electricity_summary.md)
+    - [电磁学物理量+公式总结](./electricity-summary.md)
     - [电磁学详细笔记](./electricity.md)
 
 ### 手写笔记（公式）
@@ -61,7 +61,7 @@
 - **起始磁化曲线**：当铁磁质从未磁化状态开始加外磁场测得的曲线
 
     <div style="text-align: center">
-        <img src="../res/images/9.png" width=40%>
+        ![](res/images/9.png){ width="40%" }
     </div>
 
     - 曲线成"S"型，说明$\mu$不是常数
@@ -71,7 +71,7 @@
 - **磁滞回线**：
 
     <div style="text-align: center">
-        <img src="../res/images/22.png" width=40%>
+        ![](res/images/22.png){ width="40%" }
     </div>
 
     - 铁磁质达到饱和状态后，当减小$H$时，$B$的减小呈现出滞后性（磁滞现象）
@@ -114,7 +114,7 @@
 - 若外表面接地（电势 = 0），则内外电场互不干扰
 
 <div style="text-align: center">
-    <img src="../res/images/12.png" width=60%>
+    ![](res/images/12.png){ width="60%" }
 </div>
 
 !!! note "静电场中金属导体问题求解的步骤"

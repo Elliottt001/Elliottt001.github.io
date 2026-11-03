@@ -175,5 +175,14 @@ CNF：合取范式：主要连接词是and，连接合取项，项内什么均�
 
 从真值表获取公式，首先定义minterm
 
+### 主合取范式与主析取范式 {#propositional-equivalences}
+
+![命题范式](image-14.png)
+
+- 主合取范式（full conjunctive normal form）：最大项之积。
+- 主析取范式（full disjunctive normal form）：最小项之和。
+
+![范式示例](image-15.png)
+
 ## 常用推理规则
 

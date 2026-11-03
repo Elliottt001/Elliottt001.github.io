@@ -52,25 +52,25 @@
     #include<stdio.h>
     int main()
     {
-        int a = 4;
-        int arr[a];
-        for(int i = 0; i < a; i++){
-            arr[i] = i;
-        }
-        int b = 3;
-        printf("%p\n", &a); printf("%p\n", &b); printf("%p\n", &arr);  //打印三个的地址
-        printf("%p\n",&arr[0]); printf("%p\n",&arr[3]); printf("%p\n",&arr[4]); printf("%p\n",&arr[7]); //越界访问，且发现&arr[7] ==&a
-        printf("%d\n",*&arr[7]);
-        printf("%d\n",*&a);  //发现上面那个之后试试a和arr[7]是什么，发现arr[7]被赋值为a的值4
-        printf("%d\n",arr[9]); printf("%d\n",arr[10]); //越界访问，随意赋值
-        int try[5] = {1, 2};
-        printf("%d\n", try[3]); //初始化部分元素，后面的自动赋值0
-        return 0;
+        int a = 4;
+        int arr[a];
+        for(int i = 0; i < a; i++){
+            arr[i] = i;
+        }
+        int b = 3;
+        printf("%p\n", &a); printf("%p\n", &b); printf("%p\n", &arr);  //打印三个的地址
+        printf("%p\n",&arr[0]); printf("%p\n",&arr[3]); printf("%p\n",&arr[4]); printf("%p\n",&arr[7]); //越界访问，且发现&arr[7] ==&a
+        printf("%d\n",*&arr[7]);
+        printf("%d\n",*&a);  //发现上面那个之后试试a和arr[7]是什么，发现arr[7]被赋值为a的值4
+        printf("%d\n",arr[9]); printf("%d\n",arr[10]); //越界访问，随意赋值
+        int try[5] = {1, 2};
+        printf("%d\n", try[3]); //初始化部分元素，后面的自动赋值0
+        return 0;
     }
     /*
     输出：
-    a's ptr:0x7ffc2289afe4  b's ptr:0x7ffc2289afe8  arr's ptr0x7ffc2289afd0  arr[0]'s ptr:0x7ffc2289afd0  arr[3]'s ptr:0x7ffc2289afdc 
-    arr[4]'s ptr:0x7ffc2289afe0  arr[7]'s ptr:0x7ffc2289afec  
+    a's ptr:0x7ffc2289afe4  b's ptr:0x7ffc2289afe8  arr's ptr0x7ffc2289afd0  arr[0]'s ptr:0x7ffc2289afd0  arr[3]'s ptr:0x7ffc2289afdc
+    arr[4]'s ptr:0x7ffc2289afe0  arr[7]'s ptr:0x7ffc2289afec
     arr[7]:4  *&a:4
     arr[9]:0  arr[10]:579448784
     try[3]:0
@@ -82,33 +82,33 @@
 
     ```c
     # include <stdio.h>
-    # define MAXN 46                    /* 定义符号常量MAXN */
+    # define MAXN 46                    /* 定义符号常量MAXN */
     int main(void)
     {
-        int i, n;
-        int fib[MAXN] = {1, 1};         /* 初始化前两个 */
-        printf ("Enter n: ");    
-        scanf ("%d", &n);
-        if(n >= 1 && n <= 46 ){
-            for(i = 2; i < n; i++){  
-                fib[i] = fib[i - 1] + fib[i - 2];
-            }  
-            /* 学学人家怎么输出：*/
-            for(i = 0; i < n; i++){
-                printf("%6d", fib[i]);
-                if((i + 1) % 5 == 0){   
+        int i, n;
+        int fib[MAXN] = {1, 1};         /* 初始化前两个 */
+        printf ("Enter n: ");
+        scanf ("%d", &n);
+        if(n >= 1 && n <= 46 ){
+            for(i = 2; i < n; i++){
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            /* 学学人家怎么输出：*/
+            for(i = 0; i < n; i++){
+                printf("%6d", fib[i]);
+                if((i + 1) % 5 == 0){
                 /* 每5个换行：循环变量i+1是5的倍数；注意细节i+1 */
-                    printf("\n");
-                }  
-            }
-            if(n % 5 != 0){
-            /* 最后不满5个换行：数学转化：最后一行和总数mod5同余 */ 
-                printf("\n");
-            }
-        }else{
-            printf("Invalid Value.\n"); 
-        }
-        return 0;
+                    printf("\n");
+                }
+            }
+            if(n % 5 != 0){
+            /* 最后不满5个换行：数学转化：最后一行和总数mod5同余 */
+                printf("\n");
+            }
+        }else{
+            printf("Invalid Value.\n");
+        }
+        return 0;
     }
     ```
 
@@ -116,23 +116,23 @@
 
     ```c
     # include <stdio.h>
-    # define MAXN 10                    
+    # define MAXN 10
     int main(void)
     {
-        /* 排序 */
-        for(k = 0; k < n-1; k++){
-            index = k;                      
+        /* 排序 */
+        for(k = 0; k < n-1; k++){
+            index = k;
             /* 直接用index记录最小值,因为后面交换需要用到index，替换我的min = arr[k] */
-            for(i = k + 1; i < n; i++){     
+            for(i = k + 1; i < n; i++){
             /* 寻找最小值所在下标 */
-                if(a[i] < a[index]){
-                    index = i;  
-                }
-            }
-            temp = a[index];
-            a[index] = a[k];
-            a[k] = temp;
-        }
+                if(a[i] < a[index]){
+                    index = i;
+                }
+            }
+            temp = a[index];
+            a[index] = a[k];
+            a[k] = temp;
+        }
     }
     ```
 
@@ -277,7 +277,7 @@
 - scanf读一个单词：到空格/tab/回车 为止，即见到那三个就停止读入了
 
     ```c
-    char str\[8]; 
+    char str\[8];
     scanf("%s", str); //input: 123 45678
     printf("%s", str);  //output: 123
     ```

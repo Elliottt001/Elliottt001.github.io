@@ -27,6 +27,8 @@ nav:
       - DL: AI/basic/DL.md
       - ML: AI/basic/ML.md
       - Turing: AI/basic/Turing.md
+    - 大语言模型:
+      - Transformer: AI/llm-basic/transformer.md
     - 智能体:
       - 智能体基本概念汇总: AI/agent/agent-basic-concepts.md
       - 多智能体: AI/agent/multi-agent.md
@@ -48,6 +50,7 @@ nav:
       - knowledge-frame-of-LA: MATH/linear-algebra/knowledge-frame-of-LA.md
       - 方法总结: MATH/linear-algebra/summary-of-LA.md
     - 离散数学:
+      - 课程信息与复习范围: MATH/discrete/index.md
       - Chap1 逻辑和证明: MATH/discrete/chap-1.md
     - 大学物理:
       - 大雾下课程信息: MATH/physics/index.md
@@ -254,6 +257,7 @@ nav:
       - 不完全竞争市场: FINANCE/micro/imperfectly-competitive-market.md
     - 宏观经济学:
       - 课程信息: FINANCE/macro/index.md
+      - 绪论: FINANCE/macro/start.md
       - 宏观经济的基本指标及其衡量:
         - 国内生产总值: FINANCE/macro/gdp.md
         - 消费、储蓄、投资、政府购买、净出口: FINANCE/macro/other-variables.md

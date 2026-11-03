@@ -56,9 +56,9 @@ $$ conf(A \rightarrow B) = \frac{support(A \cup B)}{support(A)} $$
 
 $$ interest(A \rightarrow B) = conf(A \rightarrow B) - Pr[B] $$
 
-abs. difference between its confidence and the fraction of baskets that contain j.
+Signed difference between the rule's confidence and the fraction of baskets that contain B. Its absolute value measures the magnitude of the deviation from independence.
 
-Interesting rules: those with high interest values (usually above 0.5)
+正关联看较大的正值；负关联看较小的负值。若按偏离独立情况的程度筛选，则比较绝对值，阈值根据数据和任务设定。
 
 很大的负数说明负关联：有 A 时，B 反而更少见，也可能值得关注。如果只比较“偏离独立情况的程度”，再取绝对值，取了绝对值就没有正负方向了。
 

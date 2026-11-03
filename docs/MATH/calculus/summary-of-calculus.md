@@ -1004,7 +1004,7 @@ $$
 
 <figure markdown="span">
 
-  ![alt text](res/images/image-19_1.png)
+  ![alt text](res/images/image-9_1.png)
 
   <figcaption>tips：闭区间上连续函数有界</figcaption>
 
@@ -1019,7 +1019,7 @@ $$
 用〇阶、二阶讨论一阶，当然泰勒；问x，则x为特殊点，在这展开；展什么？端点；俩，消元
 
 
-<!-- [公式](https://note.elliotttzhang.cn/KNOWLEDGE/Note/Calculus/Knowledge%20Frame%20of%20Calculus/#_53) -->
+<!-- [公式](knowledge-frame-of-calculus.md#_53) -->
 
 
 

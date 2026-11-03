@@ -84,7 +84,7 @@
 - 曲线外：当前资源 / 技术条件下无法实现
 - 资源增加 / 技术进步：右移
 
-![alt text](image.png)
+![alt text](res/images/image_3.png)
 
 割线斜率：边际转换率
 

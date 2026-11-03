@@ -200,36 +200,36 @@ int*p, q;
  
         ```c
         void swap1 (int x, int y)
-        {   
+        {
         int t;
-        t = x; 
-        x = y; 
+        t = x;
+        x = y;
         y = t;
-        } 
+        }
         ```
  
     === "2"
  
         ```c
         void swap2 (int *px, int *py)
-        {    
+        {
         int t;
-        t = *px; 
-        *px = *py; 
+        t = *px;
+        *px = *py;
         *py = t;
-        } 
+        }
         ```
  
     === "3"
  
         ```c
         void swap3 (int *px, int *py)
-        {    
+        {
         int *pt;
-        pt = px; 
-        px = py; 
+        pt = px;
+        px = py;
         py = pt;
-        } 
+        }
         ```
  
 不理解就记住只有第二个能成功
@@ -259,29 +259,29 @@ int*p, q;
 例子：
 ```c
 #include<stdio.h>
-void minmax(int arr[], int *min, int *max) 
+void minmax(int arr[], int *min, int *max)
 /*
 传入参数有讲究：要在定义的函数中对main函数输入/定义的数组进行处理，就必须得传入它，这是函数参数传递的基本内容;
 传入指针变量，因为定义的函数内部要对main函数中的min，max变量进行处理，原理同上面;
 **核心：要在函数内部对主函数的变量进行操作，则必须得把主函数中的那个变量or其地址传入函数**
 */
 {
-    int i, j;
-    *min = arr[0];
-    *max = arr[0];
-    for(i = 0; i < 5; i++){
-        if(arr[i] >= *max) *max = arr[i];
-        if(arr[i] <= *min) *min = arr[i];
-    }
-    printf("min = %d\n", *min);
-    printf("max = %d", *max);
+    int i, j;
+    *min = arr[0];
+    *max = arr[0];
+    for(i = 0; i < 5; i++){
+        if(arr[i] >= *max) *max = arr[i];
+        if(arr[i] <= *min) *min = arr[i];
+    }
+    printf("min = %d\n", *min);
+    printf("max = %d", *max);
 }
 int main()
 {
-    int min; int max;
-    int arr[5] = {1,4,7,5,0};
-    minmax(arr, &min, &max);
-    return 0;
+    int min; int max;
+    int arr[5] = {1,4,7,5,0};
+    minmax(arr, &min, &max);
+    return 0;
 }
 ```
 注：
@@ -324,12 +324,12 @@ arr[i] , *(arr + i) , p[i] , *(p + i)
 数组不是指针变量，不能 `arr++`，也不能给整个数组赋值。别把这个限制记成“数组是常量指针”。
 
 ```c
-    int n, i;
-    scanf("%d", &n);
-    int* arr = (int* )malloc(n * sizeof(int));
-    for(i = 0; i < n; i++) scanf("%d", &arr[i]); 
-    for (i = 0; i < n; i++) printf("%d#", arr[i]);
-    return 0;
+    int n, i;
+    scanf("%d", &n);
+    int* arr = (int* )malloc(n * sizeof(int));
+    for(i = 0; i < n; i++) scanf("%d", &arr[i]);
+    for (i = 0; i < n; i++) printf("%d#", arr[i]);
+    return 0;
 ```
 
 ##### 用法
@@ -341,7 +341,7 @@ arr[i] , *(arr + i) , p[i] , *(p + i)
 int arr[] = {1,2,3,4,5,6,-1};
 int* p = arr;
 while(*p != -1){
-    printf("%d\n", *p++);
+    printf("%d\n", *p++);
 }
 ```
 法二：
@@ -379,7 +379,7 @@ p++;       // 可以，p 改成指向第二个元素
 
 2. 所指的是const(通过指针不可修改：`const` 在 `*` 前面)：表示不能通过这个指针去修改那个变量，但是这个指针和那个变量都不是const都可以修改.用处：大的结构用const结构的指针
     ```c
-    const int *p = &i    
+    const int *p = &i
     i = 20; i++    //OK
     p++    //OK
     p = &j    //OK
@@ -432,13 +432,13 @@ C 语言里不必强制转换 malloc 的返回值，记得 include `<stdlib.h>`�
    
 **示例**
 ```c
-    int n, i;
-    scanf("%d", &n);
-    int* arr = (int* )malloc(n * sizeof(int));
-    for(i = 0; i < n; i++) scanf("%d", &arr[i]);
-    for (i = 0; i < n; i++) printf("%d#", arr[i]);
-    free(arr);
-    return 0;
+    int n, i;
+    scanf("%d", &n);
+    int* arr = (int* )malloc(n * sizeof(int));
+    for(i = 0; i < n; i++) scanf("%d", &arr[i]);
+    for (i = 0; i < n; i++) printf("%d#", arr[i]);
+    free(arr);
+    return 0;
 ```
 
 ### 数组与指针

@@ -23,7 +23,7 @@
 
 ## 01 / 内容导览
 
-一些 [经济 / 金融的学习笔记](https://note.elliotttzhang.cn/FINANCE)，包括[微观经济学](https://note.elliotttzhang.cn/FINANCE/micro/)、[宏观经济学](https://note.elliotttzhang.cn/FINANCE/macro/)等。
+一些 [经济 / 金融的学习笔记](index.md)，包括[微观经济学](micro/index.md)、[宏观经济学](macro/index.md)等。
 
 <div class="grid cards" markdown>
 
@@ -47,6 +47,7 @@
     国民收入、货币体系与宏观经济政策。
 
     - [课程信息](macro/index.md)
+    - [绪论](macro/start.md)
     - [国内生产总值](macro/gdp.md)
     - [消费、储蓄、投资、政府购买、净出口](macro/other-variables.md)
     - [货币需求与货币供给](macro/currency.md)

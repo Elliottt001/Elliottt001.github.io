@@ -33,7 +33,7 @@ $$\Sigma^\infty_{n = 1} \frac1{n^p} = 1 + \frac 1{2^p} + \frac 1{3^p} + \dots , 
 $$当 p \le 1 时, 发散; p \gt 1 时, 收敛$$
 
 ![alt text](res/images/image_2.png)
-![alt text](res/images/image-1_2_1.png)
+![alt text](res/images/image_2.png)
 思想: 
 
 - 构造积分, 统一被积分函数(形式相同, 变 $x$)
@@ -347,12 +347,12 @@ $\sin$ 可以考虑等价无穷量将其搞掉，即放缩成幂
 
 间接展开: 用一个展开通过两边同时求导/积分/换元得到另一个函数的展开
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](res/images/image_3.png)
+![alt text](res/images/image-1_3.png)
 
 ### 傅里叶级数
 
-![alt text](image-2.png)
+![alt text](res/images/image-2_3.png)
 
 定义一个欧氏空间：积分空间
 

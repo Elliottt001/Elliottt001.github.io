@@ -54,8 +54,7 @@ quit  # to quit the help file
 
 ### 数据容器总结
 
-![[63178ff0bddb8b3d19ff53ae8417e90.jpg]]
-![[767def4f0bdfa79420e48fb7b1c3371.jpg]]
+[数据容器对照与示例](py-sequence.md)
 
 #### .方法
 
@@ -77,7 +76,7 @@ ASCII, UTF-8
 
 #### 序列总结
 
-![[e3aa546b6378288f581c530b96df6b4.jpg]]
+[序列的操作与示例](py-sequence.md)
 
 ##### 序列的切片
 
@@ -247,7 +246,7 @@ print(my_tuple)
 				例如：new_str_name = ori_str_name.replace(" ", "")：删除所有空格
 	new_str_list = ori_str_name.split("flag_char")
 		按照flag_char分割字符串，将分割后的碎片存入数组，同时结果中没有flag_char
-		![[d60d854b590e526d3b54f08e2bdbaf7.jpg]]
+		[字符串操作与示例](py-sequence.md)
 		找到所有单词：new_str_list = ori_str_name.split(" ") or new_str_list = ori_str_name.split()
 		不传参数默认是空格
 		不能传空字符串
@@ -414,8 +413,7 @@ finally:
 
 其中错误类型：
 
-- 如果有需求说特定错误需要干特定的事情：看这张指定错误表，按方法三
-	![[ad2f337607ec191678ce5e5a1b21fdc.jpg]]
+- 如果有需求说特定错误需要干特定的事情：按方法三指定异常类型；常见类型见 [Python 内置异常](https://docs.python.org/zh-cn/3/library/exceptions.html)。
 - 如果没有知道并打印具体错误类型的需求：按方法一
 - 如果想打印错误类型，没有不同错误打印不同东西的需求：按方法二
 也不一定是打印，就特定的需求吧
@@ -424,13 +422,13 @@ finally:
 
 ```python
 def div(a, b):
-    return a/b
+    return a/b
 def calculator(a, b, op):
-    try:
-        result = op(a, b)
-    except Exception as e:
-        return f"出错了，错误类型是：{e}"
-    return result
+    try:
+        result = op(a, b)
+    except Exception as e:
+        return f"出错了，错误类型是：{e}"
+    return result
 a = int(input())
 b = int(input())
 print(calculator(a, b, div))
@@ -454,44 +452,45 @@ print(calculator(a, b, div))
 
 ```python
 class Animal():
-    def __init__(self, name, age, sound, species = "动物", love_status = False):
-        self.name = name
-        self.age = age
-        self.sound = sound
-        self.species = species
-        self.__love_status = love_status
-    def eat(self):
-        print(f"{self.name} is eating")
-    def make_sound(self):
-        print(f"{self.name}'s sound is {self.sound}")
-    def __str__(self):
-        return f"我是一只{self.species}"
-    def __repr__(self):
-        return f"nme:{self.name}, age:{self.age}, sound:{self.sound}, species:{self.species}, love_status:{self.love_status}"
-    def __add__(self, other):
-        if(self.__love_status and other.__getlove_status):  # 类内的方法可以访问(利用）类内的私有属性__love_status
-            return f"{self.name} and {other.name} both have a spouse"
-        print(f"{self.name} fells in love with {other.name}")
-        return f"their kid's name is {self.name[0] + other.name[0]}"
-    def __sub__(self, other):
-        return f"{self.name} and {other.name} are not friends"
-    def __call__(self):
-        self.make_sound()
-        # return self.__str__() : 不建议
-    def __len__(self):
-        return self.age
-    def __getitem__(self, index):
-        return self.sound[index]
-    def __setitem__(self, index, value):
-        self.sound[index] = value
-    def __getlove_status(self):
-        return self.__love_status
-# 别看这里的类的继承，AI写的好像有错
+    def __init__(self, name, age, sound, species = "动物", love_status = False):
+        self.name = name
+        self.age = age
+        self.sound = sound
+        self.species = species
+        self.__love_status = love_status
+    def eat(self):
+        print(f"{self.name} is eating")
+    def make_sound(self):
+        print(f"{self.name}'s sound is {self.sound}")
+    def __str__(self):
+        return f"我是一只{self.species}"
+    def __repr__(self):
+        return f"nme:{self.name}, age:{self.age}, sound:{self.sound}, species:{self.species}, love_status:{self.__love_status}"
+    def __add__(self, other):
+        if(self.__love_status and other.__getlove_status()):  # 类内的方法可以访问(利用）类内的私有属性__love_status
+            return f"{self.name} and {other.name} both have a spouse"
+        print(f"{self.name} fells in love with {other.name}")
+        return f"their kid's name is {self.name[0] + other.name[0]}"
+    def __sub__(self, other):
+        return f"{self.name} and {other.name} are not friends"
+    def __call__(self):
+        self.make_sound()
+        # return self.__str__() : 不建议
+    def __len__(self):
+        return self.age
+    def __getitem__(self, index):
+        return self.sound[index]
+    def __setitem__(self, index, value):
+        characters = list(self.sound)
+        characters[index] = value
+        self.sound = "".join(characters)
+    def __getlove_status(self):
+        return self.__love_status
 class Dog(Animal):
-    def __init__(self, name, age, sound):
-        super().__init__(name, age, sound, love_status="单身")
-    def call(self):
-        print(f"{self.name} is barking")
+    def __init__(self, name, age, sound):
+        super().__init__(name, age, sound, species="狗", love_status=False)
+    def call(self):
+        print(f"{self.name} is barking")
   
 dog = Dog(name="公子", age=10, sound="wangwang")
 tiger = Animal(name = "齐威王", age=10, sound="roar", species="老虎")
@@ -499,7 +498,7 @@ cat = Animal(name = "男爵", age=10, sound="miaomiao", love_status=True, specie
   
 animals = [dog, tiger, cat]
 for animal in animals:
-    animal.make_sound()
+    animal.make_sound()
   
 print(dog)
 print(dog + tiger) # 类内的方法可以访问类内的私有属性__love_status
@@ -507,8 +506,8 @@ print(dog - cat)
 print(tiger())
 print(len(tiger))
 print(tiger[0])
-print(tiger.__love_status) # AttributeError: 'Animal' object has no attribute '__love_status'
-print(tiger.__getlove_status()) # AttributeError: 'Animal' object has no attribute '__getlove_status'.
+# print(tiger.__love_status) # AttributeError: 'Animal' object has no attribute '__love_status'
+# print(tiger.__getlove_status()) # AttributeError: 'Animal' object has no attribute '__getlove_status'.
 ```
 
 

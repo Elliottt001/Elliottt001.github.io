@@ -19,7 +19,7 @@ T1  T2                              T2  T3
 
 Consider the trinode restructuring:
 
-<img src="image-1.png" alt="RR" width=30%/>
+![RR](image-1.png){ width="30%" }
 
 Linear case
 
@@ -31,7 +31,7 @@ non-linear case
 
 Double rotation: first rotate the child, then rotate the parent.
 
-<img src="image-2.png" alt="RR" width=30%/>
+![RR](image-2.png){ width="30%" }
 
 ```text
       z                               z                               z
@@ -68,8 +68,8 @@ reconstruct(node): 决定单旋还是双旋
 
 规则：
 
-- leaf node store no value.
-- 所有节点都存数据
+- 每个存储键的节点有 1～3 个键；内部节点有 2～4 个孩子。
+- 叶节点也存键，所有叶节点在同一层。如果图中额外画出外部空节点，那些空节点不存键。
 - 节点中的数据，孩子们的数据值在父亲的两个数据值之间
 
 Multi-way search tree.

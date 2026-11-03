@@ -9,7 +9,7 @@ $$真的一天都在写写写学学学没有停下来过啊！！！$$
 $$数学化学轮换着学，手机放身后书架上$$
 
 ![Image title](res/images/image-16_4.png#only-light){ width="300" }
-![](res/images/image-14_0.png#only-dark){ width="300" } -->
+![](res/images/image-14_0_1.png#only-dark){ width="300" } -->
 
 ## 引入
 

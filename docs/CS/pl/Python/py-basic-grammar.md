@@ -767,13 +767,13 @@ a, b = func_name(pra)
 - 可以通过改变传入的作为参数的函数（即：回调函数），灵活的改变我在这个函数中调用哪个函数（比函数的嵌套灵活）
 ```python
 def add(x, y):
-    return x + y
+    return x + y
 def min(x, y):
-    return x - y
+    return x - y
 def mul(x, y):
-    return x * y
+    return x * y
 def calculator(x, y, operator):
-    return operator(x, y)
+    return operator(x, y)
 print(f"{calculator(3, 5, add)}\n")
 print(calculator(3, 5, min))
 print(calculator(3, 5, mul))

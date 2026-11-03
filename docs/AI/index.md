@@ -28,6 +28,7 @@
     - [深度学习 (DL)](basic/DL.md)
     - [机器学习 (ML)](basic/ML.md)
     - [图灵机与可计算性](basic/Turing.md)
+    - [Transformer](llm-basic/transformer.md)
 
 - <span class="ns-card-title">:material-robot: &nbsp;智能体</span>
 

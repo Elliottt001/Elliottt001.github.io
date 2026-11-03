@@ -12,6 +12,14 @@ __pycache__/
 # MkDocs 缓存
 .cache/
 
+# 本地测试脚本与运行产物
+/tests/
+/.pytest_cache/
+/.coverage
+/.coverage.*
+/htmlcov/
+/test-results/
+
 # 编辑器和 IDE
 .vscode/
 .idea/

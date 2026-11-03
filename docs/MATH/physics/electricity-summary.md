@@ -1,7 +1,7 @@
 !!! success "相关链接"
 
     - [电磁学详细笔记](./electricity.md)
-    - [电磁学复习笔记](./exam-review.md#电磁学)
+    - [电磁学复习笔记](./exam-review.md#electromagnetism)
 
 
 ## 一、 核心物理量

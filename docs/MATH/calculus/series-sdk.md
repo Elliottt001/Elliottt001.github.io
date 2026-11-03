@@ -3,13 +3,13 @@
 $$Work \;Hard, \;Play \;Hard.$$
 
 <figure markdown="span">
-  ![Image title](https://note.elliotttzhang.cn/KNOWLEDGE/calculus/res/images/image-20_2.png){ width="300" }
+  ![Image title](res/images/image-20_2.png){ width="300" }
   <figcaption>HKU</figcaption>
 </figure>
 
-![alt text](image-53.png){ width="300" }
-![alt text](image-55.png){ width="300" }
-![alt text](image-56.png){ width="300" }
+![alt text](res/images/image-53.png){ width="300" }
+![alt text](res/images/image-55.png){ width="300" }
+![alt text](res/images/image-56.png){ width="300" }
 ///caption
 Admonition块类型
 ///
