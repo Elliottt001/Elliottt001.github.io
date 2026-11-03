@@ -1,3 +1,5 @@
+# Modern C++ Types
+
 ## Modern C++ Types
 
 ### Auto
@@ -106,6 +108,9 @@ int main() {
     vector<int> vec1{3}; 
     vector<int> vec2(3);
 }
+```
+
+`vec1{3}`：一个元素，值是 3；`vec2(3)`：三个元素，初始值都是 0。括号换了，意思也换了。
 
 
 

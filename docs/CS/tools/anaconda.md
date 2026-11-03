@@ -1,3 +1,5 @@
+# Anaconda
+
 ## Part 1 什么是Anaconda？
 
 ![alt text](res/images/image-1_1.png)
@@ -269,28 +271,27 @@ conda remove --name <env_name> --all
 
 3. 安装包
 
-路径：/home/用户名/anaconda3/envs/环境名/lib/pythonX.X/site-packages/
+    包会放到对应环境里。Linux 下通常在 `~/anaconda3/envs/环境名/lib/pythonX.X/site-packages/`，安装位置不同则前面也不同。
 
-    1. 在指定环境中安装包
+    - 指定环境安装：
+
         ```shell
         conda install --name <env_name> <package_name>
         ```
 
-    2. 在当前环境中安装包
+    - 已经 `conda activate`，就在当前环境装：
+
         ```shell
         conda install <package_name>
         ```
 
-    3. 使用pip安装包
-
-        使用 conda install 无法进行安装时，可以使用pip进行安装
+    - Conda 里找不到的包，再考虑 pip：
 
         ```shell
-        pip install <package_name>
+        python -m pip install <package_name>
         ```
 
-pip可以安装一些conda无法安装的包；conda也可以安装一些pip无法安装的包。因此当使用一种命令无法安装包时，可以尝试用另一种命令。
-
+        这里用 `python -m pip`，保证 pip 跟着当前环境的 Python 走，避免装到别的环境里。
 
 4. 卸载包
 

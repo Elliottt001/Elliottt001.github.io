@@ -1,4 +1,22 @@
 window.MathJax = {
+    startup: {
+      ready() {
+        MathJax.startup.defaultReady();
+        // Subscribe only after the engine and its initial typesetting are ready.
+        MathJax.startup.promise.then(() => {
+          if (typeof document$ === "undefined") return;
+          document$.subscribe(() => {
+            const content = document.querySelector(".md-content");
+            if (!content || !content.querySelector(".arithmatex")) return;
+            MathJax.typesetClear();
+            MathJax.texReset();
+            MathJax.typesetPromise([content]).catch((error) => {
+              console.error("MathJax typesetting failed:", error);
+            });
+          });
+        });
+      }
+    },
     tex: {
       inlineMath: [["\\(", "\\)"]],
       displayMath: [["\\[", "\\]"]],
@@ -28,10 +46,24 @@ window.MathJax = {
       fontCache: 'global'
     }
   };
-  
-  document$.subscribe(() => { 
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
+
+  // The homepage has no formulas: load the engine only where it is needed.
+  (() => {
+    const loadMathJax = () => {
+      if (!document.querySelector(".arithmatex") ||
+          document.querySelector("script[data-mathjax-loader]")) return;
+      const script = document.createElement("script");
+      script.src = "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js";
+      script.async = true;
+      script.dataset.mathjaxLoader = "";
+      document.head.appendChild(script);
+    };
+
+    if (typeof document$ !== "undefined") {
+      document$.subscribe(loadMathJax);
+    } else if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", loadMathJax, { once: true });
+    } else {
+      loadMathJax();
+    }
+  })();

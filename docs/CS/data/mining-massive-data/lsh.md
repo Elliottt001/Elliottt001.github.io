@@ -111,15 +111,16 @@ convert a linear similarity to a function that is very steep (because we it is t
 1. 取出该 band 的 (r) 个哈希值；
 2. 把它们组合成一个 tuple 或字符串：
 
-   $$
-   \text{band-signature}_i = (h_{i1}, h_{i2}, \ldots, h_{ir})
-   $$
+    $$
+    \text{band-signature}_i = (h_{i1}, h_{i2}, \ldots, h_{ir})
+    $$
 
 3. 用一个哈希函数（例如 Python 中的 `hash()` 或 MurmurHash、MD5、SHA1 等）
-   把这 (r)-tuple 映射到一个整数 bucket ID：
-   $$
-   \text{bucket-id} = \text{hash}(\text{band-signature}_i)
-   $$
+    把这 (r)-tuple 映射到一个整数 bucket ID：
+
+    $$
+    \text{bucket-id} = \text{hash}(\text{band-signature}_i)
+    $$
 
 所有哈希到同一个 `bucket_id` 的文档，就认为它们在这个 band 上是“相似”的（candidate pair）。
 

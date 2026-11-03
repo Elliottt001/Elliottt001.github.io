@@ -1,3 +1,5 @@
+# AVL 树和 Splay 树
+
 ## AVL tree
 
 ### 定义
@@ -72,6 +74,20 @@
 基本同上，变一下顺序
 
 ### 数据存储
+
+还是 BST 的节点：key、左指针、右指针，再多存一个 height（或平衡因子）。
+
+```c
+typedef struct AVLNode {
+    int key;
+    struct AVLNode *left, *right;
+    int height;
+} AVLNode;
+```
+
+如果空树高度记 -1，叶子就是 0：`height = 1 + max(height(left), height(right))`。
+
+旋转时树的连接关系变了，高度也要更新。先更新被转下去的节点，再更新转上来的节点，顺序别反。
 
 ### 复杂度
 ![alt text](res/images/image-4.png)
@@ -389,12 +405,12 @@ $$n_h = 1 + n_{h-1} + n_{h-2}$$
 
 !!! success "大体思路"
 
-    思路: 当查询到时间极长的（一般是 $O(N)$）的，就 **通过旋转操作把他旋转到根节点**
+    思路：访问一个节点之后，就通过旋转把它带到根，不用先判断这次查找慢不慢。
 
 
 有些操作比较快（要求松），有的操作比较慢，做到连续 M 次操作最多 $O(M \log n)$
 
-当一个节点被访问（时间超过某个阈值），就通过 AVL 的旋转使得其到根节点（ push to the root）
+查找成功后把访问节点 splay 到根；查找失败通常把最后访问的节点 splay 到根。不是达到某个时间阈值才旋转，也不是在维护 AVL 的平衡条件。
 
 ![alt text](res/images/image-5.png)
 
@@ -430,20 +446,17 @@ zig-zag：拐一下
 
 ![alt text](res/images/image-8.png)
 
-### Spray Tree & AVL Tree 对比
+### Splay Tree & AVL Tree 对比
 
-|               | AVL Tree               | Spray Tree                      |
-| ------------- | ---------------------- | ------------------------------- |
-| 优点        |                  | 树高低                  |
-| 缺点        | 每次都旋转           | 多一个push to root                          |
+| | AVL Tree | Splay Tree |
+| --- | --- | --- |
+| 平衡性 | 严格限制左右高度差 | 不保证树高一直很低 |
+| 额外信息 | height / 平衡因子 | 不必保存平衡信息 |
+| 查找后 | 不改变树形 | 把访问节点伸展到根 |
+| 单次操作 | 最坏 $O(\log n)$ | 最坏可达 $O(n)$ |
+| 一串操作 | 每次已有对数保证 | 摊销 $O(\log n)$ |
 
-|               | AVL Tree               | Spray Tree                      |
-| ------------- | ---------------------- | ------------------------------- |
-| 平衡性        | 严格平衡               | 松散平衡                        |
-| 旋转次数      | 每次插入/删除可能旋转   | 不是每次都要| 每次访问可能旋转多次            |
-| 单次操作时间  | $O(\log n)$           | 不能保证                     |
-| 多次操作时间 | $O(M \log n)$          | $O(M \log n)$                   |
-
+Splay 好在常访问的节点会往上走，不能把优点写成“树高一定低”。
 
 ## Amortized Analysis
 
@@ -473,7 +486,7 @@ Example: on an initially
 
 ![alt text](res/images/image-12.png)
 
-最关键的是 $D_i$ $D_i$ 的定义
+最关键的是势能 $\Phi(D_i)$ 怎么定义；$D_i$ 是第 i 次操作之后的数据结构状态。
 
 用 Potential method 可以计算 accounting method 的 credit，继而算 amortized time
 
@@ -481,11 +494,11 @@ Example: on an initially
 
 ![alt text](res/images/image-11.png)
 
-首先要选取势能函数：每次旋转操作后，发生变化的只有 X / P / G 的子树的节点数，其他node的子树的节点数不变；另外，由局部性原理：rank 只与局部有关（X / P / G），使得 rank 的计算简单于 树高 height。
+首先要选取势能函数：每次旋转操作后，发生变化的只有 X / P / G 的子树的节点数，其他node的子树的节点数不变；另外，由局部性原理：旋转只改局部子树的大小，分析时比较这些 rank 的变化；rank 和树高不能直接当成同一个量。
 
 !!! info ""
 
-    rank(node) = log(size of subtree) 约等于 Height of subtree
+    rank(node) = log₂(size of subtree)。它是分析时定义的量，不等于实际树高；链状子树高度能到 n，但 rank 只有 log₂ n。
 
     rank(X) = log|size(X)| 只依赖于：
     - X 的子树大小
@@ -499,5 +512,5 @@ Example: on an initially
 
 ![alt text](res/images/1f5b5b0f98742aab7d9da213b64d1201.jpg)
 
-通过上面引理，可以放缩，进而将其都放缩成3倍的，且每次操作上一次减的项和下一次加的项可以裂项相消，进而就剩下 log(n) 级别的项（根节点的 rank，basically height of the tree）
+通过上面引理，可以放缩，进而将其都放缩成3倍的，且每次操作上一次减的项和下一次加的项可以裂项相消，进而就剩下 log(n) 级别的项（根节点的 rank，是 log₂ n）
 

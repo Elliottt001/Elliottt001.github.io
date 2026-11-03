@@ -329,7 +329,9 @@ N node 的二叉树有几个 NULL：N + 1
 
 binary tree 左孩子和右孩子不一样
 
-complete binary tree：都有 0 / 2 孩子
+full binary tree（严格二叉树）：每个节点有 0 / 2 个孩子。
+
+complete binary tree（完全二叉树）：最后一层可以没填满，但从左往右填，中间不能有空位；前面的层都填满。
 
 - 可以用数组表示
 
@@ -341,7 +343,7 @@ complete binary tree：都有 0 / 2 孩子
 
 - $n_0 = n_2 + 1$ 其中$n_0$是叶节点个数，$n_2$是与两个孩子的节点数
 
-    - 证明：设n为总节点个数，$n = n_1 + n_2 + n_0$，$n = Branches + 1$, $Branches = 2n_2 + n_1.
+    - 证明：设n为总节点个数，$n = n_1 + n_2 + n_0$，$n = Branches + 1$, $Branches = 2n_2 + n_1$。
     - 会考三叉树……
 
 - 节点数和树层数的关系
@@ -372,7 +374,7 @@ complete binary tree：都有 0 / 2 孩子
 时间复杂度：$O(d)$，$d$ 是深度
 
 - 最坏情况：退化成链表，$O(d) = O(N)$
-- 最好情况：
+- 最好情况：要找的就是根节点，$O(1)$。
 
 注意
 
@@ -380,7 +382,27 @@ complete binary tree：都有 0 / 2 孩子
 
 ### FindMax
 
+一直往右走，最后那个就是最大值。先检查空树，否则 `T->Right` 会访问空指针。
+
+```c
+tree_ptr findMax(tree_ptr T) {
+    if (T == NULL) return NULL;
+    while (T->Right != NULL) T = T->Right;
+    return T;
+}
+```
+
 ### FindMin
+
+和 FindMax 镜像，一直往左走。两个都只走一条路径，时间 $O(h)$，h 是树高。
+
+```c
+tree_ptr findMin(tree_ptr T) {
+    if (T == NULL) return NULL;
+    while (T->Left != NULL) T = T->Left;
+    return T;
+}
+```
 
 ### Insert
 
@@ -409,22 +431,33 @@ replace it with its child
 
 #### Delete a degree 2 node
 
-- replace 
-- delete 这是一个 degree为 0 / 1的node
+不能直接删掉，不然两棵子树不知道接到哪里。
 
-原理：
+找右子树最小值（中序后继），用它替换当前 key，然后在右子树里删掉那个节点。也可以对称地用左子树最大值。
 
-不确定的
+后继没有左孩子，所以第二次删除一定变成 0 / 1 个孩子的情况。
 
-考虑BST的中序遍历：
-
-这里，选左边更好因为选左边数变浅，时间复杂度（$O(d)$）都变少
-
-实现：
-
-```cpp
-
+```c
+tree_ptr deleteNode(int x, tree_ptr T) {
+    if (T == NULL) return NULL;
+    if (x < T->Element) {
+        T->Left = deleteNode(x, T->Left);
+    } else if (x > T->Element) {
+        T->Right = deleteNode(x, T->Right);
+    } else if (T->Left != NULL && T->Right != NULL) {
+        tree_ptr successor = findMin(T->Right);
+        T->Element = successor->Element;
+        T->Right = deleteNode(T->Element, T->Right);
+    } else {
+        tree_ptr old = T;
+        T = T->Left != NULL ? T->Left : T->Right;
+        free(old);
+    }
+    return T;
+}
 ```
+
+调用时要接住返回值：`root = deleteNode(x, root)`。删的可能就是根，新的根不能丢。
 
 !!! info "Note"
 

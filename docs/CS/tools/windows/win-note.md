@@ -1,3 +1,5 @@
+# Windows 配置
+
 ## 《万物互联》
 
 
@@ -182,7 +184,7 @@ ssh -i ~/.ssh/id_ed25519 your_windows_username@windows_ip
 
 5. 恢复文件权限（可选）
 
-    ```powershell
+   ```powershell
    icacls C:\Windows\System32\OpenSSH\sshd_config_default /reset
    ```
 
@@ -381,7 +383,7 @@ Windows IP 配置
 
 #### **4. 其他适配器**
 
-- **本地连接* 1** 和 **本地连接* 2**：媒体已断开连接。
+- **本地连接\* 1** 和 **本地连接\* 2**：媒体已断开连接。
 - **蓝牙网络连接**：媒体已断开连接。
 
 这些适配器当前未连接，因此没有分配 IP 地址。

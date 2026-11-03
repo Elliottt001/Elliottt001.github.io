@@ -14,6 +14,74 @@
 
 ![alt text](image-1.png)
 
-<img src="rendering.svg" alt="HTML+CSS呈现">
+![HTML 与 CSS 的渲染过程](rendering.svg)
 
 ![alt text](image-2.png)
+
+## React 里的更新
+
+前面是浏览器把 HTML/CSS 变成页面。React 则是在状态变了之后，重新算出页面应该是什么样，再更新 DOM。
+
+下面这个 TodoApp：`todos` 存列表，`newTodo` 存输入框。新增、删除、完成状态都通过 `setTodos` 更新。
+
+```jsx
+// TodoApp.js
+import React, { useState } from "react";
+
+const TodoApp = () => {
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] = useState("");
+
+  const handleAddTodo = () => {
+    if (newTodo.trim() === "") {
+      alert("Please enter a todo item.");
+      return;
+    }
+
+    setTodos([...todos, { text: newTodo, completed: false }]);
+    setNewTodo("");
+  };
+
+  const handleDeleteTodo = (index) => {
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
+  };
+
+  const handleToggleComplete = (index) => {
+    const updatedTodos = todos.map((todo, i) =>
+      i === index ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(updatedTodos);
+  };
+
+  return (
+    <div className="todo-app">
+      <h1>Todo List</h1>
+      <input
+        type="text"
+        value={newTodo}
+        onChange={(e) => setNewTodo(e.target.value)}
+        placeholder="Add a new todo"
+      />
+      <button onClick={handleAddTodo}>Add</button>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index} className={todo.completed ? "completed" : ""}>
+            {todo.text}
+            <button onClick={() => handleDeleteTodo(index)}>Delete</button>
+            <button onClick={() => handleToggleComplete(index)}>
+              {todo.completed ? "Undo" : "Complete"}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TodoApp;
+```
+
+注意这里不是直接 `todos.push(...)`：展开成新数组，再交给 `setTodos`。修改某一项也是 `map` 生成新数组。
+
+这个小例子删除、切换状态都用数组下标；真做项目时最好给每项一个稳定的 ID，列表的 `key` 也用 ID，避免删一项之后身份跟着挪。

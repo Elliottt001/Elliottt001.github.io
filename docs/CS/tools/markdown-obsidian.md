@@ -8,7 +8,7 @@
 - 一些 **MD编辑器** 和 **笔记软件** 支持通过 [**Mermaid**](https://mermaid-js.github.io/ "Mermaid官网") 及其所提供的 [编译器](https://mermaid-js.github.io/mermaid-live-editor  "Mermaid在线编译器") 来为用户提供图表的绘制功能
 
 - 这里只提供一些演示的图表，具体教程可戳下方
-  - [[MOC Mermiad 教程 Obsidian版| Mermiad 超级教程 Obsidian版]]
+  - [Mermaid 官方教程](https://mermaid.js.org/intro/)
 
 <br>
 

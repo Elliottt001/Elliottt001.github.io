@@ -1,3 +1,5 @@
+# 组合逻辑电路的设计
+
 组合电路
 
 定义：m个输入n个输出，输出仅由输入决定
@@ -52,12 +54,14 @@
 ![alt text](image-20.png)
 
 ```verilog
-module lamp_control(s1,s2,s3,F );
-input s1,s2,s3;
+module lamp_control(s1, s2, s3, F);
+input s1, s2, s3;
 output F;
-wire s1,s2,s3,f;
 
-assign F= (~s3&~s2&s1) | (~s3&s2&~s1) | (s3&~s2&~s1) | (s3&s2&s1) ;
+assign F = (~s3 & ~s2 &  s1)
+         | (~s3 &  s2 & ~s1)
+         | ( s3 & ~s2 & ~s1)
+         | ( s3 &  s2 &  s1);
 endmodule
 ``` 
 
@@ -93,9 +97,9 @@ fan-out：能带几个负载
 
 ### fan-in
 
-每个门上面有压降（如下左图），不是0电阻，所以太多的话影响电压
+fan-in 就是一个门的输入端个数，比如三输入 AND 门的 fan-in 是 3。
 
-fan-in 是 ：输出为正确的情况下最多的input个数，$（最大识别为1的电压 - 最小识别为1的电压） / 每个门处压降$
+输入多会影响内部电路的延迟、面积和电气特性，所以不是无限加输入就行。具体能做多少输入看器件 / 工艺，不能用“电压差除以每个门压降”统一计算。
 
 ![alt text](image-27.png)
 

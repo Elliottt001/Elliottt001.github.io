@@ -1,11 +1,13 @@
+# WSL 备忘录
+
 > Ubuntu is the world’s favourite Linux operating system. Run it on your laptop, workstation, server or IoT device, with five years of free security updates.
 
-![](https://files.mdnice.com/user/88229/3ad74c35-3a1c-4542-99d8-4854d38ffebc.png)
+![](res/images/3ad74c35-3a1c-4542-99d8-4854d38ffebc.png)
 
 以及，请看我如何帮助 Colin 实现 *他的美甲梦* ~
 
 
-![](https://files.mdnice.com/user/88229/cd5b3a87-d153-424b-a061-be7d29992c69.png)
+![](res/images/cd5b3a87-d153-424b-a061-be7d29992c69.png)
 
 
 Let's start !
@@ -54,7 +56,7 @@ chsh -s $(which zsh)
 再打开一个 Ubuntu 的 terminal，你将看到如下内容，证明以上步骤均成功
 
 
-![](https://files.mdnice.com/user/88229/970f6369-c572-4676-b5e2-28fb58345873.png)
+![](res/images/970f6369-c572-4676-b5e2-28fb58345873.png)
 
 
 按照上图中他的提示做即可，建议输入：
@@ -67,7 +69,7 @@ chsh -s $(which zsh)
 
 Tips：VPN在虚拟机不能同步（似乎v2rayN支持Ubuntu但是我没有尝试），所以开梯子没啥用，可能等到某个风和日丽的日子可能就成功了（from gsgg）
 
-![](https://files.mdnice.com/user/88229/346e29bd-4cc8-4a2e-adec-9836b3cebd09.jpg)
+![](res/images/346e29bd-4cc8-4a2e-adec-9836b3cebd09.jpg)
 <div style="text-align: center;">
     上图为我成功安装之后随手拍的窗外景象<br>
     的确风和日丽……
@@ -277,7 +279,7 @@ sudo apt install chromium-chromedriver
 chromium-browser
 ```
 若成功打开如下页面则证明安装成功。
-![](https://files.mdnice.com/user/88229/fe7c3845-68e6-4fa5-9cae-9accb9a6041d.png)
+![](res/images/fe7c3845-68e6-4fa5-9cae-9accb9a6041d.png)
 
 检查 chromedriver 版本
 ```shell
@@ -453,23 +455,25 @@ sudo systemctl enable v2raya
     http://172.x.x.x:2017
     ```
 
-    方法 2：配置端口转发
-    在 Windows 中配置端口转发，将 WSL 的端口映射到 Windows 的本地端口：
-        1. 在 WSL 中运行以下命令获取 WSL 的 IP 地址：
-        ```bash
-        ip addr show eth0 | grep inet
-        ```
+方法 2：配置端口转发
 
-        2. 在 Windows 中打开 PowerShell，运行以下命令：
-        ```powershell
-        netsh interface portproxy add v4tov4 listenport=2017 listenaddress=0.0.0.0 connectport=2017 connectaddress=<WSL的IP>
-        ```
-        例如：
-        ```powershell
-        netsh interface portproxy add v4tov4 listenport=2017 listenaddress=0.0.0.0 connectport=2017 connectaddress=172.x.x.x
-        ```
+在 Windows 中把端口转到 WSL。下面两个 IP 要对应，不能直接照抄 `172.x.x.x`。
 
-        3. 在 Windows 浏览器中访问 `http://localhost:2017`。
+1. 在 WSL 中查看 IP：
+
+    ```bash
+    ip addr show eth0
+    ```
+
+2. 在 Windows 管理员 PowerShell 中设置转发：
+
+    ```powershell
+    netsh interface portproxy add v4tov4 listenport=2017 listenaddress=127.0.0.1 connectport=2017 connectaddress=<WSL的IP>
+    ```
+
+    `listenaddress` 用 `127.0.0.1`，这里只给自己这台电脑访问。如果 WSL 重启后 IP 变了，转发地址也要改。
+
+3. Windows 浏览器访问 `http://localhost:2017`。
 
 ---
 

@@ -54,13 +54,13 @@ $$ conf(A \rightarrow B) = \frac{support(A \cup B)}{support(A)} $$
 
 如果每个 set 中包含 B 的概率和包含 A 的概率无关，那么 A->B 就不有趣。比如说每个集合都包含 B，那么无论 A 是什么，A->B 都是成立的，但是这个规则并没有什么意义。
 
-$$ interest(A \rightarrow B) = |conf(A \rightarrow B) - Pr[B]| $$
+$$ interest(A \rightarrow B) = conf(A \rightarrow B) - Pr[B] $$
 
 abs. difference between its confidence and the fraction of baskets that contain j.
 
 Interesting rules: those with high interest values (usually above 0.5)
 
-很大的负数代表很强的不 interesting，即有 A 就没有 B。
+很大的负数说明负关联：有 A 时，B 反而更少见，也可能值得关注。如果只比较“偏离独立情况的程度”，再取绝对值，取了绝对值就没有正负方向了。
 
 ![alt text](res/images/image_1.png)
 
@@ -71,9 +71,16 @@ Interesting rules: those with high interest values (usually above 0.5)
 1. Find all frequent itemsets in the database.
 2. Generate strong association rules from the frequent itemsets.
 
-    1. For each frequent itemset I, for each non-empty subset A of I, output the rule $A \rightarrow I | A$ ( $I | A$ 就是 $C_I A$ ) if it meets the minimum confidence threshold. 这里其实就是反过来的逻辑，前面是一个集合并另外一个，现在是找到并起来的集合，然后拆分成两个部分。
-    
-    2. {;A, B} 出现的概率一定比 {A, B, C} 大，所以 $conf(A, B \rightarrow C, D) \ge conf(A, B, C \rightarrow D)$
+    1. 对每个频繁项集 I，枚举非空真子集 A，得到规则 $A \rightarrow I \setminus A$，再检查 confidence 是否达标。`I \ A` 是集合差，不是按位或。先找到并起来的集合，再拆成左右两部分，两边都不能空。
+
+    2. `{A, B}` 的支持度大于等于 `{A, B, C}`，而下面两个规则的分子都是 `{A, B, C, D}` 的支持度，所以：
+
+        $$
+        \operatorname{conf}(\{A,B\} \rightarrow \{C,D\})
+        \le \operatorname{conf}(\{A,B,C\} \rightarrow \{D\})
+        $$
+
+        分母越小，confidence 越大，别把不等号写反。
 
 #### Find All Frequent Itemsets
 

@@ -1,3 +1,5 @@
+# Python 面向对象编程
+
 ## 面向对象编程
 
 > &quot;把一组数据结构和处理它们的方法组成对象（object），把相同行为的对象归纳为类（class），通过类的封装（encapsulation）隐藏内部细节，通过继承（inheritance）实现类的特化（specialization）和泛化（generalization），通过多态（polymorphism）实现基于对象类型的动态分派。&quot;
@@ -33,7 +35,8 @@ OOP三步走：第一步定义类，第二步创建对象，第三步给对象�
     ---
 
     ??? info "多态性"
-    不同的对象可以对相同的消息做出不同的响应。
+
+        不同的对象可以对相同的消息做出不同的响应。
 
         ```python
         class Dog:
@@ -817,9 +820,33 @@ if __name__ == '__main__':
 
 我们可以使用一种叫做[UML](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80)（统一建模语言）的东西来进行面向对象建模，其中一项重要的工作就是把类和类之间的关系用标准化的图形符号描述出来。关于UML我们在这里不做详细的介绍，有兴趣的读者可以自行阅读[《UML面向对象设计基础》](https://e.jd.com/30392949.html)一书。
 
-![](./res/uml-components.png)
+类图先记住这几种箭头。空心三角指向父类；菱形在“整体”一边。
 
-![](./res/uml-example.png)
+```mermaid
+classDiagram
+    Animal <|-- Dog : 继承
+    Car o-- Wheel : 聚合
+    House *-- Room : 组合
+    Driver ..> Car : 依赖
+```
+
+比如前面的学生、老师：都能当作 Person，但各自有不同的行为。
+
+```mermaid
+classDiagram
+    Person <|-- Student
+    Person <|-- Teacher
+    class Person {
+        name
+        age
+    }
+    class Student {
+        study()
+    }
+    class Teacher {
+        teach()
+    }
+```
 
 利用类之间的这些关系，我们可以在已有类的基础上来完成某些操作，也可以在已有类的基础上创建新的类，这些都是实现代码复用的重要手段。复用现有的代码不仅可以减少开发的工作量，也有利于代码的管理和维护，这是我们在日常工作中都会使用到的技术手段。
 

@@ -6,7 +6,7 @@
 
 - and: multi乘
 - or: and加
-- not: '/~/$\above$
+- not：取反，记作 $\overline{A}$；代码里常用 `~A` 表示按位取反。
 
 !!! info "用加号乘号原因"
 
@@ -420,6 +420,14 @@ $\sum d$ : 就是自由项
 ![alt text](image-4.png)
 
 ### NOR：或非门
+
+先或再取反：$Y = \overline{A + B} = \overline{A}\,\overline{B}$，所以也可以看成两个输入先非，再与。
+
+只有 A、B 都为 0，输出才是 1。
+
+把两个输入接在一起：`NOR(A, A)` 就是 NOT A。再配合 NOR 可以拼出 OR、AND，和 NAND 一样是通用门。
+
+注意不是把普通 OR 换个名字：输出多了一次非，不能直接套 OR 的结合律。
 
 ### 其他
 

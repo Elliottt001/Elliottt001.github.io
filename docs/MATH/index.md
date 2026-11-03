@@ -1,17 +1,16 @@
 # 数理
 
-<div align="center" style="margin: 14px 0 36px;" markdown>
+<div class="ns-cover" markdown>
 
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;">
-<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#64ffda;box-shadow:0 0 10px #64ffda;animation:heart 1000ms infinite;"></span>
-<span style="font-family:var(--md-code-font);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--md-default-fg-color--light);">知识 / 基础学科</span>
+<div class="ns-cover__label">
+<span>知识 / 基础学科</span>
 </div>
 
-<p style="font-size:20px;color:var(--md-default-fg-color--lighter);max-width:600px;margin-inline:auto;line-height:1.8;">
+<p class="ns-cover__lead">
 ~「Looking at the stars :star:」~
 </p>
 
-<p style="font-size:13px;color:var(--md-default-fg-color--light);">
+<p class="ns-cover__note">
 放他三千裘马去，不寄俗生，唯贪我三枕黄粱梦。
 </p>
 
@@ -21,11 +20,11 @@
 
 ## 01 / 内容导览
 
-一些 [ZJU 学习中数理基础课笔记](https://note.elliotttzhang.cn/KNOWLEDGE)，包括微积分、线性代数、离散数学、[大学物理](https://note.elliotttzhang.cn/KNOWLEDGE/physics/)、[概率论与数理统计](https://note.elliotttzhang.cn/KNOWLEDGE/probability/)。
+一些 [ZJU 学习中数理基础课笔记](./)，包括微积分、线性代数、离散数学、[大学物理](physics/)、[概率论与数理统计](probability/)。
 
-<div class="grid cards" style="grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;" markdown>
+<div class="grid cards" markdown>
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-function-variant: &nbsp;微积分</span>
+- <span class="ns-card-title">:material-function-variant: &nbsp;微积分</span>
 
     ---
 
@@ -40,7 +39,7 @@
     - [多元函数微分学](calculus/differential-calculus-of-multivariate-function.md)
     - [误差分析](calculus/errors-in-calculus.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-matrix: &nbsp;线性代数</span>
+- <span class="ns-card-title">:material-matrix: &nbsp;线性代数</span>
 
     ---
 
@@ -49,7 +48,7 @@
     - [方法总结](linear-algebra/summary-of-LA.md)
     - [知识框架](linear-algebra/knowledge-frame-of-LA.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-graph-outline: &nbsp;离散数学</span>
+- <span class="ns-card-title">:material-graph-outline: &nbsp;离散数学</span>
 
     ---
 
@@ -57,7 +56,7 @@
 
     - [Chap1 逻辑和证明](discrete/chap-1.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-atom: &nbsp;大学物理</span>
+- <span class="ns-card-title">:material-atom: &nbsp;大学物理</span>
 
     ---
 
@@ -69,7 +68,7 @@
     - [电磁学](physics/electricity.md)
     - [电磁学公式物理量总结](physics/electricity-summary.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-dice-5: &nbsp;概率论与数理统计</span>
+- <span class="ns-card-title">:material-dice-5: &nbsp;概率论与数理统计</span>
 
     ---
 
@@ -80,7 +79,7 @@
 </div>
 
 ---
-<div align="center" style="color:var(--md-default-fg-color--light);font-size:13px;margin-top:30px;" markdown>
+<div class="ns-cover__footer" markdown>
 
 :material-chevron-right: 选择一个主题开始探索，或使用左侧导航栏跳转 :material-chevron-left:
 

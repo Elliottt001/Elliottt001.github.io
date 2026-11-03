@@ -1,3 +1,5 @@
+# Lab 0
+
 ## Prerequisite
 ### Challenge 1
 ```shell

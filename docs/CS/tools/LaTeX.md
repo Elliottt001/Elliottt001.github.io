@@ -96,7 +96,6 @@ LaTeX 环境与 C、Python 环境的对应关系：
    \end{pmatrix}
    $$
    ```
- ^a07424
 8. **行列式**：
    ```markdown
    $$
@@ -140,7 +139,7 @@ LaTeX 环境与 C、Python 环境的对应关系：
 | μ   | \mu         |
 | ν   | \nu         |
 | ξ   | \xi         |
-| ο   | \o          |
+| ο   | `o`（直接用拉丁字母 o） |
 | π   | \pi         |
 | ρ   | \rho        |
 | σ   | \sigma      |
@@ -158,10 +157,10 @@ LaTeX 环境与 C、Python 环境的对应关系：
 |Γ|\Gamma|
 |Δ|\Delta|
 |Θ|\Theta|
-|∧|\Lambda|
+|Λ|\Lambda|
 |Ξ|\Xi|
-|∏|\Pi|
-|∑|\Sigma|
+|Π|\Pi|
+|Σ|\Sigma|
 |Υ|\Upsilon|
 |Φ|\Phi|
 |Ψ|\Psi|
@@ -169,9 +168,7 @@ LaTeX 环境与 C、Python 环境的对应关系：
 
 通过对比以上左右两侧的内容，可以发现LaTex表达式完全借助了希腊字母的英文标识，我们可以回到[首页](http://www.xilazimu.net/)查看[英文]列，一看就明白了。
 
-> 补充:下图可以方便大家保存到手机或电脑
-
-![](https://www.xilazimu.net/static/xilazimu/xlzm_upload/images/greek_letter_latex_00.jpg)
+注意：`\Lambda` 是 $\Lambda$，不是逻辑“且”的 $\land$；`\Pi` 是 $\Pi$，连乘符号用 $\prod$；`\Sigma` 是 $\Sigma$，求和符号用 $\sum$。长得像，命令不一样。
 
 $\alpha$ α
 $\xi$

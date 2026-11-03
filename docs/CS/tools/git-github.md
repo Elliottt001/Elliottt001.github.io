@@ -1,3 +1,5 @@
+# Git & GitHub
+
 ## 基本概念
 
 ### 分布式/集中式版本管理
@@ -61,6 +63,21 @@ git checkout -- file
 
 ## 删除文件
 
+```shell
+git rm notes.txt
+git commit -m "Remove notes.txt"
+```
+
+`git rm`：工作区也删，删除记录放进暂存区。只是在文件管理器里删，还要 `git add -u` 才把删除暂存。
+
+如果只是想让 Git 别再跟踪，本地文件还要用：
+
+```shell
+git rm --cached notes.txt
+```
+
+再按需要写进 `.gitignore`，不然下次 `git add` 又可能加回来。`.gitignore` 只忽略未跟踪文件，不会自动取消已有跟踪。
+
 ## 远程仓库
 
 使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
@@ -74,7 +91,7 @@ git checkout -- file
 3. 如果合并有冲突，则解决冲突，并在本地提交；
 4. 没有冲突或者解决掉冲突后，再用 `git push origin <branch-name>` 推送就能成功！
 
-当然！这里帮你整理了一份 **GitHub CLI (`gh`) 常用命令速查表**，方便你快速使用和参考：
+GitHub CLI 的命令放下面，省得每次翻。
 
 ---
 
@@ -206,7 +223,7 @@ git checkout -- file
 
   ```bash
   # Linux/macOS
-  echo "hello" | openssl sha1   # 输出：aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+  printf %s hello | openssl sha1   # 输出：aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
 
   # Windows PowerShell
   Get-FileHash -Algorithm SHA1 file.txt

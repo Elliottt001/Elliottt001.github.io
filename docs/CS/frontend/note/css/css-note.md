@@ -1,3 +1,5 @@
+# CSS 学习笔记
+
 [MDN - CSS起始页](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 
 [MDN - 层叠、优先级、继承](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
@@ -55,6 +57,10 @@ h1,
 ![alt text](image-3.png)
 
 ### 关系选择器 —— 符号
+
+先看关系，再看元素自己：空格是后代，`>` 是直接孩子，`+` 是紧跟着的兄弟，`~` 是后面所有符合条件的兄弟。
+
+比如 `ul > li` 只找这一层，`ul li` 连孙子层里的 li 也找。别只差一个符号，范围就变了。
 
 
 ### **1. 后代选择符（空格）**

@@ -1,3 +1,5 @@
+# Python 文件进阶
+
 
 ## csv文件与csv库
 
@@ -58,14 +60,11 @@
     ```python
     import csv
 
-    with open('scores.csv', 'r') as file:
-        reader = csv.reader(file, delimiter='|')
-        for data_list in reader:
-            print(reader.line_num, end='\t')
-            for elem in data_list:
-                print(elem, end='\t')
-            print()
-        ```
+    with open('scores.csv', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            print(row['姓名'], row['语文'])
+    ```
 
 ---
 
@@ -108,7 +107,7 @@
             scores = [random.randrange(50, 101) for _ in range(3)]
             scores.insert(0, name)
             writer.writerow(scores)
-        ```
+    ```
 
 #### **(2) `csv.DictWriter`**
 - **功能**：将字典形式的数据写入 CSV 文件，需要指定表头。

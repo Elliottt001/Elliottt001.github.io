@@ -1,13 +1,12 @@
 ## Reading Files
 
-`include <fstream>`
+`#include <fstream>`
 
 ![alt text](image.png)
 
-- `cin` 是 ifstream 对象，表示标准输入流
-- `cout` 是 ofstream 对象，表示标准输出流
-
-和普通的 `cin` / `cout` 一样的原因是共享了代码
+- `std::cin` 的类型是 `std::istream`，表示标准输入流。
+- `std::cout` 的类型是 `std::ostream`，表示标准输出流。
+- `std::ifstream` / `std::ofstream` 用来读 / 写文件，分别继承输入 / 输出流的接口，所以也能用 `>>` / `<<`。
 
 ### ifstream member functions
 
@@ -27,4 +26,4 @@ ifstream f;
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 
-这个比直接构建字符串快
+适合把不同类型拼成一段文本，或者从文本里逐项读数据；不能一概说它比直接拼字符串快。

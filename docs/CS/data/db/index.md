@@ -1,60 +1,20 @@
+# 数据库系统
+
+## 课程备忘
+
 实验课不用去
 
-quiz 可以请假补测   
+quiz 可以请假补测
 
+## 笔记入口
 
-// TodoApp.js
-import React, { useState } from "react";
+- [SQL 总结](sql-summary.md)：语句和例子放这里，查写法用。
+- [复习笔记](review.md)：容易混的条件、执行顺序。
 
-const TodoApp = () => {
-  const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState("");
+关系型数据库：数据放在表里，一行是一条记录，一列是一种属性。
 
-  const handleAddTodo = () => {
-    if (newTodo.trim() === "") {
-      alert("Please enter a todo item.");
-      return;
-    }
+比如选课：学生一张表、课程一张表、选课关系再一张表。不用把课程名复制到每个学生后面，关系里存学生 ID 和课程 ID 就行。
 
-    setTodos([...todos, { text: newTodo, completed: false }]);
-    setNewTodo("");
-  };
-
-  const handleDeleteTodo = (index) => {
-    const updatedTodos = todos.filter((_, i) => i !== index);
-    setTodos(updatedTodos);
-  };
-
-  const handleToggleComplete = (index) => {
-    const updatedTodos = todos.map((todo, i) =>
-      i === index ? { ...todo, completed: !todo.completed } : todo
-    );
-    setTodos(updatedTodos);
-  };
-
-  return (
-    <div className="todo-app">
-      <h1>Todo List</h1>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add a new todo"
-      />
-      <button onClick={handleAddTodo}>Add</button>
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index} className={todo.completed ? "completed" : ""}>
-            {todo.text}
-            <button onClick={() => handleDeleteTodo(index)}>Delete</button>
-            <button onClick={() => handleToggleComplete(index)}>
-              {todo.completed ? "Undo" : "Complete"}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default TodoApp;
+- 主键：认出这一行是谁，不能重复，也不能是 NULL。
+- 外键：把表联系起来，例如选课表的学生 ID 指向学生表。
+- SQL 写的是“要哪些数据”，具体怎么查由数据库去安排。

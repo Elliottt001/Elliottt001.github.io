@@ -1,4 +1,4 @@
-`include<sting>`
+`#include <string>`
  
 ![alt text](res/images/image-14.png)
 
@@ -6,7 +6,7 @@
 
 ![alt text](res/images/image-15.png)
 
-cpp 可以直接修改字符串，不像 C 语言字符串是不可变的字符数组（修改的话会返回新的字符串）。
+`std::string` 可以直接改字符，也能增删。C 里的 `char s[] = "hello"` 同样可以改字符，只是数组长度固定；不能改的是字符串字面量，比如让 `const char *p` 指向的 `"hello"`。
 
 ## Member Functions
 
@@ -32,8 +32,8 @@ cpp 可以直接修改字符串，不像 C 语言字符串是不可变的字符�
 
 ![alt text](res/images/image-19.png)
 
-`int n = (int) 42` `n` 里面存的是地址！
+`int n = (int)42;`：n 存的是整数 42，不是地址。`&n` 才是 n 的地址；指针变量才用来存地址。
 
 ![alt text](res/images/image-20.png)
 
-用加法的话，只要有一个是 cpp string，结果就是 cpp string。
+拼接时，运算符两边至少一边是 `std::string` 才能用这套 `+` 重载。`std::string("a") + "b"` 可以，`"a" + "b"` 不行；也不能指望后面才出现的 string 把前面已经出错的加法救回来。

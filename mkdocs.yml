@@ -279,6 +279,7 @@ nav:
 theme:
   # 使用 MkDocs Material 主题。
   name: material
+  language: zh
 
   # 浏览器标签页和收藏夹使用的站点图标。
   favicon: assets/images/logo.png
@@ -608,12 +609,12 @@ extra_css:
   - assets/mkdocs/css/custom.css
   # 额外覆盖样式。
   - assets/mkdocs/css/extra.css
-  # LXGW WenKai 在线字体样式。
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  # 首页布局与明暗配色。
+  - assets/mkdocs/css/home.css
 
 # 额外 JavaScript：用于前端增强能力。
 extra_javascript:
-  # MathJax 初始化脚本。
+  # 首页搜索复用 Material 的站内搜索。
+  - assets/mkdocs/javascripts/home.js
+  # MathJax 配置：仅在含公式的页面加载渲染引擎。
   - assets/mkdocs/javascripts/mathjax.js
-  # MathJax 3 CDN，用于渲染 TeX、MathML 和 CHTML。
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

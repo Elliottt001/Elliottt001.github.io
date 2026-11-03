@@ -1,20 +1,19 @@
 # 开发
 
-<div align="center" style="margin: 14px 0 36px;" markdown>
+<div class="ns-cover" markdown>
 
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;">
-<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#64ffda;box-shadow:0 0 10px #64ffda;animation:heart 1000ms infinite;"></span>
-<span style="font-family:var(--md-code-font);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--md-default-fg-color--light);">知识 / 计算机科学</span>
+<div class="ns-cover__label">
+<span>知识 / 计算机科学</span>
 </div>
 
-<p style="font-size:20px;color:var(--md-default-fg-color--lighter);max-width:600px;margin-inline:auto;line-height:1.8;">
+<p class="ns-cover__lead">
 ~「Hala Madrid」~
 </p>
 
-<p style="font-size:13px;color:var(--md-default-fg-color--light);">
+<p class="ns-cover__note">
 心之所向，虽崇山峻岭，一往无前；
 </p>
-<p style="font-size:13px;color:var(--md-default-fg-color--light);">
+<p class="ns-cover__note">
 剑锋所指，虽万人为敌，所向披靡。
 </p>
 
@@ -26,9 +25,9 @@
 
 一些 [CS 学习笔记](https://note.elliotttzhang.cn/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
 
-<div class="grid cards" style="grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;" markdown>
+<div class="grid cards" markdown>
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-code-tags: &nbsp;编程语言</span>
+- <span class="ns-card-title">:material-code-tags: &nbsp;编程语言</span>
 
     ---
 
@@ -39,7 +38,7 @@
     - **Python** — [基础语法](pl/Python/py-basic-grammar.md) · [面向对象](pl/Python/py-oop.md) · [Web 采集](pl/Python/web-scraping.md) · [项目开发](pl/Python/development-in-py.md)
     - **Go** — [GORM](pl/go/db.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-graph: &nbsp;算法相关</span>
+- <span class="ns-card-title">:material-graph: &nbsp;算法相关</span>
 
     ---
 
@@ -50,7 +49,7 @@
     - [高级数据结构 (ADS)](algorithm/ads/index.md) — AVL、红黑树、B+树、动态规划、回溯
     - [Misc](algorithm/misc.md) · [Sort](algorithm/sort.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-monitor: &nbsp;计算机系统</span>
+- <span class="ns-card-title">:material-monitor: &nbsp;计算机系统</span>
 
     ---
 
@@ -60,7 +59,7 @@
     - [计算机组成原理](system/priciples/index.md) — 系统概述、汇编指令、数的表示
     - [物联网技术基础与应用开发](system/iot/index.md) — 硬件、操作系统、边缘智能、通信协议、云平台与安全
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-database: &nbsp;数据科学</span>
+- <span class="ns-card-title">:material-database: &nbsp;数据科学</span>
 
     ---
 
@@ -69,7 +68,7 @@
     - [大数据挖掘](data/mining-massive-data/index.md) — MapReduce、频繁项集、LSH
     - [数据库系统](data/db/index.md) — SQL 总结、复习笔记
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-web: &nbsp;前端 & Web</span>
+- <span class="ns-card-title">:material-web: &nbsp;前端 & Web</span>
 
     ---
 
@@ -78,7 +77,7 @@
     - [内容速查](frontend/note/index.md) — Web 基础、HTML、CSS
     - [Web](web/web.md) · [IS](is/index.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-shield-lock: &nbsp;网络安全 & 区块链</span>
+- <span class="ns-card-title">:material-shield-lock: &nbsp;网络安全 & 区块链</span>
 
     ---
 
@@ -87,7 +86,7 @@
     - [CTF](ctf/index.md) — 基础、AAA、Lab 实验
     - [区块链](blockchain/background.md) — 技术原理、比特币、以太坊
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-wrench: &nbsp;实用工具</span>
+- <span class="ns-card-title">:material-wrench: &nbsp;实用工具</span>
 
     ---
 
@@ -98,7 +97,7 @@
     - [Markdown](tools/markdown-basics.md) · [LaTeX](tools/LaTeX.md) · [MkDocs](tools/mkdocs.md)
     - [Shell](tools/shell.md) · [Anaconda](tools/anaconda.md) · [VMware](tools/vmware-linux.md) · [Windows](tools/windows/win-note.md)
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-book-open-variant: &nbsp;实战 & 杂项</span>
+- <span class="ns-card-title">:material-book-open-variant: &nbsp;实战 & 杂项</span>
 
     ---
 
@@ -110,7 +109,7 @@
 </div>
 
 ---
-<div align="center" style="color:var(--md-default-fg-color--light);font-size:13px;margin-top:30px;" markdown>
+<div class="ns-cover__footer" markdown>
 
 :material-chevron-right: 选择一个主题开始探索，或使用左侧导航栏跳转 :material-chevron-left:
 

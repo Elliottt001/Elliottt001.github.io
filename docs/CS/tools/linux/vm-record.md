@@ -65,7 +65,8 @@ sudo apt install python3-pip
 
 ```shell
 sudo apt-get update
-sudo apt-get install ssh-contact-service
+sudo apt-get install openssh-server
+sudo systemctl enable --now ssh
 ```
 
 ```shell

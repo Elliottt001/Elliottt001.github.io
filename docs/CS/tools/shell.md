@@ -1,3 +1,5 @@
+# Shell
+
 >from MIT Missing Semester of Your CS Education
 
 >Actually, there is one thing that I don't understand, it is why do you quit listening to missing semester and search for a domestic class which waste your whole afternoon and from which you learn NOTHING.
@@ -593,7 +595,7 @@ is_prime $number
 
 `touch {foo,bar}/{a..j}`: 创建fooa到fooj和bara到barj
 
-- shebang: 告诉用什么解释器，如果不知道具体路径：`#!usr/bin/env python3` 调用env方法
+- shebang: 告诉用什么解释器，如果不知道具体路径：`#!/usr/bin/env python3` 调用env方法
 
 - 语法检查：`shellcheck file_name`
 
@@ -606,7 +608,9 @@ is_prime $number
     - || （逻辑或）： `命令1 || 命令2`，先执行命令1，若失败，则执行命令2；若命令1成功，则短路命令2。
         ```shell
         false || echo "hello"  # stdout: hello
-        true || echo "wont't be printed"  # stdout:   
+        true || echo "won't be printed"  # stdout:
+        ```
+
     - && (逻辑与)： `命令1 && 命令2`，命令1错，不执行；命令1对，都会执行
         ![alt text](res/images/image-8.png)
         ![alt text](res/images/image-9.png)
@@ -671,7 +675,7 @@ is_prime $number
 
 **6. Shell 特定的保留字**
 这些是 Shell 的保留字，专用于特定语法功能：
-- `[[` 和 `]]`：扩展条件测试的关键字（Bash 特有）。
+- `[[` 和 `]]`：扩展条件测试，Bash 和 Zsh 都支持；POSIX sh 不保证支持。
 - `!`：逻辑非，用于条件取反。
 - `.`（点命令）：执行脚本文件的内容，相当于 `source`。
 - `:`：空操作，始终返回成功。
@@ -683,7 +687,7 @@ is_prime $number
 ---
 
 **7. 异常处理关键字**
-- `try`/`catch`：在某些扩展中支持异常处理（例如 Zsh）。
+- Shell 通常用退出状态配合 `if`、`||` 处理失败；不要直接套 Python 的 `try`/`catch`。Zsh 有 `always` 语法，写法也不一样。
 - `||` 和 `&&`：逻辑短路操作，用于执行条件命令链。
 
 ---
@@ -696,7 +700,7 @@ is_prime $number
 
 **注意**
 - **Zsh 与 Bash 的差异**：
-  Zsh 和 Bash 的关键字几乎一致，但 Zsh 支持一些额外的扩展（如异常处理相关的 `try`/`catch`）。
+  Bash 和 Zsh 的语法有不少共同点，但各有扩展；用哪个解释器，就查哪个的语法。
 - **查看关键字的方法**：
   在 Bash 或 Zsh 中可以用以下命令列出所有保留关键字：
   ```bash
@@ -876,7 +880,8 @@ Shell 默认不支持直接的算术运算，可以使用 `(( ))` 或 `$(( ))` �
 
 - 方法3：脚本文件中直接定义
 变量默认是全局变量，如果需要在函数内部定义局部变量，则需要加上`local`关键字
-??? info "$的用法by ChatGPT
+
+??? info "$ 的用法"
 
     在 **Zsh** 或其他大多数 Unix Shell 中，`$` 是用来**引用变量**的符号。它的作用是让 Shell 解析变量的值，而不是直接输出变量名本身。
 

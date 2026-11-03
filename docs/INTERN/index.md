@@ -1,13 +1,12 @@
 # 实习
 
-<div align="center" style="margin: 14px 0 36px;" markdown>
+<div class="ns-cover" markdown>
 
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;">
-<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#64ffda;box-shadow:0 0 10px #64ffda;animation:heart 1000ms infinite;"></span>
-<span style="font-family:var(--md-code-font);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--md-default-fg-color--light);">实习 / 求职</span>
+<div class="ns-cover__label">
+<span>实习 / 求职</span>
 </div>
 
-<p style="font-size:20px;color:var(--md-default-fg-color--lighter);max-width:600px;margin-inline:auto;line-height:1.8;">
+<p class="ns-cover__lead">
 准备面试、整理八股、沉淀经验。
 </p>
 
@@ -17,9 +16,9 @@
 
 ## 01 / 面试准备
 
-<div class="grid cards" style="grid-template-columns:1fr 1fr;gap:28px;" markdown>
+<div class="grid cards" markdown>
 
-- <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-clipboard-list: &nbsp;八股文</span>
+- <span class="ns-card-title">:material-clipboard-list: &nbsp;八股文</span>
 
     ---
 
@@ -28,7 +27,7 @@
 </div>
 
 ---
-<div align="center" style="color:var(--md-default-fg-color--light);font-size:13px;margin-top:30px;" markdown>
+<div class="ns-cover__footer" markdown>
 
 :material-chevron-right: 内容持续更新中 :material-chevron-left:
 
