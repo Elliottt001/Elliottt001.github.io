@@ -1,16 +1,12 @@
 # 项目
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>项目 / 实践</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">项目 / 实践</figcaption>
+<p class="ns-epigraph__motto" lang="fr">Il faut cultiver notre jardin.</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">草木蔓发，</span><span class="ns-epigraph__phrase">春山可望。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-把想法变成代码，把代码变成产品。
-</p>
-
-</div>
+</figure>
 
 ---
 

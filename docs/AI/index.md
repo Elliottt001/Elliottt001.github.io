@@ -1,16 +1,13 @@
 # 人工智能
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>笔记 / 学习路径</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">笔记 / 学习路径</figcaption>
+<p class="ns-epigraph__motto" lang="fr">L’essentiel est invisible pour les yeux.</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">心事浩茫连广宇，</span></p>
+<p><span class="ns-epigraph__phrase">于无声处听惊雷。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-从神经网络到智能体，记录 AI 学习路上的关键概念与实践。
-</p>
-
-</div>
+</figure>
 
 ---
 

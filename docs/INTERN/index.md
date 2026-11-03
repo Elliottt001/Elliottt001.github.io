@@ -1,16 +1,12 @@
 # 实习
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>实习 / 求职</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">实习 / 求职</figcaption>
+<p class="ns-epigraph__motto" lang="en">My heart leaps up.</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">好风凭借力，</span><span class="ns-epigraph__phrase">送我上青云。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-准备面试、整理八股、沉淀经验。
-</p>
-
-</div>
+</figure>
 
 ---
 

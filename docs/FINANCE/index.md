@@ -1,23 +1,13 @@
 # 商科
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>知识 / 经济金融</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">知识 / 经济金融</figcaption>
+<p class="ns-epigraph__motto" lang="en">Make haste slowly.</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">且将新火试新茶，</span></p>
+<p><span class="ns-epigraph__phrase">诗酒趁年华。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-~「Hala Madrid」~
-</p>
-
-<p class="ns-cover__note">
-心之所向，虽崇山峻岭，一往无前；
-</p>
-<p class="ns-cover__note">
-剑锋所指，虽万人为敌，所向披靡。
-</p>
-
-</div>
+</figure>
 
 ---
 

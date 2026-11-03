@@ -1,23 +1,13 @@
 # 阅读
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>阅读 / 读书笔记</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">阅读 / 读书笔记</figcaption>
+<p class="ns-epigraph__motto" lang="la">Per aspera ad astra</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">于高山之巅，</span><span class="ns-epigraph__phrase">方见大河奔涌；</span></p>
+<p><span class="ns-epigraph__phrase">于群峰之上，</span><span class="ns-epigraph__phrase">便觉长风浩荡。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-~「Per aspera ad astra」~
-</p>
-
-<p class="ns-cover__note">
-于高山之巅，方见大河奔涌；
-</p>
-<p class="ns-cover__note">
-于群峰之上，便觉长风浩荡。
-</p>
-
-</div>
+</figure>
 
 ---
 

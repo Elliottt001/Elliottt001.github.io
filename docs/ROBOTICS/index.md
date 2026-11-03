@@ -1,16 +1,13 @@
 # 硬件
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>硬件 / 机器人</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">硬件 / 机器人</figcaption>
+<p class="ns-epigraph__motto" lang="en">Attention Is All You Need</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">仰观宇宙之大，</span></p>
+<p><span class="ns-epigraph__phrase">俯察品类之盛。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-从软件到硬件，打通计算机系统的最后一公里。
-</p>
-
-</div>
+</figure>
 
 ---
 

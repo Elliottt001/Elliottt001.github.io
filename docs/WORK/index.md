@@ -1,20 +1,12 @@
 # 工作
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>工作 / 学生工作</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">工作 / 学生工作</figcaption>
+<p class="ns-epigraph__motto" lang="fr">Le jour se lève</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">全都是泡沫，</span><span class="ns-epigraph__phrase">只一刹的花火</span></p>
 </div>
-
-<p class="ns-cover__lead">
-~「Le jour se lève」~
-</p>
-
-<p class="ns-cover__note">
-全都是泡沫，只一刹的花火
-</p>
-
-</div>
+</figure>
 
 ---
 

@@ -1,20 +1,12 @@
 # 数理
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>知识 / 基础学科</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">知识 / 基础学科</figcaption>
+<p class="ns-epigraph__motto" lang="en">Looking at the stars ☆</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">放他三千裘马去，</span><span class="ns-epigraph__phrase">不寄俗生，</span><span class="ns-epigraph__phrase">唯贪我三枕黄粱梦。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-~「Looking at the stars :star:」~
-</p>
-
-<p class="ns-cover__note">
-放他三千裘马去，不寄俗生，唯贪我三枕黄粱梦。
-</p>
-
-</div>
+</figure>
 
 ---
 

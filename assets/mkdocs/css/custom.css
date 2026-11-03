@@ -139,6 +139,74 @@ body[data-md-color-scheme] .md-typeset summary::after { color: var(--nh-accent);
 .md-typeset .ns-cover__lead { margin: 0; color: var(--nh-ink); font-family: var(--ns-display); font-size: 23px; font-weight: 600; line-height: 1.65; }
 .md-typeset .ns-cover__note { margin: 9px 0 0; color: var(--nh-muted); font-size: 13px; }
 .ns-cover__footer { margin: 24px 0 0; color: var(--nh-muted); font-size: 13px; }
+
+/* Personal mottos read like a book's dedication, distinct from summary covers. */
+.md-typeset .ns-epigraph {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: 22px;
+  margin: 0 0 32px;
+  padding: 30px 0 34px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+.md-typeset .ns-epigraph__label {
+  margin: 0;
+  color: var(--nh-muted);
+  font-family: var(--ns-font);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+.md-typeset .ns-epigraph__motto {
+  max-width: 100%;
+  margin: 0;
+  color: var(--nh-accent);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: clamp(30px, 3.2vw, 44px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+.ns-epigraph__motto::before,
+.ns-epigraph__motto::after {
+  display: inline-block;
+  color: var(--nh-muted);
+  font-family: var(--ns-display);
+  font-size: 0.45em;
+  font-style: normal;
+  vertical-align: 0.25em;
+}
+.ns-epigraph__motto::before { content: "「"; margin-right: 0.45em; }
+.ns-epigraph__motto::after { content: "」"; margin-left: 0.45em; }
+.ns-epigraph__verse {
+  display: grid;
+  gap: 4px;
+  max-width: 100%;
+}
+.md-typeset .ns-epigraph__verse p {
+  margin: 0;
+  color: var(--nh-ink);
+  font-family: var(--ns-display);
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.08em;
+  text-wrap: balance;
+}
+.ns-epigraph__phrase { display: inline-block; }
+@media (max-width: 680px) {
+  .md-typeset .ns-epigraph { gap: 20px; padding: 24px 0 28px; margin-bottom: 24px; }
+  .md-typeset .ns-epigraph__label { font-size: 10px; letter-spacing: 0.12em; }
+  .md-typeset .ns-epigraph__verse p { letter-spacing: 0.05em; }
+}
+
 .ns-reading { display: grid; gap: 12px; }
 .ns-reading__row { display: grid; grid-template-columns: 60px minmax(0, 1fr); align-items: baseline; gap: 16px; padding: 16px; border-radius: 8px; background: var(--nh-tint); }
 .ns-reading__step { color: var(--nh-accent); font-size: 12px; font-weight: 650; white-space: nowrap; }

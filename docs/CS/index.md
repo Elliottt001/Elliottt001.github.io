@@ -1,23 +1,13 @@
 # 开发
 
-<div class="ns-cover" markdown>
-
-<div class="ns-cover__label">
-<span>知识 / 计算机科学</span>
+<figure class="ns-epigraph">
+<figcaption class="ns-epigraph__label">知识 / 计算机科学</figcaption>
+<p class="ns-epigraph__motto" lang="es">Hala Madrid</p>
+<div class="ns-epigraph__verse" lang="zh-CN">
+<p><span class="ns-epigraph__phrase">心之所向，</span><span class="ns-epigraph__phrase">虽崇山峻岭，</span><span class="ns-epigraph__phrase">一往无前；</span></p>
+<p><span class="ns-epigraph__phrase">剑锋所指，</span><span class="ns-epigraph__phrase">虽万人为敌，</span><span class="ns-epigraph__phrase">所向披靡。</span></p>
 </div>
-
-<p class="ns-cover__lead">
-~「Hala Madrid」~
-</p>
-
-<p class="ns-cover__note">
-心之所向，虽崇山峻岭，一往无前；
-</p>
-<p class="ns-cover__note">
-剑锋所指，虽万人为敌，所向披靡。
-</p>
-
-</div>
+</figure>
 
 ---
 
