@@ -412,6 +412,196 @@ copyright: >
 
 # 主题扩展信息：控制页脚社交链接、生成器标识和 Cookie 授权弹窗。
 extra:
+  # 板块首页的外部网站：每页三条，网站信息在 sites 中统一维护。
+  elsewhere:
+    pages:
+      AI/index.md:
+      - teachable
+      - explore
+      - earth
+      CS/index.md:
+      - ncase
+      - windows
+      - window
+      MATH/index.md:
+      - polypad
+      - patatap
+      - stars
+      PROJECT/index.md:
+      - alchemy
+      - explore
+      - music
+      INTERN/index.md:
+      - window
+      - earth
+      - trivia
+      ROBOTICS/index.md:
+      - circuit
+      - sand
+      - art
+      FINANCE/index.md:
+      - dollar
+      - size
+      - music
+      WORK/index.md:
+      - trivia
+      - windows
+      - earth
+      BOOK/index.md:
+      - books
+      - art
+      - alchemy
+    sites:
+      teachable:
+        preview: assets/mkdocs/images/elsewhere/previews/teachable.jpg
+        headline: 教会机器，认出一点世界
+        icon: assets/mkdocs/images/elsewhere/logos/teachable.png
+        name: Teachable Machine
+        invitation: 教它一点
+        description: 用图片、声音或姿势，训练一个小模型。
+        url: https://teachablemachine.withgoogle.com/
+      window:
+        preview: assets/mkdocs/images/elsewhere/previews/window.jpg
+        headline: 借一扇窗，看看远方
+        icon: assets/mkdocs/images/elsewhere/logos/window.png
+        name: WindowSwap
+        invitation: 借一扇窗
+        description: 看看世界某处，一个人窗外的风景。
+        url: https://www.window-swap.com/
+      earth:
+        preview: assets/mkdocs/images/elsewhere/previews/earth.jpg
+        headline: 把耳朵，交给山海
+        icon: assets/mkdocs/images/elsewhere/logos/earth.svg
+        name: earth.fm
+        invitation: 听听自然
+        description: 雨林、海岸和鸟鸣，把耳朵交给远方。
+        url: https://earth.fm/
+      sand:
+        monochrome: true
+        preview: assets/mkdocs/images/elsewhere/previews/sand.jpg
+        headline: 在沙与火之间，画一场实验
+        icon: assets/mkdocs/images/elsewhere/logos/sand.png
+        name: Sandspiel
+        invitation: 画场实验
+        description: 放一点沙、水和火，看它们怎样相遇。
+        url: https://sandspiel.club/
+      alchemy:
+        preview: assets/mkdocs/images/elsewhere/previews/alchemy.jpg
+        headline: 从四种元素，组合一个世界
+        icon: assets/mkdocs/images/elsewhere/logos/alchemy.png
+        name: Little Alchemy 2
+        invitation: 造点东西
+        description: 从水、火、空气和土地开始，组合一个世界。
+        url: https://littlealchemy2.com/
+      ncase:
+        preview: assets/mkdocs/images/elsewhere/previews/ncase.jpg
+        headline: 用小游戏，想明白大问题
+        icon: assets/mkdocs/images/elsewhere/logos/ncase.png
+        name: Nicky Case
+        invitation: 玩懂一点
+        description: 关于信任、选择与社会的互动小故事。
+        url: https://ncase.me/
+      windows:
+        pixel: true
+        preview: assets/mkdocs/images/elsewhere/previews/windows.jpg
+        headline: 打开一台不存在的旧电脑
+        icon: assets/mkdocs/images/elsewhere/logos/windows.png
+        name: Windows93
+        invitation: 误入旧日
+        description: 打开一台虚构的复古电脑，四处点点。
+        url: https://v1.windows93.net/
+      polypad:
+        preview: assets/mkdocs/images/elsewhere/previews/polypad.png
+        headline: 把数学，铺成一张画布
+        icon: assets/mkdocs/images/elsewhere/logos/polypad.svg
+        name: Polypad
+        invitation: 摆弄图形
+        description: 把几何、数字和图案铺在同一张画布上。
+        url: https://polypad.amplify.com/
+      explore:
+        preview: assets/mkdocs/images/elsewhere/previews/explore.jpg
+        headline: 让抽象的道理，动起来
+        icon: assets/mkdocs/images/elsewhere/logos/explore.svg
+        name: Explorable Explanations
+        invitation: 动手理解
+        description: 拖一拖、试一试，让抽象概念变得可玩。
+        url: https://explorabl.es/
+      patatap:
+        preview: assets/mkdocs/images/elsewhere/previews/patatap.jpg
+        headline: 随手敲几下，声音就有了形状
+        icon: assets/mkdocs/images/elsewhere/logos/patatap.svg
+        name: Patatap
+        invitation: 敲点节奏
+        description: 敲键盘或触碰屏幕，让声音和形状一起跳动。
+        url: https://patatap.com/
+      circuit:
+        pixel: true
+        preview: assets/mkdocs/images/elsewhere/previews/circuit.jpg
+        headline: 搭一段电路，看电流旅行
+        icon: assets/mkdocs/images/elsewhere/logos/circuit.png
+        name: Falstad Circuit
+        invitation: 点亮电路
+        description: 搭一小段电路，看电流在元件间流动。
+        url: https://www.falstad.com/circuit/circuitjs.html
+      stars:
+        preview: assets/mkdocs/images/elsewhere/previews/stars.jpg
+        headline: 换个地方，抬头看星星
+        icon: assets/mkdocs/images/elsewhere/logos/stars.png
+        name: Stellarium Web
+        invitation: 抬头望望
+        description: 换一个时间与地点，看看头顶的星空。
+        url: https://stellarium-web.org/
+      dollar:
+        preview: assets/mkdocs/images/elsewhere/previews/dollar.jpg
+        headline: 走进数字背后的日常
+        icon: assets/mkdocs/images/elsewhere/logos/dollar.svg
+        name: Dollar Street
+        invitation: 看看生活
+        description: 走进不同收入家庭，看看日常物件的模样。
+        url: https://www.gapminder.org/dollar-street/
+      size:
+        preview: assets/mkdocs/images/elsewhere/previews/size.jpg
+        headline: 把国家挪一挪，重看世界
+        icon: assets/mkdocs/images/elsewhere/logos/size.png
+        name: The True Size Of…
+        invitation: 挪动世界
+        description: 把国家拖到别处，重新认识地图上的大小。
+        url: https://thetruesize.com/
+      music:
+        preview: assets/mkdocs/images/elsewhere/previews/music.jpg
+        headline: 选一个年代，听另一种生活
+        icon: assets/mkdocs/images/elsewhere/logos/music.png
+        name: Radiooooo
+        invitation: 听另一年
+        description: 选一个国家、一个年代，听那里流淌的音乐。
+        url: https://app.radiooooo.com/
+      trivia:
+        monochrome: true
+        preview: assets/mkdocs/images/elsewhere/previews/trivia.jpg
+        headline: 给世界的故事，排个先后
+        icon: assets/mkdocs/images/elsewhere/logos/trivia.svg
+        name: Wikitrivia
+        invitation: 猜猜先后
+        description: 把人物、作品和事件放回历史的时间线上。
+        url: https://wikitrivia.tomjwatson.com/
+      books:
+        monochrome: true
+        preview: assets/mkdocs/images/elsewhere/previews/books.jpg
+        headline: 找一本旧书，慢慢读
+        icon: assets/mkdocs/images/elsewhere/logos/books.svg
+        name: Standard Ebooks
+        invitation: 翻本旧书
+        description: 挑一本精心排版的英文公版书，慢慢读。
+        url: https://standardebooks.org/
+      art:
+        preview: assets/mkdocs/images/elsewhere/previews/art.jpg
+        headline: 走进画里，也走进远方
+        icon: assets/mkdocs/images/elsewhere/logos/art.png
+        name: Google Arts & Culture
+        invitation: 看点艺术
+        description: 走进博物馆与画作，给目光换一种风景。
+        url: https://artsandculture.google.com/
+
   # 页脚社交链接列表。
   social:
     - name: GitHub | Elliottt001
@@ -618,6 +808,8 @@ extra_css:
 
 # 额外 JavaScript：用于前端增强能力。
 extra_javascript:
+  # 外链预览卡片的轻微鼠标倾斜反馈。
+  - assets/mkdocs/javascripts/elsewhere.js
   # 首页搜索复用 Material 的站内搜索。
   - assets/mkdocs/javascripts/home.js
   # MathJax 配置：仅在含公式的页面加载渲染引擎。

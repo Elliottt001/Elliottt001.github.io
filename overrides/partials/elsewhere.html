@@ -1,0 +1,33 @@
+{% set elsewhere = config.extra.elsewhere %}
+{% set selections = elsewhere.pages.get(page.file.src_uri, []) %}
+{% if selections %}
+<section class="ns-elsewhere" aria-labelledby="elsewhere-title">
+  <header class="ns-elsewhere__header">
+    <div>
+      <span class="ns-elsewhere__eyebrow" lang="en">Elsewhere</span>
+      <h2 id="elsewhere-title">去别处逛逛</h2>
+    </div>
+    <p>离开这一页，遇见一点别的。</p>
+  </header>
+  <nav class="ns-elsewhere__links" aria-label="去别处逛逛（在新标签页打开）">
+    {% for key in selections %}
+    {% set link = elsewhere.sites[key] %}
+    <a class="ns-elsewhere__link" href="{{ link.url | e }}" target="_blank" rel="noopener noreferrer">
+      <span class="ns-elsewhere__open" aria-hidden="true"><svg class="ns-elsewhere__arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></svg>去看看</span>
+      <span class="ns-elsewhere__hero">
+        <span class="ns-elsewhere__brand{% if link.monochrome %} ns-elsewhere__brand--monochrome{% endif %}{% if link.pixel %} ns-elsewhere__brand--pixel{% endif %}"><img src="{{ link.icon | url }}" alt="" width="72" height="72" loading="lazy"></span>
+        <span class="ns-elsewhere__name">{{ link.name | e }}</span>
+      </span>
+      <span class="ns-elsewhere__copy">
+        <span class="ns-elsewhere__invitation">{{ link.headline | e }}</span>
+        <span class="ns-elsewhere__description">{{ link.description | e }}</span>
+      </span>
+      {% if link.preview %}
+      <span class="ns-elsewhere__preview"><img src="{{ link.preview | url }}" alt="{{ link.name | e }} 页面预览" width="960" height="660" loading="lazy"></span>
+      {% endif %}
+      <span class="ns-elsewhere__address">{{ link.url | replace('https://', '') | trim('/') | e }}</span>
+    </a>
+    {% endfor %}
+  </nav>
+</section>
+{% endif %}
