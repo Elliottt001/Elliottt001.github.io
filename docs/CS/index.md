@@ -58,6 +58,7 @@
 
     - [数字逻辑设计](system/digital-design/chap1.md) — 数字系统、组合逻辑
     - [计算机组成原理](system/priciples/index.md) — 系统概述、汇编指令、数的表示
+    - [物联网技术基础与应用开发](system/iot/index.md) — 硬件、操作系统、边缘智能、通信协议、云平台与安全
 
 - <span style="font-size:1.5em;font-weight:600;text-transform:uppercase;">:material-database: &nbsp;数据科学</span>
 

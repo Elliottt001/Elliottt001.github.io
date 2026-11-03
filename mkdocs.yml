@@ -118,6 +118,16 @@ nav:
         - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
         - 汇编语言指令概述: CS/system/priciples/instructions.md
         - 数的表示: CS/system/priciples/number_representation.md
+      - 物联网技术基础与应用开发:
+        - 课程目录: CS/system/iot/index.md
+        - 第一章 物联网概述: CS/system/iot/chap1.md
+        - 第二章 物联网硬件平台: CS/system/iot/chap2.md
+        - 第三章 物联网操作系统: CS/system/iot/chap3.md
+        - 第四章 边缘智能: CS/system/iot/chap4.md
+        - 第五章 低功耗通信协议: CS/system/iot/chap5.md
+        - 第六章 物联网云平台: CS/system/iot/chap6.md
+        - 第七章 云端融合物联网软件开发: CS/system/iot/chap7.md
+        - 第八章 物联网安全: CS/system/iot/chap8.md
     - 算法相关:
       - LeetCode:
         - 两数之和: CS/algorithm/leetcode/two-sum.md
