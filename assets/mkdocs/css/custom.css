@@ -114,10 +114,9 @@ body[data-md-color-scheme] .md-typeset summary::after { color: var(--nh-accent);
 @media screen and (min-width: 76.25em) {
   .md-nav--primary > .md-nav__title, .md-nav--secondary .md-nav__title { background: transparent; box-shadow: none; }
 }
-.md-nav__link { margin: 2px 0; padding: 5px 8px; border-radius: 5px; }
-.md-nav__container > .md-nav__link { margin: 0; padding: 0; }
+:where(.md-nav__item) > .md-nav__link { margin: 2px 0; padding: 5px 8px; border-radius: 5px; }
 .md-nav__link:hover, .md-nav__link--active { color: var(--nh-accent); }
-.md-nav__item .md-nav__link--active { background: var(--nh-tint); color: var(--nh-accent); }
+.md-nav__item .md-nav__link--active { background: var(--nh-tint); color: var(--nh-accent); border-radius: 5px; }
 .md-nav--secondary { border-left: 1px solid var(--nh-line); }
 .md-source-file { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--nh-line); color: var(--nh-muted); font-size: 12px; }
 .md-footer { background: #142536; }
