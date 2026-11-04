@@ -23,11 +23,11 @@ nav:
     - 🕑更新记录: changelog.md
   - 人工智能:
     - 封面: AI/index.md
-    - AI 基础:
-      - 人工神经网络（ANN）: AI/basic/ANN.md
-      - 深度学习（DL）: AI/basic/DL.md
-      - 机器学习（ML）: AI/basic/ML.md
-      - 图灵机与可计算性: AI/basic/Turing.md
+    - AI基础:
+      - ANN: AI/basic/ANN.md
+      - DL: AI/basic/DL.md
+      - ML: AI/basic/ML.md
+      - Turing: AI/basic/Turing.md
     - 大语言模型:
       - Transformer: AI/llm-basic/transformer.md
     - 智能体:
@@ -37,24 +37,24 @@ nav:
   - 数理:
     - 封面: MATH/index.md
     - 微积分:
-      - 二重积分: MATH/calculus/double-integral.md
-      - 错题与易错点: MATH/calculus/errors-in-calculus.md
-      - 微积分知识框架: MATH/calculus/knowledge-frame-of-calculus.md
-      - 级数课堂笔记: MATH/calculus/series.md
-      - 多元函数方法总结: MATH/calculus/summary-of-multi-func.md
+      - double-integral: MATH/calculus/double-integral.md
+      - errors-in-calculus: MATH/calculus/errors-in-calculus.md
+      - knowledge-frame-of-calculus: MATH/calculus/knowledge-frame-of-calculus.md
+      - series: MATH/calculus/series.md
+      - summary-of-multi-func: MATH/calculus/summary-of-multi-func.md
       - 方法总结: MATH/calculus/summary-of-calculus.md
       - 思想方法: MATH/calculus/thought-for-calculus.md
-      - 级数方法总结: MATH/calculus/series-sdk.md
+      - 级数: MATH/calculus/series-sdk.md
       - 矢量代数与空间解析几何: MATH/calculus/vector-algebra.md
       - 多元函数微分学: MATH/calculus/differential-calculus-of-multivariate-function.md
     - 线性代数:
-      - 线性代数知识框架: MATH/linear-algebra/knowledge-frame-of-LA.md
+      - knowledge-frame-of-LA: MATH/linear-algebra/knowledge-frame-of-LA.md
       - 方法总结: MATH/linear-algebra/summary-of-LA.md
     - 离散数学:
       - 课程信息与复习范围: MATH/discrete/index.md
-      - 第一章 逻辑与证明: MATH/discrete/chap-1.md
+      - Chap1 逻辑和证明: MATH/discrete/chap-1.md
     - 大学物理:
-      - 大学物理课程信息: MATH/physics/index.md
+      - 大雾下课程信息: MATH/physics/index.md
       - 考试复习笔记: MATH/physics/exam-review.md
       - 动力学: MATH/physics/dynamics-motion.md
       - 电磁学: MATH/physics/electricity.md
@@ -62,19 +62,19 @@ nav:
     - 概率论与数理统计:
       - 课程信息: MATH/probability/index.md
   - 开发:
-    - 总览: CS/index.md
+    - CS/index.md
     - 实战开发:
       - 项目组织: CS/develop/project.md
-      - Git 规范: CS/develop/git.md
+      - Git规范: CS/develop/git.md
       - 编程风格: CS/develop/programming.md
     - 前端开发:
       - 学习笔记:
         - 内容速查: CS/frontend/note/index.md
-        - Web 技术基础: CS/frontend/note/web/build.md
-        - HTML 标签速查: CS/frontend/note/html/tag.md
+        - web技术基础: CS/frontend/note/web/build.md
+        - HTML: CS/frontend/note/html/tag.md
         - CSS: CS/frontend/note/css/css-note.md
     - 编程语言:
-      - C 语言:
+      - C语言:
         - 数据类型: CS/pl/C/01-data-types.md
         - 运算符和表达式: CS/pl/C/02-operators.md
         - 循环和分支: CS/pl/C/03-control-flow.md
@@ -91,19 +91,19 @@ nav:
         - 课程信息: CS/pl/cpp/index.md
         - CS106X:
           - 课程信息: CS/pl/cpp/cs106x/index.md
-          - 第 2 讲 字符串（Strings）: CS/pl/cpp/cs106x/strings.md
-          - 第 3 讲 流（Streams）: CS/pl/cpp/cs106x/streams.md
-          - 第 4 讲 向量、网格与链表: CS/pl/cpp/cs106x/vector-grid-linkedlist.md
+          - Lecture 2:Strings: CS/pl/cpp/cs106x/strings.md
+          - Lecture 3:Streams: CS/pl/cpp/cs106x/streams.md
+          - Lecture 4:Vectors, Grids, Linked Lists: CS/pl/cpp/cs106x/vector-grid-linkedlist.md
           - 函数、默认参数与引用: CS/pl/cpp/cs106x/fuctions.md
           - 栈与队列: CS/pl/cpp/cs106x/stacks-queues.md
         - CS106L:
           - 课程信息: CS/pl/cpp/cs106l/index.md
-          - 第 0 讲 C++ 导论: CS/pl/cpp/cs106l/intro.md
-          - 第 1—2 讲 流（Streams）: CS/pl/cpp/cs106l/streams.md
-          - 第 4 讲 现代 C++ 类型: CS/pl/cpp/cs106l/type.md
+          - Lecture 0:Introduction: CS/pl/cpp/cs106l/intro.md
+          - Lecture 1&2:Streams: CS/pl/cpp/cs106l/streams.md
+          - Lecture 4:Modern C++ Types: CS/pl/cpp/cs106l/type.md
           - 顺序容器: CS/pl/cpp/cs106l/sequence-container.md
           - 关联容器: CS/pl/cpp/cs106l/associative-container.md
-          - 专题 模板元编程: CS/pl/cpp/cs106l/tmp.md
+          - Guest Lecture:Template metaprogramming: CS/pl/cpp/cs106l/tmp.md
       - Python:
         - 概览: CS/pl/Python/index.md
         - 基础语法: CS/pl/Python/py-basic-grammar.md
@@ -118,12 +118,12 @@ nav:
         - GORM: CS/pl/go/db.md
     - 计算机系统:
       - 数字逻辑设计:
-        - 第一章 数字系统与信息: CS/system/digital-design/chap1.md
-        - 第二章 组合逻辑电路: CS/system/digital-design/chap2.md
-        - 第三章 组合逻辑电路的设计: CS/system/digital-design/chap3.md
+        - Chapter 1 数字系统与信息: CS/system/digital-design/chap1.md
+        - Chapter 2 组合逻辑电路: CS/system/digital-design/chap2.md
+        - Chapter 3 组合逻辑电路的设计: CS/system/digital-design/chap3.md
       - 计算机组成原理:
         - 课程信息: CS/system/priciples/index.md
-        - 第一章 计算机系统概述: CS/system/priciples/chap1.md
+        - Chapter 1 计算机系统概述: CS/system/priciples/chap1.md
         - 汇编语言指令概述: CS/system/priciples/instructions.md
         - 数的表示: CS/system/priciples/number_representation.md
       - 物联网技术基础与应用开发:
@@ -142,31 +142,31 @@ nav:
       - 数据结构基础:
         - 课程信息: CS/algorithm/fds/index.md
         - 算法分析: CS/algorithm/fds/chap2.md
-        - 第三章 抽象数据类型、栈与队列: CS/algorithm/fds/chap3.md
-        - 第四章 树: CS/algorithm/fds/chap4.md
-        - 第五章 图: CS/algorithm/fds/graph.md
-        - 第六章 哈希表: CS/algorithm/fds/hashing.md
-        - 第七章 排序: CS/algorithm/fds/sorting.md
+        - Chapter 3 ADT & Stack & Queue: CS/algorithm/fds/chap3.md
+        - Chapter 4 Tree: CS/algorithm/fds/chap4.md
+        - Chapter 5 Graph: CS/algorithm/fds/graph.md
+        - Chapter 6 Hash Table: CS/algorithm/fds/hashing.md
+        - Chapter 7 Sorting: CS/algorithm/fds/sorting.md
       - 高级数据结构与算法分析:
         - 课程信息: CS/algorithm/ads/index.md
         - 考试复习笔记: CS/algorithm/ads/exam-review.md
-        - AVL 树与 Splay 树: CS/algorithm/ads/avl-tree_splay-tree.md
+        - AVL树和Splay树: CS/algorithm/ads/avl-tree_splay-tree.md
         - 红黑树: CS/algorithm/ads/redblack_tree.md
-        - B+ 树: CS/algorithm/ads/bplus_tree.md
-        - 倒排索引: CS/algorithm/ads/inverted_file_index.md
+        - B+树: CS/algorithm/ads/bplus_tree.md
+        - 倒排表: CS/algorithm/ads/inverted_file_index.md
         - 左偏树和斜堆: CS/algorithm/ads/leftist_heap.md
         - 二项队列: CS/algorithm/ads/binomial_queue.md
         - 回溯法: CS/algorithm/ads/backtracking.md
         - 分治合并法: CS/algorithm/ads/divide_conquer.md
         - 动态规划: CS/algorithm/ads/dynamic_programming.md
-      - 算法杂项: CS/algorithm/misc.md
-      - 排序算法笔记: CS/algorithm/sort.md
+      - Misc: CS/algorithm/misc.md
+      - Sort: CS/algorithm/sort.md
     - 数据科学:
       - 大数据挖掘:
         - 课程信息: CS/data/mining-massive-data/index.md
-        - MapReduce 与 Spark: CS/data/mining-massive-data/mapreduce-and-spark.md
-        - 频繁项集挖掘: CS/data/mining-massive-data/frequent-itemsets-mining.md
-        - 局部敏感哈希（LSH）: CS/data/mining-massive-data/lsh.md
+        - Map Reduce and Spark: CS/data/mining-massive-data/mapreduce-and-spark.md
+        - Frequent Itemsets Mining: CS/data/mining-massive-data/frequent-itemsets-mining.md
+        - Locality Sensitive Hashing: CS/data/mining-massive-data/lsh.md
       - 数据库系统:
         - 课程信息: CS/data/db/index.md
         - 复习笔记: CS/data/db/review.md
@@ -174,9 +174,9 @@ nav:
     - 网络安全:
       - 首页: CS/ctf/index.md
       - 基础: CS/ctf/basic.md
-      - CTF 与 AAA 简介: CS/ctf/ctf-and-aaa.md
+      - CTF&AAA简介: CS/ctf/ctf-and-aaa.md
       - 实验报告:
-        - Lab 0 入门实验: CS/ctf/lab0.md
+        - lab0: CS/ctf/lab0.md
     - 区块链:
       - 基础引入: CS/blockchain/background.md
       - 技术原理: CS/blockchain/theory.md
@@ -185,24 +185,24 @@ nav:
       - 数字货币: CS/blockchain/digital-currency.md
       - 以太坊: CS/blockchain/ethereum.md
     - 实用工具:
-      - Linux 与开发环境:
-        - WSL 备忘录: CS/tools/linux/wsl-record.md
+      - Linux相关:
+        - WSL备忘录: CS/tools/linux/wsl-record.md
         - 虚拟机备忘录: CS/tools/linux/vm-record.md
-        - WSL 操作指南: CS/tools/linux/wsl-note.md
+        - WSL操作指南: CS/tools/linux/wsl-note.md
         - GitHub Copilot: CS/tools/linux/github-copilot.md
         - Clash Verge Rev 安装/配环境指南: CS/tools/linux/clash-verge-rev.md
-      - Windows 配置: CS/tools/windows/win-note.md
-      - Shell 命令速查: CS/tools/shell.md
-      - Git 与 GitHub 命令速查: CS/tools/git-github.md
+      - Windows配置: CS/tools/windows/win-note.md
+      - shell: CS/tools/shell.md
+      - Git & GitHub: CS/tools/git-github.md
       - Docker: CS/tools/docker.md
       - Markdown:
         - 基础: CS/tools/markdown-basics.md
         - 进阶: CS/tools/markdown-advanced.md
         - Obsidian: CS/tools/markdown-obsidian.md
       - LaTeX: CS/tools/LaTeX.md
-      - Vim: CS/tools/vim.md
+      - vim: CS/tools/vim.md
       - GDB: CS/tools/GDB.md
-      - MkDocs:
+      - Mkdocs:
         - MkDocs: CS/tools/mkdocs.md
       - Anaconda: CS/tools/anaconda.md
       - VMware: CS/tools/vmware-linux.md
@@ -211,45 +211,46 @@ nav:
       - 正则表达式: CS/misc/regex.md
       - 网络相关: CS/misc/network.md
       - 一些快捷键: CS/misc/shortcuts.md
-      - 硬件与基础概念（AI 整理）: CS/misc/hardware.md
+      - 硬件by AI: CS/misc/hardware.md
   - 项目:
     - 封面: PROJECT/index.md
-    - IntelliDeploy:
+    - intellideploy:
       - 检索与召回: PROJECT/intellideploy/retrieval-recall.md
   - 实习:
     - 封面: INTERN/index.md
-    - 面试八股（待补充）: none.md
+    - 八股: none.md
   - 硬件:
     - 封面: ROBOTICS/index.md
-    - FTC 教程:
-      - 教程总览: ROBOTICS/FTCTutorial/index.md
-      - 1. Java 基础:
-        - 1.1 程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
-        - 1.2 变量、常量与数据类型: ROBOTICS/FTCTutorial/1.2.变量、常量与数据类型.md
-        - 1.3 程序控制结构: ROBOTICS/FTCTutorial/1.3.程序控制结构.md
-        - 1.4 面向对象编程基础: ROBOTICS/FTCTutorial/1.4.面向对象编程基础.md
-      - 2. FTC 基础:
-        - 2.1 游戏手柄使用指南: ROBOTICS/FTCTutorial/2.1FTC游戏手柄使用指南.md
-        - 2.2 遥测系统使用指南: ROBOTICS/FTCTutorial/2.2FTC遥测系统使用指南.md
-      - 3. 操作模式:
-        - 3.1 操作模式概念解析: ROBOTICS/FTCTutorial/3.1操作模式概念解析.md
-        - 3.2 操作模式注解: ROBOTICS/FTCTutorial/3.2操作模式注解.md
-        - 3.3 线性操作模式基础: ROBOTICS/FTCTutorial/3.3线性操作模式基础.md
-        - 3.4 常见驱动控制模式: ROBOTICS/FTCTutorial/3.4常见的驱动控制模式.md
-      - 4. 硬件基础:
-        - 4.1 伺服电机使用指南: ROBOTICS/FTCTutorial/4.1伺服电机使用指南.md
-        - 4.2 机器人硬件组织: ROBOTICS/FTCTutorial/4.2机器人硬件组织.md
-      - 5. 传感器:
-        - 5.1 陀螺仪（IMU）使用指南: ROBOTICS/FTCTutorial/5.1陀螺仪使用指南.md
+    - FTC教程:
+      - 主页: ROBOTICS/FTCTutorial/index.md
+      - 1.Java基础:
+        - 1.1程序入门: ROBOTICS/FTCTutorial/1.1程序入门.md
+        - 1.2.变量、常量与数据类型: ROBOTICS/FTCTutorial/1.2.变量、常量与数据类型.md
+        - 1.3.程序控制结构: ROBOTICS/FTCTutorial/1.3.程序控制结构.md
+        - 1.4.面向对象编程基础: ROBOTICS/FTCTutorial/1.4.面向对象编程基础.md
+      - 2.FTC基础:
+        - 2.1FTC游戏手柄使用指南: ROBOTICS/FTCTutorial/2.1FTC游戏手柄使用指南.md
+        - 2.2FTC遥测系统使用指南: ROBOTICS/FTCTutorial/2.2FTC遥测系统使用指南.md
+      - 3.操作模式:
+        - 3.1操作模式概念解析: ROBOTICS/FTCTutorial/3.1操作模式概念解析.md
+        - 3.2操作模式注解: ROBOTICS/FTCTutorial/3.2操作模式注解.md
+        - 3.3线性操作模式基础: ROBOTICS/FTCTutorial/3.3线性操作模式基础.md
+        - 3.4常见的驱动控制模式: ROBOTICS/FTCTutorial/3.4常见的驱动控制模式.md
+      - 4.硬件基础:
+        - 4.1伺服电机使用指南: ROBOTICS/FTCTutorial/4.1伺服电机使用指南.md
+        - 4.2机器人硬件组织: ROBOTICS/FTCTutorial/4.2机器人硬件组织.md
+      - 5.传感器:
+        - 5.1陀螺仪使用指南: ROBOTICS/FTCTutorial/5.1陀螺仪使用指南.md
       - 进阶:
-        - PID 控制: ROBOTICS/FTCTutorial/PID.md
-        - Pedro Pathing 路径跟随: ROBOTICS/FTCTutorial/PedroPathing.md
-        - 自动控制文件解析: ROBOTICS/FTCTutorial/OpmodesFiles.md
-        - 蓝盟远端自动程序流程（12 球）: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
+        - PID: ROBOTICS/FTCTutorial/PID.md
+        - PedroPathing: ROBOTICS/FTCTutorial/PedroPathing.md
+        - FileSystem: ROBOTICS/FTCTutorial/FileSystem.md
+        - OpmodesFiles: ROBOTICS/FTCTutorial/OpmodesFiles.md
+        - BLUE_Far_12ball: ROBOTICS/FTCTutorial/BLUE_Far_12ball.md
   - 商科:
-    - 总览: FINANCE/index.md
+    - FINANCE/index.md
     - 计量经济学:
-      - 课程信息与成绩构成: FINANCE/econometrics/index.md
+      - index: FINANCE/econometrics/index.md
     - 微观经济学:
       - 课程信息: FINANCE/micro/index.md
       - 绪论: FINANCE/micro/start.md
@@ -278,13 +279,12 @@ nav:
     - X-Lab:
       - 张博老师分享: WORK/x-lab/zhangbo.md
   - 阅读:
-    - 总览: BOOK/index.md
+    - BOOK/index.md
     - 文学:
       - 山茶文具店: BOOK/fictions/山茶文具店.md
       - 暮光之城: BOOK/fictions/twilight.md
     - 专业:
-      - 专业阅读（待补充）: 1.md
-
+      - 1.md
 theme:
   # 使用 MkDocs Material 主题。
   name: material
