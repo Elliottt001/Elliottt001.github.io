@@ -1,5 +1,5 @@
 ---
-icon: material/hammer-wrench
+cover_icon: material/hammer-wrench
 ---
 
 # 项目

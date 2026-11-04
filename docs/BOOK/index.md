@@ -1,5 +1,5 @@
 ---
-icon: material/book-open-page-variant-outline
+cover_icon: material/book-open-page-variant-outline
 ---
 
 # 阅读

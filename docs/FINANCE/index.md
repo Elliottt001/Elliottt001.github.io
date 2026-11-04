@@ -1,5 +1,5 @@
 ---
-icon: material/chart-line
+cover_icon: material/chart-line
 ---
 
 # 商科

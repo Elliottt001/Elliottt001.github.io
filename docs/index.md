@@ -1,5 +1,5 @@
 ---
-icon: material/home-outline
+cover_icon: material/home-outline
 title: 首页
 comments: false
 glightbox: false

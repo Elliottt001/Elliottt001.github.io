@@ -3,7 +3,7 @@
 {% block content %}
   {% if page and page.file.src_uri != "index.md" %}
     <div class="ns-page-label">
-      {% if page.meta.icon %}<span class="nh-icon ns-page-icon" aria-hidden="true">{% include ".icons/" ~ page.meta.icon ~ ".svg" %}</span>{% endif %}
+      {% if page.meta.cover_icon %}<span class="nh-icon ns-page-icon" aria-hidden="true">{% include ".icons/" ~ page.meta.cover_icon ~ ".svg" %}</span>{% endif %}
       <a href="{{ '' | url }}">Elliottt Zhang 的笔记</a>
       {% if page.parent %}
         <span aria-hidden="true">/</span><span>{{ page.parent.title }}</span>

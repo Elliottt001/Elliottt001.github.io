@@ -1,6 +1,7 @@
 /* One palette for the homepage, navigation and every notebook page. */
 :root {
   --nh-bg: #f3f6f5;
+  --nh-chrome: #e8eceb;
   --nh-panel: #ffffff;
   --nh-ink: #142536;
   --nh-muted: #536573;
@@ -17,6 +18,7 @@
 
 [data-md-color-scheme="slate"] {
   --nh-bg: #0c1824;
+  --nh-chrome: #142536;
   --nh-panel: #122332;
   --nh-ink: #e8f0f4;
   --nh-muted: #a7b9c5;
@@ -446,13 +448,26 @@ body[data-md-color-scheme] .md-typeset summary::after { color: #fff; background-
 .ns-page-icon { width: 32px; height: 32px; border-radius: 9px; }
 .ns-page-icon svg { width: 20px; height: 20px; }
 .md-tabs__link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 0; opacity: 1; color: #c6d3dc; }
-.md-tabs__link svg { flex: 0 0 19px; width: 19px; height: 19px; fill: #fff; }
 .md-tabs__item--active .md-tabs__link { color: #fff; box-shadow: 0 -2px #8ed8c7 inset; }
-.md-nav--primary .md-nav__link > svg { flex: 0 0 28px; width: 28px; height: 28px; padding: 5px; border-radius: 7px; background: #203a4b; fill: #fff; }
-.md-nav--primary .md-nav__link:has(> svg) { align-items: center; gap: 8px; }
 .md-typeset :is(.admonition, details) { --ns-callout: #216076; }
 .md-typeset :is(.admonition, details):is(.tip, .hint, .important, .success, .check, .done) { --ns-callout: #12665e; }
 .md-typeset :is(.admonition, details):is(.warning, .caution, .attention, .question, .help, .faq) { --ns-callout: #865b12; }
 .md-typeset :is(.admonition, details):is(.danger, .error, .failure, .fail, .missing, .bug) { --ns-callout: #a13b46; }
 .md-typeset :is(.admonition, details):is(.example, .quote, .cite) { --ns-callout: #4b486e; }
 body[data-md-color-scheme] .md-typeset :is(.admonition, details) { border-color: color-mix(in srgb, var(--ns-callout) 45%, var(--nh-line)); }
+
+/* A slightly gray frame around light-mode content, across every page. */
+body[data-md-color-scheme="default"] {
+  --md-primary-bg-color: var(--nh-ink);
+  --md-primary-bg-color--light: var(--nh-muted);
+  --md-footer-fg-color: var(--nh-ink);
+  --md-footer-fg-color--light: var(--nh-muted);
+  --md-footer-fg-color--lighter: var(--nh-muted);
+}
+body[data-md-color-scheme="default"] :is(.md-header, .md-tabs, .md-footer, .md-footer-meta) { background: var(--nh-chrome); color: var(--nh-ink); }
+body[data-md-color-scheme="default"] .md-header { border-bottom-color: var(--nh-line); }
+body[data-md-color-scheme="default"] .md-footer-meta { border-top: 1px solid var(--nh-line); }
+body[data-md-color-scheme="default"] .md-tabs__link { color: var(--nh-muted); }
+body[data-md-color-scheme="default"] .md-tabs__item--active .md-tabs__link { color: var(--nh-accent); box-shadow: 0 -2px var(--nh-accent) inset; }
+body[data-md-color-scheme="default"] .md-copyright { color: var(--nh-muted); }
+body[data-md-color-scheme="default"] .md-copyright a { color: var(--nh-accent); }

@@ -1,5 +1,5 @@
 ---
-icon: material/function-variant
+cover_icon: material/function-variant
 ---
 
 # 数理

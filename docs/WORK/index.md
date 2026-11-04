@@ -1,5 +1,5 @@
 ---
-icon: material/account-group-outline
+cover_icon: material/account-group-outline
 ---
 
 # 工作

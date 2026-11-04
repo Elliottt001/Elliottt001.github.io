@@ -1,5 +1,5 @@
 ---
-icon: material/code-tags
+cover_icon: material/code-tags
 ---
 
 # 开发

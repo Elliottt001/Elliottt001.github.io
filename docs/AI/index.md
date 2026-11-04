@@ -1,5 +1,5 @@
 ---
-icon: material/robot-outline
+cover_icon: material/robot-outline
 ---
 
 # 人工智能

@@ -1,5 +1,5 @@
 ---
-icon: material/briefcase-outline
+cover_icon: material/briefcase-outline
 ---
 
 # 实习

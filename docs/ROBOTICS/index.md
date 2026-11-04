@@ -1,5 +1,5 @@
 ---
-icon: material/robot-industrial-outline
+cover_icon: material/robot-industrial-outline
 ---
 
 # 硬件
