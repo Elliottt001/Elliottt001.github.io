@@ -185,25 +185,17 @@ nav:
       - 数字货币: CS/blockchain/digital-currency.md
       - 以太坊: CS/blockchain/ethereum.md
     - 实用工具:
-      - Linux相关:
-        - WSL备忘录: CS/tools/linux/wsl-record.md
-        - 虚拟机备忘录: CS/tools/linux/vm-record.md
-        - WSL操作指南: CS/tools/linux/wsl-note.md
-        - GitHub Copilot: CS/tools/linux/github-copilot.md
-        - Clash Verge Rev 安装/配环境指南: CS/tools/linux/clash-verge-rev.md
-      - Windows配置: CS/tools/windows/win-note.md
-      - shell: CS/tools/shell.md
-      - Git & GitHub: CS/tools/git-github.md
-      - Docker: CS/tools/docker.md
       - Markdown:
         - 基础: CS/tools/markdown-basics.md
         - 进阶: CS/tools/markdown-advanced.md
         - Obsidian: CS/tools/markdown-obsidian.md
       - LaTeX: CS/tools/LaTeX.md
+      - shell: CS/tools/shell.md
+      - Git: CS/tools/git-github.md
+      - Docker: CS/tools/docker.md
       - vim: CS/tools/vim.md
       - GDB: CS/tools/GDB.md
-      - Mkdocs:
-        - MkDocs: CS/tools/mkdocs.md
+      - Mkdocs: CS/tools/mkdocs.md
       - Anaconda: CS/tools/anaconda.md
       - VMware: CS/tools/vmware-linux.md
     - 杂七杂八:
