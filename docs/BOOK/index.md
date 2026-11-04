@@ -1,3 +1,7 @@
+---
+icon: material/book-open-page-variant-outline
+---
+
 # 阅读
 
 <figure class="ns-epigraph">
@@ -11,13 +15,13 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 一些[读书笔记](https://note.elliotttzhang.cn/BOOK)。
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-book-open-page-variant: &nbsp;文学</span>
+- <span class="ns-card-title">:material-book-open-page-variant: 文学</span>
 
     ---
 
@@ -26,7 +30,7 @@
     - [山茶文具店](fictions/山茶文具店.md)
     - [暮光之城](fictions/twilight.md)
 
-- <span class="ns-card-title">:material-bookshelf: &nbsp;专业</span>
+- <span class="ns-card-title">:material-bookshelf: 专业</span>
 
     ---
 

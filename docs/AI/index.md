@@ -1,3 +1,7 @@
+---
+icon: material/robot-outline
+---
+
 # 人工智能
 
 <figure class="ns-epigraph">
@@ -11,11 +15,11 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-brain: &nbsp;AI 基础</span>
+- <span class="ns-card-title">:material-brain: AI 基础</span>
 
     ---
 
@@ -27,7 +31,7 @@
     - [图灵机与可计算性](basic/Turing.md)
     - [Transformer](llm-basic/transformer.md)
 
-- <span class="ns-card-title">:material-robot: &nbsp;智能体</span>
+- <span class="ns-card-title">:material-robot: 智能体</span>
 
     ---
 
@@ -41,7 +45,7 @@
 
 ---
 
-## 02 / 学习线索
+## 学习线索
 
 | 阶段 | 主题 | 关键问题 |
 |:---:|------|----------|
@@ -52,17 +56,17 @@
 
 ---
 
-## 03 / 推荐路径
+## 推荐路径
 
 <div class="ns-reading">
 
 <div class="ns-reading__row">
-<span class="ns-reading__step">✦ 入门</span>
+<span class="ns-reading__step">入门</span>
 <span>先读 <a href="basic/ML/">ML</a> 了解机器学习全景 → 再看 <a href="basic/DL/">DL</a> 理解深度网络 → 最后 <a href="basic/Turing/">Turing</a> 建立计算理论基础</span>
 </div>
 
 <div class="ns-reading__row">
-<span class="ns-reading__step">✦ 进阶</span>
+<span class="ns-reading__step">进阶</span>
 <span>掌握 <a href="basic/ANN/">ANN</a> 网络结构细节 → 进入 <a href="agent/agent-basic-concepts/">智能体概念</a> → 深入 <a href="agent/rag/">RAG</a> 检索增强 → 构建 <a href="agent/multi-agent/">多智能体</a> 系统</span>
 </div>
 

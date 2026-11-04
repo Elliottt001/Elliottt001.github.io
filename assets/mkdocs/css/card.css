@@ -8,6 +8,10 @@
 .card:hover { border-color: var(--nh-accent); box-shadow: none; transform: none; }
 .md-typeset .grid.cards hr { margin: 14px 0; border-color: var(--nh-line); }
 .ns-card-title, .card-header { color: var(--nh-ink); font-size: 18px; font-weight: 650; line-height: 1.5; }
+.ns-card-title { display: flex; align-items: center; gap: 12px; }
+.md-typeset .ns-card-title .twemoji { display: inline-flex; flex: 0 0 44px; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: #203a4b; vertical-align: middle; }
+.md-typeset .ns-card-title .twemoji svg { width: 24px; height: 24px; fill: #fff; }
+.md-typeset .grid.cards > ul > li:focus-within { border-color: var(--nh-accent); }
 .card-header { margin-bottom: 14px; padding: 0; }
 .card-body { flex: 1; min-width: 0; padding: 0; }
 .card-body ul { margin-top: 0; margin-bottom: 0; }

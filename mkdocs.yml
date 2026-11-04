@@ -20,7 +20,7 @@ hooks:
 nav:
   - 主页:
     - 封面: index.md
-    - 🕑更新记录: changelog.md
+    - 更新记录: changelog.md
   - 人工智能:
     - 封面: AI/index.md
     - AI基础:
@@ -366,29 +366,29 @@ theme:
     # Admonition 提示块图标映射。
     admonition:
       # note 提示块图标。
-      note: octicons/tag-16
+      note: material/file-document-outline
       # abstract 提示块图标。
-      abstract: octicons/checklist-16
+      abstract: material/clipboard-list-outline
       # info 提示块图标。
-      info: octicons/info-16
+      info: material/information-outline
       # tip 提示块图标。
-      tip: octicons/squirrel-16
+      tip: material/lightbulb-outline
       # success 提示块图标。
-      success: octicons/check-16
+      success: material/check-circle-outline
       # question 提示块图标。
-      question: octicons/question-16
+      question: material/help-circle-outline
       # warning 提示块图标。
-      warning: octicons/alert-16
+      warning: material/alert-outline
       # failure 提示块图标。
-      failure: octicons/x-circle-16
+      failure: material/close-circle-outline
       # danger 提示块图标。
-      danger: octicons/zap-16
+      danger: material/lightning-bolt-outline
       # bug 提示块图标。
-      bug: octicons/bug-16
+      bug: material/bug-outline
       # example 提示块图标。
-      example: octicons/beaker-16
+      example: material/flask-outline
       # quote 提示块图标。
-      quote: octicons/quote-16
+      quote: material/format-quote-close
     # Markdown 注释标记的图标。
     annotation: material/checkbox-marked-circle-auto-outline
 

@@ -1,3 +1,7 @@
+---
+icon: material/account-group-outline
+---
+
 # 工作
 
 <figure class="ns-epigraph">
@@ -10,11 +14,11 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-school: &nbsp;学生工作</span>
+- <span class="ns-card-title">:material-school: 学生工作</span>
 
     ---
 
@@ -23,7 +27,7 @@
     - [报销文档](school/reimbursement.md)
     - [副书记工作汇报](school/work-report.md)
 
-- <span class="ns-card-title">:material-flask: &nbsp;X-Lab</span>
+- <span class="ns-card-title">:material-flask: X-Lab</span>
 
     ---
 

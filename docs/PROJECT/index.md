@@ -1,3 +1,7 @@
+---
+icon: material/hammer-wrench
+---
+
 # 项目
 
 <figure class="ns-epigraph">
@@ -10,11 +14,11 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-rocket-launch: &nbsp;IntelliDeploy</span>
+- <span class="ns-card-title">:material-rocket-launch: IntelliDeploy</span>
 
     ---
 

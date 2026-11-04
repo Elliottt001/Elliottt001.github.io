@@ -1,6 +1,6 @@
-<div class="ns-statistics" style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-  <span class="twemoji">{% include ".icons/material/circle-edit-outline.svg" %}</span> 约 {{ words }} 个字
-  {% if code_lines %}<span class="twemoji">{% include ".icons/fontawesome/solid/code.svg" %}</span> {{ code_lines }} 行代码{% endif %}
-  {% if images %}<span class="twemoji">{% include ".icons/material/image-multiple-outline.svg" %}</span> {{ images }} 张图片{% endif %}
-  <span class="twemoji">{% include ".icons/material/clock-time-two-outline.svg" %}</span> {% if read_time %}预计阅读时间 {{ read_time }} 分钟{% else %}预计阅读时间不到 1 分钟{% endif %}
+<div class="ns-statistics" aria-label="笔记信息">
+  <span class="ns-statistics__item"><span class="ns-statistics__icon" aria-hidden="true">{% include ".icons/material/file-document-outline.svg" %}</span>约 {{ words }} 个字</span>
+  {% if code_lines %}<span class="ns-statistics__item"><span class="ns-statistics__icon" aria-hidden="true">{% include ".icons/material/code-tags.svg" %}</span>{{ code_lines }} 行代码</span>{% endif %}
+  {% if images %}<span class="ns-statistics__item"><span class="ns-statistics__icon" aria-hidden="true">{% include ".icons/material/image-multiple-outline.svg" %}</span>{{ images }} 张图片</span>{% endif %}
+  <span class="ns-statistics__item"><span class="ns-statistics__icon" aria-hidden="true">{% include ".icons/material/clock-outline.svg" %}</span>{% if read_time %}阅读约 {{ read_time }} 分钟{% else %}阅读不到 1 分钟{% endif %}</span>
 </div>

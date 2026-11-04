@@ -1,8 +1,12 @@
+---
+icon: material/function-variant
+---
+
 # 数理
 
 <figure class="ns-epigraph">
 <figcaption class="ns-epigraph__label">知识 / 基础学科</figcaption>
-<p class="ns-epigraph__motto" lang="en">Looking at the stars ☆</p>
+<p class="ns-epigraph__motto" lang="en">Looking at the stars</p>
 <div class="ns-epigraph__verse" lang="zh-CN">
 <p><span class="ns-epigraph__phrase">放他三千裘马去，</span><span class="ns-epigraph__phrase">不寄俗生，</span><span class="ns-epigraph__phrase">唯贪我三枕黄粱梦。</span></p>
 </div>
@@ -10,13 +14,13 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 一些 ZJU 学习中数理基础课笔记，包括微积分、线性代数、离散数学、[大学物理](physics/index.md)、[概率论与数理统计](probability/index.md)。
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-function-variant: &nbsp;微积分</span>
+- <span class="ns-card-title">:material-function-variant: 微积分</span>
 
     ---
 
@@ -31,7 +35,7 @@
     - [多元函数微分学](calculus/differential-calculus-of-multivariate-function.md)
     - [误差分析](calculus/errors-in-calculus.md)
 
-- <span class="ns-card-title">:material-matrix: &nbsp;线性代数</span>
+- <span class="ns-card-title">:material-matrix: 线性代数</span>
 
     ---
 
@@ -40,7 +44,7 @@
     - [方法总结](linear-algebra/summary-of-LA.md)
     - [知识框架](linear-algebra/knowledge-frame-of-LA.md)
 
-- <span class="ns-card-title">:material-graph-outline: &nbsp;离散数学</span>
+- <span class="ns-card-title">:material-graph-outline: 离散数学</span>
 
     ---
 
@@ -49,7 +53,7 @@
     - [课程信息与复习范围](discrete/index.md)
     - [Chap1 逻辑和证明](discrete/chap-1.md)
 
-- <span class="ns-card-title">:material-atom: &nbsp;大学物理</span>
+- <span class="ns-card-title">:material-atom: 大学物理</span>
 
     ---
 
@@ -61,7 +65,7 @@
     - [电磁学](physics/electricity.md)
     - [电磁学公式物理量总结](physics/electricity-summary.md)
 
-- <span class="ns-card-title">:material-dice-5: &nbsp;概率论与数理统计</span>
+- <span class="ns-card-title">:material-dice-5: 概率论与数理统计</span>
 
     ---
 

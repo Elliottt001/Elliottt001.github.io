@@ -1,3 +1,7 @@
+---
+icon: material/briefcase-outline
+---
+
 # 实习
 
 <figure class="ns-epigraph">
@@ -10,11 +14,11 @@
 
 ---
 
-## 01 / 面试准备
+## 面试准备
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-clipboard-list: &nbsp;八股文</span>
+- <span class="ns-card-title">:material-clipboard-list: 八股文</span>
 
     ---
 

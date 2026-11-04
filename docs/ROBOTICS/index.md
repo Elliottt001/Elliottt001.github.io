@@ -1,3 +1,7 @@
+---
+icon: material/robot-industrial-outline
+---
+
 # 硬件
 
 <figure class="ns-epigraph">
@@ -11,11 +15,11 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-robot-industrial: &nbsp;FTC 教程</span>
+- <span class="ns-card-title">:material-robot-industrial: FTC 教程</span>
 
     ---
 

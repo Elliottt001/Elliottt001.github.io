@@ -1,3 +1,7 @@
+---
+icon: material/code-tags
+---
+
 # 开发
 
 <figure class="ns-epigraph">
@@ -11,13 +15,13 @@
 
 ---
 
-## 01 / 内容导览
+## 内容导览
 
 一些 [CS 学习笔记](https://note.elliotttzhang.cn/CS)，包括人工智能、算法相关、编程语言、实用工具、网络安全。
 
 <div class="grid cards" markdown>
 
-- <span class="ns-card-title">:material-code-tags: &nbsp;编程语言</span>
+- <span class="ns-card-title">:material-code-tags: 编程语言</span>
 
     ---
 
@@ -28,7 +32,7 @@
     - **Python** — [基础语法](pl/Python/py-basic-grammar.md) · [面向对象](pl/Python/py-oop.md) · [Web 采集](pl/Python/web-scraping.md) · [项目开发](pl/Python/development-in-py.md)
     - **Go** — [GORM](pl/go/db.md)
 
-- <span class="ns-card-title">:material-graph: &nbsp;算法相关</span>
+- <span class="ns-card-title">:material-graph: 算法相关</span>
 
     ---
 
@@ -39,7 +43,7 @@
     - [高级数据结构 (ADS)](algorithm/ads/index.md) — AVL、红黑树、B+树、动态规划、回溯
     - [Misc](algorithm/misc.md) · [Sort](algorithm/sort.md)
 
-- <span class="ns-card-title">:material-monitor: &nbsp;计算机系统</span>
+- <span class="ns-card-title">:material-monitor: 计算机系统</span>
 
     ---
 
@@ -49,7 +53,7 @@
     - [计算机组成原理](system/priciples/index.md) — 系统概述、汇编指令、数的表示
     - [物联网技术基础与应用开发](system/iot/index.md) — 硬件、操作系统、边缘智能、通信协议、云平台与安全
 
-- <span class="ns-card-title">:material-database: &nbsp;数据科学</span>
+- <span class="ns-card-title">:material-database: 数据科学</span>
 
     ---
 
@@ -58,7 +62,7 @@
     - [大数据挖掘](data/mining-massive-data/index.md) — MapReduce、频繁项集、LSH
     - [数据库系统](data/db/index.md) — SQL 总结、复习笔记
 
-- <span class="ns-card-title">:material-web: &nbsp;前端 & Web</span>
+- <span class="ns-card-title">:material-web: 前端 & Web</span>
 
     ---
 
@@ -67,7 +71,7 @@
     - [内容速查](frontend/note/index.md) — Web 基础、HTML、CSS
     - [Web](web/web.md) · [IS](is/index.md)
 
-- <span class="ns-card-title">:material-shield-lock: &nbsp;网络安全 & 区块链</span>
+- <span class="ns-card-title">:material-shield-lock: 网络安全 & 区块链</span>
 
     ---
 
@@ -76,7 +80,7 @@
     - [CTF](ctf/index.md) — 基础、AAA、Lab 实验
     - [区块链](blockchain/background.md) — 技术原理、比特币、以太坊
 
-- <span class="ns-card-title">:material-wrench: &nbsp;实用工具</span>
+- <span class="ns-card-title">:material-wrench: 实用工具</span>
 
     ---
 
@@ -87,7 +91,7 @@
     - [Markdown](tools/markdown-basics.md) · [LaTeX](tools/LaTeX.md) · [MkDocs](tools/mkdocs.md)
     - [Shell](tools/shell.md) · [Anaconda](tools/anaconda.md) · [VMware](tools/vmware-linux.md) · [Windows](tools/windows/win-note.md)
 
-- <span class="ns-card-title">:material-book-open-variant: &nbsp;实战 & 杂项</span>
+- <span class="ns-card-title">:material-book-open-variant: 实战 & 杂项</span>
 
     ---
 
