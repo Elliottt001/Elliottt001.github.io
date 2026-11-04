@@ -38,3 +38,7 @@ Thumbs.db
 node_modules/
 /build.log
 /.venv/
+# Added by CJADK
+.cjadk/
+# Added by CJADK
+log/app.log
