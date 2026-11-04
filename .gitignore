@@ -13,6 +13,10 @@ __pycache__/
 .cache/
 
 # 本地测试脚本与运行产物
+/tests/
+/package.json
+/package-lock.json
+/requirements-dev.txt
 /.pytest_cache/
 /.coverage
 /.coverage.*

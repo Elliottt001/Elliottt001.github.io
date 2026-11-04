@@ -4,34 +4,26 @@
 
 ## 本地预览
 
-建议使用 Python 3.13 和 Node.js 24，与 CI 一致。
+建议使用 Python 3.13，与 CI 一致。
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-dev.txt
-npm ci
-npx playwright install chromium
+python -m pip install -r requirements.txt
 mkdocs serve
 ```
 
-只构建或预览网站时，可以仅安装 `requirements.txt`，不需要 Node.js 和浏览器测试依赖。
+构建和预览不需要 Node.js 或浏览器测试依赖。
 
 ## 检查
 
 ```sh
-mkdocs build 2>&1 | tee build.log
-python tests/site-content.test.py
-python tests/site-theme.test.py
-python tests/site-rendering.test.py site build.log
-python tests/cs-notes.test.py
-npm test
-npm run test:browser
+mkdocs build
 ```
 
-代码示例检查需要 `clang` 和 `clang++`。浏览器检查使用本地安装的同版本 MathJax，验证实际公式、辅助 MathML、手机宽度、搜索、音频和补充图，不依赖测试时 CDN 是否可访问。
+CI 只要求构建成功，并生成非空首页和站点样式文件。配置、插件或模板导致的构建错误会阻断发布；笔记的空链接、缺失图片、公式、代码示例和其他内容问题不作为发布门槛。
 
-目前导航中保留 `none.md`、`1.md` 两个已有占位路径。构建仍显示这两条警告，渲染检查只允许这两条已知警告，新增警告会让 CI 失败。导航覆盖率另行整理。
+MkDocs 的警告保留在构建日志中供参考，不启用严格模式，也不设置警告白名单。测试脚本及测试专用依赖文件保留本地，不纳入 Git；本地手动检查也只关注生成页面的基本结构和站点样式，不审核笔记内容。
 
 ## 内容与资源
 

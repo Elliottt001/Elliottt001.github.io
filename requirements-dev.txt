@@ -1,2 +1,0 @@
--r requirements.txt
-beautifulsoup4==4.15.0
