@@ -1,4 +1,48 @@
 - "2026":
+  - "2026-11-04":
+    - siteupdate: 修复板块首页导航行的间距与对齐
+    - siteupdate: 将页面统计移至 Markdown 渲染后生成，避免统计 HTML 混入代码块
+    - pageupdate:
+        text: 微积分笔记补充 29 张示意图与例题图，替换遗失图片并修复双链
+        href: /MATH/calculus/knowledge-frame-of-calculus/
+    - pageupdate:
+        text: 修复公式分隔符、列表缩进、脚注与 MathJax 重复排版
+        href: /MATH/calculus/summary-of-multi-func/
+    - pageupdate:
+        text: 更新 Copilot 官方资料链接
+        href: /CS/tools/linux/github-copilot/
+    - pageupdate:
+        text: 修复视频的 HTTPS 嵌入，并保存原词典例句音频
+        href: /CS/tools/markdown-advanced/
+    - siteupdate: 固定构建依赖、纳入回归与浏览器检查；PR 只验证，main 更新验证通过后发布
+  - "2026-11-03":
+    - newpage:
+        text: 物联网技术基础与应用开发：八章课程笔记
+        href: /CS/system/iot/
+    - pageupdate:
+        text: 补充物联网课堂重点、考试提示与详细讲解
+        href: /CS/system/iot/
+    - pageupdate:
+        text: 修复计算机笔记中的链接、代码示例与说明
+        href: /CS/
+    - pageupdate:
+        text: 整理跨板块笔记入口、更新日志链接与资源
+        href: /MATH/
+    - pageupdate:
+        text: 更新《山茶文具店》阅读记录
+        href: /BOOK/fictions/山茶文具店/
+    - siteupdate: 更新首页搜索与布局，统一明暗主题和板块题词，加入“去别处逛逛”外链卡片
+    - siteupdate: 将评论区关联到当前仓库
+  - "2026-07-19":
+    - newpage:
+        text: Transformer：从输入表示到输出层
+        href: /AI/llm-basic/transformer/
+    - pageupdate:
+        text: 补充 RAG 的检索与重排序原理
+        href: /AI/agent/rag/
+    - siteupdate: 保存自定义域名配置，并在发布时保留 CNAME
+  - "2026-07-14":
+    - siteupdate: 更新首页与各板块目录页，调整卡片、主题和导航布局
   - "2026-07-11":
     - newpage:
         text: AI 智能体 - 基本概念汇总
@@ -174,9 +218,7 @@
     - newpage:
         text: FTC 教程 - PedroPathing
         href: /ROBOTICS/FTCTutorial/PedroPathing/
-    - newpage:
-        text: FTC 教程 - FileSystem
-        href: /ROBOTICS/FTCTutorial/FileSystem/
+    - newpage: "FTC 教程 - FileSystem（历史记录）"
     - newpage:
         text: FTC 教程 - OpmodesFiles
         href: /ROBOTICS/FTCTutorial/OpmodesFiles/
@@ -513,9 +555,7 @@
     - newpage:
         text: 数字逻辑设计 - Chapter 2
         href: /CS/system/digital-design/chap2/
-    - newpage:
-        text: 公众 - 毛泽东
-        href: /INTERN/
+    - newpage: "公众 - 毛泽东（历史记录）"
   - "2025-02-20":
     - newpage:
         text: 大学物理 - 动力学
@@ -612,9 +652,7 @@
     - newpage:
         text: Python - 数据容器
         href: /CS/pl/Python/py-sequence/
-    - newpage:
-        text: 教程 - Windows 磁盘
-        href: /CS/algorithm/leetcode/two-sum/
+    - newpage: "教程 - Windows 磁盘（历史记录）"
   - "2025-01-13":
     - newpage:
         text: 环境配置 - PL
@@ -828,9 +866,7 @@
     - newpage:
         text: 微积分总结（旧）
         href: /MATH/calculus/summary-of-calculus/
-    - newpage:
-        text: 博客首页
-        href: /MATH/
+    - newpage: "博客首页（历史记录）"
   - "2024-10-19":
     - newpage:
         text: 网站初始化

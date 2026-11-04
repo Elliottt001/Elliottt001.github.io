@@ -1,3 +1,182 @@
+# Shell 常用命令速查
+
+Shell 是运行命令和编写脚本的环境。下面按文件、文本、进程和脚本操作分类；脚本示例使用 Bash。macOS、Linux 和不同 Shell 的参数可能不同，可以用 `man` 或命令帮助确认。示例中的 `<file>`、`<dir>`、`<pid>` 需要替换为实际值。
+
+## 位置、目录与文件
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 当前位置 | <code>pwd</code> | 输出当前工作目录 |
+| 列出文件 | <code>ls -lah</code> | 显示隐藏文件、权限和可读大小 |
+| 切换目录 | <code>cd &lt;dir&gt;</code> | 含空格的路径用引号 |
+| 返回上级或上次目录 | <code>cd .. ; cd -</code> | 两个独立用法；分号表示依次执行 |
+| 建立多层目录 | <code>mkdir -p &lt;dir&gt;</code> | 父目录不存在时一并创建 |
+| 创建文件或更新时间 | <code>touch &lt;file&gt;</code> | 已有文件不会被清空 |
+| 复制文件 | <code>cp -i &lt;source&gt; &lt;destination&gt;</code> | 覆盖前询问 |
+| 复制目录 | <code>cp -R &lt;source&gt; &lt;destination&gt;</code> | 复制整个目录树 |
+| 移动或改名 | <code>mv -i &lt;source&gt; &lt;destination&gt;</code> | 覆盖前询问 |
+| 交互删除文件 | <code>rm -i &lt;file&gt;</code> | 删除通常不经过回收站 |
+| 删除空目录 | <code>rmdir &lt;dir&gt;</code> | 目录非空时拒绝 |
+| 建立符号链接 | <code>ln -s &lt;target&gt; &lt;link&gt;</code> | 链接到目标路径 |
+| 判断文件类型 | <code>file &lt;file&gt;</code> | 查看文件内容类型 |
+
+## 阅读文件与观察日志
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 查看短文件 | <code>cat &lt;file&gt;</code> | 全部输出到终端 |
+| 分页阅读 | <code>less &lt;file&gt;</code> | / 搜索，n 下一个匹配，q 退出 |
+| 查看前 20 行 | <code>head -n 20 &lt;file&gt;</code> | 适合看表头和日志开头 |
+| 查看最后 50 行 | <code>tail -n 50 &lt;file&gt;</code> | 快速查看最新内容 |
+| 持续观察日志 | <code>tail -f &lt;file&gt;</code> | 跟踪新写入的数据；Ctrl+C 停止 |
+| 跟随轮转日志 | <code>tail -F &lt;file&gt;</code> | 按文件名重试，适合日志文件被替换的情况 |
+| 统计行数 | <code>wc -l &lt;file&gt;</code> | 按换行符计数 |
+| 逐字节比较文件 | <code>cmp &lt;file-a&gt; &lt;file-b&gt;</code> | 相同则不输出，退出状态为 0 |
+| 查看文本差异 | <code>diff -u &lt;file-a&gt; &lt;file-b&gt;</code> | 生成统一格式的差异 |
+
+## 搜索与查找
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 搜索文本并显示行号 | <code>grep -n &quot;pattern&quot; &lt;file&gt;</code> | 按正则表达式匹配 |
+| 按固定文本搜索 | <code>grep -nF &quot;literal text&quot; &lt;file&gt;</code> | 不把输入当正则表达式 |
+| 递归搜索目录 | <code>grep -rn &quot;pattern&quot; &lt;dir&gt;</code> | 搜索目录中的文件 |
+| 排除匹配行 | <code>grep -v &quot;pattern&quot; &lt;file&gt;</code> | 只保留不匹配的行 |
+| 快速递归搜索 | <code>rg -n &quot;pattern&quot; &lt;dir&gt;</code> | 需要安装 ripgrep，默认跳过很多忽略文件 |
+| 列出文件路径 | <code>rg --files &lt;dir&gt;</code> | 适合按扩展名或目录筛选 |
+| 按文件名查找 | <code>find . -type f -name &quot;*.md&quot;</code> | 给通配符加引号，避免 Shell 提前展开 |
+| 按目录名查找 | <code>find . -type d -name &quot;build&quot;</code> | 只匹配目录 |
+| 查找最近一天修改 | <code>find . -type f -mtime -1</code> | 按修改时间筛选 |
+| 找到后逐个处理 | <code>find . -type f -name &quot;*.txt&quot; -exec wc -l {} +</code> | 使用 -exec 避免文件名空格被错误拆分 |
+
+## 文本处理
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 按行排序 | <code>sort &lt;file&gt;</code> | 默认按当前区域设置排序 |
+| 按数值排序 | <code>sort -n &lt;file&gt;</code> | 例如数值 2 排在 10 前面 |
+| 排序并去重 | <code>sort -u &lt;file&gt;</code> | 输出唯一行 |
+| 统计相邻重复行 | <code>sort &lt;file&gt; &#124; uniq -c</code> | uniq 仅合并相邻重复行 |
+| 取简单分隔文本的字段 | <code>cut -d &quot;:&quot; -f 1 &lt;file&gt;</code> | 不适合包含转义与引号的复杂 CSV |
+| 输出指定行范围 | <code>sed -n &quot;10,20p&quot; &lt;file&gt;</code> | 只显示第 10—20 行 |
+| 替换文本并另存 | <code>sed &quot;s/old/new/g&quot; &lt;file&gt; &gt; result.txt</code> | 不要把输出重定向回输入文件 |
+| 按字段处理 | <code>awk &#x27;{print $1, $3}&#x27; &lt;file&gt;</code> | 默认按空白分隔；单引号保护 $ |
+| 求数值列的和 | <code>awk &#x27;{sum += $1} END {print sum}&#x27; &lt;file&gt;</code> | 假设第一列是数值 |
+| 替换字符 | <code>tr &quot;[:lower:]&quot; &quot;[:upper:]&quot; &lt; &lt;file&gt;</code> | 按当前区域设置转换大小写 |
+| 统计输出行数 | <code>grep -F &quot;ERROR&quot; app.log &#124; wc -l</code> | 将过滤结果交给下一条命令 |
+
+## 重定向与组合命令
+
+| 写法 | 含义 |
+| --- | --- |
+| `command > output.txt` | 把标准输出写到文件，已有文件会被覆盖 |
+| `command >> output.txt` | 追加标准输出 |
+| `command < input.txt` | 用文件作为标准输入 |
+| `command 2> errors.txt` | 单独保存标准错误 |
+| `command > run.log 2>&1` | 把输出与错误写到同一文件；顺序有意义 |
+| <code>first &#124; second</code> | 左边的标准输出成为右边的标准输入 |
+| <code>command &#124; tee run.log</code> | 同时显示输出并写入文件；追加用 tee -a |
+| `first && second` | 第一条成功后执行第二条 |
+| <code>first &#124;&#124; second</code> | 第一条失败后执行第二条 |
+| `first; second` | 按顺序执行，不要求第一条成功 |
+
+Shell 会先处理重定向，再运行命令，所以 `cat file > file` 会先清空 file。Bash 中 `set -o pipefail` 能让管道中的前序命令失败反映在管道退出状态上。
+
+## 权限与命令来源
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 查看文件权限 | <code>ls -l &lt;file&gt;</code> | 查看所有者、用户组和 rwx 权限 |
+| 给所有者执行权限 | <code>chmod u+x &lt;script&gt;</code> | 不改变其他用户权限 |
+| 设为仅所有者可读写 | <code>chmod 600 &lt;file&gt;</code> | 常用于私有凭证文件 |
+| 查看当前身份 | <code>id</code> | 输出用户与用户组 |
+| 查看命令解析结果 | <code>type &lt;command&gt;</code> | 区分别名、函数、内建命令与程序 |
+| 查看可执行位置 | <code>command -v &lt;command&gt;</code> | 可用于判断命令是否存在 |
+| 查看帮助 | <code>man &lt;command&gt;</code> | 查看本机安装版本的手册 |
+| 管理员权限执行 | <code>sudo &lt;command&gt;</code> | 仅对这条命令提升权限，Shell 重定向仍由当前用户处理 |
+| 以管理员权限写文件 | <code>printf &#x27;%s\n&#x27; &quot;value&quot; &#124; sudo tee &lt;file&gt;</code> | tee 负责写入受保护的目标文件 |
+
+## 进程与后台任务
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 查看全部进程 | <code>ps aux</code> | 输出进程、PID 和资源占用 |
+| 动态看资源 | <code>top</code> | 观察 CPU、内存和活跃进程 |
+| 按命令名找 PID | <code>pgrep -fl &quot;pattern&quot;</code> | 核对实际匹配到的进程 |
+| 请求进程退出 | <code>kill &lt;pid&gt;</code> | 默认发送 TERM，可让程序处理退出 |
+| 后台运行 | <code>command &amp;</code> | 与当前 Shell 的作业管理关联 |
+| 查看当前 Shell 作业 | <code>jobs -l</code> | 只看这个 Shell 管理的作业 |
+| 恢复前台作业 | <code>fg %1</code> | 将编号 1 的作业放回前台 |
+| 继续暂停的后台作业 | <code>bg %1</code> | 继续执行被暂停的作业 |
+| 忽略挂断并记录输出 | <code>nohup command &gt; run.log 2&gt;&amp;1 &amp;</code> | 常用于简单后台任务，不负责自动重启 |
+| 等待后台进程 | <code>wait &lt;pid&gt;</code> | 等待子进程结束并取得退出状态 |
+
+终端中 `Ctrl+C` 请求中断前台任务，`Ctrl+Z` 暂停任务。`kill -KILL <pid>` 无法让程序正常清理资源，确认普通退出无效后再考虑。
+
+## 磁盘、归档与网络
+
+| 用途 | 命令 | 说明 |
+| --- | --- | --- |
+| 目录总大小 | <code>du -sh &lt;dir&gt;</code> | 估算目录磁盘占用 |
+| 磁盘容量 | <code>df -h</code> | 显示文件系统的使用与剩余容量 |
+| 打包目录 | <code>tar -czf archive.tar.gz &lt;dir&gt;</code> | 创建 gzip 压缩的 tar 归档 |
+| 查看归档内容 | <code>tar -tzf archive.tar.gz</code> | 解包前确认归档结构 |
+| 解包到指定目录 | <code>tar -xzf archive.tar.gz -C &lt;dir&gt;</code> | 目标目录应先建立 |
+| 压缩目录为 ZIP | <code>zip -r archive.zip &lt;dir&gt;</code> | 需要安装 zip |
+| 查看 ZIP 文件清单 | <code>unzip -l archive.zip</code> | 查看文件名与大小 |
+| 查看 HTTP 响应头 | <code>curl -I https://example.com</code> | 发出 HEAD 请求，服务器可能与 GET 响应不同 |
+| 下载到指定文件 | <code>curl -fL https://example.com/file -o file</code> | 跟随重定向，HTTP 错误时返回失败 |
+| 检查 TCP 监听端口 | <code>lsof -nP -iTCP:8080 -sTCP:LISTEN</code> | 查看监听 8080 的进程 |
+| Linux 查看监听套接字 | <code>ss -lntp</code> | Linux 工具；进程详情可能需要权限 |
+| 登录远程服务器 | <code>ssh user@host</code> | 使用 SSH 配置中的身份和连接选项 |
+| 复制文件到远程 | <code>scp &lt;file&gt; user@host:&lt;path&gt;</code> | 通过 SSH 传输文件 |
+| 同步目录 | <code>rsync -av &lt;source&gt;/ &lt;destination&gt;/</code> | 保留源目录结构；源路径尾部斜杠影响复制层级 |
+
+## 变量、引号和脚本
+
+```bash
+project="notes"                    # 赋值时等号两侧不留空格
+printf '%s\n' "$project"          # 双引号允许展开，并保留一个参数
+printf '%s\n' '$project'           # 单引号保留字面文本
+export PROJECT_MODE="local"        # 导出给后续子进程
+lines=$(wc -l < notes.txt)          # 用命令输出作为变量值
+source ./env.sh                    # 在当前 Shell 中执行
+bash ./script.sh                   # 明确指定 Bash 运行脚本
+```
+
+| 参数 | 含义 |
+| --- | --- |
+| `$0` | 脚本或 Shell 的名称 |
+| `$1`、`$2` | 第一个、第二个位置参数 |
+| `$#` | 位置参数数量 |
+| `"$@"` | 将每个位置参数分别传递，保留各自边界 |
+| `"$*"` | 按 IFS 的第一个字符连接为一个参数 |
+| `$?` | 上一条命令的退出状态，0 通常表示成功 |
+| `$$` | Shell 的进程号；子 Shell 等场景需区分 |
+| `$!` | 最近启动的后台任务进程号 |
+
+一个简单的 Bash 脚本：
+
+```bash
+#!/usr/bin/env bash
+
+for file in ./*.txt; do
+  [ -f "$file" ] || continue
+  printf '%s: ' "$file"
+  wc -l < "$file"
+done
+```
+
+可用 `bash -n script.sh` 检查 Bash 语法，`bash -x script.sh` 观察执行过程。脚本中使用变量路径时通常加双引号，例如 `cp "$src" "$dst"`，避免空格、通配符和空值改变参数数量。
+
+参考：[Bash 手册](https://www.gnu.org/software/bash/manual/)、[GNU Coreutils 手册](https://www.gnu.org/software/coreutils/manual/)。macOS 部分工具来自 BSD，参数以本机手册为准。
+
+
+---
+
+<details id="original-notes" markdown="1">
+<summary>原始文档（点击展开）</summary>
+
 # Shell
 
 >from MIT Missing Semester of Your CS Education
@@ -1848,3 +2027,5 @@ vim file.txt       # 使用 vim 编辑器
 echo "Content" | sudo tee /etc/file.conf   # 覆盖写入
 echo "Content" | sudo tee -a /etc/file.conf  # 追加写入
 ```
+
+</details>
