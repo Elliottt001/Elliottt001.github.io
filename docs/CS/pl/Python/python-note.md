@@ -448,7 +448,7 @@ print(calculator(a, b, div))
 
 ### 类的定义方法（不够简便）
 
-### 类的构造方法（最简便的）
+### 类的构造方法（最简便的） {#animal-example}
 
 ```python
 class Animal():
@@ -704,7 +704,7 @@ import sys
 ### 模块module
 模块：.py文件
 在同一文件夹下
-	直接import: 假设我现在有一个animal.py, 里面是[[Python#^f2109a|上面这个Animal类]]
+	直接import: 假设我现在有一个animal.py, 里面是[上面这个 Animal 类](#animal-example)
 ```python
 import animal
 animal1 = animal.Animal(name = "男爵", age=10, sound="miaomiao", love_status=True, species="猫")

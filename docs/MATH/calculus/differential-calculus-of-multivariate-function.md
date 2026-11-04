@@ -1,12 +1,21 @@
 ## 页首涂鸦
 
-$$Work \; Hard, \; Play\;  Hard$$
+$$
+Work \; Hard, \; Play\;  Hard
+$$
+
 
 <!-- $$为什么一个人能自律成这样？？？$$
 
-$$真的一天都在写写写学学学没有停下来过啊！！！$$
+$$
+真的一天都在写写写学学学没有停下来过啊！！！
+$$
 
-$$数学化学轮换着学，手机放身后书架上$$
+
+$$
+数学化学轮换着学，手机放身后书架上
+$$
+
 
 ![Image title](res/images/image-16_4.png#only-light){ width="300" }
 ![](res/images/image-14_0_1.png#only-dark){ width="300" } -->
@@ -211,7 +220,10 @@ $\frac{\partial^2 f}{\partial x \partial y}$ 先对谁偏导分母上谁就写�
 
 对于初等多元函数，不同顺序的二阶偏导函数，求一个就行
 
-$$\frac{\partial^n z}{\partial x^n}$$
+$$
+\frac{\partial^n z}{\partial x^n}
+$$
+
 
 ## 多元函数的全微分
 
@@ -220,9 +232,15 @@ $$\frac{\partial^n z}{\partial x^n}$$
 ![alt text](res/images/image-20_3_1_1_1.png)
 
 
-$$ \text{全微分}\; dz = A \Delta x + B \Delta y$$
+$$
+\text{全微分}\; dz = A \Delta x + B \Delta y
+$$
 
-$$ 其中, A = f'_x(x, y) ,\; B = f'_y(x, y), \; \Delta x = dx, \; \Delta y = dy$$
+
+$$
+其中, A = f'_x(x, y) ,\; B = f'_y(x, y), \; \Delta x = dx, \; \Delta y = dy
+$$
+
 
 $记 \; o(\Delta x) = \alpha \Delta x$
 
@@ -271,22 +289,25 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
     - 二元函数
 
-        设 \( z = f(x, y) \) 在点 \( (x_0, y_0) \) 处可微，则全微分公式为：
-        \[
+        设 $z = f(x, y)$ 在点 $(x_0, y_0)$ 处可微，则全微分公式为：
+
+        $$
         dz = \frac{\partial f}{\partial x} \bigg|_{(x_0, y_0)} dx + \frac{\partial f}{\partial y} \bigg|_{(x_0, y_0)} dy
-        \]
+        $$
+
 
     - n元函数
 
-        对于 \( n \) 元函数 \( u = f(x_1, x_2, \dots, x_n) \)，全微分公式推广为：
+        对于 $n$ 元函数 $u = f(x_1, x_2, \dots, x_n)$，全微分公式推广为：
 
-        \[
+        $$
         du = \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i = \frac{\partial f}{\partial x_1} dx_1 + \frac{\partial f}{\partial x_2} dx_2 + \cdots + \frac{\partial f}{\partial x_n} dx_n
-        \]
+        $$
+
 
         其中：
-        - \( \frac{\partial f}{\partial x_i} \) 是函数对第 \( i \) 个变量的偏导数，
-        - \( dx_i \) 是自变量 \( x_i \) 的微小增量。
+        - $\frac{\partial f}{\partial x_i}$ 是函数对第 $i$ 个变量的偏导数，
+        - $dx_i$ 是自变量 $x_i$ 的微小增量。
 
 
 
@@ -309,9 +330,15 @@ $记 \; o(\Delta x) = \alpha \Delta x$
 
 内层不要求可微
 
-$$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial x} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial x}$$
+$$
+\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial x} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial x}
+$$
 
-$$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial y}$$
+
+$$
+\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} * \frac{\partial v}{\partial y}
+$$
+
 
 因变量对中间变量分别偏导, 中间变量对x偏导, 相乘再相加。一元函数全是求导，多元函数全是偏导
 
@@ -424,7 +451,10 @@ $$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} * \frac{\partial
 
 公式：
 
-$$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
+$$
+\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}
+$$
+
 
 !!! warning ""
 
@@ -486,7 +516,7 @@ $$\frac{\partial z}{\partial x} = - \frac{F'_x}{F'_z}$$
         
         - 两侧同时偏导
 
-m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n - m 元函数。谁是自变量谁是因变量看题目所求偏导形式
+m 个方程 n 个变量 $\to$ m 个函数，n - m 个自变量，即 m 个 n - m 元函数。谁是自变量谁是因变量看题目所求偏导形式
 
 ## 多元函数的方向导数和梯度
 
@@ -503,11 +533,13 @@ m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n -
 
 !!! info "定义"
 
-    设 \( f: \mathbb{R}^n \to \mathbb{R} \) 为多元函数，在点 \( P \) 处可微，\( \mathbf{u} = (u_1, u_2, \dots, u_n) \) 为单位向量，则 \( f \) 在点 \( P \) 沿方向 \( \mathbf{u} \) 的**方向导数**定义为：
-    \[
+    设 $f: \mathbb{R}^n \to \mathbb{R}$ 为多元函数，在点 $P$ 处可微，$\mathbf{u} = (u_1, u_2, \dots, u_n)$ 为单位向量，则 $f$ 在点 $P$ 沿方向 $\mathbf{u}$ 的**方向导数**定义为：
+
+    $$
     D_{\mathbf{u}} f(P) = \lim_{h \to 0} \frac{f(P + h\mathbf{u}) - f(P)}{h}
-    \]
-    其值表示函数沿 \( \mathbf{u} \) 方向的瞬时变化速率。
+    $$
+
+    其值表示函数沿 $\mathbf{u}$ 方向的瞬时变化速率。
 
 
 !!! tip "人话 —— 方向导数"
@@ -542,21 +574,24 @@ m 个方程 n 个变量 $ \to $ m 个函数，n - m 个自变量，即 m 个 n -
 
 公式：
 
-\[
+$$
 D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u} = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(P) \cdot u_i
-\]
+$$
 
-- **二元函数** \( f(x, y) \)：
 
-    \[
+- **二元函数** $f(x, y)$：
+
+    $$
     D_{(u_1, u_2)} f(x_0, y_0) = \frac{\partial f}{\partial x}(x_0, y_0) \cdot u_1 + \frac{\partial f}{\partial y}(x_0, y_0) \cdot u_2
-    \]
+    $$
 
-- **三元函数** \( f(x, y, z) \)：
 
-    \[
+- **三元函数** $f(x, y, z)$：
+
+    $$
     D_{(u_1, u_2, u_3)} f(x_0, y_0, z_0) = \frac{\partial f}{\partial x} u_1 + \frac{\partial f}{\partial y} u_2 + \frac{\partial f}{\partial z} u_3
-    \]
+    $$
+
 
 **其中，$u$ 是对应方向上的单位矢量**，$u = (u_1, u_2, u_3, \cdots, u_n) = (\cos \alpha _1, \cos \alpha _2, \cos \alpha _3, \cdots, \cos \alpha _n)$，$\alpha _i$ 是该矢量与每个坐标轴正向的夹角
 
@@ -593,9 +628,10 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u} = \sum_{i=1}^n \frac{\partial
 
 换种写法：
 
-\[
+$$
 D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
-\]
+$$
+
 
 
 ![alt text](res/images/image-74_2_1_1_1.png)
@@ -706,7 +742,7 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 
 ## 多元函数的条件极值
 
-多元函数条件极值的求解可以通过构造拉格朗日函数来实现。以函数 \( f(x, y) \) 在约束条件 \( g(x, y) = 0 \) 下的极值问题为例，步骤如下：
+多元函数条件极值的求解可以通过构造拉格朗日函数来实现。以函数 $f(x, y)$ 在约束条件 $g(x, y) = 0$ 下的极值问题为例，步骤如下：
 
 !!! success ""
 
@@ -714,23 +750,25 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 
 1. **构造拉格朗日函数**：
 
-    \[
+    $$
     \mathcal{L}(x, y, \lambda) = f(x, y) + \lambda g(x, y)
-    \]
+    $$
+
 
 2. **求偏导并解方程组，即求拉格朗日函数的驻点**：
 
     - 参数可以不求，但如果必须求出参数才能得出变量值那就求
 
-    \[
+    $$
     \begin{cases}
     \frac{\partial \mathcal{L}}{\partial x} = \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} = 0 \\
     \frac{\partial \mathcal{L}}{\partial y} = \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} = 0 \\
     \frac{\partial \mathcal{L}}{\partial \lambda} = g(x, y) = 0
     \end{cases}
-    \]
+    $$
 
-    解得 \( (x, y, \lambda) \)，其中 \( (x, y) \) 即为极值怀疑点，如果算最大最小值：再进一步算函数值得到最大值 / 最小值。
+
+    解得 $(x, y, \lambda)$，其中 $(x, y)$ 即为极值怀疑点，如果算最大最小值：再进一步算函数值得到最大值 / 最小值。
 
 
 
@@ -738,8 +776,8 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 !!! info "约束条件的本质"
 
     1. **单约束**：  
-    例如 \( g(x, y) = 0 \)，表示在求解 \( f(x, y) \) 的极值时，变量 \( x, y \) 必须始终满足 \( g(x, y) = 0 \)。  
-    - **几何意义**：在平面上，\( g(x, y) = 0 \) 定义了一条曲线，极值点必须在这条曲线上（如直线、圆等）。
+    例如 $g(x, y) = 0$，表示在求解 $f(x, y)$ 的极值时，变量 $x, y$ 必须始终满足 $g(x, y) = 0$。  
+    - **几何意义**：在平面上，$g(x, y) = 0$ 定义了一条曲线，极值点必须在这条曲线上（如直线、圆等）。
 
     2. **多约束**：  
     如果有多个约束条件，例如： 
@@ -749,16 +787,18 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
     g_1(x, y, z) = 0 \\
     g_2(x, y, z) = 0
     \end{cases}
-    $$ 
+    $$
+
 
     此时约束条件构成一个方程组，变量必须同时满足所有方程。  
     - **几何意义**：在三维空间中，两个约束方程的交集可能是一条曲线或一个点。
 
-    - 具体实例：如果有 \( m \) 个约束条件 \( g_1 = 0, g_2 = 0, \dots, g_m = 0 \)，则需引入 \( m \) 个拉格朗日乘数 $ \lambda_1, \lambda_2, \dots, \lambda_m $ ，构造拉格朗日函数：
+    - 具体实例：如果有 $m$ 个约束条件 $g_1 = 0, g_2 = 0, \dots, g_m = 0$，则需引入 $m$ 个拉格朗日乘数 $\lambda_1, \lambda_2, \dots, \lambda_m$ ，构造拉格朗日函数：
 
     $$
     \mathcal{L}(x, y, z, \dots, \lambda_1, \lambda_2, \dots) = f(x, y, z, \dots) - \sum_{i=1}^m \lambda_i \cdot g_i(x, y, z, \dots)
     $$
+
 
     - 通过求偏导并解方程组（方程数量 = 变量数 + 约束数）：
 
@@ -772,6 +812,7 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
         \vdots
         \end{cases}
         $$
+
 
 
 
@@ -798,28 +839,30 @@ D_{\mathbf{u}} f(P) = \nabla f(P) \cdot \mathbf{u}
 
 **例题解析**：
 
-**例1**：求 \( f(x, y) = x^2 + y^2 \) 在约束 \( x + y = 1 \) 下的极值。
+**例1**：求 $f(x, y) = x^2 + y^2$ 在约束 $x + y = 1$ 下的极值。
 
 - 构造拉格朗日函数：
 
-    \[
+    $$
     \mathcal{L}(x, y, \lambda) = x^2 + y^2 - \lambda (x + y - 1)
-    \]
+    $$
+
 
 - 求偏导并解方程组：
 
-    \[
+    $$
     \begin{cases}
     2x + \lambda = 0 \\
     2y + \lambda = 0 \\
     x + y = 1
     \end{cases}
-    \]
+    $$
 
-    解得 \( x = y = \frac{1}{2} \)，极值为 \( \left(\frac{1}{2}, \frac{1}{2}\right) \)，对应 \( f \) 的最小值 \( \frac{1}{2} \)。
+
+    解得 $x = y = \frac{1}{2}$，极值为 $\left(\frac{1}{2}, \frac{1}{2}\right)$，对应 $f$ 的最小值 $\frac{1}{2}$。
 
 **结论**：
-多元函数条件极值的拉格朗日乘数法通过引入乘数 \( \lambda \) 将约束优化问题转化为无约束问题，解方程组得到极值点。拉格朗日乘数的几何意义是目标函数与约束条件的梯度在极值点处共线。
+多元函数条件极值的拉格朗日乘数法通过引入乘数 $\lambda$ 将约束优化问题转化为无约束问题，解方程组得到极值点。拉格朗日乘数的几何意义是目标函数与约束条件的梯度在极值点处共线。
 
 
 **多约束条件**

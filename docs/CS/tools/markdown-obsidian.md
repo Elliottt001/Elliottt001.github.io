@@ -498,8 +498,6 @@ classDiagram
 
 [度娘]: http://www.baidu.com
 [知乎]: https://www.zhihu.com
-[^1]: 周树人
-[^2]: 绍兴人
 
 
 [Markdown语法图文全面详解(10分钟学会)-CSDN博客](https://blog.csdn.net/u014061630/article/details/81359144?ops_request_misc=%257B%2522request%255Fid%2522%253A%25222B332BBB-8F0E-4A76-A74F-1B6FD4CE149E%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=2B332BBB-8F0E-4A76-A74F-1B6FD4CE149E&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-81359144-null-null.142^v100^pc_search_result_base4&utm_term=markdown%E8%AF%AD%E6%B3%95&spm=1018.2226.3001.4187)

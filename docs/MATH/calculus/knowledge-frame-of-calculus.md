@@ -1,3 +1,5 @@
+> 以下标为“补充图”的图示与例题根据本节知识点重新绘制，用于替代已遗失的截图。点击图片可放大查看。
+
 Welcome to the world of Caculus!
 
 ## 前置知识
@@ -11,17 +13,21 @@ $$
 $$
 
 
+
 $$
 \sin^2\theta + \cos^2\theta = 1
 $$
+
 
 $$
 \sec^2\theta - \tan^2\theta = 1
 $$
 
+
 $$
 \csc^2\theta - \cot^2\theta = 1
 $$
+
 
 
 
@@ -81,7 +87,7 @@ $$
 - 函数
 	- 内容：$\mathring{U}(x_0)$ 可比
 
-#### 保号性
+#### 保号性 {#limit-sign}
 - 数列
 	- 内容：极限大于0，则存在小于极限大于0常数η，n充分大时项都大于η
 	- 地位：保不等式性推论
@@ -165,7 +171,7 @@ $x_0$ 处左连续&右连续 <=> 连续
 闭区间连续，则必有最大最小值、上下界
 
 初等函数、基本初等函数定义域上都连续：利用极限符号与f可交换
-### 凹凸性与拐点
+### 凹凸性与拐点 {#concavity-inflection}
 - 凹凸性
 	- 定义
 	- 注意：**某段区间内，局部性质**
@@ -199,7 +205,7 @@ $x_0$ 处左连续&右连续 <=> 连续
 		1. 求单侧极限
 			1. 极限存在是A，y=A水平渐近线
 			2. 极限无穷，求斜渐近线
-				![[Pasted image 20241107083323.png]]
+				![补充图：斜渐近线：曲线与直线的距离趋于零](res/images/supplements/oblique-asymptote.svg)
 				1. 公式：可求出k，b则有斜渐近线
 				   $k = lim_{x \to \infty} \frac{f(x)}{x}$
 				   $b = lim_{x \to \infty}[f(x) - kx]$ 
@@ -208,7 +214,7 @@ $x_0$ 处左连续&右连续 <=> 连续
 					2. 点到直线距离，极限的定义与求解
 5. 用辅助点：知x求y值，定位
 
-### 曲率
+### 曲率 {#curvature}
 - 定义
 	- 平均曲率
 	- 某点处曲率
@@ -216,7 +222,7 @@ $x_0$ 处左连续&右连续 <=> 连续
 	- $k = \frac{|y''|}{(1 + y'^2)^{\frac32}}$
 - 曲率圆
 	- 现推，解方程组
-	![[Pasted image 20241107093111.png]]
+	![补充图：抛物线在原点的曲率圆](res/images/supplements/curvature-circle.svg)
 - 杂项
 	- 直线就是R = $\infty$的圆，直线与任意一个圆上点的个数相同
 
@@ -234,6 +240,7 @@ $$
 \lim_{\Delta x \to 0^-} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0^-} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = \lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0}
 $$
 
+
 存在，则称 $f(x)$ 在点 $x_0$ 左可导，此极限值称为 $f(x)$ 在点 $x_0$ 的左导数，记作 $f'_{-}(x_0)$。
 
  
@@ -242,6 +249,7 @@ $$
 $$
 \lim_{\Delta x \to 0^+} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0^+} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = \lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0}
 $$
+
 
 存在，则称 $f(x)$ 在点 $x_0$ 右可导，此极限值称为 $f(x)$ 在点 $x_0$ 的右导数，记作 $f'_{+}(x_0)$。
 
@@ -269,23 +277,30 @@ $arctanx$  导数是 $\frac1{1+x^2}$ ，不是1 + $x^2$
 
 
 1. 
+
 $$
 (u \pm v)^{(n)} = u^{(n)} \pm v^{(n)}
 $$
 
+
 2. 
+
 $$
 (cu)^{(n)} = c u^{(n)}, \ \text{其中} \ c \ \text{为常数}
 $$
 
+
 3. 莱布尼茨公式
+
 $$
 (uv)^{(n)} = C_n^0 u^{(n)}v^{(0)} + C_n^1 u^{(n-1)}v^{(1)} + \cdots + C_n^k u^{(n-k)}v^{(k)} + \cdots + C_n^n u^{(0)}v^{(n)}
 $$
 
+
 $$
 = \sum_{k=0}^n C_n^k u^{(n-k)}v^{(k)}, \ \text{其中} \ v^{(0)} = v, \ u^{(0)} = u.
 $$
+
 
 
 ## 中值定理
@@ -310,17 +325,17 @@ $$
 			- 二阶导大于零：极小值
 			- 二阶导小于零：极大值
 			- （二阶导等于零：另谋他法）
-		- 证明：[[Knowledge Frame of Caculus#^68518e|函数极限保号性]]
+		- 证明：[函数极限保号性](#limit-sign)
 
 #### 最值
-- 最值怀疑点：区间端点 + 极值怀疑点（驻点 + 导数不存在点） ^a591e9
+- 最值怀疑点：区间端点 + 极值怀疑点（驻点 + 导数不存在点）
 - 若函数在区间（任何类型的区间都行）上存在唯一的极值点，则其为相应的最值点：无需与端点函数值比较
-![[Pasted image 20241107002631.png]]
+![补充图：闭区间上最值的候选点](res/images/supplements/extrema-candidates.svg)
 ### 三个中值定理
 ##### 关系
 Cauchy ——g(x) = x——> Lagrange ——f(a) = f(b)——> Rolle
 #### 罗尔定理
-![[IMG_4006.png]]
+![补充图：罗尔定理：相同高度之间有水平切线](res/images/supplements/rolle-theorem.svg)
 
 ##### 条件
 3个
@@ -339,7 +354,9 @@ Cauchy ——g(x) = x——> Lagrange ——f(a) = f(b)——> Rolle
 		- 构造辅助函数（积分找原函数…）
 		- 对辅助函数用罗尔
 	- 例题：
-		![[IMG_4008.png]]![[IMG_4010.png]]
+		![补充图：用辅助函数证明 f′(ξ) = f(ξ)](res/images/supplements/rolle-auxiliary.svg)
+
+![补充图：罗尔定理与方程根的个数](res/images/supplements/rolle-roots.svg)
 
 #### 拉格朗日中值定理
 ##### 条件
@@ -363,10 +380,10 @@ f($x_0$ + Δ$x$) - f($x_0$) = f '($x_0$ + θΔ$x$)Δ$x$  (0 < θ < 1 )
 		1. 选定区间
 		2. 构造形式
 	- 例题：
-	![[Pasted image 20241105085005.png]]
-	遗失部分：$f''(x) > 0, f(0) = 0$ 
+	![补充图：凸函数的割线斜率小于右端切线斜率](res/images/supplements/convex-secant.svg)
+	原笔记补记的条件：$f''(x) > 0, f(0) = 0$ 
 #### 柯西中值定理
-![[IMG_20241029_102629.jpg]]
+![补充图：柯西中值定理](res/images/supplements/cauchy-theorem.svg)
 
 ##### 条件
 3个
@@ -378,89 +395,113 @@ f($x_0$ + Δ$x$) - f($x_0$) = f '($x_0$ + θΔ$x$)Δ$x$  (0 < θ < 1 )
 	- 有差，但没有$x_1$ - $x_2$，有俩函数值的差
 	
 ##### 例题
-![[IMG_20241029_104215.jpg]]
+![补充图：柯西中值定理的代入例题](res/images/supplements/cauchy-example.svg)
 
 
 ## 泰勒定理
 - 引入
 	- 多项式函数表示为$(x-x_0)$的幂次和，求系数：求n阶导，分别代入$x_0$，得到$(x-x_0)^k$前的系数：
-	$$a_k=\frac{f^{(k)}(x_0)}{k!}$$
+
+    $$
+    a_k=\frac{f^{(k)}(x_0)}{k!}
+    $$
+
 	- 进一步，将任意函数表示成这样的形式
 - 内容
-	![[Pasted image 20241107093357.png]]
+	![补充图：带拉格朗日余项的泰勒公式](res/images/supplements/taylor-remainder.svg)
 1. 拉格朗日
+
 $$
 P_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k
 $$
 
+
 - 证明
-	![[Pasted image 20241105150509.png]]
-	![[Pasted image 20241105150806.png]]![[Pasted image 20241105150842.png]]
+	![补充图：泰勒余项证明：先构造辅助函数](res/images/supplements/taylor-proof-auxiliary.svg)
+	![补充图：泰勒余项证明：求导时相邻项抵消](res/images/supplements/taylor-proof-derivative.svg)
+
+![补充图：泰勒余项证明：由罗尔定理解出余项](res/images/supplements/taylor-proof-rolle.svg)
 - 变型
-	![[Pasted image 20241105151045.png]]
+	![补充图：泰勒公式中的 ξ 与 θ 表示](res/images/supplements/taylor-theta.svg)
 - 麦克劳林
+
 $$
 e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 $$
+
 
 $$
 \sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
 $$
 
+
 $$
 \cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
 $$
+
 
 $$
 \ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots
 $$
 
+
 $$
 \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots \quad \text{for} \quad |x| < 1
 $$
+
 
 $$
 (1+x)^a = \sum_{n=0}^{\infty} \binom{a}{n} x^n = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots
 $$
 
 
+
 皮亚诺
 
 
-$$x —>0$$ 
-^c8f5ca
+$$
+x —>0
+$$
+
+
 
 $$
 e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + o(x^n)= \sum_{n=0}^{\infty} \frac{x^n}{n!} + o(x^n)
 $$
 
+
 $$
 \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots +\frac{(-1)^n x^{2n+1}}{(2n+1)!} + o(x^{2n+1})= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} + o(x^{2n+1})
 $$
+
 
 $$
 \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^n x^{2n}}{(2n)!}+ o(x^{2n})= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} + o(x^{2n})
 $$
 
+
 $$
 \ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots + \frac{(-1)^{n+1} x^n}{n}+ o(x^n)= \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} + o(x^n)
 $$
+
 
 $$
 \frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots + x^n+ o(x^n)= \sum_{n=0}^{\infty} x^n + o(x^n) \quad \text{for} \quad |x| < 1
 $$
 
+
 $$
 (1+x)^a = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots + \frac{a(a-1)(a-2)\cdots(a-n+1)}{n!}x^n + o(x^n)= \sum_{n=0}^{\infty} \binom{a}{n} x^n + o(x^n)
 $$
 
+
 注意！
 1. 
-	![[Pasted image 20241105154803.png]]
+	![补充图：有限展开与无穷级数的区别](res/images/supplements/taylor-finite.svg)
 2. 
-	![[Pasted image 20241105155156.png]]
+	![补充图：展开式需要说明适用范围](res/images/supplements/taylor-domain.svg)
 3. 
-	![[Pasted image 20241105155302.png]]
+	![补充图：无穷次可导不保证等于自己的泰勒级数](res/images/supplements/taylor-smooth.svg)
 
 
 ## 不定积分

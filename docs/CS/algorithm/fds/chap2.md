@@ -33,53 +33,64 @@
 	- **执行次数**：内层循环从 `j = 0` 到 `j = cols - 1`，总共运行 `cols` 次。
 	- **额外检查**：每次内层循环结束时，条件 `j < cols` 会再检查一次，发现不满足条件，内层循环结束。因此，内层循环的条件检查总共执行了 `cols + 1` 次。
 	- **嵌套关系**：内层循环嵌套在外层循环中，因此内层循环的总执行次数是：
-	\[
-	\text{外层循环次数} \times \text{内层循环次数} = rows \times (cols + 1)
-	\]
-	- **总结**：内层循环的总执行次数是 \( rows \cdot (cols + 1) \)。
+
+    $$
+    \text{外层循环次数} \times \text{内层循环次数} = rows \times (cols + 1)
+    $$
+
+	- **总结**：内层循环的总执行次数是 $rows \cdot (cols + 1)$。
 
 	---
 
 	3. 矩阵加法操作 (`c[i][j] = a[i][j] + b[i][j]`)
 
 	- **执行次数**：矩阵加法操作在内层循环的每次迭代中执行一次。
-	- **嵌套关系**：由于内层循环运行 \( rows \cdot cols \) 次，因此矩阵加法操作也执行 \( rows \cdot cols \) 次。
-	- **总结**：矩阵加法操作的总执行次数是 \( rows \cdot cols \)。
+	- **嵌套关系**：由于内层循环运行 $rows \cdot cols$ 次，因此矩阵加法操作也执行 $rows \cdot cols$ 次。
+	- **总结**：矩阵加法操作的总执行次数是 $rows \cdot cols$。
 
 	---
 
 	4. 总执行次数（时间复杂度）
 
 	将上述所有部分的执行次数相加，得到总执行次数：
-	\[
-	T(rows, cols) = \text{外层循环条件检查} + \text{内层循环条件检查} + \text{矩阵加法操作}
-	\]
+
+    $$
+    T(rows, cols) = \text{外层循环条件检查} + \text{内层循环条件检查} + \text{矩阵加法操作}
+    $$
+
 	代入具体值：
-	\[
-	T(rows, cols) = (rows + 1) + rows \cdot (cols + 1) + rows \cdot cols
-	\]
+
+    $$
+    T(rows, cols) = (rows + 1) + rows \cdot (cols + 1) + rows \cdot cols
+    $$
+
 
 	展开并简化：
-	\[
-	T(rows, cols) = rows + 1 + rows \cdot cols + rows + rows \cdot cols
-	\]
-	\[
-	T(rows, cols) = 2 \cdot rows \cdot cols + 2 \cdot rows + 1
-	\]
+
+    $$
+    T(rows, cols) = rows + 1 + rows \cdot cols + rows + rows \cdot cols
+    $$
+
+    $$
+    T(rows, cols) = 2 \cdot rows \cdot cols + 2 \cdot rows + 1
+    $$
+
 
 	---
 
-	5. 为什么时间复杂度是 \( O(rows \cdot cols) \)
+	5. 为什么时间复杂度是 $O(rows \cdot cols)$
 
 	- **时间复杂度**表示算法执行时间随输入规模增长的趋势。
-	- 在矩阵加法中，输入规模由矩阵的行数 \( rows \) 和列数 \( cols \) 决定。
-	- 从总执行次数公式 \( T(rows, cols) = 2 \cdot rows \cdot cols + 2 \cdot rows + 1 \) 可以看出：
-	- 最高阶项是 \( 2 \cdot rows \cdot cols \)，它主导了整个时间复杂度。
-	- 低阶项 \( 2 \cdot rows \) 和常数项 \( 1 \) 在 \( rows \) 和 \( cols \) 很大时可以忽略。
+	- 在矩阵加法中，输入规模由矩阵的行数 $rows$ 和列数 $cols$ 决定。
+	- 从总执行次数公式 $T(rows, cols) = 2 \cdot rows \cdot cols + 2 \cdot rows + 1$ 可以看出：
+	- 最高阶项是 $2 \cdot rows \cdot cols$，它主导了整个时间复杂度。
+	- 低阶项 $2 \cdot rows$ 和常数项 $1$ 在 $rows$ 和 $cols$ 很大时可以忽略。
 	- 因此，时间复杂度为：
-	\[
-	O(rows \cdot cols)
-	\]
+
+    $$
+    O(rows \cdot cols)
+    $$
+
 
 	![alt text](res/images/image-1_1.png)
 

@@ -2,6 +2,7 @@
 {% include "partials/actions.html" %}
 {% if "<h1" not in page.content %}
   <h1>{{ page.title | d(config.site_name, true) }}</h1>
+  {{ page.meta.page_statistics | default("") }}
 {% endif %}
 {{ page.content }}
 {% include "partials/elsewhere.html" %}

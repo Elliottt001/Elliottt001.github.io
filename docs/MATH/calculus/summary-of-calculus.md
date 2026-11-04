@@ -1,3 +1,5 @@
+> 以下标为“补充图”的图示与例题根据本节知识点重新绘制，用于替代已遗失的截图。点击图片可放大查看。
+
 Welcome to the world of Caculus!
 
 !!! success "Let's see"
@@ -70,66 +72,114 @@ Welcome to the world of Caculus!
 #### 理解
 
 几乎全在极限值的***ε邻域内***
-——P20 ^251156
+——P20
 #### 公式
 ##### 极限
 
 1. 
-$$\lim_{x \to 0} \frac{\sin x}{x} = 1$$ 
+
+$$
+\lim_{x \to 0} \frac{\sin x}{x} = 1
+$$
+
+
 
 （**说明**：仅当 $0/0$ 型时可用）
 
 2. 
-$$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e$$
 
-$$\lim_{x \to 0} \left(1 + x\right)^{\frac{1}{x}} = e$$
+$$
+\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e
+$$
 
-$$\lim_{x \to 0} \left(1 - x\right)^{\frac{1}{x}} = e^{-1}$$
+
+
+$$
+\lim_{x \to 0} \left(1 + x\right)^{\frac{1}{x}} = e
+$$
+
+
+
+$$
+\lim_{x \to 0} \left(1 - x\right)^{\frac{1}{x}} = e^{-1}
+$$
+
+
 （**说明**：必须满足 $1^\infty$ 型）
 
 1. 
-$$\lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1$$  
+
+$$
+\lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1
+$$
+
+
 
 **证明**： 
 
 $\lim_{x \to 0} \ln(1 + x)^{\frac{1}{x}} = \ln e = 1$ 
 
 2. 
-$$\lim_{x \to 0} \frac{e^x - 1}{x} = 1$$ 
+
+$$
+\lim_{x \to 0} \frac{e^x - 1}{x} = 1
+$$
+
+
 
 **证明**：  
 
 令 $t = x$, 则 $\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{t} = 1$
 
 3. 
-$$\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a \quad (a > 0, a \neq 1)$$  
+
+$$
+\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a \quad (a > 0, a \neq 1)
+$$
+
+
 
 **证明**： 
 
-$
+$$
 \lim_{x \to 0} \frac{a^x - 1}{x} 
 = \lim_{x \to 0} \frac{e^{x \ln a} - 1}{x} 
 = \ln a \cdot \lim_{x \to 0} \frac{e^{x \ln a} - 1}{x \ln a} 
 = \ln a \cdot 1 
 = \ln a
-$
+$$
+
 
 5. 
-$$\lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} = \alpha \quad (\alpha \in \mathbb{R})$$  
 
-$$等价于：(记这个别记上面那个) $$
+$$
+\lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} = \alpha \quad (\alpha \in \mathbb{R})
+$$
 
-$$(1 + x)^α = 1 + αx$$ 
+
+
+$$
+等价于：(记这个别记上面那个)
+$$
+
+
+
+$$
+(1 + x)^α = 1 + αx
+$$
+
+
 
 **证明**：  
 
-$
+$$
 \lim_{x \to 0} \frac{(1 + x)^\alpha - 1}{x} 
 = \lim_{x \to 0} \frac{e^{\alpha \ln(1+x)} - 1}{x} 
 = \alpha \cdot \lim_{x \to 0} \frac{\ln(1 + x)}{x} 
 = \alpha \cdot 1 
 = \alpha
-$
+$$
+
 
 ---
 
@@ -157,28 +207,40 @@ $
 
 $$
 \lim u(x)^{v(x)} = \lim e^{v(x) \ln u(x)}
-$$ 
+$$
+
+
 
 **若**  
 
-$$\lim_{x \to x_0} u(x) = a, \quad \lim_{x \to x_0} v(x) = b$$  
+$$
+\lim_{x \to x_0} u(x) = a, \quad \lim_{x \to x_0} v(x) = b
+$$
+
+
 
 **则**  
 
-$$\lim_{x \to x_0} u(x)^{v(x)} = a^b$$  
+$$
+\lim_{x \to x_0} u(x)^{v(x)} = a^b
+$$
+
+
 
 **证明**：  
 
-$
+$$
 \lim_{x \to x_0} u(x)^{v(x)} = \lim_{x \to x_0} e^{v(x) \ln u(x)}  
 = e^{\lim_{x \to x_0} v(x) \ln u(x)}
-$  
+$$
+
 
 又因 $\lim_{x \to x_0} v(x) \ln u(x) = b \ln a$，得  
 
-$
+$$
 \lim_{x \to x_0} u(x)^{v(x)} = e^{b \ln a} = a^b
-$ 
+$$
+
 
 特别地：
 当 $u(x) \to 1, v(x) \to \infty$ 时，即$1^\infty$型
@@ -278,7 +340,7 @@ n项乘积极限：取对数化为n项和
 - 注意：
     - 只有乘积 or 商时才可替换
     - 外面有指数啥的都不行，只有乘积商
-    ![[Pasted image 20241105101358.png]]
+    ![补充图：等价无穷小：乘除可换，消去项需谨慎](res/images/supplements/equivalent-infinitesimals.svg)
     - 无穷小啊 ：—>0时：检查！
     - 换时随意换
 - 用处：
@@ -375,9 +437,11 @@ n项乘积极限：取对数化为n项和
 2. &f 和 g 在 x_0& 去心邻域均可导 
 
 - 其他：
-$
+
+$$
 0 \cdot \infty, \quad \infty - \infty, \quad 0^0, \quad 1^\infty, \quad \infty^0.
-$
+$$
+
 
 **解法**: 转化为 
 $\frac{0}{0}$或 $\frac{\infty}{\infty}$
@@ -392,7 +456,7 @@ $\frac{0}{0}$或 $\frac{\infty}{\infty}$
 1) **0 · $\infty$ 型**
 
 **步骤**: 
-$0 \cdot \infty \Rightarrow \frac{1}{\infty} \cdot \infty, $
+$0 \cdot \infty \Rightarrow \frac{1}{\infty} \cdot \infty,$
 或 
 $0 \cdot \infty \Rightarrow 0 \cdot \frac{1}{0}.$
 
@@ -466,7 +530,7 @@ $lim_{x \to 0^+}{(\frac{1-cosx}{x^2})}^\frac1x$
 ##### 一、换元
 灵活换元！
 t = 1/x 较常见
-##### 二、提公因式/提相同结构
+##### 二、提公因式/提相同结构 {#extract-common-structure}
 
 
 名曰“提相同结构”：将常数提出，剩下的东西可换元  A+B = A(1 + B/A)
@@ -503,7 +567,7 @@ t = 1/x 较常见
 		相对性：1次~n次 <=> $\frac1n$次~1次
 
 		例题：上册P35 例4
-	- 换元：$x = t^{题目出现的所有根指数的最小公倍数}$ $ \to$ 整式
+	- 换元：$x = t^{题目出现的所有根指数的最小公倍数}$ $\to$ 整式
 - 二项式：
     操作：展开 
     要求：整数指数——不行就放缩＋取整（上册P23L15）
@@ -521,7 +585,7 @@ t = 1/x 较常见
 		底数+1 -1，指数凑出+恒等变形补出剩余
 		剩余部分求极限：用本章别的方法
 - 底与幂：同底不同幂，同幂不同底
-	[[Summary Of Calculus#^e6c631|提出相同结构]]
+	[提出相同结构](#extract-common-structure)
 	
 #### 其他
 
@@ -540,14 +604,14 @@ t = 1/x 较常见
 
 ## 函数
 ### 拐点与凹凸性
-[[Knowledge Frame of Caculus#凹凸性与拐点|点击查看知识体系]]
+[点击查看知识体系](knowledge-frame-of-calculus.md#concavity-inflection)
 方法：
 	同极值点 —— 一阶导变二阶导即可
 例题：
-	![[Pasted image 20241107081034.png]]
+	![补充图：拐点的判定要检查凹凸性改变](res/images/supplements/inflection-point.svg)
 
 ### 曲率
-[[Knowledge Frame of Caculus#曲率|点击查看知识体系]]
+[点击查看知识体系](knowledge-frame-of-calculus.md#curvature)
 注意：转角：直线转过的角度，不是俩直线成的任意一个角
 
 ## 导数
@@ -572,7 +636,7 @@ t = 1/x 较常见
 注意事项：
 	别忘了y是x的函数，复合函数
 法二：
-    [[Summary Of Calculus#^97a0e1|一阶微分形式不变性]]
+    [一阶微分形式不变性](#first-differential-invariance)
 #### 高阶导数
 方法：
 - 基本函数用公式
@@ -617,9 +681,11 @@ t = 1/x 较常见
 	假分式（分子次数大于等于分母）
 	    先分离常数
 
-![[IMG_4002.png]]![[IMG_4001.png]]
-![[IMG_4003.png]]
-![[IMG_4005.png]]
+![补充图：分式求导与先做除法](res/images/supplements/quotient-derivative.svg)
+
+![补充图：幂指函数：先取对数再求导](res/images/supplements/logarithmic-derivative.svg)
+![补充图：参数方程的一阶与二阶导数](res/images/supplements/parametric-derivative.svg)
+![补充图：极坐标方程的导数](res/images/supplements/polar-derivative.svg)
 ## 微分
 ### 微分的求解方法
 ##### 显函数
@@ -627,11 +693,11 @@ t = 1/x 较常见
 法二：用微分：两边同时微分，
 	初等函数：dy = f‘(x)dx
 	四则运算：导数公式中“导”换成“微”
-##### 隐函数
+##### 隐函数 {#first-differential-invariance}
 法一：先隐函数求导
 法二：一阶微分不变性
     两侧同时微分，但是 x和y同等地位的变量，即不再考察x和y的函数关系，对x怎样操作就对y怎样操作
-    eg：乘积xy：xdy+ydx ^97a0e1
+    eg：乘积xy：xdy+ydx
 
 隐函数某一点处的微分：
 	由于结果中有X和Y那么求某一点出的导数或者微分，要将那一点出的横坐标或纵坐标带入原方程解除纵坐标或横坐标
@@ -642,15 +708,15 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 原理：忽略了dx的高阶无穷小量
 注：o(dx)实际上有，对具体函数可能看得清晰一点，但抽象的公式中并不知道它是哪算出来的，就是因为具体函数有所以补上去的
 
-![[IMG_3998.png]]
+![补充图：微分近似：用切线代替邻近曲线](res/images/supplements/linear-approximation.svg)
 ——>取x0 = 0，Δx = x
 得到的实际上是等价无穷小公式
-![[IMG_3999.png]]
+![补充图：由微分近似得到等价无穷小](res/images/supplements/linear-equivalents.svg)
 
 ##### 泰勒公式法
 方法
 	用拉格朗日型余项的
-![[Pasted image 20241106224944.png]]
+![补充图：用泰勒余项估计近似计算误差](res/images/supplements/taylor-error-bound.svg)
 
 ## 中值定理
 #### 极值与最值
@@ -692,7 +758,7 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 ![alt text](res/images/image-26_1.png)
 ![alt text](res/images/image-25_1.png)
 
-###### 隐函数
+###### 隐函数 {#first-differential-invariance}
 
 **方法**
 
@@ -769,15 +835,15 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 			从区间内找点，将其分为两个子区间，分别用拉格朗日
 			从结论出发，联系定理，逆推目标
 		例题：
-		![[Pasted image 20241105085005.png]]
-		遗失部分：$f''(x) > 0, f(0) = 0$ 
-		![[Pasted image 20241105092644.png]]
-		遗失部分：$[a,b)连续$
-		![[Pasted image 20241105093345.png]]
-		遗失部分：$f(a) = f(b)$ ,存在$\xi$ 
+		![补充图：凸函数的割线斜率小于右端切线斜率](res/images/supplements/convex-secant.svg)
+		原笔记补记的条件：$f''(x) > 0, f(0) = 0$ 
+		![补充图：拉格朗日中值定理给出的差值界](res/images/supplements/mean-value-bound.svg)
+		原笔记补记的条件：$[a,b)连续$
+		![补充图：把区间拆成两段分别用中值定理](res/images/supplements/two-mean-value-points.svg)
+		原笔记补记的条件：$f(a) = f(b)$ ,存在$\xi$ 
 		方法：区间内找点，将其分为两个子区间，分别用拉格朗日
-		![[Pasted image 20241105095636.png]]
-		遗失部分：$[0,+\infty)二阶可导$， $(0,a)$取得最大值，$f'(a)$
+		![补充图：内点最大值与右端点导数：一个二阶可导例子](res/images/supplements/endpoint-derivative.svg)
+		原笔记补记的条件：$[0,+\infty)二阶可导$， $(0,a)$取得最大值，$f'(a)$
 #### 柯西中值定理
 一、理解
 	讨论函数比和导数比
@@ -786,30 +852,39 @@ f(x0 + Δx) = f(x0) + f'(x0) * Δx
 	识别
 		有差，但没有$x_1$ - $x_2$，有俩函数值的差
 	例题
-	![[IMG_20241029_104215.jpg]]
+	![补充图：柯西中值定理的代入例题](res/images/supplements/cauchy-example.svg)
 
 ## 泰勒定理
 ### 公式
 1. 泰勒公式
 - 带拉格朗日型余项
+
 $$
 f(x) = P_n(x) + R_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + \frac{f^{(n + 1)}(ξ)}{(n + 1)!}(x-x_0)^{n + 1}
 $$
+
+
 其中，$ξ$属于$(x_0, x)$ or $ξ = x_0 + θ(x - x_0)$，$P_n(x)$称为泰勒多项式，$R_n(x)$称为拉格朗日型余项
 
 - 带皮亚诺型余项
+
 $$
 f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + o((x - x_0)^n)
 $$
+
+
 其中$o((x - x_0)^n)$为高阶无穷小
 
 2. 麦克劳林
 - 带拉格朗日型余项
 
 一般形式：
+
 $$
 f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!}x^k + \frac{f^{(n + 1)}(ξ)}{(n + 1)!}x^{n + 1} = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!}x^k + \frac{f^{(n + 1)}(θx)}{(n + 1)!}x^{n + 1}
-$$	
+$$
+
+
 
 常用公式
 
@@ -817,55 +892,83 @@ $$
 e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 $$
 
+
+
 $$
 \sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
 $$
+
+
 
 $$
 \cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
 $$
 
+
+
 $$
 \ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots
 $$
 
+
+
 $$
 \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots \quad \text{for} \quad |x| < 1
 $$
+
+
 
 $$
 (1+x)^a = \sum_{n=0}^{\infty} \binom{a}{n} x^n = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots
 $$
 
 
+
+
 皮亚诺
 
 
-$$x —>0$$ 
+$$
+x —>0
+$$
+
+
 
 $$
 e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + o(x^n)= \sum_{n=0}^{\infty} \frac{x^n}{n!} + o(x^n)
 $$
 
+
+
 $$
 \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots +\frac{(-1)^n x^{2n+1}}{(2n+1)!} + o(x^{2n+1})= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} + o(x^{2n+1})
 $$
+
+
 
 $$
 \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^n x^{2n}}{(2n)!}+ o(x^{2n})= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} + o(x^{2n})
 $$
 
+
+
 $$
 \ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots + \frac{(-1)^{n+1} x^n}{n}+ o(x^n)= \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} + o(x^n)
 $$
+
+
 
 $$
 \frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots + x^n+ o(x^n)= \sum_{n=0}^{\infty} x^n + o(x^n) \quad \text{for} \quad |x| < 1
 $$
 
+
+
 $$
 (1+x)^a = 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots + \frac{a(a-1)(a-2)\cdots(a-n+1)}{n!}x^n + o(x^n)= \sum_{n=0}^{\infty} \binom{a}{n} x^n + o(x^n)
 $$
+
+
 
 ### 题型一、求极限
 
@@ -1069,83 +1172,132 @@ $$
 ### 基本积分表
 
 1. 常数函数积分  
+
 $$
 \int c \, dx = c x + C
 $$
 
+
+
 2. 幂函数积分  
+
 $$
 \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
 $$
 
+
+
 3. 指数函数积分  
+
 $$
 \int e^x \, dx = e^x + C
 $$
+
+
 $$
 \int a^x \, dx = \frac{a^x}{\ln a} + C \quad (a > 0, a \neq 1)
 $$
 
+
+
 4. 对数函数积分  
+
 $$
 \int \ln x \, dx = x \ln x - x + C
 $$
 
+
+
 5. 三角函数积分  
+
 $$
 \int \sin x \, dx = -\cos x + C
 $$
+
+
 $$
 \int \cos x \, dx = \sin x + C
 $$
+
+
 $$
 \int \tan x \, dx = -\ln |\cos x| + C \quad (\cos x \neq 0)
 $$
+
+
 $$
 \int \cot x \, dx = \ln |\sin x| + C \quad (\sin x \neq 0)
 $$
+
+
 $$
 \int \sec x \, dx = \ln |\sec x + \tan x| + C \quad (\cos x \neq 0)
 $$
+
+
 $$
 \int \csc x \, dx = -\ln |\csc x + \cot x| + C \quad (\sin x \neq 0)
 $$
+
+
 $$
 \int \sec^2 x \, dx = \tan x + C
 $$
+
+
 $$
 \int \csc^2 x \, dx = -\cot x + C
 $$
+
+
 $$
 \int \sec x \tan x \, dx = \sec x + C
 $$
+
+
 $$
 \int \csc x \cot x \, dx = -\csc x + C
 $$
+
+
 $$
 \int \sinh x \, dx = \cosh x + C
 $$
+
+
 $$
 \int \cosh x \, dx = \sinh x + C
 $$
 
 
+
+
 6. 反三角函数积分  
+
 $$
 \int \frac{1}{\sqrt{1-x^2}} \, dx = \arcsin x + C     = -\arccos x + C \quad (|x| \leq 1)
 $$
+
+
 $$
 \int \frac{1}{1+x^2} \, dx = \arctan x + C= -arccot x + C
 $$
+
+
 $$
 \int \frac{1}{x\sqrt{x^2-1}} \, dx = \text{arcsec } x + C \quad (|x| \geq 1)
 $$
 
 
+
+
 7. 常考
+
 $$
 \int \frac{1}{a^2+x^2} \, dx = \frac1a \arctan \frac xa + C
 $$
+
+
 
 **用处：** 分母是二次多项式，配方，凑该形式
 
@@ -1231,7 +1383,7 @@ $$
 
 **类型一**
 
-- 被积函数中含有二次根号二次根号内是一次多项式： 令 $t = \sqrt\ $
+- 被积函数中含有二次根号二次根号内是一次多项式： 令 $t = \sqrt\$
 
 	>其实根号并不讨厌，讨厌的是根号与其他常数相加减，故若没有相加减，另根号内部分 = t 亦可
 
@@ -1276,7 +1428,7 @@ $$
 	
 	若前一步无求得关联或者 $f(x)$ or $g(x)$ 较复杂，将 $f(x)$ or $g(x)$ 的**一部分**拿出来求导，看跟另一部分有没有关联。
 
-	这里的“一部分”：跟着感觉走 & 不要那个使得导数复杂的运算符，例如 $\sqrt\ $ 。
+	这里的“一部分”：跟着感觉走 & 不要那个使得导数复杂的运算符，例如 $\sqrt\$ 。
 
 	例题1：$\int \frac{sinx cosx}{\sqrt{b^2\cos^2x + a^2\sin^2x}}\, dx$  
 
@@ -1371,7 +1523,11 @@ $\int \frac {\, dx}{a^2 - x^2}$
 （之后补一下）
 
 
-$$ \int u \, dv = uv - \int v \, du $$
+$$
+\int u \, dv = uv - \int v \, du
+$$
+
+
 
 <div style="text-align: center; color: red; font-size: 3em; font-weight: bold;">
 -
@@ -1479,7 +1635,7 @@ $e^x$ 的有理函数：上下同乘 $e^x$ ，上面的 $e^x$ 和 $dx$ 凑微分
 
 2次 —— 配方
 
-有 $ \int e^{kx}$ 换元
+有 $\int e^{kx}$ 换元
 
 $\int \frac {x^2 + x - 3}{{(x - 1)}^{10}} \, dx$
 
@@ -1512,7 +1668,7 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 ![1/sinx型：上下同乘](res/images/image-81_1.png)
 ![分母和差，化乘积](res/images/image-82_1.png)
-![遗失部分：bsinx](res/images/image-83_1.png)
+![原笔记补记的条件：bsinx](res/images/image-83_1.png)
 ![alt text](res/images/image-84_1.png)
 
 法三：t = tanx
@@ -1610,6 +1766,7 @@ $\int \tan^2 x \, dx$ 换 tan = sec^2 - 1
 
 	- 统一三角函数名：$\cos^2 x = 1 - \sin^2 x$ 
 	- 重要公式：
+
 $$
 \int_0^{\fracπ2}\sin^{n}x\, {\rm d}x = \int_0^{\fracπ2}\cos^{n}x\, {\rm d}x = 
 \left\{
@@ -1619,7 +1776,13 @@ $$
 \end{aligned}
 \right.
 $$
-$$\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}$$
+
+
+$$
+\int_0^{2π} = 2\int_0^{π} = 4\int_0^{\fracπ2}
+$$
+
+
 
 ![alt text](res/images/image-4.png)
 

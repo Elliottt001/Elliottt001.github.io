@@ -59,7 +59,7 @@ $A^{-1} = \frac{A^*}{|A|}$
 
 - 求逆 $(A^{-1})^{-1} = A$
 - 乘法：交换分配率 ${(AB)}^{-1} = B^{-1} A^{-1}$
-- 数乘：分配率 $ {(cA)}^{-1} = \frac{A^{-1}}c$
+- 数乘：分配率 ${(cA)}^{-1} = \frac{A^{-1}}c$
 - 转置：可换顺序 ${(A^{-1})}^{T} = {(A^{T})}^{-1}$
 - 行列式：可换顺序 $|A^{-1}| = |A|^{-1}$
  
@@ -106,30 +106,48 @@ $A^{-1} = \frac{A^*}{|A|}$
 
 P、Q均为可逆方阵，
 
-$$r(PA) = r(A)$$
+$$
+r(PA) = r(A)
+$$
 
-$$r(AQ) = r(A)$$
 
-$$r(PAQ) = r(A)$$
+$$
+r(AQ) = r(A)
+$$
+
+
+$$
+r(PAQ) = r(A)
+$$
+
 
 原理：乘可逆矩阵 == 行/列变换
 
 **2. 乘积的秩小于等于秩较小的那个的秩**
 
-$$r(AB) \le min\{r(A), r(B)\}$$
+$$
+r(AB) \le min\{r(A), r(B)\}
+$$
+
 
 **3. 二阶非标准准对角阵的秩等于对角元素的秩之和**
 
 - 备注：“非标准准对角阵”指分块后形式与准对角阵相似，但其中的元素不一定是方阵
 
-$$C = \begin{pmatrix} A&O\\O&B \end{pmatrix} or \begin{pmatrix} O&A\\B&O \end{pmatrix},则r(C) = r(A) + r(B)$$
+$$
+C = \begin{pmatrix} A&O\\O&B \end{pmatrix} or \begin{pmatrix} O&A\\B&O \end{pmatrix},则r(C) = r(A) + r(B)
+$$
+
 
 	
 证明：![alt text](res/images/image-11_1.png)
 
 **4. 和的秩小于等于秩的和**
 
-$$r(A + B) \le r(A) + r(B)$$
+$$
+r(A + B) \le r(A) + r(B)
+$$
+
 	
 证明：![alt text](res/images/image-12_1.png)
 	
@@ -137,11 +155,17 @@ $$r(A + B) \le r(A) + r(B)$$
 
 **5. 两方阵积的秩大于等于秩的和减阶数**
 
-$$A、B为方阵，r(AB) \ge r(A) + r(B) - n $$
+$$
+A、B为方阵，r(AB) \ge r(A) + r(B) - n
+$$
+
 
 **6. 三方阵积的秩大于等于前两个积的秩加后两个积的秩减中间的秩**
 
-$$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
+$$
+A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)
+$$
+
 
 **7. 补充**
 
@@ -169,64 +193,84 @@ $$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
 
 	1. **闭性条件**  
 	对于集合 $V$ 中任意的 $u, v \in V$，有：  
-	$$
-	u + v \in V
-	$$
+
+    $$
+    u + v \in V
+    $$
+
 	即向量加法封闭。
 
 	2. **数乘封闭性**  
 	对于集合 $V$ 中任意的 $u \in V$ 和标量 $c \in \mathbb{R}$（或 $\mathbb{C}$），有：  
-	$$
-	c \cdot u \in V
-	$$
+
+    $$
+    c \cdot u \in V
+    $$
+
 
 	3. **加法交换律**  
 	对于集合 $V$ 中任意的 $u, v \in V$，有：  
-	$$
-	u + v = v + u
-	$$
+
+    $$
+    u + v = v + u
+    $$
+
 
 	4. **加法结合律**  
 	对于集合 $V$ 中任意的 $u, v, w \in V$，有：  
-	$$
-	(u + v) + w = u + (v + w)
-	$$
+
+    $$
+    (u + v) + w = u + (v + w)
+    $$
+
 
 	5. **加法的零元**  
 	存在一个零向量 $0 \in V$，使得对于任意的 $u \in V$，有：  
-	$$
-	u + 0 = u
-	$$
+
+    $$
+    u + 0 = u
+    $$
+
 
 	6. **加法的逆元**  
 	对于集合 $V$ 中任意的 $u \in V$，存在一个向量 $-u \in V$，使得：  
-	$$
-	u + (-u) = 0
-	$$
+
+    $$
+    u + (-u) = 0
+    $$
+
 
 	7. **数乘分配律（标量加法）**  
 	对于集合 $V$ 中任意的 $u \in V$ 和标量 $a, b \in \mathbb{R}$（或 $\mathbb{C}$），有：  
-	$$
-	(a + b) \cdot u = a \cdot u + b \cdot u
-	$$
+
+    $$
+    (a + b) \cdot u = a \cdot u + b \cdot u
+    $$
+
 
 	8. **数乘分配律（向量加法）**  
 	对于集合 $V$ 中任意的 $u, v \in V$ 和标量 $a \in \mathbb{R}$（或 $\mathbb{C}$），有：  
-	$$
-	a \cdot (u + v) = a \cdot u + a \cdot v
-	$$
+
+    $$
+    a \cdot (u + v) = a \cdot u + a \cdot v
+    $$
+
 
 	9. **数乘结合律**  
 	对于集合 $V$ 中任意的 $u \in V$ 和标量 $a, b \in \mathbb{R}$（或 $\mathbb{C}$），有：  
-	$$
-	a \cdot (b \cdot u) = (a \cdot b) \cdot u
-	$$
+
+    $$
+    a \cdot (b \cdot u) = (a \cdot b) \cdot u
+    $$
+
 
 	10. **单位标量作用**  
 		对于集合 $V$ 中任意的 $u \in V$，有：  
-		$$
-		1 \cdot u = u
-		$$
+
+        $$
+        1 \cdot u = u
+        $$
+
 
 
 !!! warning "理解"
@@ -295,7 +339,7 @@ $$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
 	基本同上：解的情况 ~ 相关性（可否表示） ~ 矩阵的秩 ~ 行列式的值 ~ 是否可逆
 **性质**：
 
-1. $ θ <=> 相关 $ 
+1. $θ <=> 相关$ 
 
 2. 部分相关，整体相关
 	
@@ -435,7 +479,7 @@ $$A、B、C为方阵，r(ABC) \ge r(AB) + r(BC) - r(B)$$
 
 $(\beta_1\ \beta_2\ \beta_3\ \dots\beta_s\  ) = (\alpha_1\ \alpha_2\ \alpha_3\ \dots\alpha_s\ ) M$
 
-$基\alpha 对应的坐标是 x$， $ \beta 对应 y$，则
+$基\alpha 对应的坐标是 x$， $\beta 对应 y$，则
 
 $x = My$
 
@@ -443,7 +487,7 @@ $x = My$
 
 - $P^n$ 空间：n个列向量，每个位置分别是1
 
-- $P^{m * n}$ 矩阵：每个位置分别1，共 $m * n $个
+- $P^{m * n}$ 矩阵：每个位置分别1，共 $m * n$个
 
 - 多项式空间：$(1, x, x^2, x^3, \cdots x^{n - 1})$
 
@@ -462,7 +506,7 @@ $P^n$ 空间中一些向量线性组合成扩张子空间即$span(向量组)$，
 
 基础解系 = 解空间的基 
 
-自由未知量数 = 基数，即 $dimW_0 = n - r $
+自由未知量数 = 基数，即 $dimW_0 = n - r$
 
 **基础解系的证明**
 

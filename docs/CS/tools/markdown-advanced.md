@@ -53,6 +53,9 @@
 
 鲁迅原名是什么[^1]，浙江哪里人[^2]
 
+[^1]: 周树人
+[^2]: 绍兴人
+
 <br><br>
 
 
@@ -548,12 +551,12 @@
 - **示例：**
 
 ```html
-<audio controls="controls" preload="none" src="https://www.ldoceonline.com/media/english/exaProns/p008-001803372.mp3?version=1.2.37"></audio>
+<audio controls="controls" preload="none" src="../res/audio/p008-001803372.mp3"></audio>
 ```
 
 - **效果：**
 
-<audio controls="controls" preload="none" src="https://www.ldoceonline.com/media/english/exaProns/p008-001803372.mp3?version=1.2.41"></audio>
+<audio controls="controls" preload="none" src="../res/audio/p008-001803372.mp3"></audio>
 
 <br>
 
@@ -596,13 +599,13 @@
 
 - **iframe标签**  除了嵌入页面，也可以嵌入**在线视频**，主流的视频网站都会提供**嵌入代码**
   - 具体可以看这个 [iframe视频嵌入教程](https://www.wolai.com/wolai/go85vJpt3wDwrid7DfCZcE )
-  - **B站** 的视频，得在 **`//`** 前面补充  **`http:`**
+  - **B站** 的视频，得在 **`//`** 前面补充  **`https:`**
   - 不是所有的 编辑器和笔记软件 都支持这个
 
 - **示例：**
 
 ```html
-<iframe width=600 height=400 src="http://player.bilibili.com/player.html?aid=20190823&bvid=BV1yW411s7og&cid=32964980&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width=600 height=400 src="https://player.bilibili.com/player.html?aid=20190823&bvid=BV1yW411s7og&cid=32964980&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 ```
 
 - 宽高设置和前面的 **video** 一样
@@ -611,7 +614,7 @@
 
 - **效果：**
 
-<iframe width=600 height=400 src="http://player.bilibili.com/player.html?aid=20190823&bvid=BV1yW411s7og&cid=32964980&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width=600 height=400 src="https://player.bilibili.com/player.html?aid=20190823&bvid=BV1yW411s7og&cid=32964980&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <br><br>
 

@@ -11,9 +11,10 @@ site_author: Elliottt Zhang
 # 站点描述：写入 HTML meta description，影响搜索结果摘要。
 site_description: 这里放着一些 Elliottt Zhang 的笔记
 
-# 构建钩子：在构建前把根目录 assets/ 复制到 docs/assets/
+# 构建钩子：复制站点资源，并在 Markdown 渲染后计算页面统计。
 hooks:
   - hooks/copy_assets.py
+  - hooks/page_statistics.py
 
 # [Navigation]
 nav:
@@ -644,7 +645,7 @@ extra:
       - manage
 
 # [Plugins]
-# MkDocs 插件：控制搜索、标签、图片灯箱、页面统计、修订时间、RSS、更新日志和压缩。
+# MkDocs 插件：控制搜索、标签、图片灯箱、修订时间、RSS、更新日志和压缩。
 plugins:
   # 全文搜索插件；lang 配置用于中文、英文和西文内容检索。
   - search:
@@ -662,9 +663,6 @@ plugins:
 
   # 图片灯箱插件：点击图片后放大预览。
   - glightbox
-
-  # 页面统计插件：显示字数、代码行数和预计阅读时间。
-  - statistics
 
   # Git 修订时间插件：显示页面最后更新和创建时间。
   - git-revision-date-localized:
@@ -696,6 +694,7 @@ plugins:
 
 # Markdown 扩展：控制目录、提示块、代码高亮、任务列表、公式、表格等语法能力。
 markdown_extensions:
+  - footnotes
   # 自动生成页面目录。
   - toc:
       # 标题旁显示可复制的锚点链接。

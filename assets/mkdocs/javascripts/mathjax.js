@@ -7,7 +7,8 @@ window.MathJax = {
           if (typeof document$ === "undefined") return;
           document$.subscribe(() => {
             const content = document.querySelector(".md-content");
-            if (!content || !content.querySelector(".arithmatex")) return;
+            if (!content || !content.querySelector(".arithmatex") ||
+                content.querySelector("mjx-container")) return;
             MathJax.typesetClear();
             MathJax.texReset();
             MathJax.typesetPromise([content]).catch((error) => {
@@ -53,7 +54,7 @@ window.MathJax = {
       if (!document.querySelector(".arithmatex") ||
           document.querySelector("script[data-mathjax-loader]")) return;
       const script = document.createElement("script");
-      script.src = "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js";
+      script.src = "https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js";
       script.async = true;
       script.dataset.mathjaxLoader = "";
       document.head.appendChild(script);

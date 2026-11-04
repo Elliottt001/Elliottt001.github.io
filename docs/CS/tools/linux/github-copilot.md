@@ -24,12 +24,12 @@
 
     - [GitHub Copilot 官方文档](https://docs.github.com/en/copilot)
     - [在 WSL 中使用 Visual Studio Code](https://code.visualstudio.com/docs/remote/wsl)
-    - [GitHub Copilot 扩展安装指南](https://docs.github.com/en/copilot/getting-started-with-github-copilot/installing-github-copilot)
-    - [GitHub Copilot 常见问题解答](https://docs.github.com/en/copilot/troubleshooting-github-copilot)
-    - [GitHub Copilot 设置和配置](https://docs.github.com/en/copilot/configuring-github-copilot)
-    - [GitHub Copilot 使用技巧](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-visual-studio-code)
-    - [GitHub Copilot 与其他编辑器的集成](https://docs.github.com/en/copilot/integrations/integrating-github-copilot-with-other-editors)
-    - [GitHub Copilot 社区支持](https://docs.github.com/en/copilot/community-support)
+    - [GitHub Copilot 扩展安装指南](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension)
+    - [GitHub Copilot 常见问题解答](https://docs.github.com/en/copilot/how-tos/troubleshoot-copilot/troubleshoot-common-issues)
+    - [GitHub Copilot 设置和配置](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/configure-in-ide)
+    - [GitHub Copilot 使用技巧](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/get-ide-code-suggestions)
+    - GitHub Copilot 与其他编辑器的集成：[JetBrains](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension?tool=jetbrains) · [Neovim](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension?tool=vimneovim)
+    - [GitHub Copilot 社区支持](https://github.com/orgs/community/discussions/categories/copilot-conversations)
 
 ## 情况说明
 

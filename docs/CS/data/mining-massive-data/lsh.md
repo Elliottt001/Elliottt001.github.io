@@ -24,7 +24,10 @@ Permutation: 对所有可能的元素进行随机排列
     
     那么这个方法：因为两个集合的 Jaccard 相似度等于它们的 Min-Hash 值相等的概率，即：
 
-    $$ P(h_{min}(A) = h_{min}(B)) = J(A, B) $$
+    $$
+    P(h_{min}(A) = h_{min}(B)) = J(A, B)
+    $$
+
 
     ???- info "proof"
 
@@ -33,9 +36,11 @@ Permutation: 对所有可能的元素进行随机排列
         * 有一个**全集** (U)（包含所有可能的元素），集合 (A,B\subseteq U)。
         * 我们选一个**随机的全排列（random permutation）** (\pi) 对全集 (U) 做随机排序；每个排列等概率。
         * 对集合 (S) 定义 MinHash：
-        [
+
+        $$
         h_\pi(S) = \arg\min_{x\in S} \pi(x)
-        ]
+        $$
+
         即在排列 (\pi) 下，集合 (S) 中排位最靠前（最小）的元素。
         * 假设没有“平局”：每个元素的顺序都严格（全排列保证）。
 
@@ -50,9 +55,11 @@ Permutation: 对所有可能的元素进行随机排列
         **关键观察**：在随机全排列下，(U_{AB}) 中“第一个出现的元素”对所有 ( |U_{AB}| ) 个元素是**等概率**的 —— 因为排列是完全随机的，任何位置的分布是对称的。
 
         因此，第一个出现的元素落在 (A\cap B) 的概率就是：
-        [
+
+        $$
         \frac{|A\cap B|}{|A\cup B|}.
-        ]
+        $$
+
 
         而当且仅当这个“第一个出现的元素”属于 (A\cap B)，我们才有 (h_\pi(A)=h_\pi(B))：
 
@@ -60,9 +67,11 @@ Permutation: 对所有可能的元素进行随机排列
         * 反之若第一个出现的元素属于 (A\setminus B)（或 (B\setminus A)），则它只会成为 (A)（或 (B)）的最小元素，而不会同时是另一个集合的最小元素，因而 (h_\pi(A)\neq h_\pi(B))。
 
         于是直接得到：
-        [
+
+        $$
         \Pr[h_\pi(A)=h_\pi(B)] = \Pr[\text{first element of }A\cup B\text{ lies in }A\cap B] = \frac{|A\cap B|}{|A\cup B|}.
-        ]
+        $$
+
 
 Jaccard 的全称是：Jaccard Similarity，相似度，就是概率
 
@@ -115,12 +124,14 @@ convert a linear similarity to a function that is very steep (because we it is t
     \text{band-signature}_i = (h_{i1}, h_{i2}, \ldots, h_{ir})
     $$
 
+
 3. 用一个哈希函数（例如 Python 中的 `hash()` 或 MurmurHash、MD5、SHA1 等）
     把这 (r)-tuple 映射到一个整数 bucket ID：
 
     $$
     \text{bucket-id} = \text{hash}(\text{band-signature}_i)
     $$
+
 
 所有哈希到同一个 `bucket_id` 的文档，就认为它们在这个 band 上是“相似”的（candidate pair）。
 

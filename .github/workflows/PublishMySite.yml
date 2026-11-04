@@ -1,29 +1,72 @@
-name: publish site
-on: # 在什么时候触发工作流
-  push: # 在从本地main分支被push到GitHub仓库时
-    branches:
-      - main
-  pull_request: # 在main分支合并别人提的pr时
-    branches:
-      - main
-jobs: # 工作流的具体内容
-  deploy:
-    runs-on: ubuntu-latest # 创建一个新的云端虚拟机 使用最新Ubuntu系统
+name: verify and publish site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: notes-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # 先checkout到main分支
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v2 # 再安装Python3和相关环境
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
-      - run: pip install mkdocs-glightbox
-      - run: pip install mkdocs-git-revision-date-localized-plugin
-      - run: pip install mkdocs-statistics-plugin
-      - run: pip install mkdocs-rss-plugin
-      - run: pip install mkdocs-changelog-plugin
-      - run: pip install pymdown-extensions
-      - run: pip install mkdocs-minify-plugin
-      # - run: pip install mkdocs-backlinks
-      - run: echo "note.elliotttzhang.cn" > docs/CNAME  # 确保CNAME文件存在，防止自定义域名被清空
-      - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: python -m pip install -r requirements-dev.txt
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Existing nav placeholders stay visible; the rendering check allows only
+      # these two known warnings until the navigation is reviewed separately.
+      - run: mkdocs build 2>&1 | tee build.log
+      - run: python tests/site-content.test.py
+      - run: python tests/site-theme.test.py
+      - run: python tests/site-rendering.test.py site build.log
+      - run: python tests/cs-notes.test.py
+      - run: npm test
+      - run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-site
+          path: site
+          include-hidden-files: true
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-site
+          path: site
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: ghp-import --no-jekyll --push --force site

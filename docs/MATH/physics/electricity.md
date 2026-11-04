@@ -12,7 +12,10 @@
 
 ## 静电场
 
-$$k = \frac 1 {4 \pi \epsilon_0}$$  
+$$
+k = \frac 1 {4 \pi \epsilon_0}
+$$
+
 
 ### 电场强度
 
@@ -25,6 +28,7 @@ $$k = \frac 1 {4 \pi \epsilon_0}$$
 $$
 \bm{F}_{21} = \dfrac{1}{4 \pi \varepsilon_0} \dfrac{q_1q_2}{r_{12}^2} \hat{\bm{r}}_{12}
 $$
+
 
 >注：公式右边的$\hat{\bm{r}}_{12}$表示的是矢量的**方向**，而不代表具体的值，下面如果出现类似的记号，意义与之类似。
 
@@ -57,6 +61,7 @@ $$
 \Phi_e = \oiint\limits_S \bm{E} \cdot \mathrm{d} \bm{S} = \dfrac{1}{\varepsilon_0} \sum q_i
 $$
 
+
 :star2:常用结论（最好自己推导一遍，还是挺容易的）：
 
 - 连续分布电荷：$\Phi_e = \oiint\limits_S \bm{E} \cdot \mathrm{d} \bm{S} = \dfrac{1}{\varepsilon_0}\iiint\limits_V \rho \text{d} V$
@@ -81,7 +86,8 @@ $$
 A_{ab} = \int_a^b q_0 \bm{E} \cdot \mathrm{d}\bm{l} = -(W_b - W_a) = - \Delta W
 $$
 
-- 电势能是相对的，对于有限分布的电荷系统，取无穷远处电势能为0，则将电荷从$p$点移动到无穷远时，$p$点的电势能 = 电场力所做的功，即：$W_p = q_0 \int_p^{\infty} \bm{E} \mathrm{d}\bm{l} $
+
+- 电势能是相对的，对于有限分布的电荷系统，取无穷远处电势能为0，则将电荷从$p$点移动到无穷远时，$p$点的电势能 = 电场力所做的功，即：$W_p = q_0 \int_p^{\infty} \bm{E} \mathrm{d}\bm{l}$
 
 **电势**：$U_p = \dfrac{W_p}{q_0} = \int_p^{p_0}\bm{E} \cdot \mathrm{d}\bm{l}$，其中$p_0$是电势为0的参考点。
 
@@ -121,6 +127,7 @@ $$
 $$
 \bm{E} = -\text{grad}\ U = -(\dfrac{\partial U}{\partial x}, \dfrac{\partial U}{\partial y}, \dfrac{\partial U}{\partial z}) = - (\dfrac{\partial U}{\partial x} \overrightarrow{i} + \dfrac{\partial U}{\partial y} \overrightarrow{j} + \dfrac{\partial U}{\partial z} \overrightarrow{k})
 $$
+
 
 ## 静电场中的导体与电介质
 
@@ -235,6 +242,7 @@ $$
     P = \varepsilon_0 \chi_e \bm{E} = \varepsilon_0(\varepsilon_r - 1)\bm{E}
     $$
 
+
     其中$\chi_e$为电极化率
 
 - **极化电荷面密度**：均匀电介质极化时，电介质表面上某点处的极化电荷面密度$\sigma '$等于极化强度在该点表面的外法向分量（从内向外）。
@@ -242,6 +250,7 @@ $$
     $$
     \sigma ' = \bm{P} \cdot \bm{e_n}
     $$
+
 
 
 - **电位移**$\bm{D} = \varepsilon_0 \bm{E} + \bm{P} = (1 + \chi_e) \varepsilon_0 \bm{E} = \varepsilon_r \varepsilon_0 \bm{E} = \varepsilon \bm{E}$（单位：$\text{C/m}^2$），其中$\varepsilon_r$为相对介电常数，$\varepsilon$为介电常数。
@@ -304,61 +313,79 @@ $$
     \oiint\limits_{S_{closed}} \bm{j} \text{d}\bm{S} = -\dfrac{\text{d}q_{inside}}{\text{d}t} = 0
     $$
 
+
 !!! info "电流公式"
 
     1. **截面电流公式**（开面）：
-    \[
+
+    $$
     \boxed{I = \int_S \mathbf{j}\cdot d\mathbf{S}}
-    \]
+    $$
+
 
     2. **闭合曲面连续性公式**：
-    \[
+
+    $$
     \boxed{\oiint_{\rm closed} \mathbf{j}\cdot d\mathbf{S} = -\frac{dq_{\rm inside}}{dt}}
-    \]
+    $$
+
 
     3. **稳恒电流条件**：
-    \[
+
+    $$
     \frac{dq_{\rm inside}}{dt} = 0 \quad\Rightarrow\quad \oiint_{\rm closed} \mathbf{j}\cdot d\mathbf{S} = 0
-    \]
+    $$
+
 
 - 欧姆定律：$I = \dfrac{U}{R}$
     - 电阻决定式：$R = \rho \dfrac{l}{S}$
     - 金属材料的电阻率与温度的关系：$\rho_t = \rho_0 (1 + \alpha t)$
     - 欧姆定律的微分形式：$\bm{j} = \gamma \mathbf{E} = -en \bf{V}_d$，其中$\gamma = \dfrac{1}{\rho}$为电导率
 
-考虑一段**均匀导体**，长度 (L)，截面积 (S)，电场为 (\mathbf{E})，电流密度为 (\mathbf{j})。
+考虑一段**均匀导体**，长度 $L$，截面积 $S$，电场为 $\mathbf{E}$，电流密度为 $\mathbf{j}$。
 
 宏观欧姆定律给出：
-\[
+
+$$
 U = IR
-\]
+$$
+
 
 又有：
-\[
+
+$$
 U = EL, \quad I = jS, \quad R = \rho \frac{L}{S}
-\]
-其中 (\rho) 是电阻率。
+$$
+
+其中 $\rho$ 是电阻率。
 
 代入得：
-\[
+
+$$
 EL = jS \cdot \rho \frac{L}{S}
-\]
+$$
+
 整理后：
-\[
+
+$$
 \boxed{\mathbf{E} = \rho \mathbf{j}}
-\]
+$$
+
 
 或写为：
-\[
+
+$$
 \boxed{\mathbf{j} = \sigma \mathbf{E}}
-\]
-其中 (\sigma = 1/\rho) 是**电导率**。
+$$
+
+其中 $\sigma = 1/\rho$ 是**电导率**。
 
 - 电动势：在电源内部，将单位正电荷从负极移到正极时非静电力所做的功
 
 $$
 \varepsilon = \dfrac{A_k}{q}
 $$
+
 
 
 ## 稳恒磁场
@@ -379,6 +406,7 @@ $$
 $$
 \text{d} \bm{B} = \dfrac{\mu_0}{4 \pi}\dfrac{I\text{d} \bm{l} \times \bm{r}}{r^3}
 $$
+
 
 其中$\bm{r}$为电流元指向$P$的矢量，$\mu_0 = 4 \pi \times 10^{-7} \text{N/A}^2$为真空磁导率。
 
@@ -439,6 +467,7 @@ $$
 $$
 \oint\limits_L \bm{B} \text{d}\bm{l} = \mu_0 \sum I_{内}
 $$
+
 
 电流方向与积分路径绕行方向呈右手螺旋关系时取正号，反之取负号。
 
@@ -571,6 +600,7 @@ $$
     \oint\limits_L \bm{H} \text{d}\bm{l} = \sum I_0
     $$
 
+
 !!! info "两个安培环路定理的区别"
 
     本质区别是在于电流 $I$ 指的是哪个电流不同：
@@ -583,7 +613,7 @@ $$
 
     总电流 = 自由电流（线圈中流的） + 束缚电流（磁介质中分子电流的总和）
 
-- $ \bm{B}, \bm{M}, \bm{H}$之间的关系（各向同性的磁介质）
+- $\bm{B}, \bm{M}, \bm{H}$之间的关系（各向同性的磁介质）
     - 基本关系式：$\bm{M} = \chi_m \bm{H}$（$\chi_m$为介质的**磁化率**，顺磁质为正，抗磁质为负）
     - 常用关系式：$\bm{B} = \mu_0(1 + \chi_m)\bm{H} = \mu_0 \mu_r \bm{H} = \mu \bm{H}$（$\mu_r$为**相对磁导率**，$\mu$为**磁导率**）
 
@@ -625,9 +655,15 @@ $$
     H 是磁场强度，只由外界的场决定，就像 E 一样；
     B 是磁感应强度，是 H 和介质共同作用的结果，就像 D 一样。
 
-    $$B = \mu H$$
+    $$
+    B = \mu H
+    $$
 
-    $$D = \varepsilon E$$
+
+    $$
+    D = \varepsilon E
+    $$
+
 
     但事实上，$B$ 是磁场的基本物理量
 
@@ -709,8 +745,8 @@ $$
 
     | 方法     | 适用情景            | 本质                                                                         | 常用表达式 |
     | ------ | --------------- | -------------------------------------------------------------------------- | ----- |
-    | ① 线积分法 | 已知导体上各点速度分布     | 对导线积分：\(\varepsilon_i = \int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}\) | 局部、精确 |
-    | ② 磁通量法 | 可将导体与其它部分组成完整回路 | 用法拉第定律：\(\varepsilon_i = -\dfrac{d\Phi}{dt}\)                                | 全局、快速 |
+    | ① 线积分法 | 已知导体上各点速度分布     | 对导线积分：$\varepsilon_i = \int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}$ | 局部、精确 |
+    | ② 磁通量法 | 可将导体与其它部分组成完整回路 | 用法拉第定律：$\varepsilon_i = -\dfrac{d\Phi}{dt}$                                | 全局、快速 |
 
     但是有时你要求的并不是一个**真实回路**上的电动势（例如单根导体），
     而法拉第定律只对“回路”成立。
@@ -740,22 +776,26 @@ $$
 
     设：
 
-    * 磁场 \(\mathbf{B}\) 稳恒；
-    * 单根导体长度 \(L\)，速度 \(\mathbf{v}\)；
+    * 磁场 $\mathbf{B}$ 稳恒；
+    * 单根导体长度 $L$，速度 $\mathbf{v}$；
     * 导体与磁场相交角度固定。
 
     我们“补”上一根静止的虚线导体，使其和两条连接导线围成闭合回路。
 
     则：
-    \[
+
+    $$
     \varepsilon_{\text{回路}} = -\frac{d\Phi}{dt}
-    \]
+    $$
+
     而这个回路的磁通量变化，正是因为**那根真实导体在运动**导致回路面积变化。
 
     于是：
-    \[
+
+    $$
     \varepsilon_{\text{导体}} = \varepsilon_{\text{回路}} = -\frac{d\Phi}{dt}
-    \]
+    $$
+
 
     ---
 
@@ -765,26 +805,30 @@ $$
 
     * 磁场垂直纸面；
     * 两平行导轨与滑动导体杆组成闭合回路；
-    * 杆以速度 \(v\) 向右滑动；
-    * 回路面积 \(S = Lx\)，磁通量 \(\Phi = BLx\)。
+    * 杆以速度 $v$ 向右滑动；
+    * 回路面积 $S = Lx$，磁通量 $\Phi = BLx$。
 
     于是：
-    \[
+
+    $$
     \varepsilon_i = -\frac{d\Phi}{dt} = -B L \frac{dx}{dt} = -BLv
-    \]
+    $$
+
 
     如果你想求**仅杆上的电动势**，
     我们可以想象——只要补上静止导轨（不切割磁感线），
     整回路的电动势全来自那根运动杆。
 
     ✅ **所以：**
-    \[
+
+    $$
     \boxed{\varepsilon_{\text{杆}} = B L v}
-    \]
+    $$
+
 
     这就是“磁通量法的补全思想”：
 
-    > 用假想导体补成回路，然后用 \(-\dfrac{d\Phi}{dt}\) 求感应电动势。
+    > 用假想导体补成回路，然后用 $-\dfrac{d\Phi}{dt}$ 求感应电动势。
 
     ---
 
@@ -793,7 +837,7 @@ $$
     📘 适用场景：
 
     当导体**形状复杂、速度分布复杂**时，
-    直接算 \(\int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}\) 很麻烦。
+    直接算 $\int (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}$ 很麻烦。
 
     💡 思想：
 
@@ -823,33 +867,43 @@ $$
     设一根导体杆在**均匀磁场**中绕一端旋转：
 
     * 磁场垂直纸面；
-    * 导体长度 \(L\)，角速度 \(\omega\)。
+    * 导体长度 $L$，角速度 $\omega$。
 
     若直接用线积分法：
-    \[
+
+    $$
     \varepsilon_i = \int_0^L (\mathbf{v}\times\mathbf{B})\cdot d\mathbf{l}
-    \]
-    但速度 \(v = \omega r\) 随 \(r\) 变化，要积分，麻烦。
+    $$
+
+    但速度 $v = \omega r$ 随 $r$ 变化，要积分，麻烦。
 
     于是用磁通量法“转化”思路：
 
     补上静止导线，使得杆的扫过面积为扇形：
-    \[
+
+    $$
     S = \frac{1}{2}\omega t L^2
-    \]
+    $$
+
     磁通量随时间变化：
-    \[
+
+    $$
     \Phi = B S = \frac{1}{2}B\omega t L^2
-    \]
+    $$
+
     所以：
-    \[
+
+    $$
     \varepsilon_i = -\frac{d\Phi}{dt} = -\frac{1}{2}B\omega L^2
-    \]
+    $$
+
 
     ✅ **结论：**
-    \[
+
+    $$
     \boxed{\varepsilon_i = \frac{1}{2}B\omega L^2}
-    \]
+    $$
+
 
     这就是常见结论，用“磁通量变化”代替线积分。
 
@@ -867,9 +921,11 @@ $$
     🎯 最后一层理解
 
     两种方法本质上都是对**法拉第定律**
-    \[
+
+    $$
     \varepsilon = -\frac{d\Phi}{dt}
-    \]
+    $$
+
     的巧妙应用，只不过：
 
     * “补全法”是在构造一个**真实回路**来使用；
@@ -888,6 +944,7 @@ $$
     $$
     \begin{cases}2\pi r\bm{E}_i = -\dfrac{\text{d}B}{\text{d}t}\pi r^2, r < R \\ 2\pi r\bm{E}_i = -\dfrac{\text{d}B}{\text{d}t}\pi R^2, r > R\end{cases} \Rightarrow \begin{cases}\bm{E}_i = -\dfrac{r}{2} \dfrac{\text{d}B}{\text{d}t}, r < R \\ \bm{E}_i = -\dfrac{R^2}{2r} \dfrac{\text{d}B}{\text{d}t}, r > R\end{cases}
     $$
+
 
     <div style="text-align: center">
         ![](res/images/37.png){ width="30%" }
@@ -990,6 +1047,7 @@ $$
     $$
     \oint\limits_L \bm{H} \text{d}l = \sum I + \iint\limits_S \dfrac{\partial D}{\partial t} \text{d}S
     $$
+
 
 - [麦克斯韦方程组](https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E7%B5%84)（主要记积分形式）
     - 电场的性质：
