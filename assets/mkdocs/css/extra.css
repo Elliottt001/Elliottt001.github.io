@@ -1,0 +1,16 @@
+/* Native link and focus states; no loading or scroll animations. */
+.md-typeset a { color: var(--nh-accent); text-decoration: none; }
+.md-typeset a:hover { text-decoration: underline; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--nh-accent); outline-offset: 3px; }
+.md-typeset .headerlink { color: var(--nh-muted); opacity: 0; }
+.md-typeset :is(h1, h2, h3, h4, h5, h6):hover .headerlink,
+.md-typeset .headerlink:focus-visible { color: var(--nh-accent); opacity: 1; }
+.md-typeset :is(.emojione, .twemoji, .gemoji) { vertical-align: middle; }
+/* Keep wide note content inside its own scroll area on small screens. */
+.md-typeset pre { max-width: 100%; overflow-x: auto; }
+.md-typeset .md-typeset__table { max-width: 100%; padding: 0; overflow-x: auto; }
+.md-typeset .tabbed-labels { width: 100%; max-width: 100%; margin-inline: 0; }
+.md-typeset span.arithmatex { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

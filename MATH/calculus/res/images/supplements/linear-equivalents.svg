@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">由微分近似得到等价无穷小</title>
+<desc id="desc">以下均在 x → 0 时成立：；sin x ∼ x，eˣ − 1 ∼ x。；ln(1+x) ∼ x，√(1+x) − 1 ∼ x/2。；这些是局部关系；差式中发生抵消时需要更高阶展开。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 由微分近似得到等价无穷小</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">以下均在 x → 0 时成立：</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">sin x ∼ x，eˣ − 1 ∼ x。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">ln(1+x) ∼ x，√(1+x) − 1 ∼ x/2。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">这些是局部关系；差式中发生抵消时需要更高阶展开。</text>
+</svg>

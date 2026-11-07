@@ -1,0 +1,27 @@
+/* Topic cards and file lists use the shared notebook palette. */
+.md-typeset .grid.cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 22px 0; }
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card,
+.card { position: relative; display: flex; flex-direction: column; min-width: 0; padding: 22px; border: 1px solid var(--nh-line); border-radius: 9px; background: var(--nh-bg); box-shadow: none; }
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover,
+.card:hover { border-color: var(--nh-accent); box-shadow: none; transform: none; }
+.md-typeset .grid.cards hr { margin: 14px 0; border-color: var(--nh-line); }
+.ns-card-title, .card-header { color: var(--nh-ink); font-size: 18px; font-weight: 650; line-height: 1.5; }
+.ns-card-title { display: flex; align-items: center; gap: 12px; }
+.md-typeset .ns-card-title .twemoji { display: inline-flex; flex: 0 0 44px; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: #203a4b; vertical-align: middle; }
+.md-typeset .ns-card-title .twemoji svg { width: 24px; height: 24px; fill: #fff; }
+.md-typeset .grid.cards > ul > li:focus-within { border-color: var(--nh-accent); }
+.card-header { margin-bottom: 14px; padding: 0; }
+.card-body { flex: 1; min-width: 0; padding: 0; }
+.card-body ul { margin-top: 0; margin-bottom: 0; }
+.md-typeset .card-body details { margin-top: 8px; margin-bottom: 0; }
+.file-block { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--nh-line); }
+.file-block:hover { background: var(--nh-tint); }
+.file-title { margin: 0; font-size: 16px; font-weight: 600; }
+.file-meta { flex: 1; min-width: 0; }
+.file-body { margin-right: auto; }
+@media (max-width: 680px) {
+  .md-typeset .grid.cards { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .grid.cards > ul > li, .card { padding: 18px; }
+}

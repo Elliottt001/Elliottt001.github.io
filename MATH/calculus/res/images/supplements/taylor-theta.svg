@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">泰勒公式中的 ξ 与 θ 表示</title>
+<desc id="desc">ξ 在 a、x 之间，可写成 ξ = a + θ(x−a)，0 &lt; θ &lt; 1。；Rₙ(x) = f⁽ⁿ⁺¹⁾(a + θ(x−a))(x−a)ⁿ⁺¹/(n+1)!。；特别地，a = 0 时为麦克劳林公式。；此时 ξ = θx，余项为 f⁽ⁿ⁺¹⁾(θx)xⁿ⁺¹/(n+1)!。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 泰勒公式中的 ξ 与 θ 表示</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">ξ 在 a、x 之间，可写成 ξ = a + θ(x−a)，0 &lt; θ &lt; 1。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">Rₙ(x) = f⁽ⁿ⁺¹⁾(a + θ(x−a))(x−a)ⁿ⁺¹/(n+1)!。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">特别地，a = 0 时为麦克劳林公式。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">此时 ξ = θx，余项为 f⁽ⁿ⁺¹⁾(θx)xⁿ⁺¹/(n+1)!。</text>
+</svg>
