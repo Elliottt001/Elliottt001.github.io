@@ -136,6 +136,7 @@ nav:
         - 第六章 物联网云平台: CS/system/iot/chap6.md
         - 第七章 云端融合物联网软件开发: CS/system/iot/chap7.md
         - 第八章 物联网安全: CS/system/iot/chap8.md
+        - 11.04 考前复习课: CS/system/iot/review.md
     - 算法相关:
       - LeetCode:
         - 两数之和: CS/algorithm/leetcode/two-sum.md
