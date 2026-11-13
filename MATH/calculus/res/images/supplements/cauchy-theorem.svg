@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">柯西中值定理</title>
+<desc id="desc">f、g 在 [a, b] 连续，在 (a, b) 可导。；若 g′(x) ≠ 0，则存在 ξ ∈ (a, b)，满足：；[f(b) − f(a)] / [g(b) − g(a)] = f′(ξ) / g′(ξ)。；也可写为 [f(b) − f(a)]g′(ξ) = [g(b) − g(a)]f′(ξ)。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 柯西中值定理</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">f、g 在 [a, b] 连续，在 (a, b) 可导。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">若 g′(x) ≠ 0，则存在 ξ ∈ (a, b)，满足：</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">[f(b) − f(a)] / [g(b) − g(a)] = f′(ξ) / g′(ξ)。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">也可写为 [f(b) − f(a)]g′(ξ) = [g(b) − g(a)]f′(ξ)。</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">泰勒余项证明：求导时相邻项抵消</title>
+<desc id="desc">对 ∑(k=0…n) f⁽ᵏ⁾(t)(x−t)ᵏ/k! 求导。；两部分为 f⁽ᵏ⁺¹⁾(t)(x−t)ᵏ/k! 和 −f⁽ᵏ⁾(t)(x−t)ᵏ⁻¹/(k−1)!。；后一部分从 k = 1 开始，与前一部分逐项抵消。；F′(t) = (x−t)ⁿ/n! · [(n+1)!M − f⁽ⁿ⁺¹⁾(t)]。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 泰勒余项证明：求导时相邻项抵消</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">对 ∑(k=0…n) f⁽ᵏ⁾(t)(x−t)ᵏ/k! 求导。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">两部分为 f⁽ᵏ⁺¹⁾(t)(x−t)ᵏ/k! 和 −f⁽ᵏ⁾(t)(x−t)ᵏ⁻¹/(k−1)!。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">后一部分从 k = 1 开始，与前一部分逐项抵消。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">F′(t) = (x−t)ⁿ/n! · [(n+1)!M − f⁽ⁿ⁺¹⁾(t)]。</text>
+</svg>
