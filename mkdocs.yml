@@ -805,6 +805,8 @@ extra_css:
 
 # 额外 JavaScript：用于前端增强能力。
 extra_javascript:
+  # 除页内锚点外的站内链接与外链均在新标签页中打开。
+  - assets/mkdocs/javascripts/new-tab-links.js
   # 外链预览卡片的轻微鼠标倾斜反馈。
   - assets/mkdocs/javascripts/elsewhere.js
   # 首页搜索复用 Material 的站内搜索。
