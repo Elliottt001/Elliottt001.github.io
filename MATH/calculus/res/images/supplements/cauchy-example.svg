@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">柯西中值定理的代入例题</title>
+<desc id="desc">取 f(t) = t²，g(t) = t³，t ∈ [1, 2]。；[f(2) − f(1)] / [g(2) − g(1)] = 3/7。；f′(ξ) / g′(ξ) = 2ξ/(3ξ²) = 2/(3ξ)。；令 2/(3ξ) = 3/7，得到 ξ = 14/9 ∈ (1, 2)。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 柯西中值定理的代入例题</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">取 f(t) = t²，g(t) = t³，t ∈ [1, 2]。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">[f(2) − f(1)] / [g(2) − g(1)] = 3/7。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">f′(ξ) / g′(ξ) = 2ξ/(3ξ²) = 2/(3ξ)。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">令 2/(3ξ) = 3/7，得到 ξ = 14/9 ∈ (1, 2)。</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">用泰勒余项估计近似计算误差</title>
+<desc id="desc">以 e⁰·¹ 为例，二阶多项式给出 1 + 0.1 + 0.1²/2 = 1.105。；R₂ = e^ξ · 0.1³/6，其中 0 &lt; ξ &lt; 0.1。；因此 |R₂| ≤ e⁰·¹ × 0.1³/6 &lt; 0.000185。；近似值与误差上界应同时给出。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 用泰勒余项估计近似计算误差</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">以 e⁰·¹ 为例，二阶多项式给出 1 + 0.1 + 0.1²/2 = 1.105。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">R₂ = e^ξ · 0.1³/6，其中 0 &lt; ξ &lt; 0.1。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">因此 |R₂| ≤ e⁰·¹ × 0.1³/6 &lt; 0.000185。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">近似值与误差上界应同时给出。</text>
+</svg>

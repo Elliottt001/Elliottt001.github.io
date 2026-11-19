@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">用辅助函数证明 f′(ξ) = f(ξ)</title>
+<desc id="desc">条件：f 在 [a, b] 连续、在 (a, b) 可导，f(a) = f(b) = 0。；构造 F(x) = e⁻ˣ f(x)，则 F(a) = F(b) = 0。；由罗尔定理，存在 ξ ∈ (a, b)，使 F′(ξ) = 0。；F′(ξ) = e^(−ξ) [f′(ξ) − f(ξ)] = 0，因此 f′(ξ) = f(ξ)。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 用辅助函数证明 f′(ξ) = f(ξ)</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">条件：f 在 [a, b] 连续、在 (a, b) 可导，f(a) = f(b) = 0。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">构造 F(x) = e⁻ˣ f(x)，则 F(a) = F(b) = 0。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">由罗尔定理，存在 ξ ∈ (a, b)，使 F′(ξ) = 0。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">F′(ξ) = e^(−ξ) [f′(ξ) − f(ξ)] = 0，因此 f′(ξ) = f(ξ)。</text>
+</svg>

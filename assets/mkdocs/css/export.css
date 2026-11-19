@@ -1,0 +1,22 @@
+/* The standalone HTML report follows the notebook theme as well. */
+@media (prefers-color-scheme: dark) {
+  body[for="html-export"] {
+    --nh-bg: #0c1824; --nh-panel: #122332; --nh-ink: #e8f0f4;
+    --nh-muted: #a7b9c5; --nh-accent: #8ed8c7; --nh-tint: #193a3b;
+    --nh-line: #2b4150; --nh-book: #162e32;
+  }
+}
+html body[for="html-export"] { margin: 0; padding: 24px 16px; background: var(--nh-bg); color: var(--nh-ink); }
+html body[for="html-export"] .markdown-preview { position: relative; left: auto; width: 100%; max-width: 900px; margin: 0 auto; padding: 34px; transform: none; border: 1px solid var(--nh-line); border-radius: 12px; background: var(--nh-panel); color: var(--nh-ink); font-family: var(--ns-font); font-size: 16px; line-height: 1.85; }
+html body[for="html-export"] .markdown-preview h1 { color: var(--nh-ink); font-family: var(--ns-display); font-size: 36px; border-bottom-color: var(--nh-line); }
+html body[for="html-export"] .markdown-preview :is(h2, h3, h4, h5, h6) { color: var(--nh-ink); border-bottom-color: var(--nh-line); }
+html body[for="html-export"] .markdown-preview a { color: var(--nh-accent); }
+html body[for="html-export"] .markdown-preview pre { padding: 16px; background: var(--nh-bg); border: 1px solid var(--nh-line); border-radius: 8px; }
+html body[for="html-export"] .markdown-preview code { background: var(--nh-bg); color: var(--nh-ink); font-family: var(--ns-mono); }
+html body[for="html-export"] .markdown-preview blockquote { background: var(--nh-tint); color: var(--nh-ink); border-left-color: var(--nh-accent); }
+html body[for="html-export"] .markdown-preview table { display: block; max-width: 100%; overflow-x: auto; }
+html body[for="html-export"] .markdown-preview :is(th, td) { background: var(--nh-panel); color: var(--nh-ink); border-color: var(--nh-line); }
+@media (max-width: 680px) {
+  html body[for="html-export"] { padding: 12px; }
+  html body[for="html-export"] .markdown-preview { padding: 20px 16px; font-size: 15px; }
+}

@@ -1,0 +1,7 @@
+.flink-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; padding: 0; }
+.flink-list a { color: var(--nh-ink); }
+.flink-list-item { position: relative; min-width: 0; padding: 16px; border: 1px solid var(--nh-line); border-radius: 9px; background: var(--nh-bg); }
+.flink-list-item:hover { border-color: var(--nh-accent); }
+.flink-item-icon { float: left; width: 48px; height: 48px; margin-right: 14px; overflow: hidden; border-radius: 50%; }
+.flink-item-name { font-size: 16px; font-weight: 600; }
+.flink-item-desc { margin-top: 4px; color: var(--nh-muted); font-size: 13px; line-height: 1.6; }

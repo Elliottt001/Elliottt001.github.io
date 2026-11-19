@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" role="img" aria-labelledby="title desc">
+<title id="title">极坐标方程的导数</title>
+<desc id="desc">设 r = r(θ)，则 x = r cos θ，y = r sin θ。；dx/dθ = r′ cos θ − r sin θ。；dy/dθ = r′ sin θ + r cos θ。；dy/dx = (r′ sin θ + r cos θ)/(r′ cos θ − r sin θ)，分母非零。</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif} .curve{fill:none;stroke:#12665e;stroke-width:3} .line{fill:none;stroke:#b35d35;stroke-width:2.5} .axis{stroke:#8da19d;stroke-width:1.5}</style>
+<rect x="1" y="1" width="958" height="372" rx="14" fill="#f3f6f5" stroke="#d4dfdd"/>
+<text x="32" y="45" fill="#142536" font-size="28" text-anchor="start">补充图 · 极坐标方程的导数</text>
+<text x="32" y="76" fill="#536573" font-size="16" text-anchor="start">根据本节知识点绘制</text>
+<text x="40" y="125" fill="#142536" font-size="24" text-anchor="start">设 r = r(θ)，则 x = r cos θ，y = r sin θ。</text>
+<text x="40" y="171" fill="#142536" font-size="24" text-anchor="start">dx/dθ = r′ cos θ − r sin θ。</text>
+<text x="40" y="217" fill="#142536" font-size="24" text-anchor="start">dy/dθ = r′ sin θ + r cos θ。</text>
+<text x="40" y="263" fill="#142536" font-size="24" text-anchor="start">dy/dx = (r′ sin θ + r cos θ)/(r′ cos θ − r sin θ)，分母非零。</text>
+</svg>
