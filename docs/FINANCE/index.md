@@ -62,6 +62,14 @@ cover_icon: material/chart-line
 
     - [课程信息](game-theory/index.md)
 
+- <span class="ns-card-title">:material-account-search: 人事测评与选拔</span>
+
+    ---
+
+    人岗匹配、测量理论与人员选拔方法。
+
+    - [15节课程笔记](personnel-assessment/index.md)
+
 - <span class="ns-card-title">:material-lightbulb-on: 零碎自学</span>
 
     ---
